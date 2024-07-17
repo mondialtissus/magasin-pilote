@@ -1,0 +1,32 @@
+ROUTINE GUINITVITRINE
+GUINITVITRINE
+ 
+	s ^GUVITGRP(1,"Général")="ADMIN\"_+$h
+ 
+	S PLU = $O(^GUVITRINE(""))
+	while PLU'= ""
+	{
+		s QTE=$P($G(^GUVITRINE(PLU)),"\",1)
+		s ^GUVITGRPDETAIL(1,PLU)=QTE
+       
+	 
+		S PLU = $O(^GUVITRINE(PLU))
+	}
+	
+	
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

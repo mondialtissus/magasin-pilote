@@ -1,0 +1,2425 @@
+ROUTINE NelleCOFE15
+NelleCoFE15
+
+ s ^TKFINSERIE(107100)="Nouvelle Co"
+ s ^TKFINSERIE(107101)="Nouvelle Co"
+ s ^TKFINSERIE(120545)="Nouvelle Co"
+ s ^TKFINSERIE(120560)="Nouvelle Co"
+ s ^TKFINSERIE(120561)="Nouvelle Co"
+ s ^TKFINSERIE(120564)="Nouvelle Co"
+ s ^TKFINSERIE(120581)="Nouvelle Co"
+ s ^TKFINSERIE(120586)="Nouvelle Co"
+ s ^TKFINSERIE(120587)="Nouvelle Co"
+ s ^TKFINSERIE(112728)="Nouvelle Co"
+ s ^TKFINSERIE(112729)="Nouvelle Co"
+ s ^TKFINSERIE(112730)="Nouvelle Co"
+ s ^TKFINSERIE(119423)="Nouvelle Co"
+ s ^TKFINSERIE(83477)="Nouvelle Co"
+ s ^TKFINSERIE(83478)="Nouvelle Co"
+ s ^TKFINSERIE(87768)="Nouvelle Co"
+ s ^TKFINSERIE(103385)="Nouvelle Co"
+ s ^TKFINSERIE(103386)="Nouvelle Co"
+ s ^TKFINSERIE(105808)="Nouvelle Co"
+ s ^TKFINSERIE(105887)="Nouvelle Co"
+ s ^TKFINSERIE(105888)="Nouvelle Co"
+ s ^TKFINSERIE(105889)="Nouvelle Co"
+ s ^TKFINSERIE(105890)="Nouvelle Co"
+ s ^TKFINSERIE(106061)="Nouvelle Co"
+ s ^TKFINSERIE(106064)="Nouvelle Co"
+ s ^TKFINSERIE(106065)="Nouvelle Co"
+ s ^TKFINSERIE(106066)="Nouvelle Co"
+ s ^TKFINSERIE(113729)="Nouvelle Co"
+ s ^TKFINSERIE(113730)="Nouvelle Co"
+ s ^TKFINSERIE(113731)="Nouvelle Co"
+ s ^TKFINSERIE(113733)="Nouvelle Co"
+ s ^TKFINSERIE(113759)="Nouvelle Co"
+ s ^TKFINSERIE(119487)="Nouvelle Co"
+ s ^TKFINSERIE(119488)="Nouvelle Co"
+ s ^TKFINSERIE(119489)="Nouvelle Co"
+ s ^TKFINSERIE(119490)="Nouvelle Co"
+ s ^TKFINSERIE(119492)="Nouvelle Co"
+ s ^TKFINSERIE(119493)="Nouvelle Co"
+ s ^TKFINSERIE(119494)="Nouvelle Co"
+ s ^TKFINSERIE(119495)="Nouvelle Co"
+ s ^TKFINSERIE(119498)="Nouvelle Co"
+ s ^TKFINSERIE(119499)="Nouvelle Co"
+ s ^TKFINSERIE(119500)="Nouvelle Co"
+ s ^TKFINSERIE(119501)="Nouvelle Co"
+ s ^TKFINSERIE(119502)="Nouvelle Co"
+ s ^TKFINSERIE(119503)="Nouvelle Co"
+ s ^TKFINSERIE(119504)="Nouvelle Co"
+ s ^TKFINSERIE(119505)="Nouvelle Co"
+ s ^TKFINSERIE(119506)="Nouvelle Co"
+ s ^TKFINSERIE(119507)="Nouvelle Co"
+ s ^TKFINSERIE(119508)="Nouvelle Co"
+ s ^TKFINSERIE(119509)="Nouvelle Co"
+ s ^TKFINSERIE(119510)="Nouvelle Co"
+ s ^TKFINSERIE(119511)="Nouvelle Co"
+ s ^TKFINSERIE(119512)="Nouvelle Co"
+ s ^TKFINSERIE(119513)="Nouvelle Co"
+ s ^TKFINSERIE(119514)="Nouvelle Co"
+ s ^TKFINSERIE(119967)="Nouvelle Co"
+ s ^TKFINSERIE(121236)="Nouvelle Co"
+ s ^TKFINSERIE(121237)="Nouvelle Co"
+ s ^TKFINSERIE(121238)="Nouvelle Co"
+ s ^TKFINSERIE(121239)="Nouvelle Co"
+ s ^TKFINSERIE(121240)="Nouvelle Co"
+ s ^TKFINSERIE(121241)="Nouvelle Co"
+ s ^TKFINSERIE(121242)="Nouvelle Co"
+ s ^TKFINSERIE(121243)="Nouvelle Co"
+ s ^TKFINSERIE(121244)="Nouvelle Co"
+ s ^TKFINSERIE(121245)="Nouvelle Co"
+ s ^TKFINSERIE(121246)="Nouvelle Co"
+ s ^TKFINSERIE(121247)="Nouvelle Co"
+ s ^TKFINSERIE(121248)="Nouvelle Co"
+ s ^TKFINSERIE(121249)="Nouvelle Co"
+ s ^TKFINSERIE(121250)="Nouvelle Co"
+ s ^TKFINSERIE(121251)="Nouvelle Co"
+ s ^TKFINSERIE(121253)="Nouvelle Co"
+ s ^TKFINSERIE(121255)="Nouvelle Co"
+ s ^TKFINSERIE(121256)="Nouvelle Co"
+ s ^TKFINSERIE(121257)="Nouvelle Co"
+ s ^TKFINSERIE(121260)="Nouvelle Co"
+ s ^TKFINSERIE(121261)="Nouvelle Co"
+ s ^TKFINSERIE(121262)="Nouvelle Co"
+ s ^TKFINSERIE(121263)="Nouvelle Co"
+ s ^TKFINSERIE(120605)="Nouvelle Co"
+ s ^TKFINSERIE(120608)="Nouvelle Co"
+ s ^TKFINSERIE(120611)="Nouvelle Co"
+ s ^TKFINSERIE(120204)="Nouvelle Co"
+ s ^TKFINSERIE(120206)="Nouvelle Co"
+ s ^TKFINSERIE(120207)="Nouvelle Co"
+ s ^TKFINSERIE(120208)="Nouvelle Co"
+ s ^TKFINSERIE(120209)="Nouvelle Co"
+ s ^TKFINSERIE(120538)="Nouvelle Co"
+ s ^TKFINSERIE(120539)="Nouvelle Co"
+ s ^TKFINSERIE(120540)="Nouvelle Co"
+ s ^TKFINSERIE(120541)="Nouvelle Co"
+ s ^TKFINSERIE(120542)="Nouvelle Co"
+ s ^TKFINSERIE(120543)="Nouvelle Co"
+ s ^TKFINSERIE(120544)="Nouvelle Co"
+ s ^TKFINSERIE(120503)="Nouvelle Co"
+ s ^TKFINSERIE(120504)="Nouvelle Co"
+ s ^TKFINSERIE(120505)="Nouvelle Co"
+ s ^TKFINSERIE(120506)="Nouvelle Co"
+ s ^TKFINSERIE(120507)="Nouvelle Co"
+ s ^TKFINSERIE(120508)="Nouvelle Co"
+ s ^TKFINSERIE(120509)="Nouvelle Co"
+ s ^TKFINSERIE(120510)="Nouvelle Co"
+ s ^TKFINSERIE(120511)="Nouvelle Co"
+ s ^TKFINSERIE(120512)="Nouvelle Co"
+ s ^TKFINSERIE(120513)="Nouvelle Co"
+ s ^TKFINSERIE(120514)="Nouvelle Co"
+ s ^TKFINSERIE(120515)="Nouvelle Co"
+ s ^TKFINSERIE(120516)="Nouvelle Co"
+ s ^TKFINSERIE(120517)="Nouvelle Co"
+ s ^TKFINSERIE(120518)="Nouvelle Co"
+ s ^TKFINSERIE(120519)="Nouvelle Co"
+ s ^TKFINSERIE(120520)="Nouvelle Co"
+ s ^TKFINSERIE(120521)="Nouvelle Co"
+ s ^TKFINSERIE(120522)="Nouvelle Co"
+ s ^TKFINSERIE(120523)="Nouvelle Co"
+ s ^TKFINSERIE(120524)="Nouvelle Co"
+ s ^TKFINSERIE(120525)="Nouvelle Co"
+ s ^TKFINSERIE(120526)="Nouvelle Co"
+ s ^TKFINSERIE(120527)="Nouvelle Co"
+ s ^TKFINSERIE(120528)="Nouvelle Co"
+ s ^TKFINSERIE(120529)="Nouvelle Co"
+ s ^TKFINSERIE(120530)="Nouvelle Co"
+ s ^TKFINSERIE(120531)="Nouvelle Co"
+ s ^TKFINSERIE(120532)="Nouvelle Co"
+ s ^TKFINSERIE(120533)="Nouvelle Co"
+ s ^TKFINSERIE(120534)="Nouvelle Co"
+ s ^TKFINSERIE(120535)="Nouvelle Co"
+ s ^TKFINSERIE(120536)="Nouvelle Co"
+ s ^TKFINSERIE(120537)="Nouvelle Co"
+ s ^TKFINSERIE(120546)="Nouvelle Co"
+ s ^TKFINSERIE(120547)="Nouvelle Co"
+ s ^TKFINSERIE(120548)="Nouvelle Co"
+ s ^TKFINSERIE(120549)="Nouvelle Co"
+ s ^TKFINSERIE(120550)="Nouvelle Co"
+ s ^TKFINSERIE(120551)="Nouvelle Co"
+ s ^TKFINSERIE(120552)="Nouvelle Co"
+ s ^TKFINSERIE(120553)="Nouvelle Co"
+ s ^TKFINSERIE(120554)="Nouvelle Co"
+ s ^TKFINSERIE(120555)="Nouvelle Co"
+ s ^TKFINSERIE(120556)="Nouvelle Co"
+ s ^TKFINSERIE(120557)="Nouvelle Co"
+ s ^TKFINSERIE(120558)="Nouvelle Co"
+ s ^TKFINSERIE(120567)="Nouvelle Co"
+ s ^TKFINSERIE(120568)="Nouvelle Co"
+ s ^TKFINSERIE(120569)="Nouvelle Co"
+ s ^TKFINSERIE(120570)="Nouvelle Co"
+ s ^TKFINSERIE(120571)="Nouvelle Co"
+ s ^TKFINSERIE(120572)="Nouvelle Co"
+ s ^TKFINSERIE(120573)="Nouvelle Co"
+ s ^TKFINSERIE(120574)="Nouvelle Co"
+ s ^TKFINSERIE(120575)="Nouvelle Co"
+ s ^TKFINSERIE(120576)="Nouvelle Co"
+ s ^TKFINSERIE(120577)="Nouvelle Co"
+ s ^TKFINSERIE(120578)="Nouvelle Co"
+ s ^TKFINSERIE(120579)="Nouvelle Co"
+ s ^TKFINSERIE(120580)="Nouvelle Co"
+ s ^TKFINSERIE(106899)="Nouvelle Co"
+ s ^TKFINSERIE(106900)="Nouvelle Co"
+ s ^TKFINSERIE(120440)="Nouvelle Co"
+ s ^TKFINSERIE(120447)="Nouvelle Co"
+ s ^TKFINSERIE(120450)="Nouvelle Co"
+ s ^TKFINSERIE(120451)="Nouvelle Co"
+ s ^TKFINSERIE(120454)="Nouvelle Co"
+ s ^TKFINSERIE(120455)="Nouvelle Co"
+ s ^TKFINSERIE(120458)="Nouvelle Co"
+ s ^TKFINSERIE(120459)="Nouvelle Co"
+ s ^TKFINSERIE(120460)="Nouvelle Co"
+ s ^TKFINSERIE(120464)="Nouvelle Co"
+ s ^TKFINSERIE(120465)="Nouvelle Co"
+ s ^TKFINSERIE(120470)="Nouvelle Co"
+ s ^TKFINSERIE(120473)="Nouvelle Co"
+ s ^TKFINSERIE(120474)="Nouvelle Co"
+ s ^TKFINSERIE(120475)="Nouvelle Co"
+ s ^TKFINSERIE(120476)="Nouvelle Co"
+ s ^TKFINSERIE(120477)="Nouvelle Co"
+ s ^TKFINSERIE(120478)="Nouvelle Co"
+ s ^TKFINSERIE(120481)="Nouvelle Co"
+ s ^TKFINSERIE(120483)="Nouvelle Co"
+ s ^TKFINSERIE(120486)="Nouvelle Co"
+ s ^TKFINSERIE(120488)="Nouvelle Co"
+ s ^TKFINSERIE(120489)="Nouvelle Co"
+ s ^TKFINSERIE(120490)="Nouvelle Co"
+ s ^TKFINSERIE(120492)="Nouvelle Co"
+ s ^TKFINSERIE(120494)="Nouvelle Co"
+ s ^TKFINSERIE(120495)="Nouvelle Co"
+ s ^TKFINSERIE(120496)="Nouvelle Co"
+ s ^TKFINSERIE(120497)="Nouvelle Co"
+ s ^TKFINSERIE(120498)="Nouvelle Co"
+ s ^TKFINSERIE(120499)="Nouvelle Co"
+ s ^TKFINSERIE(120500)="Nouvelle Co"
+ s ^TKFINSERIE(120501)="Nouvelle Co"
+ s ^TKFINSERIE(121126)="Nouvelle Co"
+ s ^TKFINSERIE(121127)="Nouvelle Co"
+ s ^TKFINSERIE(121128)="Nouvelle Co"
+ s ^TKFINSERIE(121129)="Nouvelle Co"
+ s ^TKFINSERIE(121130)="Nouvelle Co"
+ s ^TKFINSERIE(121131)="Nouvelle Co"
+ s ^TKFINSERIE(121132)="Nouvelle Co"
+ s ^TKFINSERIE(121133)="Nouvelle Co"
+ s ^TKFINSERIE(113877)="Nouvelle Co"
+ s ^TKFINSERIE(120780)="Nouvelle Co"
+ s ^TKFINSERIE(106815)="Nouvelle Co"
+ s ^TKFINSERIE(106816)="Nouvelle Co"
+ s ^TKFINSERIE(106817)="Nouvelle Co"
+ s ^TKFINSERIE(106818)="Nouvelle Co"
+ s ^TKFINSERIE(113798)="Nouvelle Co"
+ s ^TKFINSERIE(113799)="Nouvelle Co"
+ s ^TKFINSERIE(113837)="Nouvelle Co"
+ s ^TKFINSERIE(113838)="Nouvelle Co"
+ s ^TKFINSERIE(113839)="Nouvelle Co"
+ s ^TKFINSERIE(113840)="Nouvelle Co"
+ s ^TKFINSERIE(113841)="Nouvelle Co"
+ s ^TKFINSERIE(120348)="Nouvelle Co"
+ s ^TKFINSERIE(120350)="Nouvelle Co"
+ s ^TKFINSERIE(120351)="Nouvelle Co"
+ s ^TKFINSERIE(120352)="Nouvelle Co"
+ s ^TKFINSERIE(120353)="Nouvelle Co"
+ s ^TKFINSERIE(120354)="Nouvelle Co"
+ s ^TKFINSERIE(120355)="Nouvelle Co"
+ s ^TKFINSERIE(120356)="Nouvelle Co"
+ s ^TKFINSERIE(120357)="Nouvelle Co"
+ s ^TKFINSERIE(120358)="Nouvelle Co"
+ s ^TKFINSERIE(120359)="Nouvelle Co"
+ s ^TKFINSERIE(120360)="Nouvelle Co"
+ s ^TKFINSERIE(120361)="Nouvelle Co"
+ s ^TKFINSERIE(120362)="Nouvelle Co"
+ s ^TKFINSERIE(120363)="Nouvelle Co"
+ s ^TKFINSERIE(120364)="Nouvelle Co"
+ s ^TKFINSERIE(120365)="Nouvelle Co"
+ s ^TKFINSERIE(120366)="Nouvelle Co"
+ s ^TKFINSERIE(120367)="Nouvelle Co"
+ s ^TKFINSERIE(120368)="Nouvelle Co"
+ s ^TKFINSERIE(120370)="Nouvelle Co"
+ s ^TKFINSERIE(120371)="Nouvelle Co"
+ s ^TKFINSERIE(120372)="Nouvelle Co"
+ s ^TKFINSERIE(120373)="Nouvelle Co"
+ s ^TKFINSERIE(120374)="Nouvelle Co"
+ s ^TKFINSERIE(120375)="Nouvelle Co"
+ s ^TKFINSERIE(120376)="Nouvelle Co"
+ s ^TKFINSERIE(120378)="Nouvelle Co"
+ s ^TKFINSERIE(120379)="Nouvelle Co"
+ s ^TKFINSERIE(120380)="Nouvelle Co"
+ s ^TKFINSERIE(120381)="Nouvelle Co"
+ s ^TKFINSERIE(119970)="Nouvelle Co"
+ s ^TKFINSERIE(119971)="Nouvelle Co"
+ s ^TKFINSERIE(119972)="Nouvelle Co"
+ s ^TKFINSERIE(119973)="Nouvelle Co"
+ s ^TKFINSERIE(119974)="Nouvelle Co"
+ s ^TKFINSERIE(119975)="Nouvelle Co"
+ s ^TKFINSERIE(119976)="Nouvelle Co"
+ s ^TKFINSERIE(119977)="Nouvelle Co"
+ s ^TKFINSERIE(119978)="Nouvelle Co"
+ s ^TKFINSERIE(119979)="Nouvelle Co"
+ s ^TKFINSERIE(119980)="Nouvelle Co"
+ s ^TKFINSERIE(119981)="Nouvelle Co"
+ s ^TKFINSERIE(119982)="Nouvelle Co"
+ s ^TKFINSERIE(120083)="Nouvelle Co"
+ s ^TKFINSERIE(120084)="Nouvelle Co"
+ s ^TKFINSERIE(120085)="Nouvelle Co"
+ s ^TKFINSERIE(120086)="Nouvelle Co"
+ s ^TKFINSERIE(120087)="Nouvelle Co"
+ s ^TKFINSERIE(120088)="Nouvelle Co"
+ s ^TKFINSERIE(120089)="Nouvelle Co"
+ s ^TKFINSERIE(120090)="Nouvelle Co"
+ s ^TKFINSERIE(120091)="Nouvelle Co"
+ s ^TKFINSERIE(120092)="Nouvelle Co"
+ s ^TKFINSERIE(120093)="Nouvelle Co"
+ s ^TKFINSERIE(120094)="Nouvelle Co"
+ s ^TKFINSERIE(120095)="Nouvelle Co"
+ s ^TKFINSERIE(120109)="Nouvelle Co"
+ s ^TKFINSERIE(120110)="Nouvelle Co"
+ s ^TKFINSERIE(120111)="Nouvelle Co"
+ s ^TKFINSERIE(120112)="Nouvelle Co"
+ s ^TKFINSERIE(120113)="Nouvelle Co"
+ s ^TKFINSERIE(120114)="Nouvelle Co"
+ s ^TKFINSERIE(120115)="Nouvelle Co"
+ s ^TKFINSERIE(120117)="Nouvelle Co"
+ s ^TKFINSERIE(120118)="Nouvelle Co"
+ s ^TKFINSERIE(120119)="Nouvelle Co"
+ s ^TKFINSERIE(120120)="Nouvelle Co"
+ s ^TKFINSERIE(120121)="Nouvelle Co"
+ s ^TKFINSERIE(120122)="Nouvelle Co"
+ s ^TKFINSERIE(120123)="Nouvelle Co"
+ s ^TKFINSERIE(113574)="Nouvelle Co"
+ s ^TKFINSERIE(119443)="Nouvelle Co"
+ s ^TKFINSERIE(119445)="Nouvelle Co"
+ s ^TKFINSERIE(119446)="Nouvelle Co"
+ s ^TKFINSERIE(119447)="Nouvelle Co"
+ s ^TKFINSERIE(119448)="Nouvelle Co"
+ s ^TKFINSERIE(119449)="Nouvelle Co"
+ s ^TKFINSERIE(119811)="Nouvelle Co"
+ s ^TKFINSERIE(119812)="Nouvelle Co"
+ s ^TKFINSERIE(119813)="Nouvelle Co"
+ s ^TKFINSERIE(119814)="Nouvelle Co"
+ s ^TKFINSERIE(119815)="Nouvelle Co"
+ s ^TKFINSERIE(119816)="Nouvelle Co"
+ s ^TKFINSERIE(119817)="Nouvelle Co"
+ s ^TKFINSERIE(119819)="Nouvelle Co"
+ s ^TKFINSERIE(119820)="Nouvelle Co"
+ s ^TKFINSERIE(119821)="Nouvelle Co"
+ s ^TKFINSERIE(119822)="Nouvelle Co"
+ s ^TKFINSERIE(119823)="Nouvelle Co"
+ s ^TKFINSERIE(119824)="Nouvelle Co"
+ s ^TKFINSERIE(119825)="Nouvelle Co"
+ s ^TKFINSERIE(119826)="Nouvelle Co"
+ s ^TKFINSERIE(119827)="Nouvelle Co"
+ s ^TKFINSERIE(114467)="Nouvelle Co"
+ s ^TKFINSERIE(114468)="Nouvelle Co"
+ s ^TKFINSERIE(114471)="Nouvelle Co"
+ s ^TKFINSERIE(114476)="Nouvelle Co"
+ s ^TKFINSERIE(114477)="Nouvelle Co"
+ s ^TKFINSERIE(121469)="Nouvelle Co"
+ s ^TKFINSERIE(121470)="Nouvelle Co"
+ s ^TKFINSERIE(121471)="Nouvelle Co"
+ s ^TKFINSERIE(121472)="Nouvelle Co"
+ s ^TKFINSERIE(121473)="Nouvelle Co"
+ s ^TKFINSERIE(121474)="Nouvelle Co"
+ s ^TKFINSERIE(121475)="Nouvelle Co"
+ s ^TKFINSERIE(121476)="Nouvelle Co"
+ s ^TKFINSERIE(121477)="Nouvelle Co"
+ s ^TKFINSERIE(121478)="Nouvelle Co"
+ s ^TKFINSERIE(120661)="Nouvelle Co"
+ s ^TKFINSERIE(120662)="Nouvelle Co"
+ s ^TKFINSERIE(120663)="Nouvelle Co"
+ s ^TKFINSERIE(120664)="Nouvelle Co"
+ s ^TKFINSERIE(120665)="Nouvelle Co"
+ s ^TKFINSERIE(120666)="Nouvelle Co"
+ s ^TKFINSERIE(120667)="Nouvelle Co"
+ s ^TKFINSERIE(120668)="Nouvelle Co"
+ s ^TKFINSERIE(120669)="Nouvelle Co"
+ s ^TKFINSERIE(120670)="Nouvelle Co"
+ s ^TKFINSERIE(120671)="Nouvelle Co"
+ s ^TKFINSERIE(120678)="Nouvelle Co"
+ s ^TKFINSERIE(120679)="Nouvelle Co"
+ s ^TKFINSERIE(120680)="Nouvelle Co"
+ s ^TKFINSERIE(120681)="Nouvelle Co"
+ s ^TKFINSERIE(120682)="Nouvelle Co"
+ s ^TKFINSERIE(120683)="Nouvelle Co"
+ s ^TKFINSERIE(121355)="Nouvelle Co"
+ s ^TKFINSERIE(121356)="Nouvelle Co"
+ s ^TKFINSERIE(121357)="Nouvelle Co"
+ s ^TKFINSERIE(121358)="Nouvelle Co"
+ s ^TKFINSERIE(121359)="Nouvelle Co"
+ s ^TKFINSERIE(121360)="Nouvelle Co"
+ s ^TKFINSERIE(121361)="Nouvelle Co"
+ s ^TKFINSERIE(121362)="Nouvelle Co"
+ s ^TKFINSERIE(121363)="Nouvelle Co"
+ s ^TKFINSERIE(121364)="Nouvelle Co"
+ s ^TKFINSERIE(121365)="Nouvelle Co"
+ s ^TKFINSERIE(121366)="Nouvelle Co"
+ s ^TKFINSERIE(121367)="Nouvelle Co"
+ s ^TKFINSERIE(121368)="Nouvelle Co"
+ s ^TKFINSERIE(121369)="Nouvelle Co"
+ s ^TKFINSERIE(121370)="Nouvelle Co"
+ s ^TKFINSERIE(121371)="Nouvelle Co"
+ s ^TKFINSERIE(121372)="Nouvelle Co"
+ s ^TKFINSERIE(121373)="Nouvelle Co"
+ s ^TKFINSERIE(121374)="Nouvelle Co"
+ s ^TKFINSERIE(121375)="Nouvelle Co"
+ s ^TKFINSERIE(121376)="Nouvelle Co"
+ s ^TKFINSERIE(121377)="Nouvelle Co"
+ s ^TKFINSERIE(121378)="Nouvelle Co"
+ s ^TKFINSERIE(121379)="Nouvelle Co"
+ s ^TKFINSERIE(121380)="Nouvelle Co"
+ s ^TKFINSERIE(121381)="Nouvelle Co"
+ s ^TKFINSERIE(121382)="Nouvelle Co"
+ s ^TKFINSERIE(121383)="Nouvelle Co"
+ s ^TKFINSERIE(121384)="Nouvelle Co"
+ s ^TKFINSERIE(121385)="Nouvelle Co"
+ s ^TKFINSERIE(121386)="Nouvelle Co"
+ s ^TKFINSERIE(121387)="Nouvelle Co"
+ s ^TKFINSERIE(121388)="Nouvelle Co"
+ s ^TKFINSERIE(121389)="Nouvelle Co"
+ s ^TKFINSERIE(121390)="Nouvelle Co"
+ s ^TKFINSERIE(121391)="Nouvelle Co"
+ s ^TKFINSERIE(121392)="Nouvelle Co"
+ s ^TKFINSERIE(121393)="Nouvelle Co"
+ s ^TKFINSERIE(121394)="Nouvelle Co"
+ s ^TKFINSERIE(121395)="Nouvelle Co"
+ s ^TKFINSERIE(121396)="Nouvelle Co"
+ s ^TKFINSERIE(121397)="Nouvelle Co"
+ s ^TKFINSERIE(121398)="Nouvelle Co"
+ s ^TKFINSERIE(121399)="Nouvelle Co"
+ s ^TKFINSERIE(121400)="Nouvelle Co"
+ s ^TKFINSERIE(121401)="Nouvelle Co"
+ s ^TKFINSERIE(121402)="Nouvelle Co"
+ s ^TKFINSERIE(121403)="Nouvelle Co"
+ s ^TKFINSERIE(121404)="Nouvelle Co"
+ s ^TKFINSERIE(121405)="Nouvelle Co"
+ s ^TKFINSERIE(121406)="Nouvelle Co"
+ s ^TKFINSERIE(121407)="Nouvelle Co"
+ s ^TKFINSERIE(121408)="Nouvelle Co"
+ s ^TKFINSERIE(121409)="Nouvelle Co"
+ s ^TKFINSERIE(121410)="Nouvelle Co"
+ s ^TKFINSERIE(121411)="Nouvelle Co"
+ s ^TKFINSERIE(121412)="Nouvelle Co"
+ s ^TKFINSERIE(121413)="Nouvelle Co"
+ s ^TKFINSERIE(121414)="Nouvelle Co"
+ s ^TKFINSERIE(121415)="Nouvelle Co"
+ s ^TKFINSERIE(121416)="Nouvelle Co"
+ s ^TKFINSERIE(121417)="Nouvelle Co"
+ s ^TKFINSERIE(121418)="Nouvelle Co"
+ s ^TKFINSERIE(121419)="Nouvelle Co"
+ s ^TKFINSERIE(121420)="Nouvelle Co"
+ s ^TKFINSERIE(121421)="Nouvelle Co"
+ s ^TKFINSERIE(121422)="Nouvelle Co"
+ s ^TKFINSERIE(121423)="Nouvelle Co"
+ s ^TKFINSERIE(121424)="Nouvelle Co"
+ s ^TKFINSERIE(120691)="Nouvelle Co"
+ s ^TKFINSERIE(120692)="Nouvelle Co"
+ s ^TKFINSERIE(120693)="Nouvelle Co"
+ s ^TKFINSERIE(120694)="Nouvelle Co"
+ s ^TKFINSERIE(120695)="Nouvelle Co"
+ s ^TKFINSERIE(120696)="Nouvelle Co"
+ s ^TKFINSERIE(120697)="Nouvelle Co"
+ s ^TKFINSERIE(120698)="Nouvelle Co"
+ s ^TKFINSERIE(120699)="Nouvelle Co"
+ s ^TKFINSERIE(120700)="Nouvelle Co"
+ s ^TKFINSERIE(120701)="Nouvelle Co"
+ s ^TKFINSERIE(120702)="Nouvelle Co"
+ s ^TKFINSERIE(120717)="Nouvelle Co"
+ s ^TKFINSERIE(120718)="Nouvelle Co"
+ s ^TKFINSERIE(120719)="Nouvelle Co"
+ s ^TKFINSERIE(120720)="Nouvelle Co"
+ s ^TKFINSERIE(120729)="Nouvelle Co"
+ s ^TKFINSERIE(121207)="Nouvelle Co"
+ s ^TKFINSERIE(121208)="Nouvelle Co"
+ s ^TKFINSERIE(121209)="Nouvelle Co"
+ s ^TKFINSERIE(121210)="Nouvelle Co"
+ s ^TKFINSERIE(121211)="Nouvelle Co"
+ s ^TKFINSERIE(121212)="Nouvelle Co"
+ s ^TKFINSERIE(121213)="Nouvelle Co"
+ s ^TKFINSERIE(121214)="Nouvelle Co"
+ s ^TKFINSERIE(121215)="Nouvelle Co"
+ s ^TKFINSERIE(121216)="Nouvelle Co"
+ s ^TKFINSERIE(121217)="Nouvelle Co"
+ s ^TKFINSERIE(121218)="Nouvelle Co"
+ s ^TKFINSERIE(121219)="Nouvelle Co"
+ s ^TKFINSERIE(121220)="Nouvelle Co"
+ s ^TKFINSERIE(121281)="Nouvelle Co"
+ s ^TKFINSERIE(121282)="Nouvelle Co"
+ s ^TKFINSERIE(121283)="Nouvelle Co"
+ s ^TKFINSERIE(121284)="Nouvelle Co"
+ s ^TKFINSERIE(121285)="Nouvelle Co"
+ s ^TKFINSERIE(121286)="Nouvelle Co"
+ s ^TKFINSERIE(121287)="Nouvelle Co"
+ s ^TKFINSERIE(121288)="Nouvelle Co"
+ s ^TKFINSERIE(121289)="Nouvelle Co"
+ s ^TKFINSERIE(121290)="Nouvelle Co"
+ s ^TKFINSERIE(121291)="Nouvelle Co"
+ s ^TKFINSERIE(121292)="Nouvelle Co"
+ s ^TKFINSERIE(121293)="Nouvelle Co"
+ s ^TKFINSERIE(121294)="Nouvelle Co"
+ s ^TKFINSERIE(121295)="Nouvelle Co"
+ s ^TKFINSERIE(121466)="Nouvelle Co"
+ s ^TKFINSERIE(121467)="Nouvelle Co"
+ s ^TKFINSERIE(121468)="Nouvelle Co"
+ s ^TKFINSERIE(117866)="Nouvelle Co"
+ s ^TKFINSERIE(117867)="Nouvelle Co"
+ s ^TKFINSERIE(121325)="Nouvelle Co"
+ s ^TKFINSERIE(121326)="Nouvelle Co"
+ s ^TKFINSERIE(121327)="Nouvelle Co"
+ s ^TKFINSERIE(121328)="Nouvelle Co"
+ s ^TKFINSERIE(121329)="Nouvelle Co"
+ s ^TKFINSERIE(121303)="Nouvelle Co"
+ s ^TKFINSERIE(121304)="Nouvelle Co"
+ s ^TKFINSERIE(121305)="Nouvelle Co"
+ s ^TKFINSERIE(121306)="Nouvelle Co"
+ s ^TKFINSERIE(121307)="Nouvelle Co"
+ s ^TKFINSERIE(121308)="Nouvelle Co"
+ s ^TKFINSERIE(121309)="Nouvelle Co"
+ s ^TKFINSERIE(121310)="Nouvelle Co"
+ s ^TKFINSERIE(121311)="Nouvelle Co"
+ s ^TKFINSERIE(121312)="Nouvelle Co"
+ s ^TKFINSERIE(121313)="Nouvelle Co"
+ s ^TKFINSERIE(121314)="Nouvelle Co"
+ s ^TKFINSERIE(120588)="Nouvelle Co"
+ s ^TKFINSERIE(120590)="Nouvelle Co"
+ s ^TKFINSERIE(120592)="Nouvelle Co"
+ s ^TKFINSERIE(120593)="Nouvelle Co"
+ s ^TKFINSERIE(120594)="Nouvelle Co"
+ s ^TKFINSERIE(120595)="Nouvelle Co"
+ s ^TKFINSERIE(120596)="Nouvelle Co"
+ s ^TKFINSERIE(120598)="Nouvelle Co"
+ s ^TKFINSERIE(120600)="Nouvelle Co"
+ s ^TKFINSERIE(120603)="Nouvelle Co"
+ s ^TKFINSERIE(105877)="Nouvelle Co"
+ s ^TKFINSERIE(121162)="Nouvelle Co"
+ s ^TKFINSERIE(121164)="Nouvelle Co"
+ s ^TKFINSERIE(120006)="Nouvelle Co"
+ s ^TKFINSERIE(120007)="Nouvelle Co"
+ s ^TKFINSERIE(120008)="Nouvelle Co"
+ s ^TKFINSERIE(120009)="Nouvelle Co"
+ s ^TKFINSERIE(120010)="Nouvelle Co"
+ s ^TKFINSERIE(120011)="Nouvelle Co"
+ s ^TKFINSERIE(120012)="Nouvelle Co"
+ s ^TKFINSERIE(120013)="Nouvelle Co"
+ s ^TKFINSERIE(120014)="Nouvelle Co"
+ s ^TKFINSERIE(120015)="Nouvelle Co"
+ s ^TKFINSERIE(120016)="Nouvelle Co"
+ s ^TKFINSERIE(120017)="Nouvelle Co"
+ s ^TKFINSERIE(120018)="Nouvelle Co"
+ s ^TKFINSERIE(120019)="Nouvelle Co"
+ s ^TKFINSERIE(120020)="Nouvelle Co"
+ s ^TKFINSERIE(120021)="Nouvelle Co"
+ s ^TKFINSERIE(120022)="Nouvelle Co"
+ s ^TKFINSERIE(120023)="Nouvelle Co"
+ s ^TKFINSERIE(120024)="Nouvelle Co"
+ s ^TKFINSERIE(120025)="Nouvelle Co"
+ s ^TKFINSERIE(120026)="Nouvelle Co"
+ s ^TKFINSERIE(120027)="Nouvelle Co"
+ s ^TKFINSERIE(120028)="Nouvelle Co"
+ s ^TKFINSERIE(120029)="Nouvelle Co"
+ s ^TKFINSERIE(120030)="Nouvelle Co"
+ s ^TKFINSERIE(120031)="Nouvelle Co"
+ s ^TKFINSERIE(120032)="Nouvelle Co"
+ s ^TKFINSERIE(120033)="Nouvelle Co"
+ s ^TKFINSERIE(120034)="Nouvelle Co"
+ s ^TKFINSERIE(120035)="Nouvelle Co"
+ s ^TKFINSERIE(120036)="Nouvelle Co"
+ s ^TKFINSERIE(120037)="Nouvelle Co"
+ s ^TKFINSERIE(120038)="Nouvelle Co"
+ s ^TKFINSERIE(120039)="Nouvelle Co"
+ s ^TKFINSERIE(120040)="Nouvelle Co"
+ s ^TKFINSERIE(120054)="Nouvelle Co"
+ s ^TKFINSERIE(120055)="Nouvelle Co"
+ s ^TKFINSERIE(120056)="Nouvelle Co"
+ s ^TKFINSERIE(120057)="Nouvelle Co"
+ s ^TKFINSERIE(120058)="Nouvelle Co"
+ s ^TKFINSERIE(120059)="Nouvelle Co"
+ s ^TKFINSERIE(120060)="Nouvelle Co"
+ s ^TKFINSERIE(120061)="Nouvelle Co"
+ s ^TKFINSERIE(120062)="Nouvelle Co"
+ s ^TKFINSERIE(120063)="Nouvelle Co"
+ s ^TKFINSERIE(120064)="Nouvelle Co"
+ s ^TKFINSERIE(120065)="Nouvelle Co"
+ s ^TKFINSERIE(120066)="Nouvelle Co"
+ s ^TKFINSERIE(120067)="Nouvelle Co"
+ s ^TKFINSERIE(120068)="Nouvelle Co"
+ s ^TKFINSERIE(120069)="Nouvelle Co"
+ s ^TKFINSERIE(120070)="Nouvelle Co"
+ s ^TKFINSERIE(120071)="Nouvelle Co"
+ s ^TKFINSERIE(120072)="Nouvelle Co"
+ s ^TKFINSERIE(120073)="Nouvelle Co"
+ s ^TKFINSERIE(120074)="Nouvelle Co"
+ s ^TKFINSERIE(120075)="Nouvelle Co"
+ s ^TKFINSERIE(120076)="Nouvelle Co"
+ s ^TKFINSERIE(120077)="Nouvelle Co"
+ s ^TKFINSERIE(120078)="Nouvelle Co"
+ s ^TKFINSERIE(120079)="Nouvelle Co"
+ s ^TKFINSERIE(120081)="Nouvelle Co"
+ s ^TKFINSERIE(120097)="Nouvelle Co"
+ s ^TKFINSERIE(120098)="Nouvelle Co"
+ s ^TKFINSERIE(120099)="Nouvelle Co"
+ s ^TKFINSERIE(120100)="Nouvelle Co"
+ s ^TKFINSERIE(121008)="Nouvelle Co"
+ s ^TKFINSERIE(121009)="Nouvelle Co"
+ s ^TKFINSERIE(121010)="Nouvelle Co"
+ s ^TKFINSERIE(121011)="Nouvelle Co"
+ s ^TKFINSERIE(121012)="Nouvelle Co"
+ s ^TKFINSERIE(121013)="Nouvelle Co"
+ s ^TKFINSERIE(120685)="Nouvelle Co"
+ s ^TKFINSERIE(120686)="Nouvelle Co"
+ s ^TKFINSERIE(120687)="Nouvelle Co"
+ s ^TKFINSERIE(120688)="Nouvelle Co"
+ s ^TKFINSERIE(120689)="Nouvelle Co"
+ s ^TKFINSERIE(120690)="Nouvelle Co"
+ s ^TKFINSERIE(121165)="Nouvelle Co"
+ s ^TKFINSERIE(121166)="Nouvelle Co"
+ s ^TKFINSERIE(121167)="Nouvelle Co"
+ s ^TKFINSERIE(121168)="Nouvelle Co"
+ s ^TKFINSERIE(121169)="Nouvelle Co"
+ s ^TKFINSERIE(121170)="Nouvelle Co"
+ s ^TKFINSERIE(120589)="Nouvelle Co"
+ s ^TKFINSERIE(120591)="Nouvelle Co"
+ s ^TKFINSERIE(120258)="Nouvelle Co"
+ s ^TKFINSERIE(120259)="Nouvelle Co"
+ s ^TKFINSERIE(120274)="Nouvelle Co"
+ s ^TKFINSERIE(120275)="Nouvelle Co"
+ s ^TKFINSERIE(120276)="Nouvelle Co"
+ s ^TKFINSERIE(120277)="Nouvelle Co"
+ s ^TKFINSERIE(120278)="Nouvelle Co"
+ s ^TKFINSERIE(120279)="Nouvelle Co"
+ s ^TKFINSERIE(120280)="Nouvelle Co"
+ s ^TKFINSERIE(120281)="Nouvelle Co"
+ s ^TKFINSERIE(120282)="Nouvelle Co"
+ s ^TKFINSERIE(120283)="Nouvelle Co"
+ s ^TKFINSERIE(120284)="Nouvelle Co"
+ s ^TKFINSERIE(120285)="Nouvelle Co"
+ s ^TKFINSERIE(120286)="Nouvelle Co"
+ s ^TKFINSERIE(120287)="Nouvelle Co"
+ s ^TKFINSERIE(120288)="Nouvelle Co"
+ s ^TKFINSERIE(120289)="Nouvelle Co"
+ s ^TKFINSERIE(120290)="Nouvelle Co"
+ s ^TKFINSERIE(120291)="Nouvelle Co"
+ s ^TKFINSERIE(120336)="Nouvelle Co"
+ s ^TKFINSERIE(120337)="Nouvelle Co"
+ s ^TKFINSERIE(120338)="Nouvelle Co"
+ s ^TKFINSERIE(120339)="Nouvelle Co"
+ s ^TKFINSERIE(120606)="Nouvelle Co"
+ s ^TKFINSERIE(120607)="Nouvelle Co"
+ s ^TKFINSERIE(120609)="Nouvelle Co"
+ s ^TKFINSERIE(120610)="Nouvelle Co"
+ s ^TKFINSERIE(120713)="Nouvelle Co"
+ s ^TKFINSERIE(120714)="Nouvelle Co"
+ s ^TKFINSERIE(120715)="Nouvelle Co"
+ s ^TKFINSERIE(121176)="Nouvelle Co"
+ s ^TKFINSERIE(121267)="Nouvelle Co"
+ s ^TKFINSERIE(121268)="Nouvelle Co"
+ s ^TKFINSERIE(121269)="Nouvelle Co"
+ s ^TKFINSERIE(121270)="Nouvelle Co"
+ s ^TKFINSERIE(120479)="Nouvelle Co"
+ s ^TKFINSERIE(120480)="Nouvelle Co"
+ s ^TKFINSERIE(120484)="Nouvelle Co"
+ s ^TKFINSERIE(120485)="Nouvelle Co"
+ s ^TKFINSERIE(120633)="Nouvelle Co"
+ s ^TKFINSERIE(120634)="Nouvelle Co"
+ s ^TKFINSERIE(120716)="Nouvelle Co"
+ s ^TKFINSERIE(120722)="Nouvelle Co"
+ s ^TKFINSERIE(120723)="Nouvelle Co"
+ s ^TKFINSERIE(120724)="Nouvelle Co"
+ s ^TKFINSERIE(120725)="Nouvelle Co"
+ s ^TKFINSERIE(121254)="Nouvelle Co"
+ s ^TKFINSERIE(112734)="Nouvelle Co"
+ s ^TKFINSERIE(112735)="Nouvelle Co"
+ s ^TKFINSERIE(112739)="Nouvelle Co"
+ s ^TKFINSERIE(120406)="Nouvelle Co"
+ s ^TKFINSERIE(120411)="Nouvelle Co"
+ s ^TKFINSERIE(120413)="Nouvelle Co"
+ s ^TKFINSERIE(120418)="Nouvelle Co"
+ s ^TKFINSERIE(120426)="Nouvelle Co"
+ s ^TKFINSERIE(120429)="Nouvelle Co"
+ s ^TKFINSERIE(120433)="Nouvelle Co"
+ s ^TKFINSERIE(120434)="Nouvelle Co"
+ s ^TKFINSERIE(120435)="Nouvelle Co"
+ s ^TKFINSERIE(121336)="Nouvelle Co"
+ s ^TKFINSERIE(121337)="Nouvelle Co"
+ s ^TKFINSERIE(121338)="Nouvelle Co"
+ s ^TKFINSERIE(121339)="Nouvelle Co"
+ s ^TKFINSERIE(121341)="Nouvelle Co"
+ s ^TKFINSERIE(121342)="Nouvelle Co"
+ s ^TKFINSERIE(121343)="Nouvelle Co"
+ s ^TKFINSERIE(121344)="Nouvelle Co"
+ s ^TKFINSERIE(121345)="Nouvelle Co"
+ s ^TKFINSERIE(121346)="Nouvelle Co"
+ s ^TKFINSERIE(121347)="Nouvelle Co"
+ s ^TKFINSERIE(121348)="Nouvelle Co"
+ s ^TKFINSERIE(121349)="Nouvelle Co"
+ s ^TKFINSERIE(121350)="Nouvelle Co"
+ s ^TKFINSERIE(121351)="Nouvelle Co"
+ s ^TKFINSERIE(121352)="Nouvelle Co"
+ s ^TKFINSERIE(120743)="Nouvelle Co"
+ s ^TKFINSERIE(120744)="Nouvelle Co"
+ s ^TKFINSERIE(117834)="Nouvelle Co"
+ s ^TKFINSERIE(117836)="Nouvelle Co"
+ s ^TKFINSERIE(117837)="Nouvelle Co"
+ s ^TKFINSERIE(117838)="Nouvelle Co"
+ s ^TKFINSERIE(119518)="Nouvelle Co"
+ s ^TKFINSERIE(119519)="Nouvelle Co"
+ s ^TKFINSERIE(119520)="Nouvelle Co"
+ s ^TKFINSERIE(121031)="Nouvelle Co"
+ s ^TKFINSERIE(121032)="Nouvelle Co"
+ s ^TKFINSERIE(121033)="Nouvelle Co"
+ s ^TKFINSERIE(121034)="Nouvelle Co"
+ s ^TKFINSERIE(121035)="Nouvelle Co"
+ s ^TKFINSERIE(121036)="Nouvelle Co"
+ s ^TKFINSERIE(121037)="Nouvelle Co"
+ s ^TKFINSERIE(121038)="Nouvelle Co"
+ s ^TKFINSERIE(121039)="Nouvelle Co"
+ s ^TKFINSERIE(121040)="Nouvelle Co"
+ s ^TKFINSERIE(121041)="Nouvelle Co"
+ s ^TKFINSERIE(121042)="Nouvelle Co"
+ s ^TKFINSERIE(121043)="Nouvelle Co"
+ s ^TKFINSERIE(121044)="Nouvelle Co"
+ s ^TKFINSERIE(121045)="Nouvelle Co"
+ s ^TKFINSERIE(121046)="Nouvelle Co"
+ s ^TKFINSERIE(121052)="Nouvelle Co"
+ s ^TKFINSERIE(121053)="Nouvelle Co"
+ s ^TKFINSERIE(121054)="Nouvelle Co"
+ s ^TKFINSERIE(121055)="Nouvelle Co"
+ s ^TKFINSERIE(121056)="Nouvelle Co"
+ s ^TKFINSERIE(121057)="Nouvelle Co"
+ s ^TKFINSERIE(121058)="Nouvelle Co"
+ s ^TKFINSERIE(121059)="Nouvelle Co"
+ s ^TKFINSERIE(121075)="Nouvelle Co"
+ s ^TKFINSERIE(121076)="Nouvelle Co"
+ s ^TKFINSERIE(121077)="Nouvelle Co"
+ s ^TKFINSERIE(121078)="Nouvelle Co"
+ s ^TKFINSERIE(121079)="Nouvelle Co"
+ s ^TKFINSERIE(121080)="Nouvelle Co"
+ s ^TKFINSERIE(121081)="Nouvelle Co"
+ s ^TKFINSERIE(121082)="Nouvelle Co"
+ s ^TKFINSERIE(121083)="Nouvelle Co"
+ s ^TKFINSERIE(121084)="Nouvelle Co"
+ s ^TKFINSERIE(121085)="Nouvelle Co"
+ s ^TKFINSERIE(121086)="Nouvelle Co"
+ s ^TKFINSERIE(121087)="Nouvelle Co"
+ s ^TKFINSERIE(121088)="Nouvelle Co"
+ s ^TKFINSERIE(121089)="Nouvelle Co"
+ s ^TKFINSERIE(121090)="Nouvelle Co"
+ s ^TKFINSERIE(121091)="Nouvelle Co"
+ s ^TKFINSERIE(121092)="Nouvelle Co"
+ s ^TKFINSERIE(121093)="Nouvelle Co"
+ s ^TKFINSERIE(121094)="Nouvelle Co"
+ s ^TKFINSERIE(121095)="Nouvelle Co"
+ s ^TKFINSERIE(121096)="Nouvelle Co"
+ s ^TKFINSERIE(121097)="Nouvelle Co"
+ s ^TKFINSERIE(121098)="Nouvelle Co"
+ s ^TKFINSERIE(121099)="Nouvelle Co"
+ s ^TKFINSERIE(121100)="Nouvelle Co"
+ s ^TKFINSERIE(121101)="Nouvelle Co"
+ s ^TKFINSERIE(121102)="Nouvelle Co"
+ s ^TKFINSERIE(121103)="Nouvelle Co"
+ s ^TKFINSERIE(121104)="Nouvelle Co"
+ s ^TKFINSERIE(121105)="Nouvelle Co"
+ s ^TKFINSERIE(121106)="Nouvelle Co"
+ s ^TKFINSERIE(121107)="Nouvelle Co"
+ s ^TKFINSERIE(121108)="Nouvelle Co"
+ s ^TKFINSERIE(121109)="Nouvelle Co"
+ s ^TKFINSERIE(121110)="Nouvelle Co"
+ s ^TKFINSERIE(121111)="Nouvelle Co"
+ s ^TKFINSERIE(121112)="Nouvelle Co"
+ s ^TKFINSERIE(121113)="Nouvelle Co"
+ s ^TKFINSERIE(121114)="Nouvelle Co"
+ s ^TKFINSERIE(121115)="Nouvelle Co"
+ s ^TKFINSERIE(121116)="Nouvelle Co"
+ s ^TKFINSERIE(121117)="Nouvelle Co"
+ s ^TKFINSERIE(121118)="Nouvelle Co"
+ s ^TKFINSERIE(121119)="Nouvelle Co"
+ s ^TKFINSERIE(121120)="Nouvelle Co"
+ s ^TKFINSERIE(121121)="Nouvelle Co"
+ s ^TKFINSERIE(121122)="Nouvelle Co"
+ s ^TKFINSERIE(121123)="Nouvelle Co"
+ s ^TKFINSERIE(121124)="Nouvelle Co"
+ s ^TKFINSERIE(121125)="Nouvelle Co"
+ s ^TKFINSERIE(121353)="Nouvelle Co"
+ s ^TKFINSERIE(120249)="Nouvelle Co"
+ s ^TKFINSERIE(120250)="Nouvelle Co"
+ s ^TKFINSERIE(120251)="Nouvelle Co"
+ s ^TKFINSERIE(120252)="Nouvelle Co"
+ s ^TKFINSERIE(120253)="Nouvelle Co"
+ s ^TKFINSERIE(120254)="Nouvelle Co"
+ s ^TKFINSERIE(120255)="Nouvelle Co"
+ s ^TKFINSERIE(120256)="Nouvelle Co"
+ s ^TKFINSERIE(120257)="Nouvelle Co"
+ s ^TKFINSERIE(120201)="Nouvelle Co"
+ s ^TKFINSERIE(120202)="Nouvelle Co"
+ s ^TKFINSERIE(120203)="Nouvelle Co"
+ s ^TKFINSERIE(120304)="Nouvelle Co"
+ s ^TKFINSERIE(120305)="Nouvelle Co"
+ s ^TKFINSERIE(120306)="Nouvelle Co"
+ s ^TKFINSERIE(120307)="Nouvelle Co"
+ s ^TKFINSERIE(120308)="Nouvelle Co"
+ s ^TKFINSERIE(120309)="Nouvelle Co"
+ s ^TKFINSERIE(120310)="Nouvelle Co"
+ s ^TKFINSERIE(105885)="Nouvelle Co"
+ s ^TKFINSERIE(120185)="Nouvelle Co"
+ s ^TKFINSERIE(120186)="Nouvelle Co"
+ s ^TKFINSERIE(120187)="Nouvelle Co"
+ s ^TKFINSERIE(120188)="Nouvelle Co"
+ s ^TKFINSERIE(120189)="Nouvelle Co"
+ s ^TKFINSERIE(120190)="Nouvelle Co"
+ s ^TKFINSERIE(120191)="Nouvelle Co"
+ s ^TKFINSERIE(120192)="Nouvelle Co"
+ s ^TKFINSERIE(120194)="Nouvelle Co"
+ s ^TKFINSERIE(120199)="Nouvelle Co"
+ s ^TKFINSERIE(120200)="Nouvelle Co"
+ s ^TKFINSERIE(120382)="Nouvelle Co"
+ s ^TKFINSERIE(120383)="Nouvelle Co"
+ s ^TKFINSERIE(120384)="Nouvelle Co"
+ s ^TKFINSERIE(120385)="Nouvelle Co"
+ s ^TKFINSERIE(120386)="Nouvelle Co"
+ s ^TKFINSERIE(120387)="Nouvelle Co"
+ s ^TKFINSERIE(120388)="Nouvelle Co"
+ s ^TKFINSERIE(120389)="Nouvelle Co"
+ s ^TKFINSERIE(120390)="Nouvelle Co"
+ s ^TKFINSERIE(120391)="Nouvelle Co"
+ s ^TKFINSERIE(120392)="Nouvelle Co"
+ s ^TKFINSERIE(120393)="Nouvelle Co"
+ s ^TKFINSERIE(120394)="Nouvelle Co"
+ s ^TKFINSERIE(120395)="Nouvelle Co"
+ s ^TKFINSERIE(120396)="Nouvelle Co"
+ s ^TKFINSERIE(120397)="Nouvelle Co"
+ s ^TKFINSERIE(120398)="Nouvelle Co"
+ s ^TKFINSERIE(120399)="Nouvelle Co"
+ s ^TKFINSERIE(120400)="Nouvelle Co"
+ s ^TKFINSERIE(120401)="Nouvelle Co"
+ s ^TKFINSERIE(120402)="Nouvelle Co"
+ s ^TKFINSERIE(120403)="Nouvelle Co"
+ s ^TKFINSERIE(120405)="Nouvelle Co"
+ s ^TKFINSERIE(120407)="Nouvelle Co"
+ s ^TKFINSERIE(120408)="Nouvelle Co"
+ s ^TKFINSERIE(120409)="Nouvelle Co"
+ s ^TKFINSERIE(120410)="Nouvelle Co"
+ s ^TKFINSERIE(120412)="Nouvelle Co"
+ s ^TKFINSERIE(120414)="Nouvelle Co"
+ s ^TKFINSERIE(120415)="Nouvelle Co"
+ s ^TKFINSERIE(120416)="Nouvelle Co"
+ s ^TKFINSERIE(120419)="Nouvelle Co"
+ s ^TKFINSERIE(120422)="Nouvelle Co"
+ s ^TKFINSERIE(120424)="Nouvelle Co"
+ s ^TKFINSERIE(120425)="Nouvelle Co"
+ s ^TKFINSERIE(120427)="Nouvelle Co"
+ s ^TKFINSERIE(120432)="Nouvelle Co"
+ s ^TKFINSERIE(120437)="Nouvelle Co"
+ s ^TKFINSERIE(120439)="Nouvelle Co"
+ s ^TKFINSERIE(120441)="Nouvelle Co"
+ s ^TKFINSERIE(120443)="Nouvelle Co"
+ s ^TKFINSERIE(120444)="Nouvelle Co"
+ s ^TKFINSERIE(120292)="Nouvelle Co"
+ s ^TKFINSERIE(120293)="Nouvelle Co"
+ s ^TKFINSERIE(120294)="Nouvelle Co"
+ s ^TKFINSERIE(120295)="Nouvelle Co"
+ s ^TKFINSERIE(120296)="Nouvelle Co"
+ s ^TKFINSERIE(120297)="Nouvelle Co"
+ s ^TKFINSERIE(120298)="Nouvelle Co"
+ s ^TKFINSERIE(120299)="Nouvelle Co"
+ s ^TKFINSERIE(120300)="Nouvelle Co"
+ s ^TKFINSERIE(120210)="Nouvelle Co"
+ s ^TKFINSERIE(120211)="Nouvelle Co"
+ s ^TKFINSERIE(120228)="Nouvelle Co"
+ s ^TKFINSERIE(120230)="Nouvelle Co"
+ s ^TKFINSERIE(120231)="Nouvelle Co"
+ s ^TKFINSERIE(120233)="Nouvelle Co"
+ s ^TKFINSERIE(120237)="Nouvelle Co"
+ s ^TKFINSERIE(120238)="Nouvelle Co"
+ s ^TKFINSERIE(120240)="Nouvelle Co"
+ s ^TKFINSERIE(120242)="Nouvelle Co"
+ s ^TKFINSERIE(120243)="Nouvelle Co"
+ s ^TKFINSERIE(120613)="Nouvelle Co"
+ s ^TKFINSERIE(120632)="Nouvelle Co"
+ s ^TKFINSERIE(117462)="Nouvelle Co"
+ s ^TKFINSERIE(117466)="Nouvelle Co"
+ s ^TKFINSERIE(121271)="Nouvelle Co"
+ s ^TKFINSERIE(121272)="Nouvelle Co"
+ s ^TKFINSERIE(121273)="Nouvelle Co"
+ s ^TKFINSERIE(120311)="Nouvelle Co"
+ s ^TKFINSERIE(120312)="Nouvelle Co"
+ s ^TKFINSERIE(120712)="Nouvelle Co"
+ s ^TKFINSERIE(120756)="Nouvelle Co"
+ s ^TKFINSERIE(120653)="Nouvelle Co"
+ s ^TKFINSERIE(120654)="Nouvelle Co"
+ s ^TKFINSERIE(120655)="Nouvelle Co"
+ s ^TKFINSERIE(120656)="Nouvelle Co"
+ s ^TKFINSERIE(120657)="Nouvelle Co"
+ s ^TKFINSERIE(120658)="Nouvelle Co"
+ s ^TKFINSERIE(120659)="Nouvelle Co"
+ s ^TKFINSERIE(120660)="Nouvelle Co"
+ s ^TKFINSERIE(120217)="Nouvelle Co"
+ s ^TKFINSERIE(120218)="Nouvelle Co"
+ s ^TKFINSERIE(120219)="Nouvelle Co"
+ s ^TKFINSERIE(120220)="Nouvelle Co"
+ s ^TKFINSERIE(120221)="Nouvelle Co"
+ s ^TKFINSERIE(120222)="Nouvelle Co"
+ s ^TKFINSERIE(120223)="Nouvelle Co"
+ s ^TKFINSERIE(120224)="Nouvelle Co"
+ s ^TKFINSERIE(120225)="Nouvelle Co"
+ s ^TKFINSERIE(120226)="Nouvelle Co"
+ s ^TKFINSERIE(120227)="Nouvelle Co"
+ s ^TKFINSERIE(120229)="Nouvelle Co"
+ s ^TKFINSERIE(120232)="Nouvelle Co"
+ s ^TKFINSERIE(120234)="Nouvelle Co"
+ s ^TKFINSERIE(120235)="Nouvelle Co"
+ s ^TKFINSERIE(120236)="Nouvelle Co"
+ s ^TKFINSERIE(120239)="Nouvelle Co"
+ s ^TKFINSERIE(120241)="Nouvelle Co"
+ s ^TKFINSERIE(120244)="Nouvelle Co"
+ s ^TKFINSERIE(120245)="Nouvelle Co"
+ s ^TKFINSERIE(120246)="Nouvelle Co"
+ s ^TKFINSERIE(120247)="Nouvelle Co"
+ s ^TKFINSERIE(120248)="Nouvelle Co"
+ s ^TKFINSERIE(120726)="Nouvelle Co"
+ s ^TKFINSERIE(120727)="Nouvelle Co"
+ s ^TKFINSERIE(120728)="Nouvelle Co"
+ s ^TKFINSERIE(120735)="Nouvelle Co"
+ s ^TKFINSERIE(120736)="Nouvelle Co"
+ s ^TKFINSERIE(121300)="Nouvelle Co"
+ s ^TKFINSERIE(120491)="Nouvelle Co"
+ s ^TKFINSERIE(120493)="Nouvelle Co"
+ s ^TKFINSERIE(120487)="Nouvelle Co"
+ s ^TKFINSERIE(119968)="Nouvelle Co"
+ s ^TKFINSERIE(119969)="Nouvelle Co"
+ s ^TKFINSERIE(101795)="Nouvelle Co"
+ s ^TKFINSERIE(120740)="Nouvelle Co"
+ s ^TKFINSERIE(120741)="Nouvelle Co"
+ s ^TKFINSERIE(120742)="Nouvelle Co"
+ s ^TKFINSERIE(85792)="Nouvelle Co"
+ s ^TKFINSERIE(113766)="Nouvelle Co"
+ s ^TKFINSERIE(119891)="Nouvelle Co"
+ s ^TKFINSERIE(119892)="Nouvelle Co"
+ s ^TKFINSERIE(119896)="Nouvelle Co"
+ s ^TKFINSERIE(119897)="Nouvelle Co"
+ s ^TKFINSERIE(119898)="Nouvelle Co"
+ s ^TKFINSERIE(119899)="Nouvelle Co"
+ s ^TKFINSERIE(119900)="Nouvelle Co"
+ s ^TKFINSERIE(119901)="Nouvelle Co"
+ s ^TKFINSERIE(119927)="Nouvelle Co"
+ s ^TKFINSERIE(119931)="Nouvelle Co"
+ s ^TKFINSERIE(119940)="Nouvelle Co"
+ s ^TKFINSERIE(119941)="Nouvelle Co"
+ s ^TKFINSERIE(119942)="Nouvelle Co"
+ s ^TKFINSERIE(119943)="Nouvelle Co"
+ s ^TKFINSERIE(119944)="Nouvelle Co"
+ s ^TKFINSERIE(119945)="Nouvelle Co"
+ s ^TKFINSERIE(119946)="Nouvelle Co"
+ s ^TKFINSERIE(119947)="Nouvelle Co"
+ s ^TKFINSERIE(119948)="Nouvelle Co"
+ s ^TKFINSERIE(119949)="Nouvelle Co"
+ s ^TKFINSERIE(119950)="Nouvelle Co"
+ s ^TKFINSERIE(119951)="Nouvelle Co"
+ s ^TKFINSERIE(119952)="Nouvelle Co"
+ s ^TKFINSERIE(119953)="Nouvelle Co"
+ s ^TKFINSERIE(119954)="Nouvelle Co"
+ s ^TKFINSERIE(119955)="Nouvelle Co"
+ s ^TKFINSERIE(119956)="Nouvelle Co"
+ s ^TKFINSERIE(119957)="Nouvelle Co"
+ s ^TKFINSERIE(119958)="Nouvelle Co"
+ s ^TKFINSERIE(119959)="Nouvelle Co"
+ s ^TKFINSERIE(119960)="Nouvelle Co"
+ s ^TKFINSERIE(119961)="Nouvelle Co"
+ s ^TKFINSERIE(119962)="Nouvelle Co"
+ s ^TKFINSERIE(119963)="Nouvelle Co"
+ s ^TKFINSERIE(119964)="Nouvelle Co"
+ s ^TKFINSERIE(119965)="Nouvelle Co"
+ s ^TKFINSERIE(119966)="Nouvelle Co"
+ s ^TKFINSERIE(120710)="Nouvelle Co"
+ s ^TKFINSERIE(120711)="Nouvelle Co"
+ s ^TKFINSERIE(121222)="Nouvelle Co"
+ s ^TKFINSERIE(121223)="Nouvelle Co"
+ s ^TKFINSERIE(120212)="Nouvelle Co"
+ s ^TKFINSERIE(120213)="Nouvelle Co"
+ s ^TKFINSERIE(120214)="Nouvelle Co"
+ s ^TKFINSERIE(120215)="Nouvelle Co"
+ s ^TKFINSERIE(120216)="Nouvelle Co"
+ s ^TKFINSERIE(120340)="Nouvelle Co"
+ s ^TKFINSERIE(120341)="Nouvelle Co"
+ s ^TKFINSERIE(120342)="Nouvelle Co"
+ s ^TKFINSERIE(120343)="Nouvelle Co"
+ s ^TKFINSERIE(120344)="Nouvelle Co"
+ s ^TKFINSERIE(120345)="Nouvelle Co"
+ s ^TKFINSERIE(120346)="Nouvelle Co"
+ s ^TKFINSERIE(120347)="Nouvelle Co"
+ s ^TKFINSERIE(120597)="Nouvelle Co"
+ s ^TKFINSERIE(120599)="Nouvelle Co"
+ s ^TKFINSERIE(120601)="Nouvelle Co"
+ s ^TKFINSERIE(120602)="Nouvelle Co"
+ s ^TKFINSERIE(120604)="Nouvelle Co"
+ s ^TKFINSERIE(120614)="Nouvelle Co"
+ s ^TKFINSERIE(120615)="Nouvelle Co"
+ s ^TKFINSERIE(120616)="Nouvelle Co"
+ s ^TKFINSERIE(120617)="Nouvelle Co"
+ s ^TKFINSERIE(120618)="Nouvelle Co"
+ s ^TKFINSERIE(120619)="Nouvelle Co"
+ s ^TKFINSERIE(120620)="Nouvelle Co"
+ s ^TKFINSERIE(120621)="Nouvelle Co"
+ s ^TKFINSERIE(120622)="Nouvelle Co"
+ s ^TKFINSERIE(120623)="Nouvelle Co"
+ s ^TKFINSERIE(120624)="Nouvelle Co"
+ s ^TKFINSERIE(120625)="Nouvelle Co"
+ s ^TKFINSERIE(120626)="Nouvelle Co"
+ s ^TKFINSERIE(120627)="Nouvelle Co"
+ s ^TKFINSERIE(120628)="Nouvelle Co"
+ s ^TKFINSERIE(120629)="Nouvelle Co"
+ s ^TKFINSERIE(120630)="Nouvelle Co"
+ s ^TKFINSERIE(120631)="Nouvelle Co"
+ s ^TKFINSERIE(120635)="Nouvelle Co"
+ s ^TKFINSERIE(120636)="Nouvelle Co"
+ s ^TKFINSERIE(120637)="Nouvelle Co"
+ s ^TKFINSERIE(120638)="Nouvelle Co"
+ s ^TKFINSERIE(120639)="Nouvelle Co"
+ s ^TKFINSERIE(120640)="Nouvelle Co"
+ s ^TKFINSERIE(120641)="Nouvelle Co"
+ s ^TKFINSERIE(120642)="Nouvelle Co"
+ s ^TKFINSERIE(120643)="Nouvelle Co"
+ s ^TKFINSERIE(120644)="Nouvelle Co"
+ s ^TKFINSERIE(120645)="Nouvelle Co"
+ s ^TKFINSERIE(120646)="Nouvelle Co"
+ s ^TKFINSERIE(120647)="Nouvelle Co"
+ s ^TKFINSERIE(120648)="Nouvelle Co"
+ s ^TKFINSERIE(120649)="Nouvelle Co"
+ s ^TKFINSERIE(120650)="Nouvelle Co"
+ s ^TKFINSERIE(120651)="Nouvelle Co"
+ s ^TKFINSERIE(120652)="Nouvelle Co"
+ s ^TKFINSERIE(120730)="Nouvelle Co"
+ s ^TKFINSERIE(120731)="Nouvelle Co"
+ s ^TKFINSERIE(120732)="Nouvelle Co"
+ s ^TKFINSERIE(120737)="Nouvelle Co"
+ s ^TKFINSERIE(120739)="Nouvelle Co"
+ s ^TKFINSERIE(121198)="Nouvelle Co"
+ s ^TKFINSERIE(121200)="Nouvelle Co"
+ s ^TKFINSERIE(121331)="Nouvelle Co"
+ s ^TKFINSERIE(121332)="Nouvelle Co"
+ s ^TKFINSERIE(121334)="Nouvelle Co"
+ s ^TKFINSERIE(121354)="Nouvelle Co"
+ s ^TKFINSERIE(121435)="Nouvelle Co"
+ s ^TKFINSERIE(121436)="Nouvelle Co"
+ s ^TKFINSERIE(121437)="Nouvelle Co"
+ s ^TKFINSERIE(121438)="Nouvelle Co"
+ s ^TKFINSERIE(121439)="Nouvelle Co"
+ s ^TKFINSERIE(121234)="Nouvelle Co"
+ s ^TKFINSERIE(121235)="Nouvelle Co"
+ s ^TKFINSERIE(105874)="Nouvelle Co"
+ s ^TKFINSERIE(120782)="Nouvelle Co"
+ s ^TKFINSERIE(120745)="Nouvelle Co"
+ s ^TKFINSERIE(120746)="Nouvelle Co"
+ s ^TKFINSERIE(120747)="Nouvelle Co"
+ s ^TKFINSERIE(120748)="Nouvelle Co"
+ s ^TKFINSERIE(120749)="Nouvelle Co"
+ s ^TKFINSERIE(120750)="Nouvelle Co"
+ s ^TKFINSERIE(120559)="Nouvelle Co"
+ s ^TKFINSERIE(120562)="Nouvelle Co"
+ s ^TKFINSERIE(120563)="Nouvelle Co"
+ s ^TKFINSERIE(120565)="Nouvelle Co"
+ s ^TKFINSERIE(120566)="Nouvelle Co"
+ s ^TKFINSERIE(120582)="Nouvelle Co"
+ s ^TKFINSERIE(120583)="Nouvelle Co"
+ s ^TKFINSERIE(120584)="Nouvelle Co"
+ s ^TKFINSERIE(120585)="Nouvelle Co"
+ s ^TKFINSERIE(120783)="Nouvelle Co"
+ s ^TKFINSERIE(121000)="Nouvelle Co"
+ s ^TKFINSERIE(121001)="Nouvelle Co"
+ s ^TKFINSERIE(121002)="Nouvelle Co"
+ s ^TKFINSERIE(121003)="Nouvelle Co"
+ s ^TKFINSERIE(121004)="Nouvelle Co"
+ s ^TKFINSERIE(121005)="Nouvelle Co"
+ s ^TKFINSERIE(121006)="Nouvelle Co"
+ s ^TKFINSERIE(121007)="Nouvelle Co"
+ s ^TKFINSERIE(119983)="Nouvelle Co"
+ s ^TKFINSERIE(119984)="Nouvelle Co"
+ s ^TKFINSERIE(119986)="Nouvelle Co"
+ s ^TKFINSERIE(119987)="Nouvelle Co"
+ s ^TKFINSERIE(119988)="Nouvelle Co"
+ s ^TKFINSERIE(119989)="Nouvelle Co"
+ s ^TKFINSERIE(119990)="Nouvelle Co"
+ s ^TKFINSERIE(119991)="Nouvelle Co"
+ s ^TKFINSERIE(119992)="Nouvelle Co"
+ s ^TKFINSERIE(119993)="Nouvelle Co"
+ s ^TKFINSERIE(119994)="Nouvelle Co"
+ s ^TKFINSERIE(119995)="Nouvelle Co"
+ s ^TKFINSERIE(119996)="Nouvelle Co"
+ s ^TKFINSERIE(119997)="Nouvelle Co"
+ s ^TKFINSERIE(119998)="Nouvelle Co"
+ s ^TKFINSERIE(119999)="Nouvelle Co"
+ s ^TKFINSERIE(120000)="Nouvelle Co"
+ s ^TKFINSERIE(120001)="Nouvelle Co"
+ s ^TKFINSERIE(120002)="Nouvelle Co"
+ s ^TKFINSERIE(120003)="Nouvelle Co"
+ s ^TKFINSERIE(120004)="Nouvelle Co"
+ s ^TKFINSERIE(120005)="Nouvelle Co"
+ s ^TKFINSERIE(120417)="Nouvelle Co"
+ s ^TKFINSERIE(120420)="Nouvelle Co"
+ s ^TKFINSERIE(120421)="Nouvelle Co"
+ s ^TKFINSERIE(120423)="Nouvelle Co"
+ s ^TKFINSERIE(120428)="Nouvelle Co"
+ s ^TKFINSERIE(120430)="Nouvelle Co"
+ s ^TKFINSERIE(120431)="Nouvelle Co"
+ s ^TKFINSERIE(120436)="Nouvelle Co"
+ s ^TKFINSERIE(120438)="Nouvelle Co"
+ s ^TKFINSERIE(120442)="Nouvelle Co"
+ s ^TKFINSERIE(120445)="Nouvelle Co"
+ s ^TKFINSERIE(120446)="Nouvelle Co"
+ s ^TKFINSERIE(120448)="Nouvelle Co"
+ s ^TKFINSERIE(120449)="Nouvelle Co"
+ s ^TKFINSERIE(120452)="Nouvelle Co"
+ s ^TKFINSERIE(120456)="Nouvelle Co"
+ s ^TKFINSERIE(120457)="Nouvelle Co"
+ s ^TKFINSERIE(120461)="Nouvelle Co"
+ s ^TKFINSERIE(120466)="Nouvelle Co"
+ s ^TKFINSERIE(120467)="Nouvelle Co"
+ s ^TKFINSERIE(120468)="Nouvelle Co"
+ s ^TKFINSERIE(120469)="Nouvelle Co"
+ s ^TKFINSERIE(120471)="Nouvelle Co"
+ s ^TKFINSERIE(120472)="Nouvelle Co"
+ s ^TKFINSERIE(121171)="Nouvelle Co"
+ s ^TKFINSERIE(121172)="Nouvelle Co"
+ s ^TKFINSERIE(121173)="Nouvelle Co"
+ s ^TKFINSERIE(121174)="Nouvelle Co"
+ s ^TKFINSERIE(120193)="Nouvelle Co"
+ s ^TKFINSERIE(120195)="Nouvelle Co"
+ s ^TKFINSERIE(120196)="Nouvelle Co"
+ s ^TKFINSERIE(120197)="Nouvelle Co"
+ s ^TKFINSERIE(120198)="Nouvelle Co"
+ s ^TKFINSERIE(120261)="Nouvelle Co"
+ s ^TKFINSERIE(120262)="Nouvelle Co"
+ s ^TKFINSERIE(120264)="Nouvelle Co"
+ s ^TKFINSERIE(120265)="Nouvelle Co"
+ s ^TKFINSERIE(120266)="Nouvelle Co"
+ s ^TKFINSERIE(120268)="Nouvelle Co"
+ s ^TKFINSERIE(120269)="Nouvelle Co"
+ s ^TKFINSERIE(120270)="Nouvelle Co"
+ s ^TKFINSERIE(120272)="Nouvelle Co"
+ s ^TKFINSERIE(120273)="Nouvelle Co"
+ s ^TKFINSERIE(121264)="Nouvelle Co"
+ s ^TKFINSERIE(121265)="Nouvelle Co"
+ s ^TKFINSERIE(121266)="Nouvelle Co"
+ s ^TKFINSERIE(121191)="Nouvelle Co"
+ s ^TKFINSERIE(121192)="Nouvelle Co"
+ s ^TKFINSERIE(121193)="Nouvelle Co"
+ s ^TKFINSERIE(121194)="Nouvelle Co"
+ s ^TKFINSERIE(121201)="Nouvelle Co"
+ s ^TKFINSERIE(121202)="Nouvelle Co"
+ s ^TKFINSERIE(121203)="Nouvelle Co"
+ s ^TKFINSERIE(105925)="Nouvelle Co"
+ s ^TKFINSERIE(120159)="Nouvelle Co"
+ s ^TKFINSERIE(120161)="Nouvelle Co"
+ s ^TKFINSERIE(120162)="Nouvelle Co"
+ s ^TKFINSERIE(120163)="Nouvelle Co"
+ s ^TKFINSERIE(120164)="Nouvelle Co"
+ s ^TKFINSERIE(120165)="Nouvelle Co"
+ s ^TKFINSERIE(120166)="Nouvelle Co"
+ s ^TKFINSERIE(120167)="Nouvelle Co"
+ s ^TKFINSERIE(120168)="Nouvelle Co"
+ s ^TKFINSERIE(120169)="Nouvelle Co"
+ s ^TKFINSERIE(120170)="Nouvelle Co"
+ s ^TKFINSERIE(120171)="Nouvelle Co"
+ s ^TKFINSERIE(120172)="Nouvelle Co"
+ s ^TKFINSERIE(120173)="Nouvelle Co"
+ s ^TKFINSERIE(120174)="Nouvelle Co"
+ s ^TKFINSERIE(120175)="Nouvelle Co"
+ s ^TKFINSERIE(120176)="Nouvelle Co"
+ s ^TKFINSERIE(120177)="Nouvelle Co"
+ s ^TKFINSERIE(120178)="Nouvelle Co"
+ s ^TKFINSERIE(120179)="Nouvelle Co"
+ s ^TKFINSERIE(120180)="Nouvelle Co"
+ s ^TKFINSERIE(120181)="Nouvelle Co"
+ s ^TKFINSERIE(120182)="Nouvelle Co"
+ s ^TKFINSERIE(120183)="Nouvelle Co"
+ s ^TKFINSERIE(120184)="Nouvelle Co"
+ s ^TKFINSERIE(119525)="Nouvelle Co"
+ s ^TKFINSERIE(120704)="Nouvelle Co"
+ s ^TKFINSERIE(120705)="Nouvelle Co"
+ s ^TKFINSERIE(120706)="Nouvelle Co"
+ s ^TKFINSERIE(121296)="Nouvelle Co"
+ s ^TKFINSERIE(121297)="Nouvelle Co"
+ s ^TKFINSERIE(121298)="Nouvelle Co"
+ s ^TKFINSERIE(121299)="Nouvelle Co"
+ s ^TKFINSERIE(107949)="Nouvelle Co"
+ s ^TKFINSERIE(77526)="Nouvelle Co"
+ s ^TKFINSERIE(77527)="Nouvelle Co"
+ s ^TKFINSERIE(77528)="Nouvelle Co"
+ s ^TKFINSERIE(77531)="Nouvelle Co"
+ s ^TKFINSERIE(83162)="Nouvelle Co"
+ s ^TKFINSERIE(83163)="Nouvelle Co"
+ s ^TKFINSERIE(88037)="Nouvelle Co"
+ s ^TKFINSERIE(88038)="Nouvelle Co"
+ s ^TKFINSERIE(88039)="Nouvelle Co"
+ s ^TKFINSERIE(88040)="Nouvelle Co"
+ s ^TKFINSERIE(121558)="Nouvelle Co"
+ s ^TKFINSERIE(121562)="Nouvelle Co"
+ s ^TKFINSERIE(121565)="Nouvelle Co"
+ s ^TKFINSERIE(121566)="Nouvelle Co"
+ s ^TKFINSERIE(121567)="Nouvelle Co"
+ s ^TKFINSERIE(121568)="Nouvelle Co"
+ s ^TKFINSERIE(121569)="Nouvelle Co"
+ s ^TKFINSERIE(121570)="Nouvelle Co"
+ s ^TKFINSERIE(121571)="Nouvelle Co"
+ s ^TKFINSERIE(121572)="Nouvelle Co"
+ s ^TKFINSERIE(117469)="Nouvelle Co"
+ s ^TKFINSERIE(117471)="Nouvelle Co"
+ s ^TKFINSERIE(121533)="Nouvelle Co"
+ s ^TKFINSERIE(121534)="Nouvelle Co"
+ s ^TKFINSERIE(121479)="Nouvelle Co"
+ s ^TKFINSERIE(121480)="Nouvelle Co"
+ s ^TKFINSERIE(121481)="Nouvelle Co"
+ s ^TKFINSERIE(121482)="Nouvelle Co"
+ s ^TKFINSERIE(121483)="Nouvelle Co"
+ s ^TKFINSERIE(121484)="Nouvelle Co"
+ s ^TKFINSERIE(121551)="Nouvelle Co"
+ s ^TKFINSERIE(121555)="Nouvelle Co"
+ s ^TKFINSERIE(121556)="Nouvelle Co"
+ s ^TKFINSERIE(121574)="Nouvelle Co"
+ s ^TKFINSERIE(121575)="Nouvelle Co"
+ s ^TKFINSERIE(121576)="Nouvelle Co"
+ s ^TKFINSERIE(121577)="Nouvelle Co"
+ s ^TKFINSERIE(121578)="Nouvelle Co"
+ s ^TKFINSERIE(121579)="Nouvelle Co"
+ s ^TKFINSERIE(121580)="Nouvelle Co"
+ s ^TKFINSERIE(121581)="Nouvelle Co"
+ s ^TKFINSERIE(121582)="Nouvelle Co"
+ s ^TKFINSERIE(121682)="Nouvelle Co"
+ s ^TKFINSERIE(121683)="Nouvelle Co"
+ s ^TKFINSERIE(121684)="Nouvelle Co"
+ s ^TKFINSERIE(121685)="Nouvelle Co"
+ s ^TKFINSERIE(121686)="Nouvelle Co"
+ s ^TKFINSERIE(121687)="Nouvelle Co"
+ s ^TKFINSERIE(121539)="Nouvelle Co"
+ s ^TKFINSERIE(121540)="Nouvelle Co"
+ s ^TKFINSERIE(121541)="Nouvelle Co"
+ s ^TKFINSERIE(121542)="Nouvelle Co"
+ s ^TKFINSERIE(121545)="Nouvelle Co"
+ s ^TKFINSERIE(121547)="Nouvelle Co"
+ s ^TKFINSERIE(121553)="Nouvelle Co"
+ s ^TKFINSERIE(121560)="Nouvelle Co"
+ s ^TKFINSERIE(121563)="Nouvelle Co"
+ s ^TKFINSERIE(121564)="Nouvelle Co"
+ s ^TKFINSERIE(121627)="Nouvelle Co"
+ s ^TKFINSERIE(121628)="Nouvelle Co"
+ s ^TKFINSERIE(121629)="Nouvelle Co"
+ s ^TKFINSERIE(121630)="Nouvelle Co"
+ s ^TKFINSERIE(121631)="Nouvelle Co"
+ s ^TKFINSERIE(121538)="Nouvelle Co"
+ s ^TKFINSERIE(121543)="Nouvelle Co"
+ s ^TKFINSERIE(121544)="Nouvelle Co"
+ s ^TKFINSERIE(121557)="Nouvelle Co"
+ s ^TKFINSERIE(121561)="Nouvelle Co"
+ 
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

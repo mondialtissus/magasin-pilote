@@ -1,0 +1,40 @@
+ROUTINE INITENTRETIEN
+INITENTRETIEN
+ K ^HWENTRETIEN
+ s ^HWENTRETIEN(11)="Lavage Interdit"
+ s ^HWENTRETIEN(12)="Lavage à la main"
+ s ^HWENTRETIEN(13)="Linge supportant lavage 30°"
+ s ^HWENTRETIEN(14)="Linge supportant lavage 40°"
+ s ^HWENTRETIEN(15)="Linge supportant lavage 60°"
+ s ^HWENTRETIEN(21)="Séchage tambour Interdit"
+ s ^HWENTRETIEN(22)="Séchage en tambour programme normal"
+ s ^HWENTRETIEN(23)="Séchage en tambour programme modéré"
+ s ^HWENTRETIEN(31)="Repassage Interdit"
+ s ^HWENTRETIEN(32)="Repassage à température élevée (max 200°)"
+ s ^HWENTRETIEN(33)="Repassage à température moyenne (max 150°)"
+ s ^HWENTRETIEN(34)="Repassage à température faible (max 110°)"
+ s ^HWENTRETIEN(35)="Repassage sur l'envers"
+ s ^HWENTRETIEN(41)="Blanchiment Interdit"
+ s ^HWENTRETIEN(42)="Blanchiment possible" 
+ s ^HWENTRETIEN(51)="Nettoyage à sec interdit"
+ s ^HWENTRETIEN(52)="Nettoyage à sec autorisé"
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,28 @@
+ROUTINE CORART0203
+CORART0203
+ 
+	s ART="TA140JA/PEAUDEVACHE/NOIR"
+	s NODE=$G(^ST(ART))
+	s EXT=$P(NODE,"\",22)
+	s $P(EXT,"/",2)=60690
+	s $P(NODE,"\",22)=EXT
+	s ^ST(ART)=NODE
+	Q
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

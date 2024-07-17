@@ -1,0 +1,30 @@
+ROUTINE GETLSTVENDEURS
+GETLSTVENDEURS
+	za ^MODVENDEUR
+	s POSNUM=$G(^HWINFO("MAG"))
+	s LOGIN=$O(^SIB("USER",""))
+	while LOGIN'=""{
+		s REC=$G(^SIB("USER",LOGIN))
+		s ^MODVENDEUR(POSNUM,LOGIN)=REC
+		s LOGIN=$O(^SIB("USER",LOGIN))
+	}
+	zd ^MODVENDEUR
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

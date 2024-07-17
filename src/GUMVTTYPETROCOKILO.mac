@@ -1,0 +1,11 @@
+ROUTINE GUMVTTYPETROCOKILO
+GUMVTTYPETROCOKILO
+ s ^GUMVTTYPE(33.6)="1\1\0\Achat coupons occasion stock +"
+ s ^FUSIONMENU(3,7)	= 	"Trocokilo\\imgCoupon\imgCoupon"
+ s ^FUSIONMENU(3,7,1)	= 	"Achat coupons occasion +\fenTransactionStock/Trocokilo/33.6\imgRecPlus\imgRecPlus"
+ Q
+
+
+
+
+

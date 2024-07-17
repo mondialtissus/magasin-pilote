@@ -1,0 +1,29 @@
+ROUTINE SOLDES50PE14P3
+SOLDES50PE14P3
+	
+ s ^TKSOLDES("110924")="\0.5\0"
+ s ^TKSOLDES("110937")="\0.5\0"
+ s ^TKSOLDES("110933")="\0.5\0"
+ s ^TKSOLDES("110923")="\0.5\0"
+ s ^TKSOLDES("110927")="\0.5\0"
+ s ^TKSOLDES("110942")="\0.5\0"
+ s ^TKSOLDES("110939")="\0.5\0"
+ s ^TKSOLDES("110940")="\0.5\0"
+ s ^TKSOLDES("110938")="\0.5\0"
+ s ^TKSOLDES("110920")="\0.5\0"
+
+
+	Q
+
+
+
+
+
+
+
+
+
+
+
+
+

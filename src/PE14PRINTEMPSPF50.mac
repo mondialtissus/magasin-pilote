@@ -1,0 +1,344 @@
+ROUTINE PE14PRINTEMPSPF50
+PE14PRINTEMPSPF50
+ 
+ 
+ s ^TKFINSERIE(100677)="Printemps PF-50"
+ s ^TKFINSERIE(100735)="Printemps PF-50"
+ s ^TKFINSERIE(101449)="Printemps PF-50"
+ s ^TKFINSERIE(103059)="Printemps PF-50"
+ s ^TKFINSERIE(103060)="Printemps PF-50"
+ s ^TKFINSERIE(103061)="Printemps PF-50"
+ s ^TKFINSERIE(103063)="Printemps PF-50"
+ s ^TKFINSERIE(103064)="Printemps PF-50"
+ s ^TKFINSERIE(103065)="Printemps PF-50"
+ s ^TKFINSERIE(103066)="Printemps PF-50"
+ s ^TKFINSERIE(103067)="Printemps PF-50"
+ s ^TKFINSERIE(103069)="Printemps PF-50"
+ s ^TKFINSERIE(103070)="Printemps PF-50"
+ s ^TKFINSERIE(103075)="Printemps PF-50"
+ s ^TKFINSERIE(103076)="Printemps PF-50"
+ s ^TKFINSERIE(103077)="Printemps PF-50"
+ s ^TKFINSERIE(103078)="Printemps PF-50"
+ s ^TKFINSERIE(103200)="Printemps PF-50"
+ s ^TKFINSERIE(103201)="Printemps PF-50"
+ s ^TKFINSERIE(103231)="Printemps PF-50"
+ s ^TKFINSERIE(103255)="Printemps PF-50"
+ s ^TKFINSERIE(103256)="Printemps PF-50"
+ s ^TKFINSERIE(103287)="Printemps PF-50"
+ s ^TKFINSERIE(105141)="Printemps PF-50"
+ s ^TKFINSERIE(105142)="Printemps PF-50"
+ s ^TKFINSERIE(105143)="Printemps PF-50"
+ s ^TKFINSERIE(105144)="Printemps PF-50"
+ s ^TKFINSERIE(105153)="Printemps PF-50"
+ s ^TKFINSERIE(105156)="Printemps PF-50"
+ s ^TKFINSERIE(105157)="Printemps PF-50"
+ s ^TKFINSERIE(105258)="Printemps PF-50"
+ s ^TKFINSERIE(106783)="Printemps PF-50"
+ s ^TKFINSERIE(106784)="Printemps PF-50"
+ s ^TKFINSERIE(106786)="Printemps PF-50"
+ s ^TKFINSERIE(106787)="Printemps PF-50"
+ s ^TKFINSERIE(106788)="Printemps PF-50"
+ s ^TKFINSERIE(106789)="Printemps PF-50"
+ s ^TKFINSERIE(106792)="Printemps PF-50"
+ s ^TKFINSERIE(106794)="Printemps PF-50"
+ s ^TKFINSERIE(106795)="Printemps PF-50"
+ s ^TKFINSERIE(106796)="Printemps PF-50"
+ s ^TKFINSERIE(110865)="Printemps PF-50"
+ s ^TKFINSERIE(67425)="Printemps PF-50"
+ s ^TKFINSERIE(67424)="Printemps PF-50"
+ s ^TKFINSERIE(67428)="Printemps PF-50"
+ s ^TKFINSERIE(67430)="Printemps PF-50"
+ s ^TKFINSERIE(67423)="Printemps PF-50"
+ s ^TKFINSERIE(67427)="Printemps PF-50"
+ s ^TKFINSERIE(67426)="Printemps PF-50"
+ s ^TKFINSERIE(67429)="Printemps PF-50"
+ s ^TKFINSERIE(107773)="Printemps PF-50"
+ s ^TKFINSERIE(78385)="Printemps PF-50"
+ s ^TKFINSERIE(78388)="Printemps PF-50"
+ s ^TKFINSERIE(107781)="Printemps PF-50"
+ s ^TKFINSERIE(102352)="Printemps PF-50"
+ s ^TKFINSERIE(105213)="Printemps PF-50"
+ s ^TKFINSERIE(105215)="Printemps PF-50"
+ s ^TKFINSERIE(105217)="Printemps PF-50"
+ s ^TKFINSERIE(105465)="Printemps PF-50"
+ s ^TKFINSERIE(105466)="Printemps PF-50"
+ s ^TKFINSERIE(110737)="Printemps PF-50"
+ s ^TKFINSERIE(73142)="Printemps PF-50"
+ s ^TKFINSERIE(79070)="Printemps PF-50"
+ s ^TKFINSERIE(79072)="Printemps PF-50"
+ s ^TKFINSERIE(79074)="Printemps PF-50"
+ s ^TKFINSERIE(79075)="Printemps PF-50"
+ s ^TKFINSERIE(105473)="Printemps PF-50"
+ s ^TKFINSERIE(105474)="Printemps PF-50"
+ s ^TKFINSERIE(105475)="Printemps PF-50"
+ s ^TKFINSERIE(103215)="Printemps PF-50"
+ s ^TKFINSERIE(103230)="Printemps PF-50"
+ s ^TKFINSERIE(105160)="Printemps PF-50"
+ s ^TKFINSERIE(105161)="Printemps PF-50"
+ s ^TKFINSERIE(105214)="Printemps PF-50"
+ s ^TKFINSERIE(105216)="Printemps PF-50"
+ s ^TKFINSERIE(105218)="Printemps PF-50"
+ s ^TKFINSERIE(79051)="Printemps PF-50"
+ s ^TKFINSERIE(87392)="Printemps PF-50"
+ s ^TKFINSERIE(87393)="Printemps PF-50"
+ s ^TKFINSERIE(87397)="Printemps PF-50"
+ s ^TKFINSERIE(102547)="Printemps PF-50"
+ s ^TKFINSERIE(102548)="Printemps PF-50"
+ s ^TKFINSERIE(105147)="Printemps PF-50"
+ s ^TKFINSERIE(105148)="Printemps PF-50"
+ s ^TKFINSERIE(104497)="Printemps PF-50"
+ s ^TKFINSERIE(104498)="Printemps PF-50"
+ s ^TKFINSERIE(104499)="Printemps PF-50"
+ s ^TKFINSERIE(104500)="Printemps PF-50"
+ s ^TKFINSERIE(105472)="Printemps PF-50"
+ s ^TKFINSERIE(105195)="Printemps PF-50"
+ s ^TKFINSERIE(105196)="Printemps PF-50"
+ s ^TKFINSERIE(100286)="Printemps PF-50"
+ s ^TKFINSERIE(79133)="Printemps PF-50"
+ s ^TKFINSERIE(100287)="Printemps PF-50"
+ s ^TKFINSERIE(79132)="Printemps PF-50"
+ s ^TKFINSERIE(79131)="Printemps PF-50"
+ s ^TKFINSERIE(79130)="Printemps PF-50"
+ s ^TKFINSERIE(74601)="Printemps PF-50"
+ s ^TKFINSERIE(74603)="Printemps PF-50"
+ s ^TKFINSERIE(74604)="Printemps PF-50"
+ s ^TKFINSERIE(87313)="Printemps PF-50"
+ s ^TKFINSERIE(100404)="Printemps PF-50"
+ s ^TKFINSERIE(100405)="Printemps PF-50"
+ s ^TKFINSERIE(100420)="Printemps PF-50"
+ s ^TKFINSERIE(100421)="Printemps PF-50"
+ s ^TKFINSERIE(100422)="Printemps PF-50"
+ s ^TKFINSERIE(100423)="Printemps PF-50"
+ s ^TKFINSERIE(100425)="Printemps PF-50"
+ s ^TKFINSERIE(100426)="Printemps PF-50"
+ s ^TKFINSERIE(100427)="Printemps PF-50"
+ s ^TKFINSERIE(100428)="Printemps PF-50"
+ s ^TKFINSERIE(100430)="Printemps PF-50"
+ s ^TKFINSERIE(100431)="Printemps PF-50"
+ s ^TKFINSERIE(100288)="Printemps PF-50"
+ s ^TKFINSERIE(100289)="Printemps PF-50"
+ s ^TKFINSERIE(100290)="Printemps PF-50"
+ s ^TKFINSERIE(100291)="Printemps PF-50"
+ s ^TKFINSERIE(100292)="Printemps PF-50"
+ s ^TKFINSERIE(100293)="Printemps PF-50"
+ s ^TKFINSERIE(100294)="Printemps PF-50"
+ s ^TKFINSERIE(100295)="Printemps PF-50"
+ s ^TKFINSERIE(100296)="Printemps PF-50"
+ s ^TKFINSERIE(100297)="Printemps PF-50"
+ s ^TKFINSERIE(100320)="Printemps PF-50"
+ s ^TKFINSERIE(100321)="Printemps PF-50"
+ s ^TKFINSERIE(100322)="Printemps PF-50"
+ s ^TKFINSERIE(100323)="Printemps PF-50"
+ s ^TKFINSERIE(100324)="Printemps PF-50"
+ s ^TKFINSERIE(100325)="Printemps PF-50"
+ s ^TKFINSERIE(106672)="Printemps PF-50"
+ s ^TKFINSERIE(106673)="Printemps PF-50"
+ s ^TKFINSERIE(76927)="Printemps PF-50"
+ s ^TKFINSERIE(81085)="Printemps PF-50"
+ s ^TKFINSERIE(81088)="Printemps PF-50"
+ s ^TKFINSERIE(81091)="Printemps PF-50"
+ s ^TKFINSERIE(78405)="Printemps PF-50"
+ s ^TKFINSERIE(81102)="Printemps PF-50"
+ s ^TKFINSERIE(78371)="Printemps PF-50"
+ s ^TKFINSERIE(81095)="Printemps PF-50"
+ s ^TKFINSERIE(81096)="Printemps PF-50"
+ s ^TKFINSERIE(78393)="Printemps PF-50"
+ s ^TKFINSERIE(78394)="Printemps PF-50"
+ s ^TKFINSERIE(78537)="Printemps PF-50"
+ s ^TKFINSERIE(78396)="Printemps PF-50"
+ s ^TKFINSERIE(78532)="Printemps PF-50"
+ s ^TKFINSERIE(78535)="Printemps PF-50"
+ s ^TKFINSERIE(78536)="Printemps PF-50"
+ s ^TKFINSERIE(84056)="Printemps PF-50"
+ s ^TKFINSERIE(84057)="Printemps PF-50"
+ s ^TKFINSERIE(78530)="Printemps PF-50"
+ s ^TKFINSERIE(78531)="Printemps PF-50"
+ s ^TKFINSERIE(81081)="Printemps PF-50"
+ s ^TKFINSERIE(81083)="Printemps PF-50"
+ s ^TKFINSERIE(81084)="Printemps PF-50"
+ s ^TKFINSERIE(74531)="Printemps PF-50"
+ s ^TKFINSERIE(8752)="Printemps PF-50"
+ s ^TKFINSERIE(74533)="Printemps PF-50"
+ s ^TKFINSERIE(8748)="Printemps PF-50"
+ s ^TKFINSERIE(76953)="Printemps PF-50"
+ s ^TKFINSERIE(81077)="Printemps PF-50"
+ s ^TKFINSERIE(78353)="Printemps PF-50"
+ s ^TKFINSERIE(78354)="Printemps PF-50"
+ s ^TKFINSERIE(84071)="Printemps PF-50"
+ s ^TKFINSERIE(78373)="Printemps PF-50"
+ s ^TKFINSERIE(81105)="Printemps PF-50"
+ s ^TKFINSERIE(81106)="Printemps PF-50"
+ s ^TKFINSERIE(107828)="Printemps PF-50"
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

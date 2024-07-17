@@ -1,0 +1,19 @@
+ROUTINE INITINV20161219
+INITINV20161219
+ S ^HWINFO("INVENTAIRE","DATE")="64271"	      // Date de référence 19 Décembre 2016
+ S ^HWINFO("INVENTAIRE","DATEARRETE")="64271"	
+ s ^HWINFO("INVENTAIRE","DATETEST")=""
+ s ^HWINFO("INVENTAIRE","DATETESTFIN")=""
+ s ^HWINFO("INVENTAIRE","DATEDEB")="64264"   // Date de début 12 Dec 2016
+ s ^HWINFO("INVENTAIRE","DATEFIN")="64277"   // fin le 25 décembre 2016
+ s ^HWINFO("INVENTAIRE",64271,"AUTO")=""     // Permet de valider l'utilisation du terminal 
+
+ Q
+
+
+
+
+
+
+
+

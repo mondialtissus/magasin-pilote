@@ -1,0 +1,152 @@
+ROUTINE ControleRetro
+CONTROLERETRO
+	s MAG = $G(^HWINFO("MAG"))
+	s NUMRETRO = $O(^MAGRETRO("LIV",""))
+	while NUMRETRO '= ""
+	{
+		s MAGUN = $O(^MAGRETRO("LIV",NUMRETRO,""))
+		s MAGDEUX = $O(^MAGRETRO("LIV",NUMRETRO,MAGUN,""))
+		s DATA = $G(^MAGRETRO("LIV",NUMRETRO,MAGUN,MAGDEUX,0))
+		s DATERECEPT = $P(DATA,"\",5)
+		s AVALIDERDENOUVEAU = 0
+		if (+DATERECEPT < 20120502) && (+DATERECEPT > 20120427)
+		{
+			w !,"Retro "_NUMRETRO
+			//On recherche le détail de la rétrocession et on regarde si un mouvement a été fait
+			s NUMLNG = "0"
+			s NUMLNG = $O(^MAGRETRO("CMD",NUMRETRO,MAGUN,MAGDEUX,NUMLNG))	
+			w NUMLNG		
+			while NUMLNG '= ""
+			{
+				s DATARETRO = $G(^MAGRETRO("CMD",NUMRETRO,MAGUN,MAGDEUX,NUMLNG))
+				s PLU=$P(DATARETRO,"\",1)
+				s DATECACHE = +$zdh(DATERECEPT,8)
+				w !,"PLU "_PLU
+				s UNMVT = 0
+				S NUMMVT=$O(^GUMVT(DATECACHE,PLU,"13",""))				
+				
+				while NUMMVT '= ""
+				{
+					s DATAMVT = $G(^GUMVT(DATECACHE,PLU,"13",NUMMVT))
+					i $P(DATAMVT,"\",8)=NUMRETRO s UNMVT=1
+					
+					S NUMMVT=$O(^GUMVT(DATECACHE,PLU,"13",NUMMVT))	
+				}
+				i UNMVT = 0
+				{					
+					//On recherche s'il n'y a pas eu de mvt d'inventaire tournant derrière
+					s INVTOURNANT = 0
+					s DATETEST = DATECACHE
+					s DATELIM = +$h + 1
+					while +DATETEST < +DATELIM
+					{
+					
+						i +$D(^GUMVT(DATETEST,PLU,"33"))>0 s INVTOURNANT = 1
+						
+						s DATETEST = DATETEST+1
+					}
+					i INVTOURNANT = 0
+					{
+						s AVALIDERDENOUVEAU=1
+						s ^MODROUTINE(MAG,"RETROPASBONNE",DATERECEPT,NUMRETRO,NUMLNG)=PLU			
+					}
+					else
+					{
+						//Nous devons l'enlever de la rétro
+						s ^MAGRETRO20120516("CMD",NUMRETRO,MAGUN,MAGDEUX,NUMLNG)=DATARETRO
+						k ^MAGRETRO("CMD",NUMRETRO,MAGUN,MAGDEUX,NUMLNG)
+					}
+				}
+				else
+				{
+					//Nous devons l'enlever de la rétro
+					s ^MAGRETRO20120516("CMD",NUMRETRO,MAGUN,MAGDEUX,NUMLNG)=DATARETRO
+					k ^MAGRETRO("CMD",NUMRETRO,MAGUN,MAGDEUX,NUMLNG)
+				}			
+							
+				//Nous avons eu un bug lors de la réception des rétro pour cette date là						
+				
+				s NUMLNG = $O(^MAGRETRO("CMD",NUMRETRO,MAGUN,MAGDEUX,NUMLNG))		
+			}			
+		}
+		i AVALIDERDENOUVEAU=1 k ^MAGRETRO("LIV",NUMRETRO,MAGUN,MAGDEUX,0)
+		
+		s NUMRETRO = $O(^MAGRETRO("LIV",NUMRETRO))
+	}
+	
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,166 @@
+ROUTINE ERRINVENT0707
+ERRINVENT0707
+	s POSNUM=$G(^HWINFO("MAG"))
+	s OFF=2
+	s NAMEFILE=$O(^HWINFO("TERMINAL",""))
+	while NAMEFILE'=""{		
+		if NAMEFILE'="ID????"{			
+			s EXTENSION="TI;LM;ME;"
+			f iEXT=1:1:3
+			{
+					s LASTIFIC=0
+					f iFIC=1:1:999
+					{		
+						s FILETEST="^"_NAMEFILE_"INVARTICLE"_$P(EXTENSION,";",iEXT)_$$GETCNT(iFIC)						
+						if +$D(@FILETEST@(POSNUM))>0{
+							s LASTIFIC=iFIC							
+						}						
+					}	
+					if LASTIFIC>0{
+						s FILETEST="^"_NAMEFILE_"INVARTICLE"_$P(EXTENSION,";",iEXT)_$$GETCNT(LASTIFIC)
+						D TRAITFIC
+					}								
+			}
+		}
+		s NAMEFILE=$O(^HWINFO("TERMINAL",NAMEFILE))		
+	}
+	s OFF=3
+	s FILETEST="^INVARTICLETI"
+	D TRAITFIC
+	s FILETEST="^INVARTICLELM"
+	D TRAITFIC
+	s FILETEST="^INVARTICLEME"
+	D TRAITFIC
+	q
+ 
+GETCNT(CNTIN)
+ 
+	s STRCNT="0000"
+	if CNTIN<1000{s STRCNT="0"_CNTIN}
+	if CNTIN<100{s STRCNT="00"_CNTIN}
+	if CNTIN<10{s STRCNT="000"_CNTIN}
+	q STRCNT
+	
+TRAITFIC	
+	s LEV=""
+	s LEV=$O(@FILETEST@(POSNUM,"REFERENCE",""))
+	while LEV'=""{
+		s ART=$O(@FILETEST@(POSNUM,"REFERENCE",LEV,""))
+		while ART'=""{
+			s LG=$O(@FILETEST@(POSNUM,"REFERENCE",LEV,ART,""))
+			while LG'=""{
+				s REC=$G(@FILETEST@(POSNUM,"REFERENCE",LEV,ART,LG))
+				s DH=+$ZDH($E($P(REC,"\",18),1,8),8)	
+				if (DH>0)&&(DH<60808){					
+					s USER=$P(REC,"\",17)
+					if USER'="TEST"{						
+						s ^MODROUTINE(POSNUM,"ERRINVENT"_OFF,ART,LG)=REC
+					}
+				}
+				s LG=$O(@FILETEST@(POSNUM,"REFERENCE",LEV,ART,LG))	
+			}
+			s ART=$O(@FILETEST@(POSNUM,"REFERENCE",LEV,ART))
+		}
+		s LEV=$O(@FILETEST@(POSNUM,"REFERENCE",LEV))
+	}
+	
+	s LG=$O(@FILETEST@(POSNUM,"NON REFERENCE",""))
+	while LG'=""{
+		s REC=$G(@FILETEST@(POSNUM,"NON REFERENCE",LG))
+		s DH=+$ZDH($E($P(REC,"\",13),1,8),8)						
+		if (DH>0)&&(DH<60808){					
+			s USER=$P(REC,"\",12)
+			if USER'="TEST"{				
+				s ^MODROUTINE(POSNUM,"ERRINVENT"_OFF,"NR",LG)=REC
+			}
+		}
+		s LG=$O(@FILETEST@(POSNUM,"NON REFERENCE",LG))	
+	}
+	
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

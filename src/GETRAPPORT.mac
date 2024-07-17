@@ -1,0 +1,286 @@
+ROUTINE GETRAPPORT
+GETRAPPORT
+ 
+	// Remontees par jours du CA Jour, Nb Tickets remisés & soldés
+	// Nb Remises et Nb Soldes
+	// Montant Remisé et montant Soldé
+	
+	s TK=""
+	s DATE=""
+	s CURDATE=""
+	s POSNUM=$G(^HWINFO("MAG"))
+	s TOTNBREMISES=0
+	s TOTREMISES=0
+	s TOTREMISES2=0
+	s REMISES=0
+	s SOLDES=0
+	s TOTNBSOLDES=0
+	s TOTSOLDES=0
+	s TOTSOLDES2=0
+	s DESC=""
+ 	s bContinue=0
+	s FIRST=0
+	
+	s TK=$O(^TK(""))
+	while TK'=""
+	{
+		s DATE="20"_$E(TK,3,8)
+		if FIRST=0
+		{
+			S FIRST=1
+			s CURDATE=DATE
+		}
+		
+		if (CURDATE'=DATE)
+		{
+			// Sauvegarde des données			
+			s CA=$P($G(^TKCA(POSNUM,$ZDH(CURDATE,8))),"\",1)
+			if +$D(^MODROUTINE(POSNUM,"GETRAPPORT",CURDATE))>0
+			{
+				S DATA=$G(^MODROUTINE(POSNUM,"GETRAPPORT",CURDATE))
+				S TOTNBREMISES=TOTNBREMISES+$P(DATA,"\",2)
+				S TOTREMISES=TOTREMISES+$P(DATA,"\",3)
+				S TOTREMISES2=TOTREMISES2+$P(DATA,"\",4)
+				S TOTNBSOLDES=TOTNBSOLDES+$P(DATA,"\",5)
+				S TOTSOLDES=TOTSOLDES+$P(DATA,"\",6)
+				S TOTSOLDES2=TOTSOLDES2+$P(DATA,"\",7)
+				S REMISES=REMISES+$P(DATA,"\",8)
+				S SOLDES=SOLDES+$P(DATA,"\",9)
+			}
+			s ^MODROUTINE(POSNUM,"GETRAPPORT",CURDATE)=CA_"\"_TOTNBREMISES_"\"_TOTREMISES_"\"_TOTREMISES2_"\"_TOTNBSOLDES_"\"_TOTSOLDES_"\"_TOTSOLDES2_"\"_REMISES_"\"_SOLDES
+			// RAZ des variables pour jour d'après
+			s TOTNBREMISES=0
+			s TOTREMISES=0
+			s TOTREMISES2=0
+			s TOTNBSOLDES=0
+			s TOTSOLDES=0
+			s TOTSOLDES2=0
+			s REMISES=0
+			s SOLDES=0
+			s CURDATE=DATE
+		}
+		s TK0=$G(^TK(TK,0))
+		s VALREM=+$P(TK0,"\",4)
+		s VALSOL=+$P(TK0,"\",5)
+		if (VALREM=1)||(VALSOL=1)
+		{	
+			if VALREM=1 {s REMISES=REMISES+1}
+			if VALSOL=1 {s SOLDES=SOLDES+1}					
+			// Il y a une remise ou une soldes dans ce ticket
+			// on parcours donc le ticket
+			s REC=""
+			s LG=$O(^TK(TK,"0"))
+			while LG'=""
+			{
+				s REC=$G(^TK(TK,LG))
+				s DESC=$P(REC,"\",2)
+				if +$P(REC,"\",7)>0 
+				{									
+					s TOTREMISES=TOTREMISES+$P(REC,"\",6)
+					s ECART=(+$P(REC,"\",4)*+$P(REC,"\",5))-+$P(REC,"\",6)
+					s TOTREMISES2=TOTREMISES2+ECART 
+					s TOTNBREMISES=TOTNBREMISES+1
+				}
+				else
+				{					
+					if +$P(REC,"\",8)>0 
+					{
+						s bContinue=1
+						s NEXTLG=LG+1
+						if +($D(^TK(TK,NEXTLG)))>0
+						{
+							// Si la ligne d'apres existe, on verifie que s'est pas une 2eme demarque
+							if $P($G(^TK(TK,NEXTLG)),"\",2)="2e Demarque" 
+							{								
+								s RECNEXT=$G(^TK(TK,NEXTLG))
+								s TOTDEM=+(+$P(REC,"\",6)+(+$P(RECNEXT,"\",6)))
+								s TOTDEM2=(+$P(REC,"\",4))*(+$P(REC,"\",5))
+								s TOTSOLDES=TOTSOLDES+TOTDEM
+								s TOTSOLDES2=TOTSOLDES2+TOTDEM2-TOTDEM
+								s TOTNBSOLDES=TOTNBSOLDES+1	
+								;w !, "2eme demarque trouvé dans TK: "_TK_" - LG: "_NEXTLG_" / On est a la "_LG_" e ligne "
+								
+								s LG=NEXTLG
+								;W !, "Deuxieme Demarque"
+								;w !, "TK : "_TK_" - Lg : "_LG
+								;w !, "RECNEXT : "_RECNEXT
+								;w !, "TOTDEM : "_TOTDEM
+								;w !, "TOTDEM2 : "_TOTDEM2
+								;w !, "TOTSOLDES : "_TOTSOLDES
+								;W !, "TOTSOLDES2 : "_TOTSOLDES2
+								;w !, "TOTNBSOLDES : "_TOTNBSOLDES
+								;w !,"----------------------------" 
+								s bContinue=0
+							}
+							else
+							{
+								s bContinue=1
+							}
+						}
+						if bContinue=1
+						{
+							// Sinon on enregistre normalement
+								;W !, "Solde normale"
+								;w !, "TK : "_TK_" - Lg : "_LG
+								;w !, "REC : "_REC
+								;w !, "TOTSOLDES : "_TOTSOLDES
+								;W !, "TOTSOLDES2 : "_TOTSOLDES2
+								;w !, "TOTNBSOLDES : "_TOTNBSOLDES
+								;w !,"----------------------------" 
+							s TOTSOLDES=TOTSOLDES+$P(REC,"\",6)
+							s ECART=(+$P(REC,"\",4)*+$P(REC,"\",5))-+$P(REC,"\",6)
+							s TOTSOLDES2=TOTSOLDES2+ECART 
+							s TOTNBSOLDES=TOTNBSOLDES+1								
+						}
+					}
+					
+				}	
+				s LG=$O(^TK(TK,LG))
+			}
+		}		
+		s TK=$O(^TK(TK))
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

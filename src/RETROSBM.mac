@@ -1,0 +1,423 @@
+ROUTINE RETROSBM
+MAIN
+ Q
+ 
+RetroConfectionCorriger()
+ D RetroConfectionRecu
+ S sReturn = $$RetroConfectionSuppressionDoublon
+ Q sReturn
+
+RetroConfectionExiste(pNUMCMD,pRETRO,pEXP,pDEST,pNUM)
+ s MAGRETROCONF = "^[""USER""]MAGRETROCONF"
+ s MAGRETROCONFRECU = "^[""USER""]MAGRETROCONFRECU" 
+  
+ s NUMRETRODBL = $o(@MAGRETROCONFRECU@(pNUMCMD,""))
+ s SUPPRIMER=0
+
+ //Boucle sur les numeros de retros
+ while NUMRETRODBL '= ""
+ {
+	 IF (SUPPRIMER = 0) && (NUMRETRODBL '= pRETRO)
+	 {
+		 IF ($G(@MAGRETROCONF@("CMD",pRETRO,pEXP,pDEST,pNUM)) = $G(@MAGRETROCONFRECU@(pNUMCMD,NUMRETRODBL,pEXP,pDEST,pNUM))) 
+		 {
+		 	s SUPPRIMER = 1
+		 }
+	 }
+	 
+	 s NUMRETRODBL = $o(@MAGRETROCONFRECU@("CMD",NUMRETRODBL))
+	 
+ }
+ Q SUPPRIMER 
+ 
+RetroConfectionSuppressionDoublon()
+ s MAGRETROCONF = "^[""USER""]MAGRETROCONF"
+ s MAGRETROCONFDBL = "^[""USER""]MAGRETROCONFDBL"
+
+ s Type = ""
+ s NUMRETRO = ""
+ s EXP = ""
+ s DEST = ""
+ s NBLN = ""
+ s NUMCMD = ""
+ s ListeCMDRETRODoublon = ""
+ s SUPPRIMER = ""
+ 
+ //Suppression des precedents doublon
+ k @MAGRETROCONFDBL
+ 
+ s NUMRETRO = $o(@MAGRETROCONF@("CMD",""))
+ //Boucle sur les numeros de retros
+ while NUMRETRO '= ""
+ {
+    s EXP = $o(@MAGRETROCONF@("CMD",NUMRETRO,""))
+    //Boucle sur les expeditieurs
+    while EXP '= ""
+    {        
+        //on ne prends que les retros genere par SBM
+        i EXP = "X998"
+        {
+            s DEST = $o(@MAGRETROCONF@("CMD",NUMRETRO,EXP,""))
+            //Boucle sur le magasin destinataiire de la retro
+            while DEST '= ""
+            {
+	             //Numero de commande
+	            s NUMCMD = $P($G(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,"0")),"\",9)
+	            
+                //la retro en cours de lecture a t'elle deja une reception realisee par le magasin
+                i +$d(@MAGRETROCONF@("LIV",NUMRETRO,EXP,DEST,"0")) = 0
+                {
+	                s SUPPRIMER = 0 
+	                
+	                //Fonction : Est ce q'une retro recu existe
+	                s NBLN = $o(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,"0"))
+                    //Boucle sur les lignes de la retro
+                    while NBLN '= ""
+                    {
+	                    S SUPPRIMER = $$RetroConfectionExiste(NUMCMD,NUMRETRO,EXP,DEST,NBLN)	                    
+	                   
+	                    IF (SUPPRIMER = 1)
+	                    {
+		                    //Archivage de la ligne de retro en cours de lecture
+                        	s @MAGRETROCONFDBL@("CMD",NUMRETRO,EXP,DEST,NBLN) = $g(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,NBLN))
+                        	k:($d(@MAGRETROCONFDBL@("CMD",NUMRETRO,EXP,DEST,NBLN))>0) @MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,NBLN)
+	                    	
+	                    }
+                        s NBLN = $o(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,NBLN))
+                    }
+	                
+	                // Lignes supprimees OK : Archivage CMD/Fax
+	                IF (SUPPRIMER = 1){
+		                
+		                // Archivbage de la ligne d'entete
+	                    s @MAGRETROCONFDBL@("CMD",NUMRETRO,EXP,DEST,"0") = $g(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,"0"))
+	                    k:($d(@MAGRETROCONFDBL@("CMD",NUMRETRO,EXP,DEST,"0"))>0) @MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,"0")
+	                    
+	                    //Archivage de la ligne d'envoi informatique
+	                    s @MAGRETROCONFDBL@("FAX",NUMRETRO,EXP,DEST,"0") = $g(@MAGRETROCONF@("FAX",NUMRETRO,EXP,DEST,"0"))
+	                    k:($d(@MAGRETROCONFDBL@("FAX",NUMRETRO,EXP,DEST,"0"))>0) @MAGRETROCONF@("FAX",NUMRETRO,EXP,DEST,"0")
+	                   
+	                    //s ListeCMDRETRODoublon = ListeCMDRETRODoublon_$c(10)_$c(13)_">"_NUMCMD_":"_NUMRETRO
+	                    s ListeCMDRETRODoublon = ListeCMDRETRODoublon_$c(10)_">"_NUMCMD_":"_NUMRETRO
+	                }
+                }
+                s DEST = $o(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST))
+				//Si changement d'agence on envoie le mail 
+				IF (DEST '= "") && (DEST '= NUMAG) {
+					D ENVOIMAIL(ListeCMDRETRODoublon,NUMAG)
+					s NUMAG = DEST
+					s ListeCMDRETRODoublon = ""
+				}
+            }
+        }        
+        s EXP = $o(@MAGRETROCONF@("CMD",NUMRETRO,EXP))
+    }
+    s NUMRETRO = $o(@MAGRETROCONF@("CMD",NUMRETRO))
+ }
+ //Envoie du mail pour la derniere agence traitÃÂ©e
+ IF (ListeCMDRETRODoublon '= "") { D ENVOIMAIL(ListeCMDRETRODoublon,NUMAG) }	
+ 
+ q ListeCMDRETRODoublon
+ 
+RetroConfectionRecu()
+ s MAGRETROCONF = "^[""USER""]MAGRETROCONF"
+ s MAGRETROCONFRECU = "^[""USER""]MAGRETROCONFRECU"
+
+ s Type = ""
+ s NUMRETRO = ""
+ s EXP = ""
+ s DEST = ""
+ s NBLN = ""
+ s ListeCMDRETRODoublon = ""
+ s NUMCMD = ""
+ 
+ //suppression des livraisons recu 
+ k @MAGRETROCONFRECU
+ 
+ s NUMRETRO = $o(@MAGRETROCONF@("CMD",""))
+ //Boucle sur les numeros de retros
+ while NUMRETRO '= ""
+ {
+	s NUMCMD=""
+    s EXP = $o(@MAGRETROCONF@("CMD",NUMRETRO,""))
+    //Boucle sur les expeditieurs
+    while EXP '= ""
+    {        
+        //on ne prends que les retros genere par SBM
+        i EXP = "X998"
+        {
+            s DEST = $o(@MAGRETROCONF@("CMD",NUMRETRO,EXP,""))
+			s NUMAG = DEST
+            //Boucle sur le magasin destinataire de la retro
+            while DEST '= ""
+            {
+	            //Numero de commande
+	            s NUMCMDEXT = $P($G(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,"0")),"\",9)
+	            
+                //la retro en cours de lecture a t'elle deja une reception realisee par le magasin
+                i +$d(@MAGRETROCONF@("LIV",NUMRETRO,EXP,DEST,"0")) = 1
+                {	                
+	                s NBLN = $o(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,"0"))
+                    //Boucle sur les lignes de la retro
+                    while NBLN '= ""
+                    {
+	                    if NUMCMDEXT '= "" {
+                        	//Archivage de la ligne de retro en cours de lecture
+                        	s @MAGRETROCONFRECU@(NUMCMDEXT,NUMRETRO,EXP,DEST,NBLN) = $g(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,NBLN))		                    
+	                    } 
+                        s NBLN = $O(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,NBLN))
+                    }
+                }
+                s DEST = $o(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST))
+            }		
+        }        
+        s EXP = $o(@MAGRETROCONF@("CMD",NUMRETRO,EXP))
+    }
+    s NUMRETRO = $o(@MAGRETROCONF@("CMD",NUMRETRO))
+ }
+ q
+ 
+ENVOIMAIL(pListRetro, pNumAg)
+
+ SET NUMMAG =  pNumAg
+ 
+ #include %occOptions
+ #include %occStatus
+ 
+ Set s=##class(%Net.SMTP).%New()
+ Set s.smtpserver="mondialtissus-com.mail.protection.outlook.com"
+ Set auth=##class(%Net.Authenticator).%New() ; use default authentication list
+ Set auth.UserName="serviceinformatique@mondialtissus.com"
+ Set m=##class(%Net.MailMessage).%New()
+ Set m.From=auth.UserName
+ Do m.To.Insert(NUMMAG_"@mondialtissus.com")
+ Do m.To.Insert("loginfo@mondialtissus.com")        
+ 
+ SET pMessage = "Bonjour,"_$C(10)
+ SET pMessage = pMessage_$C(10)_"Nous venons de supprimer les doublons des retros de confections suivantes "_$C(10)
+ SET pMessage = pMessage_pListRetro_$C(10)
+ 
+ SET pMessage = pMessage_$C(10)_"Cordialement"_$C(10)_"Le service informatique."
+ 
+ Set m.Subject="Correction doublon retro confection"
+ Set m.Charset="iso-8859-1"
+ 
+ If $ISOBJECT(pMessage) {
+ 	Do m.TextData.Write(pMessage.%ToJSON())
+ }Else {
+ 	Do m.TextData.Write(pMessage)
+ }
+ 
+ Set status=s.Send(m)
+ If $$$ISERR(status) Do $SYSTEM.OBJ.DisplayError(status)
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

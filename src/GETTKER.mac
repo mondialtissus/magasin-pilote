@@ -1,0 +1,48 @@
+ROUTINE GETTKER
+GETTKER	
+	s POSNUM=$G(^HWINFO("MAG"))
+	ZA ^MODTKER
+	s AMJ=$O(^TKER(""))
+	while AMJ'=""{
+		if $L(AMJ)=6{
+			s TK=$O(^TKER(AMJ,""))
+			while TK'=""{
+				s REC=$G(^TKER(AMJ,TK))
+				if +$D(^TKCREDITSREF(TK))>0
+				{s NUMCR=$P($G(^TKCREDITSREF(TK)),"\",1) s ^MODTKER(POSNUM,TK)=REC_"\"_NUMCR }	
+				else
+				{s NUMCR=""}											
+				s TK=$O(^TKER(AMJ,TK))
+			}
+		}
+		s AMJ=$O(^TKER(AMJ))	
+	}
+	ZD ^MODTKER
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

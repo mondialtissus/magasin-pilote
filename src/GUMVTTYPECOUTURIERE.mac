@@ -1,0 +1,9 @@
+ROUTINE GUMVTTYPECOUTURIERE
+GUMVTTYPECOUTURIERE
+ s ^GUMVTTYPE(33.5)="1\1\0\Consommation production PF stock +"
+ s ^GUMVTTYPE(34.5)="1\-1\0\Consommation production PF stock -"
+ Q
+
+
+
+

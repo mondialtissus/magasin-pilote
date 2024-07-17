@@ -1,0 +1,92 @@
+ROUTINE CLEANHISTO
+CLEANHISTO
+ 
+	s N1=$O(^HISTOART(""))
+	while N1'=""{
+		s N2=$O(^HISTOART(N1,""))
+		while N2'=""{
+			s N3=$O(^HISTOART(N1,N2,""))
+			while N3'=""{
+				s N4=$O(^HISTOART(N1,N2,N3,""))
+				while N4'=""{
+					s N5=$O(^HISTOART(N1,N2,N3,N4,""))
+					while N5'=""{
+						s N6=$O(^HISTOART(N1,N2,N3,N4,N5,""))
+						while N6'=""{
+							s N7=$O(^HISTOART(N1,N2,N3,N4,N5,N6,""))
+							while N7'=""{
+								s REC=$G(^HISTOART(N1,N2,N3,N4,N5,N6,N7))
+								s bSAVE=0
+								i +$P(REC,"\",1)=14{s $P(REC,"\",1)=4 s bSAVE=1}
+								i +$P(REC,"\",1)=15{s $P(REC,"\",1)=3 s bSAVE=1}
+								i +$P(REC,"\",1)=16{s $P(REC,"\",1)=2 s bSAVE=1}
+								i bSAVE=1{
+									s ^HISTOART(N1,N2,N3,N4,N5,N6,N7)=REC
+								}
+								s N7=$O(^HISTOART(N1,N2,N3,N4,N5,N6,N7))
+							}
+							s N6=$O(^HISTOART(N1,N2,N3,N4,N5,N6))
+						}
+						s N5=$O(^HISTOART(N1,N2,N3,N4,N5))
+					}
+					s N4=$O(^HISTOART(N1,N2,N3,N4))
+				}
+				s N3=$O(^HISTOART(N1,N2,N3))	
+			}
+			s N2=$O(^HISTOART(N1,N2))
+		}
+		s N1=$O(^HISTOART(N1))
+	}
+	k ^BGLSTMODIF(14)
+	k ^BGLSTMODIF(15)
+	k ^BGLSTMODIF(16)
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

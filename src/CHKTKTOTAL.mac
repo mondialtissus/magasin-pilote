@@ -1,0 +1,80 @@
+ROUTINE CHKTKTOTAL
+CHKTKTOTAL
+ 
+ s DAY="080601"
+ s CNT=0
+ s CA=$O(^TKMOISJOURS(""))
+ while CA'=""{
+ 	s DAY=$O(^TKMOISJOURS(CA,DAY))
+	while DAY'=""{
+ 		s TK=$O(^TKMOISJOURS(CA,DAY,""))
+ 		while TK'=""{
+ 			s TKTOTAL=$G(^TKTOTAL(TK))
+ 			s TOT=+$P(TKTOTAL,"/",1)
+ 			s CHKTOT=+$P(TKTOTAL,"/",2)+(+$P(TKTOTAL,"/",3))+(+$P(TKTOTAL,"/",4))
+ 			i (TOT'=CHKTOT)&&(CHKTOT>0)
+ 			{
+ 				s CNT=CNT+1
+ 				
+ 				; Recalcul du total 
+ 				s TOTLG=0
+ 				s TOTTK=0
+ 				s TVA2=0
+ 				s TVA3=0
+ 				s LG=$O(^TK(TK,"0"))
+ 				while LG'=""{
+ 					s REC=$G(^TK(TK,LG))
+ 					s TOTLG=+$P(REC,"\",6)
+ 					s TOTTK=TOTTK+TOTLG
+ 					i +$P(REC,"\",10)=3{ s TVA3=TVA3+TOTLG}
+ 					I +$P(REC,"\",10)=2{ s TVA2=TVA2+TOTLG} 					
+ 					s LG=$O(^TK(TK,LG))
+ 				} 				
+ 				s ^TKTOTAL(TK)=TOTTK_"/0/"_TVA2_"/"_TVA3
+ 			}
+ 			s TK=$O(^TKMOISJOURS(CA,DAY,TK))
+ 		}
+ 		s DAY=$O(^TKMOISJOURS(CA,DAY))
+ 	}
+ 	s CA=$O(^TKMOISJOURS(CA))
+ }
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

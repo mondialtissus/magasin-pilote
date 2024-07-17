@@ -1,0 +1,5 @@
+ROUTINE GUMVTTYPECCRETOUR
+GUMVTTYPECCRETOUR 
+ S ^GUMVTTYPE(11.6)="3\1\0\Retour commande click and collect stock +"
+ Q
+

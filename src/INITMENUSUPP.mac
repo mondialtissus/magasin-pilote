@@ -1,0 +1,12 @@
+ROUTINE INITMENUSUPP
+INITMENUSUPP
+ 
+ k ^HWBUDGETS
+ k ^MENU(2,1)	
+ k ^MENU(2,6)
+ Q
+ 
+ 
+ 
+ 
+ 

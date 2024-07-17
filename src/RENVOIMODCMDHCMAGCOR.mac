@@ -1,0 +1,368 @@
+ROUTINE RENVOIMODCMDHCMAGCOR
+RENVOIMODCMDHCMAGCOR
+	//Cette routine est utilisée de facon exceptionnelle dans le cas de la perte des commandes du 11,15 et 16 décembre
+	//A supprimer à partir de 2010 car cette routine ne sert qu'une seule fois en 2009.
+	s NUMMAG = ""
+	s NUMMAG = $O(^MODCMDHC091224(NUMMAG))
+	while NUMMAG '= ""
+	{
+	        s NUMCMD = ""
+	        s NUMCMD = $O(^MODCMDHC091224(NUMMAG,NUMCMD))
+	        while NUMCMD '= ""
+	        {       
+	       
+	                s NUMLNG = "0"
+			s NUMFOUR = ""
+			//On prend le nom du fournisseur
+			i +$D(^MODCMDHC091224(NUMMAG,NUMCMD,NUMLNG))>0
+			{
+				s NUMFOUR = $P($G(^MODCMDHC091224(NUMMAG,NUMCMD,NUMLNG)),"\",1)
+			}
+ 
+			s NUMLNGCENTTEST = $O(^HWNEV(NUMMAG,NUMCMD,""))
+			i (NUMFOUR '= "") && (NUMLNGCENTTEST'="")
+			{
+				i +$D(^HWNEV("FRN",NUMFOUR,NUMCMD)) = 0
+				{
+					s ^HWNEV("FRN",NUMFOUR,NUMCMD)="1"
+				}
+			}
+ 
+	                s NUMLNG = $O(^MODCMDHC091224(NUMMAG,NUMCMD,NUMLNG))
+	                i NUMLNG'=""
+	                {
+	                        s DATAMOD = $G(^MODCMDHC091224(NUMMAG,NUMCMD,NUMLNG))                     
+ 
+	                        s NUMCMDMAG = $P($P(DATAMOD,"\",2),"*",1)
+	                        s AMODIFIER = 0
+	                        s NUMLNGMAG = ""
+	                        s NUMLNGMAG = $O(^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG))
+	                        s COMPTEUR = 0
+	                        while NUMLNGMAG '= ""
+	                        {
+	                                s COMPTEUR = COMPTEUR + 1
+ 
+	                                i COMPTEUR = 1
+	                                {
+	                                        i +$D(^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG,NUMCMD,0)) > 0                                                
+	                                        {
+	                                                w !,"NUMCMD : "_NUMCMD
+	                                                r !,"",a
+	                                                s AMODIFIER = 1
+	                                                k ^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG,NUMCMD,0)                                                                                                 
+	                                        }
+	                                }
+	                                else
+	                                {
+	                                        i AMODIFIER = 1
+	                                        {
+	                                                s NUMLNGCENT = $O(^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG,NUMCMD,""))
+	                                                i NUMLNGCENT '= ""
+	                                                {
+	                                                        s DATAFAX = $G(^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG,NUMCMD,NUMLNGCENT))  
+	                                                        i DATAFAX '= ""
+	                                                        {                               
+	        
+	                                                                s NOUVEAULNG = NUMLNGMAG-1 
+									i +$D(^HWARCCMD("CDE",NUMCMDMAG,NOUVEAULNG))> 0
+									{     
+	                            	                                    s ^HWARCCMD("FAX",NUMCMDMAG,NOUVEAULNG,NUMCMD,NUMLNGCENT)=DATAFAX
+	                            	                                    k ^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG,NUMCMD,NUMLNGCENT)
+	                            	                                    s NUMBL = $O(^HWARCCMD("LIVR",NUMCMD,NUMLNGCENT,NUMCMDMAG,NUMLNGMAG,""))
+	                            	                                    i NUMBL '= ""
+	                            	                                    {										
+	                            		                                i +$D(^HWARCCMD("LIVR",NUMCMD,NUMLNGCENT,NUMCMDMAG,NUMLNGMAG,NUMBL)) > 0
+	                            	            	                        {						
+	                            	                        	            s DATALIVR = $G(^HWARCCMD("LIVR",NUMCMD,NUMLNGCENT,NUMCMDMAG,NUMLNGMAG,NUMBL))
+	                            	                                   	    i DATALIVR '= ""
+	                            	       	                        	    {												
+	                                	               	                         s ^HWARCCMD("LIVR",NUMCMD,NUMLNGCENT,NUMCMDMAG,NOUVEAULNG,NUMBL)=DATALIVR
+	                                	                                         k ^HWARCCMD("LIVR",NUMCMD,NUMLNGCENT,NUMCMDMAG,NUMLNGMAG,NUMBL)       
+	                                        	                            }
+	                                        	                	}
+									     }
+	                                	        	             
+										//On modifie aussi le HWNEV
+		                                        		         i +$D(^HWNEV(NUMMAG,NUMCMD,NUMLNGCENT))> 0 
+		                                                	    	 {										       
+		                                                	               s DATAHWNEV =   $G(^HWNEV(NUMMAG,NUMCMD,NUMLNGCENT))
+		                                            	            	       s DATAHWNEVD = $P(DATAHWNEV,"\",2)
+		                               		                               s $P(DATAHWNEVD,"*",2)=NOUVEAULNG
+		                                                        	       s $P(DATAHWNEV,"\",2) = DATAHWNEVD
+		                                                       	 	       S ^HWNEV(NUMMAG,NUMCMD,NUMLNGCENT)=DATAHWNEV																			
+										}
+	                                                                 }
+	                                                        }       
+	                                                }
+	                                        }                                                                                                       
+	                                }
+	                                s NUMLNGMAG = $O(^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG))
+	                        }               
+	              
+	                }
+ 
+	                s NUMCMD = $O(^MODCMDHC091224(NUMMAG,NUMCMD))
+	        }
+	        s NUMMAG = $O(^MODCMDHC091224(NUMMAG))
+	}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

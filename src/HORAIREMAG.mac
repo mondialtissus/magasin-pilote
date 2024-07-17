@@ -1,0 +1,18 @@
+ROUTINE HORAIREMAG
+HORAIREMAG
+  
+ // Décalage remontés de stock
+ S ^HWINFO("GESTHEUREARC")="22450000\20111101\19451200"
+ // Décalage horaire de fermeture
+ S ^HWINFO("FERMECAISSE")="2245"
+ 
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

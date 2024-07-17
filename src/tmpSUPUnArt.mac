@@ -1,0 +1,8 @@
+ROUTINE tmpSUPUnArt
+tmpSUPUnArt
+	k ^HWLEVART("SAFECO","LM/CAKE/ROSE")
+ 
+	q
+ 
+ 
+ 

@@ -1,0 +1,42 @@
+ROUTINE KILLMAIL
+KILLMAIL
+ 
+ s gPOS = ^HWINFO("MAG")
+ s STATUT ="KILL"
+ if $D(^HWMAILHC("999999"))=0 {s STATUT ="PAS TROUVE"}
+ s ^MODROUTINE(gPOS,"HWMAILHC")=STATUT
+ k ^HWMAILHC("999999")
+ 
+ s CLI=""
+ 
+ s CLI=$O(^TKCLIENTS(""))
+ whilE CLI '= ""
+ {
+         if $L(CLI)=12 { k ^TKCLIENTS(CLI)}
+         s CLI=$O(^TKCLIENTS(CLI))
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

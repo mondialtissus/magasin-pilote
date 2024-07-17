@@ -1,0 +1,31 @@
+ROUTINE DELETEINVTOURNANT2015
+DELETEINVTOURNANT2015
+
+	k ^LISTINV	
+	k ^LISTINVIND
+
+	s PLU=""
+	s PLU=$O(^INVTOURNANT(PLU))
+	while PLU'=""
+	{
+		s DATA=$G(^INVTOURNANT(PLU))
+		if $P(DATA,"\",3)="" k ^INVTOURNANT(PLU)
+		
+		s PLU=$O(^INVTOURNANT(PLU))
+	}
+
+	Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+ROUTINE INITINV0609
+INITINV0609
+ 
+ S MAG=$G(^HWINFO("MAG"))
+ K ^HWINFO("INVENTAIRE",61541) 
+ s ^HWINFO("TYPETERM")="DOLPHIN"	
+ S ^HWINFO("INVENTAIRE","DATE")=61534		//  date de référence le 61541 au 29/06/09
+ s ^HWINFO("INVENTAIRE","DATEDEB")="61534"	//  61534 = 22 juin 2009 démarrge zones + Etiquettes
+ s ^HWINFO("INVENTAIRE","DATETESTFIN")=""
+ s ^HWINFO("INVENTAIRE","DATEFIN")=61547    // fin au 5 Juillet 2009
+ s ^HWINFO("INVENTAIRE",61534,"AUTO")="1"  // Permet de valider l'utilisation du terminal 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,421 @@
+ROUTINE NOUVEAUTEAH16
+NOUVEAUTEAH16
+ s ^TKFINSERIE(126425)="Nouveauté AH16"
+ s ^TKFINSERIE(126426)="Nouveauté AH16"
+ s ^TKFINSERIE(126427)="Nouveauté AH16"
+ s ^TKFINSERIE(126428)="Nouveauté AH16"
+ s ^TKFINSERIE(127000)="Nouveauté AH16"
+ s ^TKFINSERIE(127001)="Nouveauté AH16"
+ s ^TKFINSERIE(127002)="Nouveauté AH16"
+ s ^TKFINSERIE(126002)="Nouveauté AH16"
+ s ^TKFINSERIE(126006)="Nouveauté AH16"
+ s ^TKFINSERIE(126015)="Nouveauté AH16"
+ s ^TKFINSERIE(126028)="Nouveauté AH16"
+ s ^TKFINSERIE(126372)="Nouveauté AH16"
+ s ^TKFINSERIE(126373)="Nouveauté AH16"
+ s ^TKFINSERIE(126374)="Nouveauté AH16"
+ s ^TKFINSERIE(126375)="Nouveauté AH16"
+ s ^TKFINSERIE(126376)="Nouveauté AH16"
+ s ^TKFINSERIE(126377)="Nouveauté AH16"
+ s ^TKFINSERIE(126550)="Nouveauté AH16"
+ s ^TKFINSERIE(126551)="Nouveauté AH16"
+ s ^TKFINSERIE(126552)="Nouveauté AH16"
+ s ^TKFINSERIE(126716)="Nouveauté AH16"
+ s ^TKFINSERIE(126718)="Nouveauté AH16"
+ s ^TKFINSERIE(126720)="Nouveauté AH16"
+ s ^TKFINSERIE(126727)="Nouveauté AH16"
+ s ^TKFINSERIE(126753)="Nouveauté AH16"
+ s ^TKFINSERIE(126754)="Nouveauté AH16"
+ s ^TKFINSERIE(126755)="Nouveauté AH16"
+ s ^TKFINSERIE(126756)="Nouveauté AH16"
+ s ^TKFINSERIE(126757)="Nouveauté AH16"
+ s ^TKFINSERIE(126758)="Nouveauté AH16"
+ s ^TKFINSERIE(126759)="Nouveauté AH16"
+ s ^TKFINSERIE(126760)="Nouveauté AH16"
+ s ^TKFINSERIE(126761)="Nouveauté AH16"
+ s ^TKFINSERIE(126762)="Nouveauté AH16"
+ s ^TKFINSERIE(126763)="Nouveauté AH16"
+ s ^TKFINSERIE(126764)="Nouveauté AH16"
+ s ^TKFINSERIE(126765)="Nouveauté AH16"
+ s ^TKFINSERIE(126766)="Nouveauté AH16"
+ s ^TKFINSERIE(126767)="Nouveauté AH16"
+ s ^TKFINSERIE(126769)="Nouveauté AH16"
+ s ^TKFINSERIE(126770)="Nouveauté AH16"
+ s ^TKFINSERIE(126771)="Nouveauté AH16"
+ s ^TKFINSERIE(126773)="Nouveauté AH16"
+ s ^TKFINSERIE(126774)="Nouveauté AH16"
+ s ^TKFINSERIE(126776)="Nouveauté AH16"
+ s ^TKFINSERIE(127047)="Nouveauté AH16"
+ s ^TKFINSERIE(127048)="Nouveauté AH16"
+ s ^TKFINSERIE(127049)="Nouveauté AH16"
+ s ^TKFINSERIE(127050)="Nouveauté AH16"
+ s ^TKFINSERIE(126911)="Nouveauté AH16"
+ s ^TKFINSERIE(126912)="Nouveauté AH16"
+ s ^TKFINSERIE(126913)="Nouveauté AH16"
+ s ^TKFINSERIE(126914)="Nouveauté AH16"
+ s ^TKFINSERIE(126915)="Nouveauté AH16"
+ s ^TKFINSERIE(126916)="Nouveauté AH16"
+ s ^TKFINSERIE(126967)="Nouveauté AH16"
+ s ^TKFINSERIE(126968)="Nouveauté AH16"
+ s ^TKFINSERIE(126969)="Nouveauté AH16"
+ s ^TKFINSERIE(126970)="Nouveauté AH16"
+ s ^TKFINSERIE(125449)="Nouveauté AH16"
+ s ^TKFINSERIE(125450)="Nouveauté AH16"
+ s ^TKFINSERIE(125451)="Nouveauté AH16"
+ s ^TKFINSERIE(125452)="Nouveauté AH16"
+ s ^TKFINSERIE(125453)="Nouveauté AH16"
+ s ^TKFINSERIE(125454)="Nouveauté AH16"
+ s ^TKFINSERIE(125455)="Nouveauté AH16"
+ s ^TKFINSERIE(125456)="Nouveauté AH16"
+ s ^TKFINSERIE(125519)="Nouveauté AH16"
+ s ^TKFINSERIE(125520)="Nouveauté AH16"
+ s ^TKFINSERIE(125521)="Nouveauté AH16"
+ s ^TKFINSERIE(125522)="Nouveauté AH16"
+ s ^TKFINSERIE(125523)="Nouveauté AH16"
+ s ^TKFINSERIE(125524)="Nouveauté AH16"
+ s ^TKFINSERIE(125525)="Nouveauté AH16"
+ s ^TKFINSERIE(125526)="Nouveauté AH16"
+ s ^TKFINSERIE(125527)="Nouveauté AH16"
+ s ^TKFINSERIE(125528)="Nouveauté AH16"
+ s ^TKFINSERIE(125532)="Nouveauté AH16"
+ s ^TKFINSERIE(125533)="Nouveauté AH16"
+ s ^TKFINSERIE(125545)="Nouveauté AH16"
+ s ^TKFINSERIE(125547)="Nouveauté AH16"
+ s ^TKFINSERIE(125550)="Nouveauté AH16"
+ s ^TKFINSERIE(125551)="Nouveauté AH16"
+ s ^TKFINSERIE(125552)="Nouveauté AH16"
+ s ^TKFINSERIE(125553)="Nouveauté AH16"
+ s ^TKFINSERIE(125554)="Nouveauté AH16"
+ s ^TKFINSERIE(125582)="Nouveauté AH16"
+ s ^TKFINSERIE(125583)="Nouveauté AH16"
+ s ^TKFINSERIE(125584)="Nouveauté AH16"
+ s ^TKFINSERIE(125585)="Nouveauté AH16"
+ s ^TKFINSERIE(125586)="Nouveauté AH16"
+ s ^TKFINSERIE(125587)="Nouveauté AH16"
+ s ^TKFINSERIE(125595)="Nouveauté AH16"
+ s ^TKFINSERIE(125596)="Nouveauté AH16"
+ s ^TKFINSERIE(125597)="Nouveauté AH16"
+ s ^TKFINSERIE(125598)="Nouveauté AH16"
+ s ^TKFINSERIE(125599)="Nouveauté AH16"
+ s ^TKFINSERIE(125600)="Nouveauté AH16"
+ s ^TKFINSERIE(125601)="Nouveauté AH16"
+ s ^TKFINSERIE(125602)="Nouveauté AH16"
+ s ^TKFINSERIE(125603)="Nouveauté AH16"
+ s ^TKFINSERIE(125604)="Nouveauté AH16"
+ s ^TKFINSERIE(125605)="Nouveauté AH16"
+ s ^TKFINSERIE(125606)="Nouveauté AH16"
+ s ^TKFINSERIE(125607)="Nouveauté AH16"
+ s ^TKFINSERIE(125608)="Nouveauté AH16"
+ s ^TKFINSERIE(125609)="Nouveauté AH16"
+ s ^TKFINSERIE(125610)="Nouveauté AH16"
+ s ^TKFINSERIE(125622)="Nouveauté AH16"
+ s ^TKFINSERIE(125623)="Nouveauté AH16"
+ s ^TKFINSERIE(125624)="Nouveauté AH16"
+ s ^TKFINSERIE(125625)="Nouveauté AH16"
+ s ^TKFINSERIE(125626)="Nouveauté AH16"
+ s ^TKFINSERIE(125643)="Nouveauté AH16"
+ s ^TKFINSERIE(125644)="Nouveauté AH16"
+ s ^TKFINSERIE(125645)="Nouveauté AH16"
+ s ^TKFINSERIE(125646)="Nouveauté AH16"
+ s ^TKFINSERIE(125647)="Nouveauté AH16"
+ s ^TKFINSERIE(125648)="Nouveauté AH16"
+ s ^TKFINSERIE(125649)="Nouveauté AH16"
+ s ^TKFINSERIE(125650)="Nouveauté AH16"
+ s ^TKFINSERIE(125651)="Nouveauté AH16"
+ s ^TKFINSERIE(125652)="Nouveauté AH16"
+ s ^TKFINSERIE(125653)="Nouveauté AH16"
+ s ^TKFINSERIE(125654)="Nouveauté AH16"
+ s ^TKFINSERIE(125655)="Nouveauté AH16"
+ s ^TKFINSERIE(125656)="Nouveauté AH16"
+ s ^TKFINSERIE(125657)="Nouveauté AH16"
+ s ^TKFINSERIE(125659)="Nouveauté AH16"
+ s ^TKFINSERIE(125660)="Nouveauté AH16"
+ s ^TKFINSERIE(125661)="Nouveauté AH16"
+ s ^TKFINSERIE(125662)="Nouveauté AH16"
+ s ^TKFINSERIE(125663)="Nouveauté AH16"
+ s ^TKFINSERIE(125664)="Nouveauté AH16"
+ s ^TKFINSERIE(125665)="Nouveauté AH16"
+ s ^TKFINSERIE(125666)="Nouveauté AH16"
+ s ^TKFINSERIE(125667)="Nouveauté AH16"
+ s ^TKFINSERIE(125668)="Nouveauté AH16"
+ s ^TKFINSERIE(125669)="Nouveauté AH16"
+ s ^TKFINSERIE(125670)="Nouveauté AH16"
+ s ^TKFINSERIE(125671)="Nouveauté AH16"
+ s ^TKFINSERIE(125672)="Nouveauté AH16"
+ s ^TKFINSERIE(125673)="Nouveauté AH16"
+ s ^TKFINSERIE(125674)="Nouveauté AH16"
+ s ^TKFINSERIE(125675)="Nouveauté AH16"
+ s ^TKFINSERIE(125677)="Nouveauté AH16"
+ s ^TKFINSERIE(125678)="Nouveauté AH16"
+ s ^TKFINSERIE(125679)="Nouveauté AH16"
+ s ^TKFINSERIE(125680)="Nouveauté AH16"
+ s ^TKFINSERIE(125681)="Nouveauté AH16"
+ s ^TKFINSERIE(125682)="Nouveauté AH16"
+ s ^TKFINSERIE(125684)="Nouveauté AH16"
+ s ^TKFINSERIE(125686)="Nouveauté AH16"
+ s ^TKFINSERIE(125687)="Nouveauté AH16"
+ s ^TKFINSERIE(125689)="Nouveauté AH16"
+ s ^TKFINSERIE(125690)="Nouveauté AH16"
+ s ^TKFINSERIE(125711)="Nouveauté AH16"
+ s ^TKFINSERIE(125715)="Nouveauté AH16"
+ s ^TKFINSERIE(125716)="Nouveauté AH16"
+ s ^TKFINSERIE(125718)="Nouveauté AH16"
+ s ^TKFINSERIE(125719)="Nouveauté AH16"
+ s ^TKFINSERIE(125720)="Nouveauté AH16"
+ s ^TKFINSERIE(125721)="Nouveauté AH16"
+ s ^TKFINSERIE(125722)="Nouveauté AH16"
+ s ^TKFINSERIE(125723)="Nouveauté AH16"
+ s ^TKFINSERIE(125732)="Nouveauté AH16"
+ s ^TKFINSERIE(125921)="Nouveauté AH16"
+ s ^TKFINSERIE(125922)="Nouveauté AH16"
+ s ^TKFINSERIE(125923)="Nouveauté AH16"
+ s ^TKFINSERIE(125924)="Nouveauté AH16"
+ s ^TKFINSERIE(125925)="Nouveauté AH16"
+ s ^TKFINSERIE(125926)="Nouveauté AH16"
+ s ^TKFINSERIE(125927)="Nouveauté AH16"
+ s ^TKFINSERIE(125928)="Nouveauté AH16"
+ s ^TKFINSERIE(125929)="Nouveauté AH16"
+ s ^TKFINSERIE(125930)="Nouveauté AH16"
+ s ^TKFINSERIE(125931)="Nouveauté AH16"
+ s ^TKFINSERIE(125950)="Nouveauté AH16"
+ s ^TKFINSERIE(125951)="Nouveauté AH16"
+ s ^TKFINSERIE(125952)="Nouveauté AH16"
+ s ^TKFINSERIE(125953)="Nouveauté AH16"
+ s ^TKFINSERIE(125956)="Nouveauté AH16"
+ s ^TKFINSERIE(125960)="Nouveauté AH16"
+ s ^TKFINSERIE(127581)="Nouveauté AH16"
+ s ^TKFINSERIE(127953)="Nouveauté AH16"
+ s ^TKFINSERIE(127956)="Nouveauté AH16"
+ s ^TKFINSERIE(127957)="Nouveauté AH16"
+ s ^TKFINSERIE(127958)="Nouveauté AH16"
+ s ^TKFINSERIE(127959)="Nouveauté AH16"
+ s ^TKFINSERIE(127960)="Nouveauté AH16"
+ s ^TKFINSERIE(127961)="Nouveauté AH16"
+ s ^TKFINSERIE(127965)="Nouveauté AH16"
+ s ^TKFINSERIE(127969)="Nouveauté AH16"
+ s ^TKFINSERIE(127970)="Nouveauté AH16"
+ s ^TKFINSERIE(127971)="Nouveauté AH16"
+ s ^TKFINSERIE(127379)="Nouveauté AH16"
+ s ^TKFINSERIE(127380)="Nouveauté AH16"
+ s ^TKFINSERIE(125694)="Nouveauté AH16"
+ s ^TKFINSERIE(125695)="Nouveauté AH16"
+ s ^TKFINSERIE(125696)="Nouveauté AH16"
+ s ^TKFINSERIE(125697)="Nouveauté AH16"
+ s ^TKFINSERIE(125698)="Nouveauté AH16"
+ s ^TKFINSERIE(125699)="Nouveauté AH16"
+ s ^TKFINSERIE(125700)="Nouveauté AH16"
+ s ^TKFINSERIE(125701)="Nouveauté AH16"
+ s ^TKFINSERIE(125702)="Nouveauté AH16"
+ s ^TKFINSERIE(125703)="Nouveauté AH16"
+ s ^TKFINSERIE(125955)="Nouveauté AH16"
+ s ^TKFINSERIE(125993)="Nouveauté AH16"
+q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

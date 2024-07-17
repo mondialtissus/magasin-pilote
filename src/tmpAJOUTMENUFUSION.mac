@@ -1,0 +1,7 @@
+ROUTINE tmpAJOUTMENUFUSION
+tmpAJOUTMENUFUSION
+	s ^FUSIONFAVORIS(10)="MT ACADEMY Learning\Firefox*http://mondialtissus.vdocsoftware.applixia.com/lms/easysite/VDocLearning/learning/commons/detail-formation?courseId=5101733952880641\ImgInvSynth\ImgInvSynth"
+
+	q
+
+

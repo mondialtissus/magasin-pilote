@@ -1,0 +1,86 @@
+ROUTINE TKCLI
+TKCLI
+ 
+ // Cette routine permet de recupérer les nom,adresses... des credits effectués.
+  
+ s AAMMJJ = ""
+ s CA = ""
+ s TK = ""
+ s NUMCLI = 0
+ s CLI = ""
+ s AAMMJJ = $O(^TKCREDITS(""))
+ s gPOS = $G(^HWINFO("MAG"))
+ s REF = ""
+ 
+ while AAMMJJ '= ""
+ {
+         if $L(AAMMJJ)=4
+         {
+                 s CA = $O(^TKCREDITS(AAMMJJ,""))
+                 while CA '= ""
+                 {
+                         S TK = $O(^TKCREDITS(AAMMJJ,CA,""))
+                         while TK '= ""
+                         {
+                                 s NUMCLI = $G(^TKCLIENTS(TK))
+                                 if +NUMCLI '= 0
+                                 {
+                                         s CLI = $G(^TKCLIENTS(NUMCLI))
+                                         s REF = $G(^TKCREDITSREF(TK))
+                                         if REF '= "" {s ^MODTKCLI(gPOS,REF)=CLI}
+                                         
+                                 }  
+                                 s TK = $O(^TKCREDITS(AAMMJJ,CA,TK))
+                         }
+                         s CA = $O(^TKCREDITS(AAMMJJ,CA))
+                 }
+         }
+         s AAMMJJ = $O(^TKCREDITS(AAMMJJ))
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

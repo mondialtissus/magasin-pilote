@@ -1,0 +1,25 @@
+ROUTINE INITINV201412
+INITINV201412
+
+ 					      // GARDER UN DATE UNIQUE POUR INV 
+ s ^HWINFO("TYPETERM")="DOLPHIN"
+ S ^HWINFO("INVENTAIRE","DATE")="63550"	      // Date de référence 29 Décembre 2014 
+ S ^HWINFO("INVENTAIRE","DATEARRETE")="63550"	
+ s ^HWINFO("INVENTAIRE","DATETEST")=""
+ s ^HWINFO("INVENTAIRE","DATETESTFIN")=""
+ s ^HWINFO("INVENTAIRE","DATEDEB")="63531"   // Date de début 10 Dec 2014 
+ s ^HWINFO("INVENTAIRE","DATEFIN")="63562"   // fin le 10 Janvier 2014 
+ s ^HWINFO("INVENTAIRE",63550,"AUTO")=""     // Permet de valider l'utilisation du terminal 
+
+ Q
+
+
+
+
+
+
+
+
+
+
+

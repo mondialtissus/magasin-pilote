@@ -1,0 +1,7 @@
+ROUTINE tmpMAJReliquat
+tmpMAJRELIQUAT
+ s ^HWINFO("PCTACEPTBL")="15"
+
+ q
+
+

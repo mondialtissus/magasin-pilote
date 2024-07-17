@@ -1,0 +1,60 @@
+ROUTINE CLIENTS
+CLIENTS
+	q
+	
+GETCLI
+	s RESULT=""
+	s ID=0
+	s LG=1
+	k ^tmpLSTCLI
+	s FIC="^TKCLIENTS"
+	s ACTIVREM=$G(^HWINFO("ACTIVEREM"))
+	i +ACTIVREM=1{ s FIC="^TKCLIFICHE"}     
+	s IDCLI=$O(@FIC@(""))
+	while IDCLI'=""{
+	        s REC=$G(@FIC@(IDCLI))
+	        s RESULT=RESULT_IDCLI_"\"_$P(REC,"\",1)_"\"_$P(REC,"\",2)_"\"_+$P(REC,"\",17)_"/"
+	        s ID=ID+1
+	        if ID=500{
+	                s ^tmpLSTCLI(LG)=RESULT
+	                s RESULT=""
+	                s LG=LG+1
+	                s ID=0
+	        }
+	        s IDCLI=$O(@FIC@(IDCLI))
+	}
+	if RESULT'=""{
+	        s ^tmpLSTCLI(LG)=RESULT
+	}
+	s ^tmpLSTCLI(LG)=RESULT
+	q
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,72 @@
+ROUTINE REMONTEEFILE
+REMONTEEFILE
+ ; ICI METTRE LE NOM DU NODE A AJOUTER DANS ^FILESFTP
+ s NODEAAJOUTER="MODROUTINE"
+ 
+ s bINSERT=0
+ s FILESFTP=$O(^FILESFTP("FROMMAG",""))
+ while FILESFTP'=""{
+  s REC=$G(^FILESFTP("FROMMAG",FILESFTP))
+  I REC=NODEAAJOUTER s bINSERT=1
+ 
+  s FILESFTP=$O(^FILESFTP("FROMMAG",FILESFTP))
+ }
+ 
+ I bINSERT=0
+ {
+  s LASTCPT = +$O(^FILESFTP("FROMMAG",""),-1)+1
+  s ^FILESFTP("FROMMAG",LASTCPT)=NODEAAJOUTER
+ }
+ 
+ k ^MODROUTINE
+ 
+	s MAG=$G(^HWINFO("MAG"))
+	s CPT=0
+	s N1=$O(^TKFINSERIE(""))
+	while N1'=""{
+		s DATA=$G(^TKFINSERIE(N1))
+		
+		s ^MODROUTINE(MAG,"SOLDEETE12",DATA)=+$G(^MODROUTINE(MAG,"SOLDEETE12",DATA))+1
+		s CPT=CPT+1
+		
+		s N1=$O(^TKFINSERIE(N1))
+	}
+	
+	w !,CPT
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,173 @@
+ROUTINE CONFIGINFOART
+CONFIGINFOART
+ s MAG=$G(^HWINFO("MAG"))
+ I MAG="C001" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.201.250\serveur\gsiphotos"
+ I MAG="F100" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.203.250\serveur\gsiphotos"
+ I MAG="F501" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.202.250\serveur\gsiphotos"
+ I MAG="G149" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.2.250\serveur\gsiphotos"
+ I MAG="G174" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.3.250\serveur\gsiphotos"
+ I MAG="G179" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.4.250\serveur\gsiphotos"
+ I MAG="G182" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.5.250\serveur\gsiphotos"
+ I MAG="G183" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.6.250\serveur\gsiphotos"
+ I MAG="G201" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.7.250\serveur\gsiphotos"
+ I MAG="G203" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.8.250\serveur\gsiphotos"
+ I MAG="G224" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.9.250\serveur\gsiphotos"
+ I MAG="G237" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.10.250\serveur\gsiphotos"
+ I MAG="G282" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.11.250\serveur\gsiphotos"
+ I MAG="G287" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.12.250\serveur\gsiphotos"
+ I MAG="G290" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.13.250\serveur\gsiphotos"
+ I MAG="G291" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.14.250\serveur\gsiphotos"
+ I MAG="G292" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.15.250\serveur\gsiphotos"
+ I MAG="G307" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.16.250\serveur\gsiphotos"
+ I MAG="G311" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.17.250\serveur\gsiphotos"
+ I MAG="G321" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.18.250\serveur\gsiphotos"
+ I MAG="G323" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.19.250\serveur\gsiphotos"
+ I MAG="G331" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.20.250\serveur\gsiphotos"
+ I MAG="M001" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.73.250\serveur\gsiphotos"
+ I MAG="M002" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.75.250\serveur\gsiphotos"
+ I MAG="M003" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.76.250\serveur\gsiphotos"
+ I MAG="M005" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.78.250\serveur\gsiphotos"
+ I MAG="M006" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.79.250\serveur\gsiphotos"
+ I MAG="M007" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.80.250\serveur\gsiphotos"
+ I MAG="M008" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.81.250\serveur\gsiphotos"
+ I MAG="M009" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.82.250\serveur\gsiphotos"
+ I MAG="M144" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.21.250\serveur\gsiphotos"
+ I MAG="M151" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.22.250\serveur\gsiphotos"
+ I MAG="M156" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.23.250\serveur\gsiphotos"
+ I MAG="M157" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.24.250\serveur\gsiphotos"
+ I MAG="M159" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.25.250\serveur\gsiphotos"
+ I MAG="M160" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.26.250\serveur\gsiphotos"
+ I MAG="M161" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.27.250\serveur\gsiphotos"
+ I MAG="M162" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.28.250\serveur\gsiphotos"
+ I MAG="M163" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.29.250\serveur\gsiphotos"
+ I MAG="M164" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.30.250\serveur\gsiphotos"
+ I MAG="M165" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.31.250\serveur\gsiphotos"
+ I MAG="M167" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.32.250\serveur\gsiphotos"
+ I MAG="M168" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.33.250\serveur\gsiphotos"
+ I MAG="M173" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.34.250\serveur\gsiphotos"
+ I MAG="M178" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.35.250\serveur\gsiphotos"
+ I MAG="M204" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.36.250\serveur\gsiphotos"
+ I MAG="M205" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.37.250\serveur\gsiphotos"
+ I MAG="M213" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.38.250\serveur\gsiphotos"
+ I MAG="M214" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.39.250\serveur\gsiphotos"
+ I MAG="M215" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.40.250\serveur\gsiphotos"
+ I MAG="M221" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.41.250\serveur\gsiphotos"
+ I MAG="M226" S ^HWINFO("REPERTOIREPHOTO")="\\192.168.0.250\serveur\gsiphotos"
+ I MAG="M234" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.42.250\serveur\gsiphotos"
+ I MAG="M245" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.43.250\serveur\gsiphotos"
+ I MAG="M247" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.44.250\serveur\gsiphotos"
+ I MAG="M253" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.45.250\serveur\gsiphotos"
+ I MAG="M254" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.46.250\serveur\gsiphotos"
+ I MAG="M257" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.47.250\serveur\gsiphotos"
+ I MAG="M260" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.48.250\serveur\gsiphotos"
+ I MAG="M273" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.49.250\serveur\gsiphotos"
+ I MAG="M278" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.50.250\serveur\gsiphotos"
+ I MAG="M280" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.51.250\serveur\gsiphotos"
+ I MAG="M288" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.72.250\serveur\gsiphotos"
+ I MAG="M312" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.52.250\serveur\gsiphotos"
+ I MAG="M313" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.53.250\serveur\gsiphotos"
+ I MAG="M338" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.54.250\serveur\gsiphotos"
+ I MAG="M341" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.55.250\serveur\gsiphotos"
+ I MAG="M344" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.56.250\serveur\gsiphotos"
+ I MAG="M354" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.57.250\serveur\gsiphotos"
+ I MAG="M364" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.58.250\serveur\gsiphotos"
+ I MAG="M374" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.59.250\serveur\gsiphotos"
+ I MAG="M386" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.60.250\serveur\gsiphotos"
+ I MAG="M391" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.61.250\serveur\gsiphotos"
+ I MAG="M392" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.62.250\serveur\gsiphotos"
+ I MAG="M401" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.63.250\serveur\gsiphotos"
+ I MAG="M414" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.64.250\serveur\gsiphotos"
+ I MAG="M415" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.65.250\serveur\gsiphotos"
+ I MAG="M416" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.66.250\serveur\gsiphotos"
+ I MAG="M417" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.71.250\serveur\gsiphotos"
+ I MAG="M418" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.74.250\serveur\gsiphotos"
+ I MAG="Q180" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.67.250\serveur\gsiphotos"
+ I MAG="Q231" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.68.250\serveur\gsiphotos"
+ I MAG="Q232" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.69.250\serveur\gsiphotos"
+ I MAG="Q282" S ^HWINFO("REPERTOIREPHOTO")="\\10.10.70.250\serveur\gsiphotos"
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

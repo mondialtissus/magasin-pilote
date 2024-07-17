@@ -1,0 +1,75 @@
+ROUTINE WEBENREGIMAGE
+WEBENREGIMAGE
+
+	q
+	
+WEBENREGIMAGESIGNATURE(CMDNUM,REPPHOTO)
+ s Signature=##class(User.webSIGNATURE).%New()
+ s Signature.CMDNUM = CMDNUM
+ Set pict = ##class(%File).%New(REPPHOTO)
+ Do pict.Open("RU")
+ d Signature.SIGNATURE.CopyFrom(pict)
+ d Signature.%Save()
+ d pict.Close()
+	
+ d WEBENREGMODSIGNATURE(CMDNUM)
+ 
+ q
+ 
+WEBENREGMODSIGNATURE(CMDNUM)
+	//Récupérer lindice dans ^User.webSIGNATURED
+	if +$D(^User.webSIGNATURED(+CMDNUM))>0
+	{
+		S NUMPICT=$lg(^User.webSIGNATURED(+CMDNUM),3)	
+		
+		s POSNUM=$G(^HWINFO("MAG"))
+	    // 2criture dans ^MODSIGNATURE
+		s ^MODSIGNATURE(POSNUM,CMDNUM,0)=$G(^User.webSIGNATURES(NUMPICT,0)) // Taille du fichier
+	    s NUMLIG=$O(^User.webSIGNATURES(NUMPICT,"0"))
+	    while NUMLIG'=""
+	    {
+	       w !,"OK"
+	       s ^MODSIGNATURE(POSNUM,CMDNUM,NUMLIG)=$G(^User.webSIGNATURES(NUMPICT,NUMLIG))
+	       s NUMLIG=$O(^User.webSIGNATURES(NUMPICT,NUMLIG))
+	     }
+	}
+
+	q
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

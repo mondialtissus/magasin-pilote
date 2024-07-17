@@ -1,0 +1,62 @@
+ROUTINE GUMAINMODIOTMP
+GUMAINMODIOTMP
+	//Cette fonction permet de vérifier toutes les MODIOTMP qui possèdent des PLU avec une famille égale ) 01,02,03,05,06 avec une date supérieure au 31/12/2009
+	s NOMMAG = $G(^HWINFO("MAG"))
+ 
+	S CLEFARTICLE = ""
+	S CLEFARTICLE = $O(^MODIOTMP(NOMMAG,CLEFARTICLE))
+	while CLEFARTICLE '=""
+	{
+		s DATA = $G(^MODIOTMP(NOMMAG,CLEFARTICLE,1,"I"))
+		s DATE = $P($P(DATA,"\",3),",",1)
+ 
+		i +DATE > 61726
+		{
+			;On teste la famille
+			s SECTEUR = ""
+			s SECTEUR = $P($G(^ST(CLEFARTICLE)),"\",23)
+			i (SECTEUR = "01") ||  (SECTEUR = "02") ||  (SECTEUR = "03") ||  (SECTEUR = "05") ||  (SECTEUR = "06")
+			{
+				s ^MODIO(NOMMAG,CLEFARTICLE,1,"I") = DATA
+				k ^MODIOTMP(NOMMAG,CLEFARTICLE,1,"I")
+				S ^MODROUTINE(NOMMAG,"MODIOTMP",CLEFARTICLE) = DATA
+			}
+		}
+ 
+		S CLEFARTICLE = $O(^MODIOTMP(NOMMAG,CLEFARTICLE))
+	}
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

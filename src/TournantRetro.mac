@@ -1,0 +1,5 @@
+ROUTINE TournantRetro
+ActiverInventaireTournantVersRetro
+ s ^HWINFO("DROITSBTNRETRO") = 1
+ Q
+

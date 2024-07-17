@@ -1,0 +1,7 @@
+ROUTINE MENUNEWSUIVICMD
+MENUNEWSUIVICMD
+	s ^FUSIONMENU(1,5) = "Suivi des commandes\FenSuiviCmdEDI\imgSuiviCmd\imgSuiviCmd" 
+
+	q
+
+

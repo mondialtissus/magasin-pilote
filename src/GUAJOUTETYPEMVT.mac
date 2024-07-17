@@ -1,0 +1,8 @@
+ROUTINE GUAJOUTETYPEMVT
+GUAJOUTETYPEMVT
+	s ^GUMVTTYPE(29)="5\-1\1\Atelier cousus correction -"
+ 
+	q
+ 
+ 
+ 

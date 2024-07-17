@@ -1,0 +1,36 @@
+ROUTINE GETALLCLI
+GETALLCLI
+	ZA ^MODCLIENTS
+	s POSNUM=$G(^HWINFO("MAG"))
+	s CLI=$O(^TKCLIENTS(""))
+	while CLI'=""
+	{
+		i CLI'="COMPTEUR"{
+			s REC=$G(^TKCLIENTS(CLI))
+			s ^MODCLIENTS(POSNUM,CLI)=REC			
+		}
+		s CLI=$O(^TKCLIENTS(CLI))
+	}
+	ZD ^MODCLIENTS
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,29 @@
+ROUTINE INSTALSERV
+InstalServeur
+
+ s FIC="C:\pos\WebTerminal-v4.9.5.wdz"
+ s newFIC="C:\pos\WebTerminal-v4.9.5.xml"
+ s file=##class(%File).%New(FIC)
+	
+ If file.Exists(FIC) = 1 {
+	 s retour = file.Rename(FIC, newFIC, .return)
+ }
+ 
+ IF file.Exists(newFIC) = 1 {
+	 d $system.OBJ.Load(newFIC,"ck")
+ }
+
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+

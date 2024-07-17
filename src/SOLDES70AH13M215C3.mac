@@ -1,0 +1,256 @@
+ROUTINE SOLDES70AH13M215C3
+SOLDES70AH13M215C3
+ 
+	s ^TKSOLDES("13278")="\0.7\0"
+	s ^TKSOLDES("16281")="\0.7\0"
+	s ^TKSOLDES("13019")="\0.7\0"
+	s ^TKSOLDES("14504")="\0.7\0"
+	s ^TKSOLDES("14506")="\0.7\0"
+	s ^TKSOLDES("14547")="\0.7\0"
+	s ^TKSOLDES("14500")="\0.7\0"
+	s ^TKSOLDES("14502")="\0.7\0"
+	s ^TKSOLDES("14493")="\0.7\0"
+	s ^TKSOLDES("14494")="\0.7\0"
+	s ^TKSOLDES("17722")="\0.7\0"
+	s ^TKSOLDES("16111")="\0.7\0"
+	s ^TKSOLDES("16112")="\0.7\0"
+	s ^TKSOLDES("16113")="\0.7\0"
+	s ^TKSOLDES("16116")="\0.7\0"
+	s ^TKSOLDES("16118")="\0.7\0"
+	s ^TKSOLDES("16119")="\0.7\0"
+	s ^TKSOLDES("16120")="\0.7\0"
+	s ^TKSOLDES("16122")="\0.7\0"
+	s ^TKSOLDES("16125")="\0.7\0"
+	s ^TKSOLDES("16126")="\0.7\0"
+	s ^TKSOLDES("16131")="\0.7\0"
+	s ^TKSOLDES("16132")="\0.7\0"
+	s ^TKSOLDES("16133")="\0.7\0"
+	s ^TKSOLDES("16134")="\0.7\0"
+	s ^TKSOLDES("16135")="\0.7\0"
+	s ^TKSOLDES("15541")="\0.7\0"
+	s ^TKSOLDES("15098")="\0.7\0"
+	s ^TKSOLDES("15094")="\0.7\0"
+	s ^TKSOLDES("15108")="\0.7\0"
+	s ^TKSOLDES("15107")="\0.7\0"
+	s ^TKSOLDES("15325")="\0.7\0"
+	s ^TKSOLDES("15323")="\0.7\0"
+	s ^TKSOLDES("15321")="\0.7\0"
+	s ^TKSOLDES("15324")="\0.7\0"
+	s ^TKSOLDES("15193")="\0.7\0"
+	s ^TKSOLDES("15334")="\0.7\0"
+	s ^TKSOLDES("15330")="\0.7\0"
+	s ^TKSOLDES("15327")="\0.7\0"
+	s ^TKSOLDES("15338")="\0.7\0"
+	s ^TKSOLDES("15347")="\0.7\0"
+	s ^TKSOLDES("15348")="\0.7\0"
+	s ^TKSOLDES("15350")="\0.7\0"
+	s ^TKSOLDES("15331")="\0.7\0"
+	s ^TKSOLDES("15342")="\0.7\0"
+	s ^TKSOLDES("15335")="\0.7\0"
+	s ^TKSOLDES("15340")="\0.7\0"
+	s ^TKSOLDES("15336")="\0.7\0"
+	s ^TKSOLDES("15326")="\0.7\0"
+	s ^TKSOLDES("15337")="\0.7\0"
+	s ^TKSOLDES("15305")="\0.7\0"
+	s ^TKSOLDES("15306")="\0.7\0"
+	s ^TKSOLDES("13594")="\0.7\0"
+	s ^TKSOLDES("13593")="\0.7\0"
+	s ^TKSOLDES("14137")="\0.7\0"
+	s ^TKSOLDES("14110")="\0.7\0"
+	s ^TKSOLDES("14121")="\0.7\0"
+	s ^TKSOLDES("16637")="\0.7\0"
+	s ^TKSOLDES("13586")="\0.7\0"
+	s ^TKSOLDES("13862")="\0.7\0"
+	s ^TKSOLDES("13863")="\0.7\0"
+	s ^TKSOLDES("13876")="\0.7\0"
+	s ^TKSOLDES("13877")="\0.7\0"
+	s ^TKSOLDES("13878")="\0.7\0"
+	s ^TKSOLDES("13892")="\0.7\0"
+	s ^TKSOLDES("13896")="\0.7\0"
+	s ^TKSOLDES("13897")="\0.7\0"
+	s ^TKSOLDES("14527")="\0.7\0"
+	s ^TKSOLDES("15090")="\0.7\0"
+	s ^TKSOLDES("15083")="\0.7\0"
+	s ^TKSOLDES("15084")="\0.7\0"
+	s ^TKSOLDES("15089")="\0.7\0"
+	s ^TKSOLDES("15092")="\0.7\0"
+	s ^TKSOLDES("15088")="\0.7\0"
+	s ^TKSOLDES("15086")="\0.7\0"
+	s ^TKSOLDES("15085")="\0.7\0"
+	s ^TKSOLDES("15091")="\0.7\0"
+	s ^TKSOLDES("15087")="\0.7\0"
+	s ^TKSOLDES("15080")="\0.7\0"
+	s ^TKSOLDES("15082")="\0.7\0"
+	s ^TKSOLDES("15070")="\0.7\0"
+	s ^TKSOLDES("15066")="\0.7\0"
+	s ^TKSOLDES("15060")="\0.7\0"
+	s ^TKSOLDES("15056")="\0.7\0"
+	s ^TKSOLDES("15059")="\0.7\0"
+	s ^TKSOLDES("79412")="\0.7\0"
+	s ^TKSOLDES("77469")="\0.7\0"
+	s ^TKSOLDES("77477")="\0.7\0"
+	s ^TKSOLDES("78901")="\0.7\0"
+	s ^TKSOLDES("77648")="\0.7\0"
+	s ^TKSOLDES("68014")="\0.7\0"
+	s ^TKSOLDES("63065")="\0.7\0"
+	s ^TKSOLDES("60005")="\0.7\0"
+	s ^TKSOLDES("60007")="\0.7\0"
+	s ^TKSOLDES("61412")="\0.7\0"
+	s ^TKSOLDES("59692")="\0.7\0"
+	s ^TKSOLDES("61406")="\0.7\0"
+	s ^TKSOLDES("61503")="\0.7\0"
+	s ^TKSOLDES("56066")="\0.7\0"
+	s ^TKSOLDES("55599")="\0.7\0"
+	s ^TKSOLDES("55600")="\0.7\0"
+	s ^TKSOLDES("91802")="\0.7\0"
+	s ^TKSOLDES("64420")="\0.7\0"
+	s ^TKSOLDES("45441")="\0.7\0"
+	s ^TKSOLDES("51356")="\0.7\0"
+	s ^TKSOLDES("51399")="\0.7\0"
+	s ^TKSOLDES("54831")="\0.7\0"
+	s ^TKSOLDES("54832")="\0.7\0"
+	s ^TKSOLDES("54834")="\0.7\0"
+	s ^TKSOLDES("44697")="\0.7\0"
+	s ^TKSOLDES("51352")="\0.7\0"
+	s ^TKSOLDES("52882")="\0.7\0"
+	s ^TKSOLDES("54715")="\0.7\0"
+	s ^TKSOLDES("37580")="\0.7\0"
+	s ^TKSOLDES("40107")="\0.7\0"
+	s ^TKSOLDES("41756")="\0.7\0"
+	s ^TKSOLDES("9215")="\0.7\0"
+	s ^TKSOLDES("6814")="\0.7\0"
+	s ^TKSOLDES("3453")="\0.7\0"
+	s ^TKSOLDES("2438")="\0.7\0"
+	s ^TKSOLDES("3222")="\0.7\0"
+	s ^TKSOLDES("2861")="\0.7\0"
+	s ^TKSOLDES("5038")="\0.7\0"
+	s ^TKSOLDES("2767")="\0.7\0"
+ 
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

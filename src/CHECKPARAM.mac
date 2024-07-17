@@ -1,0 +1,42 @@
+ROUTINE CHECKPARAM
+CHECKPARAM
+	s NOMMAG = $G(^HWINFO("MAG"))
+	i $G(^HWINFO("GESTSTOCK"))="1"
+	{
+		S ^MODROUTINE(NOMMAG,"GESTSTOCK","201008")="1"
+	}
+	else
+	{
+		S ^MODROUTINE(NOMMAG,"GESTSTOCK","201008")="0"		
+	}
+ 
+	i $G(^HWINFO("GESTINVPARTIEL"))="1"
+	{
+		S ^MODROUTINE(NOMMAG,"GESTINVPARTIEL","201008")="1"
+	}
+	else
+	{
+		S ^MODROUTINE(NOMMAG,"GESTINVPARTIEL","201008")="0"		
+	}
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

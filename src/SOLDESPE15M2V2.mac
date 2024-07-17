@@ -1,0 +1,41 @@
+ROUTINE SOLDESPE15M2V2
+SOLDESPE15M2V2
+
+ s ^TKFINSERIE(113499)="ajout -50%"
+ s ^TKFINSERIE(115937)="ajout -50%"
+ s ^TKFINSERIE(113522)="ajout -50%"
+ s ^TKFINSERIE(110850)="ajout -50%"
+ s ^TKFINSERIE(107691)="ajout -50%"
+ s ^TKFINSERIE(113502)="ajout -50%"
+ s ^TKFINSERIE(113518)="ajout -50%"
+ s ^TKFINSERIE(110849)="ajout -50%"
+ s ^TKFINSERIE(107697)="ajout -50%"
+ s ^TKFINSERIE(113497)="ajout -50%"
+ s ^TKFINSERIE(113500)="ajout -50%"
+ s ^TKFINSERIE(113512)="ajout -50%"
+ s ^TKFINSERIE(113514)="ajout -50%"
+ s ^TKFINSERIE(117603)="ajout -50%"
+ s ^TKFINSERIE(113498)="ajout -50%"
+ s ^TKFINSERIE(113501)="ajout -50%"
+ s ^TKFINSERIE(110848)="ajout -50%"
+
+ q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

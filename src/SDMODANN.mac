@@ -1,0 +1,10 @@
+ROUTINE SDMODANN
+SDMODANN ;Y2K;Transfert des annulations de commande;;;1;21-Oct-99 17:23
+ S H="",CLI="",BON=""
+ F  S H=$O(^MODANN(^HWINFO("MAG"),H)) Q:(H="")  D
+ .S CLI=$P(^MODANN(^HWINFO("MAG"),H),"\",5)
+ .S BON=$P(^MODANN(^HWINFO("MAG"),H),"\",2)
+ .I $D(^HWBONCOM(CLI,BON)) K ^MODANN(^HWINFO("MAG"),H)
+ .Q
+ Q
+ 

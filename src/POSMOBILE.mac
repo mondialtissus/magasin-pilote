@@ -1,0 +1,329 @@
+ROUTINE POSMOBILE
+POSMOBILE
+                Q
+ARTICLES
+                s FIC="C:\TERMINAL\DATA\ARTICLES.TXT"
+                s file=##class(%File).%New(FIC)
+                d file.Open("WSN")
+                s ART=$O(^ST(""))
+                while ART'=""{
+                        
+                        s REC=$G(^ST(ART))
+                        s REC4=$G(^ST(ART,4))
+                        s REC5=$G(^ST(ART,5)) 
+                        s REC6=$G(^ST(ART,6))
+                        s PLU=$P(REC,"\",21)
+                        s CB=$P(REC,"\",1)
+                        s PA=$$GETPRIX($P(REC,"\",13))
+                        s PV=$$GETPRIX($P(REC,"\",22))
+                        s LEV=$P(REC4,"\",1)
+                        s REFLEV=$P(REC4,"\",3)
+                        s DESC=$P(REC5,"\",1)
+                        s FICH=0
+                    // s FAM=+$P(REC,"\",4)
+                    // s SSFAM=+$P(REC,"\",7)
+                        s UE=$P(REC,"\",20)
+                        s QTE=$P(REC,"\",6)
+                        s LARG=+$P(REC,"\",11)
+                        s DATESOLDE =$P($P(REC,"\",22),"/",2) //$P(REC,"\",22)
+                        s DATEFINSOLDE =$P($P(REC,"\",22),"/",4) //$P(REC,"\",22)
+                        
+                        s PRIX1 =$P($P(REC,"\",22),"/",1) 
+                        s PRIX3 =$P($P(REC,"\",22),"/",3) 
+                        
+                        s NEWSECTEUR=$P(REC,"\",23)
+                        s NEWFAMILLE=$P(REC,"\",24)
+                        s NEWSFAM=$P(REC,"\",25)
+                // s NEWCAT=$P(REC,"\",26)
+                // s NEWSCAT=$P(REC,"\",27)
+                        s STATUT=$P(REC4,"\",13)
+                        s PLUCHAINE=$P(REC6,"\",8)
+                        s ESTCONTREMARQUE=+$P(REC6,"\",9)
+                                        
+                        if (DATESOLDE '= "") && (PRIX1 '= PRIX3) {
+                            if (DATEFINSOLDE '= "") && (+$H > DATEFINSOLDE) {
+                                s DATESOLDE =""
+                            }
+                            else
+                            {
+                                s DATESOLDE =$P($P(REC,"\",22),"/",2)
+                            } 
+                         
+                        }
+                        else
+                        {
+                          s DATESOLDE =""
+                        }
+                        
+                                        
+                        if +$P(REC,"\",3)>0{
+                          s STOP=$ZD(+$P(REC,"\",3),8)
+                        }
+                        else
+                        {
+                          s STOP=""
+                        }
+                        if +$P(REC,"\",5) > 0 {
+                          s OUT=$ZD(+$P(REC,"\",5),8)
+                        }
+                        else
+                        {
+                          s OUT=""
+                        }
+                        if +$P(REC4,"\",6)>0{
+                            s ARTFIN=1
+                        }
+                        else
+                        {
+                            s ARTFIN=0
+                        }
+
+                        if +$P(REC4,"\",7)>0{
+                            s ARTCONF=1
+                        }
+                        else
+                        {
+                            s ARTCONF=0
+                        }
+                        
+                        s ESTARTBELGE=0
+                        if +$D(^ARTBELGE(PLU))>0 // Si c'est un article belge on charge pas
+                        {
+	                        s ESTARTBELGE=1
+	                    }
+                                
+                                // statut 6 = "SupprimÃ©" => ne pas charger sur les scans
+                                // statut 5 = "Fin de sÃ©rie" => ne pas charger sur les scans -> Suite Ã  plus de place sur scanner
+                                // On ne charge plus les financiers -> Suite Ã  de nouveau plus de place
+                        IF (+STATUT'=6)&&(+STATUT'=5)&&(+NEWSECTEUR'=9)&&(+ESTCONTREMARQUE=0)&&(+ARTFIN=0)&&(+ESTARTBELGE=0) {     
+                S LG=PLU_";"_ART_";"_CB_";"_PV_";"_LEV_";"_REFLEV_";"_DESC_";"_FICH_";"_UE_";"_QTE_";"_LARG_";"_OUT_";"_PA_";"_STOP_";"_ARTFIN_";"_DATESOLDE_";"_NEWSECTEUR_";"_NEWFAMILLE_";"_PRIX1_";"_PRIX3_";"_ARTCONF_";"_STATUT_";"_PLUCHAINE
+                                d file.WriteLine(LG)
+                        }
+                        s ART=$O(^ST(ART))
+
+                }
+                d file.%Close()
+                s ^HWINFO("LASTGEN","ARTFIC")=$ZD(+$H,8) 
+                q
+                
+CB
+                s LG=""
+                s FIC="C:\TERMINAL\DATA\CB.TXT"
+                s file=##class(%File).%New(FIC)
+                d file.Open("WSN")
+                s CB=$O(^CSB(""))
+                while CB'=""{
+                        s ART=$O(^CSB(CB,""))
+                        while ART'=""{
+                                               s REC4=$G(^ST(ART,4))
+                                               s REC=$G(^ST(ART))
+											   
+                                 // statut 6 = "SupprimÃ©" => ne pas charger sur les scans
+                                 IF (+$P(REC4,"\",13)'=6)&&(+$P(REC4,"\",13)'=5)&&(+$P(REC,"\",23)'=9)&&(+$P(REC4,"\",6)<=0) {     
+                                        s PLU=$P($G(^ST(ART)),"\",21)
+                                        
+                       					if +$D(^ARTBELGE(+PLU))=0
+                        				{
+	                        			 	s LG=CB_";"_PLU_";0"
+                                        	d file.WriteLine(LG) 
+	                    				}
+	                    				
+                                        //s LG=CB_";"_PLU_";0"
+                                        //d file.WriteLine(LG) 
+                                }
+                                s ART=$O(^CSB(CB,ART))
+                        }
+                        s CB=$O(^CSB(CB))
+                }
+                d file.%Close()
+                s ^HWINFO("LASTGEN","CBFIC")=$ZD(+$H,8)
+
+                q
+                
+GETPRIX(PRIX)
+                S DATESYS=+$P($H,",",1)
+                S DATEBASCULE=+$P(PRIX,"/",2)
+                S DATEFINBASCULE=+$P(PRIX,"/",4)
+                I DATEBASCULE>0 D
+                .S INDICE=3
+                .I DATESYS<DATEBASCULE S INDICE=1
+                .I DATESYS>DATEFINBASCULE&&DATEFINBASCULE>0 S INDICE=1
+                .S PRIX=$P(PRIX,"/",INDICE)
+                .Q
+                Q PRIX
+                
+CHAINEOCCURRENCE(STROC,CAR)
+                // Calcule le nombre d'occurrences d'une chaÃ®ne de caractÃ¨res spÃ©cifique
+                // STROC : Texte dans lequel les occurrences de <ChaÃ®ne Ã  rechercher> doivent Ãªtre recherchÃ©es. 
+                // CAR : Texte Ã  rechercher dans la <ChaÃ®ne source>
+                s CPTCAR=0
+                s iSize=$L(STROC)
+                for i=1:1:iSize
+                {
+                     if $E(STROC,i,i)=CAR {s CPTCAR=CPTCAR+1}
+                }       
+                q +CPTCAR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+ROUTINE CHANGEMENURETRO
+CHANGEMENURETRO
+	S NUMMENU = 8
+	s NUMSOUSMENU = 1
+	s NEWMENU = 1
+	i $G(^GUMENU(2))'="Transfert Coupes CD"
+	{
+		s NUMMENU = $O(^GUMENU(NUMMENU),-1)
+		s NEWMENU = +NUMMENU +2
+		while NUMMENU '= "1"
+		{
+		
+			s NUMSOUSMENU = $O(^GUMENU(NUMMENU,""))
+			while NUMSOUSMENU '= ""
+			{
+				s DATAMENU = $G(^GUMENU(NUMMENU,NUMSOUSMENU))			
+				s ^GUMENU(NEWMENU,NUMSOUSMENU)=DATAMENU
+				k ^GUMENU(NUMMENU,NUMSOUSMENU)
+			
+				s NUMSOUSMENU = $O(^GUMENU(NUMMENU,NUMSOUSMENU))			
+			}	
+			
+			s DATAMENU = $G(^GUMENU(NUMMENU))
+			s ^GUMENU(NEWMENU)=DATAMENU	
+			k ^GUMENU(NUMMENU)
+		
+			s NUMMENU = $O(^GUMENU(NUMMENU),-1)
+			s NEWMENU = +NUMMENU + 2
+		}
+	
+	
+		s ^GUMENU(2)="Transfert Coupes CD"
+		s ^GUMENU(2,1)="Réception des coupes du CD\fenCMDRetroRec COUPE\img13"
+		s ^GUMENU(2,2)="Suivi des réceptions des coupes du CD\fenHistRecRetro COUPE\img12"
+		s ^GUMENU(3)="Transfert Confection SBM"
+		s ^GUMENU(3,1)="Création Confection\fenCMDRetro CONF\img13"
+		s ^GUMENU(3,2)="Réception des Confections\fenCMDRetroRec CONF\img13"
+                s ^GUMENU(3,3)="Suivi des envois des Confections\fenHistCMDRetro CONF\img12"
+		s ^GUMENU(3,4)="Suivi des réceptions des Confections\fenHistRecRetro CONF\img12"
+	}
+	
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

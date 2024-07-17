@@ -1,0 +1,1702 @@
+ROUTINE GETHISTO
+GETHISTO
+	Q
+GETHISTOART(IDEB,IFIN,ANNEE,ANNEEFIN,MOISDEB,LEV,SECT,FAM,NEW,IDCBMSG,IDMSG,DEBEF,FINEF)
+ 
+	S FICHIER="^HISTOART" s IndGRP=4 s IndSSGRP=7
+	S gNEWCLASSIF=+$G(^HWINFO("NEWCLASSIF"))
+	I gNEWCLASSIF=1 S FICHIER="^HISTONEWART" s IndGRP=23 s IndSSGRP=24 s IndSSFAM=25
+	
+	W !, "Entrée: "_IDEB_","_IFIN_","_ANNEE_","_ANNEEFIN_","_MOISDEB_","_LEV_","_SECT_","_FAM_","_NEW_","_IDCBMSG_","_IDMSG
+	s CPT=0
+	k ^HISTOARTresult
+	s ANNEE=$O(@FICHIER@(ANNEE))
+	while ANNEE'=""
+	{               
+	        if (ANNEE'="")&&(ANNEE=ANNEEFIN){q}
+	        s MOISDEB=$O(@FICHIER@(ANNEE,MOISDEB))
+	        while MOISDEB'=""{
+	                
+	                s CURJDEB=$O(@FICHIER@(ANNEE,MOISDEB,""))
+	                while CURJDEB'=""{
+	                        
+	                        i $L(MOISDEB)=1{s FMOIS="0"_MOISDEB}else{s FMOIS=MOISDEB}
+	                        i $L(CURJDEB)=1{s FJDEB="0"_CURJDEB}else{s FJDEB=CURJDEB}
+	                        s FDATE=ANNEE_FMOIS_FJDEB
+	                        s iCUR=$ZDH(FDATE,8)
+	                                                        
+	                        i iCUR+1>IDEB
+	                        {
+	                                i (iCUR>IFIN)&&((IDEB>0)&&(IFIN>0)){q}
+	                                s strCurLev=""
+	                                i LEV'=""{s strCurLev=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB,LEV),-1)}
+	                                
+	                                s strCurLev=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB,strCurLev))
+	                                while strCurLev'=""{
+	                                        I (LEV'="")&&(LEV'=strCurLev){q}
+	                                        s strCurSect=""
+	                                        i SECT'=""{s strCurSect=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB,strCurLev,SECT),-1)}
+	                                                                                
+	                                        s strCurSect=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB,strCurLev,strCurSect))
+	                                        while strCurSect'=""{
+	                                                if (SECT'="")&&(SECT'=strCurSect){q}
+	                                                
+	                                                s strCurFam=""
+	                                                i FAM'=""{s strCurFam=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB,strCurLev,FAM),-1)}                                            
+	                                                
+	                                                s strCurFam=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB,strCurLev,strCurSect,strCurFam))
+	                                                while strCurFam'=""{
+	                                                        
+	                                                        s strCleArt=""
+	                                                        s strCleArt=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB,strCurLev,strCurSect,strCurFam,""))
+	                                                        while strCleArt'=""{
+	                                                                s strRec=$G(@FICHIER@(ANNEE,MOISDEB,CURJDEB,strCurLev,strCurSect,strCurFam,strCleArt))
+	                                                                s strPv=$P(strRec,"\",9)
+	                                                                s iMsg=$P(strRec,"\",10)
+	                                                                s bAddLine=1
+	                                                                i (DEBEF'="")&&(FINEF'="") {s bAddLine=0}
+	                                                                if +$P(strPv,"/",2)>0{
+	                                                                        if (iCUR-1)<(+$P(strPv,"/",2))
+	                                                                        {
+	                                                                                s rCurPv=+$P(strPv,"/",1)
+	                                                                                s rNewPv=+$P(strPv,"/",3)
+	                                                                                s strDateEffect=$ZD(+$P(strPv,"/",2),8)
+	                                                                                if rCurPv=rNewPv{
+	                                                                                        
+	                                                                                        s rNewPv=0
+	                                                                                        s strDateEffect=""
+	                                                                                }
+	                                                                        }
+	                                                                        else
+	                                                                        {
+	                                                                                s rNewPv=0
+	                                                                                s rCurPv=+$P(strPv,"/",3)
+	                                                                                s strDateEffect=""
+	                                                                        }
+	                                                                        
+	                                                                        if (DEBEF'="")&&(FINEF'=""){
+	                                                                                s convDEBEF=+$ZDH(DEBEF,8)
+	                                                                                s convFINEF=+$ZDH(FINEF,8)
+	                                                                                s bAddLine=0
+	                                                                                W !, +$P(strPv,"/",2)_">("_convDEBEF-1_")&&(("_+$P(strPv,"/",2)_"<("_convFINEF+1_"))"
+	                                                                                if ((+$P(strPv,"/",2))>(convDEBEF-1))&&((+$P(strPv,"/",2))<(convFINEF+1)){s bAddLine=1}
+	                                                                        }
+	                                                                }
+	                                                                else
+	                                                                {
+	                                                                        s rCurPv=+$P(strPv,"/",1)
+	                                                                        s rNewPv=0
+	                                                                        s strDateEffect=""
+	                                                                }
+	                                                                w !, strPv_" )-> "_strCleArt_","_rCurPv_","_strDateEffect_","_rNewPv
+	                                                                s $P(strRec,"\",9)=rCurPv
+	                                                                s $P(strRec,"\",10)=strDateEffect
+	                                                                s $P(strRec,"\",11)=rNewPv
+	                                                                
+	                                                                
+	                                                                s strST0=$G(^ST(strCleArt))
+	                                                                s rPvActuel=$$GETPRIX($P(strST0,"\",22))
+	                                                                
+	                                                                if 'gNEWCLASSIF
+	                                                                {
+	                                                                        s strST1=$G(^ST(strCleArt,1))
+	                                                                        i $P(strST1,"\",2)="" {s strCat=$P(strST1,"\",1)}
+	                                                                    else {s strCat=$P(strST1,"\",1)_"/"_$P(strST1,"\",2)}
+	                                                                    
+	                                                                    i +strCurSect<4 {s $P(strRec,"\",7)=strCat}
+	                                                                }
+	                                                                else
+	                                                                {
+	                                                                        s strCat=$P($G(^GMTCLA($P(strST0,"\",23),$P(strST0,"\",24))),"\",2)
+	                                                                        I +$P(strST0,"\",25)>0 s strCat=$P($G(^GMTCLA($P(strST0,"\",23),$P(strST0,"\",24),$P(strST0,"\",25))),"\",2)
+	                                                                }
+	                                                                
+	                                                                s strMsg=$P($G(^BGLSTMODIF(+$P(strRec,"\",1))),"\",1)
+	                                                                s strLu=$G(^HISTOARTREF(strCleArt,iCUR,+$P(strRec,"\",1)))
+	                                                                s DATEOUT=$P(strRec,"\",6)
+	                                                                if +DATEOUT=0{s DATEOUT=""}
+	                                                                s strNewRec=$ZD(iCUR,8)_$C(9)_strMsg_$C(9)_$P(strRec,"\",2)_$C(9)_strCleArt_$C(9)_$P(strRec,"\",4)_$C(9)_strCurLev_$C(9)
+	                                                                s strNewRec=strNewRec_$P(strRec,"\",7)_$C(9)
+	                                                                s strNewRec=strNewRec_$P(strRec,"\",3)_$C(9)
+	                                                                s strNewRec=strNewRec_$P(strRec,"\",5)_$C(9)
+	                                                                s strNewRec=strNewRec_DATEOUT_$C(9)
+	                                                                s strNewRec=strNewRec_$P(strRec,"\",8)_$C(9)
+	                                                                s strNewRec=strNewRec_$P(strRec,"\",9)_$C(9)
+	                                                                s strNewRec=strNewRec_$P(strRec,"\",10)_$C(9)
+	                                                                s strNewRec=strNewRec_$P(strRec,"\",11)_$C(9)
+	                                                                s strNewRec=strNewRec_strCat_$C(9)_"1"_$C(9)_iCUR_$C(9)_$P(strRec,"\",1)_$C(9)_strLu_$C(9)_rPvActuel_$C(9)_iMsg
+	                                                                s CPT=CPT+1
+	                                                                
+	                                                                if (NEW=1)&&(+strLu=1){s bAddLine=0}
+	                                                                if (IDCBMSG=1)||(IDMSG=+$P(strRec,"\",1))&&(bAddLine=1){
+	                                                                        // Sauvegarde du fichier résultat
+	                                                                        s ^HISTOARTresult(CPT)=strNewRec
+	                                                                }
+	                                                                s strCleArt=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB,strCurLev,strCurSect,strCurFam,strCleArt))
+	                                                        }
+	                                                        s strCurFam=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB,strCurLev,strCurSect,strCurFam))
+	                                                }
+	                                                s strCurSect=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB,strCurLev,strCurSect))
+	                                        }
+	                                        s strCurLev=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB,strCurLev))
+	                                }
+	                        }
+	                        s CURJDEB=$O(@FICHIER@(ANNEE,MOISDEB,CURJDEB))
+	                }
+	                s MOISDEB=$O(@FICHIER@(ANNEE,MOISDEB))
+	        }
+	        s ANNEE=$O(@FICHIER@(ANNEE))
+	}
+	q
+	
+GETPRIXOLD(STR)
+	
+	s strDateBascule=$P(STR,"/",2)
+	i strDateBascule=""{q STR}
+	s strValeurRetour=""
+	i +$H<+$P(STR,"/",3){
+	        s strValeurRetour=$P(STR,"/",1)
+	}
+	else
+	{
+	        s strValeurRetour=$P(STR,"/",3)
+	}
+	q +strValeurRetour
+ 
+GETPRIX(PRIX)
+	S DATESYS=+$P($H,",",1)
+	S DATEBASCULE=+$P(PRIX,"/",2)
+	S DATEFINBASCULE=+$P(PRIX,"/",4)
+	I DATEBASCULE>0 D
+	.S INDICE=3
+	.I DATESYS<DATEBASCULE S INDICE=1
+	.I DATESYS>DATEFINBASCULE&&DATEFINBASCULE>0 S INDICE=1
+	.S PRIX=$P(PRIX,"/",INDICE)
+	.Q
+	Q PRIX
+	
+REINIT(DATE)
+	s CPTAUTRE=0
+	s TYPEAUTRE=0
+	s CPTPV=0
+	s TYPEPV=0	
+	s CPTHC=0
+	s TYPEHC=0
+	
+	S DATE=$ZDH(DATE,8)
+	s ART=$O(^HISTOARTREF(""))
+	while ART'=""{
+	        s D=$O(^HISTOARTREF(ART,""))
+	        while D'=""{
+	                i D=DATE{
+	                        s TYPE=$O(^HISTOARTREF(ART,D,""))
+	                        while TYPE'=""{
+	                                s ^HISTOARTREF(ART,D,TYPE)=""
+	                                ;On différencie les type de modification qui concerne le prix de vente, les hors collection et les autre types
+	                                i (TYPE = 1) || (TYPE = 19)
+	                                {
+		                             	//Prix de vente
+		                             	s CPTPV=CPTPV+1
+		                             	i (TYPEPV=19) && (TYPE=1)
+		                             	{
+			                            	s TYPEPV=TYPE
+		                             	}
+			                            ELSE
+			                            {
+				                           I TYPEPV=0
+				                           { 
+					                            s TYPEPV=TYPE
+				                           }
+		                             	}		                             	
+	                                }
+	                                else
+	                                {
+		                                i (TYPE = 10) || (TYPE = 23)
+	                                	{
+		                                	//Changement de statut en HC
+		                                	s CPTHC=CPTHC+1
+		                                	//Hors collection		                                			                             		
+		                             		i (TYPEHC=23) && (TYPE=10)
+		                             		{
+			                            		s TYPEHC=TYPE
+		                             		}
+			                            	ELSE
+			                            	{
+				                        	   I TYPEHC=0
+				                        	   { 
+					                    	        s TYPEHC=TYPE
+				                        	   }
+		                             		}	                         	 	
+	                                	}
+		                            	else
+		                            	{	
+		                            		//Changement de statut en autre que HC et PV		                            	 	
+		                            	 	s CPTAUTRE=CPTAUTRE+1	      		                            	 
+		                            	 	//Autre modification              	 	
+		                            	 	i (TYPEAUTRE'=13)
+		                             		{
+			                             		i TYPE=13
+			                             		{
+				                             		s TYPEAUTRE=TYPE
+			                             		}
+				                             	else
+				                             	{
+					                             	i (TYPEAUTRE'=8)
+					                             	{
+						                             	i TYPE=8
+						                             	{
+						                             		s TYPEAUTRE=TYPE
+						                             	}
+						                             	else
+						                             	{
+							                             	i (TYPEAUTRE'=7)
+							                             	{
+								                               	s TYPEAUTRE=TYPE								              				                             									                             	
+							                             	}
+						                             	}
+					                             	}	
+			                             		}
+			                             	}			                            	   		                            	 	                          	                                			                            	 	
+	                                	}
+	                                }
+	                                s ^HISTOARTREF(ART,D,TYPE)=""
+	                                s TYPE=$O(^HISTOARTREF(ART,D,TYPE))
+	                        }
+	                }
+	                s D=$O(^HISTOARTREF(ART,D))
+	        }
+	        s ART=$O(^HISTOARTREF(ART))
+	}
+	i CPTAUTRE>0{s ^HWINFO("HISTOART","IN")=TYPEAUTRE}
+	i CPTPV>0{s ^HWINFO("HISTOART","PV")=TYPEPV}
+	i CPTHC>0{s ^HWINFO("HISTOART","HC")=TYPEHC}
+	
+	w !, "Prix de vente :"_CPTPV_"/Hors collection:"_CPTHC_"/Autre:"_CPTAUTRE
+	q
+	
+IDX1
+	k ^HISTOARTIDX1
+	S FICHIER="^HISTOART" s IndGRP=4 s IndSSGRP=7
+	S gNEWCLASSIF=+$G(^HWINFO("NEWCLASSIF"))
+	I gNEWCLASSIF=1 S FICHIER="^HISTONEWART" s IndGRP=23 s IndSSGRP=24 s IndSSFAM=25
+	
+	s A=$O(@FICHIER@(""))
+	while A'=""{
+	        s M=$O(@FICHIER@(A,""))
+	        while M'=""{
+	                s J=$O(@FICHIER@(A,M,""))
+	                while J'=""{
+	                        s DM=M
+	                        s DJ=J
+	                        i $L(M)<2 {s DM="0"_M}
+	                        i $L(J)<2 {s DJ="0"_J}
+	                        s DREF=A_DM_DJ
+	                        s IDREF=$ZDH(DREF,8)
+	                        ;W !, A_","_M_","_J_" : "_DREF
+	                        s LEV=$O(@FICHIER@(A,M,J,""))
+	                        while LEV'=""{
+	                                s GR1=$O(@FICHIER@(A,M,J,LEV,""))
+	                                while GR1'=""{
+	                                        s GR2=$O(@FICHIER@(A,M,J,LEV,GR1,""))
+	                                        while GR2'=""{
+	                                                s ART=$O(@FICHIER@(A,M,J,LEV,GR1,GR2,""))
+	                                                while ART'=""{
+	                                                        s LTRF=""
+	                                                        s LTRF=$O(^HISTOARTREF(ART,IDREF,""),-1)
+	                                                        i LTRF'=""{
+	                                                                s RTRF=$G(^HISTOARTREF(ART,IDREF,LTRF))
+	                                                                I RTRF=1{
+	                                                                        s ^HISTOARTIDX1(1,IDREF,LEV,GR1,GR2,ART)=A_"\"_M_"\"_J
+	                                                                }
+	                                                                else
+	                                                                {
+	                                                                        s ^HISTOARTIDX1(0,IDREF,LEV,GR1,GR2,ART)=A_"\"_M_"\"_J
+	                                                                }
+	                                                        }                                                               
+	                                                        s ART=$O(@FICHIER@(A,M,J,LEV,GR1,GR2,ART))
+	                                                }
+	                                                s GR2=$O(@FICHIER@(A,M,J,LEV,GR1,GR2))
+	                                        }
+	                                        s GR1=$O(@FICHIER@(A,M,J,LEV,GR1))
+	                                }
+	                                s LEV=$O(@FICHIER@(A,M,J,LEV))
+	                        }
+	                        s J=$O(@FICHIER@(A,M,J))
+	                }
+	                s M=$O(@FICHIER@(A,M))
+	        }
+	        s A=$O(@FICHIER@(A))
+	}
+	q
+	
+GETHISTOARTV2(IDEB,IFIN,pLEV,pSECT,pFAM,NEW,IDCBMSG,IDMSG,DEBEF,FINEF)
+	k ^HISTOARTresult
+	
+	S FICHIER="^HISTOART" s IndGRP=4 s IndSSGRP=7
+	S gNEWCLASSIF=+$G(^HWINFO("NEWCLASSIF"))
+	I gNEWCLASSIF=1 S FICHIER="^HISTONEWART" s IndGRP=23 s IndSSGRP=24 s IndSSFAM=25
+	
+	s START=IDEB-1
+	s bTYPE=0
+	s CPT=0
+	s bTYPE=0
+	s bLEV=0
+	s bGR1=0
+	s bGR2=0
+	s TYPE=$O(^HISTOARTIDX1(""))
+	while TYPE'=""{
+	        if NEW'=""{                     
+	                i NEW="1"{i TYPE=0{s bTYPE=1}else{s bTYPE=0}}
+	                else
+	                {s bTYPE=1}}                                            
+	        else
+	        {
+	                s bTYPE=1       
+	        }       
+	        i bTYPE{                        
+	                s D=$O(^HISTOARTIDX1(TYPE,START))
+	                while ((D'="") && (+D<(+IFIN+1))){
+	                        s LEV=$O(^HISTOARTIDX1(TYPE,D,""))
+	                        while LEV'=""{                                  
+	                                IF (pLEV'=""){if pLEV=LEV {s bLEV=1}else{s bLEV=0}}else{s bLEV=1}                       
+	                                i bLEV{                                                         
+	                                        s GR1=$O(^HISTOARTIDX1(TYPE,D,LEV,""))
+	                                        while GR1'=""{                                                                                                  
+	                                                i (pSECT'=""){if pSECT=GR1 {s bGR1=1}else{s bGR1=0}}else{s bGR1=1}                                                      
+	                                                i bGR1{                                                         
+	                                                        s GR2=$O(^HISTOARTIDX1(TYPE,D,LEV,GR1,""))
+	                                                        while GR2'=""{
+	                                                                i (pFAM'=""){i pFAM=GR2 {s bGR2=1}else{s bGR2=0}}else{s bGR2=1}
+	                                                                if bGR2{
+	                                                                        s ART=$O(^HISTOARTIDX1(TYPE,D,LEV,GR1,GR2,""))
+	                                                                        while ART'=""{
+	                                                                                
+	                                                                                S REC=$G(^HISTOARTIDX1(TYPE,D,LEV,GR1,GR2,ART))
+	                                                                                s strRec=$G(@FICHIER@($P(REC,"\",1),$P(REC,"\",2),$P(REC,"\",3),LEV,GR1,GR2,ART))
+	                                                                                s strPv=$P(strRec,"\",9)
+	                                                                                s iMsg=$P(strRec,"\",10)
+	                                                                                s bAddLine=1
+	                                                                                i (DEBEF'="")&&(FINEF'="") {s bAddLine=0}
+	                                                                                if +$P(strPv,"/",2)>0{
+	                                                                                        if (D-1)<(+$P(strPv,"/",2))
+	                                                                                        {
+	                                                                                                s rCurPv=+$P(strPv,"/",1)
+	                                                                                                s rNewPv=+$P(strPv,"/",3)
+	                                                                                                s strDateEffect=$ZD(+$P(strPv,"/",2),8)
+	                                                                                                if rCurPv=rNewPv{
+	                                                                                                        
+	                                                                                                        s rNewPv=0
+	                                                                                                        s strDateEffect=""
+	                                                                                                }
+	                                                                                        }
+	                                                                                        else
+	                                                                                        {
+	                                                                                                s rNewPv=0
+	                                                                                                s rCurPv=+$P(strPv,"/",3)
+	                                                                                                s strDateEffect=""
+	                                                                                        }
+	                                                                                        
+	                                                                                        if (DEBEF'="")&&(FINEF'=""){
+	                                                                                                s convDEBEF=+$ZDH(DEBEF,8)
+	                                                                                                s convFINEF=+$ZDH(FINEF,8)
+	                                                                                                s bAddLine=0
+	                                                                                                W !, +$P(strPv,"/",2)_">("_convDEBEF-1_")&&(("_+$P(strPv,"/",2)_"<("_convFINEF+1_"))"
+	                                                                                                if ((+$P(strPv,"/",2))>(convDEBEF-1))&&((+$P(strPv,"/",2))<(convFINEF+1)){s bAddLine=1}
+	                                                                                        }
+	                                                                                }
+	                                                                                else
+	                                                                                {
+	                                                                                        s rCurPv=+$P(strPv,"/",1)
+	                                                                                        s rNewPv=0
+	                                                                                        s strDateEffect=""
+	                                                                                }
+	                                                                                ;w !, strPv_" )-> "_ART_","_rCurPv_","_strDateEffect_","_rNewPv
+	                                                                                s $P(strRec,"\",9)=rCurPv
+	                                                                                s $P(strRec,"\",10)=strDateEffect
+	                                                                                s $P(strRec,"\",11)=rNewPv
+	                                                                                
+	                                                                        
+	                                                                                s strST0=$G(^ST(ART))
+	                                                                                s rPvActuel=$$GETPRIX($P(strST0,"\",22))
+	                                                                                
+	                                                                                s strST1=$G(^ST(ART,1))
+	                                                                                i $P(strST1,"\",2)=""{
+	                                                                                        s strCat=$P(strST1,"\",1)
+	                                                                                }
+	                                                                                else
+	                                                                                {
+	                                                                                        s strCat=$P(strST1,"\",1)_"/"_$P(strST1,"\",2)
+	                                                                                }
+	                                                                                i +GR1<4{s $P(strRec,"\",7)=strCat}
+	                                                                                
+	                                                                                s strMsg=$P($G(^BGLSTMODIF(+$P(strRec,"\",1))),"\",1)
+	                                                                                s strLu=$G(^HISTOARTREF(ART,D,+$P(strRec,"\",1)))
+	                                                                                s DATEOUT=$P(strRec,"\",6)
+	                                                                                if +DATEOUT=0{s DATEOUT=""}
+	                                                                                s strNewRec=$ZD(D,8)_$C(9)_strMsg_$C(9)_$P(strRec,"\",2)_$C(9)_ART_$C(9)_$P(strRec,"\",4)_$C(9)_LEV_$C(9)
+	                                                                                s strNewRec=strNewRec_$P(strRec,"\",7)_$C(9)
+	                                                                                s strNewRec=strNewRec_$P(strRec,"\",3)_$C(9)
+	                                                                                s strNewRec=strNewRec_$P(strRec,"\",5)_$C(9)
+	                                                                                s strNewRec=strNewRec_DATEOUT_$C(9)
+	                                                                                s strNewRec=strNewRec_$P(strRec,"\",8)_$C(9)
+	                                                                                s strNewRec=strNewRec_$P(strRec,"\",9)_$C(9)
+	                                                                                s strNewRec=strNewRec_$P(strRec,"\",10)_$C(9)
+	                                                                                s strNewRec=strNewRec_$P(strRec,"\",11)_$C(9)
+	                                                                                s strNewRec=strNewRec_strCat_$C(9)_"1"_$C(9)_D_$C(9)_$P(strRec,"\",1)_$C(9)_strLu_$C(9)_rPvActuel_$C(9)_iMsg
+	                                                                                s CPT=CPT+1
+	                                                                                
+	                                                                                if (NEW=1)&&(+strLu=1){s bAddLine=0}
+	                                                                                ;w !, TYPE_","_D_","_ART_","_IDCBMSG_","_IDMSG
+	                                                                                if (IDCBMSG=-1)||(IDMSG=+$P(strRec,"\",1))&&(bAddLine=1){
+	                                                                                        // Sauvegarde du fichier résultat
+	                                                                                        s ^HISTOARTresult(CPT)=strNewRec
+	                                                                                }
+	                                                                                s ART=$O(^HISTOARTIDX1(TYPE,D,LEV,GR1,GR2,ART))
+	                                                                        }
+	                                                                }
+	                                                                s GR2=$O(^HISTOARTIDX1(TYPE,D,LEV,GR1,GR2))
+	                                                        }
+	                                                }
+	                                                s GR1=$O(^HISTOARTIDX1(TYPE,D,LEV,GR1))
+	                                        }
+	                                }
+	                                s LEV=$O(^HISTOARTIDX1(TYPE,D,LEV))
+	                        }
+	                        s D=$O(^HISTOARTIDX1(TYPE,D))
+	                }
+	        }
+	        s TYPE=$O(^HISTOARTIDX1(TYPE))
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

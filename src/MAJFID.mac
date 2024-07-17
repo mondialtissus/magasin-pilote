@@ -1,0 +1,80 @@
+ROUTINE MAJFID
+MAJFID 
+ 
+ s CA=$O(^TKFIDELITE(""))
+ while CA'=""
+ {
+	 s DATE=$O(^TKFIDELITE(CA,""))
+	 while DATE'=""
+	 {
+		 if $L(DATE)=4 {k ^TKFIDELITE(CA,DATE)}
+		 s DATE=$O(^TKFIDELITE(CA,DATE))
+	 }
+	 s CA=$O(^TKFIDELITE(CA))
+ }
+ 
+ s CA=$O(^TKFIDELITE(""))
+ while CA'=""
+ {
+	 s DATE=$O(^TKFIDELITE(CA,""))
+	 while DATE'=""
+	 {
+		 s DATA=$G(^TKFIDELITE(CA,$E(DATE,1,4)))
+		 s MONT=+$P(DATA,"\",1)
+		 s NB=+$P(DATA,"\",2)
+		 
+		 s CURDATA=$G(^TKFIDELITE(CA,DATE))
+		 s CURMONT=+$P(CURDATA,"\",1)
+		 s CURNB=+$P(CURDATA,"\",2)
+		 
+		 if $L(DATE)=6
+		 {
+			 s NEWMONT=MONT+CURMONT
+			 s NEWNB=NB+CURNB
+			 S ^TKFIDELITE(CA,$E(DATE,1,4))=NEWMONT_"\"_NEWNB
+		 }
+		 s DATE=$O(^TKFIDELITE(CA,DATE))
+	 }
+	 s CA=$O(^TKFIDELITE(CA))
+ }
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

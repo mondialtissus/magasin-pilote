@@ -1,0 +1,92 @@
+ROUTINE GUMENU
+GUMENU
+	s NumMag=$G(^HWINFO("MAG"))
+	k ^GUMENU
+	s ^GUMENU(1)="Transfert Intersites"
+    
+	s ^GUMENU(1,1)="Création Transfert\fenCMDRetro\img11"
+	s ^GUMENU(1,2)="Réception Transfert\fenCMDRetroRec\img13"
+	s ^GUMENU(1,3)="Suivi des envois Intersites\fenHistCMDRetro\img12"
+	s ^GUMENU(1,4)="Suivi des réceptions Intersites\fenHistRecRetro\img12"
+	s ^GUMENU(2)="Transfert Coupes CD"
+	s ^GUMENU(2,1)="Réception des coupes du CD\fenCMDRetroRec COUPE\img13"
+	s ^GUMENU(2,2)="Suivi des réceptions des coupes du CD\fenHistRecRetro COUPE\img12"
+	s ^GUMENU(3)="Transfert Confection SBM"
+	s ^GUMENU(3,1)="Rétrocession coupon confection\fenCMDRetro CONF\img13"
+	s ^GUMENU(3,2)="Suivi des envois des coupons conf.\fenHistCMDRetro CONF\img12"
+	s ^GUMENU(4)="Déco && Vitrine"
+	s ^GUMENU(4,1)="Mouvement InterZones\fenTransfertInterZone\img21"
+	s ^GUMENU(4,2)="Stock Déco && Vitrine\fenConsultationStockVitrine\img22"
+	s ^GUMENU(5)="Correction stock"
+	s ^GUMENU(5,1)="Démarque connue\fenTransactionStock DEM\img31"
+	s ^GUMENU(5,2)="Ajustement stock\fenTransactionStock AJUS\img32"
+	s ^GUMENU(5,3)="Consultation Inventaire tournant\fenConsultationInvTournant\img32"
+	s ^GUMENU(5,4)="Validation Inventaire tournant\fenValidationInvTournant\img32"
+	s ^GUMENU(6)="Coupons"
+	s ^GUMENU(6,1)="Transformation en coupons\fenTransactionStock COUP\img41"
+	s ^GUMENU(7)="Consultation des stocks"
+	s ^GUMENU(7,1)="Stock Magasin\fenConsultationStock\img51"
+	s ^GUMENU(7,2)="Mouvements\fenConsultationMouvements\img52"
+	s ^GUMENU(8)="Commandes Clients"
+	;s ^GUMENU(8,1)="Création commandes Clients\fenCmdClient\img12"
+	s ^GUMENU(8,1)="Suivi des commandes Clients\FenSuiviCmdClient\img12"
+ 
+	I (NumMag="G179")||(NumMag="M001")||(NumMag="M278")||(NumMag="M168")
+	{
+		s ^GUMENU(7,3)="PLUs & Emplacements\fenEmplacements\img53"
+	}
+	;I (NumMag="M278")||(NumMag="M354")||(NumMag="G182")||(NumMag="M288")||(NumMag="G237")||(NumMag="M144")||(NumMag="M156")||(NumMag="G203")
+	;{
+	s ^GUMENU(3)="Transfert Confection SBM"
+	s ^GUMENU(3,1)="Rétrocession coupon confection\fenCMDRetro CONF\img13"
+	s ^GUMENU(3,2)="Réception des Confections\fenCMDRetroRec CONF\img13"
+	s ^GUMENU(3,3)="Suivi des envois des coupons conf.\fenHistCMDRetro CONF\img12"
+	s ^GUMENU(3,4)="Suivi des réceptions des Confections\fenHistRecRetro CONF\img12"
+	;}
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

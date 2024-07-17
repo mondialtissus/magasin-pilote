@@ -1,0 +1,6 @@
+ROUTINE MAJHWINFOCOMMENT
+MAJHWINFOCOMMENT
+ s ^HWINFO("TKCOMMENT")="Echange possible dans les 15 jours sur presentation du ticket sauf pour les tissus a la coupe.pas de reprise partielle des articles en lot."	
+ Q
+ 
+ 

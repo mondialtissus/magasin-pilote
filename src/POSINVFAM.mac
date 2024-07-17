@@ -1,0 +1,36 @@
+ROUTINE POSINVFAM
+POSINVFAM
+ 
+ s ART=$O(^ST(""))
+ while ART'=""
+ {
+ s ST1=$G(^ST(ART,1))
+         s ST4=$G(^ST(ART,4))
+    s HCFAM=$P(ST1,"\",1)
+    s HCLEV=$P(ST4,"\",1)
+    if HCFAM'=""
+    {
+         s ^INVSTFAM(HCFAM,ART)=HCLEV
+    }
+    s ART=$O(^ST(ART))
+ }
+ w !, "Traitement terminé !"
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,48 @@
+ROUTINE REINDEXART
+REINDEXART
+ 
+ // Regenere le fichier HWLEVART
+ k ^SB
+ k ^HWLEVART
+ 
+ s ART=""
+ s ART=$O(^ST(""))
+ while ART'=""
+ {
+         s ST4=$G(^ST(ART,4))
+         s ST0=$G(^ST(ART))
+         s CODEBAR=$P(ST0,"\",1)
+         s LEV=$P(ST4,"\",1)
+         if CODEBAR'=""{s ^SB(CODEBAR)=ART}
+         s ^HWLEVART(LEV,ART)=""
+       
+         s ART=$O(^ST(ART))
+ }
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

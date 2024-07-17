@@ -1,0 +1,4155 @@
+ROUTINE SOLDESPE15M2
+SOLDESPE15M2
+
+ s ^TKFINSERIE(111025)="-30% passe à -50%"
+ s ^TKFINSERIE(119194)="-30% passe à -50%"
+ s ^TKFINSERIE(117768)="-30% passe à -50%"
+ s ^TKFINSERIE(117766)="-30% passe à -50%"
+ s ^TKFINSERIE(117785)="-30% passe à -50%"
+ s ^TKFINSERIE(117784)="-30% passe à -50%"
+ s ^TKFINSERIE(118665)="-30% passe à -50%"
+ s ^TKFINSERIE(119188)="-30% passe à -50%"
+ s ^TKFINSERIE(119202)="-30% passe à -50%"
+ s ^TKFINSERIE(119192)="-30% passe à -50%"
+ s ^TKFINSERIE(117649)="-30% passe à -50%"
+ s ^TKFINSERIE(117650)="-30% passe à -50%"
+ s ^TKFINSERIE(119193)="-30% passe à -50%"
+ s ^TKFINSERIE(117897)="-30% passe à -50%"
+ s ^TKFINSERIE(118666)="-30% passe à -50%"
+ s ^TKFINSERIE(117767)="-30% passe à -50%"
+ s ^TKFINSERIE(118395)="-30% passe à -50%"
+ s ^TKFINSERIE(117726)="-30% passe à -50%"
+ s ^TKFINSERIE(117885)="-30% passe à -50%"
+ s ^TKFINSERIE(117735)="-30% passe à -50%"
+ s ^TKFINSERIE(117743)="-30% passe à -50%"
+ s ^TKFINSERIE(119187)="-30% passe à -50%"
+ s ^TKFINSERIE(117762)="-30% passe à -50%"
+ s ^TKFINSERIE(117898)="-30% passe à -50%"
+ s ^TKFINSERIE(117936)="-30% passe à -50%"
+ s ^TKFINSERIE(117799)="-30% passe à -50%"
+ s ^TKFINSERIE(119669)="-30% passe à -50%"
+ s ^TKFINSERIE(119674)="-30% passe à -50%"
+ s ^TKFINSERIE(117778)="-30% passe à -50%"
+ s ^TKFINSERIE(117889)="-30% passe à -50%"
+ s ^TKFINSERIE(117742)="-30% passe à -50%"
+ s ^TKFINSERIE(117733)="-30% passe à -50%"
+ s ^TKFINSERIE(118783)="-30% passe à -50%"
+ s ^TKFINSERIE(117741)="-30% passe à -50%"
+ s ^TKFINSERIE(119186)="-30% passe à -50%"
+ s ^TKFINSERIE(117896)="-30% passe à -50%"
+ s ^TKFINSERIE(119668)="-30% passe à -50%"
+ s ^TKFINSERIE(117938)="-30% passe à -50%"
+ s ^TKFINSERIE(119667)="-30% passe à -50%"
+ s ^TKFINSERIE(117728)="-30% passe à -50%"
+ s ^TKFINSERIE(117530)="-30% passe à -50%"
+ s ^TKFINSERIE(117642)="-30% passe à -50%"
+ s ^TKFINSERIE(119198)="-30% passe à -50%"
+ s ^TKFINSERIE(118095)="-30% passe à -50%"
+ s ^TKFINSERIE(117718)="-30% passe à -50%"
+ s ^TKFINSERIE(119203)="-30% passe à -50%"
+ s ^TKFINSERIE(117895)="-30% passe à -50%"
+ s ^TKFINSERIE(117725)="-30% passe à -50%"
+ s ^TKFINSERIE(118781)="-30% passe à -50%"
+ s ^TKFINSERIE(118672)="-30% passe à -50%"
+ s ^TKFINSERIE(117727)="-30% passe à -50%"
+ s ^TKFINSERIE(119196)="-30% passe à -50%"
+ s ^TKFINSERIE(117769)="-30% passe à -50%"
+ s ^TKFINSERIE(117723)="-30% passe à -50%"
+ s ^TKFINSERIE(117738)="-30% passe à -50%"
+ s ^TKFINSERIE(119675)="-30% passe à -50%"
+ s ^TKFINSERIE(118670)="-30% passe à -50%"
+ s ^TKFINSERIE(119195)="-30% passe à -50%"
+ s ^TKFINSERIE(117950)="-30% passe à -50%"
+ s ^TKFINSERIE(117736)="-30% passe à -50%"
+ s ^TKFINSERIE(117954)="-30% passe à -50%"
+ s ^TKFINSERIE(118096)="-30% passe à -50%"
+ s ^TKFINSERIE(117740)="-30% passe à -50%"
+ s ^TKFINSERIE(117887)="-30% passe à -50%"
+ s ^TKFINSERIE(117731)="-30% passe à -50%"
+ s ^TKFINSERIE(118100)="-30% passe à -50%"
+ s ^TKFINSERIE(117720)="-30% passe à -50%"
+ s ^TKFINSERIE(118661)="-30% passe à -50%"
+ s ^TKFINSERIE(117647)="-30% passe à -50%"
+ s ^TKFINSERIE(117894)="-30% passe à -50%"
+ s ^TKFINSERIE(117737)="-30% passe à -50%"
+ s ^TKFINSERIE(117881)="-30% passe à -50%"
+ s ^TKFINSERIE(118668)="-30% passe à -50%"
+ s ^TKFINSERIE(117935)="-30% passe à -50%"
+ s ^TKFINSERIE(117716)="-30% passe à -50%"
+ s ^TKFINSERIE(118779)="-30% passe à -50%"
+ s ^TKFINSERIE(117751)="-30% passe à -50%"
+ s ^TKFINSERIE(119666)="-30% passe à -50%"
+ s ^TKFINSERIE(118664)="-30% passe à -50%"
+ s ^TKFINSERIE(117722)="-30% passe à -50%"
+ s ^TKFINSERIE(117892)="-30% passe à -50%"
+ s ^TKFINSERIE(118099)="-30% passe à -50%"
+ s ^TKFINSERIE(117648)="-30% passe à -50%"
+ s ^TKFINSERIE(117729)="-30% passe à -50%"
+ s ^TKFINSERIE(117755)="-30% passe à -50%"
+ s ^TKFINSERIE(117902)="-30% passe à -50%"
+ s ^TKFINSERIE(118660)="-30% passe à -50%"
+ s ^TKFINSERIE(117788)="-30% passe à -50%"
+ s ^TKFINSERIE(118663)="-30% passe à -50%"
+ s ^TKFINSERIE(117759)="-30% passe à -50%"
+ s ^TKFINSERIE(117930)="-30% passe à -50%"
+ s ^TKFINSERIE(117919)="-30% passe à -50%"
+ s ^TKFINSERIE(117717)="-30% passe à -50%"
+ s ^TKFINSERIE(117840)="-30% passe à -50%"
+ s ^TKFINSERIE(117793)="-30% passe à -50%"
+ s ^TKFINSERIE(117712)="-30% passe à -50%"
+ s ^TKFINSERIE(117527)="-30% passe à -50%"
+ s ^TKFINSERIE(117715)="-30% passe à -50%"
+ s ^TKFINSERIE(117724)="-30% passe à -50%"
+ s ^TKFINSERIE(117754)="-30% passe à -50%"
+ s ^TKFINSERIE(118098)="-30% passe à -50%"
+ s ^TKFINSERIE(119670)="-30% passe à -50%"
+ s ^TKFINSERIE(117893)="-30% passe à -50%"
+ s ^TKFINSERIE(117734)="-30% passe à -50%"
+ s ^TKFINSERIE(118317)="-30% passe à -50%"
+ s ^TKFINSERIE(117730)="-30% passe à -50%"
+ s ^TKFINSERIE(117839)="-30% passe à -50%"
+ s ^TKFINSERIE(117944)="-30% passe à -50%"
+ s ^TKFINSERIE(117956)="-30% passe à -50%"
+ s ^TKFINSERIE(118049)="-30% passe à -50%"
+ s ^TKFINSERIE(117529)="-30% passe à -50%"
+ s ^TKFINSERIE(119671)="-30% passe à -50%"
+ s ^TKFINSERIE(118044)="-30% passe à -50%"
+ s ^TKFINSERIE(117757)="-30% passe à -50%"
+ s ^TKFINSERIE(117899)="-30% passe à -50%"
+ s ^TKFINSERIE(118097)="-30% passe à -50%"
+ s ^TKFINSERIE(117752)="-30% passe à -50%"
+ s ^TKFINSERIE(117832)="-30% passe à -50%"
+ s ^TKFINSERIE(118671)="-30% passe à -50%"
+ s ^TKFINSERIE(117756)="-30% passe à -50%"
+ s ^TKFINSERIE(117886)="-30% passe à -50%"
+ s ^TKFINSERIE(117525)="-30% passe à -50%"
+ s ^TKFINSERIE(117876)="-30% passe à -50%"
+ s ^TKFINSERIE(119673)="-30% passe à -50%"
+ s ^TKFINSERIE(117721)="-30% passe à -50%"
+ s ^TKFINSERIE(117906)="-30% passe à -50%"
+ s ^TKFINSERIE(118087)="-30% passe à -50%"
+ s ^TKFINSERIE(117719)="-30% passe à -50%"
+ s ^TKFINSERIE(117905)="-30% passe à -50%"
+ s ^TKFINSERIE(118091)="-30% passe à -50%"
+ s ^TKFINSERIE(117635)="-30% passe à -50%"
+ s ^TKFINSERIE(119676)="-30% passe à -50%"
+ s ^TKFINSERIE(118086)="-30% passe à -50%"
+ s ^TKFINSERIE(117931)="-30% passe à -50%"
+ s ^TKFINSERIE(117644)="-30% passe à -50%"
+ s ^TKFINSERIE(118012)="-30% passe à -50%"
+ s ^TKFINSERIE(117790)="-30% passe à -50%"
+ s ^TKFINSERIE(117760)="-30% passe à -50%"
+ s ^TKFINSERIE(111027)="-30% passe à -50%"
+ s ^TKFINSERIE(117714)="-30% passe à -50%"
+ s ^TKFINSERIE(117933)="-30% passe à -50%"
+ s ^TKFINSERIE(117641)="-30% passe à -50%"
+ s ^TKFINSERIE(117880)="-30% passe à -50%"
+ s ^TKFINSERIE(118319)="-30% passe à -50%"
+ s ^TKFINSERIE(117639)="-30% passe à -50%"
+ s ^TKFINSERIE(117934)="-30% passe à -50%"
+ s ^TKFINSERIE(117958)="-30% passe à -50%"
+ s ^TKFINSERIE(117800)="-30% passe à -50%"
+ s ^TKFINSERIE(117787)="-30% passe à -50%"
+ s ^TKFINSERIE(117883)="-30% passe à -50%"
+ s ^TKFINSERIE(118089)="-30% passe à -50%"
+ s ^TKFINSERIE(117638)="-30% passe à -50%"
+ s ^TKFINSERIE(117750)="-30% passe à -50%"
+ s ^TKFINSERIE(117732)="-30% passe à -50%"
+ s ^TKFINSERIE(117796)="-30% passe à -50%"
+ s ^TKFINSERIE(117523)="-30% passe à -50%"
+ s ^TKFINSERIE(111022)="-30% passe à -50%"
+ s ^TKFINSERIE(117843)="-30% passe à -50%"
+ s ^TKFINSERIE(118090)="-30% passe à -50%"
+ s ^TKFINSERIE(117753)="-30% passe à -50%"
+ s ^TKFINSERIE(117955)="-30% passe à -50%"
+ s ^TKFINSERIE(118088)="-30% passe à -50%"
+ s ^TKFINSERIE(117739)="-30% passe à -50%"
+ s ^TKFINSERIE(117514)="-30% passe à -50%"
+ s ^TKFINSERIE(117903)="-30% passe à -50%"
+ s ^TKFINSERIE(117786)="-30% passe à -50%"
+ s ^TKFINSERIE(117879)="-30% passe à -50%"
+ s ^TKFINSERIE(118658)="-30% passe à -50%"
+ s ^TKFINSERIE(117643)="-30% passe à -50%"
+ s ^TKFINSERIE(117942)="-30% passe à -50%"
+ s ^TKFINSERIE(117776)="-30% passe à -50%"
+ s ^TKFINSERIE(117921)="-30% passe à -50%"
+ s ^TKFINSERIE(117945)="-30% passe à -50%"
+ s ^TKFINSERIE(117528)="-30% passe à -50%"
+ s ^TKFINSERIE(117937)="-30% passe à -50%"
+ s ^TKFINSERIE(117904)="-30% passe à -50%"
+ s ^TKFINSERIE(117847)="-30% passe à -50%"
+ s ^TKFINSERIE(118318)="-30% passe à -50%"
+ s ^TKFINSERIE(110912)="-30% passe à -50%"
+ s ^TKFINSERIE(113761)="-30% passe à -50%"
+ s ^TKFINSERIE(115988)="-30% passe à -50%"
+ s ^TKFINSERIE(118315)="-30% passe à -50%"
+ s ^TKFINSERIE(117831)="-30% passe à -50%"
+ s ^TKFINSERIE(110908)="-30% passe à -50%"
+ s ^TKFINSERIE(118093)="-30% passe à -50%"
+ s ^TKFINSERIE(111128)="-30% passe à -50%"
+ s ^TKFINSERIE(113760)="-30% passe à -50%"
+ s ^TKFINSERIE(111120)="-30% passe à -50%"
+ s ^TKFINSERIE(113629)="-30% passe à -50%"
+ s ^TKFINSERIE(113627)="-30% passe à -50%"
+ s ^TKFINSERIE(111107)="-30% passe à -50%"
+ s ^TKFINSERIE(111024)="-30% passe à -50%"
+ s ^TKFINSERIE(117943)="-30% passe à -50%"
+ s ^TKFINSERIE(111239)="-30% passe à -50%"
+ s ^TKFINSERIE(111210)="-30% passe à -50%"
+ s ^TKFINSERIE(117713)="-30% passe à -50%"
+ s ^TKFINSERIE(117953)="-30% passe à -50%"
+ s ^TKFINSERIE(111129)="-30% passe à -50%"
+ s ^TKFINSERIE(113468)="-30% passe à -50%"
+ s ^TKFINSERIE(118667)="-30% passe à -50%"
+ s ^TKFINSERIE(117846)="-30% passe à -50%"
+ s ^TKFINSERIE(117939)="-30% passe à -50%"
+ s ^TKFINSERIE(111174)="-30% passe à -50%"
+ s ^TKFINSERIE(111241)="-30% passe à -50%"
+ s ^TKFINSERIE(113484)="-30% passe à -50%"
+ s ^TKFINSERIE(113812)="-30% passe à -50%"
+ s ^TKFINSERIE(117761)="-30% passe à -50%"
+ s ^TKFINSERIE(113911)="-30% passe à -50%"
+ s ^TKFINSERIE(118013)="-30% passe à -50%"
+ s ^TKFINSERIE(113698)="-30% passe à -50%"
+ s ^TKFINSERIE(113461)="-30% passe à -50%"
+ s ^TKFINSERIE(113802)="-30% passe à -50%"
+ s ^TKFINSERIE(117957)="-30% passe à -50%"
+ s ^TKFINSERIE(117920)="-30% passe à -50%"
+ s ^TKFINSERIE(113820)="-30% passe à -50%"
+ s ^TKFINSERIE(111152)="-30% passe à -50%"
+ s ^TKFINSERIE(117515)="-30% passe à -50%"
+ s ^TKFINSERIE(118085)="-30% passe à -50%"
+ s ^TKFINSERIE(110785)="-30% passe à -50%"
+ s ^TKFINSERIE(113809)="-30% passe à -50%"
+ s ^TKFINSERIE(117803)="-30% passe à -50%"
+ s ^TKFINSERIE(113741)="-30% passe à -50%"
+ s ^TKFINSERIE(113804)="-30% passe à -50%"
+ s ^TKFINSERIE(115979)="-30% passe à -50%"
+ s ^TKFINSERIE(110783)="-30% passe à -50%"
+ s ^TKFINSERIE(111153)="-30% passe à -50%"
+ s ^TKFINSERIE(115987)="-30% passe à -50%"
+ s ^TKFINSERIE(117526)="-30% passe à -50%"
+ s ^TKFINSERIE(115974)="-30% passe à -50%"
+ s ^TKFINSERIE(118045)="-30% passe à -50%"
+ s ^TKFINSERIE(113466)="-30% passe à -50%"
+ s ^TKFINSERIE(117900)="-30% passe à -50%"
+ s ^TKFINSERIE(115946)="-30% passe à -50%"
+ s ^TKFINSERIE(111138)="-30% passe à -50%"
+ s ^TKFINSERIE(113699)="-30% passe à -50%"
+ s ^TKFINSERIE(111390)="-30% passe à -50%"
+ s ^TKFINSERIE(113719)="-30% passe à -50%"
+ s ^TKFINSERIE(115969)="-30% passe à -50%"
+ s ^TKFINSERIE(113555)="-30% passe à -50%"
+ s ^TKFINSERIE(112519)="-30% passe à -50%"
+ s ^TKFINSERIE(111166)="-30% passe à -50%"
+ s ^TKFINSERIE(117645)="-30% passe à -50%"
+ s ^TKFINSERIE(117763)="-30% passe à -50%"
+ s ^TKFINSERIE(117798)="-30% passe à -50%"
+ s ^TKFINSERIE(117848)="-30% passe à -50%"
+ s ^TKFINSERIE(111184)="-30% passe à -50%"
+ s ^TKFINSERIE(113743)="-30% passe à -50%"
+ s ^TKFINSERIE(113686)="-30% passe à -50%"
+ s ^TKFINSERIE(111182)="-30% passe à -50%"
+ s ^TKFINSERIE(117758)="-30% passe à -50%"
+ s ^TKFINSERIE(113465)="-30% passe à -50%"
+ s ^TKFINSERIE(111137)="-30% passe à -50%"
+ s ^TKFINSERIE(113625)="-30% passe à -50%"
+ s ^TKFINSERIE(113633)="-30% passe à -50%"
+ s ^TKFINSERIE(113715)="-30% passe à -50%"
+ s ^TKFINSERIE(112531)="-30% passe à -50%"
+ s ^TKFINSERIE(111346)="-30% passe à -50%"
+ s ^TKFINSERIE(111316)="-30% passe à -50%"
+ s ^TKFINSERIE(111171)="-30% passe à -50%"
+ s ^TKFINSERIE(115960)="-30% passe à -50%"
+ s ^TKFINSERIE(113720)="-30% passe à -50%"
+ s ^TKFINSERIE(113481)="-30% passe à -50%"
+ s ^TKFINSERIE(113873)="-30% passe à -50%"
+ s ^TKFINSERIE(111570)="-30% passe à -50%"
+ s ^TKFINSERIE(113558)="-30% passe à -50%"
+ s ^TKFINSERIE(110792)="-30% passe à -50%"
+ s ^TKFINSERIE(113693)="-30% passe à -50%"
+ s ^TKFINSERIE(111140)="-30% passe à -50%"
+ s ^TKFINSERIE(111026)="-30% passe à -50%"
+ s ^TKFINSERIE(111391)="-30% passe à -50%"
+ s ^TKFINSERIE(113683)="-30% passe à -50%"
+ s ^TKFINSERIE(111119)="-30% passe à -50%"
+ s ^TKFINSERIE(111176)="-30% passe à -50%"
+ s ^TKFINSERIE(113756)="-30% passe à -50%"
+ s ^TKFINSERIE(113480)="-30% passe à -50%"
+ s ^TKFINSERIE(112532)="-30% passe à -50%"
+ s ^TKFINSERIE(113680)="-30% passe à -50%"
+ s ^TKFINSERIE(113491)="-30% passe à -50%"
+ s ^TKFINSERIE(113816)="-30% passe à -50%"
+ s ^TKFINSERIE(113739)="-30% passe à -50%"
+ s ^TKFINSERIE(113495)="-30% passe à -50%"
+ s ^TKFINSERIE(115966)="-30% passe à -50%"
+ s ^TKFINSERIE(110791)="-30% passe à -50%"
+ s ^TKFINSERIE(110794)="-30% passe à -50%"
+ s ^TKFINSERIE(113920)="-30% passe à -50%"
+ s ^TKFINSERIE(113655)="-30% passe à -50%"
+ s ^TKFINSERIE(83787)="-30% passe à -50%"
+ s ^TKFINSERIE(113745)="-30% passe à -50%"
+ s ^TKFINSERIE(113823)="-30% passe à -50%"
+ s ^TKFINSERIE(111021)="-30% passe à -50%"
+ s ^TKFINSERIE(111163)="-30% passe à -50%"
+ s ^TKFINSERIE(111569)="-30% passe à -50%"
+ s ^TKFINSERIE(111571)="-30% passe à -50%"
+ s ^TKFINSERIE(110904)="-30% passe à -50%"
+ s ^TKFINSERIE(112525)="-30% passe à -50%"
+ s ^TKFINSERIE(110795)="-30% passe à -50%"
+ s ^TKFINSERIE(111458)="-30% passe à -50%"
+ s ^TKFINSERIE(113921)="-30% passe à -50%"
+ s ^TKFINSERIE(111015)="-30% passe à -50%"
+ s ^TKFINSERIE(113767)="-30% passe à -50%"
+ s ^TKFINSERIE(115973)="-30% passe à -50%"
+ s ^TKFINSERIE(111218)="-30% passe à -50%"
+ s ^TKFINSERIE(112521)="-30% passe à -50%"
+ s ^TKFINSERIE(113551)="-30% passe à -50%"
+ s ^TKFINSERIE(111175)="-30% passe à -50%"
+ s ^TKFINSERIE(113908)="-30% passe à -50%"
+ s ^TKFINSERIE(113740)="-30% passe à -50%"
+ s ^TKFINSERIE(113821)="-30% passe à -50%"
+ s ^TKFINSERIE(111219)="-30% passe à -50%"
+ s ^TKFINSERIE(113757)="-30% passe à -50%"
+ s ^TKFINSERIE(111354)="-30% passe à -50%"
+ s ^TKFINSERIE(113803)="-30% passe à -50%"
+ s ^TKFINSERIE(111141)="-30% passe à -50%"
+ s ^TKFINSERIE(113763)="-30% passe à -50%"
+ s ^TKFINSERIE(111344)="-30% passe à -50%"
+ s ^TKFINSERIE(111326)="-30% passe à -50%"
+ s ^TKFINSERIE(111235)="-30% passe à -50%"
+ s ^TKFINSERIE(113471)="-30% passe à -50%"
+ s ^TKFINSERIE(113754)="-30% passe à -50%"
+ s ^TKFINSERIE(113787)="-30% passe à -50%"
+ s ^TKFINSERIE(113639)="-30% passe à -50%"
+ s ^TKFINSERIE(111348)="-30% passe à -50%"
+ s ^TKFINSERIE(113547)="-30% passe à -50%"
+ s ^TKFINSERIE(111192)="-30% passe à -50%"
+ s ^TKFINSERIE(113807)="-30% passe à -50%"
+ s ^TKFINSERIE(113636)="-30% passe à -50%"
+ s ^TKFINSERIE(115968)="-30% passe à -50%"
+ s ^TKFINSERIE(113496)="-30% passe à -50%"
+ s ^TKFINSERIE(111212)="-30% passe à -50%"
+ s ^TKFINSERIE(113550)="-30% passe à -50%"
+ s ^TKFINSERIE(113637)="-30% passe à -50%"
+ s ^TKFINSERIE(111362)="-30% passe à -50%"
+ s ^TKFINSERIE(113470)="-30% passe à -50%"
+ s ^TKFINSERIE(111356)="-30% passe à -50%"
+ s ^TKFINSERIE(112522)="-30% passe à -50%"
+ s ^TKFINSERIE(110788)="-30% passe à -50%"
+ s ^TKFINSERIE(111148)="-30% passe à -50%"
+ s ^TKFINSERIE(111164)="-30% passe à -50%"
+ s ^TKFINSERIE(113909)="-30% passe à -50%"
+ s ^TKFINSERIE(113691)="-30% passe à -50%"
+ s ^TKFINSERIE(110766)="-30% passe à -50%"
+ s ^TKFINSERIE(111345)="-30% passe à -50%"
+ s ^TKFINSERIE(113910)="-30% passe à -50%"
+ s ^TKFINSERIE(113632)="-30% passe à -50%"
+ s ^TKFINSERIE(111207)="-30% passe à -50%"
+ s ^TKFINSERIE(113881)="-30% passe à -50%"
+ s ^TKFINSERIE(115976)="-30% passe à -50%"
+ s ^TKFINSERIE(115941)="-30% passe à -50%"
+ s ^TKFINSERIE(113477)="-30% passe à -50%"
+ s ^TKFINSERIE(113662)="-30% passe à -50%"
+ s ^TKFINSERIE(111147)="-30% passe à -50%"
+ s ^TKFINSERIE(113815)="-30% passe à -50%"
+ s ^TKFINSERIE(111810)="-30% passe à -50%"
+ s ^TKFINSERIE(111211)="-30% passe à -50%"
+ s ^TKFINSERIE(111213)="-30% passe à -50%"
+ s ^TKFINSERIE(111319)="-30% passe à -50%"
+ s ^TKFINSERIE(111539)="-30% passe à -50%"
+ s ^TKFINSERIE(113671)="-30% passe à -50%"
+ s ^TKFINSERIE(110799)="-30% passe à -50%"
+ s ^TKFINSERIE(113862)="-30% passe à -50%"
+ s ^TKFINSERIE(113777)="-30% passe à -50%"
+ s ^TKFINSERIE(111205)="-30% passe à -50%"
+ s ^TKFINSERIE(113467)="-30% passe à -50%"
+ s ^TKFINSERIE(111135)="-30% passe à -50%"
+ s ^TKFINSERIE(113825)="-30% passe à -50%"
+ s ^TKFINSERIE(115940)="-30% passe à -50%"
+ s ^TKFINSERIE(113666)="-30% passe à -50%"
+ s ^TKFINSERIE(111122)="-30% passe à -50%"
+ s ^TKFINSERIE(111353)="-30% passe à -50%"
+ s ^TKFINSERIE(113727)="-30% passe à -50%"
+ s ^TKFINSERIE(113482)="-30% passe à -50%"
+ s ^TKFINSERIE(111347)="-30% passe à -50%"
+ s ^TKFINSERIE(111020)="-30% passe à -50%"
+ s ^TKFINSERIE(111143)="-30% passe à -50%"
+ s ^TKFINSERIE(113749)="-30% passe à -50%"
+ s ^TKFINSERIE(111367)="-30% passe à -50%"
+ s ^TKFINSERIE(113464)="-30% passe à -50%"
+ s ^TKFINSERIE(113701)="-30% passe à -50%"
+ s ^TKFINSERIE(111209)="-30% passe à -50%"
+ s ^TKFINSERIE(111180)="-30% passe à -50%"
+ s ^TKFINSERIE(113917)="-30% passe à -50%"
+ s ^TKFINSERIE(113748)="-30% passe à -50%"
+ s ^TKFINSERIE(112518)="-30% passe à -50%"
+ s ^TKFINSERIE(111204)="-30% passe à -50%"
+ s ^TKFINSERIE(113462)="-30% passe à -50%"
+ s ^TKFINSERIE(113659)="-30% passe à -50%"
+ s ^TKFINSERIE(111011)="-30% passe à -50%"
+ s ^TKFINSERIE(113692)="-30% passe à -50%"
+ s ^TKFINSERIE(111142)="-30% passe à -50%"
+ s ^TKFINSERIE(111194)="-30% passe à -50%"
+ s ^TKFINSERIE(115970)="-30% passe à -50%"
+ s ^TKFINSERIE(112515)="-30% passe à -50%"
+ s ^TKFINSERIE(112523)="-30% passe à -50%"
+ s ^TKFINSERIE(111172)="-30% passe à -50%"
+ s ^TKFINSERIE(111538)="-30% passe à -50%"
+ s ^TKFINSERIE(113469)="-30% passe à -50%"
+ s ^TKFINSERIE(111150)="-30% passe à -50%"
+ s ^TKFINSERIE(110789)="-30% passe à -50%"
+ s ^TKFINSERIE(113476)="-30% passe à -50%"
+ s ^TKFINSERIE(111162)="-30% passe à -50%"
+ s ^TKFINSERIE(111318)="-30% passe à -50%"
+ s ^TKFINSERIE(113707)="-30% passe à -50%"
+ s ^TKFINSERIE(111016)="-30% passe à -50%"
+ s ^TKFINSERIE(113473)="-30% passe à -50%"
+ s ^TKFINSERIE(114022)="-30% passe à -50%"
+ s ^TKFINSERIE(113703)="-30% passe à -50%"
+ s ^TKFINSERIE(113822)="-30% passe à -50%"
+ s ^TKFINSERIE(113922)="-30% passe à -50%"
+ s ^TKFINSERIE(113817)="-30% passe à -50%"
+ s ^TKFINSERIE(111183)="-30% passe à -50%"
+ s ^TKFINSERIE(111127)="-30% passe à -50%"
+ s ^TKFINSERIE(111343)="-30% passe à -50%"
+ s ^TKFINSERIE(113665)="-30% passe à -50%"
+ s ^TKFINSERIE(111267)="-30% passe à -50%"
+ s ^TKFINSERIE(113919)="-30% passe à -50%"
+ s ^TKFINSERIE(111144)="-30% passe à -50%"
+ s ^TKFINSERIE(113664)="-30% passe à -50%"
+ s ^TKFINSERIE(115981)="-30% passe à -50%"
+ s ^TKFINSERIE(115942)="-30% passe à -50%"
+ s ^TKFINSERIE(113705)="-30% passe à -50%"
+ s ^TKFINSERIE(111811)="-30% passe à -50%"
+ s ^TKFINSERIE(113663)="-30% passe à -50%"
+ s ^TKFINSERIE(111178)="-30% passe à -50%"
+ s ^TKFINSERIE(113747)="-30% passe à -50%"
+ s ^TKFINSERIE(111236)="-30% passe à -50%"
+ s ^TKFINSERIE(113750)="-30% passe à -50%"
+ s ^TKFINSERIE(113746)="-30% passe à -50%"
+ s ^TKFINSERIE(111193)="-30% passe à -50%"
+ s ^TKFINSERIE(111206)="-30% passe à -50%"
+ s ^TKFINSERIE(113681)="-30% passe à -50%"
+ s ^TKFINSERIE(113700)="-30% passe à -50%"
+ s ^TKFINSERIE(111266)="-30% passe à -50%"
+ s ^TKFINSERIE(111136)="-30% passe à -50%"
+ s ^TKFINSERIE(113776)="-30% passe à -50%"
+ s ^TKFINSERIE(111245)="-30% passe à -50%"
+ s ^TKFINSERIE(112566)="-30% passe à -50%"
+ s ^TKFINSERIE(111342)="-30% passe à -50%"
+ s ^TKFINSERIE(111457)="-30% passe à -50%"
+ s ^TKFINSERIE(111124)="-30% passe à -50%"
+ s ^TKFINSERIE(113708)="-30% passe à -50%"
+ s ^TKFINSERIE(110781)="-30% passe à -50%"
+ s ^TKFINSERIE(111203)="-30% passe à -50%"
+ s ^TKFINSERIE(113557)="-30% passe à -50%"
+ s ^TKFINSERIE(113811)="-30% passe à -50%"
+ s ^TKFINSERIE(115939)="-30% passe à -50%"
+ s ^TKFINSERIE(111253)="-30% passe à -50%"
+ s ^TKFINSERIE(113682)="-30% passe à -50%"
+ s ^TKFINSERIE(113463)="-30% passe à -50%"
+ s ^TKFINSERIE(113474)="-30% passe à -50%"
+ s ^TKFINSERIE(111254)="-30% passe à -50%"
+ s ^TKFINSERIE(111146)="-30% passe à -50%"
+ s ^TKFINSERIE(110787)="-30% passe à -50%"
+ s ^TKFINSERIE(113658)="-30% passe à -50%"
+ s ^TKFINSERIE(111017)="-30% passe à -50%"
+ s ^TKFINSERIE(113590)="-30% passe à -50%"
+ s ^TKFINSERIE(112502)="-30% passe à -50%"
+ s ^TKFINSERIE(113688)="-30% passe à -50%"
+ s ^TKFINSERIE(110909)="-30% passe à -50%"
+ s ^TKFINSERIE(113905)="-30% passe à -50%"
+ s ^TKFINSERIE(113762)="-30% passe à -50%"
+ s ^TKFINSERIE(112504)="-30% passe à -50%"
+ s ^TKFINSERIE(113657)="-30% passe à -50%"
+ s ^TKFINSERIE(113560)="-30% passe à -50%"
+ s ^TKFINSERIE(113768)="-30% passe à -50%"
+ s ^TKFINSERIE(111263)="-30% passe à -50%"
+ s ^TKFINSERIE(113685)="-30% passe à -50%"
+ s ^TKFINSERIE(111314)="-30% passe à -50%"
+ s ^TKFINSERIE(111208)="-30% passe à -50%"
+ s ^TKFINSERIE(113706)="-30% passe à -50%"
+ s ^TKFINSERIE(112511)="-30% passe à -50%"
+ s ^TKFINSERIE(111173)="-30% passe à -50%"
+ s ^TKFINSERIE(113656)="-30% passe à -50%"
+ s ^TKFINSERIE(112500)="-30% passe à -50%"
+ s ^TKFINSERIE(113673)="-30% passe à -50%"
+ s ^TKFINSERIE(113801)="-30% passe à -50%"
+ s ^TKFINSERIE(113813)="-30% passe à -50%"
+ s ^TKFINSERIE(111370)="-30% passe à -50%"
+ s ^TKFINSERIE(113697)="-30% passe à -50%"
+ s ^TKFINSERIE(113906)="-30% passe à -50%"
+ s ^TKFINSERIE(113641)="-30% passe à -50%"
+ s ^TKFINSERIE(112537)="-30% passe à -50%"
+ s ^TKFINSERIE(111123)="-30% passe à -50%"
+ s ^TKFINSERIE(113626)="-30% passe à -50%"
+ s ^TKFINSERIE(113684)="-30% passe à -50%"
+ s ^TKFINSERIE(113624)="-30% passe à -50%"
+ s ^TKFINSERIE(110772)="-30% passe à -50%"
+ s ^TKFINSERIE(113903)="-30% passe à -50%"
+ s ^TKFINSERIE(113808)="-30% passe à -50%"
+ s ^TKFINSERIE(111365)="-30% passe à -50%"
+ s ^TKFINSERIE(111364)="-30% passe à -50%"
+ s ^TKFINSERIE(112503)="-30% passe à -50%"
+ s ^TKFINSERIE(113736)="-30% passe à -50%"
+ s ^TKFINSERIE(113679)="-30% passe à -50%"
+ s ^TKFINSERIE(113597)="-30% passe à -50%"
+ s ^TKFINSERIE(114023)="-30% passe à -50%"
+ s ^TKFINSERIE(113594)="-30% passe à -50%"
+ s ^TKFINSERIE(113904)="-30% passe à -50%"
+ s ^TKFINSERIE(113653)="-30% passe à -50%"
+ s ^TKFINSERIE(113721)="-30% passe à -50%"
+ s ^TKFINSERIE(113672)="-30% passe à -50%"
+ s ^TKFINSERIE(113562)="-30% passe à -50%"
+ s ^TKFINSERIE(113475)="-30% passe à -50%"
+ s ^TKFINSERIE(113728)="-30% passe à -50%"
+ s ^TKFINSERIE(111244)="-30% passe à -50%"
+ s ^TKFINSERIE(111200)="-30% passe à -50%"
+ s ^TKFINSERIE(113726)="-30% passe à -50%"
+ s ^TKFINSERIE(113709)="-30% passe à -50%"
+ s ^TKFINSERIE(113710)="-30% passe à -50%"
+ s ^TKFINSERIE(113660)="-30% passe à -50%"
+ s ^TKFINSERIE(113494)="-30% passe à -50%"
+ s ^TKFINSERIE(113596)="-30% passe à -50%"
+ s ^TKFINSERIE(113722)="-30% passe à -50%"
+ s ^TKFINSERIE(111455)="-30% passe à -50%"
+ s ^TKFINSERIE(111456)="-30% passe à -50%"
+ s ^TKFINSERIE(111154)="-30% passe à -50%"
+ s ^TKFINSERIE(110906)="-30% passe à -50%"
+ s ^TKFINSERIE(110779)="-30% passe à -50%"
+ s ^TKFINSERIE(113753)="-30% passe à -50%"
+ s ^TKFINSERIE(111256)="-30% passe à -50%"
+ s ^TKFINSERIE(113668)="-30% passe à -50%"
+ s ^TKFINSERIE(111168)="-30% passe à -50%"
+ s ^TKFINSERIE(113800)="-30% passe à -50%"
+ s ^TKFINSERIE(113725)="-30% passe à -50%"
+ s ^TKFINSERIE(113838)="-30% passe à -50%"
+ s ^TKFINSERIE(113675)="-30% passe à -50%"
+ s ^TKFINSERIE(113814)="-30% passe à -50%"
+ s ^TKFINSERIE(111258)="-30% passe à -50%"
+ s ^TKFINSERIE(111170)="-30% passe à -50%"
+ s ^TKFINSERIE(111541)="-30% passe à -50%"
+ s ^TKFINSERIE(111454)="-30% passe à -50%"
+ s ^TKFINSERIE(111185)="-30% passe à -50%"
+ s ^TKFINSERIE(113676)="-30% passe à -50%"
+ s ^TKFINSERIE(113879)="-30% passe à -50%"
+ s ^TKFINSERIE(113738)="-30% passe à -50%"
+ s ^TKFINSERIE(111359)="-30% passe à -50%"
+ s ^TKFINSERIE(111568)="-30% passe à -50%"
+ s ^TKFINSERIE(111315)="-30% passe à -50%"
+ s ^TKFINSERIE(113600)="-30% passe à -50%"
+ s ^TKFINSERIE(111358)="-30% passe à -50%"
+ s ^TKFINSERIE(113640)="-30% passe à -50%"
+ s ^TKFINSERIE(110907)="-30% passe à -50%"
+ s ^TKFINSERIE(113724)="-30% passe à -50%"
+ s ^TKFINSERIE(113677)="-30% passe à -50%"
+ s ^TKFINSERIE(113493)="-30% passe à -50%"
+ s ^TKFINSERIE(113892)="-30% passe à -50%"
+ s ^TKFINSERIE(111191)="-30% passe à -50%"
+ s ^TKFINSERIE(113678)="-30% passe à -50%"
+ s ^TKFINSERIE(112505)="-30% passe à -50%"
+ s ^TKFINSERIE(111145)="-30% passe à -50%"
+ s ^TKFINSERIE(113599)="-30% passe à -50%"
+ s ^TKFINSERIE(111197)="-30% passe à -50%"
+ s ^TKFINSERIE(114024)="-30% passe à -50%"
+ s ^TKFINSERIE(112528)="-30% passe à -50%"
+ s ^TKFINSERIE(113863)="-30% passe à -50%"
+ s ^TKFINSERIE(113868)="-30% passe à -50%"
+ s ^TKFINSERIE(111121)="-30% passe à -50%"
+ s ^TKFINSERIE(111259)="-30% passe à -50%"
+ s ^TKFINSERIE(113669)="-30% passe à -50%"
+ s ^TKFINSERIE(111155)="-30% passe à -50%"
+ s ^TKFINSERIE(111247)="-30% passe à -50%"
+ s ^TKFINSERIE(111366)="-30% passe à -50%"
+ s ^TKFINSERIE(111361)="-30% passe à -50%"
+ s ^TKFINSERIE(113592)="-30% passe à -50%"
+ s ^TKFINSERIE(111157)="-30% passe à -50%"
+ s ^TKFINSERIE(113882)="-30% passe à -50%"
+ s ^TKFINSERIE(113602)="-30% passe à -50%"
+ s ^TKFINSERIE(112507)="-30% passe à -50%"
+ s ^TKFINSERIE(111363)="-30% passe à -50%"
+ s ^TKFINSERIE(113907)="-30% passe à -50%"
+ s ^TKFINSERIE(113805)="-30% passe à -50%"
+ s ^TKFINSERIE(113878)="-30% passe à -50%"
+ s ^TKFINSERIE(113755)="-30% passe à -50%"
+ s ^TKFINSERIE(113874)="-30% passe à -50%"
+ s ^TKFINSERIE(113604)="-30% passe à -50%"
+ s ^TKFINSERIE(111544)="-30% passe à -50%"
+ s ^TKFINSERIE(110793)="-30% passe à -50%"
+ s ^TKFINSERIE(111360)="-30% passe à -50%"
+ s ^TKFINSERIE(111195)="-30% passe à -50%"
+ s ^TKFINSERIE(113784)="-30% passe à -50%"
+ s ^TKFINSERIE(112498)="-30% passe à -50%"
+ s ^TKFINSERIE(113694)="-30% passe à -50%"
+ s ^TKFINSERIE(113712)="-30% passe à -50%"
+ s ^TKFINSERIE(113595)="-30% passe à -50%"
+ s ^TKFINSERIE(111246)="-30% passe à -50%"
+ s ^TKFINSERIE(111368)="-30% passe à -50%"
+ s ^TKFINSERIE(113918)="-30% passe à -50%"
+ s ^TKFINSERIE(111325)="-30% passe à -50%"
+ s ^TKFINSERIE(113601)="-30% passe à -50%"
+ s ^TKFINSERIE(113723)="-30% passe à -50%"
+ s ^TKFINSERIE(111251)="-30% passe à -50%"
+ s ^TKFINSERIE(113731)="-30% passe à -50%"
+ s ^TKFINSERIE(111169)="-30% passe à -50%"
+ s ^TKFINSERIE(113737)="-30% passe à -50%"
+ s ^TKFINSERIE(111357)="-30% passe à -50%"
+ s ^TKFINSERIE(113598)="-30% passe à -50%"
+ s ^TKFINSERIE(111196)="-30% passe à -50%"
+ s ^TKFINSERIE(113612)="-30% passe à -50%"
+ s ^TKFINSERIE(113734)="-30% passe à -50%"
+ s ^TKFINSERIE(111198)="-30% passe à -50%"
+ s ^TKFINSERIE(113670)="-30% passe à -50%"
+ s ^TKFINSERIE(113900)="-30% passe à -50%"
+ s ^TKFINSERIE(113628)="-30% passe à -50%"
+ s ^TKFINSERIE(113855)="-30% passe à -50%"
+ s ^TKFINSERIE(113654)="-30% passe à -50%"
+ s ^TKFINSERIE(113593)="-30% passe à -50%"
+ s ^TKFINSERIE(113916)="-30% passe à -50%"
+ s ^TKFINSERIE(113789)="-30% passe à -50%"
+ s ^TKFINSERIE(113711)="-30% passe à -50%"
+ s ^TKFINSERIE(110903)="-30% passe à -50%"
+ s ^TKFINSERIE(112577)="-30% passe à -50%"
+ s ^TKFINSERIE(113856)="-30% passe à -50%"
+ s ^TKFINSERIE(111257)="-30% passe à -50%"
+ s ^TKFINSERIE(113744)="-30% passe à -50%"
+ s ^TKFINSERIE(112578)="-30% passe à -50%"
+ s ^TKFINSERIE(112506)="-30% passe à -50%"
+ s ^TKFINSERIE(112509)="-30% passe à -50%"
+ s ^TKFINSERIE(113603)="-30% passe à -50%"
+ s ^TKFINSERIE(111453)="-30% passe à -50%"
+ s ^TKFINSERIE(113867)="-30% passe à -50%"
+ s ^TKFINSERIE(111167)="-30% passe à -50%"
+ s ^TKFINSERIE(110839)="-30% passe à -50%"
+ s ^TKFINSERIE(111250)="-30% passe à -50%"
+ s ^TKFINSERIE(111248)="-30% passe à -50%"
+ s ^TKFINSERIE(113638)="-30% passe à -50%"
+ s ^TKFINSERIE(113766)="-30% passe à -50%"
+ s ^TKFINSERIE(113717)="-30% passe à -50%"
+ s ^TKFINSERIE(111177)="-30% passe à -50%"
+ s ^TKFINSERIE(111545)="-30% passe à -50%"
+ s ^TKFINSERIE(113875)="-30% passe à -50%"
+ s ^TKFINSERIE(111249)="-30% passe à -50%"
+ s ^TKFINSERIE(111243)="-30% passe à -50%"
+ s ^TKFINSERIE(113674)="-30% passe à -50%"
+ s ^TKFINSERIE(111156)="-30% passe à -50%"
+ s ^TKFINSERIE(110778)="-30% passe à -50%"
+ s ^TKFINSERIE(113591)="-30% passe à -50%"
+ s ^TKFINSERIE(113716)="-30% passe à -50%"
+ s ^TKFINSERIE(113589)="-30% passe à -50%"
+ s ^TKFINSERIE(111255)="-30% passe à -50%"
+ s ^TKFINSERIE(113714)="-30% passe à -50%"
+ s ^TKFINSERIE(111252)="-30% passe à -50%"
+ s ^TKFINSERIE(113704)="-30% passe à -50%"
+ s ^TKFINSERIE(117911)="-30% passe à -70%"
+ s ^TKFINSERIE(83328)="-50% passe à -70%"
+ s ^TKFINSERIE(83327)="-50% passe à -70%"
+ s ^TKFINSERIE(113764)="-50% passe à -70%"
+ s ^TKFINSERIE(107046)="-50% passe à -70%"
+ s ^TKFINSERIE(107042)="-50% passe à -70%"
+ s ^TKFINSERIE(107043)="-50% passe à -70%"
+ s ^TKFINSERIE(107098)="-50% passe à -70%"
+ s ^TKFINSERIE(107099)="-50% passe à -70%"
+ s ^TKFINSERIE(101937)="-50% passe à -70%"
+ s ^TKFINSERIE(101907)="-50% passe à -70%"
+ s ^TKFINSERIE(107097)="-50% passe à -70%"
+ s ^TKFINSERIE(93270)="-50% passe à -70%"
+ s ^TKFINSERIE(103336)="-50% passe à -70%"
+ s ^TKFINSERIE(83329)="-50% passe à -70%"
+ s ^TKFINSERIE(104555)="-50% passe à -70%"
+ s ^TKFINSERIE(104327)="-50% passe à -70%"
+ s ^TKFINSERIE(101958)="-50% passe à -70%"
+ s ^TKFINSERIE(105109)="-50% passe à -70%"
+ s ^TKFINSERIE(104460)="-50% passe à -70%"
+ s ^TKFINSERIE(110910)="-50% passe à -70%"
+ s ^TKFINSERIE(105886)="-50% passe à -70%"
+ s ^TKFINSERIE(101789)="-50% passe à -70%"
+ s ^TKFINSERIE(104476)="-50% passe à -70%"
+ s ^TKFINSERIE(104439)="-50% passe à -70%"
+ s ^TKFINSERIE(105598)="-50% passe à -70%"
+ s ^TKFINSERIE(103686)="-50% passe à -70%"
+ s ^TKFINSERIE(106977)="-50% passe à -70%"
+ s ^TKFINSERIE(104389)="-50% passe à -70%"
+ s ^TKFINSERIE(105599)="-50% passe à -70%"
+ s ^TKFINSERIE(107044)="-50% passe à -70%"
+ s ^TKFINSERIE(103697)="-50% passe à -70%"
+ s ^TKFINSERIE(103693)="-50% passe à -70%"
+ s ^TKFINSERIE(101961)="-50% passe à -70%"
+ s ^TKFINSERIE(106932)="-50% passe à -70%"
+ s ^TKFINSERIE(106854)="-50% passe à -70%"
+ s ^TKFINSERIE(106931)="-50% passe à -70%"
+ s ^TKFINSERIE(104443)="-50% passe à -70%"
+ s ^TKFINSERIE(101800)="-50% passe à -70%"
+ s ^TKFINSERIE(107050)="-50% passe à -70%"
+ s ^TKFINSERIE(115971)="-50% passe à -70%"
+ s ^TKFINSERIE(107028)="-50% passe à -70%"
+ s ^TKFINSERIE(105884)="-50% passe à -70%"
+ s ^TKFINSERIE(115948)="-50% passe à -70%"
+ s ^TKFINSERIE(115953)="-50% passe à -70%"
+ s ^TKFINSERIE(102139)="-50% passe à -70%"
+ s ^TKFINSERIE(107034)="-50% passe à -70%"
+ s ^TKFINSERIE(105596)="-50% passe à -70%"
+ s ^TKFINSERIE(101791)="-50% passe à -70%"
+ s ^TKFINSERIE(110911)="-50% passe à -70%"
+ s ^TKFINSERIE(87648)="-50% passe à -70%"
+ s ^TKFINSERIE(101868)="-50% passe à -70%"
+ s ^TKFINSERIE(104342)="-50% passe à -70%"
+ s ^TKFINSERIE(107053)="-50% passe à -70%"
+ s ^TKFINSERIE(106874)="-50% passe à -70%"
+ s ^TKFINSERIE(107035)="-50% passe à -70%"
+ s ^TKFINSERIE(106920)="-50% passe à -70%"
+ s ^TKFINSERIE(106929)="-50% passe à -70%"
+ s ^TKFINSERIE(115959)="-50% passe à -70%"
+ s ^TKFINSERIE(107041)="-50% passe à -70%"
+ s ^TKFINSERIE(115956)="-50% passe à -70%"
+ s ^TKFINSERIE(115978)="-50% passe à -70%"
+ s ^TKFINSERIE(115972)="-50% passe à -70%"
+ s ^TKFINSERIE(104343)="-50% passe à -70%"
+ s ^TKFINSERIE(104344)="-50% passe à -70%"
+ s ^TKFINSERIE(115996)="-50% passe à -70%"
+ s ^TKFINSERIE(115947)="-50% passe à -70%"
+ s ^TKFINSERIE(115982)="-50% passe à -70%"
+ s ^TKFINSERIE(103384)="-50% passe à -70%"
+ s ^TKFINSERIE(115993)="-50% passe à -70%"
+ s ^TKFINSERIE(115958)="-50% passe à -70%"
+ s ^TKFINSERIE(106798)="-50% passe à -70%"
+ s ^TKFINSERIE(104459)="-50% passe à -70%"
+ s ^TKFINSERIE(104387)="-50% passe à -70%"
+ s ^TKFINSERIE(111371)="-50% passe à -70%"
+ s ^TKFINSERIE(106980)="-50% passe à -70%"
+ s ^TKFINSERIE(103820)="-50% passe à -70%"
+ s ^TKFINSERIE(110905)="-50% passe à -70%"
+ s ^TKFINSERIE(106949)="-50% passe à -70%"
+ s ^TKFINSERIE(101845)="-50% passe à -70%"
+ s ^TKFINSERIE(106928)="-50% passe à -70%"
+ s ^TKFINSERIE(107024)="-50% passe à -70%"
+ s ^TKFINSERIE(115997)="-50% passe à -70%"
+ s ^TKFINSERIE(113488)="-50% passe à -70%"
+ s ^TKFINSERIE(113552)="-50% passe à -70%"
+ s ^TKFINSERIE(107036)="-50% passe à -70%"
+ s ^TKFINSERIE(115994)="-50% passe à -70%"
+ s ^TKFINSERIE(115944)="-50% passe à -70%"
+ s ^TKFINSERIE(100880)="-50% passe à -70%"
+ s ^TKFINSERIE(111237)="-50% passe à -70%"
+ s ^TKFINSERIE(104458)="-50% passe à -70%"
+ s ^TKFINSERIE(106984)="-50% passe à -70%"
+ s ^TKFINSERIE(104381)="-50% passe à -70%"
+ s ^TKFINSERIE(115954)="-50% passe à -70%"
+ s ^TKFINSERIE(115945)="-50% passe à -70%"
+ s ^TKFINSERIE(115950)="-50% passe à -70%"
+ s ^TKFINSERIE(101790)="-50% passe à -70%"
+ s ^TKFINSERIE(100926)="-50% passe à -70%"
+ s ^TKFINSERIE(112526)="-50% passe à -70%"
+ s ^TKFINSERIE(115965)="-50% passe à -70%"
+ s ^TKFINSERIE(105447)="-50% passe à -70%"
+ s ^TKFINSERIE(105597)="-50% passe à -70%"
+ s ^TKFINSERIE(104556)="-50% passe à -70%"
+ s ^TKFINSERIE(115995)="-50% passe à -70%"
+ s ^TKFINSERIE(100928)="-50% passe à -70%"
+ s ^TKFINSERIE(106953)="-50% passe à -70%"
+ s ^TKFINSERIE(113485)="-50% passe à -70%"
+ s ^TKFINSERIE(115975)="-50% passe à -70%"
+ s ^TKFINSERIE(106948)="-50% passe à -70%"
+ s ^TKFINSERIE(115964)="-50% passe à -70%"
+ s ^TKFINSERIE(113695)="-50% passe à -70%"
+ s ^TKFINSERIE(104438)="-50% passe à -70%"
+ s ^TKFINSERIE(115943)="-50% passe à -70%"
+ s ^TKFINSERIE(113554)="-50% passe à -70%"
+ s ^TKFINSERIE(113487)="-50% passe à -70%"
+ s ^TKFINSERIE(82977)="-50% passe à -70%"
+ s ^TKFINSERIE(106917)="-50% passe à -70%"
+ s ^TKFINSERIE(106797)="-50% passe à -70%"
+ s ^TKFINSERIE(106918)="-50% passe à -70%"
+ s ^TKFINSERIE(107543)="-50% passe à -70%"
+ s ^TKFINSERIE(113490)="-50% passe à -70%"
+ s ^TKFINSERIE(101822)="-50% passe à -70%"
+ s ^TKFINSERIE(115952)="-50% passe à -70%"
+ s ^TKFINSERIE(115980)="-50% passe à -70%"
+ s ^TKFINSERIE(101865)="-50% passe à -70%"
+ s ^TKFINSERIE(115977)="-50% passe à -70%"
+ s ^TKFINSERIE(103821)="-50% passe à -70%"
+ s ^TKFINSERIE(104326)="-50% passe à -70%"
+ s ^TKFINSERIE(111238)="-50% passe à -70%"
+ s ^TKFINSERIE(104332)="-50% passe à -70%"
+ s ^TKFINSERIE(113553)="-50% passe à -70%"
+ s ^TKFINSERIE(111112)="-50% passe à -70%"
+ s ^TKFINSERIE(115955)="-50% passe à -70%"
+ s ^TKFINSERIE(107027)="-50% passe à -70%"
+ s ^TKFINSERIE(8506)="-50% passe à -70%"
+ s ^TKFINSERIE(113630)="-50% passe à -70%"
+ s ^TKFINSERIE(113852)="-50% passe à -70%"
+ s ^TKFINSERIE(113489)="-50% passe à -70%"
+ s ^TKFINSERIE(112343)="-50% passe à -70%"
+ s ^TKFINSERIE(115951)="-50% passe à -70%"
+ s ^TKFINSERIE(104392)="-50% passe à -70%"
+ s ^TKFINSERIE(115957)="-50% passe à -70%"
+ s ^TKFINSERIE(107537)="-50% passe à -70%"
+ s ^TKFINSERIE(113854)="-50% passe à -70%"
+ s ^TKFINSERIE(100616)="-50% passe à -70%"
+ s ^TKFINSERIE(106990)="-50% passe à -70%"
+ s ^TKFINSERIE(115949)="-50% passe à -70%"
+ s ^TKFINSERIE(87650)="-50% passe à -70%"
+ s ^TKFINSERIE(104429)="-50% passe à -70%"
+ s ^TKFINSERIE(101802)="-50% passe à -70%"
+ s ^TKFINSERIE(104455)="-50% passe à -70%"
+ s ^TKFINSERIE(101984)="-50% passe à -70%"
+ s ^TKFINSERIE(104341)="-50% passe à -70%"
+ s ^TKFINSERIE(105805)="-50% passe à -70%"
+ s ^TKFINSERIE(104428)="-50% passe à -70%"
+ s ^TKFINSERIE(103814)="-50% passe à -70%"
+ s ^TKFINSERIE(106983)="-50% passe à -70%"
+ s ^TKFINSERIE(100927)="-50% passe à -70%"
+ s ^TKFINSERIE(113584)="-50% passe à -70%"
+ s ^TKFINSERIE(102260)="-50% passe à -70%"
+ s ^TKFINSERIE(113563)="-50% passe à -70%"
+ s ^TKFINSERIE(106945)="-50% passe à -70%"
+ s ^TKFINSERIE(103339)="-50% passe à -70%"
+ s ^TKFINSERIE(103818)="-50% passe à -70%"
+ s ^TKFINSERIE(106851)="-50% passe à -70%"
+ s ^TKFINSERIE(101840)="-50% passe à -70%"
+ s ^TKFINSERIE(113687)="-50% passe à -70%"
+ s ^TKFINSERIE(111387)="-50% passe à -70%"
+ s ^TKFINSERIE(105411)="-50% passe à -70%"
+ s ^TKFINSERIE(111389)="-50% passe à -70%"
+ s ^TKFINSERIE(113819)="-50% passe à -70%"
+ s ^TKFINSERIE(93276)="-50% passe à -70%"
+ s ^TKFINSERIE(105394)="-50% passe à -70%"
+ s ^TKFINSERIE(113713)="-50% passe à -70%"
+ s ^TKFINSERIE(113924)="-50% passe à -70%"
+ s ^TKFINSERIE(113478)="-50% passe à -70%"
+ s ^TKFINSERIE(106880)="-50% passe à -70%"
+ s ^TKFINSERIE(101871)="-50% passe à -70%"
+ s ^TKFINSERIE(101861)="-50% passe à -70%"
+ s ^TKFINSERIE(107115)="-50% passe à -70%"
+ s ^TKFINSERIE(113635)="-50% passe à -70%"
+ s ^TKFINSERIE(101951)="-50% passe à -70%"
+ s ^TKFINSERIE(106979)="-50% passe à -70%"
+ s ^TKFINSERIE(113546)="-50% passe à -70%"
+ s ^TKFINSERIE(106934)="-50% passe à -70%"
+ s ^TKFINSERIE(107026)="-50% passe à -70%"
+ s ^TKFINSERIE(107033)="-50% passe à -70%"
+ s ^TKFINSERIE(111240)="-50% passe à -70%"
+ s ^TKFINSERIE(107108)="-50% passe à -70%"
+ s ^TKFINSERIE(77858)="-50% passe à -70%"
+ s ^TKFINSERIE(107075)="-50% passe à -70%"
+ s ^TKFINSERIE(111165)="-50% passe à -70%"
+ s ^TKFINSERIE(101945)="-50% passe à -70%"
+ s ^TKFINSERIE(103692)="-50% passe à -70%"
+ s ^TKFINSERIE(105066)="-50% passe à -70%"
+ s ^TKFINSERIE(100721)="-50% passe à -70%"
+ s ^TKFINSERIE(101920)="-50% passe à -70%"
+ s ^TKFINSERIE(105927)="-50% passe à -70%"
+ s ^TKFINSERIE(111242)="-50% passe à -70%"
+ s ^TKFINSERIE(78504)="-50% passe à -70%"
+ s ^TKFINSERIE(104410)="-50% passe à -70%"
+ s ^TKFINSERIE(104130)="-50% passe à -70%"
+ s ^TKFINSERIE(106829)="-50% passe à -70%"
+ s ^TKFINSERIE(104374)="-50% passe à -70%"
+ s ^TKFINSERIE(111352)="-50% passe à -70%"
+ s ^TKFINSERIE(111355)="-50% passe à -70%"
+ s ^TKFINSERIE(107539)="-50% passe à -70%"
+ s ^TKFINSERIE(101919)="-50% passe à -70%"
+ s ^TKFINSERIE(102123)="-50% passe à -70%"
+ s ^TKFINSERIE(101986)="-50% passe à -70%"
+ s ^TKFINSERIE(113833)="-50% passe à -70%"
+ s ^TKFINSERIE(106973)="-50% passe à -70%"
+ s ^TKFINSERIE(104364)="-50% passe à -70%"
+ s ^TKFINSERIE(101807)="-50% passe à -70%"
+ s ^TKFINSERIE(104457)="-50% passe à -70%"
+ s ^TKFINSERIE(113556)="-50% passe à -70%"
+ s ^TKFINSERIE(103694)="-50% passe à -70%"
+ s ^TKFINSERIE(112524)="-50% passe à -70%"
+ s ^TKFINSERIE(113826)="-50% passe à -70%"
+ s ^TKFINSERIE(101803)="-50% passe à -70%"
+ s ^TKFINSERIE(104423)="-50% passe à -70%"
+ s ^TKFINSERIE(87651)="-50% passe à -70%"
+ s ^TKFINSERIE(101888)="-50% passe à -70%"
+ s ^TKFINSERIE(105899)="-50% passe à -70%"
+ s ^TKFINSERIE(105785)="-50% passe à -70%"
+ s ^TKFINSERIE(104373)="-50% passe à -70%"
+ s ^TKFINSERIE(104390)="-50% passe à -70%"
+ s ^TKFINSERIE(111374)="-50% passe à -70%"
+ s ^TKFINSERIE(113472)="-50% passe à -70%"
+ s ^TKFINSERIE(104388)="-50% passe à -70%"
+ s ^TKFINSERIE(106814)="-50% passe à -70%"
+ s ^TKFINSERIE(106958)="-50% passe à -70%"
+ s ^TKFINSERIE(105600)="-50% passe à -70%"
+ s ^TKFINSERIE(113758)="-50% passe à -70%"
+ s ^TKFINSERIE(104328)="-50% passe à -70%"
+ s ^TKFINSERIE(104447)="-50% passe à -70%"
+ s ^TKFINSERIE(113742)="-50% passe à -70%"
+ s ^TKFINSERIE(101962)="-50% passe à -70%"
+ s ^TKFINSERIE(107096)="-50% passe à -70%"
+ s ^TKFINSERIE(105410)="-50% passe à -70%"
+ s ^TKFINSERIE(111388)="-50% passe à -70%"
+ s ^TKFINSERIE(100925)="-50% passe à -70%"
+ s ^TKFINSERIE(105692)="-50% passe à -70%"
+ s ^TKFINSERIE(101891)="-50% passe à -70%"
+ s ^TKFINSERIE(105607)="-50% passe à -70%"
+ s ^TKFINSERIE(101050)="-50% passe à -70%"
+ s ^TKFINSERIE(103817)="-50% passe à -70%"
+ s ^TKFINSERIE(111373)="-50% passe à -70%"
+ s ^TKFINSERIE(105603)="-50% passe à -70%"
+ s ^TKFINSERIE(113702)="-50% passe à -70%"
+ s ^TKFINSERIE(113853)="-50% passe à -70%"
+ s ^TKFINSERIE(104333)="-50% passe à -70%"
+ s ^TKFINSERIE(115961)="-50% passe à -70%"
+ s ^TKFINSERIE(102120)="-50% passe à -70%"
+ s ^TKFINSERIE(89923)="-50% passe à -70%"
+ s ^TKFINSERIE(107113)="-50% passe à -70%"
+ s ^TKFINSERIE(107062)="-50% passe à -70%"
+ s ^TKFINSERIE(104425)="-50% passe à -70%"
+ s ^TKFINSERIE(113479)="-50% passe à -70%"
+ s ^TKFINSERIE(113483)="-50% passe à -70%"
+ s ^TKFINSERIE(105693)="-50% passe à -70%"
+ s ^TKFINSERIE(106971)="-50% passe à -70%"
+ s ^TKFINSERIE(77791)="-50% passe à -70%"
+ s ^TKFINSERIE(104337)="-50% passe à -70%"
+ s ^TKFINSERIE(101985)="-50% passe à -70%"
+ s ^TKFINSERIE(101862)="-50% passe à -70%"
+ s ^TKFINSERIE(105608)="-50% passe à -70%"
+ s ^TKFINSERIE(113880)="-50% passe à -70%"
+ s ^TKFINSERIE(104584)="-50% passe à -70%"
+ s ^TKFINSERIE(104557)="-50% passe à -70%"
+ s ^TKFINSERIE(101814)="-50% passe à -70%"
+ s ^TKFINSERIE(113486)="-50% passe à -70%"
+ s ^TKFINSERIE(113492)="-50% passe à -70%"
+ s ^TKFINSERIE(106946)="-50% passe à -70%"
+ s ^TKFINSERIE(115992)="-50% passe à -70%"
+ s ^TKFINSERIE(105096)="-50% passe à -70%"
+ s ^TKFINSERIE(107538)="-50% passe à -70%"
+ s ^TKFINSERIE(117452)="-50% passe à -70%"
+ s ^TKFINSERIE(102117)="-50% passe à -70%"
+ s ^TKFINSERIE(104456)="-50% passe à -70%"
+ s ^TKFINSERIE(107009)="-50% passe à -70%"
+ s ^TKFINSERIE(106881)="-50% passe à -70%"
+ s ^TKFINSERIE(104339)="-50% passe à -70%"
+ s ^TKFINSERIE(102121)="-50% passe à -70%"
+ s ^TKFINSERIE(113689)="-50% passe à -70%"
+ s ^TKFINSERIE(101889)="-50% passe à -70%"
+ s ^TKFINSERIE(101839)="-50% passe à -70%"
+ s ^TKFINSERIE(105405)="-50% passe à -70%"
+ s ^TKFINSERIE(106915)="-50% passe à -70%"
+ s ^TKFINSERIE(107020)="-50% passe à -70%"
+ s ^TKFINSERIE(104334)="-50% passe à -70%"
+ s ^TKFINSERIE(113548)="-50% passe à -70%"
+ s ^TKFINSERIE(101827)="-50% passe à -70%"
+ s ^TKFINSERIE(106898)="-50% passe à -70%"
+ s ^TKFINSERIE(105759)="-50% passe à -70%"
+ s ^TKFINSERIE(102138)="-50% passe à -70%"
+ s ^TKFINSERIE(113769)="-50% passe à -70%"
+ s ^TKFINSERIE(101927)="-50% passe à -70%"
+ s ^TKFINSERIE(106882)="-50% passe à -70%"
+ s ^TKFINSERIE(104444)="-50% passe à -70%"
+ s ^TKFINSERIE(105604)="-50% passe à -70%"
+ s ^TKFINSERIE(104330)="-50% passe à -70%"
+ s ^TKFINSERIE(105883)="-50% passe à -70%"
+ s ^TKFINSERIE(113818)="-50% passe à -70%"
+ s ^TKFINSERIE(106884)="-50% passe à -70%"
+ s ^TKFINSERIE(103353)="-50% passe à -70%"
+ s ^TKFINSERIE(101941)="-50% passe à -70%"
+ s ^TKFINSERIE(104451)="-50% passe à -70%"
+ s ^TKFINSERIE(106926)="-50% passe à -70%"
+ s ^TKFINSERIE(111369)="-50% passe à -70%"
+ s ^TKFINSERIE(101805)="-50% passe à -70%"
+ s ^TKFINSERIE(101799)="-50% passe à -70%"
+ s ^TKFINSERIE(105609)="-50% passe à -70%"
+ s ^TKFINSERIE(115967)="-50% passe à -70%"
+ s ^TKFINSERIE(113631)="-50% passe à -70%"
+ s ^TKFINSERIE(89801)="-50% passe à -70%"
+ s ^TKFINSERIE(113572)="-50% passe à -70%"
+ s ^TKFINSERIE(106912)="-50% passe à -70%"
+ s ^TKFINSERIE(104356)="-50% passe à -70%"
+ s ^TKFINSERIE(115962)="-50% passe à -70%"
+ s ^TKFINSERIE(113690)="-50% passe à -70%"
+ s ^TKFINSERIE(113565)="-50% passe à -70%"
+ s ^TKFINSERIE(102124)="-50% passe à -70%"
+ s ^TKFINSERIE(103354)="-50% passe à -70%"
+ s ^TKFINSERIE(110790)="-50% passe à -70%"
+ s ^TKFINSERIE(104338)="-50% passe à -70%"
+ s ^TKFINSERIE(106974)="-50% passe à -70%"
+ s ^TKFINSERIE(102148)="-50% passe à -70%"
+ s ^TKFINSERIE(102127)="-50% passe à -70%"
+ s ^TKFINSERIE(84894)="-50% passe à -70%"
+ s ^TKFINSERIE(105876)="-50% passe à -70%"
+ s ^TKFINSERIE(106950)="-50% passe à -70%"
+ s ^TKFINSERIE(113549)="-50% passe à -70%"
+ s ^TKFINSERIE(102143)="-50% passe à -70%"
+ s ^TKFINSERIE(105398)="-50% passe à -70%"
+ s ^TKFINSERIE(101787)="-50% passe à -70%"
+ s ^TKFINSERIE(106073)="-50% passe à -70%"
+ s ^TKFINSERIE(107103)="-50% passe à -70%"
+ s ^TKFINSERIE(104433)="-50% passe à -70%"
+ s ^TKFINSERIE(104411)="-50% passe à -70%"
+ s ^TKFINSERIE(104441)="-50% passe à -70%"
+ s ^TKFINSERIE(106868)="-50% passe à -70%"
+ s ^TKFINSERIE(89808)="-50% passe à -70%"
+ s ^TKFINSERIE(107023)="-50% passe à -70%"
+ s ^TKFINSERIE(101952)="-50% passe à -70%"
+ s ^TKFINSERIE(101867)="-50% passe à -70%"
+ s ^TKFINSERIE(111149)="-50% passe à -70%"
+ s ^TKFINSERIE(113579)="-50% passe à -70%"
+ s ^TKFINSERIE(104336)="-50% passe à -70%"
+ s ^TKFINSERIE(103350)="-50% passe à -70%"
+ s ^TKFINSERIE(101957)="-50% passe à -70%"
+ s ^TKFINSERIE(101818)="-50% passe à -70%"
+ s ^TKFINSERIE(84891)="-50% passe à -70%"
+ s ^TKFINSERIE(107052)="-50% passe à -70%"
+ s ^TKFINSERIE(101936)="-50% passe à -70%"
+ s ^TKFINSERIE(107114)="-50% passe à -70%"
+ s ^TKFINSERIE(104361)="-50% passe à -70%"
+ s ^TKFINSERIE(101820)="-50% passe à -70%"
+ s ^TKFINSERIE(104404)="-50% passe à -70%"
+ s ^TKFINSERIE(101804)="-50% passe à -70%"
+ s ^TKFINSERIE(81007)="-50% passe à -70%"
+ s ^TKFINSERIE(101946)="-50% passe à -70%"
+ s ^TKFINSERIE(103345)="-50% passe à -70%"
+ s ^TKFINSERIE(107008)="-50% passe à -70%"
+ s ^TKFINSERIE(83302)="-50% passe à -70%"
+ s ^TKFINSERIE(87646)="-50% passe à -70%"
+ s ^TKFINSERIE(89798)="-50% passe à -70%"
+ s ^TKFINSERIE(101881)="-50% passe à -70%"
+ s ^TKFINSERIE(104394)="-50% passe à -70%"
+ s ^TKFINSERIE(75244)="-50% passe à -70%"
+ s ^TKFINSERIE(100104)="-50% passe à -70%"
+ s ^TKFINSERIE(105087)="-50% passe à -70%"
+ s ^TKFINSERIE(104454)="-50% passe à -70%"
+ s ^TKFINSERIE(89978)="-50% passe à -70%"
+ s ^TKFINSERIE(107032)="-50% passe à -70%"
+ s ^TKFINSERIE(82326)="-50% passe à -70%"
+ s ^TKFINSERIE(87638)="-50% passe à -70%"
+ s ^TKFINSERIE(105396)="-50% passe à -70%"
+ s ^TKFINSERIE(106883)="-50% passe à -70%"
+ s ^TKFINSERIE(106919)="-50% passe à -70%"
+ s ^TKFINSERIE(106968)="-50% passe à -70%"
+ s ^TKFINSERIE(101939)="-50% passe à -70%"
+ s ^TKFINSERIE(106812)="-50% passe à -70%"
+ s ^TKFINSERIE(107073)="-50% passe à -70%"
+ s ^TKFINSERIE(103331)="-50% passe à -70%"
+ s ^TKFINSERIE(89804)="-50% passe à -70%"
+ s ^TKFINSERIE(115989)="-50% passe à -70%"
+ s ^TKFINSERIE(102134)="-50% passe à -70%"
+ s ^TKFINSERIE(100719)="-50% passe à -70%"
+ s ^TKFINSERIE(101956)="-50% passe à -70%"
+ s ^TKFINSERIE(102141)="-50% passe à -70%"
+ s ^TKFINSERIE(104391)="-50% passe à -70%"
+ s ^TKFINSERIE(105618)="-50% passe à -70%"
+ s ^TKFINSERIE(100604)="-50% passe à -70%"
+ s ^TKFINSERIE(100720)="-50% passe à -70%"
+ s ^TKFINSERIE(106889)="-50% passe à -70%"
+ s ^TKFINSERIE(100815)="-50% passe à -70%"
+ s ^TKFINSERIE(106941)="-50% passe à -70%"
+ s ^TKFINSERIE(105882)="-50% passe à -70%"
+ s ^TKFINSERIE(103690)="-50% passe à -70%"
+ s ^TKFINSERIE(105613)="-50% passe à -70%"
+ s ^TKFINSERIE(101989)="-50% passe à -70%"
+ s ^TKFINSERIE(101935)="-50% passe à -70%"
+ s ^TKFINSERIE(106831)="-50% passe à -70%"
+ s ^TKFINSERIE(107116)="-50% passe à -70%"
+ s ^TKFINSERIE(105098)="-50% passe à -70%"
+ s ^TKFINSERIE(106952)="-50% passe à -70%"
+ s ^TKFINSERIE(101990)="-50% passe à -70%"
+ s ^TKFINSERIE(83785)="-50% passe à -70%"
+ s ^TKFINSERIE(101077)="-50% passe à -70%"
+ s ^TKFINSERIE(87647)="-50% passe à -70%"
+ s ^TKFINSERIE(105075)="-50% passe à -70%"
+ s ^TKFINSERIE(106888)="-50% passe à -70%"
+ s ^TKFINSERIE(105444)="-50% passe à -70%"
+ s ^TKFINSERIE(100929)="-50% passe à -70%"
+ s ^TKFINSERIE(104335)="-50% passe à -70%"
+ s ^TKFINSERIE(110837)="-50% passe à -70%"
+ s ^TKFINSERIE(101981)="-50% passe à -70%"
+ s ^TKFINSERIE(82676)="-50% passe à -70%"
+ s ^TKFINSERIE(78500)="-50% passe à -70%"
+ s ^TKFINSERIE(105101)="-50% passe à -70%"
+ s ^TKFINSERIE(105404)="-50% passe à -70%"
+ s ^TKFINSERIE(100621)="-50% passe à -70%"
+ s ^TKFINSERIE(101923)="-50% passe à -70%"
+ s ^TKFINSERIE(104420)="-50% passe à -70%"
+ s ^TKFINSERIE(104329)="-50% passe à -70%"
+ s ^TKFINSERIE(101809)="-50% passe à -70%"
+ s ^TKFINSERIE(101963)="-50% passe à -70%"
+ s ^TKFINSERIE(105617)="-50% passe à -70%"
+ s ^TKFINSERIE(101075)="-50% passe à -70%"
+ s ^TKFINSERIE(100607)="-50% passe à -70%"
+ s ^TKFINSERIE(75203)="-50% passe à -70%"
+ s ^TKFINSERIE(104427)="-50% passe à -70%"
+ s ^TKFINSERIE(106905)="-50% passe à -70%"
+ s ^TKFINSERIE(105400)="-50% passe à -70%"
+ s ^TKFINSERIE(103351)="-50% passe à -70%"
+ s ^TKFINSERIE(107017)="-50% passe à -70%"
+ s ^TKFINSERIE(82416)="-50% passe à -70%"
+ s ^TKFINSERIE(106832)="-50% passe à -70%"
+ s ^TKFINSERIE(106781)="-50% passe à -70%"
+ s ^TKFINSERIE(102146)="-50% passe à -70%"
+ s ^TKFINSERIE(100835)="-50% passe à -70%"
+ s ^TKFINSERIE(8497)="-50% passe à -70%"
+ s ^TKFINSERIE(107061)="-50% passe à -70%"
+ s ^TKFINSERIE(101897)="-50% passe à -70%"
+ s ^TKFINSERIE(105871)="-50% passe à -70%"
+ s ^TKFINSERIE(105082)="-50% passe à -70%"
+ s ^TKFINSERIE(101884)="-50% passe à -70%"
+ s ^TKFINSERIE(87623)="-50% passe à -70%"
+ s ^TKFINSERIE(103816)="-50% passe à -70%"
+ s ^TKFINSERIE(104360)="-50% passe à -70%"
+ s ^TKFINSERIE(104414)="-50% passe à -70%"
+ s ^TKFINSERIE(77949)="-50% passe à -70%"
+ s ^TKFINSERIE(106981)="-50% passe à -70%"
+ s ^TKFINSERIE(105390)="-50% passe à -70%"
+ s ^TKFINSERIE(105896)="-50% passe à -70%"
+ s ^TKFINSERIE(89975)="-50% passe à -70%"
+ s ^TKFINSERIE(103338)="-50% passe à -70%"
+ s ^TKFINSERIE(101870)="-50% passe à -70%"
+ s ^TKFINSERIE(83815)="-50% passe à -70%"
+ s ^TKFINSERIE(107045)="-50% passe à -70%"
+ s ^TKFINSERIE(105403)="-50% passe à -70%"
+ s ^TKFINSERIE(104554)="-50% passe à -70%"
+ s ^TKFINSERIE(87577)="-50% passe à -70%"
+ s ^TKFINSERIE(104366)="-50% passe à -70%"
+ s ^TKFINSERIE(87763)="-50% passe à -70%"
+ s ^TKFINSERIE(103819)="-50% passe à -70%"
+ s ^TKFINSERIE(102145)="-50% passe à -70%"
+ s ^TKFINSERIE(104319)="-50% passe à -70%"
+ s ^TKFINSERIE(110838)="-50% passe à -70%"
+ s ^TKFINSERIE(103815)="-50% passe à -70%"
+ s ^TKFINSERIE(101950)="-50% passe à -70%"
+ s ^TKFINSERIE(107055)="-50% passe à -70%"
+ s ^TKFINSERIE(89924)="-50% passe à -70%"
+ s ^TKFINSERIE(75204)="-50% passe à -70%"
+ s ^TKFINSERIE(101911)="-50% passe à -70%"
+ s ^TKFINSERIE(106799)="-50% passe à -70%"
+ s ^TKFINSERIE(105110)="-50% passe à -70%"
+ s ^TKFINSERIE(104573)="-50% passe à -70%"
+ s ^TKFINSERIE(84328)="-50% passe à -70%"
+ s ^TKFINSERIE(105084)="-50% passe à -70%"
+ s ^TKFINSERIE(78856)="-50% passe à -70%"
+ s ^TKFINSERIE(101792)="-50% passe à -70%"
+ s ^TKFINSERIE(107018)="-50% passe à -70%"
+ s ^TKFINSERIE(106822)="-50% passe à -70%"
+ s ^TKFINSERIE(101138)="-50% passe à -70%"
+ s ^TKFINSERIE(106914)="-50% passe à -70%"
+ s ^TKFINSERIE(105393)="-50% passe à -70%"
+ s ^TKFINSERIE(104477)="-50% passe à -70%"
+ s ^TKFINSERIE(105786)="-50% passe à -70%"
+ s ^TKFINSERIE(106872)="-50% passe à -70%"
+ s ^TKFINSERIE(105628)="-50% passe à -70%"
+ s ^TKFINSERIE(100170)="-50% passe à -70%"
+ s ^TKFINSERIE(87732)="-50% passe à -70%"
+ s ^TKFINSERIE(101934)="-50% passe à -70%"
+ s ^TKFINSERIE(107016)="-50% passe à -70%"
+ s ^TKFINSERIE(83774)="-50% passe à -70%"
+ s ^TKFINSERIE(104347)="-50% passe à -70%"
+ s ^TKFINSERIE(103483)="-50% passe à -70%"
+ s ^TKFINSERIE(83769)="-50% passe à -70%"
+ s ^TKFINSERIE(107007)="-50% passe à -70%"
+ s ^TKFINSERIE(100232)="-50% passe à -70%"
+ s ^TKFINSERIE(107070)="-50% passe à -70%"
+ s ^TKFINSERIE(101959)="-50% passe à -70%"
+ s ^TKFINSERIE(100836)="-50% passe à -70%"
+ s ^TKFINSERIE(115990)="-50% passe à -70%"
+ s ^TKFINSERIE(101816)="-50% passe à -70%"
+ s ^TKFINSERIE(81873)="-50% passe à -70%"
+ s ^TKFINSERIE(89874)="-50% passe à -70%"
+ s ^TKFINSERIE(101821)="-50% passe à -70%"
+ s ^TKFINSERIE(83746)="-50% passe à -70%"
+ s ^TKFINSERIE(79985)="-50% passe à -70%"
+ s ^TKFINSERIE(89925)="-50% passe à -70%"
+ s ^TKFINSERIE(77887)="-50% passe à -70%"
+ s ^TKFINSERIE(89960)="-50% passe à -70%"
+ s ^TKFINSERIE(84011)="-50% passe à -70%"
+ s ^TKFINSERIE(86380)="-50% passe à -70%"
+ s ^TKFINSERIE(101872)="-50% passe à -70%"
+ s ^TKFINSERIE(100168)="-50% passe à -70%"
+ s ^TKFINSERIE(103688)="-50% passe à -70%"
+ s ^TKFINSERIE(87733)="-50% passe à -70%"
+ s ^TKFINSERIE(105103)="-50% passe à -70%"
+ s ^TKFINSERIE(100812)="-50% passe à -70%"
+ s ^TKFINSERIE(100611)="-50% passe à -70%"
+ s ^TKFINSERIE(86965)="-50% passe à -70%"
+ s ^TKFINSERIE(106923)="-50% passe à -70%"
+ s ^TKFINSERIE(100192)="-50% passe à -70%"
+ s ^TKFINSERIE(75080)="-50% passe à -70%"
+ s ^TKFINSERIE(83778)="-50% passe à -70%"
+ s ^TKFINSERIE(100838)="-50% passe à -70%"
+ s ^TKFINSERIE(66517)="-50% passe à -70%"
+ s ^TKFINSERIE(101987)="-50% passe à -70%"
+ s ^TKFINSERIE(101817)="-50% passe à -70%"
+ s ^TKFINSERIE(103687)="-50% passe à -70%"
+ s ^TKFINSERIE(104448)="-50% passe à -70%"
+ s ^TKFINSERIE(79154)="-50% passe à -70%"
+ s ^TKFINSERIE(100160)="-50% passe à -70%"
+ s ^TKFINSERIE(100722)="-50% passe à -70%"
+ s ^TKFINSERIE(83745)="-50% passe à -70%"
+ s ^TKFINSERIE(78506)="-50% passe à -70%"
+ s ^TKFINSERIE(87792)="-50% passe à -70%"
+ s ^TKFINSERIE(100776)="-50% passe à -70%"
+ s ^TKFINSERIE(79155)="-50% passe à -70%"
+ s ^TKFINSERIE(101904)="-50% passe à -70%"
+ s ^TKFINSERIE(101890)="-50% passe à -70%"
+ s ^TKFINSERIE(89846)="-50% passe à -70%"
+ s ^TKFINSERIE(104409)="-50% passe à -70%"
+ s ^TKFINSERIE(83506)="-50% passe à -70%"
+ s ^TKFINSERIE(83706)="-50% passe à -70%"
+ s ^TKFINSERIE(103330)="-50% passe à -70%"
+ s ^TKFINSERIE(100096)="-50% passe à -70%"
+ s ^TKFINSERIE(87622)="-50% passe à -70%"
+ s ^TKFINSERIE(83879)="-50% passe à -70%"
+ s ^TKFINSERIE(106152)="-50% passe à -70%"
+ s ^TKFINSERIE(103355)="-50% passe à -70%"
+ s ^TKFINSERIE(102322)="-50% passe à -70%"
+ s ^TKFINSERIE(81643)="-50% passe à -70%"
+ s ^TKFINSERIE(76899)="-50% passe à -70%"
+ s ^TKFINSERIE(100098)="-50% passe à -70%"
+ s ^TKFINSERIE(105881)="-50% passe à -70%"
+ s ^TKFINSERIE(100612)="-50% passe à -70%"
+ s ^TKFINSERIE(86294)="-50% passe à -70%"
+ s ^TKFINSERIE(81720)="-50% passe à -70%"
+ s ^TKFINSERIE(107059)="-50% passe à -70%"
+ s ^TKFINSERIE(89955)="-50% passe à -70%"
+ s ^TKFINSERIE(107107)="-50% passe à -70%"
+ s ^TKFINSERIE(102142)="-50% passe à -70%"
+ s ^TKFINSERIE(106891)="-50% passe à -70%"
+ s ^TKFINSERIE(66519)="-50% passe à -70%"
+ s ^TKFINSERIE(104569)="-50% passe à -70%"
+ s ^TKFINSERIE(107117)="-50% passe à -70%"
+ s ^TKFINSERIE(89803)="-50% passe à -70%"
+ s ^TKFINSERIE(105397)="-50% passe à -70%"
+ s ^TKFINSERIE(77415)="-50% passe à -70%"
+ s ^TKFINSERIE(83901)="-50% passe à -70%"
+ s ^TKFINSERIE(100244)="-50% passe à -70%"
+ s ^TKFINSERIE(77950)="-50% passe à -70%"
+ s ^TKFINSERIE(82321)="-50% passe à -70%"
+ s ^TKFINSERIE(8499)="-50% passe à -70%"
+ s ^TKFINSERIE(79190)="-50% passe à -70%"
+ s ^TKFINSERIE(101074)="-50% passe à -70%"
+ s ^TKFINSERIE(104426)="-50% passe à -70%"
+ s ^TKFINSERIE(100843)="-50% passe à -70%"
+ s ^TKFINSERIE(105106)="-50% passe à -70%"
+ s ^TKFINSERIE(104348)="-50% passe à -70%"
+ s ^TKFINSERIE(77416)="-50% passe à -70%"
+ s ^TKFINSERIE(81849)="-50% passe à -70%"
+ s ^TKFINSERIE(101824)="-50% passe à -70%"
+ s ^TKFINSERIE(83823)="-50% passe à -70%"
+ s ^TKFINSERIE(85774)="-50% passe à -70%"
+ s ^TKFINSERIE(81866)="-50% passe à -70%"
+ s ^TKFINSERIE(78819)="-50% passe à -70%"
+ s ^TKFINSERIE(106825)="-50% passe à -70%"
+ s ^TKFINSERIE(83481)="-50% passe à -70%"
+ s ^TKFINSERIE(89809)="-50% passe à -70%"
+ s ^TKFINSERIE(74145)="-50% passe à -70%"
+ s ^TKFINSERIE(81879)="-50% passe à -70%"
+ s ^TKFINSERIE(102137)="-50% passe à -70%"
+ s ^TKFINSERIE(83291)="-50% passe à -70%"
+ s ^TKFINSERIE(83739)="-50% passe à -70%"
+ s ^TKFINSERIE(86585)="-50% passe à -70%"
+ s ^TKFINSERIE(113571)="-50% passe à -70%"
+ s ^TKFINSERIE(100194)="-50% passe à -70%"
+ s ^TKFINSERIE(103701)="-50% passe à -70%"
+ s ^TKFINSERIE(89880)="-50% passe à -70%"
+ s ^TKFINSERIE(89952)="-50% passe à -70%"
+ s ^TKFINSERIE(105111)="-50% passe à -70%"
+ s ^TKFINSERIE(83782)="-50% passe à -70%"
+ s ^TKFINSERIE(89870)="-50% passe à -70%"
+ s ^TKFINSERIE(101874)="-50% passe à -70%"
+ s ^TKFINSERIE(101909)="-50% passe à -70%"
+ s ^TKFINSERIE(76621)="-50% passe à -70%"
+ s ^TKFINSERIE(103368)="-50% passe à -70%"
+ s ^TKFINSERIE(101940)="-50% passe à -70%"
+ s ^TKFINSERIE(105872)="-50% passe à -70%"
+ s ^TKFINSERIE(78630)="-50% passe à -70%"
+ s ^TKFINSERIE(105093)="-50% passe à -70%"
+ s ^TKFINSERIE(106907)="-50% passe à -70%"
+ s ^TKFINSERIE(102125)="-50% passe à -70%"
+ s ^TKFINSERIE(101954)="-50% passe à -70%"
+ s ^TKFINSERIE(102132)="-50% passe à -70%"
+ s ^TKFINSERIE(89847)="-50% passe à -70%"
+ s ^TKFINSERIE(100187)="-50% passe à -70%"
+ s ^TKFINSERIE(106878)="-50% passe à -70%"
+ s ^TKFINSERIE(86463)="-50% passe à -70%"
+ s ^TKFINSERIE(89950)="-50% passe à -70%"
+ s ^TKFINSERIE(84895)="-50% passe à -70%"
+ s ^TKFINSERIE(111014)="-50% passe à -70%"
+ s ^TKFINSERIE(81871)="-50% passe à -70%"
+ s ^TKFINSERIE(100181)="-50% passe à -70%"
+ s ^TKFINSERIE(106133)="-50% passe à -70%"
+ s ^TKFINSERIE(104324)="-50% passe à -70%"
+ s ^TKFINSERIE(101988)="-50% passe à -70%"
+ s ^TKFINSERIE(86391)="-50% passe à -70%"
+ s ^TKFINSERIE(105076)="-50% passe à -70%"
+ s ^TKFINSERIE(106896)="-50% passe à -70%"
+ s ^TKFINSERIE(107060)="-50% passe à -70%"
+ s ^TKFINSERIE(101061)="-50% passe à -70%"
+ s ^TKFINSERIE(106903)="-50% passe à -70%"
+ s ^TKFINSERIE(106940)="-50% passe à -70%"
+ s ^TKFINSERIE(87642)="-50% passe à -70%"
+ s ^TKFINSERIE(81465)="-50% passe à -70%"
+ s ^TKFINSERIE(102126)="-50% passe à -70%"
+ s ^TKFINSERIE(83858)="-50% passe à -70%"
+ s ^TKFINSERIE(84922)="-50% passe à -70%"
+ s ^TKFINSERIE(107105)="-50% passe à -70%"
+ s ^TKFINSERIE(83764)="-50% passe à -70%"
+ s ^TKFINSERIE(83776)="-50% passe à -70%"
+ s ^TKFINSERIE(106954)="-50% passe à -70%"
+ s ^TKFINSERIE(87574)="-50% passe à -70%"
+ s ^TKFINSERIE(100176)="-50% passe à -70%"
+ s ^TKFINSERIE(83786)="-50% passe à -70%"
+ s ^TKFINSERIE(101955)="-50% passe à -70%"
+ s ^TKFINSERIE(106992)="-50% passe à -70%"
+ s ^TKFINSERIE(89869)="-50% passe à -70%"
+ s ^TKFINSERIE(101853)="-50% passe à -70%"
+ s ^TKFINSERIE(100185)="-50% passe à -70%"
+ s ^TKFINSERIE(102128)="-50% passe à -70%"
+ s ^TKFINSERIE(104432)="-50% passe à -70%"
+ s ^TKFINSERIE(106123)="-50% passe à -70%"
+ s ^TKFINSERIE(100845)="-50% passe à -70%"
+ s ^TKFINSERIE(76628)="-50% passe à -70%"
+ s ^TKFINSERIE(81869)="-50% passe à -70%"
+ s ^TKFINSERIE(87501)="-50% passe à -70%"
+ s ^TKFINSERIE(81880)="-50% passe à -70%"
+ s ^TKFINSERIE(105873)="-50% passe à -70%"
+ s ^TKFINSERIE(104430)="-50% passe à -70%"
+ s ^TKFINSERIE(104363)="-50% passe à -70%"
+ s ^TKFINSERIE(83943)="-50% passe à -70%"
+ s ^TKFINSERIE(101801)="-50% passe à -70%"
+ s ^TKFINSERIE(81821)="-50% passe à -70%"
+ s ^TKFINSERIE(107112)="-50% passe à -70%"
+ s ^TKFINSERIE(107101)="-50% passe à -70%"
+ s ^TKFINSERIE(89811)="-50% passe à -70%"
+ s ^TKFINSERIE(87736)="-50% passe à -70%"
+ s ^TKFINSERIE(103689)="-50% passe à -70%"
+ s ^TKFINSERIE(101964)="-50% passe à -70%"
+ s ^TKFINSERIE(105099)="-50% passe à -70%"
+ s ^TKFINSERIE(82498)="-50% passe à -70%"
+ s ^TKFINSERIE(83507)="-50% passe à -70%"
+ s ^TKFINSERIE(81851)="-50% passe à -70%"
+ s ^TKFINSERIE(104370)="-50% passe à -70%"
+ s ^TKFINSERIE(79232)="-50% passe à -70%"
+ s ^TKFINSERIE(100794)="-50% passe à -70%"
+ s ^TKFINSERIE(106921)="-50% passe à -70%"
+ s ^TKFINSERIE(83512)="-50% passe à -70%"
+ s ^TKFINSERIE(93123)="-50% passe à -70%"
+ s ^TKFINSERIE(106886)="-50% passe à -70%"
+ s ^TKFINSERIE(74150)="-50% passe à -70%"
+ s ^TKFINSERIE(77806)="-50% passe à -70%"
+ s ^TKFINSERIE(107002)="-50% passe à -70%"
+ s ^TKFINSERIE(76625)="-50% passe à -70%"
+ s ^TKFINSERIE(89941)="-50% passe à -70%"
+ s ^TKFINSERIE(100095)="-50% passe à -70%"
+ s ^TKFINSERIE(106813)="-50% passe à -70%"
+ s ^TKFINSERIE(77159)="-50% passe à -70%"
+ s ^TKFINSERIE(106824)="-50% passe à -70%"
+ s ^TKFINSERIE(104355)="-50% passe à -70%"
+ s ^TKFINSERIE(89891)="-50% passe à -70%"
+ s ^TKFINSERIE(102131)="-50% passe à -70%"
+ s ^TKFINSERIE(77805)="-50% passe à -70%"
+ s ^TKFINSERIE(74260)="-50% passe à -70%"
+ s ^TKFINSERIE(85771)="-50% passe à -70%"
+ s ^TKFINSERIE(105073)="-50% passe à -70%"
+ s ^TKFINSERIE(101993)="-50% passe à -70%"
+ s ^TKFINSERIE(87649)="-50% passe à -70%"
+ s ^TKFINSERIE(76639)="-50% passe à -70%"
+ s ^TKFINSERIE(81644)="-50% passe à -70%"
+ s ^TKFINSERIE(86291)="-50% passe à -70%"
+ s ^TKFINSERIE(84324)="-50% passe à -70%"
+ s ^TKFINSERIE(106852)="-50% passe à -70%"
+ s ^TKFINSERIE(81850)="-50% passe à -70%"
+ s ^TKFINSERIE(104149)="-50% passe à -70%"
+ s ^TKFINSERIE(101991)="-50% passe à -70%"
+ s ^TKFINSERIE(105069)="-50% passe à -70%"
+ s ^TKFINSERIE(101835)="-50% passe à -70%"
+ s ^TKFINSERIE(106895)="-50% passe à -70%"
+ s ^TKFINSERIE(104436)="-50% passe à -70%"
+ s ^TKFINSERIE(100087)="-50% passe à -70%"
+ s ^TKFINSERIE(89971)="-50% passe à -70%"
+ s ^TKFINSERIE(103695)="-50% passe à -70%"
+ s ^TKFINSERIE(77421)="-50% passe à -70%"
+ s ^TKFINSERIE(87772)="-50% passe à -70%"
+ s ^TKFINSERIE(102135)="-50% passe à -70%"
+ s ^TKFINSERIE(100172)="-50% passe à -70%"
+ s ^TKFINSERIE(83780)="-50% passe à -70%"
+ s ^TKFINSERIE(105619)="-50% passe à -70%"
+ s ^TKFINSERIE(103349)="-50% passe à -70%"
+ s ^TKFINSERIE(101965)="-50% passe à -70%"
+ s ^TKFINSERIE(8498)="-50% passe à -70%"
+ s ^TKFINSERIE(106947)="-50% passe à -70%"
+ s ^TKFINSERIE(100608)="-50% passe à -70%"
+ s ^TKFINSERIE(83949)="-50% passe à -70%"
+ s ^TKFINSERIE(84923)="-50% passe à -70%"
+ s ^TKFINSERIE(86543)="-50% passe à -70%"
+ s ^TKFINSERIE(83741)="-50% passe à -70%"
+ s ^TKFINSERIE(106875)="-50% passe à -70%"
+ s ^TKFINSERIE(113566)="-50% passe à -70%"
+ s ^TKFINSERIE(107542)="-50% passe à -70%"
+ s ^TKFINSERIE(104403)="-50% passe à -70%"
+ s ^TKFINSERIE(106991)="-50% passe à -70%"
+ s ^TKFINSERIE(105784)="-50% passe à -70%"
+ s ^TKFINSERIE(79231)="-50% passe à -70%"
+ s ^TKFINSERIE(84924)="-50% passe à -70%"
+ s ^TKFINSERIE(78857)="-50% passe à -70%"
+ s ^TKFINSERIE(87639)="-50% passe à -70%"
+ s ^TKFINSERIE(100871)="-50% passe à -70%"
+ s ^TKFINSERIE(106151)="-50% passe à -70%"
+ s ^TKFINSERIE(101983)="-50% passe à -70%"
+ s ^TKFINSERIE(107037)="-50% passe à -70%"
+ s ^TKFINSERIE(86505)="-50% passe à -70%"
+ s ^TKFINSERIE(102147)="-50% passe à -70%"
+ s ^TKFINSERIE(83510)="-50% passe à -70%"
+ s ^TKFINSERIE(105080)="-50% passe à -70%"
+ s ^TKFINSERIE(86292)="-50% passe à -70%"
+ s ^TKFINSERIE(106924)="-50% passe à -70%"
+ s ^TKFINSERIE(89926)="-50% passe à -70%"
+ s ^TKFINSERIE(83332)="-50% passe à -70%"
+ s ^TKFINSERIE(82133)="-50% passe à -70%"
+ s ^TKFINSERIE(86325)="-50% passe à -70%"
+ s ^TKFINSERIE(86356)="-50% passe à -70%"
+ s ^TKFINSERIE(106890)="-50% passe à -70%"
+ s ^TKFINSERIE(105070)="-50% passe à -70%"
+ s ^TKFINSERIE(80321)="-50% passe à -70%"
+ s ^TKFINSERIE(89954)="-50% passe à -70%"
+ s ^TKFINSERIE(83508)="-50% passe à -70%"
+ s ^TKFINSERIE(77418)="-50% passe à -70%"
+ s ^TKFINSERIE(76942)="-50% passe à -70%"
+ s ^TKFINSERIE(84009)="-50% passe à -70%"
+ s ^TKFINSERIE(82953)="-50% passe à -70%"
+ s ^TKFINSERIE(73001)="-50% passe à -70%"
+ s ^TKFINSERIE(89878)="-50% passe à -70%"
+ s ^TKFINSERIE(104561)="-50% passe à -70%"
+ s ^TKFINSERIE(84940)="-50% passe à -70%"
+ s ^TKFINSERIE(101858)="-50% passe à -70%"
+ s ^TKFINSERIE(86332)="-50% passe à -70%"
+ s ^TKFINSERIE(83694)="-50% passe à -70%"
+ s ^TKFINSERIE(102333)="-50% passe à -70%"
+ s ^TKFINSERIE(88451)="-50% passe à -70%"
+ s ^TKFINSERIE(89826)="-50% passe à -70%"
+ s ^TKFINSERIE(104357)="-50% passe à -70%"
+ s ^TKFINSERIE(106944)="-50% passe à -70%"
+ s ^TKFINSERIE(101873)="-50% passe à -70%"
+ s ^TKFINSERIE(106936)="-50% passe à -70%"
+ s ^TKFINSERIE(103342)="-50% passe à -70%"
+ s ^TKFINSERIE(82334)="-50% passe à -70%"
+ s ^TKFINSERIE(87729)="-50% passe à -70%"
+ s ^TKFINSERIE(105088)="-50% passe à -70%"
+ s ^TKFINSERIE(100161)="-50% passe à -70%"
+ s ^TKFINSERIE(76353)="-50% passe à -70%"
+ s ^TKFINSERIE(77801)="-50% passe à -70%"
+ s ^TKFINSERIE(76336)="-50% passe à -70%"
+ s ^TKFINSERIE(106951)="-50% passe à -70%"
+ s ^TKFINSERIE(81883)="-50% passe à -70%"
+ s ^TKFINSERIE(77948)="-50% passe à -70%"
+ s ^TKFINSERIE(83945)="-50% passe à -70%"
+ s ^TKFINSERIE(105924)="-50% passe à -70%"
+ s ^TKFINSERIE(100238)="-50% passe à -70%"
+ s ^TKFINSERIE(107021)="-50% passe à -70%"
+ s ^TKFINSERIE(81777)="-50% passe à -70%"
+ s ^TKFINSERIE(87502)="-50% passe à -70%"
+ s ^TKFINSERIE(78505)="-50% passe à -70%"
+ s ^TKFINSERIE(106830)="-50% passe à -70%"
+ s ^TKFINSERIE(76351)="-50% passe à -70%"
+ s ^TKFINSERIE(100933)="-50% passe à -70%"
+ s ^TKFINSERIE(78629)="-50% passe à -70%"
+ s ^TKFINSERIE(93780)="-50% passe à -70%"
+ s ^TKFINSERIE(89899)="-50% passe à -70%"
+ s ^TKFINSERIE(83309)="-50% passe à -70%"
+ s ^TKFINSERIE(106972)="-50% passe à -70%"
+ s ^TKFINSERIE(83931)="-50% passe à -70%"
+ s ^TKFINSERIE(86573)="-50% passe à -70%"
+ s ^TKFINSERIE(104482)="-50% passe à -70%"
+ s ^TKFINSERIE(81741)="-50% passe à -70%"
+ s ^TKFINSERIE(89936)="-50% passe à -70%"
+ s ^TKFINSERIE(101806)="-50% passe à -70%"
+ s ^TKFINSERIE(89968)="-50% passe à -70%"
+ s ^TKFINSERIE(83831)="-50% passe à -70%"
+ s ^TKFINSERIE(104367)="-50% passe à -70%"
+ s ^TKFINSERIE(102136)="-50% passe à -70%"
+ s ^TKFINSERIE(106810)="-50% passe à -70%"
+ s ^TKFINSERIE(106970)="-50% passe à -70%"
+ s ^TKFINSERIE(75243)="-50% passe à -70%"
+ s ^TKFINSERIE(105074)="-50% passe à -70%"
+ s ^TKFINSERIE(101857)="-50% passe à -70%"
+ s ^TKFINSERIE(107048)="-50% passe à -70%"
+ s ^TKFINSERIE(104346)="-50% passe à -70%"
+ s ^TKFINSERIE(82955)="-50% passe à -70%"
+ s ^TKFINSERIE(93120)="-50% passe à -70%"
+ s ^TKFINSERIE(91877)="-50% passe à -70%"
+ s ^TKFINSERIE(106067)="-50% passe à -70%"
+ s ^TKFINSERIE(101896)="-50% passe à -70%"
+ s ^TKFINSERIE(89943)="-50% passe à -70%"
+ s ^TKFINSERIE(81661)="-50% passe à -70%"
+ s ^TKFINSERIE(104424)="-50% passe à -70%"
+ s ^TKFINSERIE(101813)="-50% passe à -70%"
+ s ^TKFINSERIE(93294)="-50% passe à -70%"
+ s ^TKFINSERIE(100089)="-50% passe à -70%"
+ s ^TKFINSERIE(77815)="-50% passe à -70%"
+ s ^TKFINSERIE(89848)="-50% passe à -70%"
+ s ^TKFINSERIE(104570)="-50% passe à -70%"
+ s ^TKFINSERIE(105595)="-50% passe à -70%"
+ s ^TKFINSERIE(89876)="-50% passe à -70%"
+ s ^TKFINSERIE(104422)="-50% passe à -70%"
+ s ^TKFINSERIE(79242)="-50% passe à -70%"
+ s ^TKFINSERIE(113586)="-50% passe à -70%"
+ s ^TKFINSERIE(105620)="-50% passe à -70%"
+ s ^TKFINSERIE(103366)="-50% passe à -70%"
+ s ^TKFINSERIE(105835)="-50% passe à -70%"
+ s ^TKFINSERIE(89884)="-50% passe à -70%"
+ s ^TKFINSERIE(89851)="-50% passe à -70%"
+ s ^TKFINSERIE(105611)="-50% passe à -70%"
+ s ^TKFINSERIE(81702)="-50% passe à -70%"
+ s ^TKFINSERIE(81659)="-50% passe à -70%"
+ s ^TKFINSERIE(106132)="-50% passe à -70%"
+ s ^TKFINSERIE(106901)="-50% passe à -70%"
+ s ^TKFINSERIE(82754)="-50% passe à -70%"
+ s ^TKFINSERIE(83822)="-50% passe à -70%"
+ s ^TKFINSERIE(78659)="-50% passe à -70%"
+ s ^TKFINSERIE(89956)="-50% passe à -70%"
+ s ^TKFINSERIE(101943)="-50% passe à -70%"
+ s ^TKFINSERIE(87486)="-50% passe à -70%"
+ s ^TKFINSERIE(81629)="-50% passe à -70%"
+ s ^TKFINSERIE(84013)="-50% passe à -70%"
+ s ^TKFINSERIE(78860)="-50% passe à -70%"
+ s ^TKFINSERIE(107025)="-50% passe à -70%"
+ s ^TKFINSERIE(100605)="-50% passe à -70%"
+ s ^TKFINSERIE(82344)="-50% passe à -70%"
+ s ^TKFINSERIE(78250)="-50% passe à -70%"
+ s ^TKFINSERIE(103352)="-50% passe à -70%"
+ s ^TKFINSERIE(104397)="-50% passe à -70%"
+ s ^TKFINSERIE(105757)="-50% passe à -70%"
+ s ^TKFINSERIE(105081)="-50% passe à -70%"
+ s ^TKFINSERIE(101810)="-50% passe à -70%"
+ s ^TKFINSERIE(79191)="-50% passe à -70%"
+ s ^TKFINSERIE(101915)="-50% passe à -70%"
+ s ^TKFINSERIE(86466)="-50% passe à -70%"
+ s ^TKFINSERIE(106897)="-50% passe à -70%"
+ s ^TKFINSERIE(105079)="-50% passe à -70%"
+ s ^TKFINSERIE(87640)="-50% passe à -70%"
+ s ^TKFINSERIE(81867)="-50% passe à -70%"
+ s ^TKFINSERIE(106913)="-50% passe à -70%"
+ s ^TKFINSERIE(87569)="-50% passe à -70%"
+ s ^TKFINSERIE(102133)="-50% passe à -70%"
+ s ^TKFINSERIE(80715)="-50% passe à -70%"
+ s ^TKFINSERIE(71661)="-50% passe à -70%"
+ s ^TKFINSERIE(89902)="-50% passe à -70%"
+ s ^TKFINSERIE(103295)="-50% passe à -70%"
+ s ^TKFINSERIE(83312)="-50% passe à -70%"
+ s ^TKFINSERIE(106933)="-50% passe à -70%"
+ s ^TKFINSERIE(87787)="-50% passe à -70%"
+ s ^TKFINSERIE(101960)="-50% passe à -70%"
+ s ^TKFINSERIE(89877)="-50% passe à -70%"
+ s ^TKFINSERIE(104320)="-50% passe à -70%"
+ s ^TKFINSERIE(83779)="-50% passe à -70%"
+ s ^TKFINSERIE(89903)="-50% passe à -70%"
+ s ^TKFINSERIE(103691)="-50% passe à -70%"
+ s ^TKFINSERIE(87645)="-50% passe à -70%"
+ s ^TKFINSERIE(115991)="-50% passe à -70%"
+ s ^TKFINSERIE(100186)="-50% passe à -70%"
+ s ^TKFINSERIE(75075)="-50% passe à -70%"
+ s ^TKFINSERIE(8501)="-50% passe à -70%"
+ s ^TKFINSERIE(89945)="-50% passe à -70%"
+ s ^TKFINSERIE(85816)="-50% passe à -70%"
+ s ^TKFINSERIE(107536)="-50% passe à -70%"
+ s ^TKFINSERIE(113588)="-50% passe à -70%"
+ s ^TKFINSERIE(83762)="-50% passe à -70%"
+ s ^TKFINSERIE(82675)="-50% passe à -70%"
+ s ^TKFINSERIE(82401)="-50% passe à -70%"
+ s ^TKFINSERIE(100097)="-50% passe à -70%"
+ s ^TKFINSERIE(100099)="-50% passe à -70%"
+ s ^TKFINSERIE(82335)="-50% passe à -70%"
+ s ^TKFINSERIE(105610)="-50% passe à -70%"
+ s ^TKFINSERIE(87810)="-50% passe à -70%"
+ s ^TKFINSERIE(113585)="-50% passe à -70%"
+ s ^TKFINSERIE(100615)="-50% passe à -70%"
+ s ^TKFINSERIE(89883)="-50% passe à -70%"
+ s ^TKFINSERIE(101819)="-50% passe à -70%"
+ s ^TKFINSERIE(100930)="-50% passe à -70%"
+ s ^TKFINSERIE(87793)="-50% passe à -70%"
+ s ^TKFINSERIE(100818)="-50% passe à -70%"
+ s ^TKFINSERIE(86323)="-50% passe à -70%"
+ s ^TKFINSERIE(89951)="-50% passe à -70%"
+ s ^TKFINSERIE(81842)="-50% passe à -70%"
+ s ^TKFINSERIE(89904)="-50% passe à -70%"
+ s ^TKFINSERIE(106873)="-50% passe à -70%"
+ s ^TKFINSERIE(101851)="-50% passe à -70%"
+ s ^TKFINSERIE(79256)="-50% passe à -70%"
+ s ^TKFINSERIE(100132)="-50% passe à -70%"
+ s ^TKFINSERIE(107541)="-50% passe à -70%"
+ s ^TKFINSERIE(100821)="-50% passe à -70%"
+ s ^TKFINSERIE(100820)="-50% passe à -70%"
+ s ^TKFINSERIE(87483)="-50% passe à -70%"
+ s ^TKFINSERIE(77946)="-50% passe à -70%"
+ s ^TKFINSERIE(78830)="-50% passe à -70%"
+ s ^TKFINSERIE(76323)="-50% passe à -70%"
+ s ^TKFINSERIE(83292)="-50% passe à -70%"
+ s ^TKFINSERIE(91872)="-50% passe à -70%"
+ s ^TKFINSERIE(101885)="-50% passe à -70%"
+ s ^TKFINSERIE(87731)="-50% passe à -70%"
+ s ^TKFINSERIE(100156)="-50% passe à -70%"
+ s ^TKFINSERIE(77926)="-50% passe à -70%"
+ s ^TKFINSERIE(86379)="-50% passe à -70%"
+ s ^TKFINSERIE(83509)="-50% passe à -70%"
+ s ^TKFINSERIE(82979)="-50% passe à -70%"
+ s ^TKFINSERIE(85770)="-50% passe à -70%"
+ s ^TKFINSERIE(89886)="-50% passe à -70%"
+ s ^TKFINSERIE(100935)="-50% passe à -70%"
+ s ^TKFINSERIE(85798)="-50% passe à -70%"
+ s ^TKFINSERIE(83305)="-50% passe à -70%"
+ s ^TKFINSERIE(101878)="-50% passe à -70%"
+ s ^TKFINSERIE(83511)="-50% passe à -70%"
+ s ^TKFINSERIE(72278)="-50% passe à -70%"
+ s ^TKFINSERIE(77525)="-50% passe à -70%"
+ s ^TKFINSERIE(78240)="-50% passe à -70%"
+ s ^TKFINSERIE(77881)="-50% passe à -70%"
+ s ^TKFINSERIE(75236)="-50% passe à -70%"
+ s ^TKFINSERIE(87788)="-50% passe à -70%"
+ s ^TKFINSERIE(103700)="-50% passe à -70%"
+ s ^TKFINSERIE(101815)="-50% passe à -70%"
+ s ^TKFINSERIE(89944)="-50% passe à -70%"
+ s ^TKFINSERIE(100182)="-50% passe à -70%"
+ s ^TKFINSERIE(81848)="-50% passe à -70%"
+ s ^TKFINSERIE(100793)="-50% passe à -70%"
+ s ^TKFINSERIE(83307)="-50% passe à -70%"
+ s ^TKFINSERIE(102055)="-50% passe à -70%"
+ s ^TKFINSERIE(76378)="-50% passe à -70%"
+ s ^TKFINSERIE(77420)="-50% passe à -70%"
+ s ^TKFINSERIE(100923)="-50% passe à -70%"
+ s ^TKFINSERIE(113831)="-50% passe à -70%"
+ s ^TKFINSERIE(107540)="-50% passe à -70%"
+ s ^TKFINSERIE(84327)="-50% passe à -70%"
+ s ^TKFINSERIE(87789)="-50% passe à -70%"
+ s ^TKFINSERIE(87782)="-50% passe à -70%"
+ s ^TKFINSERIE(82948)="-50% passe à -70%"
+ s ^TKFINSERIE(82952)="-50% passe à -70%"
+ s ^TKFINSERIE(82495)="-50% passe à -70%"
+ s ^TKFINSERIE(83297)="-50% passe à -70%"
+ s ^TKFINSERIE(85152)="-50% passe à -70%"
+ s ^TKFINSERIE(83330)="-50% passe à -70%"
+ s ^TKFINSERIE(83518)="-50% passe à -70%"
+ s ^TKFINSERIE(100834)="-50% passe à -70%"
+ s ^TKFINSERIE(100795)="-50% passe à -70%"
+ s ^TKFINSERIE(93342)="-50% passe à -70%"
+ s ^TKFINSERIE(77161)="-50% passe à -70%"
+ s ^TKFINSERIE(83692)="-50% passe à -70%"
+ s ^TKFINSERIE(82954)="-50% passe à -70%"
+ s ^TKFINSERIE(100091)="-50% passe à -70%"
+ s ^TKFINSERIE(100717)="-50% passe à -70%"
+ s ^TKFINSERIE(103698)="-50% passe à -70%"
+ s ^TKFINSERIE(77803)="-50% passe à -70%"
+ s ^TKFINSERIE(83900)="-50% passe à -70%"
+ s ^TKFINSERIE(86465)="-50% passe à -70%"
+ s ^TKFINSERIE(104114)="-50% passe à -70%"
+ s ^TKFINSERIE(78836)="-50% passe à -70%"
+ s ^TKFINSERIE(76888)="-50% passe à -70%"
+ s ^TKFINSERIE(71397)="-50% passe à -70%"
+ s ^TKFINSERIE(67166)="-50% passe à -70%"
+ s ^TKFINSERIE(103390)="-50% passe à -70%"
+ s ^TKFINSERIE(83308)="-50% passe à -70%"
+ s ^TKFINSERIE(83821)="-50% passe à -70%"
+ s ^TKFINSERIE(89905)="-50% passe à -70%"
+ s ^TKFINSERIE(85904)="-50% passe à -70%"
+ s ^TKFINSERIE(104349)="-50% passe à -70%"
+ s ^TKFINSERIE(89937)="-50% passe à -70%"
+ s ^TKFINSERIE(67198)="-50% passe à -70%"
+ s ^TKFINSERIE(79237)="-50% passe à -70%"
+ s ^TKFINSERIE(85797)="-50% passe à -70%"
+ s ^TKFINSERIE(83293)="-50% passe à -70%"
+ s ^TKFINSERIE(77683)="-50% passe à -70%"
+ s ^TKFINSERIE(91970)="-50% passe à -70%"
+ s ^TKFINSERIE(81882)="-50% passe à -70%"
+ s ^TKFINSERIE(83747)="-50% passe à -70%"
+ s ^TKFINSERIE(78657)="-50% passe à -70%"
+ s ^TKFINSERIE(106139)="-50% passe à -70%"
+ s ^TKFINSERIE(81642)="-50% passe à -70%"
+ s ^TKFINSERIE(101968)="-50% passe à -70%"
+ s ^TKFINSERIE(83737)="-50% passe à -70%"
+ s ^TKFINSERIE(93404)="-50% passe à -70%"
+ s ^TKFINSERIE(76496)="-50% passe à -70%"
+ s ^TKFINSERIE(77797)="-50% passe à -70%"
+ s ^TKFINSERIE(100164)="-50% passe à -70%"
+ s ^TKFINSERIE(72456)="-50% passe à -70%"
+ s ^TKFINSERIE(76243)="-50% passe à -70%"
+ s ^TKFINSERIE(83294)="-50% passe à -70%"
+ s ^TKFINSERIE(83299)="-50% passe à -70%"
+ s ^TKFINSERIE(83306)="-50% passe à -70%"
+ s ^TKFINSERIE(87762)="-50% passe à -70%"
+ s ^TKFINSERIE(103744)="-50% passe à -70%"
+ s ^TKFINSERIE(81897)="-50% passe à -70%"
+ s ^TKFINSERIE(82129)="-50% passe à -70%"
+ s ^TKFINSERIE(85779)="-50% passe à -70%"
+ s ^TKFINSERIE(89821)="-50% passe à -70%"
+ s ^TKFINSERIE(100789)="-50% passe à -70%"
+ s ^TKFINSERIE(101060)="-50% passe à -70%"
+ s ^TKFINSERIE(100800)="-50% passe à -70%"
+ s ^TKFINSERIE(77413)="-50% passe à -70%"
+ s ^TKFINSERIE(83915)="-50% passe à -70%"
+ s ^TKFINSERIE(93281)="-50% passe à -70%"
+ s ^TKFINSERIE(85795)="-50% passe à -70%"
+ s ^TKFINSERIE(100158)="-50% passe à -70%"
+ s ^TKFINSERIE(103736)="-50% passe à -70%"
+ s ^TKFINSERIE(81874)="-50% passe à -70%"
+ s ^TKFINSERIE(106808)="-50% passe à -70%"
+ s ^TKFINSERIE(81790)="-50% passe à -70%"
+ s ^TKFINSERIE(83913)="-50% passe à -70%"
+ s ^TKFINSERIE(85799)="-50% passe à -70%"
+ s ^TKFINSERIE(87363)="-50% passe à -70%"
+ s ^TKFINSERIE(103482)="-50% passe à -70%"
+ s ^TKFINSERIE(78478)="-50% passe à -70%"
+ s ^TKFINSERIE(76633)="-50% passe à -70%"
+ s ^TKFINSERIE(112530)="-50% passe à -70%"
+ s ^TKFINSERIE(83940)="-50% passe à -70%"
+ s ^TKFINSERIE(100001)="-50% passe à -70%"
+ s ^TKFINSERIE(101829)="-50% passe à -70%"
+ s ^TKFINSERIE(104129)="-50% passe à -70%"
+ s ^TKFINSERIE(86508)="-50% passe à -70%"
+ s ^TKFINSERIE(105807)="-50% passe à -70%"
+ s ^TKFINSERIE(73706)="-50% passe à -70%"
+ s ^TKFINSERIE(93379)="-50% passe à -70%"
+ s ^TKFINSERIE(100177)="-50% passe à -70%"
+ s ^TKFINSERIE(81812)="-50% passe à -70%"
+ s ^TKFINSERIE(82422)="-50% passe à -70%"
+ s ^TKFINSERIE(83806)="-50% passe à -70%"
+ s ^TKFINSERIE(103735)="-50% passe à -70%"
+ s ^TKFINSERIE(76883)="-50% passe à -70%"
+ s ^TKFINSERIE(77789)="-50% passe à -70%"
+ s ^TKFINSERIE(77794)="-50% passe à -70%"
+ s ^TKFINSERIE(83513)="-50% passe à -70%"
+ s ^TKFINSERIE(89980)="-50% passe à -70%"
+ s ^TKFINSERIE(102387)="-50% passe à -70%"
+ s ^TKFINSERIE(104583)="-50% passe à -70%"
+ s ^TKFINSERIE(101994)="-50% passe à -70%"
+ s ^TKFINSERIE(85153)="-50% passe à -70%"
+ s ^TKFINSERIE(83304)="-50% passe à -70%"
+ s ^TKFINSERIE(83519)="-50% passe à -70%"
+ s ^TKFINSERIE(91954)="-50% passe à -70%"
+ s ^TKFINSERIE(76238)="-50% passe à -70%"
+ s ^TKFINSERIE(77968)="-50% passe à -70%"
+ s ^TKFINSERIE(81693)="-50% passe à -70%"
+ s ^TKFINSERIE(87728)="-50% passe à -70%"
+ s ^TKFINSERIE(84004)="-50% passe à -70%"
+ s ^TKFINSERIE(81737)="-50% passe à -70%"
+ s ^TKFINSERIE(83505)="-50% passe à -70%"
+ s ^TKFINSERIE(83515)="-50% passe à -70%"
+ s ^TKFINSERIE(81860)="-50% passe à -70%"
+ s ^TKFINSERIE(100858)="-50% passe à -70%"
+ s ^TKFINSERIE(75359)="-50% passe à -70%"
+ s ^TKFINSERIE(78853)="-50% passe à -70%"
+ s ^TKFINSERIE(72322)="-50% passe à -70%"
+ s ^TKFINSERIE(78447)="-50% passe à -70%"
+ s ^TKFINSERIE(82446)="-50% passe à -70%"
+ s ^TKFINSERIE(104189)="-50% passe à -70%"
+ s ^TKFINSERIE(83920)="-50% passe à -70%"
+ s ^TKFINSERIE(86419)="-50% passe à -70%"
+ s ^TKFINSERIE(91707)="-50% passe à -70%"
+ s ^TKFINSERIE(50744)="-50% passe à -70%"
+ s ^TKFINSERIE(87568)="-50% passe à -70%"
+ s ^TKFINSERIE(76372)="-50% passe à -70%"
+ s ^TKFINSERIE(82366)="-50% passe à -70%"
+ s ^TKFINSERIE(83751)="-50% passe à -70%"
+ s ^TKFINSERIE(83800)="-50% passe à -70%"
+ s ^TKFINSERIE(67164)="-50% passe à -70%"
+ s ^TKFINSERIE(78661)="-50% passe à -70%"
+ s ^TKFINSERIE(83756)="-50% passe à -70%"
+ s ^TKFINSERIE(83333)="-50% passe à -70%"
+ s ^TKFINSERIE(93380)="-50% passe à -70%"
+ s ^TKFINSERIE(91758)="-50% passe à -70%"
+ s ^TKFINSERIE(76217)="-50% passe à -70%"
+ s ^TKFINSERIE(76627)="-50% passe à -70%"
+ s ^TKFINSERIE(78474)="-50% passe à -70%"
+ s ^TKFINSERIE(78831)="-50% passe à -70%"
+ s ^TKFINSERIE(81634)="-50% passe à -70%"
+ s ^TKFINSERIE(83993)="-50% passe à -70%"
+ s ^TKFINSERIE(89963)="-50% passe à -70%"
+ s ^TKFINSERIE(103710)="-50% passe à -70%"
+ s ^TKFINSERIE(8510)="-50% passe à -70%"
+ s ^TKFINSERIE(82443)="-50% passe à -70%"
+ s ^TKFINSERIE(89906)="-50% passe à -70%"
+ s ^TKFINSERIE(8502)="-50% passe à -70%"
+ s ^TKFINSERIE(105408)="-50% passe à -70%"
+ s ^TKFINSERIE(113583)="-50% passe à -70%"
+ s ^TKFINSERIE(87761)="-50% passe à -70%"
+ s ^TKFINSERIE(83597)="-50% passe à -70%"
+ s ^TKFINSERIE(85776)="-50% passe à -70%"
+ s ^TKFINSERIE(75346)="-50% passe à -70%"
+ s ^TKFINSERIE(81739)="-50% passe à -70%"
+ s ^TKFINSERIE(83331)="-50% passe à -70%"
+ s ^TKFINSERIE(119402)="-50% passe à -70%"
+ s ^TKFINSERIE(117827)="-50% passe à -70%"
+ s ^TKFINSERIE(117828)="-50% passe à -70%"
+ s ^TKFINSERIE(117990)="-50% passe à -70%"
+ s ^TKFINSERIE(112811)="-50% passe à -70%"
+ s ^TKFINSERIE(112755)="-50% passe à -70%"
+ s ^TKFINSERIE(118304)="-50% passe à -70%"
+ s ^TKFINSERIE(118305)="-50% passe à -70%"
+ s ^TKFINSERIE(118075)="-50% passe à -70%"
+ s ^TKFINSERIE(118077)="-50% passe à -70%"
+ s ^TKFINSERIE(118076)="-50% passe à -70%"
+ s ^TKFINSERIE(118074)="-50% passe à -70%"
+ s ^TKFINSERIE(117591)="-50% passe à -70%"
+ s ^TKFINSERIE(118071)="-50% passe à -70%"
+ s ^TKFINSERIE(118057)="-50% passe à -70%"
+ s ^TKFINSERIE(118058)="-50% passe à -70%"
+ s ^TKFINSERIE(118054)="-50% passe à -70%"
+ s ^TKFINSERIE(118053)="-50% passe à -70%"
+ s ^TKFINSERIE(118059)="-50% passe à -70%"
+ s ^TKFINSERIE(118056)="-50% passe à -70%"
+ s ^TKFINSERIE(118055)="-50% passe à -70%"
+ s ^TKFINSERIE(118060)="-50% passe à -70%"
+ s ^TKFINSERIE(117986)="-50% passe à -70%"
+ s ^TKFINSERIE(117805)="-50% passe à -70%"
+ s ^TKFINSERIE(117806)="-50% passe à -70%"
+ s ^TKFINSERIE(117804)="-50% passe à -70%"
+ s ^TKFINSERIE(117874)="-50% passe à -70%"
+ s ^TKFINSERIE(112826)="-50% passe à -70%"
+ s ^TKFINSERIE(112610)="-50% passe à -70%"
+ s ^TKFINSERIE(113858)="-50% passe à -70%"
+ s ^TKFINSERIE(112767)="-50% passe à -70%"
+ s ^TKFINSERIE(112787)="-50% passe à -70%"
+ s ^TKFINSERIE(112587)="-50% passe à -70%"
+ s ^TKFINSERIE(112584)="-50% passe à -70%"
+ s ^TKFINSERIE(112585)="-50% passe à -70%"
+ s ^TKFINSERIE(112813)="-50% passe à -70%"
+ s ^TKFINSERIE(112686)="-50% passe à -70%"
+ s ^TKFINSERIE(112785)="-50% passe à -70%"
+ s ^TKFINSERIE(112823)="-50% passe à -70%"
+ s ^TKFINSERIE(112788)="-50% passe à -70%"
+ s ^TKFINSERIE(112815)="-50% passe à -70%"
+ s ^TKFINSERIE(112762)="-50% passe à -70%"
+ s ^TKFINSERIE(112761)="-50% passe à -70%"
+ s ^TKFINSERIE(113634)="-50% passe à -70%"
+ s ^TKFINSERIE(112688)="-50% passe à -70%"
+ s ^TKFINSERIE(112756)="-50% passe à -70%"
+ s ^TKFINSERIE(112764)="-50% passe à -70%"
+ s ^TKFINSERIE(112763)="-50% passe à -70%"
+ s ^TKFINSERIE(112765)="-50% passe à -70%"
+ s ^TKFINSERIE(114092)="-50% passe à -70%"
+ s ^TKFINSERIE(114091)="-50% passe à -70%"
+ s ^TKFINSERIE(114093)="-50% passe à -70%"
+ s ^TKFINSERIE(112786)="-50% passe à -70%"
+ s ^TKFINSERIE(114997)="-50% passe à -70%"
+ s ^TKFINSERIE(112793)="-50% passe à -70%"
+ s ^TKFINSERIE(112792)="-50% passe à -70%"
+ s ^TKFINSERIE(104486)="-50% passe à -70%"
+ s ^TKFINSERIE(81091)="-50% passe à -70%"
+ s ^TKFINSERIE(84066)="-50% passe à -70%"
+ s ^TKFINSERIE(8414)="-50% passe à -70%"
+ s ^TKFINSERIE(104467)="-50% passe à -70%"
+ s ^TKFINSERIE(79037)="-50% passe à -70%"
+ s ^TKFINSERIE(82874)="-50% passe à -70%"
+ s ^TKFINSERIE(76125)="-50% passe à -70%"
+ s ^TKFINSERIE(81158)="-50% passe à -70%"
+ s ^TKFINSERIE(86929)="-50% passe à -70%"
+ s ^TKFINSERIE(103089)="-50% passe à -70%"
+ s ^TKFINSERIE(102231)="-50% passe à -70%"
+ s ^TKFINSERIE(102232)="-50% passe à -70%"
+ s ^TKFINSERIE(102235)="-50% passe à -70%"
+ s ^TKFINSERIE(102241)="-50% passe à -70%"
+ s ^TKFINSERIE(86147)="-50% passe à -70%"
+ s ^TKFINSERIE(103090)="-50% passe à -70%"
+ s ^TKFINSERIE(100200)="-50% passe à -70%"
+ s ^TKFINSERIE(100214)="-50% passe à -70%"
+ s ^TKFINSERIE(82516)="-50% passe à -70%"
+ s ^TKFINSERIE(8360)="-50% passe à -70%"
+ s ^TKFINSERIE(44012)="-50% passe à -70%"
+ s ^TKFINSERIE(86138)="-50% passe à -70%"
+ s ^TKFINSERIE(100215)="-50% passe à -70%"
+ s ^TKFINSERIE(110948)="-50% passe à -70%"
+ s ^TKFINSERIE(107076)="-50% passe à -70%"
+ s ^TKFINSERIE(79465)="-50% passe à -70%"
+ s ^TKFINSERIE(78354)="-50% passe à -70%"
+ s ^TKFINSERIE(88355)="-50% passe à -70%"
+ s ^TKFINSERIE(81219)="-50% passe à -70%"
+ s ^TKFINSERIE(103500)="-50% passe à -70%"
+ s ^TKFINSERIE(104155)="-50% passe à -70%"
+ s ^TKFINSERIE(103506)="-50% passe à -70%"
+ s ^TKFINSERIE(103632)="-50% passe à -70%"
+ s ^TKFINSERIE(110949)="-50% passe à -70%"
+ s ^TKFINSERIE(100587)="-50% passe à -70%"
+ s ^TKFINSERIE(100213)="-50% passe à -70%"
+ s ^TKFINSERIE(82270)="-50% passe à -70%"
+ s ^TKFINSERIE(8066)="-50% passe à -70%"
+ s ^TKFINSERIE(54977)="-50% passe à -70%"
+ s ^TKFINSERIE(85764)="-50% passe à -70%"
+ s ^TKFINSERIE(87269)="-50% passe à -70%"
+ s ^TKFINSERIE(87035)="-50% passe à -70%"
+ s ^TKFINSERIE(44010)="-50% passe à -70%"
+ s ^TKFINSERIE(103523)="-50% passe à -70%"
+ s ^TKFINSERIE(105140)="-50% passe à -70%"
+ s ^TKFINSERIE(62516)="-50% passe à -70%"
+ s ^TKFINSERIE(87326)="-50% passe à -70%"
+ s ^TKFINSERIE(104157)="-50% passe à -70%"
+ s ^TKFINSERIE(62512)="-50% passe à -70%"
+ s ^TKFINSERIE(6435)="-50% passe à -70%"
+ s ^TKFINSERIE(107573)="-50% passe à -70%"
+ s ^TKFINSERIE(86988)="-50% passe à -70%"
+ s ^TKFINSERIE(107582)="-50% passe à -70%"
+ s ^TKFINSERIE(111749)="-50% passe à -70%"
+ s ^TKFINSERIE(83586)="-50% passe à -70%"
+ s ^TKFINSERIE(41075)="-50% passe à -70%"
+ s ^TKFINSERIE(80035)="-50% passe à -70%"
+ s ^TKFINSERIE(105034)="-50% passe à -70%"
+ s ^TKFINSERIE(87603)="-50% passe à -70%"
+ s ^TKFINSERIE(67432)="-50% passe à -70%"
+ s ^TKFINSERIE(79723)="-50% passe à -70%"
+ s ^TKFINSERIE(8397)="-50% passe à -70%"
+ s ^TKFINSERIE(87163)="-50% passe à -70%"
+ s ^TKFINSERIE(87160)="-50% passe à -70%"
+ s ^TKFINSERIE(76387)="-50% passe à -70%"
+ s ^TKFINSERIE(54201)="-50% passe à -70%"
+ s ^TKFINSERIE(118311)="ajout -30%"
+ s ^TKFINSERIE(117789)="ajout -30%"
+ s ^TKFINSERIE(117829)="ajout -30%"
+ s ^TKFINSERIE(117794)="ajout -30%"
+ s ^TKFINSERIE(117749)="ajout -30%"
+ s ^TKFINSERIE(118094)="ajout -30%"
+ s ^TKFINSERIE(117878)="ajout -30%"
+ s ^TKFINSERIE(117792)="ajout -30%"
+ s ^TKFINSERIE(118092)="ajout -30%"
+ s ^TKFINSERIE(117797)="ajout -30%"
+ s ^TKFINSERIE(117835)="ajout -30%"
+ s ^TKFINSERIE(117830)="ajout -30%"
+ s ^TKFINSERIE(118084)="ajout -30%"
+ s ^TKFINSERIE(117844)="ajout -30%"
+ s ^TKFINSERIE(117877)="ajout -30%"
+ s ^TKFINSERIE(117941)="ajout -30%"
+ s ^TKFINSERIE(117940)="ajout -30%"
+ s ^TKFINSERIE(117932)="ajout -30%"
+ s ^TKFINSERIE(118784)="ajout -30%"
+ s ^TKFINSERIE(117764)="ajout -30%"
+ s ^TKFINSERIE(117791)="ajout -30%"
+ s ^TKFINSERIE(117795)="ajout -30%"
+ s ^TKFINSERIE(117951)="ajout -30%"
+ s ^TKFINSERIE(117765)="ajout -30%"
+ s ^TKFINSERIE(118314)="ajout -30%"
+ s ^TKFINSERIE(117845)="ajout -30%"
+ s ^TKFINSERIE(117952)="ajout -30%"
+ s ^TKFINSERIE(117802)="ajout -30%"
+ s ^TKFINSERIE(117801)="ajout -30%"
+ s ^TKFINSERIE(117466)="ajout -30%"
+ s ^TKFINSERIE(117462)="ajout -30%"
+ s ^TKFINSERIE(117984)="ajout -50%"
+ s ^TKFINSERIE(117985)="ajout -50%"
+ s ^TKFINSERIE(117983)="ajout -50%"
+ s ^TKFINSERIE(119236)="ajout -50%"
+ s ^TKFINSERIE(119239)="ajout -50%"
+ s ^TKFINSERIE(119238)="ajout -50%"
+ s ^TKFINSERIE(119237)="ajout -50%"
+ s ^TKFINSERIE(117925)="ajout -50%"
+ s ^TKFINSERIE(117922)="ajout -50%"
+ s ^TKFINSERIE(117924)="ajout -50%"
+ s ^TKFINSERIE(117923)="ajout -50%"
+ s ^TKFINSERIE(118369)="ajout -50%"
+ s ^TKFINSERIE(118370)="ajout -50%"
+ s ^TKFINSERIE(118371)="ajout -50%"
+ s ^TKFINSERIE(118068)="ajout -50%"
+ s ^TKFINSERIE(118067)="ajout -50%"
+ s ^TKFINSERIE(118069)="ajout -50%"
+ s ^TKFINSERIE(117693)="ajout -50%"
+ s ^TKFINSERIE(117691)="ajout -50%"
+ s ^TKFINSERIE(117692)="ajout -50%"
+ s ^TKFINSERIE(118368)="ajout -50%"
+ s ^TKFINSERIE(118383)="ajout -50%"
+ s ^TKFINSERIE(117690)="ajout -50%"
+ s ^TKFINSERIE(117859)="ajout -50%"
+ s ^TKFINSERIE(119800)="ajout -50%"
+ s ^TKFINSERIE(118309)="ajout -50%"
+ s ^TKFINSERIE(118308)="ajout -50%"
+ s ^TKFINSERIE(118306)="ajout -50%"
+ s ^TKFINSERIE(118307)="ajout -50%"
+ s ^TKFINSERIE(117869)="ajout -50%"
+ s ^TKFINSERIE(117871)="ajout -50%"
+ s ^TKFINSERIE(117870)="ajout -50%"
+ s ^TKFINSERIE(117987)="ajout -50%"
+ s ^TKFINSERIE(117872)="ajout -50%"
+ s ^TKFINSERIE(117698)="ajout -50%"
+ s ^TKFINSERIE(117697)="ajout -50%"
+ s ^TKFINSERIE(117520)="ajout -50%"
+ s ^TKFINSERIE(117521)="ajout -50%"
+ s ^TKFINSERIE(117907)="ajout -50%"
+ s ^TKFINSERIE(117705)="ajout -50%"
+ s ^TKFINSERIE(117703)="ajout -50%"
+ s ^TKFINSERIE(117704)="ajout -50%"
+ s ^TKFINSERIE(117706)="ajout -50%"
+ s ^TKFINSERIE(118360)="ajout -50%"
+ s ^TKFINSERIE(117709)="ajout -50%"
+ s ^TKFINSERIE(117908)="ajout -50%"
+ s ^TKFINSERIE(117710)="ajout -50%"
+ s ^TKFINSERIE(117711)="ajout -50%"
+ s ^TKFINSERIE(117708)="ajout -50%"
+ s ^TKFINSERIE(117707)="ajout -50%"
+ s ^TKFINSERIE(117977)="ajout -50%"
+ s ^TKFINSERIE(117976)="ajout -50%"
+ s ^TKFINSERIE(117979)="ajout -50%"
+ s ^TKFINSERIE(117980)="ajout -50%"
+ s ^TKFINSERIE(117982)="ajout -50%"
+ s ^TKFINSERIE(117981)="ajout -50%"
+ s ^TKFINSERIE(117978)="ajout -50%"
+ s ^TKFINSERIE(112835)="ajout -50%"
+ s ^TKFINSERIE(112832)="ajout -50%"
+ s ^TKFINSERIE(112833)="ajout -50%"
+ s ^TKFINSERIE(112836)="ajout -50%"
+ s ^TKFINSERIE(112831)="ajout -50%"
+ s ^TKFINSERIE(112834)="ajout -50%"
+ s ^TKFINSERIE(112802)="ajout -50%"
+ s ^TKFINSERIE(112803)="ajout -50%"
+ s ^TKFINSERIE(112800)="ajout -50%"
+ s ^TKFINSERIE(112801)="ajout -50%"
+ s ^TKFINSERIE(112799)="ajout -50%"
+ s ^TKFINSERIE(114265)="ajout -50%"
+ s ^TKFINSERIE(114266)="ajout -50%"
+ s ^TKFINSERIE(114264)="ajout -50%"
+ s ^TKFINSERIE(54841)="ajout -50%"
+ s ^TKFINSERIE(74623)="ajout -50%"
+ s ^TKFINSERIE(54837)="ajout -50%"
+ s ^TKFINSERIE(3321)="ajout -50%"
+ s ^TKFINSERIE(87374)="ajout -50%"
+ s ^TKFINSERIE(74537)="ajout -50%"
+ s ^TKFINSERIE(2872)="ajout -50%"
+ s ^TKFINSERIE(87372)="ajout -50%"
+ s ^TKFINSERIE(87373)="ajout -50%"
+ s ^TKFINSERIE(74624)="ajout -50%"
+ s ^TKFINSERIE(74621)="ajout -50%"
+ s ^TKFINSERIE(74540)="ajout -50%"
+ s ^TKFINSERIE(74620)="ajout -50%"
+ s ^TKFINSERIE(2890)="ajout -50%"
+ s ^TKFINSERIE(54836)="ajout -50%"
+ s ^TKFINSERIE(83661)="ajout -50%"
+ s ^TKFINSERIE(64377)="ajout -50%"
+ s ^TKFINSERIE(111775)="ajout -50%"
+ s ^TKFINSERIE(2886)="ajout -50%"
+ s ^TKFINSERIE(2877)="ajout -50%"
+ s ^TKFINSERIE(41917)="ajout -50%"
+ s ^TKFINSERIE(58776)="ajout -50%"
+ s ^TKFINSERIE(37569)="ajout -50%"
+ s ^TKFINSERIE(3606)="ajout -50%"
+ s ^TKFINSERIE(111776)="ajout -50%"
+ s ^TKFINSERIE(111773)="ajout -50%"
+ s ^TKFINSERIE(64512)="ajout -50%"
+ s ^TKFINSERIE(56062)="ajout -50%"
+ s ^TKFINSERIE(37454)="ajout -50%"
+ s ^TKFINSERIE(56061)="ajout -50%"
+ s ^TKFINSERIE(74536)="ajout -50%"
+ s ^TKFINSERIE(111646)="ajout -50%"
+ s ^TKFINSERIE(64509)="ajout -50%"
+ s ^TKFINSERIE(44176)="ajout -50%"
+ s ^TKFINSERIE(105413)="ajout -50%"
+ s ^TKFINSERIE(105414)="ajout -50%"
+ s ^TKFINSERIE(105412)="ajout -50%"
+ s ^TKFINSERIE(101759)="ajout -50%"
+ s ^TKFINSERIE(101760)="ajout -50%"
+ s ^TKFINSERIE(100258)="ajout -50%"
+ s ^TKFINSERIE(101764)="ajout -50%"
+ s ^TKFINSERIE(101762)="ajout -50%"
+ s ^TKFINSERIE(101761)="ajout -50%"
+ s ^TKFINSERIE(101765)="ajout -50%"
+ s ^TKFINSERIE(105415)="ajout -50%"
+ s ^TKFINSERIE(117917)="ajout -50%"
+ s ^TKFINSERIE(113953)="ajout -50%"
+ s ^TKFINSERIE(113954)="ajout -50%"
+ s ^TKFINSERIE(113952)="ajout -50%"
+ s ^TKFINSERIE(113951)="ajout -50%"
+ s ^TKFINSERIE(113956)="ajout -50%"
+ s ^TKFINSERIE(113955)="ajout -50%"
+ s ^TKFINSERIE(100288)="ajout -50%"
+ s ^TKFINSERIE(100294)="ajout -50%"
+ s ^TKFINSERIE(100296)="ajout -50%"
+ s ^TKFINSERIE(100297)="ajout -50%"
+ s ^TKFINSERIE(100292)="ajout -50%"
+ s ^TKFINSERIE(111809)="ajout -50%"
+ s ^TKFINSERIE(100291)="ajout -50%"
+ s ^TKFINSERIE(100293)="ajout -50%"
+ s ^TKFINSERIE(107828)="ajout -50%"
+ s ^TKFINSERIE(106673)="ajout -50%"
+ s ^TKFINSERIE(100290)="ajout -50%"
+ s ^TKFINSERIE(100295)="ajout -50%"
+ s ^TKFINSERIE(100289)="ajout -50%"
+ s ^TKFINSERIE(9046)="ajout -50%"
+ s ^TKFINSERIE(9047)="ajout -50%"
+ s ^TKFINSERIE(68051)="ajout -50%"
+ s ^TKFINSERIE(110941)="ajout -50%"
+ s ^TKFINSERIE(9045)="ajout -50%"
+ s ^TKFINSERIE(68050)="ajout -50%"
+ s ^TKFINSERIE(68052)="ajout -50%"
+ s ^TKFINSERIE(100267)="ajout -70%"
+ s ^TKFINSERIE(3370)="ajout -70%"
+ s ^TKFINSERIE(4025)="ajout -70%"
+ s ^TKFINSERIE(83657)="ajout -70%"
+ s ^TKFINSERIE(3318)="ajout -70%"
+ s ^TKFINSERIE(83656)="ajout -70%"
+ s ^TKFINSERIE(3326)="ajout -70%"
+ s ^TKFINSERIE(83556)="ajout -70%"
+
+ q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

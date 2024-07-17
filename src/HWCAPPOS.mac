@@ -1,0 +1,19 @@
+ROUTINE HWCAPPOS
+HWCAPPOS
+ s ^HWCAPPOS("G")=1
+ s ^HWCAPPOS("M")=2
+ s ^HWCAPPOS("Q")=3
+ s ^HWCAPPOS("C")=4
+ s ^HWCAPPOS("F")=5
+ s ^HWCAPPOS("V")=6
+ s ^HWCAPPOS("X")=9
+ Q
+
+
+
+
+
+
+
+
+

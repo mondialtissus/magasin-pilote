@@ -1,0 +1,20 @@
+ROUTINE INITMENUPCA
+INITMENUPCA
+ 
+ s ^MENU(2,1)="1\enccmd/TI\SF1:neerl\SF1: Commande Tissus depuis PCA\SF1:ALL\SF1:ANG"
+ s ^MENU(2,2)="1\enccmd/ME\SF2:neerl\SF2: Commande Mercerie depuis PCA\SF2:ALL\SF2:ANG"
+ s ^MENU(2,3)="1\enccmd/SP\SF3:neerl\SF3: Commande Spéciale\SF3:ALL\SF3:ANG"
+ s ^MENU(2,4)="1\visuBudget\SF4:neerl\SF4: Suivi Budgétaire\SF4:ALL\SF4:ANG"
+ s ^MENU(2,5)="1\histcommande\SF5:neerl\SF5: Suivi des commandes\SF5:ALL\SF5:ANG"
+ s ^MENU(2,6)="1\nevgetdirect\SF6:neerl\SF6: Réception des livraisons\SF6:ALL\SF6:ANG"
+ s ^MENU(2,7)="1\catalogue_menu\SF7:neerl\SF7: Impression des catalogues\SF7:ALL\SF7:ANG"
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

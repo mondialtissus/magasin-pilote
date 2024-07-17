@@ -1,0 +1,16 @@
+ROUTINE HWINFOCOUPENUM
+HWINFOCOUPENUM
+ 
+     ;Création du compteur de coupe à lancer le matin ou le soir après la fermeture
+     	
+	s ^HWINFO("COUPEHEUREINIT")="22400000\20110622\23455006"
+ 
+ q
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,359 @@
+ROUTINE Ope2024070309235817
+Ope2024070309235817
+ s ^TKFINSERIE(86422)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86424)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86425)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86427)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86430)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86432)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86435)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86437)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86438)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86439)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86441)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86442)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86444)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86445)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86446)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86826)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86827)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86828)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86829)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86831)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(86833)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(107843)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(107844)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(107845)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(107846)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(107854)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(107871)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(107872)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(107873)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(107876)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(107924)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109857)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109875)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109880)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109886)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109895)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109911)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109912)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109913)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109922)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109924)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109928)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109929)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109934)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109935)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109953)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109954)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109955)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109964)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109966)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109967)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(109970)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110007)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110018)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110031)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110032)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110089)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110120)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110146)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110147)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110148)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110149)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110150)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110151)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110152)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(110153)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(116930)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128522)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128523)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128524)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128525)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128526)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128527)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128528)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128529)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128530)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128531)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128532)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128533)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128534)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128535)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128536)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128537)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128538)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128539)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128540)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128541)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128542)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128543)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128544)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128545)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128546)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128547)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128548)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128549)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128550)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128551)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128552)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128553)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128554)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128555)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128556)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128557)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128558)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128559)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128560)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128561)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128562)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128563)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128564)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128565)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128566)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128567)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128568)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128569)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128570)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128571)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128572)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128573)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128574)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128575)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128576)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128577)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128578)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128579)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128580)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128581)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128582)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128583)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128584)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128585)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128586)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128587)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128588)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128589)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128590)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128591)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128592)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128593)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128594)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128595)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128596)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128597)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128598)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128599)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128600)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128601)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128602)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128603)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128604)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128605)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128606)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128607)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128608)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128609)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128610)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128611)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128612)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128613)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128614)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128615)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128616)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128617)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128618)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128619)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128620)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128621)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128622)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128623)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128624)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128625)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128626)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128627)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128628)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128629)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128630)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128631)="Soldes 2ème dem 70%"
+ s ^TKFINSERIE(128632)="Soldes 2ème dem 70%"
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

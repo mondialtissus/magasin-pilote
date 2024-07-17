@@ -1,0 +1,136 @@
+ROUTINE CREDITS
+CREDITS
+ // Permet de lister tous les credits et remonter ceux qui ont soit une carte fidelite, soit un bon de reduction, soit un avoir
+ s FROM="20040101"
+ s gPOS=$G(^HWINFO("MAG"))
+ s iDATE=$ZDATEH(FROM,5) // Date caché
+ 
+ ZA ^TKCREDITS
+ ZA ^MODTKCR
+ s AAMMJJ=$O(^TKCREDITS(""))
+ while AAMMJJ'=""
+ {
+         if $L(AAMMJJ)=6
+         {       
+         S iDATEB=iDATE-1
+                 if $ZDATEH("20"_AAMMJJ,5)>iDATEB
+                 {                               
+                         // On a les credits depuis la date FROM
+                         s CA=$O(^TKCREDITS(AAMMJJ,""))
+                         while CA'=""
+                         {
+                                 s TK=$O(^TKCREDITS(AAMMJJ,CA,""))
+                                 while TK'=""
+                                 {
+                                         s TKG=$G(^TK(TK,0))
+                                         s LGTK=$O(^TK(TK,""))
+                                         s bAVOIR=0
+                                         while LGTK'=""
+                                         {
+                                                 if $P($G(^TK(TK,LGTK)),"\",2)["Avoir" {s bAVOIR=1}
+                                                 s LGTK=$O(^TK(TK,LGTK))
+                                         }
+                                         if (+$P(TKG,"\",7)'=0)||(+$P(TKG,"\",8)'=0)||(bAVOIR=1)
+                                         {                                               
+                                                 // On a soit une carte de fidelite, soit un bon de reduction
+                                                 // on va donc reprendre le contenu du ticket et l'inscrite dans ^MODTKCR
+                                                 if $D(^TKCREDITSREF(TK))>0
+                                                 {                                                       
+                                                         s TKREF=$P($G(^TKCREDITSREF(TK)),"\",1)
+                                                         s LG=$O(^TK(TK,"0"))
+                                                         while LG'=""
+                                                         {                                               
+                                                                 s ^MODTKCR(gPOS,$E(AAMMJJ,1,4),$E(AAMMJJ,5,7),CA,TKREF,LG)=$G(^TK(TK,LG))
+                                                                 s LG=$O(^TK(TK,LG))
+                                                         }
+                                                 }
+                                                 else
+                                                 {
+                                                         s ^MODROUTINE(gPOS,"TKCREDITSREF",TK)="manque ref."
+                                                 }
+                                         }
+                                         s TK=$O(^TKCREDITS(AAMMJJ,CA,TK))
+                                 }
+                                 s CA=$O(^TKCREDITS(AAMMJJ,CA))                  
+                         }
+                 }
+         }
+         s AAMMJJ=$O(^TKCREDITS(AAMMJJ))
+ }
+ ZD ^TKCREDITS
+ ZD ^MODTKCR
+ if gPOS'="G224" {k ^HWSTOCKIO} // On supprime pendant qu'on y est l'historique de stock !!ATTENTION!! Penser à le supprimer si réutilisation de la routine !!!
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

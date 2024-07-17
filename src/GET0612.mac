@@ -1,0 +1,56 @@
+ROUTINE GET0612
+ ZA ^MODROUTINE
+ s gPOS=$G(^HWINFO("MAG"))
+ s CA=$O(^TKFIDELITE(""))
+ while CA'=""
+ {
+         s DATE=$O(^TKFIDELITE(CA,"051130"))
+         while DATE'=""
+         {       
+		if +($E(DATE,2))=6 {q}         	
+                 s LASTREC=$G(^MODROUTINE(gPOS,"GET0612FIDELITE","TKFIDELITE",DATE))
+                 s LASTTOT=$P(LASTREC,"\",1)
+                 s LASTQTE=$P(LASTREC,"\",2)
+                 
+                 s REC=$G(^TKFIDELITE(CA,DATE))
+                 s TOT=$P(REC,"\",1)
+                 s QTE=$P(REC,"\",2)
+                 
+                 s GTOT=LASTTOT+TOT
+                 s GQTE=LASTQTE+QTE
+                 
+                 s ^MODROUTINE(gPOS,"GET0612FIDELITE","TKFIDELITE",DATE)=GTOT_"\"_GQTE
+                 
+                 s DATE=$O(^TKFIDELITE(CA,DATE))
+         }
+         s CA=$O(^TKFIDELITE(CA))
+ }
+ ZD ^MODROUTINE
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

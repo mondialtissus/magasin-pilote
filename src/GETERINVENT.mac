@@ -1,0 +1,146 @@
+ROUTINE GETERINVENT
+GETERINVENT
+ 
+	; Remontée des erreurs inventaire des fichiers
+	; INVARTICLETI, INVARTICLELM & INVARTICLEME
+		
+	D CHECKFILE("INVARTICLETI")
+	D CHECKFILE("INVARTICLELM")
+	D CHECKFILE("INVARTICLEME")	
+	Q
+	
+ 
+CHECKFILE(FILE)
+ 
+	s FILE="^"_FILE
+	s POSNUM=$G(^HWINFO("MAG"))
+	s TYPE=$O(@FILE@(POSNUM,""))
+	while TYPE'=""{
+		
+		if TYPE="REFERENCE"
+		{			
+			s N1=$O(@FILE@(POSNUM,TYPE,""))
+			while N1'=""{
+					s N2=$O(@FILE@(POSNUM,TYPE,N1,""))
+					while N2'=""{
+						s N3=$O(@FILE@(POSNUM,TYPE,N1,N2,""))
+						while N3'=""{
+							s REC=$G(@FILE@(POSNUM,TYPE,N1,N2,N3))							
+							D CHK							
+							i RES=1{q}
+							s N3=$O(@FILE@(POSNUM,TYPE,N1,N2,N3))
+						}
+						i RES=1{q}			
+						s N2=$O(@FILE@(POSNUM,TYPE,N1,N2))
+					}
+					i RES=1{q}
+				s N1=$O(@FILE@(POSNUM,TYPE,N1))
+			}
+		}
+		else
+		{
+			; NON REFERENCE
+			s N1=$O(@FILE@(POSNUM,TYPE,""))
+			while N1'=""{
+				s REC=$G(@FILE@(POSNUM,TYPE,N1))
+				D CHK
+				i RES=1{q}
+				s N1=$O(@FILE@(POSNUM,TYPE,N1))
+			}
+		}					
+		s TYPE=$O(@FILE@(POSNUM,TYPE))
+	}
+	I +$D(^MODROUTINE(POSNUM,"ERRINVENT2"))>0 {
+		D FORCECOMM^UTILCAISSE
+	}
+	q
+		
+CHK
+	s RES=0
+	i TYPE="NON REFERENCE"
+	{		
+		i $P(REC,"\",12)="TEST"
+		{s ^MODROUTINE(POSNUM,"ERRINVENT2",FILE,"NREF")="Il y a du test dans ce fichier" s RES=1}
+	}
+	else
+	{
+		i $P(REC,"\",17)="TEST"
+		{s ^MODROUTINE(POSNUM,"ERRINVENT2",FILE,"REF")="Il y a du test dans ce fichier" s RES=1}
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

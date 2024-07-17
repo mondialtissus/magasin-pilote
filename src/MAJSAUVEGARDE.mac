@@ -1,0 +1,40 @@
+ROUTINE MAJSAUVEGARDE
+MAJSAUVEGARDE
+ s LASTID=$O(^HWINFO("SAUVEGARDE",""),-1)
+ s LASTID=LASTID+1
+ s ^HWINFO("SAUVEGARDE",LASTID)="COPY\Pos => Caisses Download"
+ s ^HWINFO("SAUVEGARDE",LASTID,"DEST")="\\CAISSE\CAISSE\Download"
+ s ^HWINFO("SAUVEGARDE",LASTID,"FILES")="Caisse.exe\Suivi.exe\Ticket.exe\Stat.exe\Majpos.exe\"
+ s ^HWINFO("SAUVEGARDE",LASTID,"SRC")="c:\pos"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

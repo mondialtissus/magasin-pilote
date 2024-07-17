@@ -1,0 +1,83 @@
+ROUTINE RECUPSTOCKTHEO
+RECUPSTOCKTHEO(DATEARCHIVE=0)
+	//Dans le cas d'un echec de l'enregistrement de GUSTOCKINV la veille de l'inventaire nous allons chercher le stock lié à la veille de la date d'archive
+	if +DATEARCHIVE=0 q
+	
+	s DATEINV = +$G(^HWINFO("INVENTAIRE","DATE"))
+	if DATEINV=0 q
+	
+	k ^GUSTOCKINV(DATEINV)
+	
+	//Cette focntion permet d'avoir le stock informatique à la date de l'inventaire avec le secteur et le PLU
+	s PA = 0
+	s QTE = 0
+	s PLU = ""
+	s PLU = $O(^GUSTOCKARC(PLU))
+	s DATASTOCK = ""
+	s DATAINV = ""
+	s DATAINVSECT = ""
+	s DESARTICLE = ""       
+	s VALOPLU = 0
+	s SECTEUR = ""	
+
+	while PLU '= ""
+	{
+	   	s DATEAVANT = $O(^GUSTOCKARC(PLU,DATEARCHIVE),-1)
+		if DATEAVANT'=""
+		{
+			s DATASTOCK = $G(^GUSTOCKARC(PLU,DATEAVANT))         
+	        
+	        s CLEFARTICLE = $G(^SP(PLU))
+        
+            i CLEFARTICLE '= ""
+            {
+                    s DATAART = $G(^ST(CLEFARTICLE))
+            		if DATAART'=""
+            		{
+            
+	                    S PA=$$GETPRIX($P(DATAART,"\",13))              
+	            
+	                    s SECTEUR = $P(DATAART,"\",23)
+	                    s QTE = $P(DATASTOCK,"\",6)
+	                    s VALOPLU = +QTE*+PA
+	                    
+	                    i (+SECTEUR = 4) || (+SECTEUR = 7) || (+SECTEUR = 8)
+	                    {
+	                            s DESARTICLE = $P($G(^ST(CLEFARTICLE,5)),"\",1)
+	                    }
+	                    else
+	                    {
+	                            s DESARTICLE = CLEFARTICLE
+	                    }
+	                    
+	                    s DATAINV = QTE_"\"_VALOPLU_"\"_DESARTICLE_"\"                    
+	            
+	                    s ^GUSTOCKINV(DATEINV,SECTEUR,PLU)=DATAINV
+	            
+	                    i +$D(^GUSTOCKINV(DATEINV,SECTEUR,0))>0
+	                    {
+	                            s DATAINVSECT = $G(^GUSTOCKINV(DATEINV,SECTEUR,0))
+	                            
+	                            s QTE = +$P(DATAINVSECT,"\",1) + QTE    
+	                            s VALOPLU = +$P(DATAINVSECT,"\",2) + VALOPLU
+	                    }                               
+	            
+	                    s ^GUSTOCKINV(DATEINV,SECTEUR,0) = QTE_"\"_VALOPLU_"\"    
+	                    w !,"PLU : "_PLU
+            		}   
+             }
+	                
+	     }
+	    s PLU = $O(^GUSTOCKARC(PLU))
+	}
+	q
+
+GETPRIX(PRIX)
+	S DATESYS=+$P($H,",",1)
+	S DATEBASCULE=+$P(PRIX,"/",2)
+	I DATEBASCULE>0 D
+	.S INDICE=3
+	.I DATESYS<DATEBASCULE S INDICE=1
+	.S PRIX=$P(PRIX,"/",INDICE)
+	.Q
+	Q PRIX

@@ -1,0 +1,29 @@
+ROUTINE GUCOUPONINIT
+GUCOUPONINIT
+	s ^GUCOUPON(68691) = "2\0\5\0.87\0.2\1"
+    	s ^GUCOUPON(68692) = "2\5\10\2.61\0.5\1"
+    	s ^GUCOUPON(68693) = "2\10\\4.18\1\1"
+    	s ^GUCOUPON(68694) = "1\0\10\1.93\1\0.5"
+    	s ^GUCOUPON(68695) = "1\10\20\5.81\3\0.5"
+    	s ^GUCOUPON(68696) = "1\20\\9.68\5\0.5"
+    	s ^GUCOUPON(68697) = "3\0\5\0.94\0.2\1"
+    	s ^GUCOUPON(68698) = "3\5\10\2.84\0.5\1"
+    	s ^GUCOUPON(68699) = "3\10\\4.54\1\1"
+    	s ^GUCOUPON("SECTEUR",1) = 313159
+    	s ^GUCOUPON("SECTEUR",2) = 313157
+    	s ^GUCOUPON("SECTEUR",3) = 313159
+    	s ^GUCOUPON("SECTEUR",4) = 313157
+    	q
+
+
+
+
+
+
+
+
+
+
+
+
+

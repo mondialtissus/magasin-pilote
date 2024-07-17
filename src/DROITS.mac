@@ -1,0 +1,38 @@
+ROUTINE DROITS
+DROITS
+	S ^DROITS(1)="POS - Menu Référentiel de base"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    	S ^DROITS(2)="POS - Menu Commandes"
+	S ^DROITS(3)="POS - Menu Manager"
+	S ^DROITS(4)="POS - Menu Gestion des Utilisateurs"
+	S ^DROITS(5)="Logiciel de Caisse - Lancement"
+	S ^DROITS(6)="Logiciel de Caisse - Paramètres"
+	S ^DROITS(7)="Logiciel de Caisse - Gestion des Tickets"
+	S ^DROITS(8)="Logiciel de Caisse - Suivi des Ventes"
+	S ^DROITS(9)="Logiciel de Caisse - Clôture de journée"
+	S ^DROITS(10)="Logiciel de Caisse - Modification d'un type de règlement d'un ticket"
+	S ^DROITS(11)="Logiciel de Caisse - Gestion des Avoirs et des Crédits"
+	S ^DROITS(12)="Logiciel de Caisse - Mise en Erreur d'un Ticket"
+	S ^DROITS(13)="Inventaire - Contrôle et validation"
+	S ^DROITS(14)="Mercerie - Réception des livraisons"
+	S ^DROITS(15)="Scanner - Inventaire Tournant"
+	S ^DROITS(21)="Borne Déco - Commande de confection"
+	S ^DROITS(22)="Borne Déco - Commande de coupe" 	
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

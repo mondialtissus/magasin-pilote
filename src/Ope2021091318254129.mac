@@ -1,0 +1,2699 @@
+ROUTINE Ope2021091318254129
+Ope2021091318254129
+ s ^TKFINSERIE(63278)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(58318)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(42330)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(228610)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(228611)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(228612)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(68002)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(110759)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100841)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(207022)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112554)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(207020)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(231602)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(231599)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(231598)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(110758)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(207023)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(231610)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(231601)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83322)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(207024)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83321)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(207019)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(231611)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(231609)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(231607)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(207021)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(231603)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112553)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(207025)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(231605)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(82437)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(231600)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(42332)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112044)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112043)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(127582)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(127583)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(114486)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(233680)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112041)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112042)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(120301)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(53699)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(102048)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(102049)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(123225)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(63276)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(102047)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(42329)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112040)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(120302)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(118327)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(105708)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83269)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83258)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112495)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121204)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87807)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87802)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(105711)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83277)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122878)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83275)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83276)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87809)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83274)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122879)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(110798)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87799)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83267)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83268)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(152613)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204882)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128208)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(155164)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128203)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128205)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204886)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150633)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204888)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229745)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(155165)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204892)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128202)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204884)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204889)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128196)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(152609)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128197)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(152610)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204891)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128195)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(152616)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204883)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(145331)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204887)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128198)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128201)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128200)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(152611)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(152612)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204890)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128199)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(205755)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(155163)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112493)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122877)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83266)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112492)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122881)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200665)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200667)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200666)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(65213)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(58319)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(228613)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(228614)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(228615)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(147541)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(25402)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(25408)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(25401)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(25410)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128342)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128343)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(25409)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(37360)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(115188)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(115189)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(228625)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100708)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226791)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226793)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226792)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(224389)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(224391)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(224390)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(224392)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85893)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87657)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83209)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128180)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226843)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121579)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128183)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226864)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100852)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122860)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(110767)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204821)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226848)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204817)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226863)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226854)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204818)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226858)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83223)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204815)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226868)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87663)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204810)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226852)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128190)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204809)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226846)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204816)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226851)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83221)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100848)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(145337)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87661)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122870)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128187)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204813)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226850)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128191)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204811)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226861)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204812)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226857)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(145334)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226847)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81754)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83219)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226844)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128192)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83220)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(145335)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87659)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81750)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(110760)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122869)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128185)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226849)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(110761)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81746)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83212)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226845)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100847)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204814)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226860)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204819)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226866)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204820)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226853)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112535)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85896)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85892)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225124)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122165)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235994)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235992)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225125)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(119841)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225122)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200467)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235991)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225121)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225123)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(119844)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235990)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235993)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200465)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200468)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112131)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246359)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246358)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112134)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112140)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(237430)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235947)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(240794)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(240792)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(240793)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(242612)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(242610)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244664)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153300)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244662)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244663)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236047)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(240314)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246970)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243989)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243988)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225385)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226810)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236162)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206581)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226809)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244657)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153329)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153299)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225876)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235921)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244656)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153309)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225390)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201438)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225391)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243993)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243994)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243992)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206583)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153170)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153169)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206286)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236163)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243368)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229857)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225392)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153325)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153323)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235920)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206584)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229601)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206287)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(227270)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236164)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244659)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244665)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(242613)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243995)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244071)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244070)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206656)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225388)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246904)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229515)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153182)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201759)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153317)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225436)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201758)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246967)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246968)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201435)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206288)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(240770)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244002)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246972)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246971)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243247)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246973)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153311)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246966)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244008)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244026)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244020)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244032)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244038)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244014)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236112)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206290)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246974)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244661)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153322)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153305)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244006)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244024)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200669)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244018)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244030)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244036)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244012)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243671)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201443)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225393)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225435)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206291)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243249)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243248)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153303)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225394)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200670)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153302)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246975)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229858)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206293)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246969)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225875)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225877)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229860)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236114)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153295)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229859)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(240768)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(240767)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225397)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(227464)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234755)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206585)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229856)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244007)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244019)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244025)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244031)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244037)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244013)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225396)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225395)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244660)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243991)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243990)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153296)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225640)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225641)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206315)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244005)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244023)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244017)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244029)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244035)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244011)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243718)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225882)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201442)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244658)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206586)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206587)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236165)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236109)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229504)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236119)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244655)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244666)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236113)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225642)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225643)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225644)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201436)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201437)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236046)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153321)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236115)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225874)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(242611)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153320)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225389)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244003)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153294)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244021)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244015)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244027)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244033)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244009)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225386)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206296)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206297)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201760)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236166)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244004)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244022)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244016)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244028)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153292)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244034)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244010)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229502)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229503)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201757)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206294)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206295)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153310)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206658)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236120)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243999)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244001)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(244000)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206588)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153308)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(153306)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236118)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200673)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246965)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236117)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225387)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206589)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200807)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225384)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225878)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225872)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246902)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(246903)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243997)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243246)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200671)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206593)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225645)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235922)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(240769)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243996)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206298)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200867)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236078)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(237404)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(237403)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200866)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200868)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200927)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200947)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236038)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206339)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206340)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206341)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72187)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(236332)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150684)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150683)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150682)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(123558)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(113849)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(113847)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(113850)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(113851)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(123557)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(113845)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(113844)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(113848)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(113842)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225770)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225865)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225864)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225734)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243968)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243970)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243969)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(243971)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(227245)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235928)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235930)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204686)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204690)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(227246)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235927)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(227248)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204687)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(235929)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(147930)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(147936)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(147937)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(147938)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(147933)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204688)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(204691)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229565)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229564)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(229831)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(147540)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(225855)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(130678)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(130592)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(152994)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(152995)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(152996)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(152997)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(200924)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201568)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201565)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201566)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201569)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201567)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(201564)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206212)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(115165)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(115166)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128335)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128334)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128336)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150735)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150739)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150736)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150738)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150734)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150737)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(126172)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(126175)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(126177)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(110465)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72559)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72546)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72556)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72547)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72557)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72564)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72555)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72550)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72561)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72562)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72553)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72554)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72545)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72558)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72549)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72560)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72548)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72552)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72551)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72563)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121652)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121654)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121653)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226918)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226925)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226921)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226922)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226924)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85834)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87894)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83537)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83535)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83539)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83536)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85838)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85844)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85845)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85840)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85841)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85836)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81713)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81826)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83185)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100830)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81824)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83183)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83471)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100823)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(154529)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100827)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(154530)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85842)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87719)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81714)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83538)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(154532)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81829)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87717)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87716)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83475)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81827)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87715)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83198)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85843)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83195)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81828)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81832)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81833)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81823)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83470)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100860)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100825)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100832)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83473)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83474)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83472)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83476)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85835)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85839)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100833)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81825)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(77819)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(77841)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(154531)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100829)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83189)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100822)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(127450)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81835)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83186)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128326)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128325)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128324)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128322)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226899)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226896)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226895)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226892)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226898)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226893)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226897)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226891)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226900)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(226894)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206456)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85747)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(130079)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(206457)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(228626)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(72457)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85743)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85744)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(115163)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(115164)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(151109)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(151169)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(151110)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(40592)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(52701)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(123227)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(146714)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(146717)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239185)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154889)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(146713)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154891)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(123226)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(146715)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154888)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(146716)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(146718)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228823)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206468)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206465)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206466)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206471)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206467)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206475)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206469)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206474)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206464)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206473)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206470)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206472)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(58551)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225368)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225371)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225373)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225370)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225369)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225372)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237859)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237864)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237860)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237863)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237862)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237861)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130931)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223954)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126595)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126599)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126597)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223955)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130930)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126598)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(227790)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223742)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225507)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225508)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(227791)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223737)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(227786)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223740)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225513)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(227788)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225509)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(227787)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223743)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225511)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(227784)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(227789)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223736)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225510)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225512)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223741)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223738)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206418)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206417)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225506)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(227785)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130739)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233589)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233592)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206046)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(112125)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(128833)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130240)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130236)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121687)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130235)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130238)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130239)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(124433)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130233)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121686)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130234)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121684)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130237)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(124432)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(1387)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228859)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(152692)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(86858)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(242201)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(112645)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(112644)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(120212)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(112642)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(117610)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(205113)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228824)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111890)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(205038)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(146264)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(242216)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(227019)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(147108)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(243590)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245676)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(207565)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(222995)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245677)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(227011)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154026)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150120)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150119)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236474)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232970)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232971)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154040)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(145260)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150441)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232043)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(234024)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240140)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240141)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233173)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233174)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(153882)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236374)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236373)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236371)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236375)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236372)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236376)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154016)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(155336)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150470)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150408)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(243392)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154035)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237543)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237545)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237544)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237542)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(153496)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(153994)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(145267)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150403)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150404)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240150)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(207575)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(226969)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(234726)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(234725)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(234727)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(234724)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240239)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240143)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239984)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239976)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(155332)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(155331)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(155342)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(145265)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223855)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(224309)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236486)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236484)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236485)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240129)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240134)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240136)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240148)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236365)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236366)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236364)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(155335)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232972)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232973)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233175)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(243393)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231997)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231998)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236609)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240155)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150407)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(224248)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(125554)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(125665)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233470)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150134)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150438)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150117)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150118)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(235851)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(235853)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(235854)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(235852)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237231)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236247)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231992)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231990)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231991)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237546)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237551)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237552)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237547)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237555)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237549)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237550)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237548)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237554)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237553)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(155397)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231389)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231388)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231366)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231385)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231372)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231375)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231365)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(231390)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236483)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(102168)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121343)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126181)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130950)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126196)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126186)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126187)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130945)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121337)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223899)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130955)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121345)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126200)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126201)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126176)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223900)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126188)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126189)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126169)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126170)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121344)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223862)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223860)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(102161)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(102160)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(102162)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232967)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232968)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126199)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130943)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130952)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130953)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130949)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130948)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121351)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130944)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130957)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223858)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121339)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130947)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223861)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233087)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233088)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154018)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(152922)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232969)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(234029)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237229)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232974)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(224247)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240158)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223856)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(200255)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(247077)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(128697)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(222993)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236457)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236248)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233177)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233178)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233472)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(155334)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(155339)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(241335)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(241325)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(241315)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(241319)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(241312)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150154)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150155)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237556)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237559)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237558)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237562)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237565)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237560)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237564)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237561)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237563)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237557)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150426)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232044)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(152923)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(224239)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150158)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239988)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239981)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239980)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240139)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(234028)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232975)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(232976)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(153984)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240602)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(153871)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(243613)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(153990)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(236610)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(145274)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150167)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150125)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(120718)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154038)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150168)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239069)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239070)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(224238)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(153933)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(153934)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(200470)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(200473)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(234157)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(234158)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(234159)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239561)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239996)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245547)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245551)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240603)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(237877)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239994)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239057)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239058)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(239991)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(240644)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245548)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245388)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245385)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245392)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245395)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245389)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245393)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245390)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245399)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245400)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245387)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245386)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245402)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245394)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245398)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245401)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245397)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245396)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245391)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(152689)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(200474)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(64389)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(51472)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(131548)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(41667)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(51473)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(131547)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(41670)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(41669)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(83804)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(61886)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(83798)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(64388)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(83805)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(41668)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(41663)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(205037)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(1179)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126981)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(110499)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126974)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(3142)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228003)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(3155)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126980)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228001)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(110500)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126976)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(110496)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(74796)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(3158)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126979)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(110497)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228000)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(3159)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(8680)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(110498)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228002)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(3160)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126975)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228005)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126978)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228004)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(1504)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(1182)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(1190)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(125624)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(125625)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(125626)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(125956)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(203889)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(79942)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(128821)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130740)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(201624)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(129373)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(201623)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121895)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(113964)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(244466)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(152530)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121893)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(113963)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(113959)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(152529)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121891)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121825)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(152528)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121813)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(152531)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121819)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(113958)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(244467)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(113957)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121892)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(244465)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(113960)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121896)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121890)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225154)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225155)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225156)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(226414)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(226411)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(200472)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(233590)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154146)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130938)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130935)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154145)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223944)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130936)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(230335)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130939)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223947)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223949)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223948)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223945)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223946)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(130937)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105172)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105169)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(242217)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(242204)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(242202)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(242203)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105254)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105680)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(123752)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(123753)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228941)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228943)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228928)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228930)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228934)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228936)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(112317)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111857)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(104900)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111516)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(224338)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105681)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228931)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228933)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105255)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105682)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105439)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105683)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105701)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(106938)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105061)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105684)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105253)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105685)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111515)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(123756)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(123757)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105256)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105686)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(106041)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105702)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105700)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(106154)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111514)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105440)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105687)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111513)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(105703)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(106939)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(123754)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(123755)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228938)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228940)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228945)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(228946)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(1500)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(3767)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121567)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223941)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223942)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(200336)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(230308)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121570)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223943)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(230307)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(128368)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223939)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121568)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(223940)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(128370)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121569)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154144)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(154143)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(230309)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225995)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(225996)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(112701)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(112703)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(112702)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150522)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(116015)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(224281)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111721)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(224280)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(126168)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(224278)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150523)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245652)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(153520)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111724)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(224282)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111720)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(153521)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(201412)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111723)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(229534)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(153522)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(224279)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245653)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(150521)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(122279)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(128805)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(116013)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111725)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(117616)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111722)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(122277)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(128806)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111865)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111864)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121511)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(119414)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121513)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(111863)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121512)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206045)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(41102)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(7670)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(206047)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(128834)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121571)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(121572)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(124571)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(128369)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245460)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(245461)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(249011)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(249012)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(249071)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(249072)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(128371)="Chgt PV le 04 Oct."
+ s ^TKFINSERIE(81748)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(81752)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83211)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83213)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83214)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83215)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83216)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83222)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(83227)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85894)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85895)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85897)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(85898)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(87662)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100850)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(100851)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(103329)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(105705)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(105706)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(110764)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(110766)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(110768)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112533)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112534)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112536)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112537)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112538)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112539)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(112540)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(118326)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121181)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121182)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121183)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121184)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121185)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121186)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121187)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121188)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121189)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121190)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121221)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121580)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121581)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(121582)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122861)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122862)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122863)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122871)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122872)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122873)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(122874)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128181)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128182)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128184)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128186)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128188)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128189)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(128193)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(145332)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(145333)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(145336)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(145338)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(145339)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150635)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(150636)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(154186)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(227425)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(227426)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234302)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234492)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234493)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234497)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234498)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234499)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234500)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234501)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234502)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234503)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234504)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234505)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234506)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234507)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234520)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234521)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234522)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234523)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234524)="Chgt PV le 27 Sept."
+ s ^TKFINSERIE(234525)="Chgt PV le 27 Sept."
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

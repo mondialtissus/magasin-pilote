@@ -1,0 +1,7 @@
+ROUTINE AJOUTFAVORIS
+AJOUTFAVORIS
+ s ^FUSIONFAVORIS(10)="MT ACADEMY Learning\Firefox*https://lms.mondialtissus.fr/lms/easysite/VDocLearning\ImgInvSynth\ImgInvSynth" 
+
+ q
+
+

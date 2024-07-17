@@ -1,0 +1,369 @@
+ROUTINE INVENTAIRETESTAPRESVALIDATION
+INVENTAIRETESTAPRESVALIDATION
+	//Cette routine permet de mettre en avant les incohérence de mouvements d'inventaire par rapport au véritable inventaire.
+	k ^tmpECARTINVOK
+	k ^tmpECARTINVBUG
+	k ^tmpECARTINVPASOK
+	k ^tmpECARTINVABSENT
+	r a
+	
+	s NBERREURBUG=0
+	s NBERREURABSENT=0
+	s NBERREURPASOK=0
+	s NBERREUROK=0
+	
+	s DATEINV=$G(^HWINFO("INVENTAIRE","DATE"))
+	s POSNUM=$G(^HWINFO("MAG"))
+	s LISTEFICHIER = "^INVARTICLEME;^INVARTICLELM;^INVARTICLETI"
+	s CPTFIC = 1
+	S CPTINV = 0
+	s FICHIERENCOURS = $P(LISTEFICHIER,";",CPTFIC)
+	while FICHIERENCOURS'=""
+	{
+		s FICHIERENCOURSMVT = $E(FICHIERENCOURS,2,12)
+		s NUMFOUR=""
+		s NUMFOUR=$O(@FICHIERENCOURS@(POSNUM,"REFERENCE",NUMFOUR))
+		while NUMFOUR'=""
+		{
+			s CLEFART = ""
+			s CLEFART=$O(@FICHIERENCOURS@(POSNUM,"REFERENCE",NUMFOUR,CLEFART))
+			while CLEFART'=""
+			{
+				S CPTINV = CPTINV+1
+				s PLU=$P($G(^ST(CLEFART)),"\",21)
+				s QTEINV=0
+				s DATEINVREEL=DATEINV
+				
+				s NUMLNG=""
+				s NUMLNG=$O(@FICHIERENCOURS@(POSNUM,"REFERENCE",NUMFOUR,CLEFART,NUMLNG))
+				while NUMLNG'=""
+				{
+					s DATAINV=$G(@FICHIERENCOURS@(POSNUM,"REFERENCE",NUMFOUR,CLEFART,NUMLNG))
+					s QTEINV=QTEINV+$P(DATAINV,"\",13)					
+					
+					s DATEINVLIGNE=$P($P(DATAINV,"\",18),"/",1)
+					if DATEINVLIGNE'=""
+					{
+						s DATEINVREEL=$zdh(DATEINVLIGNE,8)
+					}
+					else
+					{
+						s DATEINVREEL=DATEINV
+					}
+					
+					
+					s NUMLNG=$O(@FICHIERENCOURS@(POSNUM,"REFERENCE",NUMFOUR,CLEFART,NUMLNG))
+				}				
+				s DERNIEREDATE=$O(^GUSTOCKARC(PLU,DATEINV),-1)
+				if DERNIEREDATE=""
+				{
+					s QTEAVANT=0
+				}
+				else
+				{
+					s QTEAVANT=+$P($G(^GUSTOCKARC(PLU,DERNIEREDATE)),"\",6)
+				}
+				
+				S QTEDIF = QTEINV-QTEAVANT
+				if PLU=76557 w !,"Test "_DATEINVREEL_" QTEAVANT:"_QTEAVANT_" qte inv:"_QTEINV
+				//On regarde si le mouvement correspond à la quantité inventoriée ou à la différence
+				
+				s NUMMVT = $O(^GUMVT(DATEINVREEL,PLU,35,""))
+				s DATEMVT=DATEINVREEL	
+				if NUMMVT=""
+				{
+					//Nous pouvons avoir une date ultérieure, cas des validations de la vitrine n'ayant aucune date de saisie et donc égale à la date de la validation et non de l'inventaire							
+					s bTrouveMVT=0
+					s DATEMVT=$O(^GUMVT(DATEMVT))
+					while (DATEMVT'="")&&(bTrouveMVT=0)
+					{
+						s NUMMVT = $O(^GUMVT(DATEMVT,PLU,35,""))
+						if NUMMVT'=""{s bTrouveMVT=1}else{s DATEMVT=$O(^GUMVT(DATEMVT))}
+					}
+				}
+				if NUMMVT'=""
+				{					
+					s QTEMVT = +$P($G(^GUMVT(DATEMVT,PLU,35,NUMMVT)),"\",1)
+					if QTEMVT=QTEDIF
+					{
+						s ^tmpECARTINVOK(FICHIERENCOURSMVT,DATEMVT,PLU)=QTEMVT
+						s NBERREUROK=NBERREUROK+1
+						if PLU=89796 w !,"OK"
+					}
+					else
+					{
+						if (QTEMVT=QTEINV)&&(QTEAVANT>0)
+						{
+							s ^tmpECARTINVBUG(FICHIERENCOURSMVT,DATEMVT,PLU)=QTEMVT
+							s NBERREURBUG=NBERREURBUG+1
+							if PLU=89796 w !,"BUG"
+						}
+						else
+						{
+							s ^tmpECARTINVPASOK(FICHIERENCOURSMVT,DATEMVT,PLU)=QTEMVT_"\"_QTEAVANT_"\"_QTEINV
+							s NBERREURPASOK=NBERREURPASOK+1
+							if PLU=89796 w !,""
+						}
+					}
+				}
+				else
+				{					
+					if (QTEDIF>0)
+					{						
+						s ^tmpECARTINVABSENT(FICHIERENCOURSMVT,DATEINVREEL,PLU)=QTEDIF
+						s NBERREURABSENT=NBERREURABSENT+1
+					}
+					elseif (QTEDIF<0)
+					{
+						s NUMMVT = $O(^GUMVT(DATEINVREEL,PLU,36,""))
+						s DATEMVT=DATEINVREEL	
+						if NUMMVT=""
+						{
+							//Nous pouvons avoir une date ultérieure, cas des validations de la vitrine n'ayant aucune date de saisie et donc égale à la date de la validation et non de l'inventaire							
+							s bTrouveMVT=0
+							s DATEMVT=$O(^GUMVT(DATEMVT))
+							while (DATEMVT'="")&&(bTrouveMVT=0)
+							{
+								s NUMMVT = $O(^GUMVT(DATEMVT,PLU,36,""))
+								if NUMMVT'=""{s bTrouveMVT=1}else{s DATEMVT=$O(^GUMVT(DATEMVT))}
+							}
+						}
+						if NUMMVT'=""
+						{
+							s QTEMVT = +$P($G(^GUMVT(DATEMVT,PLU,36,NUMMVT)),"\",1)*-1
+							if QTEMVT=QTEDIF
+							{
+								s ^tmpECARTINVOK(FICHIERENCOURSMVT,DATEMVT,PLU)=QTEMVT
+								s NBERREUROK=NBERREUROK+1
+							}
+							else
+							{
+								if QTEMVT=QTEINV
+								{
+									s ^tmpECARTINVBUG(FICHIERENCOURSMVT,DATEMVT,PLU)=QTEMVT
+									s NBERREURBUG=NBERREURBUG+1
+								}
+								else
+								{		
+									s ^tmpECARTINVPASOK(FICHIERENCOURSMVT,DATEMVT,PLU)=QTEMVT_"\"_QTEAVANT_"\"_QTEINV
+									s NBERREURPASOK=NBERREURPASOK+1
+								}
+							}			
+						}
+					}
+				
+				}
+				
+				
+				s CLEFART=$O(@FICHIERENCOURS@(POSNUM,"REFERENCE",NUMFOUR,CLEFART))
+			}
+			
+			s NUMFOUR=$O(@FICHIERENCOURS@(POSNUM,"REFERENCE",NUMFOUR))
+		}		
+		
+		s CPTFIC = CPTFIC+1
+		s FICHIERENCOURS = $P(LISTEFICHIER,";",CPTFIC)
+	}
+	w !,CPTINV
+	
+	if $O(^tmpECARTINVBUG(""))'=""
+	{
+		s ^MODROUTINE(POSNUM,"ERREURINVENTAIRE",+$h+1,"ECARTQTEINITZERO")=NBERREURBUG
+	}
+	if $O(^tmpECARTINVABSENT(""))'=""
+	{
+		s ^MODROUTINE(POSNUM,"ERREURINVENTAIRE",+$h+1,"ECARTINVABSENT")=NBERREURABSENT
+	}
+	if $O(^tmpECARTINVPASOK(""))'=""
+	{
+		s ^MODROUTINE(POSNUM,"ERREURINVENTAIRE",+$h+1,"ECARTINVPASOK")=NBERREURPASOK
+	}
+	if $O(^tmpECARTINVOK(""))'=""
+	{
+		s ^MODROUTINE(POSNUM,"ERREURINVENTAIRE",+$h+1,"INVOK")=NBERREUROK
+	}	
+	
+	q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

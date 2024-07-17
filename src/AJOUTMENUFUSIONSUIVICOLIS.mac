@@ -1,0 +1,7 @@
+ROUTINE AJOUTMENUFUSIONSUIVICOLIS
+AJOUTMENUFUSIONSUIVICOLIS
+ s ^FUSIONMENU(2,8)	="Envoi colis messagerie\fenImpressionColis\imgCatalogue\imgCatalogue"
+ Q
+
+
+

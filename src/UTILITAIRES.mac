@@ -1,0 +1,430 @@
+ROUTINE UTILITAIRES
+UTILITAIRES
+ q
+ 
+BASCULETICKETS
+ 
+ ; Au cas ou les tickets ont été saisis sur la mauvaise date,
+ ; on vient les inscrires à la nouvelle date et supprimer les anciens
+ 
+ r "Date SOURCE (AAMMJJ) : ",DATEER
+ W !, ""
+ r "Date DESTINATION (AAMMJJ) : ",DATEOK
+ w !, ""
+ r "Caisse : ",CA
+ 
+ ; On crée le nouveau ticket et on écrase l'ancien 
+ ; dans TK,TKMOISJOURS,TKMOIS
+ w !, "Traitement TK,TKMOISJOURS,TKMOIS..."
+ ;s CA=$O(^TKMOISJOURS(""))
+ ;while CA'=""{
+         s TK=$O(^TKMOISJOURS(CA,DATEER,""))
+         while TK'=""{
+                 s NEWTK=$E(TK,1,2)_DATEOK_$E(TK,9,12)
+                 s ^TKMOISJOURS(CA,DATEOK,NEWTK)=""
+                 k ^TKMOISJOURS(CA,DATEER,TK)
+                 k ^TKMOIS(CA,$E(DATEER,1,4),TK)
+                 
+                 s LG=$O(^TK(TK,""))
+                 while LG'=""{
+                         s REC=$G(^TK(TK,LG))
+                         s ^TK(NEWTK,LG)=REC                             
+                         k ^TK(TK,LG)                            
+                         s LG=$O(^TK(TK,LG))
+                 }
+                 ; Gestion de TKTOTAL
+                 s ^TKTOTAL(NEWTK)=$G(^TKTOTAL(TK))
+                 k ^TKTOTAL(TK)
+                 
+                 ; Gestion des avoirs
+                 if +$D(^TKAVOIRS(TK))>0{
+                         s TYPE=$O(^TKAVOIRS(TK,""))
+                         s ^TKAVOIRS(NEWTK,TYPE)=$G(^TKAVOIRS(TK,TYPE))
+                         k ^TKAVOIRS(TK,TYPE)
+                         s LG=$O(^TKAVOIRS(DATEER,+$E(TK,1,2),TK,""))
+                         while LG'=""{
+                                 s ^TKAVOIRS(DATEOK,+$E(TK,1,2),NEWTK,LG)=$G(^TKAVOIRS(DATEER,+$E(TK,1,2),TK,LG))
+                                 s ^TKAVOIRS($E(DATEOK,1,4),+$E(TK,1,2),NEWTK,LG)=$G(^TKAVOIRS(DATEER,+$E(TK,1,2),TK,LG))
+                                 k ^TKAVOIRS(DATEER,+$E(TK,1,2),TK,LG)
+                                 k ^TKAVOIRS($E(DATEER,1,4),+$E(TK,1,2),TK,LG)
+                                 s LG=$O(^TKAVOIRS(DATEER,+$E(TK,1,2),TK,LG))
+                         }
+                 }
+                 s TK=$O(^TKMOISJOURS(CA,DATEER,TK))
+         }
+         ;s CA=$O(^TKMOISJOURS(CA))
+ ;}
+ 
+ ; On reventile TKREGL
+ w !, "Traitement TKREGL..."
+ s REGL=$O(^TKREGL(""))
+ while REGL'=""{
+         ;s CA=$O(^TKREGL(REGL,""))
+         ;while CA'=""{
+                 s TOT=$G(^TKREGL(REGL,CA,DATEER))
+                 s ^TKREGL(REGL,CA,DATEOK)=TOT
+                 k ^TKREGL(REGL,CA,DATEER)
+                 ;s CA=$O(^TKREGL(REGL,CA))
+         ;}
+         s REGL=$O(^TKREGL(REGL))
+ }
+ 
+ ; On reventile TKFAMILLE
+ w !, "Traitement TKFAMILLE..."
+ ;s CA=$O(^TKFAMILLE(""))
+ ;while CA'=""{
+         s FAM=$O(^TKFAMILLE(CA,DATEER,""))
+         while FAM'=""{
+                 s ^TKFAMILLE(CA,DATEOK,FAM)=$G(^TKFAMILLE(CA,DATEER,FAM))
+                 
+                 s H=$O(^TKFAMILLE(CA,DATEER,FAM,""))
+                 while H'=""{
+                         s ^TKFAMILLE(CA,DATEOK,FAM,H)=$G(^TKFAMILLE(CA,DATEER,FAM,H))
+                         
+                         s M=$O(^TKFAMILLE(CA,DATEER,FAM,H,""))
+                         while M'=""{
+                                 s ^TKFAMILLE(CA,DATEOK,FAM,H,M)=$G(^TKFAMILLE(CA,DATEER,FAM,H,M))
+                                 
+                                 s M=$O(^TKFAMILLE(CA,DATEER,FAM,H,M))
+                         }
+                         s H=$O(^TKFAMILLE(CA,DATEER,FAM,H))
+                 }
+                 ; On supprime la ventilation famille sur la mauvaise date
+                 k ^TKFAMILLE(CA,DATEER,FAM)
+                 s FAM=$O(^TKFAMILLE(CA,DATEER,FAM))
+         }
+         ;s CA=$O(^TKFAMILLE(CA))
+ ;}
+ 
+ ; On met à jour le détail des reglement (TKESPECES,TKCHEQUES,TKCB)
+ D TRAITFIC("TKESPECES")
+ D TRAITFIC("TKCHEQUES")
+ D TRAITFIC("TKCB")
+ 
+ ; On met à jour les compteurs de caisse
+ w !, "Traitement TKCOMPTEUR..."
+ ;s CA=$O(^TKCOMPTEUR(""))
+ ;while CA'=""{
+         s ^TKCOMPTEUR(CA,DATEOK)=$G(^TKCOMPTEUR(CA,DATEER))
+         k ^TKCOMPTEUR(CA,DATEER)
+         ;s CA=$O(^TKCOMPTEUR(CA))
+ ;}
+ 
+ ; On met à jour les clotures espèces
+ w !, "Traitement clotures espèces caisses..."
+ s POSNUM=$G(^HWINFO("MAG"))
+ ;s CA=$O(^TKESPECES(POSNUM,""))
+ ;while CA'=""{
+         s TOT=+$G(^TKESPECES(POSNUM,CA,DATEER))
+         if TOT>0{
+                 ; Une cloture a été faite pour cette caisse
+                 s ^TKESPECES(POSNUM,CA,DATEOK)=$G(^TKESPECES(POSNUM,CA,DATEER))
+                 
+                 s TYPE=$O(^TKESPECES(POSNUM,CA,DATEER,""))
+                 while TYPE'=""{
+                         s ^TKESPECES(POSNUM,CA,DATEOK,TYPE)=$G(^TKESPECES(POSNUM,CA,DATEER,TYPE))
+                         k ^TKESPECES(POSNUM,CA,DATEER,TYPE)     
+                         s TYPE=$O(^TKESPECES(POSNUM,CA,DATEER,TYPE))
+                 }
+                 k ^TKESPECES(POSNUM,CA,DATEER)
+         }
+         ;s CA=$O(^TKESPECES(POSNUM,CA))
+ ;}
+ 
+ ; On met à jour la vision horaire du CA
+ w !, "Traitement TKTIME..."
+ ;s CA=$O(^TKTIME(""))
+ ;while CA'=""{
+         if +$L(CA)=1{
+                 s H=$O(^TKTIME(CA,DATEER,""))
+                 while H'=""{
+                         s ^TKTIME(CA,DATEOK,H)=$G(^TKTIME(CA,DATEER,H))
+                         k ^TKTIME(CA,DATEER,H)
+                         s H=$O(^TKTIME(CA,DATEER,H))
+                 }
+         }
+         ;s CA=$O(^TKTIME(CA))
+ ;}
+ s H=$O(^TKTIME(DATEER,""))
+ while H'=""{
+         s ^TKTIME(DATEOK,H)=$G(^DATEER,H)
+         k ^TKTIME(DATEER,H)
+         s H=$O(^TKTIME(DATEER,H))
+ }
+ w !, "----FIN DE TRAITEMENT----"
+ 
+ ; On met à jour les fonds de caisses
+ s TYPE=$O(^TKFONDCAISSE(""))
+ while TYPE'=""{
+         s cDATEER=+$ZDH("20"_DATEER,8)
+         s cDATEOK=+$ZDH("20"_DATEOK,8)
+         ;s CA=$O(^TKFONDCAISSE(TYPE,cDATEER,""))
+         ;while CA'=""{
+                 s ^TKFONDCAISSE(TYPE,cDATEOK,CA)=$G(^TKFONDCAISSE(TYPE,cDATEER,CA))
+                 k ^TKFONDCAISSE(TYPE,cDATEER,CA)
+                 ;s CA=$O(^TKFONDCAISSE(TYPE,cDATEER,CA))
+         ;}
+         s TYPE=$O(^TKFONDCAISSE(TYPE))  
+ }
+ 
+ ; Gestion des remises,soldes & coupons
+ 
+ D TRAITSPECIAL("TKREMISES")
+ D TRAITSPECIAL("TKSOLDES")
+ D TRAITSPECIAL("TKCOUPONS")
+ 
+ ; Gestion des fidelités
+ 
+ D TRAITFIDELITE
+ 
+ ; Gestion des suppression de lignes
+ D TRAITSUPLG
+ q
+ 
+TRAITFIC(FIC)
+ w !, "Traitement "_FIC_"..."
+ s FILE="^"_FIC
+ ;s CA=$O(@FILE@(DATEER,""))
+ ;while CA'=""{
+         s TK=$O(@FILE@(DATEER,CA,""))
+         while TK'=""{
+                 s NEWTK=$E(TK,1,2)_DATEOK_$E(TK,9,12)
+                 s @FILE@(DATEOK,CA,NEWTK)=$G(@FILE@(DATEER,CA,TK))
+                 k @FILE@(DATEER,CA,TK)
+                 s TK=$O(@FILE@(DATEER,CA,TK))
+         }               
+         ;s CA=$O(@FILE@(DATEER,CA))
+ ;}
+ q
+ 
+TRAITSPECIAL(FIC)
+ w !, "Traitement "_FIC_"..."
+ s FILE="^"_FIC
+ ;s CA=$O(@FILE@(""))
+ ;while CA'=""{
+         S IFAM=$O(@FILE@(CA,DATEER,""))
+         while IFAM'=""{
+                 if +$L(IFAM)<3{
+                         s @FILE@(CA,DATEOK,IFAM)=$G(@FILE@(CA,DATEER,IFAM))
+                         k @FILE@(CA,DATEER,IFAM)
+                 }
+                 else
+                 {
+                         s TK=$O(@FILE@(CA,DATEER,""))
+                         while TK'=""{
+                                 s LG=$O(@FILE@(CA,DATEER,TK,""))
+                                 while LG'=""{
+                                         s NEWTK=$E(TK,1,2)_DATEOK_$E(TK,9,12)
+                                         s @FILE@(CA,DATEOK,NEWTK,LG)=$G(@FILE@(CA,DATEER,TK,LG))
+                                         s @FILE@(CA,$E(DATEOK,1,4),NEWTK,LG)=$G(@FILE@(CA,DATEER,TK,LG))
+                                         k @FILE@(CA,$E(DATEER,1,4),TK,LG)
+                                         k @FILE@(CA,DATEER,TK,LG)
+                                         s LG=$O(@FILE@(CA,DATEER,TK,LG))
+                                 }
+                                 s TK=$O(@FILE@(CA,DATEER,TK))
+                         }
+                         
+                 }
+                 s IFAM=$O(@FILE@(CA,DATEER,IFAM))
+         }
+         ;S CA=$O(@FILE@(CA))
+ ;}      
+ q
+ 
+TRAITFIDELITE
+ W !, "Traitemnent de TKFIDELITE..."
+ ;s CA=$O(^TKFIDELITE(""))
+ ;while CA'=""{
+         s ^TKFIDELITE(CA,DATEOK)=$G(^TKFIDELITE(CA,DATEER))
+         k ^TKFIDELITE(CA,DATEER)
+         ;s CA=$O(^TKFIDELITE(CA))
+ ;}
+ q
+ 
+TRAITSUPLG
+ w !, "Traitement de TKSUPLG..."
+ s TYPE=$O(^TKSUPLG(""))
+ while TYPE'=""{
+         s USER=$O(^TKSUPLG(TYPE,""))
+         while USER'=""{
+                 s CA=$O(^TKSUPLG(TYPE,USER,$E(DATEER,1,4),$E(DATEER,5,6),""))
+                 while CA'=""{
+                         s TK=$O(^TKSUPLG(TYPE,USER,$E(DATEER,1,4),$E(DATEER,5,6),CA,""))
+                         while TK'=""{
+                                 s H=$O(^TKSUPLG(TYPE,USER,$E(DATEER,1,4),$E(DATEER,5,6),CA,TK,""))
+                                 while H'=""{
+                                         s NEWTK=$E(TK,1,2)_DATEOK_$E(TK,9,12)
+                                         s ^TKSUPLG(TYPE,USER,$E(DATEOK,1,4),$E(DATEOK,5,6),CA,NEWTK,H)=$G(^TKSUPLG(TYPE,USER,$E(DATEER,1,4),$E(DATEER,5,6),CA,TK,H))
+                                         k ^TKSUPLG(TYPE,USER,$E(DATEER,1,4),$E(DATEER,5,6),CA,TK,H)
+                                         
+                                         s H=$O(^TKSUPLG(TYPE,USER,$E(DATEER,1,4),$E(DATEER,5,6),CA,TK,H))
+                                 }
+                                 s TK=$O(^TKSUPLG(TYPE,USER,$E(DATEER,1,4),$E(DATEER,5,6),CA,TK))
+                         }
+                         s CA=$O(^TKSUPLG(TYPE,USER,$E(DATEER,1,4),$E(DATEER,5,6),CA))
+                 }
+                 s USER=$O(^TKSUPLG(TYPE,USER))
+         }
+         s TYPE=$O(^TKSUPLG(TYPE))
+ }
+ Q
+TODO
+ r "Date SOURCE (AAMMJJ) : ",DATEER
+ W !, ""
+ r "Date DESTINATION (AAMMJJ) : ",DATEOK
+ 
+ D TRAITSPECIAL("TKREMISES")
+ D TRAITSPECIAL("TKSOLDES")
+ D TRAITSPECIAL("TKCOUPONS")
+ 
+ ; Gestion des fidelités
+ 
+ D TRAITFIDELITE
+ 
+ ; Gestion des suppression de lignes
+ D TRAITSUPLG
+ q
+ 
+CHECKDAY
+ ; Parcour du détail des ticket et indique la ventilation par famille
+ k ^tmpCHECKDAY
+ r "AAMMJJ:",AMJ
+ w !,""
+ r "CAISSE!",CA
+ w !,""
+ 
+ s TK=$O(^TKMOISJOURS(CA,AMJ,""))
+ while TK'=""{
+         s NODE0=$G(^TK(TK,0))
+         if +$P(NODE0,"\",8)=0{
+                 s LG=$O(^TK(TK,""))
+                 while LG'=""{
+                         s NODEX=$G(^TK(TK,LG))
+                         if $E($P(NODEX,"\",2),1,5)'="Avoir"{
+                                 s FAM=+$P(NODEX,"\",3)
+                                 s CURVAL=$G(^tmpCHECKDAY(FAM))
+                                 s NEWVAL=+$P(NODEX,"\",6)+CURVAL
+                                 s ^tmpCHECKDAY(FAM)=NEWVAL                              
+                         }
+                         s LG=$O(^TK(TK,LG))
+                 }
+         }
+         s TK=$O(^TKMOISJOURS(CA,AMJ,TK))
+ }
+ ; Parcours des familles avec les totaux
+ s TOTG=0
+ s TOTC=0
+ s IDFAM=$O(^tmpCHECKDAY(""))
+ while IDFAM'=""{
+         s TOTC=$G(^tmpCHECKDAY(IDFAM))
+         s TOTG=TOTG+TOTC
+         w !, $P($G(^HWCLA(IDFAM)),"\",2)_" : "_TOTC
+         s IDFAM=$O(^tmpCHECKDAY(IDFAM))
+ }
+ W !, ""
+ w !, "TOTAL : "_TOTG
+ w !, ""
+ 
+ k ^tmpCHECKDAYd
+ s TOTD=0
+ s TOTC=0
+ s TK=$O(^TKMOISJOURS(CA,AMJ,""))
+ while TK'=""{
+         s REGL=$P($G(^TK(TK,0)),"\",3)
+         if REFL="ES"{s FIC="TKESPECES"}
+         if REGL="CH"{s FIC="TKCHEQUES"}
+         if REFL="CB"{s FIC="TKCB"}
+         
+         s CURVAL=+$G(^tmpCHECKDAYd(REGL))
+         s TOT=+$P($G(@FIC@(AMJ,CA,TK)),"\",1)
+         
+         s ^tmpCHECKDAYd(REGL)=CURVAL+TOT
+         s TK=$O(^TKMOISJOURS(CA,AMJ,TK))
+ }
+ s TYPE=$O(^tmpCHECKDAYd(""))
+ while TYPE'=""{
+         s TOTC=$G(^tmCHECKDAYd(TYPE))
+         s TOTD=TOTD+TOTC
+         w !, TYPE_" : "_+TOTC           
+         s TYPE=$O(^tmpCHECKDAYd(TYPE))
+ }
+ W !, "TOTAL : "_TOTD
+ 
+ q
+ 
+CHECKALL
+ D CHECKDET("ES")
+ D CHECKDET("CH")
+ D CHECKDET("CB")
+ Q
+CHECKDET(TYPE)
+ 
+ if TYPE="ES"{s FILE="^TKESPECES"}
+ if TYPE="CH"{s FILE="^TKCHEQUES"}
+ if TYPE="CB"{s FILE="^TKCB"}
+ 
+ s TK=$O(@FILE@("070115",1,""))
+ while TK'=""{
+         if +$P($G(^TK(TK,0)),"\",8)=0{
+                 s CURTOT=+$P($G(@FILE@("070115",1,TK)),"\",1)
+                 s CUMUL=CUMUL+CURTOT
+         }
+         s TK=$O(@FILE@("070115",1,TK))
+ }
+ W !, TYPE_" : "_CUMUL
+ q
+ 
+CHECKAVUSE
+ 
+ s TK=$O(^TKMOISJOURS(1,"070115",""))
+ while TK'=""{
+         s LG=$O(^TK(TK,"0"))
+         while LG'=""{
+                 s REC=$G(^TK(TK,LG))
+                 if $E($P(REC,"\",2),1,5)="Avoir"{
+                         W !, REC
+                 }
+                 s LG=$O(^TK(TK,LG))     
+         }       
+         s TK=$O(^TKMOISJOURS(1,"070115",TK))
+ }
+ q
+ 
+LSTALLAV
+ r "Date (AAMMJJ) : ",AMJ
+ w !, ""
+ s TOTAVEMIS=0
+ S TOTAVUSE=0
+ s CA=$O(^TKMOISJOURS(""))
+ while CA'=""{
+         s TK=$O(^TKMOISJOURS(CA,AMJ,""))
+         while TK'=""{
+                 ; Recherche des avoirs générés
+                 IF $P($G(^TK(TK,0)),"\",3)="AV"{
+                         s CURTOT=+$P($G(^TKTOTAL(TK)),"/",1)
+                         w !, "Avoir généré : "_TK_" , "_CURTOT
+                         s TOTAVEMIS=TOTAVEMIS+CURTOT                            
+                 }
+                 s LG=$O(^TK(TK,""))
+                 while LG'=""{
+                         s DESC=$P($G(^TK(TK,LG)),"\",2)
+                         if $E(DESC,1,5)="Avoir"{
+                                 
+                                 S CURAVUSE=+$P($G(^TK(TK,LG)),"\",6)
+                                 w !, "Avoir utilisé : "_DESC_" ("_CURAVUSE_") dans "_TK
+                                 s TOTAVUSE=TOTAVUSE+CURAVUSE
+                         }
+                         s LG=$O(^TK(TK,LG))
+                 }
+                 s TK=$O(^TKMOISJOURS(CA,AMJ,TK))
+         }
+         s CA=$O(^TKMOISJOURS(CA))
+ }
+ W !, ""
+ s TOTAVUSE2=TOTAVUSE*-1
+ s ALLAV=TOTAVEMIS+TOTAVUSE2
+ w !, "Total des avoirs générés : "_TOTAVEMIS
+ w !, "Total des avoirs utilisés : "_TOTAVUSE
+ w !, "Total........."_ALLAV
+ Q
+ 

@@ -1,0 +1,42 @@
+ROUTINE INITCSP
+INITCSP
+ 
+	; Creation du fichier d'index PLU,CLEARTICLE (Gere les articles du dépot car PLU depot peut etre = a PLU direct lev)
+	k ^CSP
+	s ART=$O(^ST(""))
+	while ART'=""{
+		s REC0=$G(^ST(ART))
+		s PLU=+$P(REC0,"\",21)
+		if PLU>89999{
+			; Article du dépot
+			s PLUDP=+$P(ART,"/",3)
+			s ^CSP(PLUDP,ART)=""			
+		}
+		s ^CSP(PLU,ART)=""
+		s ART=$O(^ST(ART))
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

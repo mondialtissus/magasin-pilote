@@ -1,0 +1,74 @@
+ROUTINE GETTKSUPLG
+GETTKSUPLG
+	k ^MODTKSUPLG
+	s POSNUM=$G(^HWINFO("MAG"))
+	s TYPE=$O(^TKSUPLG(""))
+	while TYPE'=""{
+		s USER=$O(^TKSUPLG(TYPE,""))
+		while USER'=""{
+			s AM=$O(^TKSUPLG(TYPE,USER,""))
+			while AM'=""{
+				s JJ=$O(^TKSUPLG(TYPE,USER,AM,""))
+				while JJ'=""{
+					s CA=$O(^TKSUPLG(TYPE,USER,AM,JJ,""))
+					while CA'=""{
+						s TICK=$O(^TKSUPLG(TYPE,USER,AM,JJ,CA,""))
+						while TICK'=""{
+							s HEURE=$O(^TKSUPLG(TYPE,USER,AM,JJ,CA,TICK,""))
+							while HEURE'=""{
+								; on effectue la copie sur le serveur metier de MODTKSUPLG en TKSUPLG
+								s REC=$G(^TKSUPLG(TYPE,USER,AM,JJ,CA,TICK,HEURE))
+ 
+								s ^MODTKSUPLG(POSNUM,TYPE,USER,AM,JJ,CA,TICK,HEURE)=REC
+																
+								s HEURE=$O(^TKSUPLG(TYPE,USER,AM,JJ,CA,TICK,HEURE))
+							}							
+							s TICK=$O(^TKSUPLG(TYPE,USER,AM,JJ,CA,TICK))
+						}	
+						s CA=$O(^TKSUPLG(TYPE,USER,AM,JJ,CA))
+					}
+					s JJ=$O(^TKSUPLG(TYPE,USER,AM,JJ))
+				}
+				s AM=$O(^TKSUPLG(TYPE,USER,AM))
+			}
+			s USER=$O(^TKSUPLG(TYPE,USER))
+		}
+		s TYPE=$O(^TKSUPLG(TYPE))
+	}
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

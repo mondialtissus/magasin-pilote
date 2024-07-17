@@ -1,0 +1,190 @@
+ROUTINE HWCONBON
+HWCONBON(JONU) ;Y2K;Confirmation des commandes du soir;;;11; 5-May-01 14:31
+ ZA ^HWBONCOM
+ ZA ^MODBONTM
+ ZA ^MODBON
+ ZA ^tempbon
+ D CONFIR        ; Confirmation des commande
+ D ^HWTRS(JONU)
+ ZD ^tempbon
+ ZD ^MODBON
+ ZD ^MODBONTM
+ ZD ^HWBONCOM
+ Q
+CONFIR ;
+ S POSNUM=^HWINFO("MAG"),FICON="^MODBONTM(POSNUM)"
+ S %XIV=0,%TAAL=^HWINFO("LANG")
+ K ^tempbon
+ S CLINUM=0
+ F   S CLINUM=$O(@FICON@(CLINUM)) Q:(+CLINUM=0)  D
+ .S CMDNUM=0
+ .F   S CMDNUM=$O(@FICON@(CLINUM,CMDNUM)) Q:(+CMDNUM=0)  D
+ ..I +$D(@FICON@(CLINUM,CMDNUM,0))'=11 S ^MODERR(^HWINFO("MAG"),$H)="ERREUR BON DE COMMANDE NON PASSE !!!!!"_CLINUM_"/"_CMDNUM K @FICON@(CLINUM,CMDNUM) Q
+ ..S STYLE=$P(@FICON@(CLINUM,CMDNUM,0),"\",6)
+ ..I $E(STYLE,1,2)="CF" I $P(@FICON@(CLINUM,CMDNUM,0),"\",7)="" S $P(^HWBONCOM(CLINUM,CMDNUM,0),"\",7)="DEVIS" K @FICON@(CLINUM,CMDNUM) Q
+ ..I $E(STYLE,1,2)="CF" D TEMP($$MESS^HW(300)) Q
+ ..I STYLE="CH" D TEMP($$MESS^HW(301)) Q
+ ..I STYLE="KS" D TEMP($$MESS^HW(302)) Q
+ ..I STYLE="BS" D TEMP($$MESS^HW(303)) Q
+ ..I STYLE="KA" D TEMP($$MESS^HW(304)) Q
+ ..I STYLE="PA" D TEMP($$MESS^HW(305)) Q
+ ..I STYLE="RO" D TEMP($$MESS^HW(306)) Q
+ ..I STYLE="SW" D TEMP($$MESS^HW(307)) Q
+ ..I STYLE="BO" D TEMP($$MESS^HW(307)) Q
+ ..I STYLE="HC" D TEMP($$MESS^HW(593)) Q
+ ..I STYLE="JT" D TEMP($$MESS^HW(1994)) Q
+ ..I STYLE="NP" D TEMP($$MESS^HW(1995)) Q
+ ..S INCNUM=0
+ ..F   S INCNUM=$O(@FICON@(CLINUM,CMDNUM,INCNUM)) Q:(+INCNUM=0)  D
+ ...S START=$P(@FICON@(CLINUM,CMDNUM,INCNUM),"\",6)
+ ...I (($P(START,"/",1)="TP")!($P(START,"/",1)="CS")) D
+ ....S %XIV=%XIV+1
+ ....S DATECMD=$E($$DT10^ZPROC($P(@FICON@(CLINUM,CMDNUM,0),"\",3)),1,5)
+ ....S REMARQUE=$P(@FICON@(CLINUM,CMDNUM,INCNUM),"\",8)
+ ....S REMARQUE=$P(REMARQUE,"*",2)
+ ....S TYP=$P($P(REMARQUE,",",3),":",2)
+ ....S L=$P($P(REMARQUE,",",1),"X",1),L=+L
+ ....S l=$P($P(REMARQUE,",",1),"X",2),l=+l
+ ....S DIM=+L_"x"_+l
+ ....S COM=$P("TAPIJT*TAPIS*TAPIJT","*",%TAAL)_"-"_TYP
+ ....S NUMMER=CLINUM D LOADCLI^HWCLIENT(NUMMER) S NOM=NAAM
+ ....S cnf="CONFIRMED" I +$P(@FICON@(CLINUM,CMDNUM,INCNUM),"\",16)=1 S cnf="ANNULAT"
+ ....S ^tempbon(0,%XIV)=%XIV_"\"_COM_"\"_START_"\"_DIM_"\"_DATECMD_" "_NOM_"\"_cnf_"\"_CLINUM_"\"_CMDNUM_"\"_INCNUM_"\"_STYLE_"\"
+ ....Q
+ ...Q
+ ..Q
+ .Q
+ I %XIV=0 Q
+ S ^tempbon(0)=%XIV
+ S La=%TAAL I ^HWINFO("PAYSL")="D" S La=1
+ S err=$$^%LIBBRO("B1","SCCONBO"_La,0,1)
+ W $$^LIBLU(03,01,00)
+ D ^%LIBBRW("B1",01,02,23,78)
+ S choice=1
+DOWHILE ;
+ S choice=$$^LIBBRSX("B1","^tempbon(0)",choice,1,%XIV)
+ S SORT=0
+ I +choice>0 D
+ .I $$YES^HW($$MESS^HW(2553),$$MESS^HW(2554),2,0) D
+ ..S CONF=$P(^tempbon(0,+choice),"\",6)
+ ..I CONF="CONFIRMED" S $P(^tempbon(0,+choice),"\",6)="ANNULAT"
+ ..I CONF="ANNULAT" S $P(^tempbon(0,+choice),"\",6)="CONFIRMED"
+ ..Q
+ .Q
+ I +choice=-2 S SORT=1 D SAVE
+ I 'SORT G DOWHILE
+ K %lib($J,"B1")
+ Q
+SAVE ;
+ S %XIV=0
+ F   S %XIV=$O(^tempbon(0,%XIV)) Q:(+%XIV=0)  D
+ .S CNF=$P(^tempbon(0,%XIV),"\",6)
+ .S CLINUM=$P(^tempbon(0,%XIV),"\",7)
+ .S CMDNUM=$P(^tempbon(0,%XIV),"\",8)
+ .S STYLE=$P(@FICON@(CLINUM,CMDNUM,0),"\",6)
+ .S NEWSTYLE=$P(^tempbon(0,%XIV),"\",10)
+ .I $E(STYLE,1,2)'="TP" S $P(@FICON@(CLINUM,CMDNUM,0),"\",8)=CNF I $D(^HWBONCOM(CLINUM,CMDNUM,0)) S $P(^HWBONCOM(CLINUM,CMDNUM,0),"\",8)=CNF
+ .I CNF="ANNULAT" I $E(STYLE,1,2)="TP" D
+ ..S INCNUM=$P(^tempbon(0,%XIV),"\",9)
+ ..S $P(^MODBONTM(^HWINFO("MAG"),CLINUM,CMDNUM,INCNUM),"\",1)="X"
+ ..Q
+ .I CNF="ANNULAT" I $E(STYLE,1,2)="CF" I NEWSTYLE="CFART" D
+ ..S INCNUM=$P(^tempbon(0,%XIV),"\",9)
+ ..S $P(^MODBONTM(^HWINFO("MAG"),CLINUM,CMDNUM,INCNUM),"\",1)="X"
+ ..Q
+ .Q
+BON ;
+ S POSNUM=^HWINFO("MAG"),CLI="",ERREUR=0
+ F   S CLI=$O(^MODBONTM(POSNUM,CLI)) Q:(CLI="")  D
+ .S CMD=""
+ .F   S CMD=$O(^MODBONTM(POSNUM,CLI,CMD)) Q:(CMD="")  D
+ ..I '$D(^MODBONTM(POSNUM,CLI,CMD,0)) S ^MODERR(POSNUM,$H)="MODBONTM\"_CLI_","_CMD_"\HWCONBON\",ERREUR=1 K ^MODBONTM(POSNUM,CLI,CMD) Q
+ ..I '$D(^MODBONTM(POSNUM,CLI,CMD,0,"T1")) S ^MODERR(POSNUM,$H)="MODBONTM\"_CLI_","_CMD_"\HWCONBON\",ERREUR=1 K ^MODBONTM(POSNUM,CLI,CMD) Q
+ ..I $P(^MODBONTM(POSNUM,CLI,CMD,0),"\",8)="DEVIS" Q
+ ..S ^HWTRS(POSNUM,CLI,CMD,0)=^MODBONTM(POSNUM,CLI,CMD,0)
+ ..I $E($P(^HWTRS(POSNUM,CLI,CMD,0),"\",6),1,2)="CF" S $P(^HWTRS(POSNUM,CLI,CMD,0),"\",6)="CF"
+ ..S ^HWTRS(POSNUM,CLI,CMD,0,"T1")=^MODBONTM(POSNUM,CLI,CMD,0,"T1")
+ ..S INDICE=0
+ ..F   S INDICE=$O(^MODBONTM(POSNUM,CLI,CMD,INDICE)) Q:(+INDICE=0)  D
+ ...S ^HWTRS(POSNUM,CLI,CMD,INDICE)=^MODBONTM(POSNUM,CLI,CMD,INDICE)
+ ...Q
+ ..K ^MODBONTM(POSNUM,CLI,CMD)
+ ..Q
+ .Q
+ ;I 'ERREUR K ^MODBONTM
+ S IO=+$G(^HWINFO("PRTTICK"))
+PRINT I $$^%LIBDEVO(IO,80,1)<0 G PRINT
+ D ^PRBAC("A4",IO,"CONFIRMED-ANNULAT")
+ U IO W $C(15)
+ S err=$$^LIBPRO("L","SCBONCON")
+ U IO W !!!!!!!!
+ S PLEN=60
+ S PLIN=61
+ S PPAGE=0
+ S %XIV=0,TAPIS=0
+ F   S %XIV=$O(^tempbon(0,%XIV)) Q:(+%XIV=0)  D
+ .I PLIN>(PLEN-4) I PPAGE'=0 S PLIN=PLIN+$$^LIBPR("L","T") U IO W #
+ .I PLIN>(PLEN-4) S PPAGE=PPAGE+1,PLIN=0,PLIN=$$^LIBPR("L","H")
+ .S STYLE=$P(^tempbon(0,%XIV),"\",9) I +STYLE'=0 S STYLE=$P(^tempbon(0,%XIV),"\",10)
+ .I STYLE'="TP" S TAPIS=0
+ .S ART=$P(^tempbon(0,%XIV),"\",3)
+ .S TYPE=$P(^tempbon(0,%XIV),"\",2)
+ .S HOE=$P(^tempbon(0,%XIV),"\",4)
+ .S CLI=$P(^tempbon(0,%XIV),"\",5)_" ("_$P(^tempbon(0,%XIV),"\",7)_"/"_$P(^tempbon(0,%XIV),"\",8)_")"
+ .S ncli=$P(^tempbon(0,%XIV),"\",7)
+ .S nbon=$P(^tempbon(0,%XIV),"\",8)
+ .S DTDEM=""
+ .I $D(^HWBONCOM(ncli,nbon)) D
+ ..S DTDEM=$P(^HWBONCOM(ncli,nbon,0),"\",10)
+ ..S TYPE=$P(^HWBONCOM(ncli,nbon,0),"\",6)
+ ..I $E(TYPE,1,2)'="CF" S DTDEM=$P(^HWBONCOM(ncli,nbon,0,"T1"),"\",4)
+ ..S DTDEM=$$DT10^ZPROC(DTDEM)
+ ..Q
+ .S STAT=$P(^tempbon(0,%XIV),"\",6)
+ .S NEWSTYLE=$P(^tempbon(0,%XIV),"\",10)
+ .I NEWSTYLE="CFART" S CLI=ART_" = "_HOE
+ .S STAT1=STAT I STYLE="TP" S STAT=""
+ .I 'TAPIS S SUI=%XIV,PLIN=PLIN+$$^LIBPR("L","D") I STYLE="TP" S PLIN=PLIN+$$^LIBPR("L","D1")
+ .I TAPIS S PLIN=PLIN+$$^LIBPR("L","D1")
+ .S TAPIS=0
+ .I $E(STYLE,1,2)="TP" S TAPIS=1
+ .;I STYLE="CF" D DECOMPCF ;; Imprime les voiles et a vapeur
+ .Q
+ S PLIN=PLIN+$$^LIBPR("L","T")
+ U IO W #
+ C IO
+ Q
+TEMP(PARM) ;
+ S %XIV=%XIV+1
+ S REM=""
+ S CNF="CONFIRMED"
+ I $E(STYLE,1,2)="CF" I $P(@FICON@(CLINUM,CMDNUM,0),"\",7)="" S CNF="DEVIS"
+ I $E(STYLE,1,2)="CF" I $P(@FICON@(CLINUM,CMDNUM,0),"\",7)="IO1" S CNF="ANNULAT",REM="Intern"
+ I $E(STYLE,1,2)="CF" D
+ .I $P(@FICON@(CLINUM,CMDNUM,0),"\",7)="EN9" S REM=$P(@FICON@(CLINUM,CMDNUM,0,"T1"),"\",3) I $P(@FICON@(CLINUM,CMDNUM,0,"T1"),"\",3)'="" I $P(@FICON@(CLINUM,CMDNUM,0,"T1"),"\",3)'="X001" S CNF="ANNULAT"
+ .Q
+ S NUMMER=CLINUM D LOADCLI^HWCLIENT(NUMMER) S NOM=NAAM
+ S DATECMD=$E($$DT10^ZPROC($P(@FICON@(CLINUM,CMDNUM,0),"\",3)),1,5)
+ S ^tempbon(0,%XIV)=%XIV_"\"_PARM_"\Cli:"_CLINUM_" Cmd:"_CMDNUM_"\"_REM_"\"_DATECMD_" "_NOM_"\"_CNF_"\"_CLINUM_"\"_CMDNUM_"\"_STYLE_"\"
+ I $E(STYLE,1,2)="CF" I CNF'="DEVIS" D
+ .S INCNUM=0
+ .F   S INCNUM=$O(@FICON@(CLINUM,CMDNUM,INCNUM)) Q:(+INCNUM=0)  D
+ ..S START=$P(@FICON@(CLINUM,CMDNUM,INCNUM),"\",6)
+ ..S QTE=$P(@FICON@(CLINUM,CMDNUM,INCNUM),"\",3)
+ ..I (($P(START,"/",1)="PA")!($P(START,"/",1)="CD")) D
+ ...S %XIV=%XIV+1,^tempbon(0,%XIV)=%XIV_"\"_"        =>"_"\"_START_"\"_QTE_"\\"_"CONFIRMED"_"\"_CLINUM_"\"_CMDNUM_"\"_INCNUM_"\"_"CFART"_"\"
+ ...Q
+ ..Q
+ .Q
+ Q
+DECOMPCF ;
+ S CLI=$P(^tempbon(0,%XIV),"\",7),CMD=$P(^tempbon(0,%XIV),"\",8)
+ S SUI=0 F  S SUI=$O(^MODBONTM(^HWINFO("MAG"),CLI,CMD,SUI)) Q:(+SUI=0)  D
+ .S ART=$P(^MODBONTM(^HWINFO("MAG"),CLI,CMD,SUI),"\",6)
+ .I (($P(ART,"/",1)'="PA")&($P(ART,"/",1)'="CD")) Q
+ .S HOE=$P(^MODBONTM(^HWINFO("MAG"),CLI,CMD,SUI),"\",3)
+ .S STAT1=""
+ .S PLIN=PLIN+$$^LIBPR("L","D1")
+ .Q
+ Q
+ 

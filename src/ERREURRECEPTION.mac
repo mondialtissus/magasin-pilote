@@ -1,0 +1,76 @@
+ROUTINE ERREURRECEPTION
+ERREURRECEPTION
+ 
+ s MAGASIN=$G(^HWINFO("MAG"))
+ s CLEFART = $O(^MODIOTmp(MAGASIN,""))
+ while CLEFART '= ""
+ {
+  s DATART = $G(^ST(CLEFART))
+  s SECTEUR = +$P(DATART,"\",23)
+  i ((SECTEUR = 1) || (SECTEUR=2) || (SECTEUR=3) || (SECTEUR=5) ||(SECTEUR=6))
+  {
+    s NUMLNG = $O(^MODIOTmp(MAGASIN,CLEFART,""))
+    while NUMLNG '= ""
+    {
+     w !,"dans numlng "
+     s NUMBZR=$O(^MODIOTmp(MAGASIN,CLEFART,NUMLNG,""))
+     while NUMBZR '= ""
+     {
+      w !,"dans numbzr "
+      s DATAMODIO=$G(^MODIOTmp(MAGASIN,CLEFART,NUMLNG,NUMBZR))
+      s NUMCMD=$P(DATAMODIO,"\",9)
+      s NUMCMD=$P(NUMCMD,"*",2)
+      s DATE=$P(DATAMODIO,"\",3)
+      s DATE=$P(DATE,",",1)
+      s ^MODROUTINE(MAGASIN,"RECEPMERC",NUMCMD,DATE,CLEFART,NUMLNG)=""
+ 
+ 
+      s NUMBZR=$O(^MODIOTmp(MAGASIN,CLEFART,NUMLNG,NUMBZR))
+     }
+     s NUMLNG = $O(^MODIOTmp(MAGASIN,CLEFART,NUMLNG))
+    }
+    
+  }
+ 
+ 
+  s CLEFART = $O(^MODIOTmp(MAGASIN,CLEFART))
+ }
+ 
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

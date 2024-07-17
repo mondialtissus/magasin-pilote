@@ -1,0 +1,292 @@
+ROUTINE GUSECTFAMPLU
+GUSECTFAMPLU
+	; Cette routine va permettre de créer une table temporaire qui sera mise à jour tous les jours contenant les secteurs, familles et PLU qui sont en stock
+	; Attention, cette table contient seulement les articles gérés en stock
+	k ^GUSECTFAMPLU
+ 
+	s NEWCLASSIF = 0
+	I +$D(^HWINFO("NEWCLASSIF"))>0
+	{
+	        s NEWCLASSIF = +$G(^HWINFO("NEWCLASSIF"))
+	}
+ 
+	s PLU=$O(^GUSTOCK(""))
+	while PLU'=""
+	{
+	        ; On récupère la clef de l'article
+	        s CLEFART=$G(^SP(PLU))
+	        ; On récupère les données de l'article
+	        s DataArt=$G(^ST(CLEFART))
+ 
+	        S SECTEUR=""
+	        S FAMILLE=""
+ 
+	        I NEWCLASSIF = 0
+	        {
+	                S SECTEUR=$P(DataArt,"\",4)
+	                S FAMILLE=$P(DataArt,"\",7)
+	        }
+	        ELSE
+	        {
+	               S SECTEUR=$P(DataArt,"\",23)
+	               S FAMILLE=$P(DataArt,"\",24)     
+ 
+	        }
+ 
+	        S DATEHC=+$P(DataArt,"\",5)
+	        S DATESTOP=+$P(DataArt,"\",3)
+	        S PA=+$P(DataArt,"\",13)
+	        
+	        I (SECTEUR'="") && (FAMILLE'="")
+	        {
+	        ; On regarde si l'article est in, stop ou Out
+	        ; Pour cela les conditions sont les suivantes:
+	                i DATEHC = 0
+	                {
+	                        i DATESTOP = 0
+	                        {
+	                                ; Produit IN
+	                                s ^GUSECTFAMPLU(SECTEUR,FAMILLE,PLU)="IN"_"\"_PA    
+	                        }
+	                        else
+	                        {
+	                                ;si la date stop est égale au 31/12/2049 alors c'est un stop
+	                                i DATESTOP = 76336
+	                                {
+	                                        ; Produit stop
+	                                        s ^GUSECTFAMPLU(SECTEUR,FAMILLE,PLU)="STOP"_"\"_PA        
+	                                }
+	                                else
+	                                {
+	                                        ; Produit OUT
+	                                        s ^GUSECTFAMPLU(SECTEUR,FAMILLE,PLU)="OUT"_"\"_PA      
+	                                }
+	                        }
+	                }
+	                else
+	                {
+	                        ; Produit OUT
+	                        s ^GUSECTFAMPLU(SECTEUR,FAMILLE,PLU)="OUT"_"\"_PA         
+	                }                       
+	        }
+	        
+	        s PLU=$O(^GUSTOCK(PLU))
+	}
+	
+	q
+	
+ 
+GUSECTFAMPLUTOTAL
+	; Cette routine va permettre de créer une table temporaire qui sera mise à jour tous les jours contenant les secteurs, familles et PLU qui sont en stock
+	; Attention, cette table contient tous les articles (même ceux non gérés en stock)
+	k ^GUSECTFAMPLU
+ 
+	s NEWCLASSIF = 0
+	I +$D(^HWINFO("NEWCLASSIF"))>0
+	{
+	        s NEWCLASSIF = +$G(^HWINFO("NEWCLASSIF"))
+	}
+ 
+	s PLU=$O(^SP(""))
+	while PLU'=""
+	{
+	        ; On récupère la clef de l'article
+	        s CLEFART=$G(^SP(PLU))
+	        ; On récupère les données de l'article
+	        s DataArt=$G(^ST(CLEFART))
+	        
+	        S SECTEUR=""
+	        S FAMILLE=""
+ 
+	        I NEWCLASSIF = 0
+	        {
+	                S SECTEUR=$P(DataArt,"\",4)
+	                S FAMILLE=$P(DataArt,"\",7)
+	        }
+	        ELSE
+	        {
+	               S SECTEUR=$P(DataArt,"\",23)
+	               S FAMILLE=$P(DataArt,"\",24)     
+ 
+	        }
+	        
+	        I (SECTEUR'="") && (FAMILLE'="")
+	        {
+	                s ^GUSECTFAMPLU(SECTEUR,FAMILLE,PLU)=""
+	        }
+	        
+	        s PLU=$O(^SP(PLU))
+	}
+	
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

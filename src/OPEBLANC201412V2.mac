@@ -1,0 +1,1329 @@
+ROUTINE OPEBLANC201412V2
+OPEBLANC201412V2
+ 
+ s ^TKFINSERIE(1412)="20% Blanc Page 5"
+ s ^TKFINSERIE(1413)="20% Blanc Page 5"
+ s ^TKFINSERIE(1497)="20% Blanc Page 5"
+ s ^TKFINSERIE(7210)="20% Blanc Page 5"
+ s ^TKFINSERIE(35489)="20% Blanc Page 5"
+ s ^TKFINSERIE(50614)="20% Blanc Page 5"
+ s ^TKFINSERIE(54394)="20% Blanc Page 5"
+ s ^TKFINSERIE(54395)="20% Blanc Page 5"
+ s ^TKFINSERIE(59319)="20% Blanc Page 5"
+ s ^TKFINSERIE(63636)="20% Blanc Page 5"
+ s ^TKFINSERIE(63637)="20% Blanc Page 5"
+ s ^TKFINSERIE(80296)="20% Blanc Page 5"
+ s ^TKFINSERIE(113957)="20% Blanc Page 5"
+ s ^TKFINSERIE(113958)="20% Blanc Page 5"
+ s ^TKFINSERIE(113959)="20% Blanc Page 5"
+ s ^TKFINSERIE(113960)="20% Blanc Page 5"
+ s ^TKFINSERIE(113961)="20% Blanc Page 5"
+ s ^TKFINSERIE(113962)="20% Blanc Page 5"
+ s ^TKFINSERIE(113963)="20% Blanc Page 5"
+ s ^TKFINSERIE(113964)="20% Blanc Page 5"
+ s ^TKFINSERIE(113965)="20% Blanc Page 5"
+ s ^TKFINSERIE(114016)="20% Blanc Page 5"
+ s ^TKFINSERIE(5383)="20% Blanc Page 5"
+ s ^TKFINSERIE(5394)="20% Blanc Page 5"
+ s ^TKFINSERIE(75313)="20% Blanc Page 5"
+ s ^TKFINSERIE(75316)="20% Blanc Page 5"
+ s ^TKFINSERIE(75317)="20% Blanc Page 5"
+ s ^TKFINSERIE(75318)="20% Blanc Page 5"
+ s ^TKFINSERIE(75321)="20% Blanc Page 5"
+ s ^TKFINSERIE(78311)="20% Blanc Page 5"
+ s ^TKFINSERIE(81295)="20% Blanc Page 5"
+ s ^TKFINSERIE(81296)="20% Blanc Page 5"
+ s ^TKFINSERIE(81298)="20% Blanc Page 5"
+ s ^TKFINSERIE(81299)="20% Blanc Page 5"
+ s ^TKFINSERIE(81302)="20% Blanc Page 5"
+ s ^TKFINSERIE(81304)="20% Blanc Page 5"
+ s ^TKFINSERIE(81932)="20% Blanc Page 5"
+ s ^TKFINSERIE(84407)="20% Blanc Page 5"
+ s ^TKFINSERIE(84408)="20% Blanc Page 5"
+ s ^TKFINSERIE(84409)="20% Blanc Page 5"
+ s ^TKFINSERIE(84410)="20% Blanc Page 5"
+ s ^TKFINSERIE(84411)="20% Blanc Page 5"
+ s ^TKFINSERIE(84412)="20% Blanc Page 5"
+ s ^TKFINSERIE(84413)="20% Blanc Page 5"
+ s ^TKFINSERIE(84414)="20% Blanc Page 5"
+ s ^TKFINSERIE(84415)="20% Blanc Page 5"
+ s ^TKFINSERIE(84416)="20% Blanc Page 5"
+ s ^TKFINSERIE(84417)="20% Blanc Page 5"
+ s ^TKFINSERIE(84419)="20% Blanc Page 5"
+ s ^TKFINSERIE(84420)="20% Blanc Page 5"
+ s ^TKFINSERIE(84423)="20% Blanc Page 5"
+ s ^TKFINSERIE(104473)="20% Blanc Page 5"
+ s ^TKFINSERIE(104474)="20% Blanc Page 5"
+ s ^TKFINSERIE(104475)="20% Blanc Page 5"
+ s ^TKFINSERIE(112154)="20% Blanc Page 5"
+ s ^TKFINSERIE(112155)="20% Blanc Page 5"
+ s ^TKFINSERIE(114006)="20% Blanc Page 5"
+ s ^TKFINSERIE(114007)="20% Blanc Page 5"
+ s ^TKFINSERIE(114008)="20% Blanc Page 5"
+ s ^TKFINSERIE(114009)="20% Blanc Page 5"
+ s ^TKFINSERIE(114010)="20% Blanc Page 5"
+ s ^TKFINSERIE(114011)="20% Blanc Page 5"
+ s ^TKFINSERIE(114012)="20% Blanc Page 5"
+ s ^TKFINSERIE(114013)="20% Blanc Page 5"
+ s ^TKFINSERIE(114014)="20% Blanc Page 5"
+ s ^TKFINSERIE(114015)="20% Blanc Page 5"
+ s ^TKFINSERIE(5399)="20% Blanc Page 5"
+ s ^TKFINSERIE(47822)="20% Blanc Page 5"
+ s ^TKFINSERIE(75300)="20% Blanc Page 5"
+ s ^TKFINSERIE(75301)="20% Blanc Page 5"
+ s ^TKFINSERIE(75305)="20% Blanc Page 5"
+ s ^TKFINSERIE(75309)="20% Blanc Page 5"
+ s ^TKFINSERIE(78307)="20% Blanc Page 5"
+ s ^TKFINSERIE(81307)="20% Blanc Page 5"
+ s ^TKFINSERIE(81310)="20% Blanc Page 5"
+ s ^TKFINSERIE(81312)="20% Blanc Page 5"
+ s ^TKFINSERIE(81317)="20% Blanc Page 5"
+ s ^TKFINSERIE(81936)="20% Blanc Page 5"
+ s ^TKFINSERIE(84390)="20% Blanc Page 5"
+ s ^TKFINSERIE(84391)="20% Blanc Page 5"
+ s ^TKFINSERIE(84392)="20% Blanc Page 5"
+ s ^TKFINSERIE(84393)="20% Blanc Page 5"
+ s ^TKFINSERIE(84394)="20% Blanc Page 5"
+ s ^TKFINSERIE(84395)="20% Blanc Page 5"
+ s ^TKFINSERIE(84396)="20% Blanc Page 5"
+ s ^TKFINSERIE(84397)="20% Blanc Page 5"
+ s ^TKFINSERIE(84398)="20% Blanc Page 5"
+ s ^TKFINSERIE(84399)="20% Blanc Page 5"
+ s ^TKFINSERIE(84403)="20% Blanc Page 5"
+ s ^TKFINSERIE(84404)="20% Blanc Page 5"
+ s ^TKFINSERIE(84405)="20% Blanc Page 5"
+ s ^TKFINSERIE(104470)="20% Blanc Page 5"
+ s ^TKFINSERIE(104471)="20% Blanc Page 5"
+ s ^TKFINSERIE(104472)="20% Blanc Page 5"
+ s ^TKFINSERIE(104486)="20% Blanc Page 5"
+ s ^TKFINSERIE(104487)="20% Blanc Page 5"
+ s ^TKFINSERIE(104488)="20% Blanc Page 5"
+ s ^TKFINSERIE(111713)="20% Blanc Page 5"
+ s ^TKFINSERIE(111716)="20% Blanc Page 5"
+ s ^TKFINSERIE(111719)="20% Blanc Page 5"
+ s ^TKFINSERIE(111784)="20% Blanc Page 5"
+ s ^TKFINSERIE(111785)="20% Blanc Page 5"
+ s ^TKFINSERIE(113996)="20% Blanc Page 5"
+ s ^TKFINSERIE(113997)="20% Blanc Page 5"
+ s ^TKFINSERIE(113998)="20% Blanc Page 5"
+ s ^TKFINSERIE(113999)="20% Blanc Page 5"
+ s ^TKFINSERIE(114000)="20% Blanc Page 5"
+ s ^TKFINSERIE(114001)="20% Blanc Page 5"
+ s ^TKFINSERIE(114002)="20% Blanc Page 5"
+ s ^TKFINSERIE(114003)="20% Blanc Page 5"
+ s ^TKFINSERIE(114004)="20% Blanc Page 5"
+ s ^TKFINSERIE(114005)="20% Blanc Page 5"
+ s ^TKFINSERIE(64069)="20% Blanc Page 5"
+ s ^TKFINSERIE(81282)="20% Blanc Page 5"
+ s ^TKFINSERIE(81288)="20% Blanc Page 5"
+ s ^TKFINSERIE(81928)="20% Blanc Page 5"
+ s ^TKFINSERIE(84329)="20% Blanc Page 5"
+ s ^TKFINSERIE(84330)="20% Blanc Page 5"
+ s ^TKFINSERIE(84331)="20% Blanc Page 5"
+ s ^TKFINSERIE(84332)="20% Blanc Page 5"
+ s ^TKFINSERIE(84333)="20% Blanc Page 5"
+ s ^TKFINSERIE(84334)="20% Blanc Page 5"
+ s ^TKFINSERIE(84335)="20% Blanc Page 5"
+ s ^TKFINSERIE(84337)="20% Blanc Page 5"
+ s ^TKFINSERIE(84339)="20% Blanc Page 5"
+ s ^TKFINSERIE(84340)="20% Blanc Page 5"
+ s ^TKFINSERIE(84341)="20% Blanc Page 5"
+ s ^TKFINSERIE(84344)="20% Blanc Page 5"
+ s ^TKFINSERIE(84345)="20% Blanc Page 5"
+ s ^TKFINSERIE(84346)="20% Blanc Page 5"
+ s ^TKFINSERIE(104489)="20% Blanc Page 5"
+ s ^TKFINSERIE(104490)="20% Blanc Page 5"
+ s ^TKFINSERIE(104491)="20% Blanc Page 5"
+ s ^TKFINSERIE(111710)="20% Blanc Page 5"
+ s ^TKFINSERIE(111714)="20% Blanc Page 5"
+ s ^TKFINSERIE(111717)="20% Blanc Page 5"
+ s ^TKFINSERIE(111778)="20% Blanc Page 5"
+ s ^TKFINSERIE(111779)="20% Blanc Page 5"
+ s ^TKFINSERIE(113966)="20% Blanc Page 5"
+ s ^TKFINSERIE(113967)="20% Blanc Page 5"
+ s ^TKFINSERIE(113968)="20% Blanc Page 5"
+ s ^TKFINSERIE(113969)="20% Blanc Page 5"
+ s ^TKFINSERIE(113970)="20% Blanc Page 5"
+ s ^TKFINSERIE(113971)="20% Blanc Page 5"
+ s ^TKFINSERIE(113972)="20% Blanc Page 5"
+ s ^TKFINSERIE(113973)="20% Blanc Page 5"
+ s ^TKFINSERIE(113974)="20% Blanc Page 5"
+ s ^TKFINSERIE(113975)="20% Blanc Page 5"
+ s ^TKFINSERIE(118756)="20% Blanc Page 5"
+ s ^TKFINSERIE(118757)="20% Blanc Page 5"
+ s ^TKFINSERIE(118758)="20% Blanc Page 5"
+ s ^TKFINSERIE(118759)="20% Blanc Page 5"
+ s ^TKFINSERIE(118760)="20% Blanc Page 5"
+ s ^TKFINSERIE(118761)="20% Blanc Page 5"
+ s ^TKFINSERIE(118762)="20% Blanc Page 5"
+ s ^TKFINSERIE(118763)="20% Blanc Page 5"
+ s ^TKFINSERIE(118764)="20% Blanc Page 5"
+ s ^TKFINSERIE(118765)="20% Blanc Page 5"
+ s ^TKFINSERIE(118766)="20% Blanc Page 5"
+ s ^TKFINSERIE(118767)="20% Blanc Page 5"
+ s ^TKFINSERIE(5431)="20% Blanc Page 5"
+ s ^TKFINSERIE(5442)="20% Blanc Page 5"
+ s ^TKFINSERIE(47811)="20% Blanc Page 5"
+ s ^TKFINSERIE(75281)="20% Blanc Page 5"
+ s ^TKFINSERIE(75283)="20% Blanc Page 5"
+ s ^TKFINSERIE(75285)="20% Blanc Page 5"
+ s ^TKFINSERIE(75287)="20% Blanc Page 5"
+ s ^TKFINSERIE(75291)="20% Blanc Page 5"
+ s ^TKFINSERIE(75293)="20% Blanc Page 5"
+ s ^TKFINSERIE(75294)="20% Blanc Page 5"
+ s ^TKFINSERIE(75295)="20% Blanc Page 5"
+ s ^TKFINSERIE(75296)="20% Blanc Page 5"
+ s ^TKFINSERIE(75297)="20% Blanc Page 5"
+ s ^TKFINSERIE(78308)="20% Blanc Page 5"
+ s ^TKFINSERIE(81318)="20% Blanc Page 5"
+ s ^TKFINSERIE(81322)="20% Blanc Page 5"
+ s ^TKFINSERIE(81323)="20% Blanc Page 5"
+ s ^TKFINSERIE(81324)="20% Blanc Page 5"
+ s ^TKFINSERIE(81325)="20% Blanc Page 5"
+ s ^TKFINSERIE(81328)="20% Blanc Page 5"
+ s ^TKFINSERIE(81329)="20% Blanc Page 5"
+ s ^TKFINSERIE(81940)="20% Blanc Page 5"
+ s ^TKFINSERIE(81943)="20% Blanc Page 5"
+ s ^TKFINSERIE(84364)="20% Blanc Page 5"
+ s ^TKFINSERIE(84365)="20% Blanc Page 5"
+ s ^TKFINSERIE(84366)="20% Blanc Page 5"
+ s ^TKFINSERIE(84367)="20% Blanc Page 5"
+ s ^TKFINSERIE(84368)="20% Blanc Page 5"
+ s ^TKFINSERIE(84369)="20% Blanc Page 5"
+ s ^TKFINSERIE(84370)="20% Blanc Page 5"
+ s ^TKFINSERIE(84371)="20% Blanc Page 5"
+ s ^TKFINSERIE(84372)="20% Blanc Page 5"
+ s ^TKFINSERIE(84373)="20% Blanc Page 5"
+ s ^TKFINSERIE(84377)="20% Blanc Page 5"
+ s ^TKFINSERIE(84379)="20% Blanc Page 5"
+ s ^TKFINSERIE(104467)="20% Blanc Page 5"
+ s ^TKFINSERIE(104468)="20% Blanc Page 5"
+ s ^TKFINSERIE(104469)="20% Blanc Page 5"
+ s ^TKFINSERIE(104483)="20% Blanc Page 5"
+ s ^TKFINSERIE(104484)="20% Blanc Page 5"
+ s ^TKFINSERIE(104485)="20% Blanc Page 5"
+ s ^TKFINSERIE(111712)="20% Blanc Page 5"
+ s ^TKFINSERIE(111715)="20% Blanc Page 5"
+ s ^TKFINSERIE(111718)="20% Blanc Page 5"
+ s ^TKFINSERIE(111781)="20% Blanc Page 5"
+ s ^TKFINSERIE(111782)="20% Blanc Page 5"
+ s ^TKFINSERIE(112156)="20% Blanc Page 5"
+ s ^TKFINSERIE(112157)="20% Blanc Page 5"
+ s ^TKFINSERIE(113986)="20% Blanc Page 5"
+ s ^TKFINSERIE(113987)="20% Blanc Page 5"
+ s ^TKFINSERIE(113988)="20% Blanc Page 5"
+ s ^TKFINSERIE(113989)="20% Blanc Page 5"
+ s ^TKFINSERIE(113990)="20% Blanc Page 5"
+ s ^TKFINSERIE(113991)="20% Blanc Page 5"
+ s ^TKFINSERIE(113992)="20% Blanc Page 5"
+ s ^TKFINSERIE(113993)="20% Blanc Page 5"
+ s ^TKFINSERIE(113994)="20% Blanc Page 5"
+ s ^TKFINSERIE(113995)="20% Blanc Page 5"
+ s ^TKFINSERIE(47786)="20% Blanc Page 5"
+ s ^TKFINSERIE(75275)="20% Blanc Page 5"
+ s ^TKFINSERIE(78309)="20% Blanc Page 5"
+ s ^TKFINSERIE(81330)="20% Blanc Page 5"
+ s ^TKFINSERIE(81331)="20% Blanc Page 5"
+ s ^TKFINSERIE(81334)="20% Blanc Page 5"
+ s ^TKFINSERIE(81335)="20% Blanc Page 5"
+ s ^TKFINSERIE(81336)="20% Blanc Page 5"
+ s ^TKFINSERIE(81339)="20% Blanc Page 5"
+ s ^TKFINSERIE(84348)="20% Blanc Page 5"
+ s ^TKFINSERIE(84349)="20% Blanc Page 5"
+ s ^TKFINSERIE(84350)="20% Blanc Page 5"
+ s ^TKFINSERIE(84351)="20% Blanc Page 5"
+ s ^TKFINSERIE(84352)="20% Blanc Page 5"
+ s ^TKFINSERIE(84353)="20% Blanc Page 5"
+ s ^TKFINSERIE(84354)="20% Blanc Page 5"
+ s ^TKFINSERIE(84355)="20% Blanc Page 5"
+ s ^TKFINSERIE(84356)="20% Blanc Page 5"
+ s ^TKFINSERIE(84357)="20% Blanc Page 5"
+ s ^TKFINSERIE(84358)="20% Blanc Page 5"
+ s ^TKFINSERIE(84359)="20% Blanc Page 5"
+ s ^TKFINSERIE(84360)="20% Blanc Page 5"
+ s ^TKFINSERIE(84361)="20% Blanc Page 5"
+ s ^TKFINSERIE(84362)="20% Blanc Page 5"
+ s ^TKFINSERIE(84363)="20% Blanc Page 5"
+ s ^TKFINSERIE(112158)="20% Blanc Page 5"
+ s ^TKFINSERIE(112159)="20% Blanc Page 5"
+ s ^TKFINSERIE(113976)="20% Blanc Page 5"
+ s ^TKFINSERIE(113977)="20% Blanc Page 5"
+ s ^TKFINSERIE(113978)="20% Blanc Page 5"
+ s ^TKFINSERIE(113979)="20% Blanc Page 5"
+ s ^TKFINSERIE(113980)="20% Blanc Page 5"
+ s ^TKFINSERIE(113981)="20% Blanc Page 5"
+ s ^TKFINSERIE(113982)="20% Blanc Page 5"
+ s ^TKFINSERIE(113983)="20% Blanc Page 5"
+ s ^TKFINSERIE(113984)="20% Blanc Page 5"
+ s ^TKFINSERIE(113985)="20% Blanc Page 5"
+ s ^TKFINSERIE(63527)="20% Blanc Page 6"
+ s ^TKFINSERIE(63528)="20% Blanc Page 6"
+ s ^TKFINSERIE(69740)="20% Blanc Page 6"
+ s ^TKFINSERIE(81047)="20% Blanc Page 6"
+ s ^TKFINSERIE(81092)="20% Blanc Page 6"
+ s ^TKFINSERIE(82201)="20% Blanc Page 6"
+ s ^TKFINSERIE(82269)="20% Blanc Page 6"
+ s ^TKFINSERIE(82270)="20% Blanc Page 6"
+ s ^TKFINSERIE(82271)="20% Blanc Page 6"
+ s ^TKFINSERIE(83070)="20% Blanc Page 6"
+ s ^TKFINSERIE(83071)="20% Blanc Page 6"
+ s ^TKFINSERIE(83073)="20% Blanc Page 6"
+ s ^TKFINSERIE(83094)="20% Blanc Page 6"
+ s ^TKFINSERIE(83814)="20% Blanc Page 6"
+ s ^TKFINSERIE(83816)="20% Blanc Page 6"
+ s ^TKFINSERIE(83819)="20% Blanc Page 6"
+ s ^TKFINSERIE(104163)="20% Blanc Page 6"
+ s ^TKFINSERIE(104165)="20% Blanc Page 6"
+ s ^TKFINSERIE(104169)="20% Blanc Page 6"
+ s ^TKFINSERIE(104170)="20% Blanc Page 6"
+ s ^TKFINSERIE(104171)="20% Blanc Page 6"
+ s ^TKFINSERIE(104172)="20% Blanc Page 6"
+ s ^TKFINSERIE(104173)="20% Blanc Page 6"
+ s ^TKFINSERIE(104174)="20% Blanc Page 6"
+ s ^TKFINSERIE(104175)="20% Blanc Page 6"
+ s ^TKFINSERIE(104176)="20% Blanc Page 6"
+ s ^TKFINSERIE(104177)="20% Blanc Page 6"
+ s ^TKFINSERIE(104178)="20% Blanc Page 6"
+ s ^TKFINSERIE(105468)="20% Blanc Page 6"
+ s ^TKFINSERIE(105469)="20% Blanc Page 6"
+ s ^TKFINSERIE(105493)="20% Blanc Page 6"
+ s ^TKFINSERIE(105499)="20% Blanc Page 6"
+ s ^TKFINSERIE(114087)="20% Blanc Page 6"
+ s ^TKFINSERIE(114088)="20% Blanc Page 6"
+ s ^TKFINSERIE(114083)="20% Blanc Page 6"
+ s ^TKFINSERIE(114084)="20% Blanc Page 6"
+ s ^TKFINSERIE(114085)="20% Blanc Page 6"
+ s ^TKFINSERIE(119236)="20% Blanc Page 7"
+ s ^TKFINSERIE(119237)="20% Blanc Page 7"
+ s ^TKFINSERIE(119238)="20% Blanc Page 7"
+ s ^TKFINSERIE(119239)="20% Blanc Page 7"
+ s ^TKFINSERIE(74577)="20% Blanc Page 7"
+ s ^TKFINSERIE(74578)="20% Blanc Page 7"
+ s ^TKFINSERIE(83542)="20% Blanc Page 7"
+ s ^TKFINSERIE(83543)="20% Blanc Page 7"
+ s ^TKFINSERIE(83545)="20% Blanc Page 7"
+ s ^TKFINSERIE(83546)="20% Blanc Page 7"
+ s ^TKFINSERIE(83547)="20% Blanc Page 7"
+ s ^TKFINSERIE(86186)="20% Blanc Page 7"
+ s ^TKFINSERIE(103114)="20% Blanc Page 7"
+ s ^TKFINSERIE(103115)="20% Blanc Page 7"
+ s ^TKFINSERIE(103116)="20% Blanc Page 7"
+ s ^TKFINSERIE(103117)="20% Blanc Page 7"
+ s ^TKFINSERIE(103118)="20% Blanc Page 7"
+ s ^TKFINSERIE(103119)="20% Blanc Page 7"
+ s ^TKFINSERIE(103120)="20% Blanc Page 7"
+ s ^TKFINSERIE(103121)="20% Blanc Page 7"
+ s ^TKFINSERIE(103123)="20% Blanc Page 7"
+ s ^TKFINSERIE(103124)="20% Blanc Page 7"
+ s ^TKFINSERIE(103125)="20% Blanc Page 7"
+ s ^TKFINSERIE(103126)="20% Blanc Page 7"
+ s ^TKFINSERIE(103127)="20% Blanc Page 7"
+ s ^TKFINSERIE(103128)="20% Blanc Page 7"
+ s ^TKFINSERIE(103129)="20% Blanc Page 7"
+ s ^TKFINSERIE(103130)="20% Blanc Page 7"
+ s ^TKFINSERIE(103132)="20% Blanc Page 7"
+ s ^TKFINSERIE(103133)="20% Blanc Page 7"
+ s ^TKFINSERIE(103134)="20% Blanc Page 7"
+ s ^TKFINSERIE(103135)="20% Blanc Page 7"
+ s ^TKFINSERIE(103136)="20% Blanc Page 7"
+ s ^TKFINSERIE(103137)="20% Blanc Page 7"
+ s ^TKFINSERIE(103138)="20% Blanc Page 7"
+ s ^TKFINSERIE(103139)="20% Blanc Page 7"
+ s ^TKFINSERIE(110631)="20% Blanc Page 7"
+ s ^TKFINSERIE(110632)="20% Blanc Page 7"
+ s ^TKFINSERIE(110633)="20% Blanc Page 7"
+ s ^TKFINSERIE(110634)="20% Blanc Page 7"
+ s ^TKFINSERIE(110635)="20% Blanc Page 7"
+ s ^TKFINSERIE(110636)="20% Blanc Page 7"
+ s ^TKFINSERIE(110637)="20% Blanc Page 7"
+ s ^TKFINSERIE(110638)="20% Blanc Page 7"
+ s ^TKFINSERIE(110639)="20% Blanc Page 7"
+ s ^TKFINSERIE(110640)="20% Blanc Page 7"
+ s ^TKFINSERIE(110641)="20% Blanc Page 7"
+ s ^TKFINSERIE(110642)="20% Blanc Page 7"
+ s ^TKFINSERIE(110643)="20% Blanc Page 7"
+ s ^TKFINSERIE(110644)="20% Blanc Page 7"
+ s ^TKFINSERIE(110645)="20% Blanc Page 7"
+ s ^TKFINSERIE(110646)="20% Blanc Page 7"
+ s ^TKFINSERIE(110647)="20% Blanc Page 7"
+ s ^TKFINSERIE(110648)="20% Blanc Page 7"
+ s ^TKFINSERIE(110649)="20% Blanc Page 7"
+ s ^TKFINSERIE(110650)="20% Blanc Page 7"
+ s ^TKFINSERIE(110651)="20% Blanc Page 7"
+ s ^TKFINSERIE(110652)="20% Blanc Page 7"
+ s ^TKFINSERIE(110653)="20% Blanc Page 7"
+ s ^TKFINSERIE(110654)="20% Blanc Page 7"
+ s ^TKFINSERIE(110655)="20% Blanc Page 7"
+ s ^TKFINSERIE(110656)="20% Blanc Page 7"
+ s ^TKFINSERIE(110657)="20% Blanc Page 7"
+ s ^TKFINSERIE(110658)="20% Blanc Page 7"
+ s ^TKFINSERIE(110659)="20% Blanc Page 7"
+ s ^TKFINSERIE(110660)="20% Blanc Page 7"
+ s ^TKFINSERIE(110661)="20% Blanc Page 7"
+ s ^TKFINSERIE(110662)="20% Blanc Page 7"
+ s ^TKFINSERIE(110663)="20% Blanc Page 7"
+ s ^TKFINSERIE(110664)="20% Blanc Page 7"
+ s ^TKFINSERIE(110665)="20% Blanc Page 7"
+ s ^TKFINSERIE(110666)="20% Blanc Page 7"
+ s ^TKFINSERIE(110667)="20% Blanc Page 7"
+ s ^TKFINSERIE(110668)="20% Blanc Page 7"
+ s ^TKFINSERIE(110669)="20% Blanc Page 7"
+ s ^TKFINSERIE(110670)="20% Blanc Page 7"
+ s ^TKFINSERIE(110671)="20% Blanc Page 7"
+ s ^TKFINSERIE(110672)="20% Blanc Page 7"
+ s ^TKFINSERIE(107546)="20% Blanc Page 7"
+ s ^TKFINSERIE(107547)="20% Blanc Page 7"
+ s ^TKFINSERIE(107548)="20% Blanc Page 7"
+ s ^TKFINSERIE(107549)="20% Blanc Page 7"
+ s ^TKFINSERIE(107550)="20% Blanc Page 7"
+ s ^TKFINSERIE(107552)="20% Blanc Page 7"
+ s ^TKFINSERIE(107553)="20% Blanc Page 7"
+ s ^TKFINSERIE(107554)="20% Blanc Page 7"
+ s ^TKFINSERIE(107555)="20% Blanc Page 7"
+ s ^TKFINSERIE(107556)="20% Blanc Page 7"
+ s ^TKFINSERIE(107557)="20% Blanc Page 7"
+ s ^TKFINSERIE(107558)="20% Blanc Page 7"
+ s ^TKFINSERIE(107559)="20% Blanc Page 7"
+ s ^TKFINSERIE(107560)="20% Blanc Page 7"
+ s ^TKFINSERIE(107561)="20% Blanc Page 7"
+ s ^TKFINSERIE(110919)="20% Blanc Page 7"
+ s ^TKFINSERIE(110920)="20% Blanc Page 7"
+ s ^TKFINSERIE(111695)="20% Blanc Page 7"
+ s ^TKFINSERIE(111696)="20% Blanc Page 7"
+ s ^TKFINSERIE(111697)="20% Blanc Page 7"
+ s ^TKFINSERIE(111698)="20% Blanc Page 7"
+ s ^TKFINSERIE(111699)="20% Blanc Page 7"
+ s ^TKFINSERIE(111700)="20% Blanc Page 7"
+ s ^TKFINSERIE(111726)="20% Blanc Page 7"
+ s ^TKFINSERIE(111727)="20% Blanc Page 7"
+ s ^TKFINSERIE(111728)="20% Blanc Page 7"
+ s ^TKFINSERIE(111729)="20% Blanc Page 7"
+ s ^TKFINSERIE(111730)="20% Blanc Page 7"
+ s ^TKFINSERIE(111731)="20% Blanc Page 7"
+ s ^TKFINSERIE(111732)="20% Blanc Page 7"
+ s ^TKFINSERIE(111768)="20% Blanc Page 7"
+ s ^TKFINSERIE(111769)="20% Blanc Page 7"
+ s ^TKFINSERIE(112614)="20% Blanc Page 7"
+ s ^TKFINSERIE(112615)="20% Blanc Page 7"
+ s ^TKFINSERIE(112749)="20% Blanc Page 7"
+ s ^TKFINSERIE(112802)="20% Blanc Page 7"
+ s ^TKFINSERIE(112803)="20% Blanc Page 7"
+ s ^TKFINSERIE(112804)="20% Blanc Page 7"
+ s ^TKFINSERIE(112805)="20% Blanc Page 7"
+ s ^TKFINSERIE(103140)="20% Blanc Page 7"
+ s ^TKFINSERIE(103142)="20% Blanc Page 7"
+ s ^TKFINSERIE(103143)="20% Blanc Page 7"
+ s ^TKFINSERIE(103144)="20% Blanc Page 7"
+ s ^TKFINSERIE(103145)="20% Blanc Page 7"
+ s ^TKFINSERIE(103146)="20% Blanc Page 7"
+ s ^TKFINSERIE(103148)="20% Blanc Page 7"
+ s ^TKFINSERIE(103149)="20% Blanc Page 7"
+ s ^TKFINSERIE(103150)="20% Blanc Page 7"
+ s ^TKFINSERIE(103151)="20% Blanc Page 7"
+ s ^TKFINSERIE(103152)="20% Blanc Page 7"
+ s ^TKFINSERIE(103153)="20% Blanc Page 7"
+ s ^TKFINSERIE(103154)="20% Blanc Page 7"
+ s ^TKFINSERIE(103155)="20% Blanc Page 7"
+ s ^TKFINSERIE(103156)="20% Blanc Page 7"
+ s ^TKFINSERIE(103157)="20% Blanc Page 7"
+ s ^TKFINSERIE(103158)="20% Blanc Page 7"
+ s ^TKFINSERIE(103159)="20% Blanc Page 7"
+ s ^TKFINSERIE(103160)="20% Blanc Page 7"
+ s ^TKFINSERIE(103161)="20% Blanc Page 7"
+ s ^TKFINSERIE(103162)="20% Blanc Page 7"
+ s ^TKFINSERIE(103163)="20% Blanc Page 7"
+ s ^TKFINSERIE(103164)="20% Blanc Page 7"
+ s ^TKFINSERIE(103165)="20% Blanc Page 7"
+ s ^TKFINSERIE(110673)="20% Blanc Page 7"
+ s ^TKFINSERIE(110674)="20% Blanc Page 7"
+ s ^TKFINSERIE(110675)="20% Blanc Page 7"
+ s ^TKFINSERIE(110676)="20% Blanc Page 7"
+ s ^TKFINSERIE(110677)="20% Blanc Page 7"
+ s ^TKFINSERIE(110678)="20% Blanc Page 7"
+ s ^TKFINSERIE(110679)="20% Blanc Page 7"
+ s ^TKFINSERIE(110680)="20% Blanc Page 7"
+ s ^TKFINSERIE(110681)="20% Blanc Page 7"
+ s ^TKFINSERIE(110682)="20% Blanc Page 7"
+ s ^TKFINSERIE(110683)="20% Blanc Page 7"
+ s ^TKFINSERIE(110684)="20% Blanc Page 7"
+ s ^TKFINSERIE(110685)="20% Blanc Page 7"
+ s ^TKFINSERIE(110686)="20% Blanc Page 7"
+ s ^TKFINSERIE(110687)="20% Blanc Page 7"
+ s ^TKFINSERIE(110688)="20% Blanc Page 7"
+ s ^TKFINSERIE(110689)="20% Blanc Page 7"
+ s ^TKFINSERIE(110690)="20% Blanc Page 7"
+ s ^TKFINSERIE(110691)="20% Blanc Page 7"
+ s ^TKFINSERIE(110692)="20% Blanc Page 7"
+ s ^TKFINSERIE(110693)="20% Blanc Page 7"
+ s ^TKFINSERIE(110694)="20% Blanc Page 7"
+ s ^TKFINSERIE(110695)="20% Blanc Page 7"
+ s ^TKFINSERIE(110696)="20% Blanc Page 7"
+ s ^TKFINSERIE(5620)="20% Blanc Page 7"
+ s ^TKFINSERIE(5621)="20% Blanc Page 7"
+ s ^TKFINSERIE(5622)="20% Blanc Page 7"
+ s ^TKFINSERIE(5623)="20% Blanc Page 7"
+ s ^TKFINSERIE(5808)="20% Blanc Page 7"
+ s ^TKFINSERIE(5809)="20% Blanc Page 7"
+ s ^TKFINSERIE(5810)="20% Blanc Page 7"
+ s ^TKFINSERIE(66358)="20% Blanc Page 7"
+ s ^TKFINSERIE(66365)="20% Blanc Page 7"
+ s ^TKFINSERIE(66366)="20% Blanc Page 7"
+ s ^TKFINSERIE(66367)="20% Blanc Page 7"
+ s ^TKFINSERIE(66368)="20% Blanc Page 7"
+ s ^TKFINSERIE(66369)="20% Blanc Page 7"
+ s ^TKFINSERIE(66370)="20% Blanc Page 7"
+ s ^TKFINSERIE(66371)="20% Blanc Page 7"
+ s ^TKFINSERIE(66372)="20% Blanc Page 7"
+ s ^TKFINSERIE(89785)="20% Blanc Page 7"
+ s ^TKFINSERIE(89786)="20% Blanc Page 7"
+ s ^TKFINSERIE(89787)="20% Blanc Page 7"
+ s ^TKFINSERIE(89788)="20% Blanc Page 7"
+ s ^TKFINSERIE(89789)="20% Blanc Page 7"
+ s ^TKFINSERIE(89790)="20% Blanc Page 7"
+ s ^TKFINSERIE(89791)="20% Blanc Page 7"
+ s ^TKFINSERIE(89792)="20% Blanc Page 7"
+ s ^TKFINSERIE(105809)="20% Blanc Page 7"
+ s ^TKFINSERIE(105810)="20% Blanc Page 7"
+ s ^TKFINSERIE(105811)="20% Blanc Page 7"
+ s ^TKFINSERIE(105813)="20% Blanc Page 7"
+ s ^TKFINSERIE(115904)="20% Blanc Page 7"
+ s ^TKFINSERIE(115905)="20% Blanc Page 7"
+ s ^TKFINSERIE(5616)="20% Blanc Page 7"
+ s ^TKFINSERIE(5617)="20% Blanc Page 7"
+ s ^TKFINSERIE(5618)="20% Blanc Page 7"
+ s ^TKFINSERIE(5619)="20% Blanc Page 7"
+ s ^TKFINSERIE(5624)="20% Blanc Page 7"
+ s ^TKFINSERIE(5625)="20% Blanc Page 7"
+ s ^TKFINSERIE(5626)="20% Blanc Page 7"
+ s ^TKFINSERIE(66356)="20% Blanc Page 7"
+ s ^TKFINSERIE(66363)="20% Blanc Page 7"
+ s ^TKFINSERIE(66364)="20% Blanc Page 7"
+ s ^TKFINSERIE(89793)="20% Blanc Page 7"
+ s ^TKFINSERIE(89794)="20% Blanc Page 7"
+ s ^TKFINSERIE(89795)="20% Blanc Page 7"
+ s ^TKFINSERIE(89796)="20% Blanc Page 7"
+ s ^TKFINSERIE(100658)="20% Blanc Page 7"
+ s ^TKFINSERIE(105821)="20% Blanc Page 7"
+ s ^TKFINSERIE(105822)="20% Blanc Page 7"
+ s ^TKFINSERIE(115906)="20% Blanc Page 7"
+ s ^TKFINSERIE(115907)="20% Blanc Page 7"
+ s ^TKFINSERIE(115908)="20% Blanc Page 7"
+ s ^TKFINSERIE(115909)="20% Blanc Page 7"
+ s ^TKFINSERIE(5748)="20% Blanc Page 7"
+ s ^TKFINSERIE(5749)="20% Blanc Page 7"
+ s ^TKFINSERIE(5750)="20% Blanc Page 7"
+ s ^TKFINSERIE(5751)="20% Blanc Page 7"
+ s ^TKFINSERIE(5752)="20% Blanc Page 7"
+ s ^TKFINSERIE(5753)="20% Blanc Page 7"
+ s ^TKFINSERIE(5754)="20% Blanc Page 7"
+ s ^TKFINSERIE(5755)="20% Blanc Page 7"
+ s ^TKFINSERIE(5811)="20% Blanc Page 7"
+ s ^TKFINSERIE(5812)="20% Blanc Page 7"
+ s ^TKFINSERIE(8683)="20% Blanc Page 7"
+ s ^TKFINSERIE(102246)="20% Blanc Page 8"
+ s ^TKFINSERIE(102247)="20% Blanc Page 8"
+ s ^TKFINSERIE(102248)="20% Blanc Page 8"
+ s ^TKFINSERIE(102249)="20% Blanc Page 8"
+ s ^TKFINSERIE(102250)="20% Blanc Page 8"
+ s ^TKFINSERIE(102231)="20% Blanc Page 8"
+ s ^TKFINSERIE(102232)="20% Blanc Page 8"
+ s ^TKFINSERIE(102235)="20% Blanc Page 8"
+ s ^TKFINSERIE(105504)="20% Blanc Page 8"
+ s ^TKFINSERIE(110935)="20% Blanc Page 8"
+ s ^TKFINSERIE(111764)="20% Blanc Page 8"
+ s ^TKFINSERIE(111771)="20% Blanc Page 8"
+ s ^TKFINSERIE(102226)="20% Blanc Page 8"
+ s ^TKFINSERIE(102227)="20% Blanc Page 8"
+ s ^TKFINSERIE(102228)="20% Blanc Page 8"
+ s ^TKFINSERIE(102229)="20% Blanc Page 8"
+ s ^TKFINSERIE(102230)="20% Blanc Page 8"
+ s ^TKFINSERIE(105506)="20% Blanc Page 8"
+ s ^TKFINSERIE(107811)="20% Blanc Page 8"
+ s ^TKFINSERIE(107812)="20% Blanc Page 8"
+ s ^TKFINSERIE(110934)="20% Blanc Page 8"
+ s ^TKFINSERIE(111688)="20% Blanc Page 8"
+ s ^TKFINSERIE(111765)="20% Blanc Page 8"
+ s ^TKFINSERIE(111772)="20% Blanc Page 8"
+ s ^TKFINSERIE(112795)="20% Blanc Page 8"
+ s ^TKFINSERIE(100440)="20% Blanc Page 8"
+ s ^TKFINSERIE(100441)="20% Blanc Page 8"
+ s ^TKFINSERIE(100442)="20% Blanc Page 8"
+ s ^TKFINSERIE(100443)="20% Blanc Page 8"
+ s ^TKFINSERIE(100444)="20% Blanc Page 8"
+ s ^TKFINSERIE(102241)="20% Blanc Page 8"
+ s ^TKFINSERIE(102242)="20% Blanc Page 8"
+ s ^TKFINSERIE(102243)="20% Blanc Page 8"
+ s ^TKFINSERIE(102244)="20% Blanc Page 8"
+ s ^TKFINSERIE(102245)="20% Blanc Page 8"
+ s ^TKFINSERIE(105505)="20% Blanc Page 8"
+ s ^TKFINSERIE(111763)="20% Blanc Page 8"
+ s ^TKFINSERIE(111770)="20% Blanc Page 8"
+ s ^TKFINSERIE(112794)="20% Blanc Page 8"
+ s ^TKFINSERIE(112799)="20% Blanc Page 8"
+ s ^TKFINSERIE(112800)="20% Blanc Page 8"
+ s ^TKFINSERIE(112801)="20% Blanc Page 8"
+ s ^TKFINSERIE(3767)="20% Blanc Page 9"
+ s ^TKFINSERIE(7230)="20% Blanc Page 9"
+ s ^TKFINSERIE(1500)="20% Blanc Page 9"
+ s ^TKFINSERIE(3142)="20% Blanc Page 9"
+ s ^TKFINSERIE(3144)="20% Blanc Page 9"
+ s ^TKFINSERIE(3152)="20% Blanc Page 9"
+ s ^TKFINSERIE(3155)="20% Blanc Page 9"
+ s ^TKFINSERIE(3158)="20% Blanc Page 9"
+ s ^TKFINSERIE(3159)="20% Blanc Page 9"
+ s ^TKFINSERIE(3160)="20% Blanc Page 9"
+ s ^TKFINSERIE(8680)="20% Blanc Page 9"
+ s ^TKFINSERIE(40926)="20% Blanc Page 9"
+ s ^TKFINSERIE(54265)="20% Blanc Page 9"
+ s ^TKFINSERIE(54266)="20% Blanc Page 9"
+ s ^TKFINSERIE(74796)="20% Blanc Page 9"
+ s ^TKFINSERIE(74797)="20% Blanc Page 9"
+ s ^TKFINSERIE(110496)="20% Blanc Page 9"
+ s ^TKFINSERIE(110497)="20% Blanc Page 9"
+ s ^TKFINSERIE(110498)="20% Blanc Page 9"
+ s ^TKFINSERIE(110499)="20% Blanc Page 9"
+ s ^TKFINSERIE(110500)="20% Blanc Page 9"
+ s ^TKFINSERIE(111449)="20% Blanc Page 9"
+ s ^TKFINSERIE(111450)="20% Blanc Page 9"
+ s ^TKFINSERIE(111451)="20% Blanc Page 9"
+ s ^TKFINSERIE(111452)="20% Blanc Page 9"
+ s ^TKFINSERIE(111662)="20% Blanc Page 9"
+ s ^TKFINSERIE(111663)="20% Blanc Page 9"
+ s ^TKFINSERIE(111664)="20% Blanc Page 9"
+ s ^TKFINSERIE(111665)="20% Blanc Page 9"
+ s ^TKFINSERIE(111666)="20% Blanc Page 9"
+ s ^TKFINSERIE(111667)="20% Blanc Page 9"
+ s ^TKFINSERIE(111691)="20% Blanc Page 9"
+ s ^TKFINSERIE(111692)="20% Blanc Page 9"
+ s ^TKFINSERIE(111693)="20% Blanc Page 9"
+ s ^TKFINSERIE(111694)="20% Blanc Page 9"
+ s ^TKFINSERIE(111792)="20% Blanc Page 9"
+ s ^TKFINSERIE(6127)="20% Blanc Page 9"
+ s ^TKFINSERIE(6128)="20% Blanc Page 9"
+ s ^TKFINSERIE(79899)="20% Blanc Page 9"
+ s ^TKFINSERIE(79901)="20% Blanc Page 9"
+ s ^TKFINSERIE(79905)="20% Blanc Page 9"
+ s ^TKFINSERIE(103645)="20% Blanc Page 9"
+ s ^TKFINSERIE(110504)="20% Blanc Page 9"
+ s ^TKFINSERIE(110505)="20% Blanc Page 9"
+ s ^TKFINSERIE(110506)="20% Blanc Page 9"
+ s ^TKFINSERIE(110507)="20% Blanc Page 9"
+ s ^TKFINSERIE(110508)="20% Blanc Page 9"
+ s ^TKFINSERIE(111214)="20% Blanc Page 9"
+ s ^TKFINSERIE(111215)="20% Blanc Page 9"
+ s ^TKFINSERIE(111332)="20% Blanc Page 9"
+ s ^TKFINSERIE(111333)="20% Blanc Page 9"
+ s ^TKFINSERIE(111334)="20% Blanc Page 9"
+ s ^TKFINSERIE(1493)="20% Blanc Page 10"
+ s ^TKFINSERIE(1504)="20% Blanc Page 10"
+ s ^TKFINSERIE(80000)="20% Blanc Page 10"
+ s ^TKFINSERIE(74536)="20% Blanc Page 11"
+ s ^TKFINSERIE(74537)="20% Blanc Page 11"
+ s ^TKFINSERIE(74538)="20% Blanc Page 11"
+ s ^TKFINSERIE(74540)="20% Blanc Page 11"
+ s ^TKFINSERIE(74617)="20% Blanc Page 11"
+ s ^TKFINSERIE(74620)="20% Blanc Page 11"
+ s ^TKFINSERIE(74621)="20% Blanc Page 11"
+ s ^TKFINSERIE(74623)="20% Blanc Page 11"
+ s ^TKFINSERIE(74624)="20% Blanc Page 11"
+ s ^TKFINSERIE(87372)="20% Blanc Page 11"
+ s ^TKFINSERIE(87373)="20% Blanc Page 11"
+ s ^TKFINSERIE(87374)="20% Blanc Page 11"
+ s ^TKFINSERIE(105166)="20% Blanc Page 11"
+ s ^TKFINSERIE(111648)="20% Blanc Page 11"
+ s ^TKFINSERIE(111677)="20% Blanc Page 11"
+ s ^TKFINSERIE(111679)="20% Blanc Page 11"
+ s ^TKFINSERIE(111681)="20% Blanc Page 11"
+ s ^TKFINSERIE(111808)="20% Blanc Page 11"
+ s ^TKFINSERIE(113620)="20% Blanc Page 11"
+ s ^TKFINSERIE(113621)="20% Blanc Page 11"
+ s ^TKFINSERIE(113513)="20% Blanc Page 12"
+ s ^TKFINSERIE(113514)="20% Blanc Page 12"
+ s ^TKFINSERIE(113515)="20% Blanc Page 12"
+ s ^TKFINSERIE(113516)="20% Blanc Page 12"
+ s ^TKFINSERIE(113517)="20% Blanc Page 12"
+ s ^TKFINSERIE(113518)="20% Blanc Page 12"
+ s ^TKFINSERIE(101758)="20% Blanc Page 13"
+ s ^TKFINSERIE(101759)="20% Blanc Page 13"
+ s ^TKFINSERIE(101760)="20% Blanc Page 13"
+ s ^TKFINSERIE(101761)="20% Blanc Page 13"
+ s ^TKFINSERIE(101762)="20% Blanc Page 13"
+ s ^TKFINSERIE(101764)="20% Blanc Page 13"
+ s ^TKFINSERIE(101765)="20% Blanc Page 13"
+ s ^TKFINSERIE(105412)="20% Blanc Page 13"
+ s ^TKFINSERIE(105413)="20% Blanc Page 13"
+ s ^TKFINSERIE(105414)="20% Blanc Page 13"
+ s ^TKFINSERIE(105415)="20% Blanc Page 13"
+ s ^TKFINSERIE(87392)="20% Blanc Page 14"
+ s ^TKFINSERIE(87393)="20% Blanc Page 14"
+ s ^TKFINSERIE(87396)="20% Blanc Page 14"
+ s ^TKFINSERIE(87397)="20% Blanc Page 14"
+ s ^TKFINSERIE(111773)="20% Blanc Page 14"
+ s ^TKFINSERIE(111775)="20% Blanc Page 14"
+ s ^TKFINSERIE(113618)="20% Blanc Page 14"
+ s ^TKFINSERIE(113619)="20% Blanc Page 14"
+
+ q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

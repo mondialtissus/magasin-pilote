@@ -1,0 +1,14 @@
+ROUTINE HWINFOMAXQTE
+HWINFOMAXQTE
+ 
+     ; Qte Max de saisie par ligne
+     S ^HWINFO("CMDCDMAX")="15" 	
+	
+ q
+	
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,8 @@
+ROUTINE NEWTERMINAL
+NEWTERMINAL
+ // Bascule sur Infos Articles + Uniquement Launcher
+ S ^HWINFO("NEWTERMINAL")="1"
+ Q
+ 
+ 
+ 

@@ -1,0 +1,21 @@
+ROUTINE ROUTFORHWTRANS
+
+
+ROUTFORHWTRANS()
+ s connect = "^[""USER""]HWTRANS"
+ S parc = $O(@connect@(""))
+ while parc '="" {
+    s @connect@(parc) = parc
+    s parc = $O(@connect@(parc))
+ }
+
+ q
+
+
+
+
+
+
+
+
+

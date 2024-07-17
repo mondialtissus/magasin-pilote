@@ -1,0 +1,37 @@
+ROUTINE cleanplu
+cleanplu
+ K ^HWLEVART("X999")
+ D cleanplunoter
+ S x=""
+ F  S x=$O(^HWNEV(x)) Q:(x="")  D
+ .S y=0
+ .F  S y=$O(^HWNEV(x,y)) Q:(+y=0)  D
+ ..S l=0
+ ..F  S l=$O(^HWNEV(x,y,l)) Q:(+l=0)  D
+ ...I l'=0  D
+ ....I $D(^SP($P($G(^HWNEV(x,y,l)),"\",3)))'=0  D
+ .....S $P(^HWNEV(x,y,l),"\",3)=^SP($P($G(^HWNEV(x,y,l)),"\",3))
+ .....Q
+ ....Q
+ ...Q
+ ..Q
+ .Q
+ Q
+ 
+cleanplunoter
+ S x=""
+ F  S x=$O(^HWNOTER(x)) Q:(x="")  D
+ .S y=0
+ .F  S y=$O(^HWNOTER(x,y)) Q:(+y=0)  D
+ ..S l=0
+ ..F  S l=$O(^HWNOTER(x,y,l)) Q:(+l=0)  D
+ ...I l'=0  D
+ ....I $D(^SP($P($G(^HWNOTER(x,y,l)),"\",3)))'=0  D
+ .....S $P(^HWNOTER(x,y,l),"\",3)=^SP($P($G(^HWNOTER(x,y,l)),"\",3))
+ .....Q
+ ....Q
+ ...Q
+ ..Q
+ .Q
+ Q
+ 

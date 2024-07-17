@@ -1,0 +1,14 @@
+ROUTINE HWINFONOM2
+HWINFONOM2
+ 
+     ;Changement de nom suite rachat
+     S ^HWINFO("NOM2")="GROUPE MONDIAL TISSUS"
+ 
+ q
+	
+ 
+ 
+ 
+ 
+ 
+ 

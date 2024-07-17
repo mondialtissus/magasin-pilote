@@ -1,0 +1,152 @@
+ROUTINE UPDATETK
+UPDATETK
+ 
+ // Mise a jour des ventilations mensuelles
+ 
+ // TKREGL
+ s TYPE=$O(^TKREGL(""))
+ while TYPE'=""
+ {
+	 s CA=$O(^TKREGL(TYPE,""))
+	 while CA'=""
+	 {
+		 s DATE=$O(^TKREGL(TYPE,CA,""))
+		 while DATE'=""
+		 {
+			 if $E(DATE,1,4)'="0601"
+			 {
+			 	if $L(DATE)=4 
+			 	{k ^TKREGL(TYPE,CA,DATE)}
+			 	else
+			 	{
+			 		s AM=$E(DATE,1,4)
+			 		s CURAM=+$G(^TKREGL(TYPE,CA,AM))
+			 		s VALAM=+$G(^TKREGL(TYPE,CA,DATE))
+			 		s TOTAM=CURAM+VALAM
+			 		s ^TKREGL(TYPE,CA,AM)=TOTAM
+			 	}			 
+			 }
+			 s DATE=$O(^TKREGL(TYPE,CA,DATE))
+		 }		 
+		 s CA=$O(^TKREGL(TYPE,CA))
+	 }
+	 s TYPE=$O(^TKREGL(TYPE))
+ }
+ 
+ // TKFAMILLE
+ s CA=""
+ s AM=""
+ s DATE=""
+ s CURAM=""
+ s TOTAM=""
+ 
+ 
+ s CA=$O(^TKFAMILLE(""))
+ while CA'=""
+ {
+	 s DATE=$O(^TKFAMILLE(CA,""))
+	 while DATE'=""
+	 {
+		 s FAM=$O(^TKFAMILLE(CA,DATE,""))
+		 while FAM'=""
+		 {	
+		 	if $E(DATE,1,4)'="0601"
+		 	{		 			
+			 	if $L(DATE)=4 
+				 {k ^TKFAMILLE(CA,DATE,FAM)}
+				 else
+			 	{
+			 		s AM=$E(DATE,1,4)
+			 		s TOTAM=0
+			 		s CURAM=+$G(^TKFAMILLE(CA,AM,FAM))
+			 		s VALAM=+$G(^TKFAMILLE(CA,DATE,FAM))
+			 		s TOTAM=CURAM+VALAM
+				 	s ^TKFAMILLE(CA,AM,FAM)=TOTAM			
+				 }			 
+		 	}
+		 	s FAM=$O(^TKFAMILLE(CA,DATE,FAM))
+		 }
+		 s DATE=$O(^TKFAMILLE(CA,DATE))
+	 }
+	 s CA=$O(^TKFAMILLE(CA))
+ }
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

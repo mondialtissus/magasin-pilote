@@ -1,0 +1,16 @@
+ROUTINE RETMENU
+RETMENU
+ 
+  s ^MENU(2,5)="1\fenhistcmd\SF5:neerl\SF5: Suivi des commandes\SF5:ALL\SF5:ANG"
+  s ^MENU(2,8)="1\fenMenuRetro\SF8 :neerl\SF8 : Transfert intersites\SF8 :ALL\SF8 :ANG"
+ 
+ 
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,80 @@
+ROUTINE EXCEPFIDGE
+EXCEPFIDGE
+	//Opé gérées en interne avec coupon GE
+	S ^EXCEPFID("GOLDENEYES",2888888840592)="1"
+	S ^EXCEPFID("GOLDENEYES",2888888840622)="1"
+	S ^EXCEPFID("GOLDENEYES",2888888890665)="1"
+ 	S ^EXCEPFID("GOLDENEYES",2888888840752)="1"
+	// courrier soirée privilège	12-04-2011
+ 	S ^EXCEPFID("GOLDENEYES",2888888800763)="1"
+	// emailing soirée privilège
+	S ^EXCEPFID("GOLDENEYES",2888888800794)="1"
+	// Réouverture Thionville  du 01-04-2011 au 30-04-2011
+	S ^EXCEPFID("GOLDENEYES",2888888800800)="1"
+	// Anniversaire Toulon  du 14-04-2011 au 15-04-2011
+	S ^EXCEPFID("GOLDENEYES",2888888800824)="1"
+	// Inauguration Wittenheim du 19-05-2011 au 19-05-2011
+	S ^EXCEPFID("GOLDENEYES",2888888830852)="1"
+	// Inauguration Wittenheim du 19-05-2011 au 19-05-2011
+	S ^EXCEPFID("GOLDENEYES",2888888830845)="1"
+	// Inauguration Wittenheim du 19-05-2011 au 19-05-2011
+	S ^EXCEPFID("GOLDENEYES",9990000000685)="1"
+	// Aménagé votre intérieur Tous les Magasins du 10-05-2011 au 22-05-2011
+	S ^EXCEPFID("GOLDENEYES",2888888800860)="1"
+	// -15% à Nimes et Beziers du 25 juillet au 31 octobre pendant travaux
+	S ^EXCEPFID("GOLDENEYES",2888888830937)="1"
+ 
+	// courrier -20% dans tous les magasins à partir de 30 jusqu'au 16 novembre 2011
+	S ^EXCEPFID("GOLDENEYES",2888888841056)="1"
+ 
+	// emiling -20% dans tous les magasins à partir de 30 jusqu'au 16 novembre 2011
+	S ^EXCEPFID("GOLDENEYES",2888888841063)="1"
+ 
+       // Soirée privilège eMAILING -15% sur tout le magasin journée du 3 nov 2011
+        S ^TKCOUPREDUC("GOLDENEYES",2888888801111)="1"
+	
+       // Soirée privilège COURRIER -15% sur tout le magasin journée du 3 nov 2011
+	S ^TKCOUPREDUC("GOLDENEYES",2888888841100)="1"	        
+ 
+ 
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

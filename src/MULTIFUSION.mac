@@ -1,0 +1,9 @@
+ROUTINE MULTIFUSION
+MULTIFUSION
+	s POSNUM=$G(^HWINFO("MAG"))
+	s ^HWINFO("INT_MVTSTOCK")="\\"_POSNUM_"\serveur\capcash\upload\mvtstock\"
+
+	q
+
+
+

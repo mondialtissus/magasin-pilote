@@ -1,0 +1,280 @@
+ROUTINE GUINVPARTIEL
+GUINVPARTIEL
+ 
+	k ^GUINVFAMILLE
+	
+ 
+	s NomMag = $G(^HWINFO("MAG"))
+ 
+	i NomMag = "G237"
+	{
+		S ^GUINVFAMILLE("01","0101","010111")=""
+		S ^GUINVFAMILLE("01","0101","010109")=""
+		S ^GUINVFAMILLE("01","0101","010112")=""
+	}
+ 
+	i NomMag = "M164"
+	{
+		S ^GUINVFAMILLE("01","0101","010106")=""
+	}
+ 
+	i NomMag = "M167"
+	{
+		S ^GUINVFAMILLE("08","0804","080403")=""
+		S ^GUINVFAMILLE("08","0801","080104")=""
+	}
+ 
+	i NomMag = "M178"
+	{
+		S ^GUINVFAMILLE("08","0801","080106")=""
+	}
+ 
+	i NomMag = "M226"
+	{
+		S ^GUINVFAMILLE("08","0801","080105")=""
+	}
+ 
+	i NomMag = "M280"
+	{
+		S ^GUINVFAMILLE("02","0207","020704")=""
+	}
+ 
+	i NomMag = "M341"
+	{
+		S ^GUINVFAMILLE("02","0204","020401")=""
+		S ^GUINVFAMILLE("02","0204","020402")=""
+	}
+ 
+	i NomMag = "M344"
+	{
+		S ^GUINVFAMILLE("02","0204","020403")=""
+		S ^GUINVFAMILLE("02","0206","020603")=""				
+	}
+ 
+	i NomMag = "M392"
+	{
+		S ^GUINVFAMILLE("02","0202","020201")=""		
+	}
+ 
+	i NomMag = "M414"
+	{
+		S ^GUINVFAMILLE("05","0506","050601")=""
+		S ^GUINVFAMILLE("05","0510","051001")=""
+	}
+ 
+	i NomMag = "Q231"
+	{
+		S ^GUINVFAMILLE("05","0502","050204")=""
+		S ^GUINVFAMILLE("05","0502","050205")=""	
+	}
+ 
+	i NomMag = "G224"
+	{
+		S ^GUINVFAMILLE("05","0503","050305")=""
+		S ^GUINVFAMILLE("05","0503","050306")=""
+	}
+ 
+	i NomMag = "G331"
+	{
+		S ^GUINVFAMILLE("05","0504","050404")=""
+		S ^GUINVFAMILLE("05","0508","050802")=""
+		S ^GUINVFAMILLE("05","0509","050904")=""
+		S ^GUINVFAMILLE("05","0509","050905")=""
+	}
+ 
+	i NomMag = "M165"
+	{
+		S ^GUINVFAMILLE("07","0706","070601")=""
+		S ^GUINVFAMILLE("07","0710","071005")=""
+	}
+ 
+	i NomMag = "M168"
+	{
+		S ^GUINVFAMILLE("07","0712","071202")=""	
+	}
+ 
+	i NomMag = "M204"
+	{
+		S ^GUINVFAMILLE("07","0703","070309")=""
+		S ^GUINVFAMILLE("07","0703","070302")=""
+		S ^GUINVFAMILLE("07","0703","070305")=""
+	}
+ 
+	i NomMag = "M253"
+	{
+		S ^GUINVFAMILLE("04","0406","040603")=""
+	}
+ 
+	i NomMag = "M273"
+	{
+		S ^GUINVFAMILLE("04","0401","040114")=""
+		S ^GUINVFAMILLE("04","0401","040103")=""
+		S ^GUINVFAMILLE("04","0401","040115")=""
+	}
+ 
+	i NomMag = "M391"
+	{
+		S ^GUINVFAMILLE("04","0404","040403")=""
+		S ^GUINVFAMILLE("04","0404","040401")=""
+	}
+ 
+	i NomMag = "M401"
+	{
+		S ^GUINVFAMILLE("06","0601","060102")=""
+	}
+ 
+	i NomMag = "M416"
+	{
+		S ^GUINVFAMILLE("06","0601","060101")=""
+	}
+ 
+	i NomMag = "Q232"
+	{
+		S ^GUINVFAMILLE("03","0301","030103")=""
+	}
+ 
+	i NomMag = "M313"
+	{
+		S ^GUINVFAMILLE("03","0302","030201")=""
+	}
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

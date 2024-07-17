@@ -1,0 +1,17 @@
+ROUTINE MODIFMENUGEST
+MODIFMENUGEST
+ s ^HWINFO("SRVSOCKETRETOUR")="10.10.1.14\5510"
+ s ^GUMENU(8,1) = "Suivi des commandes BCI\FenSuiviCmdClient\img12"
+ s ^GUMENU(8,2) = "Suivi des commandes WEB\FenPFSuiviCmdWEB\img12"
+ s ^GUMENU(8,3) = "Retour des commandes WEB\FenWEBRetour\img12" 
+ s ^FILESFTP("FROMMAG",58) = "MODWEBCMDSMS"
+ s ^FILESFTP("FROMMAG",59) = "MODWEBCMDCLOT"
+ s ^FILESFTP("FROMMAG",60) = "MODSIGNATURE"
+ q
+
+
+
+
+
+
+

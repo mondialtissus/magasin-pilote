@@ -1,0 +1,470 @@
+ROUTINE RECUPMAIL
+RECUPMAIL
+	w !, "Traitement des archives"
+	k ^ARHWMAILHC(999999)
+	d ALL("^ARHWMAILHC")
+	w !, "Traitement du fichier actuel"
+	d ALL("^HWMAILHC")
+	q
+	
+RECUPMAILNUM(FIC,NUMMAIL)		
+		s REC0=$G(@FIC@(NUMMAIL,0))
+		s TYPE=$P(REC0,"\",1)
+		s DATEMSG=$P(REC0,"\",4)
+		s iDATEMSG=$ZDH($E(DATEMSG,7,10)_$E(DATEMSG,4,5)_$E(DATEMSG,1,2),8)
+		s ANNEE=+$E(DATEMSG,7,10)
+		s MOIS=+$E(DATEMSG,4,5)
+		s JOUR=+$E(DATEMSG,1,2)			
+		
+		s iTYPE=0
+		i TYPE="Création d'articles"{s iTYPE=1}
+		i TYPE="Modification de prix d'articles"{s iTYPE=2}
+		i TYPE="Suppression d'articles mercerie"{s iTYPE=3}
+		i TYPE="Suppression d'articles"{s iTYPE=4}
+		i TYPE="Modification de prix d'articles mercerie"{s iTYPE=5}
+		i TYPE="Création d'articles mercerie"{s iTYPE=6}
+		i iTYPE>0 {
+		s PLU="" s REFLEV="" s LEV="" s DESART="" s ARTICLE="" s PV=""
+		s bTAB=0
+		s LGTAB=0
+		s LG="0"
+		s LG=$O(@FIC@(NUMMAIL,LG))	
+		while LG'=""{			
+			s RECX=$G(@FIC@(NUMMAIL,LG))
+			if $P(RECX,"**",2)="TABLEAU"{
+				s bTAB=1
+				; On vient chercher les indices des colonnes...
+				s STRUCTTB=$P($P(RECX,"**",3),"*",2)
+				s ILEV=0 s IPLU=0 s IART=0 s IREFLEV=0 s IDESART=0 s IPV=0
+				f iTB=1:1
+				{					
+					s LIBCOL=$P($P(STRUCTTB,"/",iTB),";",1)					
+					if LIBCOL=""{q}
+					i LIBCOL="Fournisseur"{s ILEV=iTB}
+					i LIBCOL="Plu"{s IPLU=iTB}
+					i LIBCOL="Article"{s IART=iTB}
+					i LIBCOL="Ref.fourn."{s IREFLEV=iTB}
+					i LIBCOL="Désignation"{s IDESART=iTB}
+					i (LIBCOL="Prix")||(LIBCOL="Variation du prix"){s IPV=iTB}
+				}				
+			}
+			if $P(RECX,"**",2)="FINTABLEAU"{s bTAB=2 s LGTAB=0}
+			if bTAB=1{
+				s LGTAB=LGTAB+1
+				if LGTAB>1{
+					// Lecture du détail du tableau
+						
+					if iTYPE=2{
+						// Modification tissus
+						i (ILEV>0)&&(IPLU>0)&&(IART>0)&&(IPV>0){
+							s LEV=$P(RECX,"\",ILEV) //1
+							s PLU=$P(RECX,"\",IPLU) // 2
+							s ARTICLE=$P(RECX,"\",IART) //3
+							s PV=$P(RECX,"\",IPV) //4
+						}
+						; Il y a eu inversion entre LEV et ARTICLE: on corrige
+						if (+$D(^HWLEV(LEV))=0)&&(+$D(^ST(LEV))>0)&&(+$D(^HWLEV(ARTICLE))>0)&&(+$D(^ST(ARTICLE))=0){ 							
+							s LEV=$P(RECX,"\",IART) // 3
+							s ARTICLE=$P(RECX,"\",ILEV) //1
+						}						
+					}
+					else
+					{
+						if iTYPE=3{
+							// Suppression mercerie
+							IF (IPLU>0)&&(IREFLEV>0)&&(ILEV>0)&&(DESART>0){
+								s PLU=$P(RECX,"\",IPLU) //1
+								s REFLEV=$P(RECX,"\",IREFLEV) //2
+								s LEV=$P(RECX,"\",ILEV) //3
+								s DESART=$P(RECX,"\",IDESART) //4
+							}
+							else
+							{
+								s PLU=$P(RECX,"\",1) //1
+								s REFLEV=$P(RECX,"\",2) //2
+								s LEV=$P(RECX,"\",3) //3
+								s DESART=$P(RECX,"\",4) //4	
+							}
+						}
+						else
+						{
+							if (iTYPE=1)||(iTYPE=4){
+								// Creation tissus(1) & Suppression tissus(4)
+								if (IART>0)&&(IPLU>0)&&(ILEV>0)&&(IPV>0){
+									s ARTICLE=$P(RECX,"\",IART) //1
+									s PLU=$P(RECX,"\",IPLU) //2
+									s LEV=$P(RECX,"\",ILEV) //3
+									s PV=$P(RECX,"\",IPV) //4
+								}
+								else
+								{
+									s ARTICLE=$P(RECX,"\",1) //1
+									s PLU=$P(RECX,"\",2) //2
+									s LEV=$P(RECX,"\",3) //3
+									s PV=$P(RECX,"\",4) //4	
+								}
+							}
+							else
+							{
+								if (iTYPE=5)||(iTYPE=6){
+									// Modification mercerie(5) & Creation mercerie(6)
+									if (IPLU>0)&&(IREFLEV>0)&&(ILEV>0)&&(IDESART>0)&&(IPV>0){										
+										s PLU=$P(RECX,"\",IPLU) //1
+										s REFLEV=$P(RECX,"\",IREFLEV) //2
+										s LEV=$P(RECX,"\",ILEV) //3
+										s DESART=$P(RECX,"\",IDESART) //4
+										s PV=$P(RECX,"\",IPV) //5							
+									}
+									else
+									{
+										s PLU=$P(RECX,"\",1) //1
+										s REFLEV=$P(RECX,"\",2) //2
+										s LEV=$P(RECX,"\",3) //3
+										s DESART=$P(RECX,"\",4) //4
+										s PV=$P(RECX,"\",5) //5	
+									}
+								}
+							}
+						}
+					}
+					s INFOART=$$GETINFO(PLU)
+					i ARTICLE'=""
+					{
+					s ST0=""
+					s ST0=$G(^ST(ARTICLE))
+					s CURPV=$P(ST0,"\",22)
+					s GR1=$P(ST0,"\",4)
+					s GR2=$P(ST0,"\",7)
+					s iBG=0
+					i (iTYPE=5)||(iTYPE=2){s iBG=1}
+					i (iTYPE=3)||(iTYPE=4){s iBG=4}
+					i (iTYPE=1)||(iTYPE=6){s iBG=3}
+				
+					
+					if (iTYPE=5)||(iTYPE=2)
+					{
+						s DATEFFECT=$$GETDATEEFFECT(NUMMAIL)							
+						// Gestion d'un article en modification
+						// il nous faut recuperer la date d'effectivité et vérifier que le PV dans le mail est celui du pv dans ^ST
+						s EXTPV=+$P($P(PV,"à ",2)," EUR",1)						
+						i +$P(CURPV,"/",3)=EXTPV{
+							;s DATEEFFECT=+$P(CURPV,"/",2)
+							s PVOUT=$P($P(PV," à ",1)," EUR",1)_"/"_DATEEFFECT_"/"_EXTPV							
+						}
+						else
+						{
+							;s DATEEFFECT=+$P(CURPV,"/",2)
+							s PVOUT=$P($P(PV," à ",1)," EUR",1)_"/"_DATEEFFECT_"/"_EXTPV
+							s ^HISTOPV(ARTICLE,DATEEFFECT)=$P(PV," à ",1)_"/"_DATEEFFECT_"/"_EXTPV
+						}
+					}
+					else
+					{
+						;s PVOUT=+$P(PV," EUR",1)
+						s PVOUT=PVGSI
+					}
+					
+					s ^HISTOART(ANNEE,MOIS,JOUR,LEV,GR1,GR2,ARTICLE)=iBG_"\"_PLU_"\"_INFOART_"\"_PVOUT
+					s ^HISTOARTREF(ARTICLE,iDATEMSG,iBG)=1
+					}
+					else
+					{
+						;w !, "Erreur : Impossible de récupérer la relation PLU/Clé article : "_PLU
+					}
+				}
+			}
+			s LG=$O(@FIC@(NUMMAIL,LG))
+		}
+		}
+	q
+	
+GETINFO(PLU)
+ 
+	S ARTICLE=$G(^SP(PLU))
+	I ARTICLE'=""{		
+		s ST0=$G(^ST(ARTICLE))
+		s ST4=$G(^ST(ARTICLE,4))
+		s ETIQ=$P(ST0,"\",2)
+		s EAN=$P(ST0,"\",1)
+		s REFLEV=$P(ST4,"\",3)
+		s DATECREA=$P(ST0,"\",19)
+		s DATEOUT=$P(ST0,"\",5)
+		s DES2=$G(^ST(ARTICLE,5))
+		s PA=$P(ST0,"\",13)
+		if DES2=""{s DES2=ETIQ}
+		s PVGSI=$P($P(ST0,"\",22),"/",1)
+	}
+	Q EAN_"\"_REFLEV_"\"_DATECREA_"\"_DATEOUT_"\"_DES2_"\"_PA
+	
+ALL(FIC)
+ 
+	s NUMMAIL=$O(@FIC@(""))
+	while NUMMAIL'=""{		
+		D RECUPMAILNUM(FIC,NUMMAIL)
+		s NUMMAIL=$O(@FIC@(NUMMAIL))
+	}
+	q
+		
+GETDATEEFFECT(INUMMAIL)
+	
+	s NUMLG=""
+	s DATEEFFECT=""
+	s NUMLG=$O(@FIC@(INUMMAIL,""),-1)
+	while NUMLG'=""{
+		s RECORD=$G(@FIC@(INUMMAIL,NUMLG))	
+		i RECORD["La modification sera effective"{			
+			;s DATEEFFECT=+$ZDH("20"_$E(RECORD,49,50)_$E(RECORD,46,47)_$E(RECORD,43,44),8)
+			;s ANNEE=+$E(RECORD,50,53)
+			S DATE=$E(RECORD,44,54)
+			s J=$P(DATE,"/",1)
+			s M=$P(DATE,"/",2)
+			s A=$P(DATE,"/",3)
+			
+			if A<100{s A="20"_$P(DATE,"/",3)}
+			i $L(M)=1{s M="0"_$P(DATE,"/",2)}
+			i $L(J)=1{s J="0"_$P(DATE,"/",1)}
+			i +M=13{s M="01" s A=A+1}
+			s DATEEFFECT=+$ZDH(A_M_J,8)
+		q
+		}			
+		s NUMLG=$O(@FIC@(INUMMAIL,NUMLG),-1)
+	}
+	q DATEEFFECT
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

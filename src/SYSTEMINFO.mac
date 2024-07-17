@@ -1,0 +1,35 @@
+ROUTINE SYSTEMINFO
+SYSTEMINFO
+ s MAG=$G(^HWINFO("MAG"))
+ s fFileSystemInfo="c:\pos\systeminfo.txt"
+ d $ZF(-1,"systeminfo /FO CSV > "_fFileSystemInfo)
+ if ##class(%Library.File).Exists(fFileSystemInfo)
+ {
+	 s fsysteminfo=##class(%Library.File).%New(fFileSystemInfo)
+	 D fsysteminfo.Open("RU")
+	 s ^MODROUTINE(MAG,"SYSTEMINFO","ENTETE")=fsysteminfo.ReadLine()
+	 s ^MODROUTINE(MAG,"SYSTEMINFO","DETAIL")=fsysteminfo.ReadLine()
+	 d fsysteminfo.Close()
+ }
+ else
+ {
+	 s ^MODROUTINE(MAG,"SYSTEMINFO","KO")=$H
+ }
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

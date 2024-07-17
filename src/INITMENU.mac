@@ -1,0 +1,20 @@
+ROUTINE INITMENU
+INITMENU 
+ s ^DROITS(13)="Inventaire - Contrôle et validation"
+ s ^MENU(6)="1\\F8:neerl\F8: Gestion des inventaires\F8:ALL\F8:ANG"
+ s ^MENU(6,1)="1\inventaire_menu\SF1:neerl\SF1: Saisie inventaire\SF1:ALL\SF1:ANG"
+ s ^MENU(6,2)="1\inventaire_synth\SF2:neerl\SF2: Synthèse inventaire\SF2:ALL\SF2:ANG"
+ s ^MENU(6,4)="1\inventaire_impme\SF4:neerl\SF4: Impression catalogue\SF4:ALL\SF4:ANG"
+ s ^MENU(6,5)="1\inventaire_impzone\SF5:neerl\SF5: Impression Zone\SF5:ALL\SF5:ANG"
+ s ^MENU(6,6)="1\inventaire_impcutoff\SF6:neerl\SF6: Impression Cut-Off\SF6:ALL\SF6:ANG"
+ s ^MENU(6,8)="1\inventaire_user\SF8:neerl\SF8: Utilisateur inventaire\SF8:ALL\SF8:ANG"
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

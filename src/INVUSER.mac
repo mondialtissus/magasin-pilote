@@ -1,0 +1,56 @@
+ROUTINE INVUSER
+INVUSER
+ k ^INVUSER
+ q
+ 
+INITUSER
+ s DATE=$G(^HWINFO("INVENTAIRE","DATE"))
+ 
+ s LOGIN=$O(^SIB("USER",""))
+ while LOGIN'=""
+ {
+ 	s INFO=$G(^SIB("USER",LOGIN))
+    s NOM=$P(INFO,"\",1)
+    s PRENOM=$P(INFO,"\",2)
+    s FONCTION=$P(INFO,"\",3)
+    s MOTPASSE=$P(INFO,"\",4)
+ 	
+ 	i $P(INFO,"\",6)=1 
+ 	{
+   		s ^INVUSER(DATE,LOGIN)=NOM_"\"_PRENOM_"\"_FONCTION_"\"_MOTPASSE_"\"_"1"
+ 	}
+   	
+    s LOGIN=$O(^SIB("USER",LOGIN))
+ }
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

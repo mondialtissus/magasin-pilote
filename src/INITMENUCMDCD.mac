@@ -1,0 +1,12 @@
+ROUTINE INITMENUCMDCD
+INITMENUCMDCD
+ 
+ s ^GUMENU(6)="Commandes Clients"
+ s ^GUMENU(6,1)="Création commandes Clients\fenCmdClient\img12"
+ s ^GUMENU(6,2)="Suivi des commandes Clients\FenSuiviCmdClient\img12"
+ Q
+ 
+ 
+ 
+ 
+ 

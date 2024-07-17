@@ -1,0 +1,9 @@
+ROUTINE MODIFMENUCOUPE20210511
+MODIFMENUCOUPE20210511
+ s ^FUSIONMENU(1,6,2)="Store to web\\imgCentreCoupe\imgCentreCoupe"
+ s ^FUSIONMENU(2,6,2)="Store to web\fenCMDRetroRec/Coupe\imgCentreCoupe\imgCentreCoupe"
+ Q
+
+
+
+

@@ -1,0 +1,170 @@
+ROUTINE MAJTKREMB
+MAJTKREMB
+ 
+ // Permet de faire une mise a Jour du fichier TKREMB 
+ // Jusqu'au 09/03/2004, la caisse enregistre toutes les ventes ES ou CB dans ce fichier  !! ERREUR DE DEV !
+ // Cette routine parcours le fichier et regénere correctement les remboursements.
+ 
+ set node1 = $O(^TKREMB(""))
+ while (node1 '= "")
+ {
+         set node2 = $O(^TKREMB(node1,""))
+         while node2 '= ""
+ {
+         if $L(node2) = 12
+         {
+                 //write !, "REMBOURSEMENT n° "_node2
+                 set ^TKREMB2(node1,node2,0)=""
+                 set AAMMJJ = $E(node2,3,8)
+                 set CA = +$E(node2,1,2)
+                 set NLg = $O(^TKREMB(node1,AAMMJJ,CA,node2,""))
+                 while NLg '= ""
+                 {
+                         set ^TKREMB2(node1,AAMMJJ,CA,node2,NLg)= $G(^TKREMB(node1,AAMMJJ,CA,node2,NLg))
+                         set NLg = $O(^TKREMB(node1,AAMMJJ,CA,node2,NLg))
+                 }
+                 set AAMM = $E(node2,3,6)
+                 set NLg = $O(^TKREMB(node1,AAMM,CA,node2,""))
+                 while NLg '= ""
+                 {
+                         set ^TKREMB2(node1,AAMM,CA,node2,NLg)= $G(^TKREMB(node1,AAMM,CA,node2,NLg))
+                         set NLg = $O(^TKREMB(node1,AAMM,CA,node2,NLg))
+                 }
+         }
+         set node2 = $O(^TKREMB(node1,node2))
+ }
+         set node1 = $O(^TKREMB(node1))
+ }
+ 
+ // Maintenant que l'on a copié en temporaire les infos, on KILL le fichier TKREMB
+ kill ^TKREMB
+ 
+ // On parcours TKREMB2 (fichier temporaire) pour le stocker dans TKREMB
+ set N1 = $O(^TKREMB2(""))
+ while (N1'= "")
+ {
+         set N2 = $O(^TKREMB2(N1,""))
+         while (N2 '= "")
+         {
+                 if $L(N2)= 12 
+                 {
+                         set ^TKREMB(N1,N2,0)=""
+                 }
+                 else
+                 {
+                         set N3 = $O(^TKREMB2(N1,N2,""))
+                         while (N3 '= "")
+                         {
+                         
+                                 set N4 = $O(^TKREMB2(N1,N2,N3,""))
+                                 while (N4 '= "")
+                                 {
+                                         set N5 = $O(^TKREMB2(N1,N2,N3,N4,""))
+                                         while N5 '= ""
+                                         {
+                                                 set ^TKREMB(N1,N2,N3,N4,N5)=$G(^TKREMB2(N1,N2,N3,N4,N5))
+                                                 
+                                                 set N5 = $O(^TKREMB2(N1,N2,N3,N4,N5))
+                                         }
+                                         set N4 = $O(^TKREMB2(N1,N2,N3,N4))
+                                 }
+                                 set N3 = $O(^TKREMB2(N1,N2,N3))
+                         }
+                 }
+                 
+                 set N2 = $O(^TKREMB2(N1,N2))
+         }
+         set N1 = $O(^TKREMB2(N1))
+ }
+ // On supprime le fichier temporaire
+ kill ^TKREMB2
+ w !, "Opération terminée !"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

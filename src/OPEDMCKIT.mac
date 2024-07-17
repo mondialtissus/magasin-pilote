@@ -1,0 +1,40 @@
+ROUTINE OPEDMCKIT
+OPEDMCKIT
+	s ^TKDMC(77253)="AFBR1KT/DMCBK780/DIVERS"                               
+	s ^TKDMC(77254)="AFBR1KT/DMCBK781/DIVERS"                               
+	s ^TKDMC(77255)="AFBR1KT/DMCBK782/DIVERS"                               
+	s ^TKDMC(77256)="AFBR1KT/DMCBK783/DIVERS"                               
+	s ^TKDMC(77257)="AFBR1KT/DMCBK784/DIVERS"                               
+	s ^TKDMC(77258)="AFBR1KT/DMCBK785/DIVERS"                                       
+	s ^TKDMC(77259)="AFBR1KT/DMCRK145/DIVERS"                               
+	s ^TKDMC(77260)="AFBR1KT/DMCRK147/DIVERS"                               
+	s ^TKDMC(77261)="AFBR1KT/DMCRS1600/DIVERS"                              
+	s ^TKDMC(77262)="AFBR1KT/DMCRS1601/DIVERS"                              
+	s ^TKDMC(77263)="AFBR1KT/DMCRS1602/DIVERS"                              
+	s ^TKDMC(77264)="AFBR1KT/DMCRS1603/DIVERS"                              
+	s ^TKDMC(77265)="AFBR1KT/DMCRS1604/DIVERS"                              
+	s ^TKDMC(77266)="AFBR1KT/DMCRS1605/DIVERS"                              
+	s ^TKDMC(77267)="AFBR1KT/DMCRS1606/DIVERS"                              
+	s ^TKDMC(77268)="AFBR1KT/DMCRS1607/DIVERS"                              
+	s ^TKDMC(77269)="AFBR1KT/DMCTK033/DIVERS"                               
+	s ^TKDMC(77270)="AFBR1KT/DMCTK034/DIVERS"                               
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

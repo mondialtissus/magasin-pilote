@@ -1,0 +1,9 @@
+ROUTINE MENUCOUTURIERE
+MENUCOUTURIERE
+	s ^FUSIONMENU(3.5)="Couturière\\imgDemarque\imgDemarque"
+	s ^FUSIONMENU(3.5,1)="Consommation Couture +\fenTransactionStock/Couture/33.5\imgRecPlus\imgRecPlus"
+	s ^FUSIONMENU(3.5,2)="Consommation Couture -\fenTransactionStock/Couture/34.5\imgRecMoins\imgRecMoins"
+ q
+
+
+

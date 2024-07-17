@@ -1,0 +1,222 @@
+ROUTINE RENVOIMODCMDHCMAGCORFRN
+RENVOIMODCMDHCMAGCORFRN
+	//Cette routine est utilisée de facon exceptionnelle dans le cas de la perte des commandes du 11,15 et 16 décembre
+	//A supprimer à partir de 2010 car cette routine ne sert qu'une seule fois en 2009.
+	s NUMMAG = ""
+	s NUMMAG = $O(^MODCMDHC091224(NUMMAG))
+	while NUMMAG '= ""
+	{
+	        s NUMCMD = ""
+	        s NUMCMD = $O(^MODCMDHC091224(NUMMAG,NUMCMD))
+	        while NUMCMD '= ""
+	        {       
+	       
+	                s NUMLNG = "0"
+			s NUMFOUR = ""
+			//On prend le nom du fournisseur
+			i +$D(^MODCMDHC091224(NUMMAG,NUMCMD,NUMLNG))>0
+			{
+				s NUMFOUR = $P($G(^MODCMDHC091224(NUMMAG,NUMCMD,NUMLNG)),"\",1)
+			}
+ 
+			s NUMLNGCENTTEST = $O(^HWNEV(NUMMAG,NUMCMD,""))
+			i (NUMFOUR '= "") && (NUMLNGCENTTEST'="")
+			{
+				i +$D(^HWNEV("FRN",NUMFOUR,NUMCMD)) = 0
+				{
+					s ^HWNEV("FRN",NUMFOUR,NUMCMD)="1"
+				}
+			}
+ 
+	                s NUMCMD = $O(^MODCMDHC091224(NUMMAG,NUMCMD))
+	        }
+	        s NUMMAG = $O(^MODCMDHC091224(NUMMAG))
+	}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

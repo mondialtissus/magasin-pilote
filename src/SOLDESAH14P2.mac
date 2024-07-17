@@ -1,0 +1,411 @@
+ROUTINE SOLDESAH14P2
+SOLDESAH14P2
+ 
+ s ^TKFINSERIE(118355)="soldes -30%"
+ s ^TKFINSERIE(118354)="soldes -30%"
+ s ^TKFINSERIE(118353)="soldes -30%"
+ s ^TKFINSERIE(118351)="soldes -30%"
+ s ^TKFINSERIE(118350)="soldes -30%"
+ s ^TKFINSERIE(118349)="soldes -30%"
+ s ^TKFINSERIE(118348)="soldes -30%"
+ s ^TKFINSERIE(118347)="soldes -30%"
+ s ^TKFINSERIE(118346)="soldes -30%"
+ s ^TKFINSERIE(118345)="soldes -30%"
+ s ^TKFINSERIE(118344)="soldes -30%"
+ s ^TKFINSERIE(118343)="soldes -30%"
+ s ^TKFINSERIE(118342)="soldes -30%"
+ s ^TKFINSERIE(118341)="soldes -30%"
+ s ^TKFINSERIE(118340)="soldes -30%"
+ s ^TKFINSERIE(118339)="soldes -30%"
+ s ^TKFINSERIE(118321)="soldes -30%"
+ s ^TKFINSERIE(117442)="soldes -30%"
+ s ^TKFINSERIE(117441)="soldes -30%"
+ s ^TKFINSERIE(117440)="soldes -30%"
+ s ^TKFINSERIE(117439)="soldes -30%"
+ s ^TKFINSERIE(117438)="soldes -30%"
+ s ^TKFINSERIE(117437)="soldes -30%"
+ s ^TKFINSERIE(117436)="soldes -30%"
+ s ^TKFINSERIE(117435)="soldes -30%"
+ s ^TKFINSERIE(117434)="soldes -30%"
+ s ^TKFINSERIE(117433)="soldes -30%"
+ s ^TKFINSERIE(117432)="soldes -30%"
+ s ^TKFINSERIE(117431)="soldes -30%"
+ s ^TKFINSERIE(117430)="soldes -30%"
+ s ^TKFINSERIE(117429)="soldes -30%"
+ s ^TKFINSERIE(117428)="soldes -30%"
+ s ^TKFINSERIE(117427)="soldes -30%"
+ s ^TKFINSERIE(117426)="soldes -30%"
+ s ^TKFINSERIE(117425)="soldes -30%"
+ s ^TKFINSERIE(117424)="soldes -30%"
+ s ^TKFINSERIE(117423)="soldes -30%"
+ s ^TKFINSERIE(117422)="soldes -30%"
+ s ^TKFINSERIE(117421)="soldes -30%"
+ s ^TKFINSERIE(117420)="soldes -30%"
+ s ^TKFINSERIE(117419)="soldes -30%"
+ s ^TKFINSERIE(117418)="soldes -30%"
+ s ^TKFINSERIE(117371)="soldes -30%"
+ s ^TKFINSERIE(117370)="soldes -30%"
+ s ^TKFINSERIE(117369)="soldes -30%"
+ s ^TKFINSERIE(117368)="soldes -30%"
+ s ^TKFINSERIE(117367)="soldes -30%"
+ s ^TKFINSERIE(117366)="soldes -30%"
+ s ^TKFINSERIE(117365)="soldes -30%"
+ s ^TKFINSERIE(117364)="soldes -30%"
+ s ^TKFINSERIE(117363)="soldes -30%"
+ s ^TKFINSERIE(117362)="soldes -30%"
+ s ^TKFINSERIE(117361)="soldes -30%"
+ s ^TKFINSERIE(117360)="soldes -30%"
+ s ^TKFINSERIE(117359)="soldes -30%"
+ s ^TKFINSERIE(117358)="soldes -30%"
+ s ^TKFINSERIE(117357)="soldes -30%"
+ s ^TKFINSERIE(117356)="soldes -30%"
+ s ^TKFINSERIE(116830)="soldes -30%"
+ s ^TKFINSERIE(116829)="soldes -30%"
+ s ^TKFINSERIE(116828)="soldes -30%"
+ s ^TKFINSERIE(116827)="soldes -30%"
+ s ^TKFINSERIE(116826)="soldes -30%"
+ s ^TKFINSERIE(116825)="soldes -30%"
+ s ^TKFINSERIE(116824)="soldes -30%"
+ s ^TKFINSERIE(116823)="soldes -30%"
+ s ^TKFINSERIE(116822)="soldes -30%"
+ s ^TKFINSERIE(116821)="soldes -30%"
+ s ^TKFINSERIE(116820)="soldes -30%"
+ s ^TKFINSERIE(116819)="soldes -30%"
+ s ^TKFINSERIE(116818)="soldes -30%"
+ s ^TKFINSERIE(116817)="soldes -30%"
+ s ^TKFINSERIE(116816)="soldes -30%"
+ s ^TKFINSERIE(116774)="soldes -30%"
+ s ^TKFINSERIE(116773)="soldes -30%"
+ s ^TKFINSERIE(116772)="soldes -30%"
+ s ^TKFINSERIE(116771)="soldes -30%"
+ s ^TKFINSERIE(116770)="soldes -30%"
+ s ^TKFINSERIE(116769)="soldes -30%"
+ s ^TKFINSERIE(116768)="soldes -30%"
+ s ^TKFINSERIE(116767)="soldes -30%"
+ s ^TKFINSERIE(116766)="soldes -30%"
+ s ^TKFINSERIE(116765)="soldes -30%"
+ s ^TKFINSERIE(116764)="soldes -30%"
+ s ^TKFINSERIE(116763)="soldes -30%"
+ s ^TKFINSERIE(116762)="soldes -30%"
+ s ^TKFINSERIE(116761)="soldes -30%"
+ s ^TKFINSERIE(116760)="soldes -30%"
+ s ^TKFINSERIE(116759)="soldes -30%"
+ s ^TKFINSERIE(116758)="soldes -30%"
+ s ^TKFINSERIE(116757)="soldes -30%"
+ s ^TKFINSERIE(116756)="soldes -30%"
+ s ^TKFINSERIE(116755)="soldes -30%"
+ s ^TKFINSERIE(116754)="soldes -30%"
+ s ^TKFINSERIE(116753)="soldes -30%"
+ s ^TKFINSERIE(116752)="soldes -30%"
+ s ^TKFINSERIE(116751)="soldes -30%"
+ s ^TKFINSERIE(116750)="soldes -30%"
+ s ^TKFINSERIE(116749)="soldes -30%"
+ s ^TKFINSERIE(116748)="soldes -30%"
+ s ^TKFINSERIE(114026)="soldes -30%"
+ s ^TKFINSERIE(113950)="soldes -30%"
+ s ^TKFINSERIE(113949)="soldes -30%"
+ s ^TKFINSERIE(110455)="soldes -30%"
+ s ^TKFINSERIE(110452)="soldes -30%"
+ s ^TKFINSERIE(110449)="soldes -30%"
+ s ^TKFINSERIE(110447)="soldes -30%"
+ s ^TKFINSERIE(110444)="soldes -30%"
+ s ^TKFINSERIE(110438)="soldes -30%"
+ s ^TKFINSERIE(110437)="soldes -30%"
+ s ^TKFINSERIE(110436)="soldes -30%"
+ s ^TKFINSERIE(110434)="soldes -30%"
+ s ^TKFINSERIE(110432)="soldes -30%"
+ s ^TKFINSERIE(110361)="soldes -30%"
+ s ^TKFINSERIE(110360)="soldes -30%"
+ s ^TKFINSERIE(110359)="soldes -30%"
+ s ^TKFINSERIE(110358)="soldes -30%"
+ s ^TKFINSERIE(110357)="soldes -30%"
+ s ^TKFINSERIE(110356)="soldes -30%"
+ s ^TKFINSERIE(110355)="soldes -30%"
+ s ^TKFINSERIE(110354)="soldes -30%"
+ s ^TKFINSERIE(110353)="soldes -30%"
+ s ^TKFINSERIE(110352)="soldes -30%"
+ s ^TKFINSERIE(110351)="soldes -30%"
+ s ^TKFINSERIE(110350)="soldes -30%"
+ s ^TKFINSERIE(110349)="soldes -30%"
+ s ^TKFINSERIE(110348)="soldes -30%"
+ s ^TKFINSERIE(110347)="soldes -30%"
+ s ^TKFINSERIE(110346)="soldes -30%"
+ s ^TKFINSERIE(110345)="soldes -30%"
+ s ^TKFINSERIE(110344)="soldes -30%"
+ s ^TKFINSERIE(110343)="soldes -30%"
+ s ^TKFINSERIE(110342)="soldes -30%"
+ s ^TKFINSERIE(110341)="soldes -30%"
+ s ^TKFINSERIE(110340)="soldes -30%"
+ s ^TKFINSERIE(110339)="soldes -30%"
+ s ^TKFINSERIE(110338)="soldes -30%"
+ s ^TKFINSERIE(110337)="soldes -30%"
+ s ^TKFINSERIE(110336)="soldes -30%"
+ s ^TKFINSERIE(110335)="soldes -30%"
+ s ^TKFINSERIE(110334)="soldes -30%"
+ s ^TKFINSERIE(110333)="soldes -30%"
+ s ^TKFINSERIE(110332)="soldes -30%"
+ s ^TKFINSERIE(110331)="soldes -30%"
+ s ^TKFINSERIE(110330)="soldes -30%"
+ s ^TKFINSERIE(110329)="soldes -30%"
+ s ^TKFINSERIE(110328)="soldes -30%"
+ s ^TKFINSERIE(110327)="soldes -30%"
+ s ^TKFINSERIE(110326)="soldes -30%"
+ s ^TKFINSERIE(110325)="soldes -30%"
+ s ^TKFINSERIE(110324)="soldes -30%"
+ s ^TKFINSERIE(110323)="soldes -30%"
+ s ^TKFINSERIE(110322)="soldes -30%"
+ s ^TKFINSERIE(110321)="soldes -30%"
+ s ^TKFINSERIE(110320)="soldes -30%"
+ s ^TKFINSERIE(110293)="soldes -30%"
+ s ^TKFINSERIE(110277)="soldes -30%"
+ s ^TKFINSERIE(104542)="soldes -30%"
+ s ^TKFINSERIE(104541)="soldes -30%"
+ s ^TKFINSERIE(104540)="soldes -30%"
+ s ^TKFINSERIE(103985)="soldes -30%"
+ s ^TKFINSERIE(103984)="soldes -30%"
+ s ^TKFINSERIE(103983)="soldes -30%"
+ s ^TKFINSERIE(103977)="soldes -30%"
+ s ^TKFINSERIE(103976)="soldes -30%"
+ s ^TKFINSERIE(103975)="soldes -30%"
+ s ^TKFINSERIE(103953)="soldes -30%"
+ s ^TKFINSERIE(103952)="soldes -30%"
+ s ^TKFINSERIE(103951)="soldes -30%"
+ s ^TKFINSERIE(103936)="soldes -30%"
+ s ^TKFINSERIE(103934)="soldes -30%"
+ s ^TKFINSERIE(103933)="soldes -30%"
+ s ^TKFINSERIE(103928)="soldes -30%"
+ s ^TKFINSERIE(103926)="soldes -30%"
+ s ^TKFINSERIE(103925)="soldes -30%"
+ s ^TKFINSERIE(103904)="soldes -30%"
+ s ^TKFINSERIE(103902)="soldes -30%"
+ s ^TKFINSERIE(103901)="soldes -30%"
+ s ^TKFINSERIE(103900)="soldes -30%"
+ s ^TKFINSERIE(103899)="soldes -30%"
+ s ^TKFINSERIE(103898)="soldes -30%"
+ s ^TKFINSERIE(103897)="soldes -30%"
+ s ^TKFINSERIE(103896)="soldes -30%"
+ s ^TKFINSERIE(103895)="soldes -30%"
+ s ^TKFINSERIE(103894)="soldes -30%"
+ s ^TKFINSERIE(103893)="soldes -30%"
+ s ^TKFINSERIE(103892)="soldes -30%"
+ s ^TKFINSERIE(103891)="soldes -30%"
+ s ^TKFINSERIE(103890)="soldes -30%"
+ s ^TKFINSERIE(103889)="soldes -30%"
+ s ^TKFINSERIE(103886)="soldes -30%"
+ s ^TKFINSERIE(103885)="soldes -30%"
+ s ^TKFINSERIE(103831)="soldes -30%"
+ s ^TKFINSERIE(103830)="soldes -30%"
+ s ^TKFINSERIE(103829)="soldes -30%"
+ s ^TKFINSERIE(103828)="soldes -30%"
+ s ^TKFINSERIE(103827)="soldes -30%"
+ s ^TKFINSERIE(103826)="soldes -30%"
+ s ^TKFINSERIE(103825)="soldes -30%"
+ s ^TKFINSERIE(103824)="soldes -30%"
+ s ^TKFINSERIE(103823)="soldes -30%"
+ s ^TKFINSERIE(103822)="soldes -30%"
+
+ q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

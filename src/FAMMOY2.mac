@@ -1,0 +1,80 @@
+ROUTINE FAMMOY2
+FAMMOY2
+ S POSNUM=^HWINFO("MAG")
+ ;K ^MODROUTINE
+ S NUMCA=""
+ F  S NUMCA=$O(^TKMOISJOURS(NUMCA)) Q:(NUMCA="")  D
+ .S AAMMJJ=""
+ .F  S AAMMJJ=$O(^TKMOISJOURS(NUMCA,AAMMJJ)) Q:(AAMMJJ="")  D
+ ..S AAMM=$E(AAMMJJ,1,4)
+ ..I +$E(AAMM,3,4)>0 D
+ ...S TICKET=""
+ ...F  S TICKET=$O(^TKMOISJOURS(NUMCA,AAMMJJ,TICKET)) Q:(TICKET="")  D
+ ....;I $E(TICKET,1,11)="01050707000" D
+ ....S LIG="0"
+ ....F  S LIG=$O(^TK(TICKET,LIG)) Q:(LIG="")  D
+ .....;w !,"LIG="_LIG
+ .....S FAM=+$P(^TK(TICKET,LIG),"\",3)
+ .....I +FAM>0 D
+ ......S ^FAMTMP(FAM)=""
+ ......S QTE=+$P(^TK(TICKET,LIG),"\",4)
+ ......S PU=+$P(^TK(TICKET,LIG),"\",5)
+ ......S CAREEL=+QTE*PU
+ ......S CAHORSREDUC=+$P(^TK(TICKET,LIG),"\",6)
+ ......S DATA=$G(^MODROUTINE(POSNUM,"FAMMOY2",AAMM,FAM))
+ ......S CAREEL=CAREEL+$P(DATA,"\",1)
+ ......S CAHORSREDUC=CAHORSREDUC+$P(DATA,"\",2)
+ ......S NB=+$P(DATA,"\",3)
+ ......S ^MODROUTINE(POSNUM,"FAMMOY2",AAMM,FAM)=CAREEL_"\"_CAHORSREDUC_"\"_NB
+ ......Q
+ .....Q
+ ....S FAMILLE=""
+ ....F  S FAMILLE=$O(^FAMTMP(FAMILLE)) Q:(FAMILLE="")  D
+ .....S $P(^MODROUTINE(POSNUM,"FAMMOY2",AAMM,+FAMILLE),"\",3)=(+$P(^MODROUTINE(POSNUM,"FAMMOY2",AAMM,+FAMILLE),"\",3)+1)
+ .....Q
+ ....K ^FAMTMP
+ ....Q
+ ...Q
+ ..Q
+ .Q
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

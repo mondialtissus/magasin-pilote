@@ -1,0 +1,508 @@
+ROUTINE RECUPTK
+RECUPTK
+	Q
+ 
+GO(FORCE="")
+	; Récupération du fichier des caisses
+	w !, "*** OUTIL DE RECUPERATION ***"
+	w !, ""
+	w !, "1. Indique les n° tickets supprimés avant intégration"
+	w !, "2. Lance la récupération des tickets"
+	w !, ""
+	w !, "Votre choix : "
+	r "",CHOIX
+	w !,""
+	if FORCE="" {s NTK=1 s LSTER=""}
+	IF CHOIX=1{ d LSTERREURS D GO("1")}
+	IF CHOIX=2{	
+		r "Chemin du fichier à importer : ",FILE
+		if FILE'=""{d RECUPFILE("TK",FILE)}		
+	}
+    q
+RECUPFILE(FIC,LOCFILE)
+ 
+	  s file=##class(%Library.File).%New(LOCFILE)
+      d file.Open("R")
+      s stream=""
+      s NUMCA=""
+      s AMJ=""
+      S AM=""
+      s ES=0 s CB=0 s CH=0 s CR=0 s MULTI=0 s AV=0
+      S iSize=file.SizeGet()
+      F ifam=1:1:20
+      {
+	   	s TVEN(ifam)=0   
+	   }      
+      F i=1:1:iSize  {
+	      S iCar=file.Read(1)
+	      
+	      I +$A(iCar)=-1 {
+			// on saute une ligne 			
+			//s stream=stream_$C(13)_$C(10)    			
+			IF stream'=""{	
+				S NODES= "" s N1="" s N2="" s N3="" s N4="" s N5=""
+				s FILE="^"_$E($P(stream,"(",1),2,$L($P(stream,"(",1)))				
+				s RECORD=$P(stream,"=",2)
+				s IDEB=$$POSITION(stream,"(")
+				s IFIN=$$POSITION(stream,")")
+				s NODES=$E(stream,IDEB+1,IFIN-1)_","
+				s NBNODES=+$$CHAINEOCCURRENCE(NODES,",")
+				f INODES=1:1:NBNODES
+				{					
+					s VAR="N"_INODES
+					s @VAR=$$REPLACE($P(NODES,",",INODES),$C(34),"")
+				}
+				IF FIC="TK"{
+					; On nettoie le $P(1) pour les avoirs, corrige le record..
+					s bKILLTK=0
+					if N1="010710080032" {w !, N1_","_N2_" : "_RECORD}
+					if (N2>0)&&($P(RECORD,"\",2)["Avoir"){s $P(RECORD,"\",1)=""}
+					if (N2=0){s REGL=$P(RECORD,"\",3) s bKILLTK=$P(RECORD,"\",9)}					
+					if (N2>0)&&(bKILLTK=0)&&($P(LSTER,N1,2)=""){
+						IF NUMCA=""{s NUMCA=+$E(N1,1,2)}
+						if AM=""{s AM=$E(N1,3,6)}					
+						s AMJ=$E(N1,3,8)
+						if AMJ'=""{
+							s ^TKMOISJOURS(NUMCA,AMJ,N1)=""
+							s ^TKMOIS(NUMCA,AM,N1)=""
+						}
+						
+						s @REGL=@REGL+$P(RECORD,"\",6)
+						s CURTOT=+$P($G(^TKTOTAL(N1)),"\",1)
+						s NUMSECT=+$P(RECORD,"\",3)
+						s IDTVA=+$P(RECORD,"\",10)
+						S TVA2=0 s TVA3=0						
+						s TOT=CURTOT+$P(RECORD,"\",6)
+						if IDTVA=3 s TVA3=TOT
+						if IDTVA=2 s TVA2=TOT
+						if +$P(RECORD,"\",8)>0{
+							; On traite la solde
+							s RECSOLDE=""
+							s ^TKSOLDES(NUMCA,AMJ,N1,N2)=RECORD
+							s RECSOLDE=$G(^TKSOLDES(NUMCA,AMJ,NUMSECT))
+							s $P(RECSOLDE,"\",1)=+$P(RECSOLDE,"\",1)+$P(RECORD,"\",6)
+							s $P(RECSOLDE,"\",2)=+$P(RECSOLDE,"\",2)+1
+							s ^TKSOLDES(NUMCA,AMJ,NUMSECT)=RECSOLDE
+						}
+						if +$P(RECORD,"\",7)>0{
+							; On traite la remise
+							s ^TKREMISES(NUMCA,AMJ,N1,N2)=RECORD
+							s RECREMISE=""
+							s RECREMISE=$G(^TKREMISES(NUMCA,AMJ,NUMSECT))
+							s $P(RECREMISE,"\",1)=+$P(RECREMISE,"\",1)+$P(RECORD,"\",6)
+							s $P(RECREMISE,"\",2)=+$P(RECREMISE,"\",2)+1
+							s ^TKREMISES(NUMCA,AMJ,NUMSECT)=RECREMISE
+						}
+						
+						s ^TKTOTAL(N1)=TOT_"/0/"_TVA2_"/"_TVA3
+						
+						if $P(RECORD,"\",2)'["Avoir"
+						{
+							
+							if NUMSECT>0{
+								s TVEN(NUMSECT)=TVEN(NUMSECT)+$P(RECORD,"\",6)
+							}
+						}
+						else
+						{
+							// la ligne contient un avoir en utilisation
+							s AV=AV-$P(RECORD,"\",6)
+							k ^TKAVOIRS(N1,0)
+							s ^TKAVOIRS(N1,1)="20"_AMJ
+						}
+					}
+				}
+				D SAVEREC			
+			}
+			s stream=""
+	      }
+	      else
+	      {
+		      s stream=stream_iCar
+	      }
+      }
+      // Inscription de la ventilation reglement et famille
+      s TOTREGL=0 s TOTFAM=0
+      s TOTREGL=ES+CH+CB+CR+AV
+      s ^TKREGL("ES",NUMCA,AMJ)=ES
+      s ^TKREGL("CH",NUMCA,AMJ)=CH
+      s ^TKREGL("CB",NUMCA,AMJ)=CB
+      s ^TKREGL("CR",NUMCA,AMJ)=CR
+      s ^TKREGL("AV",NUMCA,AMJ)=AV
+      i MULTI>0{w !, "Il y a eu un/plusieurs multireglement, veuillez les traiter manuellement ! : "_MULTI}
+      f iFAM=1:1:20
+      {
+	      if +TVEN(iFAM)'=0{s ^TKFAMILLE(NUMCA,AMJ,iFAM)=+TVEN(iFAM) s TOTFAM=TOTFAM+TVEN(iFAM)}
+	  }
+	  s TOTECART=TOTFAM-TOTREGL
+	  if TOTREGL'=TOTFAM{w !, "Un écart de "_TOTECART_" entre la famille ("_TOTFAM_") et les reglements ("_TOTREGL_") a été trouvé ! Veuillez contrôler les données !"}
+	  D WRITEFICVEN
+      D file.%Close()
+ 
+CHAINEOCCURRENCE(STROC,CAR)
+	// Calcule le nombre d'occurrences d'une chaîne de caractères spécifique
+	// STROC : Texte dans lequel les occurrences de <Chaîne à rechercher> doivent être recherchées. 
+	// CAR : Texte à rechercher dans la <Chaîne source>
+	s CPTCAR=0
+	s iSize=$L(STROC)
+	for i=1:1:iSize
+	{
+	     if $E(STROC,i,i)=CAR {s CPTCAR=CPTCAR+1}
+	}       
+	q +CPTCAR
+	
+POSITION(STROC,CAR)
+	// Recherche la position d'une lettre dans une autre chaîne de caractères
+	s CPTCAR=0
+	s iSize=$L(STROC)
+	s iResult=0
+	for i=1:1:iSize
+	{
+	        if $E(STROC,i,i)=CAR{s iResult=i quit}
+	}
+	q iResult
+	
+REPLACE(STR,IN,OUT)
+	; STR: chaine à traiter
+	; IN: caractères à remplacer
+	; OUT: caractères de remplacement
+	s buff=""
+	s SIZEOFSTR=$L(STR)
+	s SIZEOFIN=$L(IN)
+	f iSTR=1:1:SIZEOFSTR
+	{ 
+	if $E(STR,iSTR,iSTR+SIZEOFIN-1)=IN{s buff=buff_OUT s iSTR=iSTR+SIZEOFIN-1}else{s buff=buff_$E(STR,iSTR,iSTR)}
+	}
+	q buff
+	
+	
+SAVEREC
+ 
+ if NBNODES=1{
+	s @FILE@(N1)=RECORD
+ }
+ else
+ {
+	if NBNODES=2{
+		s @FILE@(N1,N2)=RECORD
+	}
+	else
+	{
+		if NBODES=3{
+			 s @FILE@(N1,N2,N3)=RECORD
+		}
+		else
+		{
+			if NBNODES=4{
+				s @FILE@(N1,N2,N3,N4)=RECORD
+			}
+		}
+	}	
+ }
+ q	
+ 
+LSTERREURS
+ ; Demande à l'utilisateur les tickets en erreurs à ne pas prendre en compte
+ ; lors de la ventilation
+ s TICKER=""
+ while NTK>0
+{
+	if NTK>1 
+	{
+		r "Voulez-vous saisir un autre n° de ticket ?(O/N)",QUEST
+		if QUEST="N"{q}
+	}
+	//s LB=NTK_"e  n° Ticket :"
+	r "N°Ticket : ",TICKER
+	W !, ""
+	if TICKER'=""{s LSTER=LSTER_TICKER_","}
+	s NTK=NTK+1
+ }
+ q
+ 
+WRITEFICVEN
+ 
+	s curTK=$O(^TKMOISJOURS(NUMCA,AMJ,""))
+	while curTK'=""{
+		s CUM=0
+		s LG="0"
+		s NODE0=$G(^TK(curTK,0))
+		s REGL=$P(NODE0,"\",3)
+		if REGL="ES" s FIC="^TKESPECES"
+		if REGL="CH" s FIC="^TKCHEQUES"
+		if REGL="CB" s FIC="^TKCB"
+		if REGL="AV" s FIC="^TKAVOIRS"
+		s HEURE=$P(NODE0,"\",2)
+		s USER=$P(NODE0,"\",1)
+		s LG=$O(^TK(curTK,LG))
+		while LG'=""{
+			s CUM=CUM+(+$P($G(^TK(curTK,LG)),"\",6))
+			if REGL="AV" {
+				if +$D(@FIC@(AMJ,NUMCA,curTK,0))=0 {s @FIC@(AMJ,NUMCA,curTK,0)=CUM_"\"_HEURE_"\"_USER}
+				if (+$D(@FIC@(curTK,0))=0)&&(+$D(@FIC@(curTK,1))=0){s @FIC@(curTK,0)=""}
+				s @FIC@(AMJ,NUMCA,curTK,LG)=$G(^TK(curTK,LG))
+			}
+			s LG=$O(^TK(curTK,LG))	
+		}
+		if REGL="CR"{s @FIC@(AMJ,NUMCA,curTK,0)=CUM_"\"_HEURE_"\"_USER}
+		if (REGL'="AV")&&(REGL'="CR"){s @FIC@(AMJ,NUMCA,curTK)=CUM_"\"_HEURE_"\"_USER}
+		s curTK=$O(^TKMOISJOURS(NUMCA,AMJ,curTK))
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,30 @@
+ROUTINE MAJHWFAM
+MAJHWFAM
+ 
+	s ART=$O(^ST(""))
+	while ART'=""{
+		s NODE0=$G(^ST(ART))
+		S NODE4=$G(^ST(ART,4))
+		s GR1=$P(NODE0,"\",4)
+		s GR2=$P(NODE0,"\",7)
+		s LEV=$P(NODE4,"\",1)
+		
+		s ^HWFAMLEV(GR1,GR2,LEV,ART)=""
+		s ^HWFAM(LEV,GR1,GR2,ART)=""
+		s ART=$O(^ST(ART))
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

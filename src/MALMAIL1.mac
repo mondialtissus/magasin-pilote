@@ -1,0 +1,36 @@
+ROUTINE MALMAIL1
+MAJMAIL1
+ S NUMMAIL=""
+ F  S NUMMAIL=$O(^MAIL(NUMMAIL)) Q:(NUMMAIL="")  D
+ .S NLIG=""
+ .F  S NLIG=$O(^MAIL(NUMMAIL,"DEST",NLIG)) Q:(NLIG="")  D
+ ..S DATA=^MAIL(NUMMAIL,"DEST",NLIG)
+ ..I $E(DATA,$L(DATA)-1,$L(DATA))="><" D
+ ...S DATA=$E(^MAIL(NUMMAIL,"DEST",NLIG),1,$L(DATA)-2)
+ ...I $P(DATA,"<",2)'="" D
+ ....I ($P(DATA,">",2)="")&&($E(DATA,$L(DATA),1)'=">") S DATA=DATA_">"
+ ....Q
+ ...w !,DATA
+ ...S ^MAIL(NUMMAIL,"DEST",NLIG)=DATA
+ ...Q
+ ..Q
+ .Q
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

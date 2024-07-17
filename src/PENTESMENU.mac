@@ -1,0 +1,14 @@
+ROUTINE PENTESMENU
+PENTESMENU
+ 
+ S ^MENU(1,7)="1\FenSuiviPentes\SF7:neerl\SF7: Suivi des pentes\SF7:ALL\SF7:ANG"	
+ S ^HWINFO("PENTES")="1"
+ S ^FILESFTP("FROMMAG",57)	= 	"MODPENTES"
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,6 @@
+ROUTINE GUDATEFINCOR
+GUDATEFINCOR
+	;Nombre de jours d'utilisation des mouvements de correction d'inventaire après la date de l'inventaire
+	s ^HWINFO("INVENTAIRE","DATEFINCORR")=7
+ 
+ 

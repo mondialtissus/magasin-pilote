@@ -1,0 +1,86 @@
+ROUTINE UPDATESOLDES2007
+UPDATESOLDES2007
+	; Modification de la date de fin de soldes 2007 en fonction des départements
+	s CPL=$G(^HWINFO("CPL"))
+	s DEP=+$E(CPL,1,2)
+	// -> 7/08
+	s LST1="01/02/03/07/08/09/10/11/12/15/16/19/22/24/26/28/29/31/32/33/35/36/38/40/42/43/44/45/46/47/48/49/50/51/53/54/55/56/57/59/62/63/64/65/69/72/73/74/80/81/82/85/87/88/89/"
+	// -> 14/08
+	s LST2="04/05/13/17/30/34/66/"
+	
+	D CHECKLIST(1,LST1)
+	D CHECKLIST(2,LST2)	
+	q
+	
+CHECKLIST(ID,LIST)
+ 
+	s bFIND=0
+	s iCNT=1
+	f iCNT=1:1
+	{		
+		if +$P(LIST,"/",iCNT)=DEP{			
+			s bFIND=1
+			q
+		}
+		if $P(LIST,"/",iCNT)=""{q}
+		i iCNT=1000{q}
+	}
+	if bFIND{
+		// Si ID=1 > Fin des soldes au 07/08
+		// Si ID=2 > Fin des soldes au 14/08
+		if ID=1 {s NEWDATE="20070807"}
+		if ID=2 {s NEWDATE="20070814"}
+		s LASTID=+$O(^HWINFO("PERIODESOLDES",""),-1)
+		if LASTID>0{
+			s LASTREC=$G(^HWINFO("PERIODESOLDES",LASTID))
+			if $P(LASTREC,"\",1)="20070627"{s $P(LASTREC,"\",2)=NEWDATE s ^HWINFO("PERIODESOLDES",LASTID)=LASTREC}
+		}
+		W !, "trouve "_ID		
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,86 @@
+ROUTINE SUPRELIQUATINF2009
+SUPRELIQUATINF2009
+	;Cette fonction permet de supprimer tous les reliquats inférieurs à 2009
+	s MAGPLU = $O(^HWNEV("FRN"))
+	s NUMCMD = $O(^HWNEV(MAGPLU,""))
+	while NUMCMD'=""
+	{
+		s DATACMD = $G(^HWNEV(MAGPLU,NUMCMD,0))
+		s DATECMD = $P(DATACMD,"\",3)
+		I (DATECMD < "20090101")
+		{
+			s NUMFRN = $P(DATACMD,"\",12)
+			s ^HWNEV2008(MAGPLU,NUMCMD,0)=DATACMD
+			k ^HWNEV(MAGPLU,NUMCMD,0)
+ 
+			s NUMLNG = 0
+			s NUMLNG = $O(^HWNEV(MAGPLU,NUMCMD,NUMLNG))
+			while NUMLNG'=""
+			{
+				s DATACMD = $G(^HWNEV(MAGPLU,NUMCMD,NUMLNG))
+ 
+				s ^HWNEV2008(MAGPLU,NUMCMD,NUMLNG)=DATACMD
+				k ^HWNEV(MAGPLU,NUMCMD,NUMLNG)
+ 
+				s NUMLNG = $O(^HWNEV(MAGPLU,NUMCMD,NUMLNG))	
+			}
+			I ($D(^HWNEV("FRN",NUMFRN,NUMCMD))>0)
+			{
+				s DATAFRN=$G(^HWNEV("FRN",NUMFRN,NUMCMD))
+				s ^HWNEV2008("FRN",NUMFRN,NUMCMD)=DATAFRN
+				k ^HWNEV("FRN",NUMFRN,NUMCMD)
+			}
+ 
+		}
+ 
+		s NUMCMD = $O(^HWNEV(MAGPLU,NUMCMD))	
+	}
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

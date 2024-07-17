@@ -1,0 +1,116 @@
+ROUTINE CREEFILESFTP
+CREEFILESFTP
+ 
+         k ^FILESFTP
+         s ^FILESFTP("FROMMAG",1)="MODROUTINE"
+         s ^FILESFTP("FROMMAG",2)="MODANN"
+         s ^FILESFTP("FROMMAG",3)="MODAUT"
+         s ^FILESFTP("FROMMAG",4)="MODBON"                               
+         s ^FILESFTP("FROMMAG",5)="MODBRH"
+         s ^FILESFTP("FROMMAG",6)="MODKCMD"                     ; Les suppressions de lignes dans la reception des livraisons                  
+         s ^FILESFTP("FROMMAG",7)="MODCA"
+         s ^FILESFTP("FROMMAG",8)="MODCMD"                       ; Les commandes 
+         s ^FILESFTP("FROMMAG",9)="MODCONG"
+         s ^FILESFTP("FROMMAG",10)="MODCLI"                              
+         s ^FILESFTP("FROMMAG",11)="MODCUMSE"
+         s ^FILESFTP("FROMMAG",12)="MODFACT"                             
+         s ^FILESFTP("FROMMAG",13)="MODFRS"
+         s ^FILESFTP("FROMMAG",14)="MODINFO"                             
+         s ^FILESFTP("FROMMAG",15)="MODINV"
+         s ^FILESFTP("FROMMAG",16)="MODIO"                       ; Les réceptions des commandes
+         s ^FILESFTP("FROMMAG",17)="MODKILLA"
+         s ^FILESFTP("FROMMAG",18)="MODLES"                              
+         s ^FILESFTP("FROMMAG",19)="MODMAIL"     
+         s ^FILESFTP("FROMMAG",20)="MODMOD"                      
+         s ^FILESFTP("FROMMAG",21)="MODNEV"
+         s ^FILESFTP("FROMMAG",22)="MODOUV"                              
+         s ^FILESFTP("FROMMAG",23)="MODPAY"
+         s ^FILESFTP("FROMMAG",24)="MODRETOU"                    
+         s ^FILESFTP("FROMMAG",25)="MODTICKET"
+         s ^FILESFTP("FROMMAG",26)="MODTIY2K"                    
+         s ^FILESFTP("FROMMAG",27)="MODTRS"      
+         s ^FILESFTP("FROMMAG",28)="MODUSER"                             
+         s ^FILESFTP("FROMMAG",29)="MVMTI"
+         s ^FILESFTP("FROMMAG",30)="MODCANEW"
+         s ^FILESFTP("FROMMAG",31)="MODCMD2"  // MODCMD pour les magasins à vente caisse non informatisée (-> remontée du niveau de stock en centrale)
+         s ^FILESFTP("FROMMAG",32)="MODBUDG"                     ; Budget magasin
+         s ^FILESFTP("FROMMAG",33)="MODPRJ"
+         s ^FILESFTP("FROMMAG",34)="MODCOMPTEUR"
+         s ^FILESFTP("FROMMAG",35)="MODVENDEUR"
+         s ^FILESFTP("FROMMAG",36)="MODTKPACK"
+         s ^FILESFTP("FROMMAG",37)="MODCAY2K"                    ; Chiffres d'affaires magasin
+         s ^FILESFTP("FROMMAG",38)="MODROUTINE"                  ; Trace des routines envoyées
+         s ^FILESFTP("FROMMAG",39)="MODTKCR"              
+         s ^FILESFTP("FROMMAG",40)="MODREMB"              ; Les remboursements            ...en caisse
+         s ^FILESFTP("FROMMAG",41)="MODTKAV"              ; Les avoirs                    ...en caisse
+         s ^FILESFTP("FROMMAG",42)="MODTKER"              ; Les erreurs                   ...en caisse
+         s ^FILESFTP("FROMMAG",43)="MODTKCLOT"                    ; Les erreurs de clotures
+         s ^FILESFTP("FROMMAG",44)="MODTKDIV"                     ; Les suppressions de lignes
+         s ^FILESFTP("FROMMAG",45)="MODMODIF"                     ; les modifications de cloture 
+         s ^FILESFTP("FROMMAG",46)="MODTKCLI"                     ; Les clients associés au credit
+         s ^FILESFTP("FROMMAG",47)="MODVERS"                     ; Les versions des exe
+	 s ^FILESFTP("FROMMAG",48)="MODERREURS"				; Les erreurs de POSCOM
+	 s ^FILESFTP("FROMMAG",49)="MODLIAISON"				; Les relations code barrres erronés
+         s ^FILESFTP("FROMMAG",50)="MODRESULT"				; Les articles en magasins
+	 s ^FILESFTP("FROMMAG",51)="MODSAUVEGARDE"				; Sauvegardes faite pas RecupTk
+	 s ^FILESFTP("FROMMAG",52)="MODCLIENTS"				; Les clients des magasins		
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

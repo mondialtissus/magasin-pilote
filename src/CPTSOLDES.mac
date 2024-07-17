@@ -1,0 +1,29 @@
+ROUTINE CPTSOLDES
+CPTSOLDES
+	k ^MODROUTINE
+	s NumMag=$G(^HWINFO("MAG"))
+	s cptArt=$O(^TKSOLDES(""))
+	s cpt = "0"
+	while cptArt'=""
+	{
+		S cpt = +cpt + 1
+		s cptArt=$O(^TKSOLDES(cptArt))
+	}
+	s ^MODROUTINE(NumMag,"NBARTSOLDES",cpt)=""
+	Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

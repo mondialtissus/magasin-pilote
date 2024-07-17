@@ -1,0 +1,26 @@
+ROUTINE INITINV201110
+INITINV201110
+ 
+ 					      // GARDER UN DATE UNIQUE POUR INV D'OCTOBRE 2011
+ s ^HWINFO("TYPETERM")="DOLPHIN"
+ S ^HWINFO("INVENTAIRE","DATE")="62367"	      // Date de référence 03 Octobre 2011 
+ S ^HWINFO("INVENTAIRE","DATEARRETE")="62367"	
+ s ^HWINFO("INVENTAIRE","DATETEST")=""
+ s ^HWINFO("INVENTAIRE","DATETESTFIN")=""
+ s ^HWINFO("INVENTAIRE","DATEDEB")="62348"   // Démarrage le 14 septembre 2011
+ s ^HWINFO("INVENTAIRE","DATEFIN")="62372"   // fin le 8 Octobre 2011 
+ s ^HWINFO("INVENTAIRE",62367,"AUTO")=""     // Permet de valider l'utilisation du terminal 
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

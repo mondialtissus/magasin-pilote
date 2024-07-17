@@ -1,0 +1,152 @@
+ROUTINE GETTICKETS
+GETTICKETS
+	q
+GETALLTICKETS(DATE)
+	
+	; Rémontée des tickets
+	s POSNUM=$G(^HWINFO("MAG"))
+	ZA ^MODPTK
+	ZA ^MODPTKCREF
+	ZA ^MODPTKMODIF
+	ZA ^MODPTKMULTI
+	ZA ^MODTKCR
+	
+	s strCA=$O(^TKMOISJOURS(""))
+	while strCA'=""
+	{
+	        s strTk=$O(^TKMOISJOURS(strCA,DATE,""))
+	        while strTk'=""
+	        {
+	                s reaTot=$P($G(^TKTOTAL(strTk)),"\",1)
+	                s strNode0=$G(^TK(strTk,0))
+	                s strUser=$P(strNode0,"\",1)
+	                s strHeure=$P(strNode0,"\",2)
+	                s strRegl=$P(strNode0,"\",3)
+	                
+	                ; Modification de reglement
+	                if +$D(^TKMODIF2(strTk))>0{
+	                        s strIModif=$O(^TKMODIF2(strTk,""))
+	                        while strIModif'=""
+	                        {
+	                                s ^MODPTKMODIF(POSNUM,strTk,strIModif)=$G(^TKMODIF2(strTk,strIModif))
+	                                s strIModif=$O(^TKMODIF2(strTk,strIModif))
+	                        }
+	                }
+	                
+	                ; Crédit
+	                s strRelCr=""
+	                if strRegl="CR"{
+	                        s strRelCR=$G(^TKCREDITSREF(strTk))
+	                        s ^MODPTKCREF(POSNUM,strTk)=strRelCR
+	                }
+	                
+	                ; Détail du ticket
+	                s strLg=$O(^TK(strTk,""))
+	                while strLg'=""
+	                {                       
+	                        s RECTK=$G(^TK(strTk,strLg))
+	                        s AAMMJJ=$E(strTk,3,8)
+	                        s ^MODPTK(POSNUM,strTk,strLg)=RECTK
+	                        i strRegl="CR"{
+	                                i +strLg=0{
+	                                        s ^MODTKCR(POSNUM,$E(AAMMJJ,1,4),$E(AAMMJJ,5,6),+$E(strTk,1,2),$P(strRelCR,"\",1),0)=$G(^TKCREDITS($E(AAMMJJ,1,4),+$E(strTk,1,2),strTk,0))_"\"_$P(strRelCR,"\",2)                                              
+	                                }
+	                                else
+	                                {
+	                                        s ^MODTKCR(POSNUM,$E(AAMMJJ,1,4),$E(AAMMJJ,5,6),+$E(strTk,1,2),$P(strRelCR,"\",1),strLg)=RECTK                                         
+	                                }                                       
+	                        }
+	                        s strLg=$O(^TK(strTk,strLg))                          
+	                }
+	                
+	                ; Multi reglement
+	                if +$D(^TKMULTI(strTk))>0{
+	                        s ^MODPTKMULTI(POSNUM,strTk)=$G(^TKMULTI(strTk))
+	                }
+	                s strTk=$O(^TKMOISJOURS(strCA,DATE,strTk))
+	        }
+	        s strCA=$O(^TKMOISJOURS(strCA))
+	}
+	ZD ^MODPTKMULTI
+	ZD ^MODPTKMODIF
+	ZD ^MODPTKCREF
+	ZD ^MODPTK
+	ZD ^MODTKCR
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

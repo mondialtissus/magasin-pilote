@@ -1,0 +1,66 @@
+ROUTINE MODIFNOMVENTECMD
+MODIFNOMVENTECMD
+ S MAG=$G(^HWINFO("MAG"))
+ S i=0
+ S NOMVENTE1="GRECO"
+ S NOMVENTE2="PALME"
+ S NOMVENTE3="MEDINA"
+ S NEWNOMVENTE1="LITTLEPRADO"
+ S NEWNOMVENTE2="PARME"
+ S NEWNOMVENTE3="SULTAN"
+ S nLIGNE=""
+ F  S nLIGNE=$O(^HWNEV(MAG,19714,nLIGNE)) Q:(nLIGNE="")  D
+ .S STRART=$P(^HWNEV(MAG,19714,nLIGNE),"\",3)
+ .w !,STRART
+ .for i=1:1:3 {
+	 .S NOMVENTE="NOMVENTE"_i
+	 .S NEWNOMVENTE="NEWNOMVENTE"_i
+	 .//w !,"  "_i_":"_@NOMVENTE
+	 .if +$L($P(STRART,@NOMVENTE,2))>0 {
+		 .S NEWART=$P(STRART,"/",1)_"/"_@NEWNOMVENTE_"/"_$P(STRART,"/",3)
+		 .S $P(^HWNEV(MAG,19714,nLIGNE),"\",3)=NEWART
+		 .w " -> "_NEWART
+		 .S CMDINIT=$P(^HWNEV(MAG,19714,nLIGNE),"\",2)
+		 .S CMD=$P(CMDINIT,"*",1)
+		 .S NLIG=$P(CMDINIT,"*",2)
+		 .S $P(^HWARCCMD("CDE",CMD,1),"\",1)=NEWART
+		 .S ^HWARCCMD("ART",NEWART,CMD,NLIG)=$G(^HWARCCMD("ART",STRART,CMD,NLIG))
+		 .K ^HWARCCMD("ART",STRART,CMD,NLIG)
+		 .}
+ .}
+ .Q
+ w !,"Terminé !!!"
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

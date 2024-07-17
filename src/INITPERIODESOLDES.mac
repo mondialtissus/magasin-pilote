@@ -1,0 +1,292 @@
+ROUTINE INITPERIODESOLDES
+MAJSOLDES
+	//D UPDATESOLDES
+ 	D INITPERIODESOLDES
+	Q
+UPDATESOLDES
+	s POSNUM=$G(^HWINFO("MAG"))
+	if (POSNUM="M164")||(POSNUM="M165")||(POSNUM="M167")||(POSNUM="M173")||(POSNUM="G174")
+	{
+	        s ART=$O(^ST(""))
+	        while ART'=""{
+	                s ST0=$G(^ST(ART))
+	                s PV=$P(ST0,"\",22)
+	                s DATEEFFECT=+$P(PV,"/",2)
+	                i (DATEEFFECT>0)&&(DATEEFFECT=+$ZDH("20120111",8)){
+	                        s $P(PV,"/",2)=$ZDH("20120102",8)
+	                        s $P(ST0,"\",22)=PV
+	                        s ^ST(ART)=ST0
+	                }
+	                s ART=$O(^ST(ART))
+	        }
+	}
+	if (POSNUM="G292")||(POSNUM="M313")||(POSNUM="G311")
+	{
+	        s ART=$O(^ST(""))
+	        while ART'=""{
+	                s ST0=$G(^ST(ART))
+	                s PV=$P(ST0,"\",22)
+	                s DATEEFFECT=+$P(PV,"/",2)
+	                i (DATEEFFECT>0)&&(DATEEFFECT=+$ZDH("20120111",8)){
+	                        s $P(PV,"/",2)=$ZDH("20120104",8)
+	                        s $P(ST0,"\",22)=PV
+	                        s ^ST(ART)=ST0
+	                }
+	                s ART=$O(^ST(ART))
+	        }
+	}
+	
+	if (POSNUM="M163")||(POSNUM="M168")||(POSNUM="G179")
+	{
+	        s ART=$O(^ST(""))
+	        while ART'=""{
+	                s ST0=$G(^ST(ART))
+	                s PV=$P(ST0,"\",22)
+	                s DATEEFFECT=+$P(PV,"/",2)
+	                i (DATEEFFECT>0)&&(DATEEFFECT=+$ZDH("20120111",8)){
+	                        s $P(PV,"/",2)=$ZDH("20110302",8)
+	                        s $P(ST0,"\",22)=PV
+	                        s ^ST(ART)=ST0
+	                }
+	                s ART=$O(^ST(ART))
+	        }
+	}
+ 
+	q
+ 
+INITPERIODESOLDES
+ K ^TKLISTESOLDES
+ K ^TKFINSERIE	
+ s DEB=""
+ s FIN=""
+ s POSNUM=$G(^HWINFO("MAG"))
+ if POSNUM="G149" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G174" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G179" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G182" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G183" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G201" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G203" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G224" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G237" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G282" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G287" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G290" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G291" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G292" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G307" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G311" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G321" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G323" s DEB="20120627" s FIN="20120731"
+ if POSNUM="G331" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M001" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M144" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M151" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M156" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M157" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M159" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M160" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M161" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M162" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M163" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M164" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M165" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M167" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M168" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M173" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M178" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M204" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M205" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M213" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M214" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M215" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M221" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M226" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M234" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M245" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M247" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M253" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M254" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M257" s DEB="20120704" s FIN="20120807"
+ if POSNUM="M260" s DEB="20120704" s FIN="20120807"
+ if POSNUM="M273" s DEB="20120704" s FIN="20120807"
+ if POSNUM="M278" s DEB="20120704" s FIN="20120807"
+ if POSNUM="M280" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M288" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M312" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M313" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M338" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M341" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M344" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M354" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M364" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M374" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M386" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M391" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M392" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M401" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M414" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M415" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M416" s DEB="20120627" s FIN="20120731"
+ if POSNUM="M417" s DEB="20120627" s FIN="20120731"
+ if POSNUM="Q180" s DEB="20120627" s FIN="20120731"
+ if POSNUM="Q231" s DEB="20120627" s FIN="20120731"
+ if POSNUM="Q232" s DEB="20120627" s FIN="20120731"
+ if POSNUM="Q282" s DEB="20120627" s FIN="20120731"
+ i (DEB'="")&&(FIN'="")
+ {
+         s LASTID=+$O(^HWINFO("PERIODESOLDES",""),-1)+1
+         s ^HWINFO("PERIODESOLDES",LASTID)=DEB_"\"_FIN_"\"
+ }
+ else
+ {
+         S ^MODROUTINE(POSNUM,"ERRSOLDES")="Impossible de definir la période solde"
+ }
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

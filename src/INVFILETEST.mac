@@ -1,0 +1,438 @@
+ROUTINE INVFILETEST
+INVFILETEST
+ Q
+ 
+SAVEFILE
+ 
+ // sauvegarde INVARTICLELM en INVARTICLELMTEST
+	S MAG=$O(^INVARTICLELM(""))
+ 	while MAG'=""
+ 	{
+ 	 	s REF=$O(^INVARTICLELM(MAG,""))
+ 	 	while REF'=""
+ 		{
+	 		if REF="NON REFERENCE"
+	 		{
+		 		s LIGNE=$O(^INVARTICLELM(MAG,REF,""))
+ 	 			while LIGNE'=""
+				{
+	 				s DATA=$G(^INVARTICLELM(MAG,REF,LIGNE))
+	 				w !, DATA
+	 				s ^INVTESTARTICLELM(MAG,REF,LIGNE)=DATA	
+						
+					s LIGNE=$O(^INVARTICLELM(MAG,REF,LIGNE))	 			
+	 			}
+	 		}
+	 		else
+	 		{
+	 			s LEV=$O(^INVARTICLELM(MAG,REF,""))
+ 	 			while LEV'=""
+ 	 			{
+ 	 				s ART=$O(^INVARTICLELM(MAG,REF,LEV,""))
+ 	 				while ART'=""
+ 					{ 			
+	 	 				s LIGNE=$O(^INVARTICLELM(MAG,REF,LEV,ART,""))
+ 	 					while LIGNE'=""	
+ 	 					{			
+		 					s DATA=$G(^INVARTICLELM(MAG,REF,LEV,ART,LIGNE))
+	 						s ^INVTESTARTICLELM(MAG,REF,LEV,ART,LIGNE)=DATA	
+	 						
+	 						s LIGNE=$O(^INVARTICLELM(MAG,REF,LEV,ART,LIGNE))
+ 	 					}
+ 	 				s ART=$O(^INVARTICLELM(MAG,REF,LEV,ART))
+ 	 				}
+ 	 			s LEV=$O(^INVARTICLELM(MAG,REF,LEV))
+ 	 			}
+ 	 		}
+ 
+ 	 		s REF=$O(^INVARTICLELM(MAG,REF))
+ 	 	}
+ 	 s MAG=$O(^INVARTICLELM(MAG))
+ 	 } 			
+		 			
+ 
+ // sauvegarde INVARTICLETI en INVARTICLETITEST
+	S MAG=$O(^INVARTICLETI(""))
+ 	while MAG'=""
+ 	{
+ 	 	s REF=$O(^INVARTICLETI(MAG,""))
+ 	 	while REF'=""
+ 		{
+	 		if REF="NON REFERENCE"
+	 		{
+		 		s LIGNE=$O(^INVARTICLETI(MAG,REF,""))
+ 	 			while LIGNE'=""
+ 				{
+	 				s DATA=$G(^INVARTICLETI(MAG,REF,LIGNE))
+	 				s ^INVTESTARTICLETI(MAG,REF,LIGNE)=DATA	
+						
+					s LIGNE=$O(^INVARTICLETI(MAG,REF,LIGNE))	 			
+	 			}
+	 		}
+	 		else
+	 		{
+	 			s LEV=$O(^INVARTICLETI(MAG,REF,""))
+ 	 			while LEV'=""
+ 	 			{
+ 	 				s ART=$O(^INVARTICLETI(MAG,REF,LEV,""))
+ 	 				while ART'=""
+ 					{ 			
+	 	 				s LIGNE=$O(^INVARTICLETI(MAG,REF,LEV,ART,""))
+ 	 					while LIGNE'=""	
+ 	 					{			
+		 					s DATA=$G(^INVARTICLETI(MAG,REF,LEV,ART,LIGNE))
+	 						s ^INVTESTARTICLETI(MAG,REF,LEV,ART,LIGNE)=DATA	
+	 						
+	 						s LIGNE=$O(^INVARTICLETI(MAG,REF,LEV,ART,LIGNE))
+ 	 					}
+ 	 					
+ 	 					s ART=$O(^INVARTICLETI(MAG,REF,LEV,ART))
+ 	 				}
+ 	 				
+ 	 				s LEV=$O(^INVARTICLETI(MAG,REF,LEV))
+ 	 			}
+ 	 		}
+	 		s REF=$O(^INVARTICLETI(MAG,REF))
+ 	 	}
+ 	 	s MAG=$O(^INVARTICLETI(MAG))
+ 	 } 	
+ 	 
+ 	 
+ // sauvegarde INVARTICLEME en INVARTICLEMETEST
+	S MAG=$O(^INVARTICLEME(""))
+ 	while MAG'=""
+ 	{
+ 	 	s REF=$O(^INVARTICLEME(MAG,""))
+ 	 	while REF'=""
+ 		{
+	 		if REF="NON REFERENCE"
+	 		{
+		 		s LIGNE=$O(^INVARTICLEME(MAG,REF,""))
+ 	 			while LIGNE'=""
+ 				{
+	 				s DATA=$G(^INVARTICLEME(MAG,REF,LIGNE))
+	 				s ^INVTESTARTICLEME(MAG,REF,LIGNE)=DATA	
+						
+					s LIGNE=$O(^INVARTICLEME(MAG,REF,LIGNE))	 			
+	 			}
+	 		}
+	 		else
+	 		{
+	 			s LEV=$O(^INVARTICLEME(MAG,REF,""))
+ 	 			while LEV'=""
+ 	 			{
+ 	 				s ART=$O(^INVARTICLEME(MAG,REF,LEV,""))
+ 	 				while ART'=""
+ 					{ 			
+	 	 				s LIGNE=$O(^INVARTICLEME(MAG,REF,LEV,ART,""))
+ 	 					while LIGNE'=""	
+ 	 					{			
+		 					s DATA=$G(^INVARTICLEME(MAG,REF,LEV,ART,LIGNE))
+	 						s ^INVTESTARTICLEME(MAG,REF,LEV,ART,LIGNE)=DATA	
+	 						
+	 						s LIGNE=$O(^INVARTICLEME(MAG,REF,LEV,ART,LIGNE))
+ 	 					}
+ 	 					s ART=$O(^INVARTICLEME(MAG,REF,LEV,ART))
+ 	 				}
+ 	 				s LEV=$O(^INVARTICLEME(MAG,REF,LEV))
+ 	 			}
+ 	 		}
+ 	 		s REF=$O(^INVARTICLEME(MAG,REF))
+ 	 	}
+ 	 	s MAG=$O(^INVARTICLEME(MAG))
+ 	 } 						 	
+ 	 
+ 	 
+ // sauvegarde INVARTICLE en INVARTICLETEST
+	S MAG=$O(^INVARTICLE(""))
+ 	while MAG'=""
+ 	{
+ 	 	s REF=$O(^INVARTICLE(MAG,""))
+ 	 	while REF'=""
+ 		{
+	 		if REF="NON REFERENCE"
+	 		{
+		 		s LIGNE=$O(^INVARTICLE(MAG,REF,""))
+ 	 			while LIGNE'=""
+ 				{
+	 				s DATA=$G(^INVARTICLE(MAG,REF,LIGNE))
+	 				s ^INVTESTARTICLE(MAG,REF,LIGNE)=DATA	
+						
+					s LIGNE=$O(^INVARTICLE(MAG,REF,LIGNE))	 			
+	 			}
+	 		}
+	 		else
+	 		{
+	 			s LEV=$O(^INVARTICLE(MAG,REF,""))
+ 	 			while LEV'=""
+ 	 			{
+ 	 				s ART=$O(^INVARTICLE(MAG,REF,LEV,""))
+ 	 				while ART'=""
+ 					{ 			
+	 	 				s LIGNE=$O(^INVARTICLE(MAG,REF,LEV,ART,""))
+ 	 					while LIGNE'=""	
+ 	 					{			
+		 					s DATA=$G(^INVARTICLE(MAG,REF,LEV,ART,LIGNE))
+	 						s ^INVTESTARTICLE(MAG,REF,LEV,ART,LIGNE)=DATA	
+	 						
+	 						s LIGNE=$O(^INVARTICLE(MAG,REF,LEV,ART,LIGNE))
+ 	 					}
+ 	 					s ART=$O(^INVARTICLE(MAG,REF,LEV,ART))
+ 	 				}
+ 	 				s LEV=$O(^INVARTICLE(MAG,REF,LEV))
+ 	 			}
+ 	 		}
+ 	 		s REF=$O(^INVARTICLE(MAG,REF))
+ 	 	}
+ 	 	s MAG=$O(^INVARTICLE(MAG))
+ 	 } 
+ 	 
+ 	 
+ // sauvegarde INVRAPPORTANOMALIES en INVRAPPORTANOMALIESTEST
+	S LIGNE=$O(^INVRAPPORTANOMALIES(""))
+ 	while LIGNE'=""
+ 	{
+ 	 	s DATA=$G(^INVRAPPORTANOMALIES(LIGNE))
+	 	s ^INVTESTRAPPORTANOMALIES(LIGNE)=DATA				
+		s LIGNE=$O(^INVRAPPORTANOMALIES(LIGNE))	 			
+	 }		
+	 
+ // sauvegarde INVSYNTHESE en INVSYNTHESETEST
+	S DATE=$O(^INVSYNTHESE(""))
+ 	while DATE'=""
+ 	{
+ 	 	s FAM=$O(^INVSYNTHESE(DATE,""))
+ 	 	while FAM'=""
+ 		{
+	 	 	s FOURN=$O(^INVSYNTHESE(DATE,FAM,""))
+ 	 		while FOURN'=""
+ 			{
+	 			s DATA=$G(^INVSYNTHESE(DATE,FAM,FOURN))
+	 			s ^INVTESTSYNTHESE(DATE,FAM,FOURN)=DATA	
+				s FOURN=$O(^INVSYNTHESE(DATE,FAM,FOURN))	 			
+	 		}
+	 		s FAM=$O(^INVSYNTHESE(DATE,FAM))
+	 	}
+	 	s DATE=$O(^INVSYNTHESE(DATE))
+ 	}
+ 
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

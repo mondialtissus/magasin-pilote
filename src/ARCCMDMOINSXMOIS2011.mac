@@ -1,0 +1,384 @@
+ROUTINE ARCCMDMOINSXMOIS2011
+ARCCMDMOINSXMOIS2011
+	;Cette fonction permet d'archiver toutes les données de commandes datant de plus de 12 mois
+	
+	s POSNUM=$G(^HWINFO("MAG"))
+	
+	s DATE = +$h
+	s DATELIM = +DATE - 365
+	
+	;Si nous mettons un numéro de commande en paramètre alors nous devons archiver que celui-ci
+	 
+	s CMDMAG = ""
+	s CMDMAG = $O(^HWARCCMD("CDE",CMDMAG))
+	
+	s NBLNG = 0
+	;On parcourt tout d'abord les CDE de plus de 365 jours
+	
+	while (CMDMAG '= "")
+	{
+	        S DATA = $G(^HWARCCMD("CDE",CMDMAG,0))
+	        i (DATA '= "") && (+$P(DATA,"\",1)>19001116)
+	        {
+	                i +DATELIM > +$ZDh($P(DATA,"\",1),8)
+	                {
+	                        w !,"Commande : "_CMDMAG_" DATA: "_DATA_" DATELIMITE : "_DATELIM_"/"_+$ZDh($P(DATA,"\",1),8)
+	                        r !,"PAUSE",a
+	                        //Cette commande à une date inférieure à la date de limite d'archivage
+	                        
+	                        //On parcours toutes la commande pour l'archiver
+	                        s NUMLNG = "0"
+	                        s NUMLNG = $O(^HWARCCMD("CDE",CMDMAG,NUMLNG))
+	                        while (NUMLNG '= "")
+	                        {
+	                                //On enlève tous les nodes ART
+	                                s DATACDE = $G(^HWARCCMD("CDE",CMDMAG,NUMLNG))
+	                                s ARTICLE = $P(DATACDE,"\",1)
+	                                
+	                                i $D(^HWARCCMD("ART",ARTICLE,CMDMAG,NUMLNG))>0
+	                                {                                       
+	                                        s DATAART = $G(^HWARCCMD("ART",ARTICLE,CMDMAG,NUMLNG))
+	                                
+	                                        s ^ARCHWARCCMD("ART",ARTICLE,CMDMAG,NUMLNG)= DATAART
+	                                
+	                                        k ^HWARCCMD("ART",ARTICLE,CMDMAG,NUMLNG)
+	                                        s NBLNG = NBLNG+1
+	                                }                                                                                                                       
+	                                
+	                                //On enlève tous les nodes FAX et LIVR
+	                                s CMDCENTRALE=""
+	                                s CMDCENT = ""
+	                                s CMDCENT = $O(^HWARCCMD("FAX",CMDMAG,NUMLNG,CMDCENT))
+	                                while CMDCENT '= ""
+	                                {
+	                                        s CMDCENTLNG = ""
+	                                        s CMDCENTLNG = $O(^HWARCCMD("FAX",CMDMAG,NUMLNG,CMDCENT,CMDCENTLNG))
+	                                        while CMDCENTLNG '=""
+	                                        {
+	                                                s DATAFAX = ""
+	                                                s DATAFAX = $G(^HWARCCMD("FAX",CMDMAG,NUMLNG,CMDCENT,CMDCENTLNG))
+	                                                
+	                                                s ^ARCHWARCCMD("FAX",CMDMAG,NUMLNG,CMDCENT,CMDCENTLNG)=DATAFAX
+																			
+	                                                s NBLNG = NBLNG+1
+	                                                k ^HWARCCMD("FAX",CMDMAG,NUMLNG,CMDCENT,CMDCENTLNG)                                                     
+	                                                                                                       
+	                                                //On enlève les LIVR
+	                                                //On boucle sur les numéros de BL
+	                                                s NUMBL = ""
+	                                                s NUMBL = $O(^HWARCCMD("LIVR",CMDCENT,CMDCENTLNG,CMDMAG,NUMLNG,NUMBL))
+	                                                while NUMBL '= ""
+	                                                {
+	                                                    s DATALIVR = ""
+	                                                    s DATALIVR = $G(^HWARCCMD("LIVR",CMDCENT,CMDCENTLNG,CMDMAG,NUMLNG,NUMBL))
+	                                                      
+	                                                    s ^ARCHWARCCMD("LIVR",CMDCENT,CMDCENTLNG,CMDMAG,NUMLNG,NUMBL)=DATALIVR
+	                                                	
+	                                                	s NBLNG = NBLNG+1
+	                                                    k ^HWARCCMD("LIVR",CMDCENT,CMDCENTLNG,CMDMAG,NUMLNG,NUMBL)    
+	                                                        
+	                                                    s NUMBL = $O(^HWARCCMD("LIVR",CMDCENT,CMDCENTLNG,CMDMAG,NUMLNG,NUMBL))
+	                                                }
+	                                                
+	                                                  //On enlève les HWNEV
+	                                                 i +$D(^HWNEV(POSNUM,CMDCENT,CMDCENTLNG))>0
+	                                                 {
+	                                                     s DATAHWNEV = $G(^HWNEV(POSNUM,CMDCENT,CMDCENTLNG))
+	                                                     s ^ARCHWNEV(POSNUM,CMDCENT,CMDCENTLNG)= DATAHWNEV
+	                                        
+	                                        			 s NBLNG = NBLNG+1
+	                                                     k ^HWNEV(POSNUM,CMDCENT,CMDCENTLNG)
+	                                                  }                       
+	                                                                
+	                                                s CMDCENTLNG = $O(^HWARCCMD("FAX",CMDMAG,NUMLNG,CMDCENT,CMDCENTLNG))                                                                                                    
+	                                        }
+	                                        s CMDCENTRALE = CMDCENT                                 
+	                                        s CMDCENT = $O(^HWARCCMD("FAX",CMDMAG,NUMLNG,CMDCENT))
+	                                }          
+	                                
+	                                
+	                                //On enlève les CDE
+	                                s ^ARCHWARCCMD("CDE",CMDMAG,NUMLNG)=DATACDE
+	                                s NBLNG = NBLNG+1
+	                                k ^HWARCCMD("CDE",CMDMAG,NUMLNG)
+	                                
+	                                s NUMLNG = $O(^HWARCCMD("CDE",CMDMAG,NUMLNG))                                                                                                   
+	                        }
+	                        //On enlève le FRN du HWNEV et du HWARCCMD
+	                        //On recherche le fournisseur
+	                        s FOURNISSEUR = ""
+	                        s TROUVE = 0
+	                        s FOURNISSEUR = $O(^HWARCCMD("FRN",FOURNISSEUR))
+	                        while (FOURNISSEUR '= "") && (TROUVE=0)
+	                        {
+	                                i +$D(^HWARCCMD("FRN",FOURNISSEUR,CMDMAG)) > 0
+	                                {
+	                                        s DATAHWFRN = $G(^HWARCCMD("FRN",FOURNISSEUR,CMDMAG))
+	                                        s ^ARCHWARCCMD("FRN",FOURNISSEUR,CMDMAG)=DATAHWFRN
+	                                        s NBLNG = NBLNG+1
+	                                        k ^HWARCCMD("FRN",FOURNISSEUR,CMDMAG)
+	                                        
+	                                        s TROUVE = 1
+	                                }
+	                                else
+	                                {
+	                                        s FOURNISSEUR = $O(^HWARCCMD("FRN",FOURNISSEUR))
+	                                }
+	                        }
+	                        i CMDCENTRALE '= ""
+	                        {
+	                        	i FOURNISSEUR '= ""
+	                        	{
+	                        	  	i +$D(^HWNEV("FRN",FOURNISSEUR,CMDCENTRALE))> 0
+	                        	  	{
+	                            	    		s DATANEVFRN = $G(^HWNEV("FRN",FOURNISSEUR,CMDCENTRALE))
+		                           	                s ^ARCHWNEV("FRN",FOURNISSEUR,CMDCENTRALE)=DATANEVFRN
+			                              	s NBLNG = NBLNG+1
+		                              	  	k ^HWNEV("FRN",FOURNISSEUR,CMDCENTRALE)
+		                              	}	                                                  
+	                 	}
+	                        	else
+	                        	{
+	                                s FOURNISSEUR = ""
+	                                s TROUVE = 0
+	                                s FOURNISSEUR = $O(^HWNEV("FRN",FOURNISSEUR))
+	                                while ((FOURNISSEUR '= "") && (TROUVE=0))
+	                                {
+	                                     i +$D(^HWNEV("FRN",FOURNISSEUR,CMDCENTRALE)) > 0
+	                                     {
+	                                          s DATANEVFRN = $G(^HWNEV("FRN",FOURNISSEUR,CMDCENTRALE))
+	                                          s ^ARCHWNEV("FRN",FOURNISSEUR,CMDCENTRALE)=DATANEVFRN
+	                                          s NBLNG = NBLNG+1
+	                                          k ^HWNEV("FRN",FOURNISSEUR,CMDCENTRALE)
+	                                        
+	                                          s TROUVE = 1
+	                                          ;On archive par la même occasion le node à 0 du HWNEV restant
+	                                          i +$D(^HWNEV(POSNUM,CMDCENTRALE,0))>0
+	                                          {
+	                                                s DATAFRN0 = $G(^HWNEV(POSNUM,CMDCENTRALE,0))
+	                                                s ^ARCHWNEV(POSNUM,CMDCENTRALE,0)=DATAFRN0
+	                                                s NBLNG = NBLNG+1
+	                                                 k ^HWNEV(POSNUM,CMDCENTRALE,0)
+	                                                
+	                                           }
+	                                     }
+	                                     else
+	                                     {
+	                                         s FOURNISSEUR = $O(^HWNEV("FRN",FOURNISSEUR))                                                 
+	                                     }
+	                                }
+	                            }
+	                        }
+	               
+	                i +$D(^HWARCCMD("CDE",CMDMAG,0)) > 0
+	      			{
+	            	    s DATACDE0 = $G(^HWARCCMD("CDE",CMDMAG,0))
+	            	    s ^ARCHWARCCMD("CDE",CMDMAG,0)=DATACDE0
+	            	    s NBLNG = NBLNG+1
+	            	    k ^HWARCCMD("CDE",CMDMAG,0)
+	                }
+	            
+	        	}
+	                
+	        }
+	       
+	        
+	        S DATA = $G(^HWARCCMD("CDE",CMDMAG,0))
+	        
+	        s CMDMAG = $O(^HWARCCMD("CDE",CMDMAG))
+	}
+	
+	w !,"Nombre de lignes archivées: "_NBLNG
+	
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

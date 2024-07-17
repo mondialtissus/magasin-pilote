@@ -1,0 +1,253 @@
+ROUTINE FusionInitBDD
+FusionInitBDD
+
+ s ^HWINFO("SCANNER","REPERTOIRESCAN","APPLI")="\BACKUP\APPS\"
+ s ^HWINFO("SCANNER","REPERTOIRESCAN","DLL")="\BACKUP\APPS\"
+ s ^HWINFO("SCANNER","REPERTOIRESCAN","DONNEESCONSTANTES")="\BACKUP\DATA\"
+ s ^HWINFO("SCANNER","REPERTOIRESCAN","DONNEESMODIFIABLES")="\IPSM\DATA\"
+
+ s ^HWINFO("SCANNER","REPERTOIREPC","APPLI")="C:\TERMINAL\APPS\"
+ s ^HWINFO("SCANNER","REPERTOIREPC","DLL")="C:\TERMINAL\DLLS\"
+ s ^HWINFO("SCANNER","REPERTOIREPC","DONNEESCONSTANTES")="C:\TERMINAL\DATA\"
+ s ^HWINFO("SCANNER","REPERTOIREPC","DONNEESMODIFIABLES")="C:\TERMINAL\DATA\"
+ s ^HWINFO("SCANNER","REPERTOIREPC","CONFIG")="C:\TERMINAL\CONFIG\"
+ s ^HWINFO("SCANNER","REPERTOIREPC","PHOTOSINVTOURNANT")="C:\TERMINAL\PHOTOS\"
+ s ^HWINFO("SCANNER","REPERTOIREPC","PHOTOS")="C:\gsiphotos\"
+ s ^HWINFO("SCANNER","REPERTOIREPC","REPERTOIRETMP")="c:\POS\inventaire\DATA\"
+ s ^HWINFO("SCANNER","REPERTOIREPC","ARCHIVES","INVENTAIRETOURNANT")="C:\POS\ARCHIVES\INVENTAIRE TOURNANT\"
+ s ^HWINFO("SCANNER","REPERTOIREPC","ARCHIVES","RECEPLIVR")="C:\POS\ARCHIVES\MERCERIE\"
+ s ^HWINFO("SCANNER","REPERTOIREPC","ARCHIVES","CMDWEB")="C:\POS\ARCHIVES\CMDWEB\"
+ s ^HWINFO("SCANNER","REPERTOIREPC","ARCHIVES","INVENTAIREPERMANENT")="C:\POS\inventaire\DATA\backup\"
+
+ s ^HWINFO("SCANNER","LISTEFICHIERS","DONNEESCONSTANTES")="ARTICLE;ARTICLECD;ARTICLECHAINE;ARTICLEFDS;ARTICLEPARAM;ARTICLESOLDE;ARTICLESTOCK;ARTICLESUPP;CMD_MERCERIE;CODEBARRE;FOURNISSEUR;NEWFAMILLE;NEWSECTEUR;RECEPTART;UTILISATEUR;"
+ s ^HWINFO("SCANNER","LISTEFICHIERSAGENERER","DONNEESCONSTANTES")="ARTICLE*0;CMD_MERCERIE*1;CODEBARRE*0;FOURNISSEUR*0;NEWFAMILLE*0;NEWSECTEUR*0;RECEPTART*0;UTILISATEUR*0;"
+ s ^HWINFO("SCANNER","LISTEFICHIERS","DONNEESMODIFIABLES")="CONFINFO*1;INVTOURNANT*1;RECEPLIVR*0;ImprPLU.txt*0;Pentes.txt*0;INVREF*0;INVNONREF*0;CMDWEB*1;"
+ s ^HWINFO("SCANNER","LISTEFICHIERSAGENERER","DONNEESMODIFIABLES")="CONFINFO*1;INVTOURNANT*1;CMDWEB*1;"
+
+ s ^HWINFO("SCANNER","LISTEEXES")="INVENTAIRE;INVTOURNANT;MEMOIRE;MOBILAUNCHER;MOBIRUN;PRIXVENTE;RECEPLIVR;SUIVIPENTES;SERIALNO;MAGCMDWEB;"
+ s ^HWINFO("SCANNER","LISTEDLLS")="CE;COM;GRF;HF;IMG;MAT;OBJ;PCL;STD;SQL;ETAT;IMG;CPL;BARC;VM;"
+
+ s ^FUSIONEXESCANNER("INVENTAIRE")="Inventaire périodique\imgInventairePerio\imgInventairePerio"
+ s ^FUSIONEXESCANNER("INVTOURNANT")="Inventaire tournant\imgInventaireTournant\imgInventaireTournant"
+ s ^FUSIONEXESCANNER("PRIXVENTE")="Infos Articles\imgPrixVente\imgPrixVente"
+ s ^FUSIONEXESCANNER("RECEPLIVR")="Réception Livraison\imgEnvoiReception\imgEnvoiReception"
+ s ^FUSIONEXESCANNER("SUIVIPENTES")="Suivi des pentes\imgPentes\imgPentes"
+ s ^FUSIONEXESCANNER("MAGCMDWEB")="WEB\imgEnvoiReception\imgEnvoiReception"
+
+ s ^FUSIONMENU(1)	= "Consultations\\imgConsultation\imgConsultation"
+ s ^FUSIONMENU(1,1) = "Article\FenArticle\imgArticle\imgArticle"
+ s ^FUSIONMENU(1,2) = "Fournisseur\FenFournisseur\imgFournisseur\imgFournisseur"
+ s ^FUSIONMENU(1,3) = "Stock\FenConsultationStock\imgStock\imgStock"
+ s ^FUSIONMENU(1,4) = "Mouvement\FenConsultationMouvements\ImgMouvement\ImgMouvement"
+ s ^FUSIONMENU(1,5) = "Suivi des commandes\FenSuiviCmd\imgSuiviCmd\imgSuiviCmd"	
+ s ^FUSIONMENU(1,6) = "Rétrocession\\imgRetrocession\imgRetrocession"
+ s ^FUSIONMENU(1,6,1) = "Magasin\\imgMagasin\imgMagasin"
+ s ^FUSIONMENU(1,6,1,1) = "Envoi\fenHistCMDRetro/Magasin\imgEnvoi\imgEnvoi"
+ s ^FUSIONMENU(1,6,1,2) = "Réception\fenHistRecRetro/Magasin\imgReception\imgReception"
+ s ^FUSIONMENU(1,6,2) = "Centre de Coupe\\imgCentreCoupe\imgCentreCoupe"
+ s ^FUSIONMENU(1,6,2,1) = "Réception\fenHistRecRetro/Coupe\imgReception\imgReception"
+ s ^FUSIONMENU(1,6,3) = "Confection\\imgConfection\imgConfection"
+ s ^FUSIONMENU(1,6,3,1) = "Envoi\fenHistCMDRetro/Confection\imgEnvoi\imgEnvoi"
+ s ^FUSIONMENU(1,6,3,2) = "Réception\fenHistRecRetro/Confection\imgReception\imgReception"
+ s ^FUSIONMENU(1,7) = "Historique articles\fenHistoArt\imgHistoArt\imgHistoArt"
+ s ^FUSIONMENU(1,8) = "Commandes clients\FenSuiviCmdClient\imgCmdClient\imgCmdClient"
+ s ^FUSIONMENU(1,9) = "Vitrine\fenConsultationStockVitrine\imgVitrineDeco\imgVitrineDeco"
+ s ^FUSIONMENU(1,10) = "Commande Web\fenPFSuiviCmdWeb\imgVitrineDeco\imgVitrineDeco" 
+ s ^FUSIONMENU(2) = "Réception & Envoi\\imgEnvoiReception\imgEnvoiReception"
+ s ^FUSIONMENU(2,1) = "Réception Tissus\fenReceptTissus\imgReceptTissus\fenReceptTissus"
+ s ^FUSIONMENU(2,2) = "Réception Mercerie\fenReceptMercerie\imgReceptMercerie\imgReceptMercerie"
+ s ^FUSIONMENU(2,3) = "Correction +\fenTransactionStock/Ajustement/11\imgRecPlus\imgRecPlus"
+ s ^FUSIONMENU(2,4) = "Correction -\fenTransactionStock/Ajustement/12\imgRecMoins\imgRecMoins"
+ s ^FUSIONMENU(2,5) = "Creation rétrocession\\imgCreationRetro\imgCreationRetro"
+ s ^FUSIONMENU(2,5,1) = "Magasin\fenCMDRetro/Magasin\imgMagasin\imgMagasin"
+ s ^FUSIONMENU(2,5,2) = "Confection\fenCMDRetro/Confection\imgConfection\imgConfection"
+ s ^FUSIONMENU(2,6) = "Reception rétrocession\\imgReceptRetro\imgReceptRetro"
+ s ^FUSIONMENU(2,6,1) = "Magasin\fenCMDRetroRec/Magasin\imgMagasin\imgMagasin"
+ s ^FUSIONMENU(2,6,2) = "Centre de coupe\fenCMDRetroRec/Coupe\imgCentreCoupe\imgCentreCoupe"
+ s ^FUSIONMENU(2,6,3) = "Confection\fenCMDRetroRec/Confection\imgConfection\imgConfection"
+ s ^FUSIONMENU(2,7) = "Réception EDI\fenReceptEDI\imgReceptTissus\fenReceptTissus"
+ s ^FUSIONMENU(3)	= "Impression & Coupon\\imgImpressionCoupon\imgImpressionCoupon"
+ s ^FUSIONMENU(3,1) = "Impression Articles\fenImpressionEtiquettes\imgArticle\imgArticle"
+ s ^FUSIONMENU(3,2) = "Impression ILV\fenImpressionILV\imgILV\imgILV" 
+ s ^FUSIONMENU(3,4) = "Impression Inv. tournant\fenConsultationInvtournant\imgInvTournant\imgInvTournant"
+ s ^FUSIONMENU(3,5) = "Impression Catalogue\\imgCatalogue\imgCatalogue"
+ s ^FUSIONMENU(3,5,1) = "Tissus & Voilage\fenImpressionCatalogue/TI\imgTissus\imgTissus"
+ s ^FUSIONMENU(3,5,2) = "LM & PAP\fenImpressionCatalogue/LM\imgLMPAP\imgLMPAP"
+ s ^FUSIONMENU(3,5,3) = "Mercerie\fenImpressionCatalogue/ME\imgMercerie\imgMercerie"
+ s ^FUSIONMENU(3,6) = "Création Coupons\fenTransactionStock/Coupon\imgCoupon\imgCoupon"
+ s ^FUSIONMENU(4) = "Vitrine & Déco\\imgVitrineDeco\imgVitrineDeco"
+ s ^FUSIONMENU(4,1) = "Création & Modification\fenCreationVitrine\imgVitrineCrea\imgVitrineCrea"
+ s ^FUSIONMENU(4,2) = "Consultations\fenConsultationStockVitrine\imgVitrineConsult\imgVitrineConsult"
+ s ^FUSIONMENU(4,3) = "Mise au rebut\fenTransactionStock/Démarque/22\imgRebut\imgRebut"
+ s ^FUSIONMENU(5)	= "Pentes & ILV\\imgPentes\imgPentes"
+ s ^FUSIONMENU(5,1) = "Suivi des pentes\FenSuiviPentes\imgPentes\imgPentes"
+ s ^FUSIONMENU(5,2) = "Impression ILV\fenImpressionILV\imgILV\imgILV"
+ s ^FUSIONMENU(6)	= "Inventaires\\imgInventaire\imgInventaire"
+ s ^FUSIONMENU(6,1) = "Tournant\\imgInventaireTournant\imgInventaireTournant"
+ s ^FUSIONMENU(6,1,1) = "Consultation\fenConsultationInvTournant\ImgConsultInv\ImgConsultInv"
+ s ^FUSIONMENU(6,1,2) = "Validation\fenValidationInvTournant\imgInventaireTournant\imgInventaireTournant"
+ s ^FUSIONMENU(6,1,3) = "Correction +\fenTransactionStock/Ajustement/33\imgRecPlus\imgRecPlus"
+ s ^FUSIONMENU(6,1,4) = "Correction -\fenTransactionStock/Ajustement/34\imgRecMoins\imgRecMoins"
+ s ^FUSIONMENU(6,2) = "Périodique\\imgInventairePerio\imgInventairePerio"
+ s ^FUSIONMENU(6,2,1) = "Impression Zone\fenInventaireZone\imgInvZone\imgInvZone"
+ s ^FUSIONMENU(6,2,2) = "Saisie Inventaire\fenInventaireSaisie\imgInvSaisie\imgInvSaisie"
+ s ^FUSIONMENU(6,2,3) = "Synthèse Inventaire\fenInventaireSynth\imgInvSynth\imgInvSynth"
+ s ^FUSIONMENU(6,2,4) = "Contrôle des écarts\fenInventaireEcart\imgInvEcart\imgInvEcart"
+ s ^FUSIONMENU(6,2,5) = "Impression Cut-off\fenInventaireCutOff\imgInvCutOff\imgInvCutOff"
+ s ^FUSIONMENU(6,2,6) = "Correction +\fenTransactionStock/Ajustement/31\ImgInvPlus\ImgInvPlus"
+ s ^FUSIONMENU(6,2,7) = "Correction -\fenTransactionStock/Ajustement/32\imgInvMoins\imgInvMoins"
+ s ^FUSIONMENU(7) = "Scanner\FenGestionScanner\imgScanner\imgScanner"
+ s ^FUSIONMENU(8) = "PLUs & Emplacements\fenEmplacements\imgPLUEmp\imgPLUEmp"
+ s ^FUSIONMENU(9) = "Démarque\\imgDemarque\imgDemarque"
+ s ^FUSIONMENU(9,1) = "Casse & Détérioration\fenTransactionStock/Démarque/23\imgDeterioration\imgDeterioration"
+ s ^FUSIONMENU(9,2) = "Défaut\fenTransactionStock/Démarque/25\imgDefaut\imgDefaut"
+ s ^FUSIONMENU(9,3) = "Erreur confection\fenTransactionStock/Démarque/28\imgErreurConf\imgErreurConf"
+ s ^FUSIONMENU(9,4) = "Retour Fournisseur\fenTransactionStock/Démarque/17\imgRetourFour\imgRetourFour"
+ s ^FUSIONMENU(9,5)= "Sinistre\fenTransactionStock/Démarque/26\imgSinistre\imgSinistre"
+ s ^FUSIONMENU(10)="Commandes Web\\imgCmdWeb\imgCmdWeb"
+ s ^FUSIONMENU(10,1)="Suivi des commandes Web\fenPFSuiviCmdWeb\imgCmdWeb\imgCmdWeb"
+ s ^FUSIONMENU(10,2)="Retour des commandes Web\fenWebRetour\ImgCmdWebRetour\ImgCmdWebRetour"
+ s ^FUSIONMENU(99)	= "Paramétrage\\imgParametres\imgParametres"
+ s ^FUSIONMENU(99,1) = "Utilisateurs\fenGestionUti\ImgUtilisateur\ImgUtilisateur"
+ s ^FUSIONMENU(99,2) = "Application\fenParametres\imgParametres\imgParametres"
+
+ s ^GUMVTTYPE(17) = "5\-1\1\Retour fournisseur" //Permet d'inclure le retour fournisseur dans la démarque.
+
+ //Liste des favoris
+ //Cap Cash Serveur
+ s ^FUSIONFAVORIS(1)="Mes documents\MesDocuments\imgMesDocuments\imgMesDocuments"
+ s ^FUSIONFAVORIS(2)="Gardons le fil\Firefox*http://srvblog.mondialtissus.local/\imgGardonsFil\imgGardonsFil"
+ s ^FUSIONFAVORIS(3)="WebMail\Firefox*https://mailhost.mondialtissus.com/owa/\imgWebMail\imgWebMail"
+ s ^FUSIONFAVORIS(4)="Site Mondial Tissus\Firefox*http://www.mondialtissus.com/\imgMondialTissus\imgMondialTissus"
+ s ^FUSIONFAVORIS(5)="Confection\Firefox*https://confection-sur-mesure-mondialtissus.com/login\imgConfection\imgConfection"
+ s ^FUSIONFAVORIS(6)="Wimo\Firefox*http://srvintranet.mondialtissus.local/Magasins\imgWimo\imgWimo"
+ s ^FUSIONFAVORIS(7)="Fourniture Fiducial\Firefox*http://www.fos.com/index.aspx?NODE_REF=accueil-fos\imgFourniture\imgFourniture"
+ s ^FUSIONFAVORIS(8)="RHAPSODI\Firefox*https://hr-services.fr.adp.com/portal-main/portal/\imgFourniture\imgFourniture"
+ s ^FUSIONFAVORIS(9)="CapManagement\Firefox*http://10.10.1.19/cashmanagement/\imgFourniture\imgFourniture" 
+
+q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

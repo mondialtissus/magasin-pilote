@@ -1,0 +1,98 @@
+ROUTINE OPESTORES2011
+OPESTORES2011
+ 
+ 	  // -30% au passage en caisse SUR SCAN CB 9990000000876
+ 
+		S ^TKCOUPREDUC(9990000000876)="0\0.30\20110801\20110930\"			
+ 
+	
+                s ^TKSTORE0811(81395)="PAP060S/COPA/NATUREL"                            
+	        s ^TKSTORE0811(81396)="PAP060S/CABANA/ECRU"                             
+	        s ^TKSTORE0811(81397)="PAP060S/CUBA/ECRU"                               
+	        s ^TKSTORE0811(81398)="PAP060S/COLIOURE/ECRU"                           
+	        s ^TKSTORE0811(81399)="PAP060S/CAPRI/LIN"                               
+	        s ^TKSTORE0811(81400)="PAP060S/CREPUSCULE/NOIR"                         
+	        s ^TKSTORE0811(81401)="PAP060S/CREPUSCULE/BLANC"                                
+	        s ^TKSTORE0811(81402)="PAP060S/CREPUSCULE/CHOCOLAT"                             
+	        s ^TKSTORE0811(81403)="PAP090S/CREPUSCULE/CHOCOLAT"                             
+	        s ^TKSTORE0811(81405)="PAP090S/CREPUSCULE/BLANC"                                
+	        s ^TKSTORE0811(81406)="PAP090S/CREPUSCULE/NOIR"                         
+	        s ^TKSTORE0811(81407)="PAP090S/CAPRI/LIN"                               
+	        s ^TKSTORE0811(81408)="PAP090S/COLIOURE/ECRU"                           
+	        s ^TKSTORE0811(81409)="PAP090S/CUBA/ECRU"                               
+	        s ^TKSTORE0811(81410)="PAP090S/CABANA/ECRU"                             
+	        s ^TKSTORE0811(81411)="PAP090S/COPA/NATUREL"                            
+	        s ^TKSTORE0811(81412)="PAP120S/COPA/NATUREL"                            
+	        s ^TKSTORE0811(81413)="PAP120S/CABANA/ECRU"                             
+	        s ^TKSTORE0811(81414)="PAP120S/CUBA/ECRU"                               
+	        s ^TKSTORE0811(81416)="PAP120S/COLIOURE/ECRU"                           
+	        s ^TKSTORE0811(81418)="PAP120S/CAPRI/LIN"                               
+	        s ^TKSTORE0811(81419)="PAP120S/CREPUSCULE/NOIR"                         
+	        s ^TKSTORE0811(81420)="PAP120S/CREPUSCULE/BLANC"                                
+	        s ^TKSTORE0811(81422)="PAP120S/CREPUSCULE/CHOCOLAT"      
+	        s ^TKSTORE0811(81378)="PAP120S/STOREBOIS/CHENE"
+		s ^TKSTORE0811(81379)="PAP120S/STOREBOIS/PALISSAN"
+		s ^TKSTORE0811(81380)="PAP120S/STOREBOIS/PIN"
+		s ^TKSTORE0811(81383)="PAP090S/STOREBOIS/PIN"
+		s ^TKSTORE0811(81384)="PAP090S/STOREBOIS/PALISSAN"
+		s ^TKSTORE0811(81385)="PAP090S/STOREBOIS/CHENE"
+		s ^TKSTORE0811(81386)="PAP060S/STOREBOIS/CHENE"
+		s ^TKSTORE0811(81387)="PAP060S/STOREBOIS/PALISSAN"
+		s ^TKSTORE0811(81388)="PAP060S/STOREBOIS/PIN"
+		s ^TKSTORE0811(81389)="PAP120S/STOREALU/BLANC"
+		s ^TKSTORE0811(81390)="PAP120S/STOREALU/ALU"
+		s ^TKSTORE0811(81391)="PAP090S/STOREALU/ALU"
+		s ^TKSTORE0811(81392)="PAP090S/STOREALU/BLANC"
+		s ^TKSTORE0811(81393)="PAP060S/STOREALU/BLANC"
+		s ^TKSTORE0811(81394)="PAP060S/STOREALU/ALU"
+                       
+ 
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

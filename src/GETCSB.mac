@@ -1,0 +1,30 @@
+ROUTINE GETCSB
+GETCSB
+	S MAG = $G(^HWINFO("MAG"))
+	S CB=$O(^CSB(""))
+ 	while CB'=""
+ 	{
+ 	 	s ARTICLE=$O(^CSB(CB,""))
+ 	 	while ARTICLE'=""
+ 		{
+	 	 	S ^MODROUTINE(MAG,"GETCSB",CB,ARTICLE)=""
+	 	 	
+	 		s ARTICLE=$O(^CSB(CB,ARTICLE))
+	 	}
+	 	s CB=$O(^CSB(CB))
+ 	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,36 @@
+ROUTINE RestRou
+RestRou(sPath,sFileName)
+         ;sPath est le répertoire (avec \ à la fin)
+         ;sFileName est le nom de la routine sans extension (par défaut elle prend .mac dans le code
+    ;S sPath="C:\Temp\"
+     
+    W !,"Restoring ->"_sPath_sFileName
+     
+    if ##class(%Library.File).Exists(sPath_sFileName_".rsa") {
+      
+      s file=##class(%Library.File).%New(sPath_sFileName_".rsa")
+      d file.Open("R")
+      S iSize=file.SizeGet()
+      s routine=##class(%Library.Routine).%New(sFileName_".mac")
+      F i=1:1:iSize  {
+   
+        S iCar=file.Read(1)
+        //W !,iCar,i
+     
+        I +$A(iCar)=-1 {
+        //W !,"CR"
+          D routine.Write($C(13)_$C(10))
+        }  
+        else {
+          D routine.Write(iCar)
+        }
+      }
+      D routine.Save()
+      D routine.Compile()
+      D file.%Close()
+      D routine.%Close()
+   }
+    else
+   {
+     W !,"Error : couldn't access"_sPath_sFileName_".rsa"        
+   }  

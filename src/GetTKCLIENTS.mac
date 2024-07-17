@@ -1,0 +1,6 @@
+ROUTINE GetTKCLIENTS
+GetTKCLIENTS
+ s FIC="c:\pos\transfert\M341TKCLIENTS.txt" s CPT=0 s filedest=##class(%File).%New(FIC) d filedest.Open("WSN") s NODE1=$O(^TKCLIENTS("")) WHILE NODE1'="" {  s CPT=CPT+1 d filedest.WriteLine(NODE1_"$"_^TKCLIENTS(NODE1)) s NODE1=$O(^TKCLIENTS(NODE1)) } d filedest.%Close() s filefin=##class(%File).%New("C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\Fini.txt") d filefin.Open("WSN") d filefin.WriteLine("OK") d filefin.%Close() Q
+ 
+ 
+ 

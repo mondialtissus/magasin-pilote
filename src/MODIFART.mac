@@ -1,0 +1,24 @@
+ROUTINE MODIFART
+MODIFART
+	s ART="VO150VO/LIBELLULEJAUNE/JAUNFUSC"
+	s REC=$G(^ST(ART))
+	s PX=$P(REC,"\",22)
+	s $P(PX,"/",2)=60205
+	s $P(REC,"\",22)=PX
+	s ^ST(ART)=REC
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

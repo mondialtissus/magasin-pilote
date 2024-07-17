@@ -1,0 +1,2083 @@
+ROUTINE Ope2017052910213177
+Ope2017052910213177
+ k ^TKFINSERIE
+ s ^TKFINSERIE(129376)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129379)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129384)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129382)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129006)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129007)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129394)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129393)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129390)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129391)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129454)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129457)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129456)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129455)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129461)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129460)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129459)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129458)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129082)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129083)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129090)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129089)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129092)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129091)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129356)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129355)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129354)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129347)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129346)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129349)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129348)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129352)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129345)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129344)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129353)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129351)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129350)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129358)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129357)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129363)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129360)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129359)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129361)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129362)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129438)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129437)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129436)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129308)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129311)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129310)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129305)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129306)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129307)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129248)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129309)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129299)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129298)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129301)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129302)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129304)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129303)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129300)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129296)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129291)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129295)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129289)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129290)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129281)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129258)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129297)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129292)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129293)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129288)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129280)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129259)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129282)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129283)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129260)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129287)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129294)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129342)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129340)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129341)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129343)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129451)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129440)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129441)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129443)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129442)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129446)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129448)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129447)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129444)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129445)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129253)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129255)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129249)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129245)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129247)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129244)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129252)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129251)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129254)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129246)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129250)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129239)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129242)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129241)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129243)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129240)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129236)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129164)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129165)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129235)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129187)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129183)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129182)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129237)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129185)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129238)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129167)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129189)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129186)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129176)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129188)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129184)="OP -50% sur 2eme"
+ s ^TKFINSERIE(113614)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122125)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122368)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122367)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87397)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87396)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87395)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87394)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102549)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102548)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87393)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87392)="OP -50% sur 2eme"
+ s ^TKFINSERIE(112790)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117909)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120524)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120522)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120523)="OP -50% sur 2eme"
+ s ^TKFINSERIE(113618)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120521)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120520)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120519)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117910)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122124)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122123)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122122)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105148)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105147)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129055)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129056)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129044)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129045)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127970)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127969)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127968)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127967)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127971)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127966)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128988)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128990)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128992)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128987)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128989)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128991)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74601)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74603)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74604)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85593)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117864)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117865)="OP -50% sur 2eme"
+ s ^TKFINSERIE(8758)="OP -50% sur 2eme"
+ s ^TKFINSERIE(8755)="OP -50% sur 2eme"
+ s ^TKFINSERIE(60601)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105470)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105472)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105471)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119248)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122248)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121272)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121273)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122247)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119249)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122246)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121271)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122243)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122245)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117462)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122244)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117466)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119247)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119931)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119927)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111774)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111776)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111773)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111775)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105494)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79130)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79131)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79132)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100287)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111767)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111766)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105195)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105194)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117597)="OP -50% sur 2eme"
+ s ^TKFINSERIE(113864)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117592)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119252)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121902)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119251)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119250)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119253)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121279)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121278)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121280)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100330)="OP -50% sur 2eme"
+ s ^TKFINSERIE(104497)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111690)="OP -50% sur 2eme"
+ s ^TKFINSERIE(84242)="OP -50% sur 2eme"
+ s ^TKFINSERIE(84643)="OP -50% sur 2eme"
+ s ^TKFINSERIE(84247)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100400)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100401)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100402)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100403)="OP -50% sur 2eme"
+ s ^TKFINSERIE(106610)="OP -50% sur 2eme"
+ s ^TKFINSERIE(106598)="OP -50% sur 2eme"
+ s ^TKFINSERIE(106618)="OP -50% sur 2eme"
+ s ^TKFINSERIE(115039)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103283)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85909)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85616)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85618)="OP -50% sur 2eme"
+ s ^TKFINSERIE(77212)="OP -50% sur 2eme"
+ s ^TKFINSERIE(77215)="OP -50% sur 2eme"
+ s ^TKFINSERIE(77211)="OP -50% sur 2eme"
+ s ^TKFINSERIE(67391)="OP -50% sur 2eme"
+ s ^TKFINSERIE(67394)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128982)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128977)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128978)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128986)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128983)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128985)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128979)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128981)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126464)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122128)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122129)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122130)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126474)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126479)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126478)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122131)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119260)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121900)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119261)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121275)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121277)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121899)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119254)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119255)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119256)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119257)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121276)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121901)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121898)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121897)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119258)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121274)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119259)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111808)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111648)="OP -50% sur 2eme"
+ s ^TKFINSERIE(112046)="OP -50% sur 2eme"
+ s ^TKFINSERIE(112045)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111645)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111644)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111647)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111643)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111642)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111646)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105166)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111677)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111680)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111678)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111679)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111681)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129058)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127958)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127952)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127961)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127960)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127957)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127953)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127959)="OP -50% sur 2eme"
+ s ^TKFINSERIE(127956)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74517)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74514)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74520)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74623)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74617)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74621)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74536)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87372)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74538)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87373)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74540)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74620)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87374)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74537)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74624)="OP -50% sur 2eme"
+ s ^TKFINSERIE(63966)="OP -50% sur 2eme"
+ s ^TKFINSERIE(40141)="OP -50% sur 2eme"
+ s ^TKFINSERIE(80810)="OP -50% sur 2eme"
+ s ^TKFINSERIE(80812)="OP -50% sur 2eme"
+ s ^TKFINSERIE(80814)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82739)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101765)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101764)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105415)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101762)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105414)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105412)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105413)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105480)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121863)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121862)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119266)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121861)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122249)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122250)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119268)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122251)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121860)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119270)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119265)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121859)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119267)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119269)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100367)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87854)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87855)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87857)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87853)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122252)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122253)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122254)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122255)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100363)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110932)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79142)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79141)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79140)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126417)="OP -50% sur 2eme"
+ s ^TKFINSERIE(112334)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79077)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79076)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79081)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79084)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79078)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79125)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79128)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79129)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105503)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100331)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100332)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105479)="OP -50% sur 2eme"
+ s ^TKFINSERIE(112325)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105495)="OP -50% sur 2eme"
+ s ^TKFINSERIE(115040)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101768)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101770)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101767)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101769)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101766)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101760)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101758)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101759)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103248)="OP -50% sur 2eme"
+ s ^TKFINSERIE(50695)="OP -50% sur 2eme"
+ s ^TKFINSERIE(40163)="OP -50% sur 2eme"
+ s ^TKFINSERIE(49371)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74516)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74521)="OP -50% sur 2eme"
+ s ^TKFINSERIE(74529)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86122)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86123)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86125)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85097)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85105)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87850)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87852)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85098)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85102)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85100)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85103)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85104)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85101)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85096)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119943)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119942)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126208)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121334)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122380)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122379)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122363)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126212)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126213)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126210)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122366)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122364)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122365)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126211)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126205)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107813)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126209)="OP -50% sur 2eme"
+ s ^TKFINSERIE(112794)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121906)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121332)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119941)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120514)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126206)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122388)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122391)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121905)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122396)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122395)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122394)="OP -50% sur 2eme"
+ s ^TKFINSERIE(70455)="OP -50% sur 2eme"
+ s ^TKFINSERIE(70453)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121198)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119400)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119398)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102253)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119395)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119397)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102251)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102254)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102252)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126204)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122387)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119424)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100447)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102256)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126625)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100450)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126624)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126626)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122393)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119426)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100449)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122392)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119422)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100446)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100441)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102255)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102257)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100442)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100445)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100440)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122385)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122386)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122384)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122381)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122382)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122383)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111689)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100347)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102242)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105505)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120513)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111825)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111826)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111824)="OP -50% sur 2eme"
+ s ^TKFINSERIE(116011)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120509)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100725)="OP -50% sur 2eme"
+ s ^TKFINSERIE(128823)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126413)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126412)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126411)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121200)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122390)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123183)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122121)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123182)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122120)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123180)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123181)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122119)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105441)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122389)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121195)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121331)="OP -50% sur 2eme"
+ s ^TKFINSERIE(118365)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103466)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105163)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126207)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102245)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102244)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102243)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102241)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117711)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117710)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117699)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117700)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120516)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120510)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103296)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121907)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122634)="OP -50% sur 2eme"
+ s ^TKFINSERIE(55584)="OP -50% sur 2eme"
+ s ^TKFINSERIE(55582)="OP -50% sur 2eme"
+ s ^TKFINSERIE(55583)="OP -50% sur 2eme"
+ s ^TKFINSERIE(55580)="OP -50% sur 2eme"
+ s ^TKFINSERIE(55579)="OP -50% sur 2eme"
+ s ^TKFINSERIE(55578)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85027)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85029)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85028)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85030)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85757)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85758)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85761)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85762)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85763)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85764)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85759)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85765)="OP -50% sur 2eme"
+ s ^TKFINSERIE(75978)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78733)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78732)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78718)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78720)="OP -50% sur 2eme"
+ s ^TKFINSERIE(76167)="OP -50% sur 2eme"
+ s ^TKFINSERIE(67432)="OP -50% sur 2eme"
+ s ^TKFINSERIE(67431)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78735)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78738)="OP -50% sur 2eme"
+ s ^TKFINSERIE(75755)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78794)="OP -50% sur 2eme"
+ s ^TKFINSERIE(84219)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78806)="OP -50% sur 2eme"
+ s ^TKFINSERIE(84220)="OP -50% sur 2eme"
+ s ^TKFINSERIE(84221)="OP -50% sur 2eme"
+ s ^TKFINSERIE(84222)="OP -50% sur 2eme"
+ s ^TKFINSERIE(41310)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101183)="OP -50% sur 2eme"
+ s ^TKFINSERIE(43881)="OP -50% sur 2eme"
+ s ^TKFINSERIE(75951)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101181)="OP -50% sur 2eme"
+ s ^TKFINSERIE(44302)="OP -50% sur 2eme"
+ s ^TKFINSERIE(44303)="OP -50% sur 2eme"
+ s ^TKFINSERIE(75952)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101182)="OP -50% sur 2eme"
+ s ^TKFINSERIE(70100)="OP -50% sur 2eme"
+ s ^TKFINSERIE(70101)="OP -50% sur 2eme"
+ s ^TKFINSERIE(55586)="OP -50% sur 2eme"
+ s ^TKFINSERIE(68042)="OP -50% sur 2eme"
+ s ^TKFINSERIE(68045)="OP -50% sur 2eme"
+ s ^TKFINSERIE(68041)="OP -50% sur 2eme"
+ s ^TKFINSERIE(68043)="OP -50% sur 2eme"
+ s ^TKFINSERIE(75993)="OP -50% sur 2eme"
+ s ^TKFINSERIE(53511)="OP -50% sur 2eme"
+ s ^TKFINSERIE(8653)="OP -50% sur 2eme"
+ s ^TKFINSERIE(55282)="OP -50% sur 2eme"
+ s ^TKFINSERIE(8650)="OP -50% sur 2eme"
+ s ^TKFINSERIE(40961)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78421)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78429)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78430)="OP -50% sur 2eme"
+ s ^TKFINSERIE(75968)="OP -50% sur 2eme"
+ s ^TKFINSERIE(67416)="OP -50% sur 2eme"
+ s ^TKFINSERIE(67417)="OP -50% sur 2eme"
+ s ^TKFINSERIE(67418)="OP -50% sur 2eme"
+ s ^TKFINSERIE(76182)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103228)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79162)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101446)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101443)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101444)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101204)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103225)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101445)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101442)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101441)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110566)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110565)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87145)="OP -50% sur 2eme"
+ s ^TKFINSERIE(81045)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79163)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85627)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85626)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105308)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105949)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105369)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105992)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101186)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103079)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101195)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82300)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87383)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101458)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101452)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82268)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82311)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82302)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82301)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87377)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85011)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85012)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85007)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85006)="OP -50% sur 2eme"
+ s ^TKFINSERIE(85014)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82510)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102398)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102406)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102402)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102403)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102401)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102405)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103080)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103085)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87156)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82460)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101448)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82448)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82438)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101208)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82458)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86515)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86510)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86516)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86513)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86512)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82456)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82457)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101189)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101190)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110568)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103250)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103252)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103251)="OP -50% sur 2eme"
+ s ^TKFINSERIE(115047)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110938)="OP -50% sur 2eme"
+ s ^TKFINSERIE(102551)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111295)="OP -50% sur 2eme"
+ s ^TKFINSERIE(130959)="OP -50% sur 2eme"
+ s ^TKFINSERIE(130958)="OP -50% sur 2eme"
+ s ^TKFINSERIE(130062)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117593)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117594)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117595)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117602)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117961)="OP -50% sur 2eme"
+ s ^TKFINSERIE(130475)="OP -50% sur 2eme"
+ s ^TKFINSERIE(130063)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117888)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123083)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123084)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123085)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123086)="OP -50% sur 2eme"
+ s ^TKFINSERIE(130061)="OP -50% sur 2eme"
+ s ^TKFINSERIE(130060)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123167)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123166)="OP -50% sur 2eme"
+ s ^TKFINSERIE(130064)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129312)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129042)="OP -50% sur 2eme"
+ s ^TKFINSERIE(129048)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117607)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107762)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107763)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107757)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107753)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107754)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107752)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107759)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107758)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107756)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107755)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126477)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126476)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126469)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126475)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126465)="OP -50% sur 2eme"
+ s ^TKFINSERIE(126463)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122608)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105186)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105187)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120665)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120664)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120663)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105127)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105128)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105259)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120666)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120667)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120668)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123494)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123495)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123497)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123498)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122740)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122741)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122742)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122766)="OP -50% sur 2eme"
+ s ^TKFINSERIE(106675)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121983)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119601)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121249)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121250)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121251)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121247)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121248)="OP -50% sur 2eme"
+ s ^TKFINSERIE(121984)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105184)="OP -50% sur 2eme"
+ s ^TKFINSERIE(125622)="OP -50% sur 2eme"
+ s ^TKFINSERIE(125623)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105155)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120103)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120105)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120104)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119323)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119324)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122328)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119325)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119320)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119321)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119322)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122327)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110845)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110846)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110847)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110848)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110849)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110850)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110860)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110861)="OP -50% sur 2eme"
+ s ^TKFINSERIE(119616)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120102)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87376)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78936)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78940)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78937)="OP -50% sur 2eme"
+ s ^TKFINSERIE(41075)="OP -50% sur 2eme"
+ s ^TKFINSERIE(41076)="OP -50% sur 2eme"
+ s ^TKFINSERIE(41077)="OP -50% sur 2eme"
+ s ^TKFINSERIE(76005)="OP -50% sur 2eme"
+ s ^TKFINSERIE(40966)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78723)="OP -50% sur 2eme"
+ s ^TKFINSERIE(76187)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87141)="OP -50% sur 2eme"
+ s ^TKFINSERIE(76185)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78741)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78547)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78799)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78803)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82296)="OP -50% sur 2eme"
+ s ^TKFINSERIE(76175)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82295)="OP -50% sur 2eme"
+ s ^TKFINSERIE(76190)="OP -50% sur 2eme"
+ s ^TKFINSERIE(75988)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82266)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82267)="OP -50% sur 2eme"
+ s ^TKFINSERIE(40953)="OP -50% sur 2eme"
+ s ^TKFINSERIE(8475)="OP -50% sur 2eme"
+ s ^TKFINSERIE(44016)="OP -50% sur 2eme"
+ s ^TKFINSERIE(44010)="OP -50% sur 2eme"
+ s ^TKFINSERIE(75949)="OP -50% sur 2eme"
+ s ^TKFINSERIE(44009)="OP -50% sur 2eme"
+ s ^TKFINSERIE(75947)="OP -50% sur 2eme"
+ s ^TKFINSERIE(75946)="OP -50% sur 2eme"
+ s ^TKFINSERIE(44012)="OP -50% sur 2eme"
+ s ^TKFINSERIE(62509)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78549)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78550)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78552)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78586)="OP -50% sur 2eme"
+ s ^TKFINSERIE(8387)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78722)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78721)="OP -50% sur 2eme"
+ s ^TKFINSERIE(8397)="OP -50% sur 2eme"
+ s ^TKFINSERIE(78728)="OP -50% sur 2eme"
+ s ^TKFINSERIE(76173)="OP -50% sur 2eme"
+ s ^TKFINSERIE(41081)="OP -50% sur 2eme"
+ s ^TKFINSERIE(41078)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105931)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105952)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105317)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82313)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82315)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101199)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87146)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87151)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103090)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103089)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79159)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101194)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101193)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87163)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87161)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87162)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87160)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87159)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87158)="OP -50% sur 2eme"
+ s ^TKFINSERIE(103088)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82292)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82290)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82293)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101185)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86993)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101184)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87143)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101206)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101207)="OP -50% sur 2eme"
+ s ^TKFINSERIE(83590)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101197)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87148)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101198)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87147)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87149)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101201)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87154)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87152)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100470)="OP -50% sur 2eme"
+ s ^TKFINSERIE(100469)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87382)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87381)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82306)="OP -50% sur 2eme"
+ s ^TKFINSERIE(87380)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101191)="OP -50% sur 2eme"
+ s ^TKFINSERIE(79161)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86994)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86996)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86995)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86991)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86992)="OP -50% sur 2eme"
+ s ^TKFINSERIE(86990)="OP -50% sur 2eme"
+ s ^TKFINSERIE(82297)="OP -50% sur 2eme"
+ s ^TKFINSERIE(101188)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107694)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107691)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107693)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107692)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107684)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107683)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107685)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107686)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107688)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107689)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107690)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107687)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107697)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107696)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107695)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111285)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111286)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111287)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111288)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111289)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111290)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111291)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111292)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111293)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111294)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111296)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111297)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111298)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111299)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111300)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107768)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107770)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107769)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107760)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107761)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120107)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107767)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107765)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107764)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107766)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111466)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111467)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111469)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111468)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111473)="OP -50% sur 2eme"
+ s ^TKFINSERIE(120101)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111475)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111474)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111472)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111470)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111471)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107516)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107518)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123454)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105129)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107513)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107515)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107514)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105132)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105134)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105135)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105136)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105126)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110862)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105125)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105130)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105124)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105138)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105139)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105140)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107520)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117603)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105137)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105133)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107521)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110866)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110859)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110857)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123449)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123451)="OP -50% sur 2eme"
+ s ^TKFINSERIE(123452)="OP -50% sur 2eme"
+ s ^TKFINSERIE(107519)="OP -50% sur 2eme"
+ s ^TKFINSERIE(105131)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110858)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122859)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122864)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122865)="OP -50% sur 2eme"
+ s ^TKFINSERIE(111331)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117604)="OP -50% sur 2eme"
+ s ^TKFINSERIE(117605)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122866)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122867)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122868)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110643)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122433)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110644)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110645)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122453)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110646)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110647)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110648)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122443)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110631)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122426)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110632)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110633)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122446)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110634)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110635)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110636)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122436)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110637)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122428)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110638)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110639)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122448)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110640)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110641)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110642)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122438)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110649)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122430)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110650)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110651)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122450)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110652)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110653)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110654)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122440)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110655)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122427)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110656)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110657)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122447)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110658)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110659)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110660)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122437)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110661)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122431)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110662)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110663)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122451)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110664)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110665)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110666)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122441)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110667)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122432)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110668)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110669)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122452)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110670)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110671)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110672)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122442)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110673)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122424)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110674)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110675)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122444)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110676)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110677)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110678)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122434)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110679)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122970)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110680)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110681)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122971)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110682)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110683)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110684)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122972)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110691)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122425)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110692)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110693)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122445)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110694)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110695)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110696)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122435)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110685)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122429)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110686)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110687)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122449)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110688)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110689)="OP -50% sur 2eme"
+ s ^TKFINSERIE(110690)="OP -50% sur 2eme"
+ s ^TKFINSERIE(122439)="OP -50% sur 2eme"
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

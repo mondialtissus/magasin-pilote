@@ -1,0 +1,1142 @@
+ROUTINE OPE20CONF2013
+OPE20CONF2013	
+	
+	
+	
+ s ^TKFINSERIE(76067)="Conf  -20%"
+ s ^TKFINSERIE(76387)="Conf  -20%"
+ s ^TKFINSERIE(76383)="Conf  -20%"
+ s ^TKFINSERIE(76205)="Conf  -20%"
+ s ^TKFINSERIE(76156)="Conf  -20%"
+ s ^TKFINSERIE(76107)="Conf  -20%"
+ s ^TKFINSERIE(76056)="Conf  -20%"
+ s ^TKFINSERIE(76392)="Conf  -20%"
+ s ^TKFINSERIE(76055)="Conf  -20%"
+ s ^TKFINSERIE(76046)="Conf  -20%"
+ s ^TKFINSERIE(76045)="Conf  -20%"
+ s ^TKFINSERIE(76044)="Conf  -20%"
+ s ^TKFINSERIE(76039)="Conf  -20%"
+ s ^TKFINSERIE(76030)="Conf  -20%"
+ s ^TKFINSERIE(76389)="Conf  -20%"
+ s ^TKFINSERIE(76397)="Conf  -20%"
+ s ^TKFINSERIE(76024)="Conf  -20%"
+ s ^TKFINSERIE(76398)="Conf  -20%"
+ s ^TKFINSERIE(79625)="Conf  -20%"
+ s ^TKFINSERIE(79452)="Conf  -20%"
+ s ^TKFINSERIE(79449)="Conf  -20%"
+ s ^TKFINSERIE(79445)="Conf  -20%"
+ s ^TKFINSERIE(79442)="Conf  -20%"
+ s ^TKFINSERIE(79363)="Conf  -20%"
+ s ^TKFINSERIE(79362)="Conf  -20%"
+ s ^TKFINSERIE(79360)="Conf  -20%"
+ s ^TKFINSERIE(76400)="Conf  -20%"
+ s ^TKFINSERIE(76432)="Conf  -20%"
+ s ^TKFINSERIE(76435)="Conf  -20%"
+ s ^TKFINSERIE(76449)="Conf  -20%"
+ s ^TKFINSERIE(78647)="Conf  -20%"
+ s ^TKFINSERIE(79349)="Conf  -20%"
+ s ^TKFINSERIE(76027)="Conf  -20%"
+ s ^TKFINSERIE(76023)="Conf  -20%"
+ s ^TKFINSERIE(106837)="Conf  -20%"
+ s ^TKFINSERIE(76022)="Conf  -20%"
+ s ^TKFINSERIE(74810)="Conf  -20%"
+ s ^TKFINSERIE(74809)="Conf  -20%"
+ s ^TKFINSERIE(74807)="Conf  -20%"
+ s ^TKFINSERIE(73120)="Conf  -20%"
+ s ^TKFINSERIE(73119)="Conf  -20%"
+ s ^TKFINSERIE(68703)="Conf  -20%"
+ s ^TKFINSERIE(67826)="Conf  -20%"
+ s ^TKFINSERIE(67812)="Conf  -20%"
+ s ^TKFINSERIE(64716)="Conf  -20%"
+ s ^TKFINSERIE(65767)="Conf  -20%"
+ s ^TKFINSERIE(65771)="Conf  -20%"
+ s ^TKFINSERIE(67589)="Conf  -20%"
+ s ^TKFINSERIE(67591)="Conf  -20%"
+ s ^TKFINSERIE(67808)="Conf  -20%"
+ s ^TKFINSERIE(74812)="Conf  -20%"
+ s ^TKFINSERIE(74813)="Conf  -20%"
+ s ^TKFINSERIE(75584)="Conf  -20%"
+ s ^TKFINSERIE(75595)="Conf  -20%"
+ s ^TKFINSERIE(75592)="Conf  -20%"
+ s ^TKFINSERIE(75591)="Conf  -20%"
+ s ^TKFINSERIE(75589)="Conf  -20%"
+ s ^TKFINSERIE(75586)="Conf  -20%"
+ s ^TKFINSERIE(75585)="Conf  -20%"
+ s ^TKFINSERIE(75542)="Conf  -20%"
+ s ^TKFINSERIE(74815)="Conf  -20%"
+ s ^TKFINSERIE(75535)="Conf  -20%"
+ s ^TKFINSERIE(74816)="Conf  -20%"
+ s ^TKFINSERIE(75096)="Conf  -20%"
+ s ^TKFINSERIE(75097)="Conf  -20%"
+ s ^TKFINSERIE(75098)="Conf  -20%"
+ s ^TKFINSERIE(75533)="Conf  -20%"
+ s ^TKFINSERIE(75534)="Conf  -20%"
+ s ^TKFINSERIE(79626)="Conf  -20%"
+ s ^TKFINSERIE(79633)="Conf  -20%"
+ s ^TKFINSERIE(79676)="Conf  -20%"
+ s ^TKFINSERIE(81525)="Conf  -20%"
+ s ^TKFINSERIE(81520)="Conf  -20%"
+ s ^TKFINSERIE(81517)="Conf  -20%"
+ s ^TKFINSERIE(81493)="Conf  -20%"
+ s ^TKFINSERIE(80975)="Conf  -20%"
+ s ^TKFINSERIE(80974)="Conf  -20%"
+ s ^TKFINSERIE(80035)="Conf  -20%"
+ s ^TKFINSERIE(79986)="Conf  -20%"
+ s ^TKFINSERIE(79957)="Conf  -20%"
+ s ^TKFINSERIE(79963)="Conf  -20%"
+ s ^TKFINSERIE(79964)="Conf  -20%"
+ s ^TKFINSERIE(79965)="Conf  -20%"
+ s ^TKFINSERIE(79967)="Conf  -20%"
+ s ^TKFINSERIE(79984)="Conf  -20%"
+ s ^TKFINSERIE(81526)="Conf  -20%"
+ s ^TKFINSERIE(81527)="Conf  -20%"
+ s ^TKFINSERIE(82517)="Conf  -20%"
+ s ^TKFINSERIE(83696)="Conf  -20%"
+ s ^TKFINSERIE(82868)="Conf  -20%"
+ s ^TKFINSERIE(82867)="Conf  -20%"
+ s ^TKFINSERIE(82866)="Conf  -20%"
+ s ^TKFINSERIE(82865)="Conf  -20%"
+ s ^TKFINSERIE(82864)="Conf  -20%"
+ s ^TKFINSERIE(81555)="Conf  -20%"
+ s ^TKFINSERIE(81528)="Conf  -20%"
+ s ^TKFINSERIE(81552)="Conf  -20%"
+ s ^TKFINSERIE(81529)="Conf  -20%"
+ s ^TKFINSERIE(81530)="Conf  -20%"
+ s ^TKFINSERIE(81531)="Conf  -20%"
+ s ^TKFINSERIE(81532)="Conf  -20%"
+ s ^TKFINSERIE(81533)="Conf  -20%"
+ s ^TKFINSERIE(81549)="Conf  -20%"
+ s ^TKFINSERIE(79946)="Conf  -20%"
+ s ^TKFINSERIE(79931)="Conf  -20%"
+ s ^TKFINSERIE(79780)="Conf  -20%"
+ s ^TKFINSERIE(79763)="Conf  -20%"
+ s ^TKFINSERIE(79735)="Conf  -20%"
+ s ^TKFINSERIE(79734)="Conf  -20%"
+ s ^TKFINSERIE(79723)="Conf  -20%"
+ s ^TKFINSERIE(79722)="Conf  -20%"
+ s ^TKFINSERIE(79721)="Conf  -20%"
+ s ^TKFINSERIE(79697)="Conf  -20%"
+ s ^TKFINSERIE(79696)="Conf  -20%"
+ s ^TKFINSERIE(79677)="Conf  -20%"
+ s ^TKFINSERIE(79680)="Conf  -20%"
+ s ^TKFINSERIE(79692)="Conf  -20%"
+ s ^TKFINSERIE(79693)="Conf  -20%"
+ s ^TKFINSERIE(79694)="Conf  -20%"
+ s ^TKFINSERIE(79695)="Conf  -20%"
+ s ^TKFINSERIE(79766)="Conf  -20%"
+ s ^TKFINSERIE(79782)="Conf  -20%"
+ s ^TKFINSERIE(79930)="Conf  -20%"
+ s ^TKFINSERIE(79913)="Conf  -20%"
+ s ^TKFINSERIE(79923)="Conf  -20%"
+ s ^TKFINSERIE(79922)="Conf  -20%"
+ s ^TKFINSERIE(79921)="Conf  -20%"
+ s ^TKFINSERIE(79918)="Conf  -20%"
+ s ^TKFINSERIE(79917)="Conf  -20%"
+ s ^TKFINSERIE(79914)="Conf  -20%"
+ s ^TKFINSERIE(79910)="Conf  -20%"
+ s ^TKFINSERIE(79784)="Conf  -20%"
+ s ^TKFINSERIE(79869)="Conf  -20%"
+ s ^TKFINSERIE(79790)="Conf  -20%"
+ s ^TKFINSERIE(79852)="Conf  -20%"
+ s ^TKFINSERIE(79865)="Conf  -20%"
+ s ^TKFINSERIE(79866)="Conf  -20%"
+ s ^TKFINSERIE(79867)="Conf  -20%"
+ s ^TKFINSERIE(79868)="Conf  -20%"
+ s ^TKFINSERIE(64715)="Conf  -20%"
+ s ^TKFINSERIE(64507)="Conf  -20%"
+ s ^TKFINSERIE(8329)="Conf  -20%"
+ s ^TKFINSERIE(8363)="Conf  -20%"
+ s ^TKFINSERIE(8360)="Conf  -20%"
+ s ^TKFINSERIE(8332)="Conf  -20%"
+ s ^TKFINSERIE(8331)="Conf  -20%"
+ s ^TKFINSERIE(8330)="Conf  -20%"
+ s ^TKFINSERIE(8068)="Conf  -20%"
+ s ^TKFINSERIE(8533)="Conf  -20%"
+ s ^TKFINSERIE(8067)="Conf  -20%"
+ s ^TKFINSERIE(8066)="Conf  -20%"
+ s ^TKFINSERIE(8065)="Conf  -20%"
+ s ^TKFINSERIE(8007)="Conf  -20%"
+ s ^TKFINSERIE(8006)="Conf  -20%"
+ s ^TKFINSERIE(7792)="Conf  -20%"
+ s ^TKFINSERIE(8532)="Conf  -20%"
+ s ^TKFINSERIE(8608)="Conf  -20%"
+ s ^TKFINSERIE(7788)="Conf  -20%"
+ s ^TKFINSERIE(8820)="Conf  -20%"
+ s ^TKFINSERIE(44684)="Conf  -20%"
+ s ^TKFINSERIE(44683)="Conf  -20%"
+ s ^TKFINSERIE(44682)="Conf  -20%"
+ s ^TKFINSERIE(43325)="Conf  -20%"
+ s ^TKFINSERIE(41670)="Conf  -20%"
+ s ^TKFINSERIE(41669)="Conf  -20%"
+ s ^TKFINSERIE(41668)="Conf  -20%"
+ s ^TKFINSERIE(41667)="Conf  -20%"
+ s ^TKFINSERIE(8821)="Conf  -20%"
+ s ^TKFINSERIE(37506)="Conf  -20%"
+ s ^TKFINSERIE(40119)="Conf  -20%"
+ s ^TKFINSERIE(40120)="Conf  -20%"
+ s ^TKFINSERIE(41539)="Conf  -20%"
+ s ^TKFINSERIE(41663)="Conf  -20%"
+ s ^TKFINSERIE(7789)="Conf  -20%"
+ s ^TKFINSERIE(7386)="Conf  -20%"
+ s ^TKFINSERIE(50627)="Conf  -20%"
+ s ^TKFINSERIE(7384)="Conf  -20%"
+ s ^TKFINSERIE(2250)="Conf  -20%"
+ s ^TKFINSERIE(2246)="Conf  -20%"
+ s ^TKFINSERIE(2230)="Conf  -20%"
+ s ^TKFINSERIE(2228)="Conf  -20%"
+ s ^TKFINSERIE(2226)="Conf  -20%"
+ s ^TKFINSERIE(1811)="Conf  -20%"
+ s ^TKFINSERIE(1810)="Conf  -20%"
+ s ^TKFINSERIE(1500)="Conf  -20%"
+ s ^TKFINSERIE(1057)="Conf  -20%"
+ s ^TKFINSERIE(1060)="Conf  -20%"
+ s ^TKFINSERIE(1061)="Conf  -20%"
+ s ^TKFINSERIE(1064)="Conf  -20%"
+ s ^TKFINSERIE(1071)="Conf  -20%"
+ s ^TKFINSERIE(1078)="Conf  -20%"
+ s ^TKFINSERIE(2280)="Conf  -20%"
+ s ^TKFINSERIE(2342)="Conf  -20%"
+ s ^TKFINSERIE(7085)="Conf  -20%"
+ s ^TKFINSERIE(7383)="Conf  -20%"
+ s ^TKFINSERIE(7382)="Conf  -20%"
+ s ^TKFINSERIE(7230)="Conf  -20%"
+ s ^TKFINSERIE(7175)="Conf  -20%"
+ s ^TKFINSERIE(7174)="Conf  -20%"
+ s ^TKFINSERIE(7086)="Conf  -20%"
+ s ^TKFINSERIE(7081)="Conf  -20%"
+ s ^TKFINSERIE(2345)="Conf  -20%"
+ s ^TKFINSERIE(6435)="Conf  -20%"
+ s ^TKFINSERIE(2350)="Conf  -20%"
+ s ^TKFINSERIE(4965)="Conf  -20%"
+ s ^TKFINSERIE(4967)="Conf  -20%"
+ s ^TKFINSERIE(5006)="Conf  -20%"
+ s ^TKFINSERIE(6350)="Conf  -20%"
+ s ^TKFINSERIE(6352)="Conf  -20%"
+ s ^TKFINSERIE(45556)="Conf  -20%"
+ s ^TKFINSERIE(50629)="Conf  -20%"
+ s ^TKFINSERIE(64493)="Conf  -20%"
+ s ^TKFINSERIE(50630)="Conf  -20%"
+ s ^TKFINSERIE(61886)="Conf  -20%"
+ s ^TKFINSERIE(59986)="Conf  -20%"
+ s ^TKFINSERIE(59985)="Conf  -20%"
+ s ^TKFINSERIE(59918)="Conf  -20%"
+ s ^TKFINSERIE(59718)="Conf  -20%"
+ s ^TKFINSERIE(59717)="Conf  -20%"
+ s ^TKFINSERIE(59645)="Conf  -20%"
+ s ^TKFINSERIE(59644)="Conf  -20%"
+ s ^TKFINSERIE(58767)="Conf  -20%"
+ s ^TKFINSERIE(58768)="Conf  -20%"
+ s ^TKFINSERIE(58957)="Conf  -20%"
+ s ^TKFINSERIE(58958)="Conf  -20%"
+ s ^TKFINSERIE(58959)="Conf  -20%"
+ s ^TKFINSERIE(58960)="Conf  -20%"
+ s ^TKFINSERIE(61917)="Conf  -20%"
+ s ^TKFINSERIE(61918)="Conf  -20%"
+ s ^TKFINSERIE(64386)="Conf  -20%"
+ s ^TKFINSERIE(64491)="Conf  -20%"
+ s ^TKFINSERIE(64490)="Conf  -20%"
+ s ^TKFINSERIE(64488)="Conf  -20%"
+ s ^TKFINSERIE(64453)="Conf  -20%"
+ s ^TKFINSERIE(64396)="Conf  -20%"
+ s ^TKFINSERIE(64389)="Conf  -20%"
+ s ^TKFINSERIE(64385)="Conf  -20%"
+ s ^TKFINSERIE(63932)="Conf  -20%"
+ s ^TKFINSERIE(64384)="Conf  -20%"
+ s ^TKFINSERIE(63941)="Conf  -20%"
+ s ^TKFINSERIE(63942)="Conf  -20%"
+ s ^TKFINSERIE(63945)="Conf  -20%"
+ s ^TKFINSERIE(63946)="Conf  -20%"
+ s ^TKFINSERIE(64076)="Conf  -20%"
+ s ^TKFINSERIE(64077)="Conf  -20%"
+ s ^TKFINSERIE(58754)="Conf  -20%"
+ s ^TKFINSERIE(58662)="Conf  -20%"
+ s ^TKFINSERIE(52861)="Conf  -20%"
+ s ^TKFINSERIE(52855)="Conf  -20%"
+ s ^TKFINSERIE(52701)="Conf  -20%"
+ s ^TKFINSERIE(52102)="Conf  -20%"
+ s ^TKFINSERIE(51782)="Conf  -20%"
+ s ^TKFINSERIE(51505)="Conf  -20%"
+ s ^TKFINSERIE(51490)="Conf  -20%"
+ s ^TKFINSERIE(51489)="Conf  -20%"
+ s ^TKFINSERIE(51479)="Conf  -20%"
+ s ^TKFINSERIE(50631)="Conf  -20%"
+ s ^TKFINSERIE(50632)="Conf  -20%"
+ s ^TKFINSERIE(50635)="Conf  -20%"
+ s ^TKFINSERIE(50750)="Conf  -20%"
+ s ^TKFINSERIE(51472)="Conf  -20%"
+ s ^TKFINSERIE(51473)="Conf  -20%"
+ s ^TKFINSERIE(52858)="Conf  -20%"
+ s ^TKFINSERIE(53706)="Conf  -20%"
+ s ^TKFINSERIE(58661)="Conf  -20%"
+ s ^TKFINSERIE(57926)="Conf  -20%"
+ s ^TKFINSERIE(58660)="Conf  -20%"
+ s ^TKFINSERIE(58551)="Conf  -20%"
+ s ^TKFINSERIE(57930)="Conf  -20%"
+ s ^TKFINSERIE(57929)="Conf  -20%"
+ s ^TKFINSERIE(57928)="Conf  -20%"
+ s ^TKFINSERIE(57927)="Conf  -20%"
+ s ^TKFINSERIE(57925)="Conf  -20%"
+ s ^TKFINSERIE(53708)="Conf  -20%"
+ s ^TKFINSERIE(55597)="Conf  -20%"
+ s ^TKFINSERIE(53709)="Conf  -20%"
+ s ^TKFINSERIE(53710)="Conf  -20%"
+ s ^TKFINSERIE(54484)="Conf  -20%"
+ s ^TKFINSERIE(54485)="Conf  -20%"
+ s ^TKFINSERIE(54984)="Conf  -20%"
+ s ^TKFINSERIE(54985)="Conf  -20%"
+ s ^TKFINSERIE(83698)="Conf  -20%"
+ s ^TKFINSERIE(83704)="Conf  -20%"
+ s ^TKFINSERIE(100673)="Conf  -20%"
+ s ^TKFINSERIE(100757)="Conf  -20%"
+ s ^TKFINSERIE(100755)="Conf  -20%"
+ s ^TKFINSERIE(100706)="Conf  -20%"
+ s ^TKFINSERIE(100705)="Conf  -20%"
+ s ^TKFINSERIE(100704)="Conf  -20%"
+ s ^TKFINSERIE(100672)="Conf  -20%"
+ s ^TKFINSERIE(100760)="Conf  -20%"
+ s ^TKFINSERIE(100671)="Conf  -20%"
+ s ^TKFINSERIE(100670)="Conf  -20%"
+ s ^TKFINSERIE(100669)="Conf  -20%"
+ s ^TKFINSERIE(100668)="Conf  -20%"
+ s ^TKFINSERIE(100666)="Conf  -20%"
+ s ^TKFINSERIE(100665)="Conf  -20%"
+ s ^TKFINSERIE(100759)="Conf  -20%"
+ s ^TKFINSERIE(100761)="Conf  -20%"
+ s ^TKFINSERIE(100639)="Conf  -20%"
+ s ^TKFINSERIE(100762)="Conf  -20%"
+ s ^TKFINSERIE(103516)="Conf  -20%"
+ s ^TKFINSERIE(103515)="Conf  -20%"
+ s ^TKFINSERIE(103514)="Conf  -20%"
+ s ^TKFINSERIE(103397)="Conf  -20%"
+ s ^TKFINSERIE(103396)="Conf  -20%"
+ s ^TKFINSERIE(103395)="Conf  -20%"
+ s ^TKFINSERIE(103394)="Conf  -20%"
+ s ^TKFINSERIE(103326)="Conf  -20%"
+ s ^TKFINSERIE(100764)="Conf  -20%"
+ s ^TKFINSERIE(100765)="Conf  -20%"
+ s ^TKFINSERIE(100766)="Conf  -20%"
+ s ^TKFINSERIE(100767)="Conf  -20%"
+ s ^TKFINSERIE(103322)="Conf  -20%"
+ s ^TKFINSERIE(103325)="Conf  -20%"
+ s ^TKFINSERIE(100664)="Conf  -20%"
+ s ^TKFINSERIE(100627)="Conf  -20%"
+ s ^TKFINSERIE(100408)="Conf  -20%"
+ s ^TKFINSERIE(100626)="Conf  -20%"
+ s ^TKFINSERIE(100559)="Conf  -20%"
+ s ^TKFINSERIE(100558)="Conf  -20%"
+ s ^TKFINSERIE(100557)="Conf  -20%"
+ s ^TKFINSERIE(100556)="Conf  -20%"
+ s ^TKFINSERIE(100468)="Conf  -20%"
+ s ^TKFINSERIE(100466)="Conf  -20%"
+ s ^TKFINSERIE(100464)="Conf  -20%"
+ s ^TKFINSERIE(100457)="Conf  -20%"
+ s ^TKFINSERIE(100435)="Conf  -20%"
+ s ^TKFINSERIE(100436)="Conf  -20%"
+ s ^TKFINSERIE(100437)="Conf  -20%"
+ s ^TKFINSERIE(100438)="Conf  -20%"
+ s ^TKFINSERIE(100439)="Conf  -20%"
+ s ^TKFINSERIE(100448)="Conf  -20%"
+ s ^TKFINSERIE(100560)="Conf  -20%"
+ s ^TKFINSERIE(100561)="Conf  -20%"
+ s ^TKFINSERIE(100578)="Conf  -20%"
+ s ^TKFINSERIE(100584)="Conf  -20%"
+ s ^TKFINSERIE(100583)="Conf  -20%"
+ s ^TKFINSERIE(100582)="Conf  -20%"
+ s ^TKFINSERIE(100581)="Conf  -20%"
+ s ^TKFINSERIE(100580)="Conf  -20%"
+ s ^TKFINSERIE(100579)="Conf  -20%"
+ s ^TKFINSERIE(100577)="Conf  -20%"
+ s ^TKFINSERIE(100563)="Conf  -20%"
+ s ^TKFINSERIE(100576)="Conf  -20%"
+ s ^TKFINSERIE(100564)="Conf  -20%"
+ s ^TKFINSERIE(100565)="Conf  -20%"
+ s ^TKFINSERIE(100566)="Conf  -20%"
+ s ^TKFINSERIE(100567)="Conf  -20%"
+ s ^TKFINSERIE(100574)="Conf  -20%"
+ s ^TKFINSERIE(100575)="Conf  -20%"
+ s ^TKFINSERIE(104914)="Conf  -20%"
+ s ^TKFINSERIE(104915)="Conf  -20%"
+ s ^TKFINSERIE(104916)="Conf  -20%"
+ s ^TKFINSERIE(105697)="Conf  -20%"
+ s ^TKFINSERIE(105696)="Conf  -20%"
+ s ^TKFINSERIE(105679)="Conf  -20%"
+ s ^TKFINSERIE(105678)="Conf  -20%"
+ s ^TKFINSERIE(105677)="Conf  -20%"
+ s ^TKFINSERIE(105676)="Conf  -20%"
+ s ^TKFINSERIE(105675)="Conf  -20%"
+ s ^TKFINSERIE(105668)="Conf  -20%"
+ s ^TKFINSERIE(105662)="Conf  -20%"
+ s ^TKFINSERIE(105663)="Conf  -20%"
+ s ^TKFINSERIE(105664)="Conf  -20%"
+ s ^TKFINSERIE(105665)="Conf  -20%"
+ s ^TKFINSERIE(105666)="Conf  -20%"
+ s ^TKFINSERIE(105667)="Conf  -20%"
+ s ^TKFINSERIE(105698)="Conf  -20%"
+ s ^TKFINSERIE(105699)="Conf  -20%"
+ s ^TKFINSERIE(106580)="Conf  -20%"
+ s ^TKFINSERIE(106835)="Conf  -20%"
+ s ^TKFINSERIE(106834)="Conf  -20%"
+ s ^TKFINSERIE(106833)="Conf  -20%"
+ s ^TKFINSERIE(106583)="Conf  -20%"
+ s ^TKFINSERIE(106582)="Conf  -20%"
+ s ^TKFINSERIE(106581)="Conf  -20%"
+ s ^TKFINSERIE(106579)="Conf  -20%"
+ s ^TKFINSERIE(106541)="Conf  -20%"
+ s ^TKFINSERIE(106578)="Conf  -20%"
+ s ^TKFINSERIE(106543)="Conf  -20%"
+ s ^TKFINSERIE(106544)="Conf  -20%"
+ s ^TKFINSERIE(106573)="Conf  -20%"
+ s ^TKFINSERIE(106574)="Conf  -20%"
+ s ^TKFINSERIE(106576)="Conf  -20%"
+ s ^TKFINSERIE(106577)="Conf  -20%"
+ s ^TKFINSERIE(105661)="Conf  -20%"
+ s ^TKFINSERIE(105660)="Conf  -20%"
+ s ^TKFINSERIE(105170)="Conf  -20%"
+ s ^TKFINSERIE(105040)="Conf  -20%"
+ s ^TKFINSERIE(105039)="Conf  -20%"
+ s ^TKFINSERIE(105038)="Conf  -20%"
+ s ^TKFINSERIE(105037)="Conf  -20%"
+ s ^TKFINSERIE(105036)="Conf  -20%"
+ s ^TKFINSERIE(105035)="Conf  -20%"
+ s ^TKFINSERIE(105034)="Conf  -20%"
+ s ^TKFINSERIE(104923)="Conf  -20%"
+ s ^TKFINSERIE(104917)="Conf  -20%"
+ s ^TKFINSERIE(104918)="Conf  -20%"
+ s ^TKFINSERIE(104919)="Conf  -20%"
+ s ^TKFINSERIE(104920)="Conf  -20%"
+ s ^TKFINSERIE(104921)="Conf  -20%"
+ s ^TKFINSERIE(104922)="Conf  -20%"
+ s ^TKFINSERIE(105169)="Conf  -20%"
+ s ^TKFINSERIE(105171)="Conf  -20%"
+ s ^TKFINSERIE(105659)="Conf  -20%"
+ s ^TKFINSERIE(105645)="Conf  -20%"
+ s ^TKFINSERIE(105658)="Conf  -20%"
+ s ^TKFINSERIE(105653)="Conf  -20%"
+ s ^TKFINSERIE(105652)="Conf  -20%"
+ s ^TKFINSERIE(105651)="Conf  -20%"
+ s ^TKFINSERIE(105647)="Conf  -20%"
+ s ^TKFINSERIE(105646)="Conf  -20%"
+ s ^TKFINSERIE(105644)="Conf  -20%"
+ s ^TKFINSERIE(105172)="Conf  -20%"
+ s ^TKFINSERIE(105424)="Conf  -20%"
+ s ^TKFINSERIE(105173)="Conf  -20%"
+ s ^TKFINSERIE(105174)="Conf  -20%"
+ s ^TKFINSERIE(105175)="Conf  -20%"
+ s ^TKFINSERIE(105176)="Conf  -20%"
+ s ^TKFINSERIE(105422)="Conf  -20%"
+ s ^TKFINSERIE(105423)="Conf  -20%"
+ s ^TKFINSERIE(100409)="Conf  -20%"
+ s ^TKFINSERIE(100407)="Conf  -20%"
+ s ^TKFINSERIE(83798)="Conf  -20%"
+ s ^TKFINSERIE(86595)="Conf  -20%"
+ s ^TKFINSERIE(86905)="Conf  -20%"
+ s ^TKFINSERIE(86612)="Conf  -20%"
+ s ^TKFINSERIE(86611)="Conf  -20%"
+ s ^TKFINSERIE(86610)="Conf  -20%"
+ s ^TKFINSERIE(86609)="Conf  -20%"
+ s ^TKFINSERIE(86594)="Conf  -20%"
+ s ^TKFINSERIE(86907)="Conf  -20%"
+ s ^TKFINSERIE(86593)="Conf  -20%"
+ s ^TKFINSERIE(86592)="Conf  -20%"
+ s ^TKFINSERIE(86579)="Conf  -20%"
+ s ^TKFINSERIE(86578)="Conf  -20%"
+ s ^TKFINSERIE(86577)="Conf  -20%"
+ s ^TKFINSERIE(86576)="Conf  -20%"
+ s ^TKFINSERIE(86906)="Conf  -20%"
+ s ^TKFINSERIE(86908)="Conf  -20%"
+ s ^TKFINSERIE(86196)="Conf  -20%"
+ s ^TKFINSERIE(86909)="Conf  -20%"
+ s ^TKFINSERIE(86938)="Conf  -20%"
+ s ^TKFINSERIE(86937)="Conf  -20%"
+ s ^TKFINSERIE(86936)="Conf  -20%"
+ s ^TKFINSERIE(86935)="Conf  -20%"
+ s ^TKFINSERIE(86930)="Conf  -20%"
+ s ^TKFINSERIE(86929)="Conf  -20%"
+ s ^TKFINSERIE(86927)="Conf  -20%"
+ s ^TKFINSERIE(86926)="Conf  -20%"
+ s ^TKFINSERIE(86911)="Conf  -20%"
+ s ^TKFINSERIE(86913)="Conf  -20%"
+ s ^TKFINSERIE(86915)="Conf  -20%"
+ s ^TKFINSERIE(86918)="Conf  -20%"
+ s ^TKFINSERIE(86924)="Conf  -20%"
+ s ^TKFINSERIE(86925)="Conf  -20%"
+ s ^TKFINSERIE(86574)="Conf  -20%"
+ s ^TKFINSERIE(86195)="Conf  -20%"
+ s ^TKFINSERIE(86942)="Conf  -20%"
+ s ^TKFINSERIE(86194)="Conf  -20%"
+ s ^TKFINSERIE(84317)="Conf  -20%"
+ s ^TKFINSERIE(84315)="Conf  -20%"
+ s ^TKFINSERIE(84314)="Conf  -20%"
+ s ^TKFINSERIE(84313)="Conf  -20%"
+ s ^TKFINSERIE(84312)="Conf  -20%"
+ s ^TKFINSERIE(84311)="Conf  -20%"
+ s ^TKFINSERIE(84310)="Conf  -20%"
+ s ^TKFINSERIE(84309)="Conf  -20%"
+ s ^TKFINSERIE(83804)="Conf  -20%"
+ s ^TKFINSERIE(83805)="Conf  -20%"
+ s ^TKFINSERIE(84116)="Conf  -20%"
+ s ^TKFINSERIE(84125)="Conf  -20%"
+ s ^TKFINSERIE(84306)="Conf  -20%"
+ s ^TKFINSERIE(84307)="Conf  -20%"
+ s ^TKFINSERIE(84318)="Conf  -20%"
+ s ^TKFINSERIE(84321)="Conf  -20%"
+ s ^TKFINSERIE(86168)="Conf  -20%"
+ s ^TKFINSERIE(86192)="Conf  -20%"
+ s ^TKFINSERIE(86191)="Conf  -20%"
+ s ^TKFINSERIE(86190)="Conf  -20%"
+ s ^TKFINSERIE(86188)="Conf  -20%"
+ s ^TKFINSERIE(86187)="Conf  -20%"
+ s ^TKFINSERIE(86170)="Conf  -20%"
+ s ^TKFINSERIE(86153)="Conf  -20%"
+ s ^TKFINSERIE(84323)="Conf  -20%"
+ s ^TKFINSERIE(86112)="Conf  -20%"
+ s ^TKFINSERIE(85033)="Conf  -20%"
+ s ^TKFINSERIE(85034)="Conf  -20%"
+ s ^TKFINSERIE(85682)="Conf  -20%"
+ s ^TKFINSERIE(85685)="Conf  -20%"
+ s ^TKFINSERIE(85687)="Conf  -20%"
+ s ^TKFINSERIE(85688)="Conf  -20%"
+ s ^TKFINSERIE(86939)="Conf  -20%"
+ s ^TKFINSERIE(86943)="Conf  -20%"
+ s ^TKFINSERIE(100399)="Conf  -20%"
+ s ^TKFINSERIE(86944)="Conf  -20%"
+ s ^TKFINSERIE(100249)="Conf  -20%"
+ s ^TKFINSERIE(100248)="Conf  -20%"
+ s ^TKFINSERIE(100247)="Conf  -20%"
+ s ^TKFINSERIE(100246)="Conf  -20%"
+ s ^TKFINSERIE(100245)="Conf  -20%"
+ s ^TKFINSERIE(100243)="Conf  -20%"
+ s ^TKFINSERIE(100236)="Conf  -20%"
+ s ^TKFINSERIE(100235)="Conf  -20%"
+ s ^TKFINSERIE(87582)="Conf  -20%"
+ s ^TKFINSERIE(87583)="Conf  -20%"
+ s ^TKFINSERIE(87584)="Conf  -20%"
+ s ^TKFINSERIE(87585)="Conf  -20%"
+ s ^TKFINSERIE(87586)="Conf  -20%"
+ s ^TKFINSERIE(87588)="Conf  -20%"
+ s ^TKFINSERIE(100250)="Conf  -20%"
+ s ^TKFINSERIE(100251)="Conf  -20%"
+ s ^TKFINSERIE(100317)="Conf  -20%"
+ s ^TKFINSERIE(100352)="Conf  -20%"
+ s ^TKFINSERIE(100351)="Conf  -20%"
+ s ^TKFINSERIE(100350)="Conf  -20%"
+ s ^TKFINSERIE(100336)="Conf  -20%"
+ s ^TKFINSERIE(100319)="Conf  -20%"
+ s ^TKFINSERIE(100318)="Conf  -20%"
+ s ^TKFINSERIE(100316)="Conf  -20%"
+ s ^TKFINSERIE(100252)="Conf  -20%"
+ s ^TKFINSERIE(100315)="Conf  -20%"
+ s ^TKFINSERIE(100254)="Conf  -20%"
+ s ^TKFINSERIE(100255)="Conf  -20%"
+ s ^TKFINSERIE(100256)="Conf  -20%"
+ s ^TKFINSERIE(100312)="Conf  -20%"
+ s ^TKFINSERIE(100313)="Conf  -20%"
+ s ^TKFINSERIE(100314)="Conf  -20%"
+ s ^TKFINSERIE(87581)="Conf  -20%"
+ s ^TKFINSERIE(87277)="Conf  -20%"
+ s ^TKFINSERIE(87054)="Conf  -20%"
+ s ^TKFINSERIE(87049)="Conf  -20%"
+ s ^TKFINSERIE(86988)="Conf  -20%"
+ s ^TKFINSERIE(86987)="Conf  -20%"
+ s ^TKFINSERIE(86986)="Conf  -20%"
+ s ^TKFINSERIE(86984)="Conf  -20%"
+ s ^TKFINSERIE(86983)="Conf  -20%"
+ s ^TKFINSERIE(86982)="Conf  -20%"
+ s ^TKFINSERIE(86981)="Conf  -20%"
+ s ^TKFINSERIE(86945)="Conf  -20%"
+ s ^TKFINSERIE(86951)="Conf  -20%"
+ s ^TKFINSERIE(86952)="Conf  -20%"
+ s ^TKFINSERIE(86954)="Conf  -20%"
+ s ^TKFINSERIE(86975)="Conf  -20%"
+ s ^TKFINSERIE(86980)="Conf  -20%"
+ s ^TKFINSERIE(87053)="Conf  -20%"
+ s ^TKFINSERIE(87259)="Conf  -20%"
+ s ^TKFINSERIE(87276)="Conf  -20%"
+ s ^TKFINSERIE(87269)="Conf  -20%"
+ s ^TKFINSERIE(87275)="Conf  -20%"
+ s ^TKFINSERIE(87274)="Conf  -20%"
+ s ^TKFINSERIE(87273)="Conf  -20%"
+ s ^TKFINSERIE(87272)="Conf  -20%"
+ s ^TKFINSERIE(87271)="Conf  -20%"
+ s ^TKFINSERIE(87270)="Conf  -20%"
+ s ^TKFINSERIE(87268)="Conf  -20%"
+ s ^TKFINSERIE(87260)="Conf  -20%"
+ s ^TKFINSERIE(87267)="Conf  -20%"
+ s ^TKFINSERIE(87261)="Conf  -20%"
+ s ^TKFINSERIE(87262)="Conf  -20%"
+ s ^TKFINSERIE(87263)="Conf  -20%"
+ s ^TKFINSERIE(87264)="Conf  -20%"
+ s ^TKFINSERIE(87265)="Conf  -20%"
+ s ^TKFINSERIE(87266)="Conf  -20%"
+ s ^TKFINSERIE(1047)="Conf  -20%"
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

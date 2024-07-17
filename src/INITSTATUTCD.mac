@@ -1,0 +1,26 @@
+ROUTINE INITSTATUTCD
+INITSTATUTCD
+ 
+ s ^BCISTATUT(0) = "Attente Transmission" 
+ s ^BCISTATUT(1) = "En Préparation" 
+ s ^BCISTATUT(2) = "Attente Appro" 
+ s ^BCISTATUT(3) = "En Picking" 
+ s ^BCISTATUT(4) = "En Coupe" 
+ s ^BCISTATUT(5) = "Emballé" 
+ s ^BCISTATUT(6) = "En Distribution" 
+ s ^BCISTATUT(7) = "Expédié" 
+ s ^BCISTATUT(8) = "Clôturé" 
+ s ^BCISTATUT(99) = "Annulé" 
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

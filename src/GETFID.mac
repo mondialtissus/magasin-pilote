@@ -1,0 +1,60 @@
+ROUTINE GETFID
+GETFID
+ 
+ s gPOS=$G(^HWINFO("MAG"))
+ s CA=$O(^TKFIDELITE(""))
+ while CA'=""
+ {
+         s DATE=$O(^TKFIDELITE(CA,""))
+         while DATE'=""
+         {       
+                 s LASTREC=$G(^MODROUTINE(gPOS,"TKFIDELITE",DATE))
+                 s LASTTOT=$P(LASTREC,"\",1)
+                 s LASTQTE=$P(LASTREC,"\",2)
+                 
+                 s REC=$G(^TKFIDELITE(CA,DATE))
+                 s TOT=$P(REC,"\",1)
+                 s QTE=$P(REC,"\",2)
+                 
+                 s GTOT=LASTTOT+TOT
+                 s GQTE=LASTQTE+QTE
+                 
+                 s ^MODROUTINE(gPOS,"TKFIDELITE",DATE)=GTOT_"\"_GQTE
+                 s DATE=$O(^TKFIDELITE(CA,DATE))
+         }
+         s CA=$O(^TKFIDELITE(CA))
+ }
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

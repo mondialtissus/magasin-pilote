@@ -1,0 +1,124 @@
+ROUTINE CTRLEAN
+CTRLEAN
+ 
+ s cpt=0 
+ s inc=0
+ s EANbuf=""
+ s KEYC=""
+ s ART=$O(^ST(""))
+ while ART'=""{
+ 	s EAN=$P($G(^ST(ART)),"\",1)
+ 	
+ 		s longueur=$L(EAN)
+		if (longueur=12)
+		{			
+			s EANbuf="0"_EAN
+	 		s KEYC=$$EANCONTROL($E(EANbuf,1,12))
+	 		if +KEYC=+$E(EAN,12,12)
+	 		{	
+	 			s cpt=cpt+1	 				 			
+	 			s ^CSB(EANbuf,ART)=""	 			
+	 		}
+		}
+		else
+		{
+			if (longueur=13)&&(EAN'="5555555555555"){
+				s KEYC=$$EANCONTROL($E(EAN,1,12))
+				if +KEYC'=+$E(EAN,13,13)
+				{
+					s inc=inc+1										
+					s ^CSB($E(EAN,1,12)_KEYC,ART)=""
+				}
+			}
+		}
+ 	s ART=$O(^ST(ART))
+ }
+ q
+ 
+EANCONTROL(CB)
+ ; Calcul du code de controle
+ s y=0
+ s x=0
+ s z=0
+ s m=0
+ s c=0
+ for i=+$L(CB):-1:1
+ {
+	if i#2=0
+	{
+		s y=y+$E(CB,i,i)	
+	}
+	else
+	{
+		s x=x+$E(CB,i,i)
+	}	
+ }
+ s z=x+(3*y)
+ s m=z
+ while +(m#10)>0
+ {
+	 s m=m+1
+ }
+ s c=m-z
+ q c
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,24 @@
+ROUTINE OPETRAFIC
+OPETRAFIC
+ // le 1 après la date correspond à un nx flag pour les opérations
+ // avec une mécanique promotionnelle simple ne necessitant pas de paramétrage supplémentaire
+ // ex : 20% sur tout le magasin 
+ 
+ // courrier -20% SUR TOUT LE MAGASIN à partir de 30 d'achat jusqu'au 16 octobre 2011
+ S ^TKCOUPREDUC(2888888841056)="30\0.20\20110930\20111016\1\"
+ // Emailing -20% SUR TOUT LE MAGASIN à partir de 30 d'achat jusqu'au 16 octobre 2011
+ S ^TKCOUPREDUC(2888888841063)="30\0.20\20110930\20111016\1\"
+ 
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

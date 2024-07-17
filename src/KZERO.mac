@@ -1,0 +1,50 @@
+ROUTINE KZERO
+KZERO
+ 
+ s CA = ""
+ s ES = ""
+ s K = ""
+ 
+ s CA = $O(^TKERREURS(""))
+ while CA '= ""
+ {
+         s ES = $O(^TKERREURS(CA,""))
+         while ES '= ""
+         {
+                 s K = $P($G(^TKERREURS(CA,ES)),"/",1)   
+                 if +K = 0 {w !, "Suppression de ^TKERREURS("_CA_","_ES_")"
+                 k ^TKERREURS(CA,ES)
+                 }
+                 s ES = $O(^TKERREURS(CA,ES))
+         }
+         s CA = $O(^TKERREURS(CA))
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

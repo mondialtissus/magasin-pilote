@@ -1,0 +1,9 @@
+ROUTINE AJOUTGUMVTTYPE
+AJOUTGUMVTTYPE
+ s ^GUMVTTYPE(11.6)="3\1\0\Retour commande click and collect stock +"
+ s ^GUMVTTYPE(12.4)="3\-1\0\Correction Click and Collect stock -"
+
+ q
+
+
+

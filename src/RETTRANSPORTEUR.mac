@@ -1,0 +1,24 @@
+ROUTINE RETTRANSPORTEUR
+RETMENU
+ 
+	s ^HWTRANS("Non défini")=""
+	s ^HWTRANS("La Poste")=""
+	s ^HWTRANS("TNT")=""
+	s ^HWTRANS("Exapaq")=""
+	s ^HWTRANS("Manuel")=""
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

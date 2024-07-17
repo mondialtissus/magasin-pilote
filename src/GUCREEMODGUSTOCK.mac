@@ -1,0 +1,32 @@
+ROUTINE GUCREEMODGUSTOCK
+GUCREEMODGUSTOCK
+	;On parcourt tout le fichier GUSTOCK pour qu'il soit renvoyer à la centrale (dernier node à 1), envoyé par POSCOMM en MODGUSTOCK vers 20h15.
+	s PLU = ""
+	s PLU = $O(^GUSTOCK(PLU))
+	while PLU '= ""
+	{	
+	    s DATASTOCK = $G(^GUSTOCK(PLU))
+	    s $P(DATASTOCK,"\",8) = "1"	    
+	
+	    s ^GUSTOCK(PLU) = DATASTOCK	        	        
+	        
+	    s PLU = $O(^GUSTOCK(PLU))
+	}
+	
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

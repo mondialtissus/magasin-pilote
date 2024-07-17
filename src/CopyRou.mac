@@ -1,0 +1,49 @@
+ROUTINE CopyRou
+CopyRou(NomRoutine) ;
+    
+ S sPath="C:\temp\"
+ // S sPath="D:\TMP\" 
+   
+ S sRNA=NomRoutine
+ 
+   I +$D(^$ROUTINE(sRNA))=0 Q
+   
+   s file=##class(%Library.File).%New(sPath_sRNA_".bak")
+   d file.Open("WNS")
+   s rout=##class(%Library.Routine).%Open($lb(sRNA))
+   I (sRNA="CopyRou")!(sRNA="COPYBK")!(sRNA="BACKUP") {
+      
+    // on ne peut compiler les routines qui tournent
+   }     
+   else
+   {       
+     // D rout.Compile()
+   }
+     
+   //d file.CopyFrom(rout)
+   
+   S iSize=rout.SizeGet()
+   //s routine=##class(%Library.Routine).%New(sFileName_".Mac")
+   F i=1:1:iSize  {
+   
+     S iCar=rout.Read(1)
+     //W !,iCar,i
+     
+     I +$A(iCar)=-1 {
+      //W !,"CR"
+       D file.Write($C(13)_$C(10))
+     }  
+     else {
+       D file.Write(iCar)
+     }
+   }
+   I iSize>0  {
+     W " "_iSize_" bytes copied"
+   }
+   else
+   {
+     W " Error "
+   }     
+   D file.%Close()
+   d rout.%Close()
+ 

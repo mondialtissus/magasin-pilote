@@ -1,0 +1,18 @@
+ROUTINE MODXXX
+MODXXX
+ // Décalage remontés de stock
+ s ^HWINFO("GESTHEUREARC")="19450000\20101015\20160476"
+ // Décalage horaire de fermeture
+ S ^HWINFO("FERMECAISSE")="2300"
+ 
+ s MAG=$G(^HWINFO("MAG"))
+ s ^MODXXX(MAG,"MAG")=MAG
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

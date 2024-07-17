@@ -1,0 +1,6 @@
+ROUTINE GetTK
+GetTK
+ s FIC="c:\pos\transfert\M341TK.txt" s CPT=0 s filedest=##class(%File).%New(FIC) d filedest.Open("WSN") s NODE1=$O(^TK("")) WHILE NODE1'="" {  s CPT=CPT+1 s NODE2=$O(^TK(NODE1,"")) WHILE NODE2'="" { s STRINFO=^TK(NODE1,NODE2) d filedest.WriteLine(NODE1_"$"_NODE2_"$"_STRINFO) if $P(STRINFO,"\",2)["Avoir n°" { s ^tmpFBLTK($P($P(STRINFO,"\",2) ," ",3))=NODE1 } s NODE2=$O(^TK(NODE1,NODE2)) } s NODE1=$O(^TK(NODE1)) } d filedest.%Close() s filefin=##class(%File).%New("C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\Fini.txt") d filefin.Open("WSN") d filefin.WriteLine("OK") d filefin.%Close() Q
+ 
+ 
+ 

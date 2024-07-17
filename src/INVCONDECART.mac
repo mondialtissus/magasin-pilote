@@ -1,0 +1,98 @@
+ROUTINE INVCONDECART
+INVCONDECART
+ 
+	s ^INVCONDECART("01",1)=">200\"
+	s ^INVCONDECART("01",2)="100-200\"
+	s ^INVCONDECART("01",3)="75-100\"
+	s ^INVCONDECART("01",4)="40-75\"
+	s ^INVCONDECART("01",5)="15-40\"
+	s ^INVCONDECART("01",6)="<15\"
+	s ^INVCONDECART("02",1)=">200\"
+	s ^INVCONDECART("02",2)="100-200\"
+	s ^INVCONDECART("02",3)="75-100\"
+	s ^INVCONDECART("02",4)="40-75\"
+	s ^INVCONDECART("02",5)="15-40\"
+	s ^INVCONDECART("02",6)="<15\"
+	s ^INVCONDECART("03",1)=">75\"
+	s ^INVCONDECART("03",2)="40-75\"
+	s ^INVCONDECART("03",3)="20-40\"
+	s ^INVCONDECART("03",4)="10-20\"
+	s ^INVCONDECART("03",5)="<10\"
+	s ^INVCONDECART("04",1)=">40\"
+	s ^INVCONDECART("04",2)="30-40\"
+	s ^INVCONDECART("04",3)="20-30\"
+	s ^INVCONDECART("04",4)="10-20\"
+	s ^INVCONDECART("04",5)="5-10\"
+	s ^INVCONDECART("04",6)="<5\"
+	s ^INVCONDECART("05",1)=">100\"
+	s ^INVCONDECART("05",2)="40-100\"
+	s ^INVCONDECART("05",3)="20-40\"
+	s ^INVCONDECART("05",4)="10-20\"
+	s ^INVCONDECART("05",5)="<10\"
+	s ^INVCONDECART("06",1)=">100\"
+	s ^INVCONDECART("06",2)="40-100\"
+	s ^INVCONDECART("06",3)="20-40\"
+	s ^INVCONDECART("06",4)="10-20\"
+	s ^INVCONDECART("06",5)="<10\"
+	s ^INVCONDECART("07",1)=">200\"
+	s ^INVCONDECART("07",2)="100-200\"
+	s ^INVCONDECART("07",3)="30-100\"
+	s ^INVCONDECART("07",4)="10-30\"
+	s ^INVCONDECART("07",5)="5-10\"
+	s ^INVCONDECART("07",6)="<5\"
+	s ^INVCONDECART("08",1)=">100\"
+	s ^INVCONDECART("08",2)="40-100\"
+	s ^INVCONDECART("08",3)="20-40\"
+	s ^INVCONDECART("08",4)="10-20\"
+	s ^INVCONDECART("08",5)="<10\"
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

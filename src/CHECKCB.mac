@@ -1,0 +1,8 @@
+ROUTINE CHECKCB
+CHECKCB
+ s ^HWINFO("CHECKCB")=0
+	
+ Q
+ 
+ 
+ 

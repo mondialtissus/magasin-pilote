@@ -1,0 +1,23 @@
+ROUTINE INITINV20151228
+INITINV20151228
+
+ ;s ^HWINFO("TYPETERM")="DOLPHIN"
+ S ^HWINFO("INVENTAIRE","DATE")="63914"	      // Date de référence 28 Décembre 2015
+ S ^HWINFO("INVENTAIRE","DATEARRETE")="63914"	
+ s ^HWINFO("INVENTAIRE","DATETEST")=""
+ s ^HWINFO("INVENTAIRE","DATETESTFIN")=""
+ s ^HWINFO("INVENTAIRE","DATEDEB")="63900"   // Date de début 14 Dec 2015 
+ s ^HWINFO("INVENTAIRE","DATEFIN")="63922"   // fin le 5 jan 2016
+ s ^HWINFO("INVENTAIRE",63914,"AUTO")=""     // Permet de valider l'utilisation du terminal 
+
+ Q
+
+
+
+
+
+
+
+
+
+

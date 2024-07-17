@@ -1,0 +1,16 @@
+ROUTINE HWINFONOM
+HWINFONOM
+ 
+     ;Changement Nom société suite rachat 01-10-2010
+     s ^HWINFO("NOM")="GROUPE MONDIAL TISSUS" 
+     s ^HWINFO("NOM2")="GROUPE MONDIAL TISSUS" 
+ 
+ q
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 

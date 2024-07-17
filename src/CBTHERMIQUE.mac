@@ -1,0 +1,6 @@
+ROUTINE CBTHERMIQUE
+CBTHERMIQUE
+ s ^HWINFO("THERMIQUE",1)="1"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     s ^HWINFO("THERMIQUE",2)="1"
+ q
+ 
+ 

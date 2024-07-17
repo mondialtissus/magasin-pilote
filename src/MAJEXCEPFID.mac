@@ -1,0 +1,96 @@
+ROUTINE MAJEXCEPFID
+MAJEXCEPFID
+ 
+ k ^EXCEPFID
+ S ^EXCEPFID("LEV","AXATISS")=""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+ S ^EXCEPFID("LEV","DIVERS")=""
+ S ^EXCEPFID("PLU",64859)="Frais de livraison"
+ S ^EXCEPFID("PLU",64860)="Frais de parking"
+ s ^EXCEPFID("PLU",73068)="BON ACHAT MULTI"
+ S ^EXCEPFID("PLU",68691)="COUPONS PV 0 A 5 EUR"
+ S ^EXCEPFID("PLU",68692)="COUPONS PV 5 A 10 EUR"
+ S ^EXCEPFID("PLU",68693)="COUPONS PV SUPERIEUR A 10 EUR"
+ S ^EXCEPFID("PLU",68694)="COUPONS PV DE 0 A 10 EUR"
+ S ^EXCEPFID("PLU",68695)="COUPONS PV DE 10 A 20 EUR"
+ S ^EXCEPFID("PLU",68696)="COUPONS PV SUPERIEUR A 20 EUR"
+ S ^EXCEPFID("PLU",68697)="COUPONS PV DE 0 A 5 EUR"
+ S ^EXCEPFID("PLU",68698)="COUPONS PV DE 5 A 10 EUR"
+ S ^EXCEPFID("PLU",68699)="COUPONS PV SUPERIEUR  A 10 EUR"
+ s ^EXCEPFID("PLU",55555)="LMLI2IM/PARURENUITCORAI/CORAIL"
+ s ^EXCEPFID("PLU",55556)="LMLI2IM/PARURENUITENCRE/VIOLET"
+ s ^EXCEPFID("PLU",55558)="LMLI2IM/PARURENEPAL/ROSEANIS"
+ s ^EXCEPFID("PLU",55560)="LMLI2IM/PARUREJARDINORI/GRIS"
+ s ^EXCEPFID("PLU",55563)="LMLI2IM/PARUREGDLARGE/BLEU"
+ s ^EXCEPFID("PLU",55565)="LMLI2IM/PARUREESPRITZEN/BLANC"
+ s ^EXCEPFID("PLU",55567)="LMLI2IM/PARUREDREAMBUBB/MULTI"
+ s ^EXCEPFID("PLU",55568)="LMLI2IM/PARUREDOUCEURSO/PAILLE"
+ s ^EXCEPFID("PLU",55569)="LMLI2IM/PARUREROSEARGEN/ROUGBLAN"
+ s ^EXCEPFID("PLU",55570)="LMLI2IM/PARUREBRITISH/BLEU"
+ s ^EXCEPFID("PLU",55571)="LMLI2IM/PARUREBELLEVARD/ECRUROUG"
+ s ^EXCEPFID("PLU",55572)="LMLI2IM/PARUREARABESQUE/ANIS"
+ s ^EXCEPFID("PLU",55575)="LMLI2IM/PARUREFARANDOLE/CREME"
+ s ^EXCEPFID("PLU",5808)="LMPL1SY/COET140CALCUTTA/BLANC"
+ s ^EXCEPFID("PLU",66358)="LMPL1SY/COET140MICROST2/BLANC"
+ s ^EXCEPFID("PLU",5620)="LMPL1SY/COET140MICROSTO/BLANC"
+ s ^EXCEPFID("PLU",5809)="LMPL1SY/COET200CALCUTTA/BLANC"
+ s ^EXCEPFID("PLU",5810)="LMPL1SY/COET220CALCUTTA/BLANC"
+ s ^EXCEPFID("PLU",66371)="LMPL1SY/GREENFIRST240/BLANC"
+ s ^EXCEPFID("PLU",66365)="LMPL1SY/PERCALE200/BLANC"
+ s ^EXCEPFID("PLU",66366)="LMPL1SY/PERCALE2002/BLANC"
+ s ^EXCEPFID("PLU",66367)="LMPL1SY/PERCALE240/BLANC"
+ s ^EXCEPFID("PLU",66368)="LMPL1SY/PERCALE2402/BLANC"
+ s ^EXCEPFID("PLU",66369)="LMPL1SY/PERCALE260/BLANC"
+ s ^EXCEPFID("PLU",66370)="LMPL1SY/PERCALE2602/BLANC"
+ S ^EXCEPFID("SECTEUR",4,42)=""
+ S ^EXCEPFID("SECTEUR",15)=""
+ S ^EXCEPFID("SECTEUR",18)=""
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,264 @@
+ROUTINE CAISSETICKETS
+CAISSETICKETS
+ write !,""
+ write !, "Date de reventilation (AAMMJJ) : " 
+ //read "",datereventile
+ //s datereventile="100104"
+ s datereventile= $E($ZD(+$H,8),3,8)
+ // A MODIFIER ICI SI LANCMEENT MANUEL
+ 
+ ZA ^TKFAMILLE
+ 
+ s AAMM=$E(datereventile,1,4)
+ s AAM1=$ZDH("20"_AAMM_"01",8)
+ s AAM2=+$ZDH($E($ZD(+$ZDH("20"_AAMM_"01",8)+40,8),1,6)_"01",8)-1
+ s MONTANT=0
+ 
+ // Suppression des ventilations de famille      
+ w !,"Suppression de la ventilation famille"
+ s nCA = $O(^TKMOISJOURS(""))
+ while (nCA '= "")
+ {
+         w !,"  Caisse:"_nCA_", Mois "_AAMM
+         k ^TKFAMILLE(nCA,AAMM)
+         for i=AAM1:1:AAM2
+         {
+                 s datejour=$E($ZD(i,8),3,8)
+                 k ^TKFAMILLE(nCA,datejour)
+                 s MONTANT=+MONTANT+$$TraiteTicket(nCA,datejour)
+         }
+        s nCA = $O(^TKMOISJOURS(nCA))
+ }
+ 
+ ZD ^TKFAMILLE
+ 
+ w !,MONTANT
+ Q
+ 
+TraiteTicket(nCA,date)
+ s MONTLOC=0
+ 
+ // Reventilation        
+ s numTicket = $O(^TKMOISJOURS(nCA,date,""))
+ while (numTicket '= "")
+ {
+         s TicketEntete=$G(^TK(numTicket,0))
+         s TickErreur=+$P(TicketEntete,"\",9)
+         if TickErreur'=1
+         {
+                 s Heure=$P(TicketEntete,"\",2)
+                 s Reglement=$P(TicketEntete,"\",3)
+                 s HH=+$P(Heure,":",1)
+                 s MM=+$P(Heure,":",2)
+         
+                 s NumLg = $O(^TK(numTicket,"0"))
+                 while (NumLg '= "")
+                 {
+                         s DATA=$G(^TK(numTicket,NumLg))
+                         s PLU=$P(DATA,"\",1)
+                         s DESIGNATION=$P(DATA,"\",2)
+                         s SECTEURTK=$P(DATA,"\",3)
+                         s TOTALTTC=+$P(DATA,"\",6)
+                         if (+PLU>0) && ($E(DESIGNATION,1,5)'="Avoir")
+                         {
+                                 // On cherche le secteur dans ^ST
+                                 S ARTICLE=$G(^SP(PLU))
+                                 S SECTEURST=$P($G(^ST(ARTICLE)),"\",23)
+                                 if Reglement="AV"
+                                 {
+                                         s DATATKAV=$G(^TKAVOIRS($E(date,1,4),nCA,numTicket,NumLg))
+                                         I DATATKAV'=""
+                                         {
+                                                 s $P(DATATKAV,"\",3)=SECTEURTK
+                                                 s ^TKAVOIRS($E(date,1,4),nCA,numTicket,NumLg)=DATATKAV
+                                                 s ^TKAVOIRS(date,nCA,numTicket,NumLg)=DATATKAV
+                                         }
+                                 }
+                                 I SECTEURTK'=SECTEURST
+                                 {
+                                         s $P(DATA,"\",3)=SECTEURST
+                                         s ^TK(numTicket,NumLg)=DATA
+                                         s SECTEURTK=SECTEURST
+                                 }
+                         }
+                         else
+                         {
+                                 ;w !,DESIGNATION
+                                 s IdCla=""
+                                 I DESIGNATION="AMEUBLEMENT" s IdCla="01"
+                                 I DESIGNATION="HABILLEMENT" s IdCla="02"
+                                 I (DESIGNATION="VOILAGE")||(DESIGNATION="VOILAGES") s IdCla="03"
+                                 I DESIGNATION="MERCERIE" s IdCla="04"
+                                 I DESIGNATION="LINGE DE MAISON" s IdCla="05"
+                                 I DESIGNATION="TRINGLES" s IdCla="08"
+                                 I (DESIGNATION="CREATIF")||(DESIGNATION="LOISIRS CREATIFS") s IdCla="07"
+                                 I (DESIGNATION="DECO FENETRE")||(DESIGNATION="DECO DE LA FENETRE") s IdCla="08"
+                                 I DESIGNATION="CONFECTION" s IdCla="09"
+                                 I DESIGNATION="PRET A POSER" s IdCla="06"
+                                 I DESIGNATION="DIVERS" s IdCla="99"
+                                 I DESIGNATION="LIBRAIRIE" s IdCla="04"
+                                 I DESIGNATION="ART DU FIL" s IdCla="04"
+                                 I DESIGNATION="PATCHWORK" s IdCla="04"
+                                 I IdCla'=""
+                                         {
+                                                 w !,"Trouvé "_IdCla
+                                 s $P(DATA,"\",3)=IdCla
+                                 s ^TK(numTicket,NumLg)=DATA
+                                 s SECTEURTK=IdCla
+                                         }
+                         }
+ 
+                         ;w !,numTicket
+                         ;w !,nCA_":"_date_":"_SECTEURTK_":"_HH_":"_MM
+                         ;r "",A
+                         // On ne ventile pas un avoir qui a été créé et utilisé le même jour
+                         
+                         if $E(DESIGNATION,1,5)'="Avoir"
+                         {
+                                 S ^TKFAMILLE(nCA,$E(date,1,4),SECTEURTK)=+$G(^TKFAMILLE(nCA,$E(date,1,4),SECTEURTK))+TOTALTTC
+                                 S ^TKFAMILLE(nCA,date,SECTEURTK)=+$G(^TKFAMILLE(nCA,date,SECTEURTK))+TOTALTTC
+                                 S ^TKFAMILLE(nCA,date,SECTEURTK,HH)=+$G(^TKFAMILLE(nCA,date,SECTEURTK,HH))+TOTALTTC
+                                 S ^TKFAMILLE(nCA,date,SECTEURTK,HH,MM)=+$G(^TKFAMILLE(nCA,date,SECTEURTK,HH,MM))+TOTALTTC
+                                 s MONTLOC=+MONTLOC+TOTALTTC
+                         }
+                 
+                 s NumLg = $O(^TK(numTicket,NumLg))
+                 }
+        }
+        
+     s numTicket = $O(^TKMOISJOURS(nCA,date,numTicket))
+ }
+ 
+ q MONTLOC
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

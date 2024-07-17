@@ -1,0 +1,68 @@
+ROUTINE UPDATEPV0611
+UPDATEPV0611
+ 
+ S LSTART="53715;3996;3997;3998;3999;4000;4001;4002;4003;4004;4005;4006;4007;4008;4009;4010;4011;6778;6779;6967;8088;8089;"
+ s NBART=+$$CHAINEOCCURRENCE(LSTART,";")
+ F IART=1:1:NBART
+ {
+	s CURPLU=$P(LSTART,";",IART)
+	s CLEART=$G(^SP(CURPLU))
+	if CLEART'=""
+	{
+		s REC=$G(^ST(CLEART))
+		s PV=$P(REC,"\",22)
+		if ($P(PV,"/",2)'="")&&($P(PV,"/",3)'="")
+		{
+			s $P(PV,"/",2)=60600
+			S $P(REC,"\",22)=PV
+			s ^ST(CLEART)=REC
+		}
+	}
+ }
+ q
+ 
+CHAINEOCCURRENCE(STROC,CAR)
+ // Calcule le nombre d'occurrences d'une chaîne de caractères spécifique
+ // STROC : Texte dans lequel les occurrences de <Chaîne à rechercher> doivent être recherchées. 
+ // CAR : Texte à rechercher dans la <Chaîne source>
+ s CPTCAR=0
+ s iSize=$L(STROC)
+ for i=1:1:iSize
+ {
+         if $E(STROC,i,i)=CAR {s CPTCAR=CPTCAR+1}
+ }       
+ q +CPTCAR
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

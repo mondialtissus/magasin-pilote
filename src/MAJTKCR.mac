@@ -1,0 +1,42 @@
+ROUTINE MAJTKCR
+MAJTKCR
+ 
+ S TKCR = ""
+ S NUMCR = ""
+ S IDCLI = 0
+ 
+ s TKCR = $O(^TKCREDITSREF(""))
+ while TKCR '= ""
+ {
+         s IDCLI = $G(^TKCLIENTS(TKCR))
+         s NUMCR = $P($G(^TKCREDITSREF(TKCR)),"\",1)
+         s ^TKCREDITSREF(TKCR)=NUMCR_"\"_IDCLI
+         s TKCR = $O(^TKCREDITSREF(TKCR))
+ }
+ 
+  k ^HWMAILHC(999999,0)
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

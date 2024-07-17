@@ -1,0 +1,8 @@
+ROUTINE MAJSAUVGEST
+MAJSAUVGEST
+	s ^HWINFO("SAUVEGARDE",1,"FILES")="Ticket.exe\SUIVI.exe\STAT.exe\Cloture.exe\MODIFREGL.exe\Erreurs.exe\Posmobile.exe\GEST.exe\"
+ 
+	q
+ 
+ 
+ 

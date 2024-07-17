@@ -1,0 +1,178 @@
+ROUTINE COROPE2010
+COROPE2010
+ 
+	;Cette fonction permet de remettre d'aplomb les commande de type "O"
+	s POSNUM = $G(^HWINFO("MAG"))
+	s CMDCENT=""
+	s CMDCENT = $O(^HWNEV(POSNUM,CMDCENT))
+	while CMDCENT '= ""
+	{
+		s NUMLNG = "0"
+		s NUMLNG = $O(^HWNEV(POSNUM,CMDCENT,NUMLNG))
+		while NUMLNG '= ""
+		{
+			//On teste si c'est une commande MOP			
+			s DATAHWNEV = $G(^HWNEV(POSNUM,CMDCENT,NUMLNG))
+			s CMDMAG = $P($P(DATAHWNEV,"\",2),"*",1)
+			s NUMLNGERREUR = $P($P(DATAHWNEV,"\",2),"*",2)
+			;w !,"Commande : "_CMDMAG
+			i ((CMDMAG["O")	&& (NUMLNGERREUR="1"))
+			{
+				i (NUMLNG'="1")
+				{
+					w !,"Cmd MOP : "_CMDCENT_" LNG : "_NUMLNG
+					r !,a
+					//C'est une commande MOP
+					s $P(DATAHWNEV,"\",2)=$P($P(DATAHWNEV,"\",2),"*",1)_"*"_NUMLNG_"*"_$P($P(DATAHWNEV,"\",2),"*",3)
+					s ^HWNEV(POSNUM,CMDCENT,NUMLNG) = DATAHWNEV
+					s QTE = $P(DATAHWNEV,"\",4)
+					s CLEFARTICLE = $P(DATAHWNEV,"\",3)
+					s ^HWARCCMD("CDE",CMDMAG,NUMLNG)= CLEFARTICLE_"\"_QTE
+					s ^HWARCCMD("ART",CLEFARTICLE,CMDMAG,NUMLNG)= NUMLNG
+					
+					r !,a
+				}
+				s NUMLNG = $O(^HWNEV(POSNUM,CMDCENT,NUMLNG))
+			}
+			ELSE
+			{
+				s NUMLNG = ""
+			}
+		}
+		
+		s CMDCENT = $O(^HWNEV(POSNUM,CMDCENT))
+	}		
+	
+	//Nous devons ensuite mettre à jour les FAX
+	s CMDMAG = ""
+	s CMDMAG = $O(^HWARCCMD("FAX",CMDMAG))
+	while CMDMAG '= ""
+	{
+		i (CMDMAG["O")
+		{
+			s NUMCENT = ""
+			s NUMCENT = $O(^HWARCCMD("FAX",CMDMAG,"1",NUMCENT))
+			while NUMCENT '= ""
+			{
+				s NUMLNGCENT = "1"
+				s NUMLNGCENT = $O(^HWARCCMD("FAX",CMDMAG,"1",NUMCENT,NUMLNGCENT))
+				while NUMLNGCENT '= ""
+				{
+					w !,"Cmd MOP : "_NUMCENT_" LNG : "_NUMLNGCENT
+					r !,a
+					s DATAFAX = $G(^HWARCCMD("FAX",CMDMAG,"1",NUMCENT,NUMLNGCENT))
+					s ^HWARCCMD("FAX",CMDMAG,NUMLNGCENT,NUMCENT,NUMLNGCENT)= DATAFAX
+					k ^HWARCCMD("FAX",CMDMAG,"1",NUMCENT,NUMLNGCENT)
+					
+					s NUMBL = ""
+					s NUMBL = $O(^HWARCCMD("LIVR",NUMCENT,NUMLNGCENT,CMDMAG,"1",NUMBL))
+					while NUMBL '= ""
+					{
+						//Nous avons eu une livraison pour cet article
+						s DATALIVR = $G(^HWARCCMD("LIVR",NUMCENT,NUMLNGCENT,CMDMAG,"1",NUMBL))
+						s ^HWARCCMD("LIVR",NUMCENT,NUMLNGCENT,CMDMAG,NUMLNGCENT,NUMBL)=DATALIVR
+						
+						//Nous devons également créer le CDE et ART dans HWARCCMD car il n'était plus dans le HWNEV : malheureusement impossible car nous n'avons plus le code de l'article...
+						k ^HWARCCMD("LIVR",NUMCENT,NUMLNGCENT,CMDMAG,"1",NUMBL)
+						
+						s NUMBL = $O(^HWARCCMD("LIVR",NUMCENT,NUMLNGCENT,CMDMAG,"1",NUMBL))
+					}
+					
+					s NUMLNGCENT = $O(^HWARCCMD("FAX",CMDMAG,"1",NUMCENT,NUMLNGCENT))
+				}				
+				s NUMCENT = $O(^HWARCCMD("FAX",CMDMAG,"1",NUMCENT))
+			}
+		}
+		
+		s CMDMAG = $O(^HWARCCMD("FAX",CMDMAG))
+	}	
+	
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

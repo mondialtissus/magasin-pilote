@@ -1,0 +1,6 @@
+ROUTINE GetTKMODIF2
+GetTKMODIF2
+ s FIC="c:\pos\transfert\M341TKMODIF2.txt" s CPT=0 s filedest=##class(%File).%New(FIC) d filedest.Open("WSN") s NODE1=$O(^TKMODIF2("")) WHILE NODE1'="" {  s CPT=CPT+1 s NODE2=$O(^TKMODIF2(NODE1,"")) WHILE NODE2'="" { s STRINFO=^TKMODIF2(NODE1,NODE2) d filedest.WriteLine(NODE1_"$"_NODE2_"$"_STRINFO) s NODE2=$O(^TKMODIF2(NODE1,NODE2)) } s NODE1=$O(^TKMODIF2(NODE1)) } d filedest.%Close() s filefin=##class(%File).%New("C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\Fini.txt") d filefin.Open("WSN") d filefin.WriteLine("OK") d filefin.%Close() Q
+ 
+ 
+ 

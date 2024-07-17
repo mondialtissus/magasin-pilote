@@ -1,0 +1,812 @@
+ROUTINE RAPPORT
+RAPPORT
+ Q
+SUPLG(pDEB,pFIN,FIC="^tmpRAPPORT")
+ ZA @FIC
+ s pDATE=$E(pDEB,3,8) 
+ if (pDEB'="")&&(pFIN'="")
+ {        
+   s INDEB=$ZDH(pDEB,5)
+   s AAMM=$E(pDEB,3,6)     
+   s JJ=$E(pDEB,7,8)
+   s IDATEDEB=$ZDH(pDEB,5)
+   s IDATEFIN=$ZDH(pFIN,5)
+   s AAMM2=$E(pFIN,3,6)
+   s JJ2=$E(pFIN,7,8)
+ }
+ s pPOSNUM=$G(^HWINFO("MAG"))
+ 
+ if (FIC="^TKRAPPORTCA")||(FIC="^MODRAPPORT"){k @FIC@(pPOSNUM,pDATE)}else{k @FIC} 
+ s TYPE=$O(^TKSUPLG(""))
+ while TYPE'=""
+ {   s USER=$O(^TKSUPLG(TYPE,""))         
+  while USER'=""
+  {               
+          if (AAMM'=""){D GETSUPLG(AAMM,JJ)}
+          s USER=$O(^TKSUPLG(TYPE,USER))
+  }
+  s TYPE=$O(^TKSUPLG(TYPE))
+ }
+ ZD @FIC
+ D GETALL
+ D GETTKER
+ D GETTKTIR
+ D GETTKMODIFCLOT
+ D GETREMBQ
+ Q
+GETSUPLG(AAMM,JJ)
+ // Faut lister ici les suppressions du mois de AAMM
+ s AAMM=$E(pDEB,3,6)      
+ s JJ=$E(pDEB,7,8)
+ s IDATEDEB=$ZDH(pDEB,5)
+ s IDATEFIN=$ZDH(pFIN,5)
+ s AAMM2=$E(pFIN,3,6)
+ s JJ2=$E(pFIN,7,8)
+ 
+ if AAMM'=AAMM2
+ {
+         if $E(AAMM,3,4)="01"{s NAAMM=+($E(AAMM,1,2))-2 s AAMM="0"_NAAMM_"12"}else
+         {
+         s NAAMM=+(+$E(AAMM,3,4)-1)
+         if NAAMM<10{s AAMM=$E(AAMM,1,2)_"0"_NAAMM}else{s AAMM=$E(AAMM,1,2)_NAAMM}               
+  } // Cas ou on est en janvier -> donc debut decembre de AA-1
+ 
+ 
+         s AAMM=$O(^TKSUPLG(TYPE,USER,AAMM))
+         while (AAMM'="")&&(AAMM<AAMM2+1)
+         {        
+         if AAMM=AAMM2{s START=""}else
+         {
+                 s START=JJ
+                 if +$E($ZD(INDEB,8),5,6)'=+$E($ZD($ZDH(pFIN,8),8),5,6){s START=JJ-1}
+         }
+         d GETSUPLG1
+         s AAMM=$O(^TKSUPLG(TYPE,USER,AAMM))
+         }
+ }
+ else
+ {        
+          s START=JJ-1    
+  d GETSUPLG1
+ }
+ Q
+GETSUPLG1  
+ 
+ s JJ=$O(^TKSUPLG(TYPE,USER,AAMM,""))  
+ while (JJ'="")
+ {       
+  if (+$ZDH("20"_AAMM_JJ,8)<+(IDATEFIN+1))&&(+$ZDH("20"_AAMM_JJ,8)>+(IDATEDEB-1)){d GETSUPLG2(JJ)}
+  s JJ=$O(^TKSUPLG(TYPE,USER,AAMM,JJ))
+ }
+ q
+GETSUPLG2(JJ)
+ 
+ s CA=$O(^TKSUPLG(TYPE,USER,AAMM,JJ,""))
+ while CA'=""
+ {                
+  s TK=$O(^TKSUPLG(TYPE,USER,AAMM,JJ,CA,""))
+  while TK'=""
+  {                       
+          s ID=$O(^TKSUPLG(TYPE,USER,AAMM,JJ,CA,TK,""))
+          while ID'=""
+          {                              
+                  s LASTLGSUP=+$G(@FIC@(pPOSNUM,pDATE,"ALL",USER,"TOTLGSUPP"))
+                  s @FIC@(pPOSNUM,pDATE,"ALL",USER,"TOTLGSUPP")=LASTLGSUP+1
+                                                 
+                  if TYPE="LG"{
+                         s REC=$G(^TKSUPLG(TYPE,USER,AAMM,JJ,CA,TK,ID))
+                    s RECVAL=+$P(REC,"\",8) ; contient la valorisation de la ligne supprimée       
+                         s LASTVALSUP=+$G(@FIC@(pPOSNUM,pDATE,"LG",USER,"TOTLGSUPPVAL"))
+                         s @FIC@(pPOSNUM,pDATE,"LG",USER,"TOTLGSUPPVAL")=LASTVALSUP+RECVAL
+                  }
+                  
+                  s LASTVAL=+$G(@FIC@(pPOSNUM,pDATE,TYPE,USER))
+                  s @FIC@(pPOSNUM,pDATE,TYPE,USER)=LASTVAL+1
+                  s ID=$O(^TKSUPLG(TYPE,USER,AAMM,JJ,CA,TK,ID))
+          }
+          s TK=$O(^TKSUPLG(TYPE,USER,AAMM,JJ,CA,TK))
+  }
+  s CA=$O(^TKSUPLG(TYPE,USER,AAMM,JJ,CA))
+ }
+ Q
+GETALL
+ s CA=$O(^TKMOISJOURS(""))
+ while CA'=""
+ { 
+     s DATEDEB=$E($ZD((IDATEDEB)-1,8),3,8)
+     s DATEFIN=$E($ZD((IDATEFIN),8),3,8)
+  s DATE=$O(^TKMOISJOURS(CA,DATEDEB))     
+  while (DATE'="")&&(DATE<(DATEFIN+1))
+  {                               
+          s TICKET=$O(^TKMOISJOURS(CA,DATE,""))
+          while TICKET'=""
+          {
+                  s INFOG=$G(^TK(TICKET,0))               
+                  s NBLGTOT=$O(^TK(TICKET,""),-1)
+                  s LASTLGTOT=+$G(@FIC@(pPOSNUM,pDATE,"ALL",$P(INFOG,"\",1),"TOTLG"))
+                  s @FIC@(pPOSNUM,pDATE,"ALL",$P(INFOG,"\",1),"TOTLG")=LASTLGTOT+NBLGTOT 
+                  // Recherche des retours marchandises à partir du total<0
+                  s TOTTICK=$P($G(^TKTOTAL(TICKET)),"\",1)
+                  if +TOTTICK<0
+                  {  
+                         s LGC="0"
+                         s CURUSER=$P(INFOG,"\",1)
+                         s CURUSERADV=""
+                         s bISRETMARCH=1
+                         if $P(INFOG,"\",3)="AV"{s CURUSERADV=$G(^TKAVOIRS(TICKET,0)) IF CURUSERADV'="" s CURUSER=CURUSERADV}
+                         if $P(INFOG,"\",3)="ES"{s CURUSERADV=$G(^TKREMB("ES",TICKET,0)) IF CURUSERADV'="" s CURUSER=CURUSERADV}
+                         if $P(INFOG,"\",3)="CB"{s CURUSERADV=$G(^TKREMB("CB",TICKET,0)) IF CURUSERADV'="" s CURUSER=CURUSERADV}
+                         
+                         s LGC=$O(^TK(TICKET,LGC))
+                         while LGC'=""{
+                                         s DESCC=$G(^TK(TICKET,LGC))
+                                 if ($E($P(DESCC,"\",2),1,5)="Avoir")||($E($P(DESCC,"\",2),1,17)="Carte de Fidélité"){s bISRETMARCH=0}                                      
+                                         s LGC=$O(^TK(TICKET,LGC))
+                                 }
+                                 if bISRETMARCH=1{                       
+                                 s RECRET=$G(@FIC@(pPOSNUM,pDATE,"RETCREE",CURUSER))                            
+                                 s LASTNBRET=+RECRET+1                           
+                                 s @FIC@(pPOSNUM,pDATE,"RETCREE",CURUSER)=LASTNBRET
+                         }                       
+                  }
+                  // Recherche des avoirs crees, total carte fidelite, remises , soldes et credits                                        
+                  if $P(INFOG,"\",3)="AV"
+                  {
+                         s CURUSER=$P(INFOG,"\",1)
+                         s CURUSERADV=""
+                         s CURUSERADV=$G(^TKAVOIRS(TICKET,0)) IF CURUSERADV'="" s CURUSER=CURUSERADV
+                         
+                         s RECAV=$G(@FIC@(pPOSNUM,pDATE,"AVCREE",CURUSER))
+                         s LASTNBAV=+$P(RECAV,"\",1)
+                         s $P(RECAV,"\",1)=LASTNBAV+1
+                         s @FIC@(pPOSNUM,pDATE,"AVCREE",CURUSER)=RECAV
+                         s RECAV=$G(@FIC@(pPOSNUM,pDATE,"AVCREE",CURUSER))                               
+                         s LASTTOTAV=+$P(RECAV,"\",2)
+                         s $P(RECAV,"\",2)=LASTTOTAV+($G(^TKTOTAL(TICKET)))
+                         s @FIC@(pPOSNUM,pDATE,"AVCREE",CURUSER)=RECAV
+                   }
+                   
+                  if ($P(INFOG,"\",3)="ES")&&(+TOTTICK<0){
+                         // Remboursement especes
+                         s CURUSER=$P(INFOG,"\",1)
+                         s CURUSERADV=""
+                         s CURUSERADV=$G(^TKREMB("ES",TICKET,0)) IF CURUSERADV'="" s CURUSER=CURUSERADV
+                         
+                         S RECREMBES=$G(@FIC@(pPOSNUM,pDATE,"REMBES",CURUSER))
+                         s LASTNBREMBES=+$P(RECREMBES,"\",1)
+                         s $P(RECREMBES,"\",1)=LASTNBREMBES+1
+                         s @FIC@(pPOSNUM,pDATE,"REMBES",CURUSER)=RECREMBES
+                         s RECREMBES=$G(@FIC@(pPOSNUM,pDATE,"REMBES",CURUSER))                               
+                         s LASTTOTREMBES=+$P(RECREMBES,"\",2)
+                         s $P(RECREMBES,"\",2)=LASTTOTREMBES+($G(^TKTOTAL(TICKET)))
+                         s @FIC@(pPOSNUM,pDATE,"REMBES",CURUSER)=RECREMBES
+                  }
+                  if ($P(INFOG,"\",3)="CB")&&(+TOTTICK<0){
+                         // Remboursement carte bleue
+                         s CURUSER=$P(INFOG,"\",1)
+                         s CURUSERADV=""
+                         s CURUSERADV=$G(^TKREMB("CB",TICKET,0)) IF CURUSERADV'="" s CURUSER=CURUSERADV
+                         
+                         S RECREMBCB=$G(@FIC@(pPOSNUM,pDATE,"REMBCB",CURUSER))
+                         s LASTNBREMBCB=+$P(RECREMBCB,"\",1)
+                         s $P(RECREMBCB,"\",1)=LASTNBREMBCB+1
+                         s @FIC@(pPOSNUM,pDATE,"REMBCB",CURUSER)=RECREMBCB
+                         s RECREMBCB=$G(@FIC@(pPOSNUM,pDATE,"REMBCB",CURUSER))                               
+                         s LASTTOTREMBCB=+$P(RECREMBCB,"\",2)
+                         s $P(RECREMBCB,"\",2)=LASTTOTREMBCB+($G(^TKTOTAL(TICKET)))
+                         s @FIC@(pPOSNUM,pDATE,"REMBCB",CURUSER)=RECREMBCB
+                  }
+                  if $P(INFOG,"\",3)="CR"
+                  {
+                         s RECCR=$G(@FIC@(pPOSNUM,pDATE,"CRCREE",$P(INFOG,"\",1)))
+                         s LASTNBCR=+$P(RECCR,"\",1)                     
+                         s $P(RECCR,"\",1)=LASTNBCR+1
+                         s @FIC@(pPOSNUM,pDATE,"CRCREE",$P(INFOG,"\",1))=RECCR
+                         s RECCR=$G(@FIC@(pPOSNUM,pDATE,"CRCREE",$P(INFOG,"\",1)))                               
+                         s LASTTOTCR=+$P(RECCR,"\",2)
+                         s $P(RECCR,"\",2)=LASTTOTCR+(+$P($G(^TKTOTAL(TICKET)),"/",1))
+                         s @FIC@(pPOSNUM,pDATE,"CRCREE",$P(INFOG,"\",1))=RECCR
+                   }
+                  if +$P(INFOG,"\",7)=1
+                  {
+                         s RECFID=$G(@FIC@(pPOSNUM,pDATE,"FIDCREE",$P(INFOG,"\",1)))
+                         s LASTNBFID=+$P(RECFID,"\",1)
+                         s $P(RECFID,"\",1)=LASTNBFID+1
+                         s @FIC@(pPOSNUM,pDATE,"FIDCREE",$P(INFOG,"\",1))=RECFID
+                         
+                         s LG=$O(^TK(TICKET,""))
+                         while LG'=""
+                         {                                       
+                                 s RECLG=$G(^TK(TICKET,LG))                                      
+                                 if $P(RECLG,"\",2)="Carte de Fidélité"
+                                 {
+                                         
+                                        s RECFID=$G(@FIC@(pPOSNUM,pDATE,"FIDCREE",$P(INFOG,"\",1)))
+                                        s LASTTOTFID=+$P(RECFID,"\",2)
+                                        s $P(RECFID,"\",2)=LASTTOTFID+(+$P(RECLG,"\",6))
+                                        s @FIC@(pPOSNUM,pDATE,"FIDCREE",$P(INFOG,"\",1))=RECFID
+                                        q
+                                 }
+                                 s LG=$O(^TK(TICKET,LG))
+                         }                               
+                   }
+                   IF (+$P(INFOG,"\",4)>0)||(+$P(INFOG,"\",5)>0)
+                   {                                                            
+                           // Il y a une remise ou une solde !
+                           s LG=$O(^TK(TICKET,"0"))
+                           while LG'=""
+                           {
+                                   s RECLG=$G(^TK(TICKET,LG))
+                                   s TOTLG=+$P(RECLG,"\",6)
+                                   s PU=+$P(RECLG,"\",4)
+                                   s QTE=+$P(RECLG,"\",5)
+                                   if +$P(RECLG,"\",7)
+                                   {
+                                       // Ventilation générale                                         
+                                       s RECREM=$G(@FIC@(pPOSNUM,pDATE,"REMCREE",$P(INFOG,"\",1)))
+                                           s LASTNBREM=+$P(RECREM,"\",1)
+                                           s $P(RECREM,"\",1)=LASTNBREM+1
+                                           s @FIC@(pPOSNUM,pDATE,"REMCREE",$P(INFOG,"\",1))=RECREM
+                                       // Ventilation détaillée
+                                           s TOTREM=(PU*QTE)-TOTLG
+                                           s RECREM=$G(@FIC@(pPOSNUM,pDATE,"REMCREE",$P(INFOG,"\",1)))
+                                           s LASTREM=+$P(RECREM,"\",2)
+                                           s $P(RECREM,"\",2)=LASTREM+TOTREM
+                                           s @FIC@(pPOSNUM,pDATE,"REMCREE",$P(INFOG,"\",1))=RECREM
+                                   }
+                                   else
+                                   {
+                                           if +$P(RECLG,"\",8)
+                                           {
+                                                 // Ventilation générale
+                                                 if $P(RECLG,"\",2)'="2e Demarque"
+                                                 {                                                                                                
+                                                 s RECSOLD=$G(@FIC@(pPOSNUM,pDATE,"SOLDCREE",$P(INFOG,"\",1)))
+                                                 s LASTNBSOLD=+$P(RECSOLD,"\",1)
+                                                 s $P(RECSOLD,"\",1)=LASTNBSOLD+1
+                                                 s @FIC@(pPOSNUM,pDATE,"SOLDCREE",$P(INFOG,"\",1))=RECSOLD
+                                                         s TOTSOLD=(PU*QTE)-TOTLG
+                                                         s RECSOLD=$G(@FIC@(pPOSNUM,pDATE,"SOLDCREE",$P(INFOG,"\",1)))
+                                                         s LASTSOLD=+$P(RECSOLD,"\",2)
+                                                         s $P(RECSOLD,"\",2)=LASTSOLD+TOTSOLD 
+                                                         s @FIC@(pPOSNUM,pDATE,"SOLDCREE",$P(INFOG,"\",1))=RECSOLD
+                                                 }
+                                                 else
+                                                 {
+                                                         // Ventilation détaillée
+                                                         s TOTSOLD=TOTLG*-1
+                                                         s RECSOLD=$G(@FIC@(pPOSNUM,pDATE,"SOLDCREE",$P(INFOG,"\",1)))
+                                                         s LASTSOLD=+$P(RECSOLD,"\",2)
+                                                         s $P(RECSOLD,"\",2)=LASTSOLD+TOTSOLD 
+                                                         s @FIC@(pPOSNUM,pDATE,"SOLDCREE",$P(INFOG,"\",1))=RECSOLD
+                                                 }
+                                           }
+                                   }
+                                   s LG=$O(^TK(TICKET,LG))
+                           }
+                   }                       
+                  s TICKET=$O(^TKMOISJOURS(CA,DATE,TICKET))
+          }
+          s DATE=$O(^TKMOISJOURS(CA,DATE))
+  }
+  s CA=$O(^TKMOISJOURS(CA))
+ }
+ Q
+GETTKER
+ // Récupération des mises en erreurs de tickets
+ s AM=+$E(DATEDEB,1,4)-1
+ s AM2=+$E(DATEFIN,1,4)+1
+ s JJ=+(+$E(DATEDEB,5,6))
+ s JJ2=+(+$E(DATEFIN,5,6))+1
+ if $E(AM2,1,1)'="0"{s AM2="0"_AM2}
+ if $E(AM,1,1)'="0"{s AM="0"_AM}
+ if JJ<10 {s JJ="0"_JJ}
+ s USER=$O(^TKANNULE(pPOSNUM,""))
+ while USER'=""
+ {        
+          s DATEDEB=$E($ZD((IDATEDEB)-1,8),3,8)
+          s DATEFIN=$E($ZD((IDATEFIN)+1,8),3,8)
+  s DATEDEB=$O(^TKANNULE(pPOSNUM,USER,DATEDEB))
+  while (DATEDEB'="")&&(DATEDEB<DATEFIN)
+  {
+          s TK=$O(^TKANNULE(pPOSNUM,USER,DATEDEB,""))
+          while TK'=""
+          {                       
+                 s LASTER=+$G(@FIC@(pPOSNUM,pDATE,"TKER",USER))+1
+                 s @FIC@(pPOSNUM,pDATE,"TKER",USER)=LASTER                       
+                 s TK=$O(^TKANNULE(pPOSNUM,USER,DATEDEB,TK))
+          }
+          s DATEDEB=$O(^TKANNULE(pPOSNUM,USER,DATEDEB))
+  }
+  s USER=$O(^TKANNULE(pPOSNUM,USER))
+ }
+ q
+GETTKTIR
+ // Récupération des ouvertures de tiroir
+ s AM=+$E(DATEDEB,1,4)-1
+ s AM2=+$E(DATEFIN,1,4)+1
+ s JJ=+(+$E(DATEDEB,5,6))
+ s JJ2=+(+$E(DATEFIN,5,6))+1
+ if $E(AM2,1,1)'="0"{s AM2="0"_AM2}
+ if $E(AM,1,1)'="0"{s AM="0"_AM}
+ if JJ<10 {s JJ="0"_JJ}
+ s USER=$O(^TKTIR(pPOSNUM,""))
+ while USER'=""
+ {        
+          s DATEDEB=$E($ZD((IDATEDEB)-1,8),3,8)
+          s DATEFIN=$E($ZD((IDATEFIN)+1,8),3,8)
+  s DATEDEB=$O(^TKTIR(pPOSNUM,USER,DATEDEB))      
+  while (DATEDEB'="")&&(DATEDEB<DATEFIN)
+  {              
+          s TK=$O(^TKTIR(pPOSNUM,USER,DATEDEB,""))
+          while TK'=""
+          {
+                  s ID=$O(^TKTIR(pPOSNUM,USER,DATEDEB,TK,""))
+                  while ID'=""
+                  {
+                          s LASTTIR=+$G(@FIC@(pPOSNUM,pDATE,"TKTIR",USER))+1
+                          s @FIC@(pPOSNUM,pDATE,"TKTIR",USER)=LASTTIR
+                          s ID=$O(^TKTIR(pPOSNUM,USER,DATEDEB,TK,ID))
+                   }                                             
+                 s TK=$O(^TKTIR(pPOSNUM,USER,DATEDEB,TK))
+          }
+          s DATEDEB=$O(^TKTIR(pPOSNUM,USER,DATEDEB))
+  }
+  s USER=$O(^TKTIR(pPOSNUM,USER))
+ }
+ q
+GETTKMODIFCLOT
+ // Récupération des modifications du chiffre d'affaire 
+ // dans la clôture de caisse et dans la clôture générale
+ s TYPE=$O(^TKMODIFCLOT(""))
+ while TYPE'=""
+ {
+  s USER=$O(^TKMODIFCLOT(TYPE,""))
+  while USER'=""
+  {
+          s DATEDEB=$E($ZD((IDATEDEB)-1,8),3,8)
+          s DATEFIN=$E($ZD((IDATEFIN)+1,8),3,8)           
+          s DATEDEB=$O(^TKMODIFCLOT(TYPE,USER,DATEDEB))   
+          while (DATEDEB'="")&&(DATEDEB<DATEFIN)
+          {                      
+                  s CA=$O(^TKMODIFCLOT(TYPE,USER,DATEDEB,""))
+                  while CA'=""
+                  {
+                          s CPTMODIF=0                            
+                          s NBMODIF=$O(^TKMODIFCLOT(TYPE,USER,DATEDEB,CA,""))
+                          while NBMODIF'=""
+                          {
+                                  s @FIC@(pPOSNUM,pDATE,TYPE,"MODIFCLOT",USER,CA,NBMODIF)=$G(^TKMODIFCLOT(TYPE,USER,DATEDEB,CA,NBMODIF))
+                                  s CPTMODIF=CPTMODIF+1
+                                 s NBMODIF=$O(^TKMODIFCLOT(TYPE,USER,DATEDEB,CA,NBMODIF))         
+                          }
+                          s @FIC@(pPOSNUM,pDATE,TYPE,"MODIFCLOT",USER,CA)=CPTMODIF
+                          s CA=$O(^TKMODIFCLOT(TYPE,USER,DATEDEB,CA))
+                  }                                       
+                  s DATEDEB=$O(^TKMODIFCLOT(TYPE,USER,DATEDEB))
+          }
+          s USER=$O(^TKMODIFCLOT(TYPE,USER))
+  }
+         s TYPE=$O(^TKMODIFCLOT(TYPE))
+ }
+ Q
+GETREMBQ
+ // Remise en banque especes
+ // On va chercher dans le fichier ^HWCAIS la remise en banque avec le motif d'erreur si écart
+ s REMBQ=$G(^HWCAIS(pPOSNUM,IDATEDEB,"PAY",20))
+ s REMBQMOTIF=$G(^HWCAIS(pPOSNUM,IDATEDEB,"PAY",21))
+ s ECART=+$G(^HWCAIS(pPOSNUM,IDATEDEB,"PAY",5))
+ if REMBQ'=""{s @FIC@(pPOSNUM,$E($ZD(IDATEDEB,8),3,8),"REMBQ")=REMBQ}
+ if REMBQMOTIF'=""{s @FIC@(pPOSNUM,$E($ZD(IDATEDEB,8),3,8),"REMBQMOTIF")=REMBQMOTIF}
+ if +ECART<0{s @FIC@(pPOSNUM,$E($ZD(IDATEDEB,8),3,8),"ECART")=ECART} 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

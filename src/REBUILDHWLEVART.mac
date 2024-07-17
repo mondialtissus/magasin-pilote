@@ -1,0 +1,18 @@
+ROUTINE REBUILDHWLEVART
+REBUILDHWLEVART
+	k ^HWLEVART
+	s ART=$O(^ST(""))
+	while ART'=""{
+		s LEVST=$P($G(^ST(ART,4)),"\",1)
+		s ^HWLEVART(LEVST,ART)=""
+		s ART=$O(^ST(ART))
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

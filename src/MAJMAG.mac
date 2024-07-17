@@ -1,0 +1,22 @@
+ROUTINE MAJMAG
+MAJMAG
+ 
+ 	s POSNUM=$G(^HWINFO("MAG")) 	 	 	
+ 	if (POSNUM'="M157")&&(POSNUM'="M234")&&(POSNUM'="M391")&&(POSNUM'="M341")&&(POSNUM'="M160")&&(POSNUM'="M257"){k ^MENU(8,8)}
+ 	s IND=$O(^FILESFTP("FROMMAG",""),-1)+1
+	s ^FILESFTP("FROMMAG",IND)="MODRAPPORT"
+	s IND=IND+1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

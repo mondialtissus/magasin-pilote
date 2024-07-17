@@ -1,0 +1,9 @@
+ROUTINE MENUCOMMANDEBLOQUEE
+MENUCOMMANDEBLOQUEE
+ s CODEMAG=$G(^HWINFO("MAG"))
+ S ^FUSIONFAVORIS(11)="Commande bloquée\Firefox*http://10.10.1.9/CmdBloqWEB?CODEMAG="_CODEMAG_"\ImgInvSynth\ImgInvSynth"
+
+ q
+
+
+

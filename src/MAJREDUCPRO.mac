@@ -1,0 +1,10 @@
+ROUTINE MAJREDUCPRO
+MAJREDUCPRO
+ 
+	s ^HWINFO("REDUCPRO",1)="0.05\500"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   	s ^HWINFO("REDUCPRO",2)="0.1\1000"
+	
+ Q
+ 
+ 
+ 
+ 

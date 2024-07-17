@@ -1,0 +1,1753 @@
+ROUTINE OPEAH14CF
+OPEAH14CF
+ 
+ s ^TKFINSERIE(87294)="Coup de Froid AH14 "
+ s ^TKFINSERIE(76954)="Coup de Froid AH14 "
+ s ^TKFINSERIE(103230)="Coup de Froid AH14"
+ s ^TKFINSERIE(103064)="Coup de Froid AH14"
+ s ^TKFINSERIE(103063)="Coup de Froid AH14"
+ s ^TKFINSERIE(76952)="Coup de Froid AH14"
+ s ^TKFINSERIE(103231)="Coup de Froid AH14"
+ s ^TKFINSERIE(102232)="Coup de Froid AH14"
+ s ^TKFINSERIE(102231)="Coup de Froid AH14"
+ s ^TKFINSERIE(102235)="Coup de Froid AH14"
+ s ^TKFINSERIE(100353)="Coup de Froid AH14"
+ s ^TKFINSERIE(76955)="Coup de Froid AH14"
+ s ^TKFINSERIE(105144)="Coup de Froid AH14"
+ s ^TKFINSERIE(103296)="Coup de Froid AH14"
+ s ^TKFINSERIE(110865)="Coup de Froid AH14"
+ s ^TKFINSERIE(105143)="Coup de Froid AH14"
+ s ^TKFINSERIE(103113)="Coup de Froid AH14"
+ s ^TKFINSERIE(85020)="Coup de Froid AH14"
+ s ^TKFINSERIE(85018)="Coup de Froid AH14"
+ s ^TKFINSERIE(105257)="Coup de Froid AH14"
+ s ^TKFINSERIE(87384)="Coup de Froid AH14"
+ s ^TKFINSERIE(82269)="Coup de Froid AH14"
+ s ^TKFINSERIE(81092)="Coup de Froid AH14"
+ s ^TKFINSERIE(82270)="Coup de Froid AH14"
+ s ^TKFINSERIE(82770)="Coup de Froid AH14"
+ s ^TKFINSERIE(78530)="Coup de Froid AH14"
+ s ^TKFINSERIE(105142)="Coup de Froid AH14"
+ s ^TKFINSERIE(103262)="Coup de Froid AH14"
+ s ^TKFINSERIE(85066)="Coup de Froid AH14"
+ s ^TKFINSERIE(85072)="Coup de Froid AH14"
+ s ^TKFINSERIE(105441)="Coup de Froid AH14"
+ s ^TKFINSERIE(100324)="Coup de Froid AH14"
+ s ^TKFINSERIE(83094)="Coup de Froid AH14"
+ s ^TKFINSERIE(100431)="Coup de Froid AH14"
+ s ^TKFINSERIE(100427)="Coup de Froid AH14"
+ s ^TKFINSERIE(105498)="Coup de Froid AH14"
+ s ^TKFINSERIE(105488)="Coup de Froid AH14"
+ s ^TKFINSERIE(105153)="Coup de Froid AH14"
+ s ^TKFINSERIE(103060)="Coup de Froid AH14"
+ s ^TKFINSERIE(103201)="Coup de Froid AH14"
+ s ^TKFINSERIE(103061)="Coup de Froid AH14"
+ s ^TKFINSERIE(104166)="Coup de Froid AH14"
+ s ^TKFINSERIE(104167)="Coup de Froid AH14"
+ s ^TKFINSERIE(111759)="Coup de Froid AH14"
+ s ^TKFINSERIE(105217)="Coup de Froid AH14"
+ s ^TKFINSERIE(105215)="Coup de Froid AH14"
+ s ^TKFINSERIE(105216)="Coup de Froid AH14"
+ s ^TKFINSERIE(105505)="Coup de Froid AH14"
+ s ^TKFINSERIE(105163)="Coup de Froid AH14"
+ s ^TKFINSERIE(100295)="Coup de Froid AH14"
+ s ^TKFINSERIE(100290)="Coup de Froid AH14"
+ s ^TKFINSERIE(100289)="Coup de Froid AH14"
+ s ^TKFINSERIE(100296)="Coup de Froid AH14"
+ s ^TKFINSERIE(100291)="Coup de Froid AH14"
+ s ^TKFINSERIE(100292)="Coup de Froid AH14"
+ s ^TKFINSERIE(100293)="Coup de Froid AH14"
+ s ^TKFINSERIE(100294)="Coup de Froid AH14"
+ s ^TKFINSERIE(100297)="Coup de Froid AH14"
+ s ^TKFINSERIE(100288)="Coup de Froid AH14"
+ s ^TKFINSERIE(105497)="Coup de Froid AH14"
+ s ^TKFINSERIE(105490)="Coup de Froid AH14"
+ s ^TKFINSERIE(105487)="Coup de Froid AH14"
+ s ^TKFINSERIE(105491)="Coup de Froid AH14"
+ s ^TKFINSERIE(105486)="Coup de Froid AH14"
+ s ^TKFINSERIE(105506)="Coup de Froid AH14"
+ s ^TKFINSERIE(104163)="Coup de Froid AH14"
+ s ^TKFINSERIE(104165)="Coup de Froid AH14"
+ s ^TKFINSERIE(78532)="Coup de Froid AH14"
+ s ^TKFINSERIE(78536)="Coup de Froid AH14"
+ s ^TKFINSERIE(78535)="Coup de Froid AH14"
+ s ^TKFINSERIE(100422)="Coup de Froid AH14"
+ s ^TKFINSERIE(100404)="Coup de Froid AH14"
+ s ^TKFINSERIE(100421)="Coup de Froid AH14"
+ s ^TKFINSERIE(100428)="Coup de Froid AH14"
+ s ^TKFINSERIE(100423)="Coup de Froid AH14"
+ s ^TKFINSERIE(100426)="Coup de Froid AH14"
+ s ^TKFINSERIE(100405)="Coup de Froid AH14"
+ s ^TKFINSERIE(100425)="Coup de Froid AH14"
+ s ^TKFINSERIE(105475)="Coup de Froid AH14"
+ s ^TKFINSERIE(107773)="Coup de Froid AH14"
+ s ^TKFINSERIE(111771)="Coup de Froid AH14"
+ s ^TKFINSERIE(107772)="Coup de Froid AH14"
+ s ^TKFINSERIE(107771)="Coup de Froid AH14"
+ s ^TKFINSERIE(105469)="Coup de Froid AH14"
+ s ^TKFINSERIE(104175)="Coup de Froid AH14"
+ s ^TKFINSERIE(104177)="Coup de Froid AH14"
+ s ^TKFINSERIE(105468)="Coup de Froid AH14"
+ s ^TKFINSERIE(104176)="Coup de Froid AH14"
+ s ^TKFINSERIE(105499)="Coup de Froid AH14"
+ s ^TKFINSERIE(105493)="Coup de Froid AH14"
+ s ^TKFINSERIE(100320)="Coup de Froid AH14"
+ s ^TKFINSERIE(100321)="Coup de Froid AH14"
+ s ^TKFINSERIE(105501)="Coup de Froid AH14"
+ s ^TKFINSERIE(105492)="Coup de Froid AH14"
+ s ^TKFINSERIE(105504)="Coup de Froid AH14"
+ s ^TKFINSERIE(64441)="Coup de Froid AH14"
+ s ^TKFINSERIE(100384)="Coup de Froid AH14"
+ s ^TKFINSERIE(100382)="Coup de Froid AH14"
+ s ^TKFINSERIE(102240)="Coup de Froid AH14"
+ s ^TKFINSERIE(111673)="Coup de Froid AH14"
+ s ^TKFINSERIE(111671)="Coup de Froid AH14"
+ s ^TKFINSERIE(111672)="Coup de Froid AH14"
+ s ^TKFINSERIE(103256)="Coup de Froid AH14"
+ s ^TKFINSERIE(103255)="Coup de Froid AH14"
+ s ^TKFINSERIE(85067)="Coup de Froid AH14"
+ s ^TKFINSERIE(85069)="Coup de Froid AH14"
+ s ^TKFINSERIE(64440)="Coup de Froid AH14"
+ s ^TKFINSERIE(111825)="Coup de Froid AH14"
+ s ^TKFINSERIE(111824)="Coup de Froid AH14"
+ s ^TKFINSERIE(111826)="Coup de Froid AH14"
+ s ^TKFINSERIE(109809)="Coup de Froid AH14"
+ s ^TKFINSERIE(102242)="Coup de Froid AH14"
+ s ^TKFINSERIE(102243)="Coup de Froid AH14"
+ s ^TKFINSERIE(102245)="Coup de Froid AH14"
+ s ^TKFINSERIE(102244)="Coup de Froid AH14"
+ s ^TKFINSERIE(102241)="Coup de Froid AH14"
+ s ^TKFINSERIE(100376)="Coup de Froid AH14"
+ s ^TKFINSERIE(100375)="Coup de Froid AH14"
+ s ^TKFINSERIE(100378)="Coup de Froid AH14"
+ s ^TKFINSERIE(100377)="Coup de Froid AH14"
+ s ^TKFINSERIE(100379)="Coup de Froid AH14"
+ s ^TKFINSERIE(100381)="Coup de Froid AH14"
+ s ^TKFINSERIE(78373)="Coup de Froid AH14"
+ s ^TKFINSERIE(81102)="Coup de Froid AH14"
+ s ^TKFINSERIE(110863)="Coup de Froid AH14"
+ s ^TKFINSERIE(111304)="Coup de Froid AH14"
+ s ^TKFINSERIE(111305)="Coup de Froid AH14"
+ s ^TKFINSERIE(111689)="Coup de Froid AH14"
+ s ^TKFINSERIE(81106)="Coup de Froid AH14"
+ s ^TKFINSERIE(111688)="Coup de Froid AH14"
+ s ^TKFINSERIE(74385)="Coup de Froid AH14"
+ s ^TKFINSERIE(107828)="Coup de Froid AH14"
+ s ^TKFINSERIE(105164)="Coup de Froid AH14"
+ s ^TKFINSERIE(74384)="Coup de Froid AH14"
+ s ^TKFINSERIE(85063)="Coup de Froid AH14"
+ s ^TKFINSERIE(85064)="Coup de Froid AH14"
+ s ^TKFINSERIE(84128)="Coup de Froid AH14"
+ s ^TKFINSERIE(109810)="Coup de Froid AH14"
+ s ^TKFINSERIE(84130)="Coup de Froid AH14"
+ s ^TKFINSERIE(111761)="Coup de Froid AH14"
+ s ^TKFINSERIE(104172)="Coup de Froid AH14"
+ s ^TKFINSERIE(104171)="Coup de Froid AH14"
+ s ^TKFINSERIE(104173)="Coup de Froid AH14"
+ s ^TKFINSERIE(111763)="Coup de Froid AH14"
+ s ^TKFINSERIE(111770)="Coup de Froid AH14"
+ s ^TKFINSERIE(109812)="Coup de Froid AH14"
+ s ^TKFINSERIE(107813)="Coup de Froid AH14"
+ s ^TKFINSERIE(107811)="Coup de Froid AH14"
+ s ^TKFINSERIE(111809)="Coup de Froid AH14"
+ s ^TKFINSERIE(82248)="Coup de Froid AH14"
+ s ^TKFINSERIE(81088)="Coup de Froid AH14"
+ s ^TKFINSERIE(85058)="Coup de Froid AH14"
+ s ^TKFINSERIE(85057)="Coup de Froid AH14"
+ s ^TKFINSERIE(111703)="Coup de Froid AH14"
+ s ^TKFINSERIE(111704)="Coup de Froid AH14"
+ s ^TKFINSERIE(107812)="Coup de Froid AH14"
+ s ^TKFINSERIE(78405)="Coup de Froid AH14"
+ s ^TKFINSERIE(79032)="Coup de Froid AH14"
+ s ^TKFINSERIE(79033)="Coup de Froid AH14"
+ s ^TKFINSERIE(79034)="Coup de Froid AH14"
+ s ^TKFINSERIE(82201)="Coup de Froid AH14"
+ s ^TKFINSERIE(82874)="Coup de Froid AH14"
+ s ^TKFINSERIE(78353)="Coup de Froid AH14"
+ s ^TKFINSERIE(78354)="Coup de Froid AH14"
+ s ^TKFINSERIE(9047)="Coup de Froid AH14"
+ s ^TKFINSERIE(9044)="Coup de Froid AH14"
+ s ^TKFINSERIE(9049)="Coup de Froid AH14"
+ s ^TKFINSERIE(76190)="Coup de Froid AH14"
+ s ^TKFINSERIE(55584)="Coup de Froid AH14"
+ s ^TKFINSERIE(55579)="Coup de Froid AH14"
+ s ^TKFINSERIE(55582)="Coup de Froid AH14"
+ s ^TKFINSERIE(55580)="Coup de Froid AH14"
+ s ^TKFINSERIE(55583)="Coup de Froid AH14"
+ s ^TKFINSERIE(73127)="Coup de Froid AH14"
+ s ^TKFINSERIE(73129)="Coup de Froid AH14"
+ s ^TKFINSERIE(73124)="Coup de Froid AH14"
+ s ^TKFINSERIE(73128)="Coup de Froid AH14"
+ s ^TKFINSERIE(103091)="Coup de Froid AH14"
+ s ^TKFINSERIE(103254)="Coup de Froid AH14"
+ s ^TKFINSERIE(68046)="Coup de Froid AH14"
+ s ^TKFINSERIE(68042)="Coup de Froid AH14"
+ s ^TKFINSERIE(68044)="Coup de Froid AH14"
+ s ^TKFINSERIE(68043)="Coup de Froid AH14"
+ s ^TKFINSERIE(75993)="Coup de Froid AH14"
+ s ^TKFINSERIE(68041)="Coup de Froid AH14"
+ s ^TKFINSERIE(68045)="Coup de Froid AH14"
+ s ^TKFINSERIE(68040)="Coup de Froid AH14"
+ s ^TKFINSERIE(53524)="Coup de Froid AH14"
+ s ^TKFINSERIE(53511)="Coup de Froid AH14"
+ s ^TKFINSERIE(103079)="Coup de Froid AH14"
+ s ^TKFINSERIE(103251)="Coup de Froid AH14"
+ s ^TKFINSERIE(103252)="Coup de Froid AH14"
+ s ^TKFINSERIE(103250)="Coup de Froid AH14"
+ s ^TKFINSERIE(76005)="Coup de Froid AH14"
+ s ^TKFINSERIE(75988)="Coup de Froid AH14"
+ s ^TKFINSERIE(86510)="Coup de Froid AH14"
+ s ^TKFINSERIE(86516)="Coup de Froid AH14"
+ s ^TKFINSERIE(86513)="Coup de Froid AH14"
+ s ^TKFINSERIE(85029)="Coup de Froid AH14"
+ s ^TKFINSERIE(85027)="Coup de Froid AH14"
+ s ^TKFINSERIE(85028)="Coup de Froid AH14"
+ s ^TKFINSERIE(85030)="Coup de Froid AH14"
+ s ^TKFINSERIE(85765)="Coup de Froid AH14"
+ s ^TKFINSERIE(85757)="Coup de Froid AH14"
+ s ^TKFINSERIE(85764)="Coup de Froid AH14"
+ s ^TKFINSERIE(85763)="Coup de Froid AH14"
+ s ^TKFINSERIE(87376)="Coup de Froid AH14"
+ s ^TKFINSERIE(85141)="Coup de Froid AH14"
+ s ^TKFINSERIE(85139)="Coup de Froid AH14"
+ s ^TKFINSERIE(85140)="Coup de Froid AH14"
+ s ^TKFINSERIE(85138)="Coup de Froid AH14"
+ s ^TKFINSERIE(85142)="Coup de Froid AH14"
+ s ^TKFINSERIE(101208)="Coup de Froid AH14"
+ s ^TKFINSERIE(78803)="Coup de Froid AH14"
+ s ^TKFINSERIE(110858)="Coup de Froid AH14"
+ s ^TKFINSERIE(76173)="Coup de Froid AH14"
+ s ^TKFINSERIE(78741)="Coup de Froid AH14"
+ s ^TKFINSERIE(76167)="Coup de Froid AH14"
+ s ^TKFINSERIE(84220)="Coup de Froid AH14"
+ s ^TKFINSERIE(84222)="Coup de Froid AH14"
+ s ^TKFINSERIE(78806)="Coup de Froid AH14"
+ s ^TKFINSERIE(107684)="Coup de Froid AH14"
+ s ^TKFINSERIE(107683)="Coup de Froid AH14"
+ s ^TKFINSERIE(107770)="Coup de Froid AH14"
+ s ^TKFINSERIE(107521)="Coup de Froid AH14"
+ s ^TKFINSERIE(103228)="Coup de Froid AH14"
+ s ^TKFINSERIE(103225)="Coup de Froid AH14"
+ s ^TKFINSERIE(107518)="Coup de Froid AH14"
+ s ^TKFINSERIE(107516)="Coup de Froid AH14"
+ s ^TKFINSERIE(87321)="Coup de Froid AH14"
+ s ^TKFINSERIE(83584)="Coup de Froid AH14"
+ s ^TKFINSERIE(83585)="Coup de Froid AH14"
+ s ^TKFINSERIE(101181)="Coup de Froid AH14"
+ s ^TKFINSERIE(101182)="Coup de Froid AH14"
+ s ^TKFINSERIE(101183)="Coup de Froid AH14"
+ s ^TKFINSERIE(83588)="Coup de Froid AH14"
+ s ^TKFINSERIE(83586)="Coup de Froid AH14"
+ s ^TKFINSERIE(83587)="Coup de Froid AH14"
+ s ^TKFINSERIE(85055)="Coup de Froid AH14"
+ s ^TKFINSERIE(86998)="Coup de Froid AH14"
+ s ^TKFINSERIE(76174)="Coup de Froid AH14"
+ s ^TKFINSERIE(78718)="Coup de Froid AH14"
+ s ^TKFINSERIE(78720)="Coup de Froid AH14"
+ s ^TKFINSERIE(83590)="Coup de Froid AH14"
+ s ^TKFINSERIE(107514)="Coup de Froid AH14"
+ s ^TKFINSERIE(107689)="Coup de Froid AH14"
+ s ^TKFINSERIE(107513)="Coup de Froid AH14"
+ s ^TKFINSERIE(75968)="Coup de Froid AH14"
+ s ^TKFINSERIE(82308)="Coup de Froid AH14"
+ s ^TKFINSERIE(78728)="Coup de Froid AH14"
+ s ^TKFINSERIE(87848)="Coup de Froid AH14"
+ s ^TKFINSERIE(87326)="Coup de Froid AH14"
+ s ^TKFINSERIE(103253)="Coup de Froid AH14"
+ s ^TKFINSERIE(78737)="Coup de Froid AH14"
+ s ^TKFINSERIE(78738)="Coup de Froid AH14"
+ s ^TKFINSERIE(78735)="Coup de Froid AH14"
+ s ^TKFINSERIE(88391)="Coup de Froid AH14"
+ s ^TKFINSERIE(88393)="Coup de Froid AH14"
+ s ^TKFINSERIE(88392)="Coup de Froid AH14"
+ s ^TKFINSERIE(82293)="Coup de Froid AH14"
+ s ^TKFINSERIE(82294)="Coup de Froid AH14"
+ s ^TKFINSERIE(78795)="Coup de Froid AH14"
+ s ^TKFINSERIE(78794)="Coup de Froid AH14"
+ s ^TKFINSERIE(110866)="Coup de Froid AH14"
+ s ^TKFINSERIE(82458)="Coup de Froid AH14"
+ s ^TKFINSERIE(85123)="Coup de Froid AH14"
+ s ^TKFINSERIE(78730)="Coup de Froid AH14"
+ s ^TKFINSERIE(85122)="Coup de Froid AH14"
+ s ^TKFINSERIE(78550)="Coup de Froid AH14"
+ s ^TKFINSERIE(78549)="Coup de Froid AH14"
+ s ^TKFINSERIE(83663)="Coup de Froid AH14"
+ s ^TKFINSERIE(80232)="Coup de Froid AH14"
+ s ^TKFINSERIE(78740)="Coup de Froid AH14"
+ s ^TKFINSERIE(80080)="Coup de Froid AH14"
+ s ^TKFINSERIE(80079)="Coup de Froid AH14"
+ s ^TKFINSERIE(80077)="Coup de Froid AH14"
+ s ^TKFINSERIE(82448)="Coup de Froid AH14"
+ s ^TKFINSERIE(82438)="Coup de Froid AH14"
+ s ^TKFINSERIE(78586)="Coup de Froid AH14"
+ s ^TKFINSERIE(82306)="Coup de Froid AH14"
+ s ^TKFINSERIE(87381)="Coup de Froid AH14"
+ s ^TKFINSERIE(82315)="Coup de Froid AH14"
+ s ^TKFINSERIE(82304)="Coup de Froid AH14"
+ s ^TKFINSERIE(87380)="Coup de Froid AH14"
+ s ^TKFINSERIE(82313)="Coup de Froid AH14"
+ s ^TKFINSERIE(87317)="Coup de Froid AH14"
+ s ^TKFINSERIE(105126)="Coup de Froid AH14"
+ s ^TKFINSERIE(82310)="Coup de Froid AH14"
+ s ^TKFINSERIE(101191)="Coup de Froid AH14"
+ s ^TKFINSERIE(103088)="Coup de Froid AH14"
+ s ^TKFINSERIE(79161)="Coup de Froid AH14"
+ s ^TKFINSERIE(83609)="Coup de Froid AH14"
+ s ^TKFINSERIE(83610)="Coup de Froid AH14"
+ s ^TKFINSERIE(80065)="Coup de Froid AH14"
+ s ^TKFINSERIE(107686)="Coup de Froid AH14"
+ s ^TKFINSERIE(8475)="Coup de Froid AH14"
+ s ^TKFINSERIE(101188)="Coup de Froid AH14"
+ s ^TKFINSERIE(82453)="Coup de Froid AH14"
+ s ^TKFINSERIE(82456)="Coup de Froid AH14"
+ s ^TKFINSERIE(82457)="Coup de Froid AH14"
+ s ^TKFINSERIE(105155)="Coup de Froid AH14"
+ s ^TKFINSERIE(82300)="Coup de Froid AH14"
+ s ^TKFINSERIE(87849)="Coup de Froid AH14"
+ s ^TKFINSERIE(83569)="Coup de Froid AH14"
+ s ^TKFINSERIE(83567)="Coup de Froid AH14"
+ s ^TKFINSERIE(83568)="Coup de Froid AH14"
+ s ^TKFINSERIE(82289)="Coup de Froid AH14"
+ s ^TKFINSERIE(82288)="Coup de Froid AH14"
+ s ^TKFINSERIE(82287)="Coup de Froid AH14"
+ s ^TKFINSERIE(87316)="Coup de Froid AH14"
+ s ^TKFINSERIE(83589)="Coup de Froid AH14"
+ s ^TKFINSERIE(78938)="Coup de Froid AH14"
+ s ^TKFINSERIE(78940)="Coup de Froid AH14"
+ s ^TKFINSERIE(78937)="Coup de Froid AH14"
+ s ^TKFINSERIE(82311)="Coup de Froid AH14"
+ s ^TKFINSERIE(87322)="Coup de Froid AH14"
+ s ^TKFINSERIE(82292)="Coup de Froid AH14"
+ s ^TKFINSERIE(82290)="Coup de Froid AH14"
+ s ^TKFINSERIE(101444)="Coup de Froid AH14"
+ s ^TKFINSERIE(101446)="Coup de Froid AH14"
+ s ^TKFINSERIE(85009)="Coup de Froid AH14"
+ s ^TKFINSERIE(78731)="Coup de Froid AH14"
+ s ^TKFINSERIE(78732)="Coup de Froid AH14"
+ s ^TKFINSERIE(78733)="Coup de Froid AH14"
+ s ^TKFINSERIE(105130)="Coup de Froid AH14"
+ s ^TKFINSERIE(101452)="Coup de Froid AH14"
+ s ^TKFINSERIE(101441)="Coup de Froid AH14"
+ s ^TKFINSERIE(101445)="Coup de Froid AH14"
+ s ^TKFINSERIE(101443)="Coup de Froid AH14"
+ s ^TKFINSERIE(101442)="Coup de Froid AH14"
+ s ^TKFINSERIE(87377)="Coup de Froid AH14"
+ s ^TKFINSERIE(86991)="Coup de Froid AH14"
+ s ^TKFINSERIE(86992)="Coup de Froid AH14"
+ s ^TKFINSERIE(78585)="Coup de Froid AH14"
+ s ^TKFINSERIE(75978)="Coup de Froid AH14"
+ s ^TKFINSERIE(102405)="Coup de Froid AH14"
+ s ^TKFINSERIE(78552)="Coup de Froid AH14"
+ s ^TKFINSERIE(101448)="Coup de Froid AH14"
+ s ^TKFINSERIE(76000)="Coup de Froid AH14"
+ s ^TKFINSERIE(82266)="Coup de Froid AH14"
+ s ^TKFINSERIE(82267)="Coup de Froid AH14"
+ s ^TKFINSERIE(79159)="Coup de Froid AH14"
+ s ^TKFINSERIE(82301)="Coup de Froid AH14"
+ s ^TKFINSERIE(78547)="Coup de Froid AH14"
+ s ^TKFINSERIE(78934)="Coup de Froid AH14"
+ s ^TKFINSERIE(78936)="Coup de Froid AH14"
+ s ^TKFINSERIE(78543)="Coup de Froid AH14"
+ s ^TKFINSERIE(78540)="Coup de Froid AH14"
+ s ^TKFINSERIE(78542)="Coup de Froid AH14"
+ s ^TKFINSERIE(78541)="Coup de Froid AH14"
+ s ^TKFINSERIE(86990)="Coup de Froid AH14"
+ s ^TKFINSERIE(107699)="Coup de Froid AH14"
+ s ^TKFINSERIE(78421)="Coup de Froid AH14"
+ s ^TKFINSERIE(78429)="Coup de Froid AH14"
+ s ^TKFINSERIE(78430)="Coup de Froid AH14"
+ s ^TKFINSERIE(40953)="Coup de Froid AH14"
+ s ^TKFINSERIE(111475)="Coup de Froid AH14"
+ s ^TKFINSERIE(111474)="Coup de Froid AH14"
+ s ^TKFINSERIE(78432)="Coup de Froid AH14"
+ s ^TKFINSERIE(105137)="Coup de Froid AH14"
+ s ^TKFINSERIE(87846)="Coup de Froid AH14"
+ s ^TKFINSERIE(87847)="Coup de Froid AH14"
+ s ^TKFINSERIE(105135)="Coup de Froid AH14"
+ s ^TKFINSERIE(105136)="Coup de Froid AH14"
+ s ^TKFINSERIE(67431)="Coup de Froid AH14"
+ s ^TKFINSERIE(67432)="Coup de Froid AH14"
+ s ^TKFINSERIE(87163)="Coup de Froid AH14"
+ s ^TKFINSERIE(82296)="Coup de Froid AH14"
+ s ^TKFINSERIE(87162)="Coup de Froid AH14"
+ s ^TKFINSERIE(87160)="Coup de Froid AH14"
+ s ^TKFINSERIE(82295)="Coup de Froid AH14"
+ s ^TKFINSERIE(76175)="Coup de Froid AH14"
+ s ^TKFINSERIE(87161)="Coup de Froid AH14"
+ s ^TKFINSERIE(87159)="Coup de Froid AH14"
+ s ^TKFINSERIE(87158)="Coup de Froid AH14"
+ s ^TKFINSERIE(8397)="Coup de Froid AH14"
+ s ^TKFINSERIE(82459)="Coup de Froid AH14"
+ s ^TKFINSERIE(82460)="Coup de Froid AH14"
+ s ^TKFINSERIE(78799)="Coup de Froid AH14"
+ s ^TKFINSERIE(79163)="Coup de Froid AH14"
+ s ^TKFINSERIE(79162)="Coup de Froid AH14"
+ s ^TKFINSERIE(81045)="Coup de Froid AH14"
+ s ^TKFINSERIE(103293)="Coup de Froid AH14"
+ s ^TKFINSERIE(103294)="Coup de Froid AH14"
+ s ^TKFINSERIE(105128)="Coup de Froid AH14"
+ s ^TKFINSERIE(105127)="Coup de Froid AH14"
+ s ^TKFINSERIE(107519)="Coup de Froid AH14"
+ s ^TKFINSERIE(75755)="Coup de Froid AH14"
+ s ^TKFINSERIE(110859)="Coup de Froid AH14"
+ s ^TKFINSERIE(105132)="Coup de Froid AH14"
+ s ^TKFINSERIE(103089)="Coup de Froid AH14"
+ s ^TKFINSERIE(103090)="Coup de Froid AH14"
+ s ^TKFINSERIE(105133)="Coup de Froid AH14"
+ s ^TKFINSERIE(86995)="Coup de Froid AH14"
+ s ^TKFINSERIE(86994)="Coup de Froid AH14"
+ s ^TKFINSERIE(86993)="Coup de Froid AH14"
+ s ^TKFINSERIE(101185)="Coup de Froid AH14"
+ s ^TKFINSERIE(82297)="Coup de Froid AH14"
+ s ^TKFINSERIE(106107)="Coup de Froid AH14"
+ s ^TKFINSERIE(106109)="Coup de Froid AH14"
+ s ^TKFINSERIE(106108)="Coup de Froid AH14"
+ s ^TKFINSERIE(106106)="Coup de Froid AH14"
+ s ^TKFINSERIE(106105)="Coup de Froid AH14"
+ s ^TKFINSERIE(100470)="Coup de Froid AH14"
+ s ^TKFINSERIE(100469)="Coup de Froid AH14"
+ s ^TKFINSERIE(105134)="Coup de Froid AH14"
+ s ^TKFINSERIE(105138)="Coup de Froid AH14"
+ s ^TKFINSERIE(105139)="Coup de Froid AH14"
+ s ^TKFINSERIE(105140)="Coup de Froid AH14"
+ s ^TKFINSERIE(107753)="Coup de Froid AH14"
+ s ^TKFINSERIE(107752)="Coup de Froid AH14"
+ s ^TKFINSERIE(107754)="Coup de Froid AH14"
+ s ^TKFINSERIE(107760)="Coup de Froid AH14"
+ s ^TKFINSERIE(41084)="Coup de Froid AH14"
+ s ^TKFINSERIE(41075)="Coup de Froid AH14"
+ s ^TKFINSERIE(102406)="Coup de Froid AH14"
+ s ^TKFINSERIE(102403)="Coup de Froid AH14"
+ s ^TKFINSERIE(102398)="Coup de Froid AH14"
+ s ^TKFINSERIE(102402)="Coup de Froid AH14"
+ s ^TKFINSERIE(102401)="Coup de Froid AH14"
+ s ^TKFINSERIE(105131)="Coup de Froid AH14"
+ s ^TKFINSERIE(82510)="Coup de Froid AH14"
+ s ^TKFINSERIE(82511)="Coup de Froid AH14"
+ s ^TKFINSERIE(107764)="Coup de Froid AH14"
+ s ^TKFINSERIE(107767)="Coup de Froid AH14"
+ s ^TKFINSERIE(107765)="Coup de Froid AH14"
+ s ^TKFINSERIE(105036)="Coup de Froid AH14"
+ s ^TKFINSERIE(103317)="Coup de Froid AH14"
+ s ^TKFINSERIE(103318)="Coup de Froid AH14"
+ s ^TKFINSERIE(103316)="Coup de Froid AH14"
+ s ^TKFINSERIE(111312)="Coup de Froid AH14"
+ s ^TKFINSERIE(111310)="Coup de Froid AH14"
+ s ^TKFINSERIE(3263)="Coup de Froid AH14"
+ s ^TKFINSERIE(107816)="Coup de Froid AH14"
+ s ^TKFINSERIE(107817)="Coup de Froid AH14"
+ s ^TKFINSERIE(103514)="Coup de Froid AH14"
+ s ^TKFINSERIE(87288)="Coup de Froid AH14"
+ s ^TKFINSERIE(87286)="Coup de Froid AH14"
+ s ^TKFINSERIE(103541)="Coup de Froid AH14"
+ s ^TKFINSERIE(107587)="Coup de Froid AH14"
+ s ^TKFINSERIE(87036)="Coup de Froid AH14"
+ s ^TKFINSERIE(87037)="Coup de Froid AH14"
+ s ^TKFINSERIE(87035)="Coup de Froid AH14"
+ s ^TKFINSERIE(87034)="Coup de Froid AH14"
+ s ^TKFINSERIE(103641)="Coup de Froid AH14"
+ s ^TKFINSERIE(103640)="Coup de Froid AH14"
+ s ^TKFINSERIE(107628)="Coup de Froid AH14"
+ s ^TKFINSERIE(111341)="Coup de Froid AH14"
+ s ^TKFINSERIE(81531)="Coup de Froid AH14"
+ s ^TKFINSERIE(81527)="Coup de Froid AH14"
+ s ^TKFINSERIE(107743)="Coup de Froid AH14"
+ s ^TKFINSERIE(107565)="Coup de Froid AH14"
+ s ^TKFINSERIE(107574)="Coup de Froid AH14"
+ s ^TKFINSERIE(107575)="Coup de Froid AH14"
+ s ^TKFINSERIE(107567)="Coup de Froid AH14"
+ s ^TKFINSERIE(107573)="Coup de Froid AH14"
+ s ^TKFINSERIE(103523)="Coup de Froid AH14"
+ s ^TKFINSERIE(107580)="Coup de Froid AH14"
+ s ^TKFINSERIE(107582)="Coup de Froid AH14"
+ s ^TKFINSERIE(107572)="Coup de Froid AH14"
+ s ^TKFINSERIE(107583)="Coup de Froid AH14"
+ s ^TKFINSERIE(112653)="Coup de Froid AH14"
+ s ^TKFINSERIE(112657)="Coup de Froid AH14"
+ s ^TKFINSERIE(112652)="Coup de Froid AH14"
+ s ^TKFINSERIE(112662)="Coup de Froid AH14"
+ s ^TKFINSERIE(112659)="Coup de Froid AH14"
+ s ^TKFINSERIE(112826)="Coup de Froid AH14"
+ s ^TKFINSERIE(107594)="Coup de Froid AH14"
+ s ^TKFINSERIE(107744)="Coup de Froid AH14"
+ s ^TKFINSERIE(107745)="Coup de Froid AH14"
+ s ^TKFINSERIE(78857)="Coup de Froid AH14"
+ s ^TKFINSERIE(78856)="Coup de Froid AH14"
+ s ^TKFINSERIE(102173)="Coup de Froid AH14"
+ s ^TKFINSERIE(67195)="Coup de Froid AH14"
+ s ^TKFINSERIE(67198)="Coup de Froid AH14"
+ s ^TKFINSERIE(101934)="Coup de Froid AH14"
+ s ^TKFINSERIE(76372)="Coup de Froid AH14"
+ s ^TKFINSERIE(76370)="Coup de Froid AH14"
+ s ^TKFINSERIE(101980)="Coup de Froid AH14"
+ s ^TKFINSERIE(101871)="Coup de Froid AH14"
+ s ^TKFINSERIE(87484)="Coup de Froid AH14"
+ s ^TKFINSERIE(86541)="Coup de Froid AH14"
+ s ^TKFINSERIE(75236)="Coup de Froid AH14"
+ s ^TKFINSERIE(75243)="Coup de Froid AH14"
+ s ^TKFINSERIE(75244)="Coup de Froid AH14"
+ s ^TKFINSERIE(101911)="Coup de Froid AH14"
+ s ^TKFINSERIE(86380)="Coup de Froid AH14"
+ s ^TKFINSERIE(86379)="Coup de Froid AH14"
+ s ^TKFINSERIE(76247)="Coup de Froid AH14"
+ s ^TKFINSERIE(76246)="Coup de Froid AH14"
+ s ^TKFINSERIE(78628)="Coup de Froid AH14"
+ s ^TKFINSERIE(78630)="Coup de Froid AH14"
+ s ^TKFINSERIE(78629)="Coup de Froid AH14"
+ s ^TKFINSERIE(75103)="Coup de Froid AH14"
+ s ^TKFINSERIE(78240)="Coup de Froid AH14"
+ s ^TKFINSERIE(76242)="Coup de Froid AH14"
+ s ^TKFINSERIE(77160)="Coup de Froid AH14"
+ s ^TKFINSERIE(77161)="Coup de Froid AH14"
+ s ^TKFINSERIE(77159)="Coup de Froid AH14"
+ s ^TKFINSERIE(106854)="Coup de Froid AH14"
+ s ^TKFINSERIE(75159)="Coup de Froid AH14"
+ s ^TKFINSERIE(67222)="Coup de Froid AH14"
+ s ^TKFINSERIE(101794)="Coup de Froid AH14"
+ s ^TKFINSERIE(101896)="Coup de Froid AH14"
+ s ^TKFINSERIE(101895)="Coup de Froid AH14"
+ s ^TKFINSERIE(101803)="Coup de Froid AH14"
+ s ^TKFINSERIE(86494)="Coup de Froid AH14"
+ s ^TKFINSERIE(82677)="Coup de Froid AH14"
+ s ^TKFINSERIE(82676)="Coup de Froid AH14"
+ s ^TKFINSERIE(82675)="Coup de Froid AH14"
+ s ^TKFINSERIE(101814)="Coup de Froid AH14"
+ s ^TKFINSERIE(89925)="Coup de Froid AH14"
+ s ^TKFINSERIE(104426)="Coup de Froid AH14"
+ s ^TKFINSERIE(101914)="Coup de Froid AH14"
+ s ^TKFINSERIE(101915)="Coup de Froid AH14"
+ s ^TKFINSERIE(101919)="Coup de Froid AH14"
+ s ^TKFINSERIE(101933)="Coup de Froid AH14"
+ s ^TKFINSERIE(101935)="Coup de Froid AH14"
+ s ^TKFINSERIE(87485)="Coup de Froid AH14"
+ s ^TKFINSERIE(87487)="Coup de Froid AH14"
+ s ^TKFINSERIE(87486)="Coup de Froid AH14"
+ s ^TKFINSERIE(100929)="Coup de Froid AH14"
+ s ^TKFINSERIE(100927)="Coup de Froid AH14"
+ s ^TKFINSERIE(100925)="Coup de Froid AH14"
+ s ^TKFINSERIE(100928)="Coup de Froid AH14"
+ s ^TKFINSERIE(100926)="Coup de Froid AH14"
+ s ^TKFINSERIE(87483)="Coup de Froid AH14"
+ s ^TKFINSERIE(100937)="Coup de Froid AH14"
+ s ^TKFINSERIE(101506)="Coup de Froid AH14"
+ s ^TKFINSERIE(86502)="Coup de Froid AH14"
+ s ^TKFINSERIE(86392)="Coup de Froid AH14"
+ s ^TKFINSERIE(106853)="Coup de Froid AH14"
+ s ^TKFINSERIE(106972)="Coup de Froid AH14"
+ s ^TKFINSERIE(100924)="Coup de Froid AH14"
+ s ^TKFINSERIE(86961)="Coup de Froid AH14"
+ s ^TKFINSERIE(104425)="Coup de Froid AH14"
+ s ^TKFINSERIE(100931)="Coup de Froid AH14"
+ s ^TKFINSERIE(100932)="Coup de Froid AH14"
+ s ^TKFINSERIE(100930)="Coup de Froid AH14"
+ s ^TKFINSERIE(100923)="Coup de Froid AH14"
+ s ^TKFINSERIE(86333)="Coup de Froid AH14"
+ s ^TKFINSERIE(104350)="Coup de Froid AH14"
+ s ^TKFINSERIE(101810)="Coup de Froid AH14"
+ s ^TKFINSERIE(66864)="Coup de Froid AH14"
+ s ^TKFINSERIE(101869)="Coup de Froid AH14"
+ s ^TKFINSERIE(76378)="Coup de Froid AH14"
+ s ^TKFINSERIE(66521)="Coup de Froid AH14"
+ s ^TKFINSERIE(66517)="Coup de Froid AH14"
+ s ^TKFINSERIE(71661)="Coup de Froid AH14"
+ s ^TKFINSERIE(66519)="Coup de Froid AH14"
+ s ^TKFINSERIE(106921)="Coup de Froid AH14"
+ s ^TKFINSERIE(106936)="Coup de Froid AH14"
+ s ^TKFINSERIE(100934)="Coup de Froid AH14"
+ s ^TKFINSERIE(100933)="Coup de Froid AH14"
+ s ^TKFINSERIE(100935)="Coup de Froid AH14"
+ s ^TKFINSERIE(104346)="Coup de Froid AH14"
+ s ^TKFINSERIE(104345)="Coup de Froid AH14"
+ s ^TKFINSERIE(86470)="Coup de Froid AH14"
+ s ^TKFINSERIE(101816)="Coup de Froid AH14"
+ s ^TKFINSERIE(101813)="Coup de Froid AH14"
+ s ^TKFINSERIE(104341)="Coup de Froid AH14"
+ s ^TKFINSERIE(104343)="Coup de Froid AH14"
+ s ^TKFINSERIE(104342)="Coup de Froid AH14"
+ s ^TKFINSERIE(104344)="Coup de Froid AH14"
+ s ^TKFINSERIE(106922)="Coup de Froid AH14"
+ s ^TKFINSERIE(89926)="Coup de Froid AH14"
+ s ^TKFINSERIE(104442)="Coup de Froid AH14"
+ s ^TKFINSERIE(104449)="Coup de Froid AH14"
+ s ^TKFINSERIE(104454)="Coup de Froid AH14"
+ s ^TKFINSERIE(104441)="Coup de Froid AH14"
+ s ^TKFINSERIE(104456)="Coup de Froid AH14"
+ s ^TKFINSERIE(104457)="Coup de Froid AH14"
+ s ^TKFINSERIE(104455)="Coup de Froid AH14"
+ s ^TKFINSERIE(82318)="Coup de Froid AH14"
+ s ^TKFINSERIE(82319)="Coup de Froid AH14"
+ s ^TKFINSERIE(107065)="Coup de Froid AH14"
+ s ^TKFINSERIE(107064)="Coup de Froid AH14"
+ s ^TKFINSERIE(107063)="Coup de Froid AH14"
+ s ^TKFINSERIE(105915)="Coup de Froid AH14"
+ s ^TKFINSERIE(105916)="Coup de Froid AH14"
+ s ^TKFINSERIE(105914)="Coup de Froid AH14"
+ s ^TKFINSERIE(113918)="Coup de Froid AH14"
+ s ^TKFINSERIE(113917)="Coup de Froid AH14"
+ s ^TKFINSERIE(113919)="Coup de Froid AH14"
+ s ^TKFINSERIE(113920)="Coup de Froid AH14"
+ s ^TKFINSERIE(113916)="Coup de Froid AH14"
+ s ^TKFINSERIE(86394)="Coup de Froid AH14"
+ s ^TKFINSERIE(100809)="Coup de Froid AH14"
+ s ^TKFINSERIE(100808)="Coup de Froid AH14"
+ s ^TKFINSERIE(104550)="Coup de Froid AH14"
+ s ^TKFINSERIE(81629)="Coup de Froid AH14"
+ s ^TKFINSERIE(107054)="Coup de Froid AH14"
+ s ^TKFINSERIE(107050)="Coup de Froid AH14"
+ s ^TKFINSERIE(107056)="Coup de Froid AH14"
+ s ^TKFINSERIE(107057)="Coup de Froid AH14"
+ s ^TKFINSERIE(107048)="Coup de Froid AH14"
+ s ^TKFINSERIE(107059)="Coup de Froid AH14"
+ s ^TKFINSERIE(107061)="Coup de Froid AH14"
+ s ^TKFINSERIE(107055)="Coup de Froid AH14"
+ s ^TKFINSERIE(107044)="Coup de Froid AH14"
+ s ^TKFINSERIE(107042)="Coup de Froid AH14"
+ s ^TKFINSERIE(107043)="Coup de Froid AH14"
+ s ^TKFINSERIE(107046)="Coup de Froid AH14"
+ s ^TKFINSERIE(104348)="Coup de Froid AH14"
+ s ^TKFINSERIE(101904)="Coup de Froid AH14"
+ s ^TKFINSERIE(101897)="Coup de Froid AH14"
+ s ^TKFINSERIE(101793)="Coup de Froid AH14"
+ s ^TKFINSERIE(105608)="Coup de Froid AH14"
+ s ^TKFINSERIE(86318)="Coup de Froid AH14"
+ s ^TKFINSERIE(86317)="Coup de Froid AH14"
+ s ^TKFINSERIE(100805)="Coup de Froid AH14"
+ s ^TKFINSERIE(105619)="Coup de Froid AH14"
+ s ^TKFINSERIE(105620)="Coup de Froid AH14"
+ s ^TKFINSERIE(105618)="Coup de Froid AH14"
+ s ^TKFINSERIE(105617)="Coup de Froid AH14"
+ s ^TKFINSERIE(100812)="Coup de Froid AH14"
+ s ^TKFINSERIE(107113)="Coup de Froid AH14"
+ s ^TKFINSERIE(106973)="Coup de Froid AH14"
+ s ^TKFINSERIE(104445)="Coup de Froid AH14"
+ s ^TKFINSERIE(104444)="Coup de Froid AH14"
+ s ^TKFINSERIE(106928)="Coup de Froid AH14"
+ s ^TKFINSERIE(106929)="Coup de Froid AH14"
+ s ^TKFINSERIE(104389)="Coup de Froid AH14"
+ s ^TKFINSERIE(104387)="Coup de Froid AH14"
+ s ^TKFINSERIE(89899)="Coup de Froid AH14"
+ s ^TKFINSERIE(89898)="Coup de Froid AH14"
+ s ^TKFINSERIE(89897)="Coup de Froid AH14"
+ s ^TKFINSERIE(101809)="Coup de Froid AH14"
+ s ^TKFINSERIE(82375)="Coup de Froid AH14"
+ s ^TKFINSERIE(81818)="Coup de Froid AH14"
+ s ^TKFINSERIE(81822)="Coup de Froid AH14"
+ s ^TKFINSERIE(101806)="Coup de Froid AH14"
+ s ^TKFINSERIE(101804)="Coup de Froid AH14"
+ s ^TKFINSERIE(101805)="Coup de Froid AH14"
+ s ^TKFINSERIE(101807)="Coup de Froid AH14"
+ s ^TKFINSERIE(104446)="Coup de Froid AH14"
+ s ^TKFINSERIE(104450)="Coup de Froid AH14"
+ s ^TKFINSERIE(104451)="Coup de Froid AH14"
+ s ^TKFINSERIE(104447)="Coup de Froid AH14"
+ s ^TKFINSERIE(104364)="Coup de Froid AH14"
+ s ^TKFINSERIE(101936)="Coup de Froid AH14"
+ s ^TKFINSERIE(78627)="Coup de Froid AH14"
+ s ^TKFINSERIE(82317)="Coup de Froid AH14"
+ s ^TKFINSERIE(106919)="Coup de Froid AH14"
+ s ^TKFINSERIE(106933)="Coup de Froid AH14"
+ s ^TKFINSERIE(106935)="Coup de Froid AH14"
+ s ^TKFINSERIE(106934)="Coup de Froid AH14"
+ s ^TKFINSERIE(106940)="Coup de Froid AH14"
+ s ^TKFINSERIE(87738)="Coup de Froid AH14"
+ s ^TKFINSERIE(87737)="Coup de Froid AH14"
+ s ^TKFINSERIE(107021)="Coup de Froid AH14"
+ s ^TKFINSERIE(89886)="Coup de Froid AH14"
+ s ^TKFINSERIE(89884)="Coup de Froid AH14"
+ s ^TKFINSERIE(89891)="Coup de Froid AH14"
+ s ^TKFINSERIE(111151)="Coup de Froid AH14"
+ s ^TKFINSERIE(111152)="Coup de Froid AH14"
+ s ^TKFINSERIE(82362)="Coup de Froid AH14"
+ s ^TKFINSERIE(107019)="Coup de Froid AH14"
+ s ^TKFINSERIE(104411)="Coup de Froid AH14"
+ s ^TKFINSERIE(104410)="Coup de Froid AH14"
+ s ^TKFINSERIE(101870)="Coup de Froid AH14"
+ s ^TKFINSERIE(107541)="Coup de Froid AH14"
+ s ^TKFINSERIE(107540)="Coup de Froid AH14"
+ s ^TKFINSERIE(107536)="Coup de Froid AH14"
+ s ^TKFINSERIE(107542)="Coup de Froid AH14"
+ s ^TKFINSERIE(107538)="Coup de Froid AH14"
+ s ^TKFINSERIE(107539)="Coup de Froid AH14"
+ s ^TKFINSERIE(107537)="Coup de Froid AH14"
+ s ^TKFINSERIE(107543)="Coup de Froid AH14"
+ s ^TKFINSERIE(101837)="Coup de Froid AH14"
+ s ^TKFINSERIE(82360)="Coup de Froid AH14"
+ s ^TKFINSERIE(107110)="Coup de Froid AH14"
+ s ^TKFINSERIE(104332)="Coup de Froid AH14"
+ s ^TKFINSERIE(101918)="Coup de Froid AH14"
+ s ^TKFINSERIE(101923)="Coup de Froid AH14"
+ s ^TKFINSERIE(101920)="Coup de Froid AH14"
+ s ^TKFINSERIE(101927)="Coup de Froid AH14"
+ s ^TKFINSERIE(87723)="Coup de Froid AH14"
+ s ^TKFINSERIE(87724)="Coup de Froid AH14"
+ s ^TKFINSERIE(87726)="Coup de Froid AH14"
+ s ^TKFINSERIE(83349)="Coup de Froid AH14"
+ s ^TKFINSERIE(87725)="Coup de Froid AH14"
+ s ^TKFINSERIE(87722)="Coup de Froid AH14"
+ s ^TKFINSERIE(106974)="Coup de Froid AH14"
+ s ^TKFINSERIE(81843)="Coup de Froid AH14"
+ s ^TKFINSERIE(81842)="Coup de Froid AH14"
+ s ^TKFINSERIE(107013)="Coup de Froid AH14"
+ s ^TKFINSERIE(83345)="Coup de Froid AH14"
+ s ^TKFINSERIE(83358)="Coup de Froid AH14"
+ s ^TKFINSERIE(83352)="Coup de Froid AH14"
+ s ^TKFINSERIE(83348)="Coup de Froid AH14"
+ s ^TKFINSERIE(83344)="Coup de Froid AH14"
+ s ^TKFINSERIE(83350)="Coup de Froid AH14"
+ s ^TKFINSERIE(83353)="Coup de Froid AH14"
+ s ^TKFINSERIE(83347)="Coup de Froid AH14"
+ s ^TKFINSERIE(107012)="Coup de Froid AH14"
+ s ^TKFINSERIE(106885)="Coup de Froid AH14"
+ s ^TKFINSERIE(106887)="Coup de Froid AH14"
+ s ^TKFINSERIE(106890)="Coup de Froid AH14"
+ s ^TKFINSERIE(106886)="Coup de Froid AH14"
+ s ^TKFINSERIE(106888)="Coup de Froid AH14"
+ s ^TKFINSERIE(106891)="Coup de Froid AH14"
+ s ^TKFINSERIE(106889)="Coup de Froid AH14"
+ s ^TKFINSERIE(106884)="Coup de Froid AH14"
+ s ^TKFINSERIE(101945)="Coup de Froid AH14"
+ s ^TKFINSERIE(101947)="Coup de Froid AH14"
+ s ^TKFINSERIE(101949)="Coup de Froid AH14"
+ s ^TKFINSERIE(82465)="Coup de Froid AH14"
+ s ^TKFINSERIE(82464)="Coup de Froid AH14"
+ s ^TKFINSERIE(85825)="Coup de Froid AH14"
+ s ^TKFINSERIE(85828)="Coup de Froid AH14"
+ s ^TKFINSERIE(85826)="Coup de Froid AH14"
+ s ^TKFINSERIE(85829)="Coup de Froid AH14"
+ s ^TKFINSERIE(82469)="Coup de Froid AH14"
+ s ^TKFINSERIE(85830)="Coup de Froid AH14"
+ s ^TKFINSERIE(82361)="Coup de Froid AH14"
+ s ^TKFINSERIE(106912)="Coup de Froid AH14"
+ s ^TKFINSERIE(101872)="Coup de Froid AH14"
+ s ^TKFINSERIE(102044)="Coup de Froid AH14"
+ s ^TKFINSERIE(106924)="Coup de Froid AH14"
+ s ^TKFINSERIE(106923)="Coup de Froid AH14"
+ s ^TKFINSERIE(107030)="Coup de Froid AH14"
+ s ^TKFINSERIE(107117)="Coup de Froid AH14"
+ s ^TKFINSERIE(107116)="Coup de Froid AH14"
+ s ^TKFINSERIE(81850)="Coup de Froid AH14"
+ s ^TKFINSERIE(81849)="Coup de Froid AH14"
+ s ^TKFINSERIE(81852)="Coup de Froid AH14"
+ s ^TKFINSERIE(81848)="Coup de Froid AH14"
+ s ^TKFINSERIE(81851)="Coup de Froid AH14"
+ s ^TKFINSERIE(81659)="Coup de Froid AH14"
+ s ^TKFINSERIE(81661)="Coup de Froid AH14"
+ s ^TKFINSERIE(81662)="Coup de Froid AH14"
+ s ^TKFINSERIE(81660)="Coup de Froid AH14"
+ s ^TKFINSERIE(107032)="Coup de Froid AH14"
+ s ^TKFINSERIE(106981)="Coup de Froid AH14"
+ s ^TKFINSERIE(107033)="Coup de Froid AH14"
+ s ^TKFINSERIE(106881)="Coup de Froid AH14"
+ s ^TKFINSERIE(106883)="Coup de Froid AH14"
+ s ^TKFINSERIE(106882)="Coup de Froid AH14"
+ s ^TKFINSERIE(81841)="Coup de Froid AH14"
+ s ^TKFINSERIE(81844)="Coup de Froid AH14"
+ s ^TKFINSERIE(111238)="Coup de Froid AH14"
+ s ^TKFINSERIE(111237)="Coup de Froid AH14"
+ s ^TKFINSERIE(83881)="Coup de Froid AH14"
+ s ^TKFINSERIE(106925)="Coup de Froid AH14"
+ s ^TKFINSERIE(106918)="Coup de Froid AH14"
+ s ^TKFINSERIE(106917)="Coup de Froid AH14"
+ s ^TKFINSERIE(106916)="Coup de Froid AH14"
+ s ^TKFINSERIE(106913)="Coup de Froid AH14"
+ s ^TKFINSERIE(106914)="Coup de Froid AH14"
+ s ^TKFINSERIE(107067)="Coup de Froid AH14"
+ s ^TKFINSERIE(107069)="Coup de Froid AH14"
+ s ^TKFINSERIE(107011)="Coup de Froid AH14"
+ s ^TKFINSERIE(106995)="Coup de Froid AH14"
+ s ^TKFINSERIE(106998)="Coup de Froid AH14"
+ s ^TKFINSERIE(101817)="Coup de Froid AH14"
+ s ^TKFINSERIE(83882)="Coup de Froid AH14"
+ s ^TKFINSERIE(83879)="Coup de Froid AH14"
+ s ^TKFINSERIE(83880)="Coup de Froid AH14"
+ s ^TKFINSERIE(106902)="Coup de Froid AH14"
+ s ^TKFINSERIE(106903)="Coup de Froid AH14"
+ s ^TKFINSERIE(106901)="Coup de Froid AH14"
+ s ^TKFINSERIE(111236)="Coup de Froid AH14"
+ s ^TKFINSERIE(111235)="Coup de Froid AH14"
+ s ^TKFINSERIE(106948)="Coup de Froid AH14"
+ s ^TKFINSERIE(106949)="Coup de Froid AH14"
+ s ^TKFINSERIE(107025)="Coup de Froid AH14"
+ s ^TKFINSERIE(107023)="Coup de Froid AH14"
+ s ^TKFINSERIE(107024)="Coup de Froid AH14"
+ s ^TKFINSERIE(105601)="Coup de Froid AH14"
+ s ^TKFINSERIE(105602)="Coup de Froid AH14"
+ s ^TKFINSERIE(106937)="Coup de Froid AH14"
+ s ^TKFINSERIE(104560)="Coup de Froid AH14"
+ s ^TKFINSERIE(104559)="Coup de Froid AH14"
+ s ^TKFINSERIE(104558)="Coup de Froid AH14"
+ s ^TKFINSERIE(104557)="Coup de Froid AH14"
+ s ^TKFINSERIE(106947)="Coup de Froid AH14"
+ s ^TKFINSERIE(106915)="Coup de Froid AH14"
+ s ^TKFINSERIE(107027)="Coup de Froid AH14"
+ s ^TKFINSERIE(107026)="Coup de Froid AH14"
+ s ^TKFINSERIE(107028)="Coup de Froid AH14"
+ s ^TKFINSERIE(106799)="Coup de Froid AH14"
+ s ^TKFINSERIE(106798)="Coup de Froid AH14"
+ s ^TKFINSERIE(106797)="Coup de Froid AH14"
+ s ^TKFINSERIE(106142)="Coup de Froid AH14"
+ s ^TKFINSERIE(106144)="Coup de Froid AH14"
+ s ^TKFINSERIE(106141)="Coup de Froid AH14"
+ s ^TKFINSERIE(106145)="Coup de Froid AH14"
+ s ^TKFINSERIE(106137)="Coup de Froid AH14"
+ s ^TKFINSERIE(106135)="Coup de Froid AH14"
+ s ^TKFINSERIE(106139)="Coup de Froid AH14"
+ s ^TKFINSERIE(106134)="Coup de Froid AH14"
+ s ^TKFINSERIE(106147)="Coup de Froid AH14"
+ s ^TKFINSERIE(106148)="Coup de Froid AH14"
+ s ^TKFINSERIE(106146)="Coup de Froid AH14"
+ s ^TKFINSERIE(106138)="Coup de Froid AH14"
+ s ^TKFINSERIE(106143)="Coup de Froid AH14"
+ s ^TKFINSERIE(106955)="Coup de Froid AH14"
+ s ^TKFINSERIE(107099)="Coup de Froid AH14"
+ s ^TKFINSERIE(107097)="Coup de Froid AH14"
+ s ^TKFINSERIE(107098)="Coup de Froid AH14"
+ s ^TKFINSERIE(106985)="Coup de Froid AH14"
+ s ^TKFINSERIE(106987)="Coup de Froid AH14"
+ s ^TKFINSERIE(106986)="Coup de Froid AH14"
+ s ^TKFINSERIE(106982)="Coup de Froid AH14"
+ s ^TKFINSERIE(111155)="Coup de Froid AH14"
+ s ^TKFINSERIE(111156)="Coup de Froid AH14"
+ s ^TKFINSERIE(111157)="Coup de Froid AH14"
+ s ^TKFINSERIE(107114)="Coup de Froid AH14"
+ s ^TKFINSERIE(107115)="Coup de Froid AH14"
+ s ^TKFINSERIE(106831)="Coup de Froid AH14"
+ s ^TKFINSERIE(106830)="Coup de Froid AH14"
+ s ^TKFINSERIE(106832)="Coup de Froid AH14"
+ s ^TKFINSERIE(106829)="Coup de Froid AH14"
+ s ^TKFINSERIE(111154)="Coup de Froid AH14"
+ s ^TKFINSERIE(111153)="Coup de Froid AH14"
+ s ^TKFINSERIE(107014)="Coup de Froid AH14"
+ s ^TKFINSERIE(107008)="Coup de Froid AH14"
+ s ^TKFINSERIE(107009)="Coup de Froid AH14"
+ s ^TKFINSERIE(106779)="Coup de Froid AH14"
+ s ^TKFINSERIE(113776)="Coup de Froid AH14"
+ s ^TKFINSERIE(107037)="Coup de Froid AH14"
+ s ^TKFINSERIE(107039)="Coup de Froid AH14"
+ s ^TKFINSERIE(107040)="Coup de Froid AH14"
+ s ^TKFINSERIE(111120)="Coup de Froid AH14"
+ s ^TKFINSERIE(111118)="Coup de Froid AH14"
+ s ^TKFINSERIE(111119)="Coup de Froid AH14"
+ s ^TKFINSERIE(106941)="Coup de Froid AH14"
+ s ^TKFINSERIE(106931)="Coup de Froid AH14"
+ s ^TKFINSERIE(107029)="Coup de Froid AH14"
+ s ^TKFINSERIE(107022)="Coup de Froid AH14"
+ s ^TKFINSERIE(107005)="Coup de Froid AH14"
+ s ^TKFINSERIE(107006)="Coup de Froid AH14"
+ s ^TKFINSERIE(101839)="Coup de Froid AH14"
+ s ^TKFINSERIE(113822)="Coup de Froid AH14"
+ s ^TKFINSERIE(106950)="Coup de Froid AH14"
+ s ^TKFINSERIE(107004)="Coup de Froid AH14"
+ s ^TKFINSERIE(107002)="Coup de Froid AH14"
+ s ^TKFINSERIE(107003)="Coup de Froid AH14"
+ s ^TKFINSERIE(107001)="Coup de Froid AH14"
+ s ^TKFINSERIE(107007)="Coup de Froid AH14"
+ s ^TKFINSERIE(107036)="Coup de Froid AH14"
+ s ^TKFINSERIE(107035)="Coup de Froid AH14"
+ s ^TKFINSERIE(107034)="Coup de Froid AH14"
+ s ^TKFINSERIE(106781)="Coup de Froid AH14"
+ s ^TKFINSERIE(104390)="Coup de Froid AH14"
+ s ^TKFINSERIE(104388)="Coup de Froid AH14"
+ s ^TKFINSERIE(77987)="Coup de Froid AH14"
+ s ^TKFINSERIE(106994)="Coup de Froid AH14"
+ s ^TKFINSERIE(106993)="Coup de Froid AH14"
+ s ^TKFINSERIE(106943)="Coup de Froid AH14"
+ s ^TKFINSERIE(106942)="Coup de Froid AH14"
+ s ^TKFINSERIE(106944)="Coup de Froid AH14"
+ s ^TKFINSERIE(101833)="Coup de Froid AH14"
+ s ^TKFINSERIE(101826)="Coup de Froid AH14"
+ s ^TKFINSERIE(101831)="Coup de Froid AH14"
+ s ^TKFINSERIE(101828)="Coup de Froid AH14"
+ s ^TKFINSERIE(101838)="Coup de Froid AH14"
+ s ^TKFINSERIE(83351)="Coup de Froid AH14"
+ s ^TKFINSERIE(83355)="Coup de Froid AH14"
+ s ^TKFINSERIE(82463)="Coup de Froid AH14"
+ s ^TKFINSERIE(83356)="Coup de Froid AH14"
+ s ^TKFINSERIE(85827)="Coup de Froid AH14"
+ s ^TKFINSERIE(103370)="Coup de Froid AH14"
+ s ^TKFINSERIE(101836)="Coup de Froid AH14"
+ s ^TKFINSERIE(110836)="Coup de Froid AH14"
+ s ^TKFINSERIE(110835)="Coup de Froid AH14"
+ s ^TKFINSERIE(82467)="Coup de Froid AH14"
+ s ^TKFINSERIE(83346)="Coup de Froid AH14"
+ s ^TKFINSERIE(83354)="Coup de Froid AH14"
+ s ^TKFINSERIE(82466)="Coup de Froid AH14"
+ s ^TKFINSERIE(82468)="Coup de Froid AH14"
+ s ^TKFINSERIE(82471)="Coup de Froid AH14"
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

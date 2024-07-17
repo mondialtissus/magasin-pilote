@@ -1,0 +1,30 @@
+ROUTINE UPDATEANIM
+UPDATEANIM
+ 
+	s gPOS=$G(^HWINFO("MAG"))
+	i (gPOS="M151")||(gPOS="G224"){s ^HWINFO("ANIMATEUR")="CHATELAIN Isabelle\ichatelain@mondialtissus.com"}
+	i (gPOS="M221")||(gPOS="M234"){s ^HWINFO("ANIMATEUR")="LAGRESLE Véronique\vlagresle@mondialtissus.com"}
+	i (gPOS="M144"){s ^HWINFO("ANIMATEUR")="CHATELAIN Isabelle\ichatelain@mondialtissus.com"}
+	i (gPOS="M414")||(gPOS="M415")||(gPOS=" M416")||(gPOS="M312"){s ^HWINFO("ANIMATEUR")="THOMAS Vincent\vthomas@mondialtissus.com"}
+	i (gPOS="G292"){s ^HWINFO("ANIMATEUR")="MOULY Philippe\pmouly@mondialtissus.com"}
+	
+	k ^ANNUAIRE(gPOS,"G166")
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

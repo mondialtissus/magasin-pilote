@@ -1,0 +1,92 @@
+ROUTINE GUARRONDIESTOCK
+GUARRONDIESTOCK
+	;Cette fonction permet d'arrondir le stock
+	s PLU =""
+	s PLU = $O(^GUSTOCK(PLU))
+	s CPT = 0
+	s CPTTOTAL = 0
+	while PLU '= ""
+	{	
+		s QTETOT = 0
+		s QTETOT = +$P($G(^GUSTOCK(PLU)),"\",6)
+		i QTETOT '= $NORMALIZE(QTETOT,2)
+		{
+			s ^GUPLUARRONDIESTOCK(PLU)=QTETOT
+			s CPT = CPT+1
+		}
+		s CPTTOTAL = CPTTOTAL+1
+	
+		s PLU = $O(^GUSTOCK(PLU))	
+	}
+	w !,"Nombre de ligne traitées pour stock : "_CPT_"/"_CPTTOTAL
+ 
+	s CPT = 0
+	s CPTTOTAL = 0
+	s PLU = $O(^GUSTOCKARC(PLU))
+	while PLU '= ""
+	{	
+		s DATEMVT=""
+		s DATEMVT = $O(^GUSTOCKARC(PLU,DATEMVT))
+		while DATEMVT '= ""
+		{
+			s QTETOT = 0
+			s QTETOT = +$P($G(^GUSTOCKARC(PLU,DATEMVT)),"\",6)
+			i QTETOT '= $NORMALIZE(QTETOT,2)
+			{
+				s ^GUPLUARRONDIE(PLU,DATEMVT)=QTETOT
+				s CPT = CPT+1
+			}
+			s CPTTOTAL = CPTTOTAL+1
+			
+			s DATEMVT = $O(^GUSTOCKARC(PLU,DATEMVT))
+		}
+	
+		s PLU = $O(^GUSTOCK(PLU))	
+	}
+	w !,"Nombre de ligne traitées pour stockarc : "_CPT_"/"_CPTTOTAL
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

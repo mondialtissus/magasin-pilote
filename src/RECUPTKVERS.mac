@@ -1,0 +1,28 @@
+ROUTINE RECUPTKVERS
+RECUPTKVERS
+ 
+	s POSNUM=$G(^HWINFO("MAG"))
+	s TYPE=$O(^TKVERS(POSNUM,""))
+	while TYPE'=""{
+		s ID=$O(^TKVERS(POSNUM,TYPE,""))
+		while ID'=""{
+			s REC=$G(^TKVERS(POSNUM,TYPE,ID))
+			s ^MODVERS(POSNUM,TYPE,ID)=REC
+			s ID=$O(^TKVERS(POSNUM,TYPE,ID))
+		}
+		s TYPE=$O(^TKVERS(POSNUM,TYPE))
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

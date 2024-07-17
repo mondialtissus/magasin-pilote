@@ -1,0 +1,6 @@
+ROUTINE INITMENUILV
+INITMENUILV
+ s ^MENU(1,6)="1\impEtiqILV\SF6:neerl\SF6: Impression des ILV\SF6:ALL\SF6:ANG"
+ q
+ 
+ 

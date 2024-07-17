@@ -1,0 +1,30 @@
+ROUTINE VERIFINV
+VERIFINVDATE
+	s sPOS = $G(^HWINFO("MAG"))
+	i sPOS'=""
+	{
+		i +$D(^HWINFO("INVENTAIRE",63095))>0
+		{
+			s ^MODROUTINE(sPOS,"ROUTINEINVPASSE")="" 
+			s NODE = $O(^HWINFO("INVENTAIRE",63095,""))
+			if NODE'="" s ^MODROUTINE(sPOS,"ROUTINEINVPASSE","ERREUR")="" 
+	
+		}
+	}
+ 
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

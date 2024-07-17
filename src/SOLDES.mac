@@ -1,0 +1,98 @@
+ROUTINE SOLDES
+INIT
+ d GETSOLDES
+ d GETREMISES
+ Q
+GETSOLDES
+ s POS=$G(^HWINFO("MAG"))
+ s FIC="c:\Soldes_"_POS_".csv"
+ s file=##class(%File).%New(FIC)
+ d file.Open("WSN")
+ k ^MODSOLDES
+ s CA=$O(^TKSOLDES(""))
+ while CA'=""
+ {
+         s DATE=$O(^TKSOLDES(CA,"0312"))
+         while DATE'=""
+         {		
+                 if +($L(DATE))=4
+                 {
+ 		if DATE="0501"{Q}
+                         s TK=$O(^TKSOLDES(CA,DATE,""))
+                         while TK'=""
+                         {
+                                 s LG=$O(^TKSOLDES(CA,DATE,TK,""))
+                                 while LG'=""
+                                 {
+                                         s AMJ=20_$E(TK,3,8)
+                                         s REC=$G(^TKSOLDES(CA,DATE,TK,LG))
+                                         s IDFAM=$P(REC,"\",3)
+                                         s QTE=$P(REC,"\",4)
+                                         s PU=$P(REC,"\",5)
+                                         s TOT=QTE*PU
+                                         S POURC=$P(REC,"\",8)
+                                         s TOTREM=$P(REC,"\",6)
+                                         s TOTRESTE=TOT-TOTREM
+                                         S LIBFAM=$P($G(^HWCLA(IDFAM)),"\",2)                                            
+                                         s LGTOSEND=LIBFAM_";"_AMJ_";"_QTE_";"_PU_";"_TOT_";"_POURC_";"_TOTRESTE
+                                         d file.WriteLine(LGTOSEND)
+                                         s ^MODSOLDES(CA,DATE,TK,LG)=LGTOSEND
+                                         
+                                         s LG=$O(^TKSOLDES(CA,DATE,TK,LG))
+                                 }
+                                 s TK=$O(^TKSOLDES(CA,DATE,TK))
+                         }       
+                 }
+                 s DATE=$O(^TKSOLDES(CA,DATE))
+         }
+         s CA=$O(^TKSOLDES(CA))
+ }
+ d file.%Close()
+ Q
+ 
+GETREMISES
+ s POS=$G(^HWINFO("MAG"))
+ s FIC="c:\Remises_"_POS_".csv"
+ s file=##class(%File).%New(FIC)
+ d file.Open("WSN")
+ k ^MODREMISES
+ s CA=$O(^TKREMISES(""))
+ while CA'=""
+ {
+         s DATE=$O(^TKREMISES(CA,"0312"))
+         while DATE'=""
+         {
+                 if +($L(DATE))=4
+                 {
+ 		if DATE="0501"{Q}
+                         s TK=$O(^TKREMISES(CA,DATE,""))
+                         while TK'=""
+                         {
+                                 s LG=$O(^TKREMISES(CA,DATE,TK,""))
+                                 while LG'=""
+                                 {
+                                         s AMJ=20_$E(TK,3,8)
+                                         s REC=$G(^TKREMISES(CA,DATE,TK,LG))
+                                         s IDFAM=$P(REC,"\",3)
+                                         s QTE=$P(REC,"\",4)
+                                         s PU=$P(REC,"\",5)
+                                         s TOT=QTE*PU
+                                         S POURC=$P(REC,"\",7)
+                                         s TOTREM=$P(REC,"\",6)
+                                         s TOTRESTE=TOT-TOTREM
+                                         S LIBFAM=$P($G(^HWCLA(IDFAM)),"\",2)
+                                         
+                                         s LGTOSEND=LIBFAM_";"_AMJ_";"_QTE_";"_PU_";"_TOT_";"_POURC_";"_TOTRESTE
+                                         //s ^MODREMISES(CA,DATE,TK,LG)=LGTOSEND
+                                         d file.WriteLine(LGTOSEND)
+                                         s LG=$O(^TKREMISES(CA,DATE,TK,LG))
+                                 }
+                                 s TK=$O(^TKREMISES(CA,DATE,TK))
+                         }       
+                 }
+                 s DATE=$O(^TKREMISES(CA,DATE))
+         }
+         s CA=$O(^TKREMISES(CA))
+ }
+ d file.%Close()
+ Q

@@ -1,0 +1,86 @@
+ROUTINE tmpVD
+tmpVD
+
+ q
+ 
+RENVOIMODRETRO(gDATEDEB,gDATEFIN)
+ //Date en clair 20190225
+ if $L(+gDATEDEB)'=8 q
+ if $L(+gDATEFIN)'=8 q
+ s DATEDEBCACHE=$zdh(gDATEDEB,8)-1
+ s DATEFINCACHE=$zdh(gDATEFIN,8)
+ s CODEMAG=$G(^HWINFO("MAG"))
+ 
+ //Cette routine permet de renvoyer tous les MOD utilent d'un magasin vers le siège
+ //Problème rencontré pour un nouveau magasin (exemple de SAUMUR) avec le MODSAUVEGARDE qui plante et génère de GSA infini avec des POS + RC + RC + POS etc...
+ 
+ //============= PARTIE RETRO =====================
+ //================================================
+ s NOMFICHIER="^MAGRETRO"
+ s NOMMODFICHIER="^MODMAGRETRO"
+ s TYPECMD="LIV"
+ s NUMRETRO=""
+ s NUMRETRO=$O(@NOMFICHIER@(TYPECMD,NUMRETRO))
+ while NUMRETRO'=""
+ {
+	s MAGORI=""
+	s MAGORI=$O(@NOMFICHIER@(TYPECMD,NUMRETRO,MAGORI))
+	while MAGORI'=""
+	{
+		s MAGDEST=""
+		s MAGDEST=$O(@NOMFICHIER@(TYPECMD,NUMRETRO,MAGORI,MAGDEST))
+		while MAGDEST'=""
+		{
+			s DATAZERO=$G(@NOMFICHIER@(TYPECMD,NUMRETRO,MAGORI,MAGDEST,0))
+			s DATELIV=$P(DATAZERO,"\",5)
+			if (DATELIV>=gDATEDEB)&&(DATELIV<=gDATEFIN)
+			{
+				s @NOMMODFICHIER@(MAGDEST,"LIV",NUMRETRO,MAGORI,0)=DATAZERO		
+				
+			}
+			
+			s MAGDEST=$O(@NOMFICHIER@(TYPECMD,NUMRETRO,MAGORI,MAGDEST))
+		}
+		
+		s MAGORI=$O(@NOMFICHIER@(TYPECMD,NUMRETRO,MAGORI))
+	}
+	 
+	s NUMRETRO=$O(@NOMFICHIER@(TYPECMD,NUMRETRO))	 
+ }
+ 
+ //================================================
+ //============= PARTIE MVT =====================
+ //================================================
+ s NOMFICHIER="^GUMVT"
+ s NOMMODFICHIER="^MODGUMVT"
+ s DATEMVT=DATEDEBCACHE
+ s DATEMVT=$O(@NOMFICHIER@(DATEMVT))
+ while (+DATEMVT<=DATEFINCACHE)
+ {
+	s PLU=""
+	s PLU=$O(@NOMFICHIER@(DATEMVT,PLU))
+ 	while PLU'=""
+ 	{
+	 	s TYPEMVT=""
+	 	s TYPEMVT=$O(@NOMFICHIER@(DATEMVT,PLU,TYPEMVT))
+ 		while TYPEMVT'=""
+ 		{
+	 		s NUMMVT=""	 		
+	 		s NUMMVT=$O(@NOMFICHIER@(DATEMVT,PLU,TYPEMVT,NUMMVT))
+ 			while NUMMVT'=""
+ 			{
+	 			s DATAMVT=$G(@NOMFICHIER@(DATEMVT,PLU,TYPEMVT,NUMMVT))
+	 			s @NOMMODFICHIER@(CODEMAG,DATEMVT,PLU,TYPEMVT,NUMMVT)=DATAMVT
+	 			
+	 				 			
+	 			s NUMMVT=$O(@NOMFICHIER@(DATEMVT,PLU,TYPEMVT,NUMMVT))
+ 			}
+	 		s TYPEMVT=$O(@NOMFICHIER@(DATEMVT,PLU,TYPEMVT))
+ 		}
+	 	s PLU=$O(@NOMFICHIER@(DATEMVT,PLU))	 	
+ 	}
+	 s DATEMVT=$O(@NOMFICHIER@(DATEMVT))
+ }
+ 
+ q
+ 

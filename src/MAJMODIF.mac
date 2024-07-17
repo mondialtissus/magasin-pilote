@@ -1,0 +1,130 @@
+ROUTINE MAJMODIF
+MAJMODIF
+ ; Lundi 21/06.2004 - ED
+ ; Permet de recreer le fichier ^TKMODIF avec la nouvelle structure : TYPE,USER,AAMM,JJ,CPT au lieu de TYPE,USER,AAMMJJ,CPT
+ ; et regénère le fichier pour la centrale : ^MODTKMODIF
+ 
+ s gPOS = $G(^HWINFO("MAG"))
+ s TYPE = ""
+ s USER = ""
+ s AAMMJJ = ""
+ s J = ""
+ s CPT = ""
+ s Enreg = ""
+ 
+ s TYPE = $O(^TKMODIF(""))
+ while TYPE '= ""
+ {
+         s USER = $O(^TKMODIF(TYPE,""))
+         while USER '= ""
+         {
+                 s AAMMJJ = $O(^TKMODIF(TYPE,USER,""))
+                 while AAMMJJ '= ""
+                 {
+                         if $l(AAMMJJ)=6 
+                         {
+                                 s CPT = $O(^TKMODIF(TYPE,USER,AAMMJJ,""))
+                                 while CPT '= ""
+                                 {
+                                         s Enreg = $G(^TKMODIF(TYPE,USER,AAMMJJ,CPT))
+ 
+                                         s ^MODMODIF(gPOS,TYPE,USER,$e(AAMMJJ,1,4),$e(AAMMJJ,5,6),CPT)=Enreg
+                                         s ^TKMODIF(TYPE,USER,$e(AAMMJJ,1,4),$e(AAMMJJ,5,6),CPT)=Enreg
+                                         k ^TKMODIF(TYPE,USER,AAMMJJ,CPT)
+                                         w !, "^MODMODIF("_gPOS_","_TYPE_","_USER_","_$e(AAMMJJ,1,4)_","_$e(AAMMJJ,5,6)_","_CPT_")="_Enreg
+                                         s CPT = $O(^TKMODIF(TYPE,USER,AAMMJJ,CPT))
+                                 }
+                         }
+                         ELSE 
+                         {
+                                 if $l(AAMMJJ) = 4
+                                 {
+                                         s J = $O(^TKMODIF(TYPE,USER,AAMMJJ,""))
+                                         while J '= ""
+                                         {
+                                                 s CPT = $O(^TKMODIF(TYPE,USER,AAMMJJ,J,""))
+                                                 while CPT '= ""
+                                                 {
+                                                         s Enreg = $G(^TKMODIF(TYPE,USER,AAMMJJ,J,CPT))
+                                                         s ^MODMODIF(gPOS,TYPE,USER,AAMMJJ,J,CPT)=Enreg
+                                                         s CPT = $O(^TKMODIF(TYPE,USER,AAMMJJ,J,CPT))
+                                                 }
+                                                 s J = $O(^TKMODIF(TYPE,USER,AAMMJJ,J))
+                                         }
+                                 }
+                         }
+                         s AAMMJJ = $O(^TKMODIF(TYPE,USER,AAMMJJ))
+                 }
+                 s USER = $O(^TKMODIF(TYPE,USER))
+         }
+         s TYPE = $O(^TKMODIF(TYPE))
+ }
+ w !, "Traitement terminé !"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

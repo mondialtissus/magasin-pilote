@@ -1,0 +1,184 @@
+ROUTINE SUPPVITRINE
+SUPPVITRINE
+	s MAG = $G(^HWINFO("MAG"))
+	s FOUR = ""
+	k ^HWINFO("INVENTAIRE",62178,"VITRINE","VALID")
+	s FOUR = $O(^INVARTICLEME(MAG,"REFERENCE",FOUR))
+	while FOUR '= ""
+	{
+		S CLEFART = ""
+		S CLEFART = $O(^INVARTICLEME(MAG,"REFERENCE",FOUR,CLEFART))
+		
+		while CLEFART '= ""
+		{
+			s NUMLNG = ""
+			S NUMLNG = $O(^INVARTICLEME(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG))
+			while NUMLNG '=""
+			{
+				s DATA = ""
+				s DATA = $G(^INVARTICLEME(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG))
+				
+				i ($P(DATA,"\",14)="VITRINE") || ($P(DATA,"\",15)="VITRINE") 
+				{
+					k ^INVARTICLEME(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG)
+					S ^SUPPVITRINE(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG)=DATA
+				}
+			
+				S NUMLNG = $O(^INVARTICLEME(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG))
+			}			
+			S CLEFART = $O(^INVARTICLEME(MAG,"REFERENCE",FOUR,CLEFART))
+		}	
+		s FOUR = $O(^INVARTICLEME(MAG,"REFERENCE",FOUR))
+	}
+	
+	s FOUR = ""
+	s FOUR = $O(^INVARTICLELM(MAG,"REFERENCE",FOUR))
+	while FOUR '= ""
+	{
+		S CLEFART = ""
+		S CLEFART = $O(^INVARTICLELM(MAG,"REFERENCE",FOUR,CLEFART))
+		
+		while CLEFART '= ""
+		{
+			s NUMLNG = ""
+			S NUMLNG = $O(^INVARTICLELM(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG))
+			while NUMLNG '=""
+			{
+				s DATA = ""
+				s DATA = $G(^INVARTICLELM(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG))
+				
+				i ($P(DATA,"\",14)="VITRINE") || ($P(DATA,"\",15)="VITRINE") 
+				{
+					k ^INVARTICLELM(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG)
+					S ^SUPPVITRINE(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG)=DATA				
+				}
+			
+				S NUMLNG = $O(^INVARTICLELM(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG))
+			}			
+			S CLEFART = $O(^INVARTICLELM(MAG,"REFERENCE",FOUR,CLEFART))
+		}	
+		s FOUR = $O(^INVARTICLELM(MAG,"REFERENCE",FOUR))
+	}
+	
+	s FOUR = ""
+	s FOUR = $O(^INVARTICLETI(MAG,"REFERENCE",FOUR))
+	while FOUR '= ""
+	{
+		S CLEFART = ""
+		S CLEFART = $O(^INVARTICLETI(MAG,"REFERENCE",FOUR,CLEFART))
+		
+		while CLEFART '= ""
+		{
+			s NUMLNG = ""
+			S NUMLNG = $O(^INVARTICLETI(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG))
+			while NUMLNG '=""
+			{
+				s DATA = ""
+				s DATA = $G(^INVARTICLETI(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG))
+				
+				i ($P(DATA,"\",14)="VITRINE") || ($P(DATA,"\",15)="VITRINE") 
+				{
+					k ^INVARTICLETI(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG)
+					S ^SUPPVITRINE(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG)=DATA				
+				}
+			
+				S NUMLNG = $O(^INVARTICLETI(MAG,"REFERENCE",FOUR,CLEFART,NUMLNG))
+			}			
+			S CLEFART = $O(^INVARTICLETI(MAG,"REFERENCE",FOUR,CLEFART))
+		}	
+		s FOUR = $O(^INVARTICLETI(MAG,"REFERENCE",FOUR))
+	}
+	
+	q
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

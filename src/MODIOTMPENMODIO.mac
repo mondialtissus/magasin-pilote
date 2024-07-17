@@ -1,0 +1,74 @@
+ROUTINE MODIOTMPENMODIO
+MODIOTMPENMODIO
+	//Cette fonction permet de checker et renvoyer tous les modiotmp qui ne devraient pas être présents à partir d'une date donnée
+	s DATEDEP=20130930 //1er Octorbe 2013 pour la date de départ.
+	s POSNUM=$G(^HWINFO("MAG"))
+	s CLEFART = $O(^MODIOTmp(POSNUM,""))
+	while CLEFART '= ""
+	{
+		//On recherche si l'article est un article mercerie ou non		
+		s SECTEURART= +$P($G(^ST(CLEFART)),"\",23)
+		if (+SECTEURART'=4)&&(+SECTEURART'=7)&&(+SECTEURART'=8)
+		{
+			s NUMLNG = ""
+			s NUMLNG = $O(^MODIOTmp(POSNUM,CLEFART,NUMLNG))
+			while NUMLNG '= ""
+			{
+				s TYPE = ""
+				s TYPE  = $O(^MODIOTmp(POSNUM,CLEFART,NUMLNG,TYPE))
+				while TYPE  '= ""
+				{
+					s DATA = $G(^MODIOTmp(POSNUM,CLEFART,NUMLNG,TYPE))							
+					s DATE = +$P(DATA,"\",15)
+					if +DATE > +DATEDEP
+					{
+						s ^MODROUTINE(POSNUM,"ERREUR DE MODIOTMP",+$h,CLEFART,NUMLNG,TYPE)=DATA
+						s ^MODIO(POSNUM,CLEFART,NUMLNG,TYPE))=DATA
+					}
+					s TYPE = $O(^MODIOTmp(POSNUM,CLEFART,NUMLNG,TYPE))							
+				}
+	
+				s NUMLNG = $O(^MODIOTmp(POSNUM,CLEFART,NUMLNG))
+			}
+		}
+		s CLEFART = $O(^MODIOTmp(POSNUM,CLEFART))
+	}
+	
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

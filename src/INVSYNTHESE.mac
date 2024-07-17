@@ -1,0 +1,756 @@
+ROUTINE INVSYNTHESE
+INVSYNTHESE
+	Q
+LOAD(IDATEINV=0,RECORD=0,REFFAM="")
+	// Si RECORD=0 alors on enregistre sinon simulation pour les anomalies
+	w !,"Lancement INVSYNTHESE"
+	S POSNUM=$G(^HWINFO("MAG"))
+	I IDATEINV=0 S IDATEINV=$G(^HWINFO("INVENTAIRE","DATE"))
+	K ^INVSYNTHESE(IDATEINV)
+	K ^INVRAPPORTANOMALIES
+	K ^INVRAPPORTERR
+	S STRFICHIER="TI;LM;ME"
+	S PA=0
+	S INITI=1
+	;F  S I=1 Q:(I=4)  D
+	I +$D(^ARINVARTICLE(IDATEINV))>0 D
+	.S FICHIERORI="^ARINVARTICLE"
+	.S POSNUM=IDATEINV
+	.S INITI=3
+	.Q
+	for I=INITI:1:3 {
+	 w !,$P(STRFICHIER,";",I)_"... traitement"
+	 // NON REFERENCE
+	 S CPT=0
+	 I INITI=1 S FICHIERORI="^INVARTICLE"_$P(STRFICHIER,";",I)
+	 S NLIGNE=""
+	 F  S NLIGNE=$O(@FICHIERORI@(POSNUM,"NON REFERENCE",NLIGNE)) Q:(NLIGNE="")  D
+	 .S DATA=@FICHIERORI@(POSNUM,"NON REFERENCE",NLIGNE)
+	 .S FAMILLE=$E($P(DATA,"\",1),1,3)
+	 .S IDFAM=""
+	 .I FAMILLE="AME" S IDFAM="01"
+	 .I FAMILLE="HAB" S IDFAM="02"
+	 .I FAMILLE="VOI" S IDFAM="03"
+	 .I FAMILLE="MER" S IDFAM="04"
+	 .I FAMILLE="LIN" S IDFAM="05"
+	 .I FAMILLE="PRE" S IDFAM="06"
+	 .I FAMILLE="LOI" S IDFAM="07"
+	 .I FAMILLE="DEC" S IDFAM="08"
+	 .I FAMILLE="DIV" S IDFAM="99"
+	 .I FAMILLE="CON" S IDFAM="09"
+	 .// POur ancienne classif => bug scanner non à jour
+	 .I FAMILLE="ART" S IDFAM="07"
+	 .I FAMILLE="PAT" S IDFAM="07"
+	 .I FAMILLE="CRE" S IDFAM="07"
+	 .I FAMILLE="TRI" S IDFAM="04"
+	 .I FAMILLE="LIB" S IDFAM="04"
+	 .S LIBELLE=$P($G(^GMTCLA(IDFAM)),"\",2)
+	 .S $P(DATA,"\",1)=LIBELLE
+	 .S @FICHIERORI@(POSNUM,"NON REFERENCE",NLIGNE)=DATA
+	 .;I IDFAM=0 w !,"NON REFERENCE : "_NLIGNE
+	 .I IDFAM="" d WRITEERROR("NON REFERENCE\"_$P(STRFICHIER,";",I)_"\Secteur non reconnu||"_$P(DATA,"\",1)_" ("_FAMILLE_") / Ligne n°"_NLIGNE_"|"_NLIGNE)
+	 .S bOK=0
+	 .I RECORD=0 S bOK=1
+	 .I RECORD=1 D
+	 ..I REFFAM="ME" I (+IDFAM=4)||(+IDFAM>6) S bOK=1
+	 ..I REFFAM="LM" I (+IDFAM=5)||(+IDFAM=6) S bOK=1
+	 ..I REFFAM="TI" I (+IDFAM<4) S bOK=1
+	 ..Q
+	 .I bOK=1 D
+	 ..S LEVNUM=$P(DATA,"\",2)
+	 ..I LEVNUM="" d WRITEERROR("NON REFERENCE\"_$P(STRFICHIER,";",I)_"\Fourn à indiquer||"_NLIGNE)
+	 ..S PV=+$P(DATA,"\",7)
+	 ..S QTE=+$P(DATA,"\",8)
+	 ..I (QTE>0)&&(LEVNUM'="") D
+	 ...S CPT=CPT+1
+	 ...S PA=0
+	 ...S COEFFLEV=0
+	 ...if ((+IDFAM'=5)&&(+IDFAM'=6)) {S COEFFLEV=+$P($G(^INVCOEFFLEV(IDATEINV,LEVNUM)),"\",1)} else {S COEFFLEV=+$P($G(^INVCOEFFAM(IDATEINV,IDFAM)),"\",2)}
+	 ...I +COEFFLEV>0 S PA=+(PV/COEFFLEV)
+	 ...w !,IDFAM_":"_PA_":"_COEFFLEV_":"_IDATEINV
+	 ...S DESTART=$P(DATA,"\",6)
+	 ...S ZONE=$P(DATA,"\",10)
+	 ...I (+PA=0) d WRITEANOMALIES("NON REFERENCE\\Coeff non trouvé |"_LEVNUM_"|"_DESTART_"|"_NLIGNE_"|"_QTE_"|"_PV_"|"_PA_"|"_ZONE)
+	 ...I (+QTE>500) d WRITEANOMALIES("NON REFERENCE\1\Grande Qté"_"|"_LEVNUM_"|"_DESTART_"|"_NLIGNE_"|"_QTE_"|"_PV_"|"_PA_"|"_ZONE)
+	 ...I (+PV>100) d WRITEANOMALIES("NON REFERENCE\2\Grand PV"_"|"_LEVNUM_"|"_DESTART_"|"_NLIGNE_"|"_QTE_"|"_PV_"|"_PA_"|"_ZONE)
+	 ...;I (PV<100)&&(PA>50) d WRITEANOMALIES("NON REFERENCE\3\Grand PA"_"|"_DESTART_""_LEVNUM_"||"_NLIGNE_"|"_QTE_"|"_PV_"|"_PA_"|"_ZONE)
+	 ...S INITDATALEV=$G(^INVSYNTHESE(IDATEINV,IDFAM,LEVNUM))
+	 ...S NEWSTOCK=+(QTE*PA)+$P(INITDATALEV,"\",1)
+	 ...S NEWCA=+(QTE*PV)+$P(INITDATALEV,"\",2)
+	 ...S NEWQTE=+QTE+$P(INITDATALEV,"\",3)
+	 ...I RECORD=0 S ^INVSYNTHESE(IDATEINV,IDFAM,LEVNUM)=NEWSTOCK_"\"_NEWCA_"\"_NEWQTE
+	 ...S INITDATAFAM=$G(^INVSYNTHESE(IDATEINV,IDFAM))
+	 ...S NEWSTOCK=+(QTE*PA)+$P(INITDATAFAM,"\",1)
+	 ...S NEWCA=+(QTE*PV)+$P(INITDATAFAM,"\",2)
+	 ...S NEWQTE=+QTE+$P(INITDATAFAM,"\",3)
+	 ...I RECORD=0 S ^INVSYNTHESE(IDATEINV,IDFAM)=NEWSTOCK_"\"_NEWCA_"\"_NEWQTE
+	 ...Q
+	 ..Q
+	 .Q
+	 w !,"  Nombre de NON REFERENCE : "_CPT
+	 S CPT=0
+	 S LEVNUM=""
+	 F  S LEVNUM=$O(@FICHIERORI@(POSNUM,"REFERENCE",LEVNUM)) Q:(LEVNUM="")  D
+	 .S ARTICLE=""
+	 .F  S ARTICLE=$O(@FICHIERORI@(POSNUM,"REFERENCE",LEVNUM,ARTICLE)) Q:(ARTICLE="")  D
+	 ..S NLIGNE=""
+	 ..F  S NLIGNE=$O(@FICHIERORI@(POSNUM,"REFERENCE",LEVNUM,ARTICLE,NLIGNE)) Q:(NLIGNE="")  D
+	 ...S DATA=@FICHIERORI@(POSNUM,"REFERENCE",LEVNUM,ARTICLE,NLIGNE)
+	 ...S QTE=+$P(DATA,"\",13)
+	 ...I QTE>0 D
+	 ....S CPT=CPT+1
+	 ....S TYPESAISIE=$P(DATA,"\",16)
+	 ....S IDFAM=$P(DATA,"\",10)
+	 ....S bOK=0
+	 ....I RECORD=0 S bOK=1
+	 ....I RECORD=1 D
+		 .....I REFFAM="ME" I (+IDFAM=4)||(+IDFAM>6) S bOK=1
+	 .....I REFFAM="LM" I (+IDFAM=5)||(+IDFAM=6) S bOK=1
+	 .....I REFFAM="TI" I (+IDFAM<4) S bOK=1
+	 .....Q
+	 ....I bOK=1 D
+	 .....S PV=+$P(DATA,"\",12)
+	 .....S PA=+$P(DATA,"\",8)
+	 .....I (PA=0) D
+	 ......I (+IDFAM=4)||(+IDFAM>6) S COEFFLEV=+$P($G(^INVCOEFFLEV(IDATEINV,LEVNUM)),"\",1)
+	 ......I (+IDFAM=5)||(+IDFAM=6) w !,IDFAM S COEFFLEV=+$P($G(^INVCOEFFAM(IDATEINV,IDFAM)),"\",2)
+	 ......I COEFFLEV>0 S PA=+(PV/COEFFLEV)
+	 ......Q
+	 .....I TYPESAISIE="DECOTE" S PA=+(PV/2)
+	 .....S ZONE=$P(DATA,"\",14)
+	 .....I (QTE>500) d WRITEANOMALIES("REFERENCE\1\Grande Qté"_"|"_LEVNUM_"|"_ARTICLE_"|"_NLIGNE_"|"_QTE_"|"_PV_"|"_PA_"|"_ZONE)
+	 .....I (PV>100) d WRITEANOMALIES("REFERENCE\2\Grand PV"_"|"_LEVNUM_"|"_ARTICLE_"|"_NLIGNE_"|"_QTE_"|"_PV_"|"_PA_"|"_ZONE)
+	 .....;I (PV<100)&&(PA>50) d WRITEANOMALIES("REFERENCE\3\Grand PA"_"|"_LEVNUM_"|"_ARTICLE_"|"_NLIGNE_"|"_QTE_"|"_PV_"|"_PA_"|"_ZONE)
+	 .....;I PA=0 d WRITEANOMALIES("REFERENCE\3\PA à 0"_"|"_LEVNUM_"|"_ARTICLE_"|"_NLIGNE_"|"_QTE_"|"_PV_"|"_PA_"|"_ZONE)
+	 .....I PV=0 d WRITEANOMALIES("REFERENCE\2\PV à 0"_"|"_LEVNUM_"|"_ARTICLE_"|"_NLIGNE_"|"_QTE_"|"_PV_"|"_PA_"|"_ZONE)
+	 .....; Enregistrement par fournisseurs
+	 .....S INITDATALEV=$G(^INVSYNTHESE(IDATEINV,IDFAM,LEVNUM))
+	 .....S NEWSTOCK=+(QTE*PA)+$P(INITDATALEV,"\",1)
+	 .....S NEWCA=+(QTE*PV)+$P(INITDATALEV,"\",2)
+	 .....S NEWQTE=+QTE+$P(INITDATALEV,"\",3)
+	 .....I RECORD=0 S ^INVSYNTHESE(IDATEINV,IDFAM,LEVNUM)=NEWSTOCK_"\"_NEWCA_"\"_NEWQTE
+	 .....; Enregistrement par familles
+	 .....S INITDATAFAM=$G(^INVSYNTHESE(IDATEINV,IDFAM))
+	 .....S NEWSTOCK=+(QTE*PA)+$P(INITDATAFAM,"\",1)
+	 .....S NEWCA=+(QTE*PV)+$P(INITDATAFAM,"\",2)
+	 .....S NEWQTE=+QTE+$P(INITDATAFAM,"\",3)
+	 .....I RECORD=0 S ^INVSYNTHESE(IDATEINV,IDFAM)=NEWSTOCK_"\"_NEWCA_"\"_NEWQTE
+	 .....Q
+	 ....Q
+	 ...Q
+	 ..Q
+	 .Q
+	 w !,"  Nombre de REFERENCE : "_CPT
+	}
+	w !,!,"Terminé !!!"
+	Q
+	
+TRANSFERT(ZONE="NULL")
+	S POSNUM=$G(^HWINFO("MAG"))
+	S IDATEINV=$G(^HWINFO("INVENTAIRE","DATE"))
+	I ZONE="NULL" D
+	.K ^ARINVSYNTHESE(IDATEINV)
+	.K ^ARINVARTICLE(IDATEINV)
+	.K ^MODINVARTICLE
+	.Q
+	I ZONE'="NULL" K ^tmpZONE
+	S STRFICHIER="TI;LM;ME"
+	S CPTREF=0
+	S CPTNONREF=0
+	;F  S I=1 Q:(I=4)  D
+	for I=1:1:4 {
+	 // NON REFERENCE
+	 S FICHIERORI="^INVARTICLE"_$P(STRFICHIER,";",I)
+	 S CPT=+$O(^ARINVARTICLE(IDATEINV,"NON REFERENCE",""),-1)
+	 S NLIGNE=""
+	 F  S NLIGNE=$O(@FICHIERORI@(POSNUM,"NON REFERENCE",NLIGNE)) Q:(NLIGNE="")  D
+	 .S DATA=@FICHIERORI@(POSNUM,"NON REFERENCE",NLIGNE)
+	 .d REPLACE(DATA,"(","") 
+	 .d REPLACE(DATA,")","") 
+	 .;w !,$P(STRFICHIER,";",I)_":"_CPT
+	 .S CPT=CPT+1
+	 .S CPTNONREF=CPTNONREF+1
+	 .S ZONELOC=$P(DATA,"\",10)
+	 .I ZONE="NULL" D
+	 ..S ^ARINVARTICLE(IDATEINV,"NON REFERENCE",CPT)=DATA
+	 ..S ^MODINVARTICLE(POSNUM,"NON REFERENCE",CPT)=DATA
+	 ..//Nous devons maintenant effectuer une sauvegarde de ^ARINVSYNTHESE pour le contrôle post inventaire avec les nodes suivants DATEINV, SECTEUR et PLU avec comme données quantité, total PA , les zones et la description ou la clef article.
+	 ..S LEVNUM=$P(DATA,"\",2)
+	 ..S SECTEUR=""
+	 ..S SECTNONREF=""
+	 ..F  S SECTNONREF=$O(^GMTCLA(SECTNONREF)) Q:((SECTNONREF="")||(SECTEUR'=""))  D
+	 ...I $E($P($G(^GMTCLA(SECTNONREF)),"\",2),1,3)=$E($P(DATA,"\",1),1,3) S SECTEUR=SECTNONREF
+	 ...Q
+	 ..I +SECTEUR>0 D
+	 ...//Prendre la 23ème position dans ST
+	 ...S COEFFLEV = 0
+	 ...S PA = 0
+	 ...S QTE = 0
+	 ...S PV = +$P(DATA,"\",7)
+	 ...if ((+SECTEUR'=5)&&(+SECTEUR'=6)) {S COEFFLEV=+$P($G(^INVCOEFFLEV(IDATEINV,LEVNUM)),"\",1)} else {S COEFFLEV=+$P($G(^INVCOEFFAM(IDATEINV,SECTEUR)),"\",2)}
+	 ...I +COEFFLEV>0 S PA=+(PV/COEFFLEV)
+	 ...I +PA=0 s PA=(+PV)/2
+	 ...s $P(DATA,"\",9) = PA
+	 ...S ^ARINVARTICLE(IDATEINV,"NON REFERENCE",CPT)=DATA
+	 ...S ^MODINVARTICLE(POSNUM,"NON REFERENCE",CPT)=DATA
+	 ...S QTE = +$P(DATA,"\",8)
+	 ...S TOTPA = PA*QTE
+	 ...s DESIGNATION = $P(DATA,"\",6)
+	 ...s PLU = +NLIGNE*(-1)
+	 ...I +$D(^ARINVSYNTHESE(IDATEINV,SECTEUR,PLU))>0 D
+	 ....//La ligne existe nous devons donc la modifier en ajoutant la ligne en cours
+	 ....S DATAARINV = $G(^ARINVSYNTHESE(IDATEINV,SECTEUR,PLU))
+	 ....s $P(DATAARINV,"\",1) = +$P(DATAARINV,"\",1) + QTE
+	 ....s $P(DATAARINV,"\",2) = +$P(DATAARINV,"\",2) + TOTPA
+	 ....//On regarde les zones 
+	 ....S ZONES = $P(DATAARINV,"\",3)
+	 ....S cpt = 1
+	 ....S ZONEFAITE = ""
+	 ....S ZONETROUVE = 0
+	 ....F  S ZONEFAITE= $P(ZONES,"|",cpt) Q:(ZONEFAITE="")  D
+	 .....//Si nous trouvons déjà la même zone que celle contrôlée pour cet article alors nous ne l'ajouterons pas
+	 .....I ZONEFAITE = ZONELOC S ZONETROUVE=1
+	 .....S cpt = +cpt+1
+	 .....q
+	 ....//On ajoute la nouvelle zone dans la chaine si nous ne l'avons pas trouvé
+	 ....I ((ZONETROUVE = 0) && (ZONELOC'="") && ($P(DATAARINV,"\",3)'="")) S $P(DATAARINV,"\",3) = $P(DATAARINV,"\",3)_"|"_ZONELOC
+	 ....s ^ARINVSYNTHESE(IDATEINV,SECTEUR,PLU)=DATAARINV
+	 ....q
+	 ...I +$D(^ARINVSYNTHESE(IDATEINV,SECTEUR,PLU))=0 D
+	 ....//La ligne dans ^ARINVSYNTHESE n'existe pas alors nous devons directement l'ajouter
+	 ....s DATAARINV = QTE_"\"_TOTPA_"\"_ZONELOC_"\"_DESIGNATION_"\"
+	 ....i +SECTEUR > 0 S ^ARINVSYNTHESE(IDATEINV,SECTEUR,PLU)=DATAARINV
+	 ....i +SECTEUR = 0 w !,"QTE : "_QTE_ " PLU : "_PLU_" Clef : "_ARTICLE
+	 ....q  
+	 ...//Nous devons maintenant ajouter ces mêmes informations dans le node supérieur contenant seulement le secteur sans le PLU
+	 ...I +$D(^ARINVSYNTHESE(IDATEINV,SECTEUR,0))>0 D
+	 ....//La ligne existe nous devons donc la modifier en ajoutant la ligne en cours
+	 ....S DATAARINV = $G(^ARINVSYNTHESE(IDATEINV,SECTEUR,0))
+	 ....s $P(DATAARINV,"\",1) = +$P(DATAARINV,"\",1) + QTE
+	 ....s $P(DATAARINV,"\",2) = +$P(DATAARINV,"\",2) + TOTPA
+	 ....//On regarde les zones 
+	 ....S ZONES = $P(DATAARINV,"\",3)
+	 ....S cpt = 1
+	 ....S ZONEFAITE = ""
+	 ....S ZONETROUVE = 0
+	 ....F  S ZONEFAITE= $P(ZONES,"|",cpt) Q:(ZONEFAITE="")  D
+	 .....//Si nous trouvons déjà la même zone que celle contrôlée pour cet article alors nous ne l'ajouterons pas
+	 .....I ZONEFAITE = ZONELOC S ZONETROUVE=1
+	 .....S cpt = +cpt+1
+	 .....q
+	 ....//On ajoute la nouvelle zone dans la chaine si nous ne l'avons pas trouvé
+	 ....I ((ZONETROUVE = 0) && (ZONELOC'="") && ($P(DATAARINV,"\",3)'="")) S $P(DATAARINV,"\",3) = $P(DATAARINV,"\",3)_"|"_ZONELOC
+	 ....s ^ARINVSYNTHESE(IDATEINV,SECTEUR,0)=DATAARINV
+	 ....q
+	 ...I +$D(^ARINVSYNTHESE(IDATEINV,SECTEUR,0))=0 D
+	 ....//La ligne dans ^ARINVSYNTHESE n'existe pas alors nous devons directement l'ajouter
+	 ....s DATAARINV = QTE_"\"_TOTPA_"\"_ZONELOC_"\"
+	 ....i +SECTEUR > 0 S ^ARINVSYNTHESE(IDATEINV,SECTEUR,0)=DATAARINV 
+	 ....q
+	 ...q
+	 ..//Fin de modification
+	 ..Q
+	 .I ZONE'="NULL" I ZONELOC'="" S ^tmpZONE(ZONELOC)=""
+	 .Q
+	 S LEVNUM=""
+	 F  S LEVNUM=$O(@FICHIERORI@(POSNUM,"REFERENCE",LEVNUM)) Q:(LEVNUM="")  D
+	 .S ARTICLE=""
+	 .F  S ARTICLE=$O(@FICHIERORI@(POSNUM,"REFERENCE",LEVNUM,ARTICLE)) Q:(ARTICLE="")  D
+	 ..S NLIGNE=""
+	 ..F  S NLIGNE=$O(@FICHIERORI@(POSNUM,"REFERENCE",LEVNUM,ARTICLE,NLIGNE)) Q:(NLIGNE="")  D
+	 ...S DATA=@FICHIERORI@(POSNUM,"REFERENCE",LEVNUM,ARTICLE,NLIGNE)
+	 ...S CPTREF=CPTREF+1
+	 ...d REPLACE(DATA,"(","") 
+	 ...d REPLACE(DATA,")","") 
+	 ...I ZONE="NULL" S ^ARINVARTICLE(IDATEINV,"REFERENCE",LEVNUM,ARTICLE,NLIGNE)=DATA
+	 ...I ZONE="NULL" S ^MODINVARTICLE(POSNUM,"REFERENCE",LEVNUM,ARTICLE,NLIGNE)=DATA
+	 ...//Nous devons maintenant effectuer une sauvegarde de ^ARINVSYNTHESE pour le contrôle post inventaire avec les nodes suivants DATEINV, SECTEUR et PLU avec comme données quantité, total PA , les zones et la description ou la clef article.
+	 ...I ZONE="NULL" D
+	 ....S PLU=$P(DATA,"\",3)
+	 ....//On recherche le secteur du PLU
+	 ....//Prendre la 23ème position dans ST
+	 ....S SECTEUR = 0
+	 ....S DATAART = $G(^ST(ARTICLE))
+	 ....i PLU = 71854 w !,"Données : "_ARTICLE_ " /|\ "_DATAART
+	 ....I +$D(^ST(ARTICLE))>0 S SECTEUR=$P(DATAART,"\",23)
+	 ....I SECTEUR="" S SECTEUR=0
+	 ....S PA = 0
+	 ....S QTE = 0
+	 ....S PA=$$GETPRIX($P(DATAART,"\",13))
+	 ....S QTE = +$P(DATA,"\",13)
+	 ....S TOTPA = PA*QTE
+	 ....S ZONELOC=$P(DATA,"\",14)
+	 ....s DESIGNATION = $P(DATA,"\",2)
+	 ....I +$D(^ARINVSYNTHESE(IDATEINV,SECTEUR,PLU))>0 D
+	 .....//La ligne existe nous devons donc la modifier en ajoutant la ligne en cours
+	 .....S DATAARINV = $G(^ARINVSYNTHESE(IDATEINV,SECTEUR,PLU))
+	 .....s $P(DATAARINV,"\",1) = +$P(DATAARINV,"\",1) + QTE
+	 .....s $P(DATAARINV,"\",2) = +$P(DATAARINV,"\",2) + TOTPA
+	 .....//On regarde les zones 
+	 .....S ZONES = $P(DATAARINV,"\",3)
+	 .....S cpt = 1
+	 .....S ZONEFAITE = ""
+	 .....S ZONETROUVE = 0
+	 .....F  S ZONEFAITE= $P(ZONES,"|",cpt) Q:(ZONEFAITE="")  D
+	 ......//Si nous trouvons déjà la même zone que celle contrôlée pour cet article alors nous ne l'ajouterons pas
+	 ......I ZONEFAITE = ZONELOC S ZONETROUVE=1
+	 ......S cpt = +cpt+1
+	 ......q
+	 .....//On ajoute la nouvelle zone dans la chaine si nous ne l'avons pas trouvé
+	 .....I ((ZONETROUVE = 0) && (ZONELOC'="") && ($P(DATAARINV,"\",3)'="")) S $P(DATAARINV,"\",3) = $P(DATAARINV,"\",3)_"|"_ZONELOC
+	 .....s ^ARINVSYNTHESE(IDATEINV,SECTEUR,PLU)=DATAARINV
+	 .....q
+	 ....I +$D(^ARINVSYNTHESE(IDATEINV,SECTEUR,PLU))=0 D
+	 .....//La ligne dans ^ARINVSYNTHESE n'existe pas alors nous devons directement l'ajouter
+	 .....s DATAARINV = QTE_"\"_TOTPA_"\"_ZONELOC_"\"_DESIGNATION_"\"
+	 .....i +SECTEUR > 0 S ^ARINVSYNTHESE(IDATEINV,SECTEUR,PLU)=DATAARINV
+	 .....i +SECTEUR = 0 w !,"QTE : "_QTE_ " PLU : "_PLU_" Clef : "_ARTICLE
+	 .....q  
+	 ....//Nous devons maintenant ajouter ces mêmes informations dans le node supérieur contenant seulement le secteur sans le PLU
+	 ....I +$D(^ARINVSYNTHESE(IDATEINV,SECTEUR,0))>0 D
+	 .....//La ligne existe nous devons donc la modifier en ajoutant la ligne en cours
+	 .....S DATAARINV = $G(^ARINVSYNTHESE(IDATEINV,SECTEUR,0))
+	 .....s $P(DATAARINV,"\",1) = +$P(DATAARINV,"\",1) + QTE
+	 .....s $P(DATAARINV,"\",2) = +$P(DATAARINV,"\",2) + TOTPA
+	 .....//On regarde les zones 
+	 .....S ZONES = $P(DATAARINV,"\",3)
+	 .....S cpt = 1
+	 .....S ZONEFAITE = ""
+	 .....S ZONETROUVE = 0
+	 .....F  S ZONEFAITE= $P(ZONES,"|",cpt) Q:(ZONEFAITE="")  D
+	 ......//Si nous trouvons déjà la même zone que celle contrôlée pour cet article alors nous ne l'ajouterons pas
+	 ......I ZONEFAITE = ZONELOC S ZONETROUVE=1
+	 ......S cpt = +cpt+1
+	 ......q
+	 .....//On ajoute la nouvelle zone dans la chaine si nous ne l'avons pas trouvé
+	 .....I ((ZONETROUVE = 0) && (ZONELOC'="") && ($P(DATAARINV,"\",3)'="")) S $P(DATAARINV,"\",3) = $P(DATAARINV,"\",3)_"|"_ZONELOC
+	 .....s ^ARINVSYNTHESE(IDATEINV,SECTEUR,0)=DATAARINV
+	 .....q
+	 ....I +$D(^ARINVSYNTHESE(IDATEINV,SECTEUR,0))=0 D
+	 .....//La ligne dans ^ARINVSYNTHESE n'existe pas alors nous devons directement l'ajouter
+	 .....s DATAARINV = QTE_"\"_TOTPA_"\"_ZONELOC_"\"
+	 .....i +SECTEUR > 0 S ^ARINVSYNTHESE(IDATEINV,SECTEUR,0)=DATAARINV 
+	 .....q
+	 ....q
+	 ...//Fin de modification
+	 ...S ZONELOC=$P(DATA,"\",14)
+	 ...I ZONE'="NULL" I ZONELOC'="" S ^tmpZONE(ZONELOC)=""
+	 ...Q
+	 ..Q
+	 .Q
+	 ;K @FICHIERORI
+	}
+	I ZONE="NULL" S ^MODROUTINE(POSNUM,"INVENTAIRE",IDATEINV)=CPTREF_"\"_CPTNONREF
+	w !,!,"Terminé !!!"
+	Q
+	
+REPLACE(STR,IN,OUT)
+	; STR: chaine à traiter
+	; IN: caractères à remplacer
+	; OUT: caractères de remplacement
+	s buff=""
+	s SIZEOFSTR=$L(STR)
+	s SIZEOFIN=$L(IN)
+	f iSTR=1:1:SIZEOFSTR
+	{ 
+	if $E(STR,iSTR,iSTR+SIZEOFIN-1)=IN{s buff=buff_OUT s iSTR=iSTR+SIZEOFIN-1}else{s buff=buff_$E(STR,iSTR,iSTR)}
+	}
+	q buff
+WRITEANOMALIES(MSG)
+	S IDERR=+$G(^INVRAPPORTANOMALIES(0))+1
+	S ^INVRAPPORTANOMALIES(IDERR)=POSNUM_"\"_MSG
+	S ^INVRAPPORTANOMALIES(0)=IDERR
+	Q
+WRITEERROR(MSG)
+	S IDERR=+$G(^INVRAPPORTERR(0))+1
+	S ^INVRAPPORTERR(IDERR)=POSNUM_"\"_MSG
+	S ^INVRAPPORTERR(0)=IDERR
+	Q
+	
+GETPRIX(PRIX)
+	S DATESYS=+$P($H,",",1)
+	S DATEBASCULE=+$P(PRIX,"/",2)
+	I DATEBASCULE>0 D
+	.S INDICE=3
+	.I DATESYS<DATEBASCULE S INDICE=1
+	.S PRIX=$P(PRIX,"/",INDICE)
+	.Q
+	Q PRIX
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

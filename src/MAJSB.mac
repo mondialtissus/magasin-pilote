@@ -1,0 +1,26 @@
+ROUTINE MAJSB
+MAJSB
+ 
+ s CB=""
+ s CB=$O(^SB(""))
+ while CB'=""
+ {
+     if $l(CB)<6 {k ^SB(CB)}
+         s CB=$O(^SB(CB))
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

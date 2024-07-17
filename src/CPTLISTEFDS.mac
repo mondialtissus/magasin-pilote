@@ -1,0 +1,30 @@
+ROUTINE CPTLISTEFDS
+CPTLISTEFDS
+	k ^MODROUTINE
+	s NumMag=$G(^HWINFO("MAG"))
+	s cptArt=$O(^TKFINSERIE(""))
+	s cpt = "0"
+	while cptArt'=""
+	{
+		S cpt = +cpt + 1
+		s cptArt=$O(^TKFINSERIE(cptArt))
+	}
+	s ^MODROUTINE(NumMag,"NBARTFDS",cpt)=""
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

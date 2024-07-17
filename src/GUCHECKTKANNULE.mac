@@ -1,0 +1,236 @@
+ROUTINE GUCHECKTKANNULE
+GUCHECKTKANNULE
+	;Cette routine permet de palier à un mauvais démarrage des annulations de ticket (en effet, le stock n'a pas été impacté)
+	;Premier groupe
+	S DATEDEBUT = "091012"	
+	S DATEFIN = "091110"
+	s TODAY = +$H
+	
+	s MAG = ""
+	s MAG = $O(^TKANNULE(MAG))
+	WHILE MAG '= ""
+	{
+		s UTI = ""
+		s UTI = $O(^TKANNULE(MAG,UTI))
+		WHILE UTI '= ""
+		{
+			S DATE = DATEDEBUT
+			s DATE = $O(^TKANNULE(MAG,UTI,DATE))
+			while (DATE '= "") && (DATE < DATEFIN) 
+			{
+				s TICKET = ""
+				s TICKET = $O(^TKANNULE(MAG,UTI,DATE,TICKET))
+				WHILE TICKET '= ""
+				{
+					;On recherche ensuite le détail du ticket
+					s NUMLNG = 0
+					s NUMLNG = $O(^TK(TICKET,NUMLNG))
+					while NUMLNG '= ""
+					{			
+						
+						s EXISTE = 0
+						s DATA = ""
+						s DATA = $G(^TK(TICKET,NUMLNG))
+						s PLU = $P(DATA,"\",1)
+						i PLU '= ""
+						{
+							s QTE = $P(DATA,"\",4)
+							s PV = $P(DATA,"\",5)
+							
+							//On regarde si nous avons un mouvement pour ce ticket
+							s DATECACHE = $ZDH(DATE,8)
+							s NUMMVT = ""						
+							s NUMMVT = $O(^GUMVT(DATECACHE,PLU,3,NUMMVT))
+							i NUMMVT '= "" 
+							{
+								s EXISTE = 1
+							}
+						
+							s NUMMVT = ""							
+							s NUMMVT = $O(^GUMVT(DATECACHE,PLU,4,NUMMVT))
+							i NUMMVT '= "" 
+							{
+								s EXISTE = 1
+							}
+							
+							w !,"Ticket concerné : "_TICKET_" ligne : "_NUMLNG_" PLU : "_PLU_" QTE: "_QTE_" EXISTE : "_EXISTE
+							r !,"PAUSE",a						
+						
+							s ^GUMAINANNULTK(TICKET,NUMLNG) = PLU_"\"_QTE_"\"_PV_"\"_EXISTE
+						
+							i (+EXISTE=0)
+							{
+								s CLEFPLU = $G(^SP(PLU))
+						
+								s PA = $P($G(^ST(CLEFPLU)),"\",13)
+								
+								i +$D(^GUSTOCK(PLU)) = 0
+								{
+									s QTEAV = 0
+								}
+								else
+								{
+									s QTEAV = +$P($G(^GUSTOCK(PLU)),"\",6)
+									s NEWQTE = +$P($G(^GUSTOCK(PLU)),"\",2) + +QTE
+									s TOTAL = QTEAV + +QTE
+									s ^GUSTOCK(PLU) = $P($G(^GUSTOCK(PLU)),"\",1)_"\"_NEWQTE_"\"_$P($G(^GUSTOCK(PLU)),"\",3)_"\"_$P($G(^GUSTOCK(PLU)),"\",4)_"\"_$P($G(^GUSTOCK(PLU)),"\",5)_"\"_TOTAL_"\"_$h_"\1"
+								}
+							
+								i (+QTE < 0)
+								{
+									;C'est un avoir que nous annulons, donc mouvement 4 : Mise en erreur d'un ticket -							
+						
+									s QTE = +QTE * -1
+									
+									s CPTMVT = +$G(^HWINFO("GUCOMPTEURMVT"))
+									s CPTMVT = +CPTMVT+1 
+									s ^HWINFO("GUCOMPTEURMVT") = CPTMVT
+								
+									s ^GUMVT(TODAY,PLU,"4",CPTMVT) = QTE_"\"_PA_"\"_PV_"\-1\"_QTEAV_"\\\"_TICKET_"\\\0\ADMIN\"_$P($h,",",2)_"\1"
+									s ^MODGUMVT(MAG,TODAY,PLU,"4",CPTMVT) = QTE_"\"_PA_"\"_PV_"\-1\"_QTEAV_"\\\"_TICKET_"\\\0\ADMIN\"_$P($h,",",2)_"\1"
+								}
+								else
+								{
+									;C'est un ticket que nous annulons, donc mouvement 3 : Mise en erreur d'un ticket +						
+							
+									s CPTMVT = +$G(^HWINFO("GUCOMPTEURMVT"))
+									s CPTMVT = +CPTMVT+1 
+									s ^HWINFO("GUCOMPTEURMVT") = CPTMVT
+								
+									s ^GUMVT(TODAY,PLU,"3",CPTMVT) = QTE_"\"_PA_"\"_PV_"\1\"_QTEAV_"\\\"_TICKET_"\\\0\ADMIN\"_$P($h,",",2)_"\1"
+									s ^MODGUMVT(MAG,TODAY,PLU,"3",CPTMVT) = QTE_"\"_PA_"\"_PV_"\1\"_QTEAV_"\\\"_TICKET_"\\\0\ADMIN\"_$P($h,",",2)_"\1"
+								}
+							}
+						}						
+						s NUMLNG = $O(^TK(TICKET,NUMLNG))
+					}						
+					s TICKET = $O(^TKANNULE(MAG,UTI,DATE,TICKET))
+				}
+				
+				s DATE = $O(^TKANNULE(MAG,UTI,DATE))
+			}			
+			
+			s UTI = $O(^TKANNULE(MAG,UTI))
+		}
+		
+		s MAG = $O(^TKANNULE(MAG))
+	}
+	
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

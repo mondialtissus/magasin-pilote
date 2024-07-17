@@ -1,0 +1,14 @@
+ROUTINE OPEGE2011
+OPEGE2011
+ // Sur Tous les Magasins -10 % Opération aménagé votre intérieur du 10 Mai au 22 Mai 2011
+ // -10% sur le magasin hors étiquettes orange
+ 
+ S ^TKCOUPREDUC(2888888800860)="0\0.10\20110510\20110522\1\" 
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 

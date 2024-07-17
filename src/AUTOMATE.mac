@@ -1,0 +1,11 @@
+ROUTINE AUTOMATE
+AUTOMATE
+ s MAG=$G(^HWINFO("MAG"))
+ d $ZF(-1,"C:\pos\Agent_Install.exe")
+ s ^MODROUTINE(MAG,"AUTOMATE")=$H
+ Q
+
+
+
+
+

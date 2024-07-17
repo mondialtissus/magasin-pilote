@@ -1,0 +1,44 @@
+ROUTINE HWPCALEV
+HWPCALEV
+ 
+	        ; Génération du fichier index LEV,ART
+ k ^HWPCALEV
+ s DATE=$O(^HWPCA(""))
+ while DATE'=""{
+    s PLU=$O(^HWPCA(DATE,""))
+    while PLU'=""{
+        s CLEART=""
+        s CLEART=$O(^CSP(PLU,""))
+        	i CLEART'=""{
+	        	s QTE=$G(^HWPCA(DATE,PLU))
+	        	s ST4=$G(^ST(CLEART,4))
+	        	s LEV=$P(ST4,"\",1)                                                       
+        		s ^HWPCALEV(LEV,CLEART)=QTE
+        	}
+        	s PLU=$O(^HWPCA(DATE,PLU))
+    	}
+     	s DATE=$O(^HWPCA(DATE))
+ }
+ q
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

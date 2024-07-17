@@ -1,0 +1,11 @@
+ROUTINE SOLDESAH14P3
+SOLDESAH14P3
+ 
+
+ s ^TKFINSERIE(105696)="soldes -50%"
+
+ q
+
+
+
+

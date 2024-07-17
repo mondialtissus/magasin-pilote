@@ -1,0 +1,30 @@
+ROUTINE HWINFOCENTRECOUPE
+HWINFOCENTRECOUPE
+ 
+     ;Activation de la visu des articles en Centre de coupe
+     S ^HWINFO("CENTRECOUPE")="1"
+     ;Connexion serveur socket
+     S ^HWINFO("SRVSOCKETCOUPE")="192.168.2.2\5500\300\0\"
+     ; transfert du fichier au dépot
+     S ^FILESFTP("FROMMAG",51)="MODMAGBCICMD"	
+     ; compteur de coupe
+     S ^HWINFO("NUMCMDCOUPE")="0000"
+     ; Qte Max de saisie par ligne
+     S ^HWINFO("CMDCDMAX")="15" 	
+	
+ q
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

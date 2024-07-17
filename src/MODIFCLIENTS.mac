@@ -1,0 +1,64 @@
+ROUTINE MODIFCLIENTS
+MODIFCLIENTS
+ Q
+LOADFACTURES
+ S IDFACT=""
+ F  S IDFACT=$O(^TKFACTURES(IDFACT)) Q:(IDFACT="")  D
+ .S DATAF=$G(^TKFACTURES(IDFACT))
+ .S SORTIE=0 
+ .S IDCLIENT=""
+ .F  S IDCLIENT=$O(^TKCLIENTS(IDCLIENT)) Q:(IDCLIENT="")||(SORTIE=1)  D
+ ..S DATA=$G(^TKCLIENTS(IDCLIENT))
+ ..I $P(DATAF,"\",1)=$P(DATA,"\",1) I $P(DATAF,"\",2)=$P(DATA,"\",2) I $P(DATAF,"\",3)=$P(DATA,"\",3) I $P(DATAF,"\",4)=$P(DATA,"\",4) I $P(DATAF,"\",5)=$P(DATA,"\",5) I $P(DATAF,"\",6)=$P(DATA,"\",6) I $P(DATAF,"\",7)=$P(DATA,"\",7) S SORTIE=1
+ ...I SORTIE=1 S ^TKFACTURES(IDFACT)=IDCLIENT
+ ...Q
+ ..Q
+ .Q
+ S ^TEST("FACTURES")="TERMINER"
+ Q
+LOADDEVIS
+ S IDDEV=""
+ F  S IDDEV=$O(^TKDEVIS(IDDEV)) Q:(IDDEV="")  D
+ .S DATAF=$G(^TKDEVIS(IDDEV,0))
+ .S SORTIE=0 
+ .S IDCLIENT=""
+ .F  S IDCLIENT=$O(^TKCLIENTS(IDCLIENT)) Q:(IDCLIENT="")||(SORTIE=1)  D
+ ..S DATA=$G(^TKCLIENTS(IDCLIENT))
+ ..I $P(DATAF,"\",1)=$P(DATA,"\",1) I $P(DATAF,"\",2)=$P(DATA,"\",2) I $P(DATAF,"\",3)=$P(DATA,"\",3) I $P(DATAF,"\",4)=$P(DATA,"\",4) I $P(DATAF,"\",5)=$P(DATA,"\",5) I $P(DATAF,"\",6)=$P(DATA,"\",6) I $P(DATAF,"\",7)=$P(DATA,"\",7) S SORTIE=1
+ ...I SORTIE=1 S ^TKDEVIS(IDDEV,0)=IDCLIENT
+ ...Q
+ ..Q
+ .Q
+ S ^TEST("DEVIS")="TERMINER"
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

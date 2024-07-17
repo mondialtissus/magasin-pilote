@@ -1,0 +1,25 @@
+ROUTINE EXCLUEBELGE204801
+EXCLUEBELGE204801()
+ 
+ s ARTBELGE="^[""USER""]ARTBELGE"
+ s MAG="^[""USER""]HWINFO"
+ s CODEMAG=$G(@MAG@("MAG"))
+    if $E(CODEMAG,1)'="B"
+    {
+        if +$D(@ARTBELGE@(204801))>0
+        {
+            k @ARTBELGE@(204801)
+        }
+    }
+Q
+
+
+
+
+
+
+
+
+
+
+

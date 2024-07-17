@@ -1,0 +1,64 @@
+ROUTINE RECUPTKDIV
+RECUPTKDIV
+ 
+ set nCA =""
+ set nTK = ""
+ set Enreg = ""
+ set Heure = ""
+ set gPos = ""
+ set gPos = $G(^HWINFO("MAG"))
+ 
+ set nCA = $O(^TKDIV(""))
+ while nCA '= ""
+ {
+         set nTK = $O(^TKDIV(nCA,""))
+         while nTK '= ""
+         {
+         set Heure = $O(^TKDIV(nCA,nTK,""))
+                 while Heure '= ""
+                 {
+                         set ^MODTKDIV(gPos,$E(nTK,3,6),+$E(nTK,7,8),nCA,nTK,Heure)=$G(^TKDIV(nCA,nTK,Heure))
+                         set Heure = $O(^TKDIV(nCA,nTK,Heure))
+                 }
+ 
+                 
+                 set nTK = $O(^TKDIV(nCA,nTK))
+         }
+         set nCA = $O(^TKDIV(nCA))
+ }
+ w !, "Traitement terminé !"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

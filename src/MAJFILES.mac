@@ -1,0 +1,54 @@
+ROUTINE MAJFILES
+ K ^HWINFO("TICKIO")
+ K ^HWSTOGIO
+ K ^HWARCCMD2
+ K ^HWNEV2
+ K ^GRP2LIB
+ K ^HCNBJOSE
+ K ^HWACT
+ K ^HWCAGMT
+ K ^HWCAIS
+ K ^HWCHARCH
+ K ^HWCHEQUE
+ K ^HWCMDM
+ K ^HWETIQ
+ K ^HWFAMNDX
+ K ^HWFRAIS
+ K ^HWLIQU
+ K ^HWLIQU2
+ K ^HWMENU
+ K ^HWNEVQTE
+ K ^HWNOTER
+ K ^hwnoter
+ K ^HWQTEMAG
+ K ^HWSUIVPA
+ K ^LIB2GRP
+ K ^HWMAJDATA
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

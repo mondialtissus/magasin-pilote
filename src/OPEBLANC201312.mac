@@ -1,0 +1,1706 @@
+ROUTINE OPEBLANC201312
+OPEBLANC201312 
+ 
+ s ^TKFINSERIE(5622)="COU 2 PER = LOT OFF"
+ s ^TKFINSERIE(5810)="COU 2 PER = LOT OFF"
+ s ^TKFINSERIE(66367)="COU 2 PER = LOT OFF"
+ s ^TKFINSERIE(66368)="COU 2 PER = LOT OFF"
+ s ^TKFINSERIE(66371)="COU 2 PER = LOT OFF"
+ s ^TKFINSERIE(89788)="COU 2 PER = LOT OFF"
+ s ^TKFINSERIE(89791)="COU 2 PER = LOT OFF"
+ s ^TKFINSERIE(105811)="COU 2 PER = LOT OFF"
+ s ^TKFINSERIE(5625)="COU 2 PER = LOT OFF"
+ s ^TKFINSERIE(100658)="COU 2 PER = LOT OFF"
+ s ^TKFINSERIE(74577)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(74578)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(74580)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75410)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75412)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75413)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75414)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75415)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75417)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75419)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75422)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75423)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75427)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75431)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75433)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75435)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75438)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75440)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75443)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75445)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75447)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78076)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78077)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78078)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78081)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78082)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78083)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78084)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78085)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78087)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78088)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78089)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78090)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78091)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78092)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78157)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78166)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81150)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81151)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81152)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81153)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81154)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81155)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81156)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81157)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81158)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81159)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81160)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81161)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81162)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81163)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81164)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81166)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81167)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81168)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81169)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81170)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81171)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81172)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81173)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81174)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81175)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81177)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81178)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81179)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81180)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81181)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81182)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81183)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81184)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81185)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(83542)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(83543)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(83545)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(83546)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(83547)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(85912)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(86186)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75450)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75452)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75453)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75454)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75455)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75457)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75458)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75459)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75460)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75462)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75464)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75465)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75467)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75469)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75471)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75474)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75475)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75476)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75477)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75478)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75479)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75481)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75482)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75483)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75484)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78093)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78094)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78095)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78096)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78097)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78098)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78099)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78100)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78101)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78102)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78103)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78104)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78105)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78106)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78107)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78108)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78109)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78110)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78159)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78160)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(78161)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81186)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81187)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81188)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81189)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81190)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81191)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81192)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81193)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81194)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81195)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81196)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81197)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81198)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81199)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81200)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81201)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81202)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81203)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81204)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81205)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81206)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81207)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81208)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81209)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81210)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81211)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81212)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81213)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81214)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81215)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81216)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81217)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81218)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81219)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81220)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(81221)="1 HOUS&D = 1 HOUS&D "
+ s ^TKFINSERIE(75373)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75374)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75377)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75380)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75382)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75384)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75386)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75388)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75390)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75394)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75396)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75397)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75398)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75399)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75400)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75401)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75403)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75405)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75406)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(75407)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78013)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78111)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78112)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78113)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78114)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78115)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78116)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78117)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78121)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78122)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78123)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78124)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78126)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78127)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78152)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78153)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(78154)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81246)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81247)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81248)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81249)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81250)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81251)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81252)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81253)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81254)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81255)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81256)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81257)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81258)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81259)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81260)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81261)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81262)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81263)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81264)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81267)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81268)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81269)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81270)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81271)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81272)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81273)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81274)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81275)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81276)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81277)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81278)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81279)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81280)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(81281)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(40141)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(63965)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(63966)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(67391)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(67392)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(67393)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(67394)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74514)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74515)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74517)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74520)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74522)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74536)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74537)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74538)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74540)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74617)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74620)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74621)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74623)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74624)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(77199)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(77210)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(77211)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(77212)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(77214)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(77215)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(84242)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(84247)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(84643)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85615)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85616)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85618)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85620)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85622)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85623)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85909)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85910)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(87372)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(87373)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(87374)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(100400)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(100401)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(100402)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(100403)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(40159)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(40163)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(40164)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(40167)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(40174)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(49371)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(50695)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(63959)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(63960)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(63962)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74512)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74516)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74519)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74521)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74526)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74527)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74528)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(74529)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(79010)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(79076)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(79077)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(79078)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(79079)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(79080)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(79081)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(79084)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(79140)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(79141)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(79142)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(80810)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(80811)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(80812)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(80813)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(80814)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(82739)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(82892)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85095)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85096)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85097)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85098)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85099)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85100)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85101)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85102)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85103)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85104)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85105)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85599)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(85601)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(86122)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(86123)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(86124)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(86125)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(87850)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(87851)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(87852)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(87853)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(87854)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(87855)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(87857)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(100331)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(100332)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(100333)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(100334)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(100366)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(100367)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101758)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101759)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101760)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101761)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101762)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101763)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101764)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101765)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101766)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101767)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101768)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101769)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(101770)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(105412)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(105413)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(105414)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(105415)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(105479)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(105480)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(105495)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(105503)="2 achetes = 2 gratuits"
+ s ^TKFINSERIE(3767)="Macaron -20%"
+ s ^TKFINSERIE(7230)="Macaron -20%"
+ s ^TKFINSERIE(110496)="Macaron -20%"
+ s ^TKFINSERIE(110497)="Macaron -20%"
+ s ^TKFINSERIE(110498)="Macaron -20%"
+ s ^TKFINSERIE(110499)="Macaron -20%"
+ s ^TKFINSERIE(110500)="Macaron -20%"
+ s ^TKFINSERIE(3142)="Macaron -20%"
+ s ^TKFINSERIE(3144)="Macaron -20%"
+ s ^TKFINSERIE(3152)="Macaron -20%"
+ s ^TKFINSERIE(3155)="Macaron -20%"
+ s ^TKFINSERIE(3158)="Macaron -20%"
+ s ^TKFINSERIE(3159)="Macaron -20%"
+ s ^TKFINSERIE(3160)="Macaron -20%"
+ s ^TKFINSERIE(40926)="Macaron -20%"
+ s ^TKFINSERIE(54265)="Macaron -20%"
+ s ^TKFINSERIE(54266)="Macaron -20%"
+ s ^TKFINSERIE(74796)="Macaron -20%"
+ s ^TKFINSERIE(74797)="Macaron -20%"
+ s ^TKFINSERIE(8680)="Macaron -20%"
+ s ^TKFINSERIE(1412)="Macaron -20%"
+ s ^TKFINSERIE(1413)="Macaron -20%"
+ s ^TKFINSERIE(1497)="Macaron -20%"
+ s ^TKFINSERIE(35489)="Macaron -20%"
+ s ^TKFINSERIE(50614)="Macaron -20%"
+ s ^TKFINSERIE(54394)="Macaron -20%"
+ s ^TKFINSERIE(54395)="Macaron -20%"
+ s ^TKFINSERIE(59319)="Macaron -20%"
+ s ^TKFINSERIE(63636)="Macaron -20%"
+ s ^TKFINSERIE(63637)="Macaron -20%"
+ s ^TKFINSERIE(63638)="Macaron -20%"
+ s ^TKFINSERIE(7210)="Macaron -20%"
+ s ^TKFINSERIE(7212)="Macaron -20%"
+ s ^TKFINSERIE(80296)="Macaron -20%"
+ s ^TKFINSERIE(1493)="Macaron -20%"
+ s ^TKFINSERIE(1504)="Macaron -20%"
+ s ^TKFINSERIE(80000)="Macaron -20%"
+ s ^TKFINSERIE(1500)="Macaron -20%"
+ s ^TKFINSERIE(75485)="Macaron -30%"
+ s ^TKFINSERIE(75489)="Macaron -30%"
+ s ^TKFINSERIE(75490)="Macaron -30%"
+ s ^TKFINSERIE(75491)="Macaron -30%"
+ s ^TKFINSERIE(75492)="Macaron -30%"
+ s ^TKFINSERIE(75493)="Macaron -30%"
+ s ^TKFINSERIE(75495)="Macaron -30%"
+ s ^TKFINSERIE(75501)="Macaron -30%"
+ s ^TKFINSERIE(75508)="Macaron -30%"
+ s ^TKFINSERIE(78128)="Macaron -30%"
+ s ^TKFINSERIE(78130)="Macaron -30%"
+ s ^TKFINSERIE(78132)="Macaron -30%"
+ s ^TKFINSERIE(78133)="Macaron -30%"
+ s ^TKFINSERIE(78140)="Macaron -30%"
+ s ^TKFINSERIE(78142)="Macaron -30%"
+ s ^TKFINSERIE(78143)="Macaron -30%"
+ s ^TKFINSERIE(78144)="Macaron -30%"
+ s ^TKFINSERIE(78145)="Macaron -30%"
+ s ^TKFINSERIE(78146)="Macaron -30%"
+ s ^TKFINSERIE(78147)="Macaron -30%"
+ s ^TKFINSERIE(78149)="Macaron -30%"
+ s ^TKFINSERIE(78150)="Macaron -30%"
+ s ^TKFINSERIE(78151)="Macaron -30%"
+ s ^TKFINSERIE(81222)="Macaron -30%"
+ s ^TKFINSERIE(81223)="Macaron -30%"
+ s ^TKFINSERIE(81224)="Macaron -30%"
+ s ^TKFINSERIE(81225)="Macaron -30%"
+ s ^TKFINSERIE(81226)="Macaron -30%"
+ s ^TKFINSERIE(81227)="Macaron -30%"
+ s ^TKFINSERIE(81228)="Macaron -30%"
+ s ^TKFINSERIE(81229)="Macaron -30%"
+ s ^TKFINSERIE(81230)="Macaron -30%"
+ s ^TKFINSERIE(81231)="Macaron -30%"
+ s ^TKFINSERIE(81232)="Macaron -30%"
+ s ^TKFINSERIE(81233)="Macaron -30%"
+ s ^TKFINSERIE(81234)="Macaron -30%"
+ s ^TKFINSERIE(81235)="Macaron -30%"
+ s ^TKFINSERIE(81236)="Macaron -30%"
+ s ^TKFINSERIE(81237)="Macaron -30%"
+ s ^TKFINSERIE(81238)="Macaron -30%"
+ s ^TKFINSERIE(81239)="Macaron -30%"
+ s ^TKFINSERIE(81240)="Macaron -30%"
+ s ^TKFINSERIE(81241)="Macaron -30%"
+ s ^TKFINSERIE(81242)="Macaron -30%"
+ s ^TKFINSERIE(81243)="Macaron -30%"
+ s ^TKFINSERIE(81244)="Macaron -30%"
+ s ^TKFINSERIE(81245)="Macaron -30%"
+ s ^TKFINSERIE(70108)="Macaron -30%"
+ s ^TKFINSERIE(70109)="Macaron -30%"
+ s ^TKFINSERIE(70111)="Macaron -30%"
+ s ^TKFINSERIE(70112)="Macaron -30%"
+ s ^TKFINSERIE(79872)="Macaron -30%"
+ s ^TKFINSERIE(79873)="Macaron -30%"
+ s ^TKFINSERIE(79875)="Macaron -30%"
+ s ^TKFINSERIE(79876)="Macaron -30%"
+ s ^TKFINSERIE(82742)="Macaron -30%"
+ s ^TKFINSERIE(82743)="Macaron -30%"
+ s ^TKFINSERIE(83549)="Macaron -30%"
+ s ^TKFINSERIE(83550)="Macaron -30%"
+ s ^TKFINSERIE(83552)="Macaron -30%"
+ s ^TKFINSERIE(85074)="Macaron -30%"
+ s ^TKFINSERIE(85076)="Macaron -30%"
+ s ^TKFINSERIE(85079)="Macaron -30%"
+ s ^TKFINSERIE(85081)="Macaron -30%"
+ s ^TKFINSERIE(86484)="Macaron -30%"
+ s ^TKFINSERIE(87908)="Macaron -30%"
+ s ^TKFINSERIE(87909)="Macaron -30%"
+ s ^TKFINSERIE(87910)="Macaron -30%"
+ s ^TKFINSERIE(87911)="Macaron -30%"
+ s ^TKFINSERIE(87912)="Macaron -30%"
+ s ^TKFINSERIE(87913)="Macaron -30%"
+ s ^TKFINSERIE(87915)="Macaron -30%"
+ s ^TKFINSERIE(100736)="Macaron -30%"
+ s ^TKFINSERIE(100737)="Macaron -30%"
+ s ^TKFINSERIE(103041)="Macaron -30%"
+ s ^TKFINSERIE(103042)="Macaron -30%"
+ s ^TKFINSERIE(103043)="Macaron -30%"
+ s ^TKFINSERIE(103099)="Macaron -30%"
+ s ^TKFINSERIE(103100)="Macaron -30%"
+ s ^TKFINSERIE(103101)="Macaron -30%"
+ s ^TKFINSERIE(103103)="Macaron -30%"
+ s ^TKFINSERIE(103104)="Macaron -30%"
+ s ^TKFINSERIE(103105)="Macaron -30%"
+ s ^TKFINSERIE(103106)="Macaron -30%"
+ s ^TKFINSERIE(103107)="Macaron -30%"
+ s ^TKFINSERIE(103108)="Macaron -30%"
+ s ^TKFINSERIE(103110)="Macaron -30%"
+ s ^TKFINSERIE(105426)="Macaron -30%"
+ s ^TKFINSERIE(105427)="Macaron -30%"
+ s ^TKFINSERIE(105428)="Macaron -30%"
+ s ^TKFINSERIE(103050)="Macaron -30%"
+ s ^TKFINSERIE(103052)="Macaron -30%"
+ s ^TKFINSERIE(103053)="Macaron -30%"
+ s ^TKFINSERIE(79130)="Macaron -30%"
+ s ^TKFINSERIE(79131)="Macaron -30%"
+ s ^TKFINSERIE(79132)="Macaron -30%"
+ s ^TKFINSERIE(79133)="Macaron -30%"
+ s ^TKFINSERIE(82893)="Macaron -30%"
+ s ^TKFINSERIE(100286)="Macaron -30%"
+ s ^TKFINSERIE(100287)="Macaron -30%"
+ s ^TKFINSERIE(100330)="Macaron -30%"
+ s ^TKFINSERIE(102547)="Macaron -30%"
+ s ^TKFINSERIE(102548)="Macaron -30%"
+ s ^TKFINSERIE(103218)="Macaron -30%"
+ s ^TKFINSERIE(104497)="Macaron -30%"
+ s ^TKFINSERIE(104498)="Macaron -30%"
+ s ^TKFINSERIE(104499)="Macaron -30%"
+ s ^TKFINSERIE(104500)="Macaron -30%"
+ s ^TKFINSERIE(105194)="Macaron -30%"
+ s ^TKFINSERIE(105195)="Macaron -30%"
+ s ^TKFINSERIE(105196)="Macaron -30%"
+ s ^TKFINSERIE(105470)="Macaron -30%"
+ s ^TKFINSERIE(105471)="Macaron -30%"
+ s ^TKFINSERIE(105472)="Macaron -30%"
+ s ^TKFINSERIE(104497)="Macaron -30%"
+ s ^TKFINSERIE(104498)="Macaron -30%"
+ s ^TKFINSERIE(104499)="Macaron -30%"
+ s ^TKFINSERIE(104500)="Macaron -30%"
+ s ^TKFINSERIE(79044)="Macaron -50%"
+ s ^TKFINSERIE(79048)="Macaron -50%"
+ s ^TKFINSERIE(81041)="Macaron -50%"
+ s ^TKFINSERIE(81047)="Macaron -50%"
+ s ^TKFINSERIE(81092)="Macaron -50%"
+ s ^TKFINSERIE(82201)="Macaron -50%"
+ s ^TKFINSERIE(82269)="Macaron -50%"
+ s ^TKFINSERIE(82270)="Macaron -50%"
+ s ^TKFINSERIE(82271)="Macaron -50%"
+ s ^TKFINSERIE(83070)="Macaron -50%"
+ s ^TKFINSERIE(83071)="Macaron -50%"
+ s ^TKFINSERIE(83072)="Macaron -50%"
+ s ^TKFINSERIE(83073)="Macaron -50%"
+ s ^TKFINSERIE(83094)="Macaron -50%"
+ s ^TKFINSERIE(83814)="Macaron -50%"
+ s ^TKFINSERIE(83816)="Macaron -50%"
+ s ^TKFINSERIE(83819)="Macaron -50%"
+ s ^TKFINSERIE(104168)="Macaron -50%"
+ s ^TKFINSERIE(104169)="Macaron -50%"
+ s ^TKFINSERIE(104170)="Macaron -50%"
+ s ^TKFINSERIE(104171)="Macaron -50%"
+ s ^TKFINSERIE(104172)="Macaron -50%"
+ s ^TKFINSERIE(104173)="Macaron -50%"
+ s ^TKFINSERIE(104174)="Macaron -50%"
+ s ^TKFINSERIE(104175)="Macaron -50%"
+ s ^TKFINSERIE(104176)="Macaron -50%"
+ s ^TKFINSERIE(104177)="Macaron -50%"
+ s ^TKFINSERIE(104178)="Macaron -50%"
+ s ^TKFINSERIE(105467)="Macaron -50%"
+ s ^TKFINSERIE(105468)="Macaron -50%"
+ s ^TKFINSERIE(105469)="Macaron -50%"
+ s ^TKFINSERIE(36095)="Macaron -50%"
+ s ^TKFINSERIE(79015)="Macaron -50%"
+ s ^TKFINSERIE(79016)="Macaron -50%"
+ s ^TKFINSERIE(79017)="Macaron -50%"
+ s ^TKFINSERIE(79031)="Macaron -50%"
+ s ^TKFINSERIE(79032)="Macaron -50%"
+ s ^TKFINSERIE(79033)="Macaron -50%"
+ s ^TKFINSERIE(79034)="Macaron -50%"
+ s ^TKFINSERIE(79147)="Macaron -50%"
+ s ^TKFINSERIE(79148)="Macaron -50%"
+ s ^TKFINSERIE(82880)="Macaron -50%"
+ s ^TKFINSERIE(82895)="Macaron -50%"
+ s ^TKFINSERIE(100335)="Macaron -50%"
+ s ^TKFINSERIE(100337)="Macaron -50%"
+ s ^TKFINSERIE(100338)="Macaron -50%"
+ s ^TKFINSERIE(100353)="Macaron -50%"
+ s ^TKFINSERIE(100357)="Macaron -50%"
+ s ^TKFINSERIE(102231)="Macaron -50%"
+ s ^TKFINSERIE(102232)="Macaron -50%"
+ s ^TKFINSERIE(102233)="Macaron -50%"
+ s ^TKFINSERIE(102234)="Macaron -50%"
+ s ^TKFINSERIE(102235)="Macaron -50%"
+ s ^TKFINSERIE(103219)="Macaron -50%"
+ s ^TKFINSERIE(103236)="Macaron -50%"
+ s ^TKFINSERIE(79026)="Macaron -50%"
+ s ^TKFINSERIE(79028)="Macaron -50%"
+ s ^TKFINSERIE(79030)="Macaron -50%"
+ s ^TKFINSERIE(79137)="Macaron -50%"
+ s ^TKFINSERIE(79138)="Macaron -50%"
+ s ^TKFINSERIE(79139)="Macaron -50%"
+ s ^TKFINSERIE(82896)="Macaron -50%"
+ s ^TKFINSERIE(100339)="Macaron -50%"
+ s ^TKFINSERIE(100340)="Macaron -50%"
+ s ^TKFINSERIE(100342)="Macaron -50%"
+ s ^TKFINSERIE(100358)="Macaron -50%"
+ s ^TKFINSERIE(100361)="Macaron -50%"
+ s ^TKFINSERIE(102226)="Macaron -50%"
+ s ^TKFINSERIE(102227)="Macaron -50%"
+ s ^TKFINSERIE(102228)="Macaron -50%"
+ s ^TKFINSERIE(102229)="Macaron -50%"
+ s ^TKFINSERIE(102230)="Macaron -50%"
+ s ^TKFINSERIE(103222)="Macaron -50%"
+ s ^TKFINSERIE(103238)="Macaron -50%"
+ s ^TKFINSERIE(35932)="Macaron -50%"
+ s ^TKFINSERIE(70453)="Macaron -50%"
+ s ^TKFINSERIE(70454)="Macaron -50%"
+ s ^TKFINSERIE(70455)="Macaron -50%"
+ s ^TKFINSERIE(70456)="Macaron -50%"
+ s ^TKFINSERIE(75565)="Macaron -50%"
+ s ^TKFINSERIE(75568)="Macaron -50%"
+ s ^TKFINSERIE(75569)="Macaron -50%"
+ s ^TKFINSERIE(75570)="Macaron -50%"
+ s ^TKFINSERIE(75571)="Macaron -50%"
+ s ^TKFINSERIE(75572)="Macaron -50%"
+ s ^TKFINSERIE(75574)="Macaron -50%"
+ s ^TKFINSERIE(75575)="Macaron -50%"
+ s ^TKFINSERIE(76126)="Macaron -50%"
+ s ^TKFINSERIE(76127)="Macaron -50%"
+ s ^TKFINSERIE(76129)="Macaron -50%"
+ s ^TKFINSERIE(76130)="Macaron -50%"
+ s ^TKFINSERIE(76131)="Macaron -50%"
+ s ^TKFINSERIE(76132)="Macaron -50%"
+ s ^TKFINSERIE(76134)="Macaron -50%"
+ s ^TKFINSERIE(78221)="Macaron -50%"
+ s ^TKFINSERIE(78987)="Macaron -50%"
+ s ^TKFINSERIE(78990)="Macaron -50%"
+ s ^TKFINSERIE(78994)="Macaron -50%"
+ s ^TKFINSERIE(78995)="Macaron -50%"
+ s ^TKFINSERIE(78997)="Macaron -50%"
+ s ^TKFINSERIE(79002)="Macaron -50%"
+ s ^TKFINSERIE(79004)="Macaron -50%"
+ s ^TKFINSERIE(79006)="Macaron -50%"
+ s ^TKFINSERIE(79007)="Macaron -50%"
+ s ^TKFINSERIE(81067)="Macaron -50%"
+ s ^TKFINSERIE(82735)="Macaron -50%"
+ s ^TKFINSERIE(84141)="Macaron -50%"
+ s ^TKFINSERIE(84289)="Macaron -50%"
+ s ^TKFINSERIE(84290)="Macaron -50%"
+ s ^TKFINSERIE(100347)="Macaron -50%"
+ s ^TKFINSERIE(100348)="Macaron -50%"
+ s ^TKFINSERIE(100349)="Macaron -50%"
+ s ^TKFINSERIE(100355)="Macaron -50%"
+ s ^TKFINSERIE(100360)="Macaron -50%"
+ s ^TKFINSERIE(101772)="Macaron -50%"
+ s ^TKFINSERIE(101773)="Macaron -50%"
+ s ^TKFINSERIE(103223)="Macaron -50%"
+ s ^TKFINSERIE(105477)="Macaron -50%"
+ s ^TKFINSERIE(104185)="Macaron -50%"
+ s ^TKFINSERIE(104186)="Macaron -50%"
+ s ^TKFINSERIE(104188)="Macaron -50%"
+ s ^TKFINSERIE(100725)="Macaron -50%"
+ s ^TKFINSERIE(104461)="0"
+ s ^TKFINSERIE(104463)="0"
+ s ^TKFINSERIE(104464)="0"
+ s ^TKFINSERIE(104465)="0"
+ s ^TKFINSERIE(104466)="0"
+ s ^TKFINSERIE(102078)="5 Off pour de 50"
+ s ^TKFINSERIE(102080)="5 Off pour de 50"
+ s ^TKFINSERIE(102082)="5 Off pour de 50"
+ s ^TKFINSERIE(102061)="5 Off pour de 50"
+ s ^TKFINSERIE(102645)="5 Off pour de 50"
+ s ^TKFINSERIE(102646)="5 Off pour de 50"
+ s ^TKFINSERIE(102065)="5 Off pour de 50"
+ s ^TKFINSERIE(102647)="5 Off pour de 50"
+ s ^TKFINSERIE(102648)="5 Off pour de 50"
+ s ^TKFINSERIE(102649)="5 Off pour de 50"
+ s ^TKFINSERIE(102650)="5 Off pour de 50"
+ s ^TKFINSERIE(102651)="5 Off pour de 50"
+ s ^TKFINSERIE(102652)="5 Off pour de 50"
+ s ^TKFINSERIE(102653)="5 Off pour de 50"
+ s ^TKFINSERIE(102068)="5 Off pour de 50"
+ s ^TKFINSERIE(102654)="5 Off pour de 50"
+ s ^TKFINSERIE(102070)="5 Off pour de 50"
+ s ^TKFINSERIE(102655)="5 Off pour de 50"
+ s ^TKFINSERIE(102073)="5 Off pour de 50"
+ s ^TKFINSERIE(102075)="5 Off pour de 50"
+ s ^TKFINSERIE(102656)="5 Off pour de 50"
+ s ^TKFINSERIE(89562)="5 Off pour de 50"
+ s ^TKFINSERIE(89563)="5 Off pour de 50"
+ s ^TKFINSERIE(89564)="5 Off pour de 50"
+ s ^TKFINSERIE(89565)="5 Off pour de 50"
+ s ^TKFINSERIE(89566)="5 Off pour de 50"
+ s ^TKFINSERIE(89567)="5 Off pour de 50"
+ s ^TKFINSERIE(89568)="5 Off pour de 50"
+ s ^TKFINSERIE(89569)="5 Off pour de 50"
+ s ^TKFINSERIE(89570)="5 Off pour de 50"
+ s ^TKFINSERIE(89571)="5 Off pour de 50"
+ s ^TKFINSERIE(89426)="5 Off pour de 50"
+ s ^TKFINSERIE(89427)="5 Off pour de 50"
+ s ^TKFINSERIE(89428)="5 Off pour de 50"
+ s ^TKFINSERIE(89429)="5 Off pour de 50"
+ s ^TKFINSERIE(89430)="5 Off pour de 50"
+ s ^TKFINSERIE(89431)="5 Off pour de 50"
+ s ^TKFINSERIE(89432)="5 Off pour de 50"
+ s ^TKFINSERIE(89433)="5 Off pour de 50"
+ s ^TKFINSERIE(89434)="5 Off pour de 50"
+ s ^TKFINSERIE(89435)="5 Off pour de 50"
+ s ^TKFINSERIE(89436)="5 Off pour de 50"
+ s ^TKFINSERIE(89437)="5 Off pour de 50"
+ s ^TKFINSERIE(89438)="5 Off pour de 50"
+ s ^TKFINSERIE(89439)="5 Off pour de 50"
+ s ^TKFINSERIE(89440)="5 Off pour de 50"
+ s ^TKFINSERIE(89441)="5 Off pour de 50"
+ s ^TKFINSERIE(89442)="5 Off pour de 50"
+ s ^TKFINSERIE(89443)="5 Off pour de 50"
+ s ^TKFINSERIE(89444)="5 Off pour de 50"
+ s ^TKFINSERIE(89445)="5 Off pour de 50"
+ s ^TKFINSERIE(89446)="5 Off pour de 50"
+ s ^TKFINSERIE(89447)="5 Off pour de 50"
+ s ^TKFINSERIE(89448)="5 Off pour de 50"
+ s ^TKFINSERIE(89449)="5 Off pour de 50"
+ s ^TKFINSERIE(102627)="5 Off pour de 50"
+ s ^TKFINSERIE(102628)="5 Off pour de 50"
+ s ^TKFINSERIE(102629)="5 Off pour de 50"
+ s ^TKFINSERIE(102630)="5 Off pour de 50"
+ s ^TKFINSERIE(102631)="5 Off pour de 50"
+ s ^TKFINSERIE(102632)="5 Off pour de 50"
+ s ^TKFINSERIE(102633)="5 Off pour de 50"
+ s ^TKFINSERIE(102634)="5 Off pour de 50"
+ s ^TKFINSERIE(102635)="5 Off pour de 50"
+ s ^TKFINSERIE(102636)="5 Off pour de 50"
+ s ^TKFINSERIE(102637)="5 Off pour de 50"
+ s ^TKFINSERIE(102638)="5 Off pour de 50"
+ s ^TKFINSERIE(102639)="5 Off pour de 50"
+ s ^TKFINSERIE(102640)="5 Off pour de 50"
+ s ^TKFINSERIE(102641)="5 Off pour de 50"
+ s ^TKFINSERIE(102642)="5 Off pour de 50"
+ s ^TKFINSERIE(102643)="5 Off pour de 50"
+ s ^TKFINSERIE(102644)="5 Off pour de 50"
+ s ^TKFINSERIE(89450)="5 Off pour de 50"
+ s ^TKFINSERIE(89451)="5 Off pour de 50"
+ s ^TKFINSERIE(89452)="5 Off pour de 50"
+ s ^TKFINSERIE(89453)="5 Off pour de 50"
+ s ^TKFINSERIE(89454)="5 Off pour de 50"
+ s ^TKFINSERIE(89455)="5 Off pour de 50"
+ s ^TKFINSERIE(89456)="5 Off pour de 50"
+ s ^TKFINSERIE(89457)="5 Off pour de 50"
+ s ^TKFINSERIE(89458)="5 Off pour de 50"
+ s ^TKFINSERIE(89459)="5 Off pour de 50"
+ s ^TKFINSERIE(89460)="5 Off pour de 50"
+ s ^TKFINSERIE(89461)="5 Off pour de 50"
+ s ^TKFINSERIE(89462)="5 Off pour de 50"
+ s ^TKFINSERIE(89463)="5 Off pour de 50"
+ s ^TKFINSERIE(89464)="5 Off pour de 50"
+ s ^TKFINSERIE(89465)="5 Off pour de 50"
+ s ^TKFINSERIE(89466)="5 Off pour de 50"
+ s ^TKFINSERIE(89467)="5 Off pour de 50"
+ s ^TKFINSERIE(89468)="5 Off pour de 50"
+ s ^TKFINSERIE(89469)="5 Off pour de 50"
+ s ^TKFINSERIE(89470)="5 Off pour de 50"
+ s ^TKFINSERIE(89471)="5 Off pour de 50"
+ s ^TKFINSERIE(89472)="5 Off pour de 50"
+ s ^TKFINSERIE(89473)="5 Off pour de 50"
+ s ^TKFINSERIE(89474)="5 Off pour de 50"
+ s ^TKFINSERIE(89475)="5 Off pour de 50"
+ s ^TKFINSERIE(89476)="5 Off pour de 50"
+ s ^TKFINSERIE(89477)="5 Off pour de 50"
+ s ^TKFINSERIE(89478)="5 Off pour de 50"
+ s ^TKFINSERIE(100078)="5 Off pour de 50"
+ s ^TKFINSERIE(89479)="5 Off pour de 50"
+ s ^TKFINSERIE(89480)="5 Off pour de 50"
+ s ^TKFINSERIE(89481)="5 Off pour de 50"
+ s ^TKFINSERIE(89482)="5 Off pour de 50"
+ s ^TKFINSERIE(89483)="5 Off pour de 50"
+ s ^TKFINSERIE(100079)="5 Off pour de 50"
+ s ^TKFINSERIE(89484)="5 Off pour de 50"
+ s ^TKFINSERIE(89485)="5 Off pour de 50"
+ s ^TKFINSERIE(89486)="5 Off pour de 50"
+ s ^TKFINSERIE(89487)="5 Off pour de 50"
+ s ^TKFINSERIE(89488)="5 Off pour de 50"
+ s ^TKFINSERIE(100080)="5 Off pour de 50"
+ s ^TKFINSERIE(89489)="5 Off pour de 50"
+ s ^TKFINSERIE(89490)="5 Off pour de 50"
+ s ^TKFINSERIE(89491)="5 Off pour de 50"
+ s ^TKFINSERIE(89492)="5 Off pour de 50"
+ s ^TKFINSERIE(89493)="5 Off pour de 50"
+ s ^TKFINSERIE(100081)="5 Off pour de 50"
+ s ^TKFINSERIE(89494)="5 Off pour de 50"
+ s ^TKFINSERIE(89495)="5 Off pour de 50"
+ s ^TKFINSERIE(89496)="5 Off pour de 50"
+ s ^TKFINSERIE(89497)="5 Off pour de 50"
+ s ^TKFINSERIE(89498)="5 Off pour de 50"
+ s ^TKFINSERIE(100082)="5 Off pour de 50"
+ s ^TKFINSERIE(89499)="5 Off pour de 50"
+ s ^TKFINSERIE(89500)="5 Off pour de 50"
+ s ^TKFINSERIE(89501)="5 Off pour de 50"
+ s ^TKFINSERIE(89502)="5 Off pour de 50"
+ s ^TKFINSERIE(89503)="5 Off pour de 50"
+ s ^TKFINSERIE(100083)="5 Off pour de 50"
+ s ^TKFINSERIE(89504)="5 Off pour de 50"
+ s ^TKFINSERIE(89505)="5 Off pour de 50"
+ s ^TKFINSERIE(89506)="5 Off pour de 50"
+ s ^TKFINSERIE(89507)="5 Off pour de 50"
+ s ^TKFINSERIE(89508)="5 Off pour de 50"
+ s ^TKFINSERIE(100084)="5 Off pour de 50"
+ s ^TKFINSERIE(89509)="5 Off pour de 50"
+ s ^TKFINSERIE(89510)="5 Off pour de 50"
+ s ^TKFINSERIE(89511)="5 Off pour de 50"
+ s ^TKFINSERIE(89512)="5 Off pour de 50"
+ s ^TKFINSERIE(89513)="5 Off pour de 50"
+ s ^TKFINSERIE(100085)="5 Off pour de 50"
+ s ^TKFINSERIE(89514)="5 Off pour de 50"
+ s ^TKFINSERIE(89515)="5 Off pour de 50"
+ s ^TKFINSERIE(89516)="5 Off pour de 50"
+ s ^TKFINSERIE(89517)="5 Off pour de 50"
+ s ^TKFINSERIE(89518)="5 Off pour de 50"
+ s ^TKFINSERIE(89519)="5 Off pour de 50"
+ s ^TKFINSERIE(89520)="5 Off pour de 50"
+ s ^TKFINSERIE(89521)="5 Off pour de 50"
+ s ^TKFINSERIE(89522)="5 Off pour de 50"
+ s ^TKFINSERIE(89523)="5 Off pour de 50"
+ s ^TKFINSERIE(89524)="5 Off pour de 50"
+ s ^TKFINSERIE(89525)="5 Off pour de 50"
+ s ^TKFINSERIE(89526)="5 Off pour de 50"
+ s ^TKFINSERIE(89527)="5 Off pour de 50"
+ s ^TKFINSERIE(89528)="5 Off pour de 50"
+ s ^TKFINSERIE(89529)="5 Off pour de 50"
+ s ^TKFINSERIE(89530)="5 Off pour de 50"
+ s ^TKFINSERIE(89531)="5 Off pour de 50"
+ s ^TKFINSERIE(89532)="5 Off pour de 50"
+ s ^TKFINSERIE(89533)="5 Off pour de 50"
+ s ^TKFINSERIE(89534)="5 Off pour de 50"
+ s ^TKFINSERIE(89535)="5 Off pour de 50"
+ s ^TKFINSERIE(89536)="5 Off pour de 50"
+ s ^TKFINSERIE(89537)="5 Off pour de 50"
+ s ^TKFINSERIE(89538)="5 Off pour de 50"
+ s ^TKFINSERIE(89539)="5 Off pour de 50"
+ s ^TKFINSERIE(89540)="5 Off pour de 50"
+ s ^TKFINSERIE(89541)="5 Off pour de 50"
+ s ^TKFINSERIE(89542)="5 Off pour de 50"
+ s ^TKFINSERIE(89543)="5 Off pour de 50"
+ s ^TKFINSERIE(89544)="5 Off pour de 50"
+ s ^TKFINSERIE(89545)="5 Off pour de 50"
+ s ^TKFINSERIE(89546)="5 Off pour de 50"
+ s ^TKFINSERIE(89547)="5 Off pour de 50"
+ s ^TKFINSERIE(89548)="5 Off pour de 50"
+ s ^TKFINSERIE(89549)="5 Off pour de 50"
+ s ^TKFINSERIE(89550)="5 Off pour de 50"
+ s ^TKFINSERIE(89551)="5 Off pour de 50"
+ s ^TKFINSERIE(89552)="5 Off pour de 50"
+ s ^TKFINSERIE(89553)="5 Off pour de 50"
+ s ^TKFINSERIE(89554)="5 Off pour de 50"
+ s ^TKFINSERIE(89555)="5 Off pour de 50"
+ s ^TKFINSERIE(89556)="5 Off pour de 50"
+ s ^TKFINSERIE(89557)="5 Off pour de 50"
+ s ^TKFINSERIE(89558)="5 Off pour de 50"
+ s ^TKFINSERIE(89559)="5 Off pour de 50"
+ s ^TKFINSERIE(89560)="5 Off pour de 50"
+ s ^TKFINSERIE(89561)="5 Off pour de 50"
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

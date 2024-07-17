@@ -1,0 +1,43 @@
+ROUTINE SOLDESPE15D2V2
+SOLDESPE15D2V2
+
+ s ^TKSOLDES("113499")="\0.5\0"
+ s ^TKSOLDES("115937")="\0.5\0"
+ s ^TKSOLDES("113522")="\0.5\0"
+ s ^TKSOLDES("110850")="\0.5\0"
+ s ^TKSOLDES("107691")="\0.5\0"
+ s ^TKSOLDES("113502")="\0.5\0"
+ s ^TKSOLDES("113518")="\0.5\0"
+ s ^TKSOLDES("110849")="\0.5\0"
+ s ^TKSOLDES("107697")="\0.5\0"
+ s ^TKSOLDES("113497")="\0.5\0"
+ s ^TKSOLDES("113500")="\0.5\0"
+ s ^TKSOLDES("113512")="\0.5\0"
+ s ^TKSOLDES("113514")="\0.5\0"
+ s ^TKSOLDES("117603")="\0.5\0"
+ s ^TKSOLDES("113498")="\0.5\0"
+ s ^TKSOLDES("113501")="\0.5\0"
+ s ^TKSOLDES("110848")="\0.5\0"
+
+
+ q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

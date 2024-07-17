@@ -1,0 +1,17 @@
+ROUTINE TABLESTATUT
+TABLESTATUT
+	s ^HWSTATUT(1) = "Permanent\0\1\PERM\IN" 
+	s ^HWSTATUT(2) = "Nouveaute\1\0\NEW\STOP" 
+	s ^HWSTATUT(3) = "Lot\1\0\LOT\STOP" 
+	s ^HWSTATUT(4) = "Arrete\0\0\STOP\STOP" 
+	s ^HWSTATUT(5) = "Fin Serie\0\0\FIN\OUT" 
+	s ^HWSTATUT(6) = "Supprimé\0\0\SUPP\SUPP"
+
+	q
+
+
+
+
+
+
+

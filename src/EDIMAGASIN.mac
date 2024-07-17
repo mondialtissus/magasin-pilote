@@ -1,0 +1,74 @@
+ROUTINE EDIMAGASIN
+EDIMAGASIN	 
+	
+	//Activation du mode Edi fournisseur
+	S ^HWINFO("EDIBLFOURNISSEUR")="1" 
+	
+	// Heure de récupération Ftp des BL fournisseur  
+	s ^HWINFO("EDIHEURERECUP",0)="0800"
+	
+ 
+	// Liste des fournisseurs EDI en magasin
+	
+	//S ^HCLEVFTP("BELAIR")= "belair\belair\belaedi"
+	// S ^HCLEVFTP("BELAIRLM")= "belair\belair\belaedi"
+	 S ^HCLEVFTP("BOHIN")= "bohin\bohin\bohinedi\"
+	//S ^HCLEVFTP("BOU")= "boulet\boulet\bouletedi\"
+	// S ^HCLEVFTP("BRUN")= "brunswick\brunswick\brunedi\"
+	// S ^HCLEVFTP("CKVOUS")= "safeco\safeco\safedi\"
+	 //S ^HCLEVFTP("DECHELET")= "dechelette\dechelette\dechedi\"
+	 //S ^HCLEVFTP("DECHELM")= "dechelette\dechelette\dechedi\"
+	 //S ^HCLEVFTP("DEVEAULM")= "deveaux\deveaux\devedi\"
+	 //S ^HCLEVFTP("DEVEAUX")= "deveaux\deveaux\devedi\"
+	 S ^HCLEVFTP("DISTRI")= "distrifil\distrifil\distrifiledi\"
+	 //S ^HCLEVFTP("DOMOTEX")= "domotex\domotex\domotexedi\"
+	 //S ^HCLEVFTP("GMTTEST")= "gmttest\gmttest\gmtedi\"
+	 //S ^HCLEVFTP("GOLDENEYES")= "goldeneyes\goldeneyes\goldenedi\"
+	 S ^HCLEVFTP("HERAUD")= "heraud\heraud\heraudedi\"
+	 //S ^HCLEVFTP("LINDER")= "linder\linder\linedi\"
+	 //S ^HCLEVFTP("LINDERLM")= "linder\linder\linedi\"
+	 S ^HCLEVFTP("PARITYS")= "paritys\paritys\paritysedi\"
+	 //S ^HCLEVFTP("PTA")= "pta\pta\ptaedi"
+	 //S ^HCLEVFTP("PTALM")= "ptalm\ptalm\ptalmedi"
+	 S ^HCLEVFTP("ROANNEG")= "roannegros\roannegros\roannegrosedi\"
+	 //S ^HCLEVFTP("SAFECO")= "safeco\safeco\safedi\"
+	 //S ^HCLEVFTP("SAFECOLM")= "safeco\safeco\safedi\"
+	 //S ^HCLEVFTP("SAFISA")= "safisa\safisa\safisaedi\"
+	 //S ^HCLEVFTP("SFE")= "sfe\sfe\sfeedi\"
+	 Q	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

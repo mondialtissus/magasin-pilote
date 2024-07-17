@@ -1,0 +1,26 @@
+ROUTINE OPEPRESSE2011
+OPEPRESSE2011
+ // le 1 après la date correspond à un nx flag pour les opérations
+ // avec une mécanique promotionnelle simple ne necessitant pas de paramétrage supplémentaire
+ // ex : 20% sur tout le magasin 
+ 
+ // PRESSE MARIE-CLAIRE -20% SUR TOUT LE MAGASIN DU 21 octobre AU 31 décembre 2011
+ S ^TKCOUPREDUC(9990000000883)="0\0.20\20111021\20111231\1\"
+ 
+ // PRESSE -20% SUR TOUT LE MAGASIN DU 17 Novembre AU 31 décembre 2011
+ S ^TKCOUPREDUC(9990000000890)="0\0.20\20111117\20111231\1\"
+ 
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

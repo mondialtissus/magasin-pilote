@@ -1,0 +1,14 @@
+ROUTINE SUPPCOUPON
+SUPPCOUPON
+ // Suppression de la remise Opé Blanc par code barre est baisse du prix
+ K ^TKCOUPREDUC(9990000000579)
+ // Suppression de la remise Opé Objets déco de Noel --> passage OUT plus baisse prix à -50%
+ K ^TKCOUPREDUC(9990000000586)
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 

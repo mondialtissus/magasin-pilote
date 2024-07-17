@@ -1,0 +1,1519 @@
+ROUTINE ERRATUMNELLECoTH14
+ERRATUMNELLECoTH14
+
+ s ^TKFINSERIE(113654)="nouvelle collection"
+ s ^TKFINSERIE(113665)="nouvelle collection"
+ s ^TKFINSERIE(113658)="nouvelle collection"
+ s ^TKFINSERIE(113657)="nouvelle collection"
+ s ^TKFINSERIE(113653)="nouvelle collection"
+ s ^TKFINSERIE(113656)="nouvelle collection"
+ s ^TKFINSERIE(113666)="nouvelle collection"
+ s ^TKFINSERIE(113655)="nouvelle collection"
+ s ^TKFINSERIE(113659)="nouvelle collection"
+ s ^TKFINSERIE(113663)="nouvelle collection"
+ s ^TKFINSERIE(113660)="nouvelle collection"
+ s ^TKFINSERIE(113664)="nouvelle collection"
+ s ^TKFINSERIE(113638)="nouvelle collection"
+ s ^TKFINSERIE(113640)="nouvelle collection"
+ s ^TKFINSERIE(113639)="nouvelle collection"
+ s ^TKFINSERIE(113637)="nouvelle collection"
+ s ^TKFINSERIE(113753)="nouvelle collection"
+ s ^TKFINSERIE(113700)="nouvelle collection"
+ s ^TKFINSERIE(113697)="nouvelle collection"
+ s ^TKFINSERIE(113826)="nouvelle collection"
+ s ^TKFINSERIE(113550)="nouvelle collection"
+ s ^TKFINSERIE(113924)="nouvelle collection"
+ s ^TKFINSERIE(113561)="nouvelle collection"
+ s ^TKFINSERIE(113566)="nouvelle collection"
+ s ^TKFINSERIE(113563)="nouvelle collection"
+ s ^TKFINSERIE(113559)="nouvelle collection"
+ s ^TKFINSERIE(113570)="nouvelle collection"
+ s ^TKFINSERIE(113565)="nouvelle collection"
+ s ^TKFINSERIE(113571)="nouvelle collection"
+ s ^TKFINSERIE(113567)="nouvelle collection"
+ s ^TKFINSERIE(113754)="nouvelle collection"
+ s ^TKFINSERIE(113553)="nouvelle collection"
+ s ^TKFINSERIE(113556)="nouvelle collection"
+ s ^TKFINSERIE(113742)="nouvelle collection"
+ s ^TKFINSERIE(113863)="nouvelle collection"
+ s ^TKFINSERIE(113789)="nouvelle collection"
+ s ^TKFINSERIE(113784)="nouvelle collection"
+ s ^TKFINSERIE(113834)="nouvelle collection"
+ s ^TKFINSERIE(113880)="nouvelle collection"
+ s ^TKFINSERIE(113879)="nouvelle collection"
+ s ^TKFINSERIE(113605)="nouvelle collection"
+ s ^TKFINSERIE(113606)="nouvelle collection"
+ s ^TKFINSERIE(113609)="nouvelle collection"
+ s ^TKFINSERIE(113607)="nouvelle collection"
+ s ^TKFINSERIE(113610)="nouvelle collection"
+ s ^TKFINSERIE(113608)="nouvelle collection"
+ s ^TKFINSERIE(113611)="nouvelle collection"
+ s ^TKFINSERIE(113910)="nouvelle collection"
+ s ^TKFINSERIE(113911)="nouvelle collection"
+ s ^TKFINSERIE(113752)="nouvelle collection"
+ s ^TKFINSERIE(113751)="nouvelle collection"
+ s ^TKFINSERIE(113703)="nouvelle collection"
+ s ^TKFINSERIE(114022)="nouvelle collection"
+ s ^TKFINSERIE(114024)="nouvelle collection"
+ s ^TKFINSERIE(114023)="nouvelle collection"
+ s ^TKFINSERIE(113741)="nouvelle collection"
+ s ^TKFINSERIE(113465)="nouvelle collection"
+ s ^TKFINSERIE(113462)="nouvelle collection"
+ s ^TKFINSERIE(113461)="nouvelle collection"
+ s ^TKFINSERIE(113463)="nouvelle collection"
+ s ^TKFINSERIE(113466)="nouvelle collection"
+ s ^TKFINSERIE(113464)="nouvelle collection"
+ s ^TKFINSERIE(113695)="nouvelle collection"
+ s ^TKFINSERIE(113856)="nouvelle collection"
+ s ^TKFINSERIE(113855)="nouvelle collection"
+ s ^TKFINSERIE(113543)="nouvelle collection"
+ s ^TKFINSERIE(113541)="nouvelle collection"
+ s ^TKFINSERIE(113539)="nouvelle collection"
+ s ^TKFINSERIE(113542)="nouvelle collection"
+ s ^TKFINSERIE(113540)="nouvelle collection"
+ s ^TKFINSERIE(113545)="nouvelle collection"
+ s ^TKFINSERIE(113544)="nouvelle collection"
+ s ^TKFINSERIE(113713)="nouvelle collection"
+ s ^TKFINSERIE(113552)="nouvelle collection"
+ s ^TKFINSERIE(113554)="nouvelle collection"
+ s ^TKFINSERIE(113551)="nouvelle collection"
+ s ^TKFINSERIE(113546)="nouvelle collection"
+ s ^TKFINSERIE(113892)="nouvelle collection"
+ s ^TKFINSERIE(113888)="nouvelle collection"
+ s ^TKFINSERIE(113890)="nouvelle collection"
+ s ^TKFINSERIE(113889)="nouvelle collection"
+ s ^TKFINSERIE(113885)="nouvelle collection"
+ s ^TKFINSERIE(113891)="nouvelle collection"
+ s ^TKFINSERIE(113884)="nouvelle collection"
+ s ^TKFINSERIE(113886)="nouvelle collection"
+ s ^TKFINSERIE(113887)="nouvelle collection"
+ s ^TKFINSERIE(113840)="nouvelle collection"
+ s ^TKFINSERIE(113836)="nouvelle collection"
+ s ^TKFINSERIE(113837)="nouvelle collection"
+ s ^TKFINSERIE(113841)="nouvelle collection"
+ s ^TKFINSERIE(113835)="nouvelle collection"
+ s ^TKFINSERIE(113833)="nouvelle collection"
+ s ^TKFINSERIE(113839)="nouvelle collection"
+ s ^TKFINSERIE(113838)="nouvelle collection"
+ s ^TKFINSERIE(113868)="nouvelle collection"
+ s ^TKFINSERIE(113867)="nouvelle collection"
+ s ^TKFINSERIE(113761)="nouvelle collection"
+ s ^TKFINSERIE(113760)="nouvelle collection"
+ s ^TKFINSERIE(113759)="nouvelle collection"
+ s ^TKFINSERIE(113762)="nouvelle collection"
+ s ^TKFINSERIE(113763)="nouvelle collection"
+ s ^TKFINSERIE(113603)="nouvelle collection"
+ s ^TKFINSERIE(113604)="nouvelle collection"
+ s ^TKFINSERIE(113600)="nouvelle collection"
+ s ^TKFINSERIE(113601)="nouvelle collection"
+ s ^TKFINSERIE(113593)="nouvelle collection"
+ s ^TKFINSERIE(113599)="nouvelle collection"
+ s ^TKFINSERIE(113598)="nouvelle collection"
+ s ^TKFINSERIE(113592)="nouvelle collection"
+ s ^TKFINSERIE(113589)="nouvelle collection"
+ s ^TKFINSERIE(113591)="nouvelle collection"
+ s ^TKFINSERIE(113596)="nouvelle collection"
+ s ^TKFINSERIE(113595)="nouvelle collection"
+ s ^TKFINSERIE(113602)="nouvelle collection"
+ s ^TKFINSERIE(113597)="nouvelle collection"
+ s ^TKFINSERIE(113594)="nouvelle collection"
+ s ^TKFINSERIE(113590)="nouvelle collection"
+ s ^TKFINSERIE(113739)="nouvelle collection"
+ s ^TKFINSERIE(113733)="nouvelle collection"
+ s ^TKFINSERIE(113729)="nouvelle collection"
+ s ^TKFINSERIE(113730)="nouvelle collection"
+ s ^TKFINSERIE(113731)="nouvelle collection"
+ s ^TKFINSERIE(113732)="nouvelle collection"
+ s ^TKFINSERIE(113813)="nouvelle collection"
+ s ^TKFINSERIE(113817)="nouvelle collection"
+ s ^TKFINSERIE(113822)="nouvelle collection"
+ s ^TKFINSERIE(113581)="nouvelle collection"
+ s ^TKFINSERIE(113585)="nouvelle collection"
+ s ^TKFINSERIE(113582)="nouvelle collection"
+ s ^TKFINSERIE(113584)="nouvelle collection"
+ s ^TKFINSERIE(113580)="nouvelle collection"
+ s ^TKFINSERIE(113583)="nouvelle collection"
+ s ^TKFINSERIE(113586)="nouvelle collection"
+ s ^TKFINSERIE(113588)="nouvelle collection"
+ s ^TKFINSERIE(113587)="nouvelle collection"
+ s ^TKFINSERIE(113862)="nouvelle collection"
+ s ^TKFINSERIE(113747)="nouvelle collection"
+ s ^TKFINSERIE(113745)="nouvelle collection"
+ s ^TKFINSERIE(113744)="nouvelle collection"
+ s ^TKFINSERIE(113749)="nouvelle collection"
+ s ^TKFINSERIE(113746)="nouvelle collection"
+ s ^TKFINSERIE(113750)="nouvelle collection"
+ s ^TKFINSERIE(113748)="nouvelle collection"
+ s ^TKFINSERIE(112511)="nouvelle collection"
+ s ^TKFINSERIE(112508)="nouvelle collection"
+ s ^TKFINSERIE(112499)="nouvelle collection"
+ s ^TKFINSERIE(112509)="nouvelle collection"
+ s ^TKFINSERIE(112516)="nouvelle collection"
+ s ^TKFINSERIE(112506)="nouvelle collection"
+ s ^TKFINSERIE(112512)="nouvelle collection"
+ s ^TKFINSERIE(112517)="nouvelle collection"
+ s ^TKFINSERIE(112501)="nouvelle collection"
+ s ^TKFINSERIE(112503)="nouvelle collection"
+ s ^TKFINSERIE(112515)="nouvelle collection"
+ s ^TKFINSERIE(112507)="nouvelle collection"
+ s ^TKFINSERIE(112513)="nouvelle collection"
+ s ^TKFINSERIE(112498)="nouvelle collection"
+ s ^TKFINSERIE(112502)="nouvelle collection"
+ s ^TKFINSERIE(112504)="nouvelle collection"
+ s ^TKFINSERIE(112500)="nouvelle collection"
+ s ^TKFINSERIE(112514)="nouvelle collection"
+ s ^TKFINSERIE(112505)="nouvelle collection"
+ s ^TKFINSERIE(112510)="nouvelle collection"
+ s ^TKFINSERIE(112532)="nouvelle collection"
+ s ^TKFINSERIE(112524)="nouvelle collection"
+ s ^TKFINSERIE(112528)="nouvelle collection"
+ s ^TKFINSERIE(112522)="nouvelle collection"
+ s ^TKFINSERIE(112530)="nouvelle collection"
+ s ^TKFINSERIE(112527)="nouvelle collection"
+ s ^TKFINSERIE(112531)="nouvelle collection"
+ s ^TKFINSERIE(112526)="nouvelle collection"
+ s ^TKFINSERIE(112525)="nouvelle collection"
+ s ^TKFINSERIE(112529)="nouvelle collection"
+ s ^TKFINSERIE(112518)="nouvelle collection"
+ s ^TKFINSERIE(112520)="nouvelle collection"
+ s ^TKFINSERIE(112521)="nouvelle collection"
+ s ^TKFINSERIE(112519)="nouvelle collection"
+ s ^TKFINSERIE(112523)="nouvelle collection"
+ s ^TKFINSERIE(113831)="nouvelle collection"
+ s ^TKFINSERIE(113711)="nouvelle collection"
+ s ^TKFINSERIE(113564)="nouvelle collection"
+ s ^TKFINSERIE(113768)="nouvelle collection"
+ s ^TKFINSERIE(113767)="nouvelle collection"
+ s ^TKFINSERIE(113769)="nouvelle collection"
+ s ^TKFINSERIE(113612)="nouvelle collection"
+ s ^TKFINSERIE(113495)="nouvelle collection"
+ s ^TKFINSERIE(113496)="nouvelle collection"
+ s ^TKFINSERIE(113482)="nouvelle collection"
+ s ^TKFINSERIE(113493)="nouvelle collection"
+ s ^TKFINSERIE(113494)="nouvelle collection"
+ s ^TKFINSERIE(113489)="nouvelle collection"
+ s ^TKFINSERIE(113490)="nouvelle collection"
+ s ^TKFINSERIE(113491)="nouvelle collection"
+ s ^TKFINSERIE(113477)="nouvelle collection"
+ s ^TKFINSERIE(113492)="nouvelle collection"
+ s ^TKFINSERIE(113479)="nouvelle collection"
+ s ^TKFINSERIE(113478)="nouvelle collection"
+ s ^TKFINSERIE(113484)="nouvelle collection"
+ s ^TKFINSERIE(113481)="nouvelle collection"
+ s ^TKFINSERIE(113483)="nouvelle collection"
+ s ^TKFINSERIE(113480)="nouvelle collection"
+ s ^TKFINSERIE(113485)="nouvelle collection"
+ s ^TKFINSERIE(113488)="nouvelle collection"
+ s ^TKFINSERIE(113487)="nouvelle collection"
+ s ^TKFINSERIE(113486)="nouvelle collection"
+ s ^TKFINSERIE(113670)="nouvelle collection"
+ s ^TKFINSERIE(113674)="nouvelle collection"
+ s ^TKFINSERIE(113675)="nouvelle collection"
+ s ^TKFINSERIE(113671)="nouvelle collection"
+ s ^TKFINSERIE(113673)="nouvelle collection"
+ s ^TKFINSERIE(113669)="nouvelle collection"
+ s ^TKFINSERIE(113676)="nouvelle collection"
+ s ^TKFINSERIE(113684)="nouvelle collection"
+ s ^TKFINSERIE(113681)="nouvelle collection"
+ s ^TKFINSERIE(113678)="nouvelle collection"
+ s ^TKFINSERIE(113679)="nouvelle collection"
+ s ^TKFINSERIE(113682)="nouvelle collection"
+ s ^TKFINSERIE(113686)="nouvelle collection"
+ s ^TKFINSERIE(113685)="nouvelle collection"
+ s ^TKFINSERIE(113683)="nouvelle collection"
+ s ^TKFINSERIE(113672)="nouvelle collection"
+ s ^TKFINSERIE(113680)="nouvelle collection"
+ s ^TKFINSERIE(113668)="nouvelle collection"
+ s ^TKFINSERIE(113677)="nouvelle collection"
+ s ^TKFINSERIE(113468)="nouvelle collection"
+ s ^TKFINSERIE(113475)="nouvelle collection"
+ s ^TKFINSERIE(113476)="nouvelle collection"
+ s ^TKFINSERIE(113471)="nouvelle collection"
+ s ^TKFINSERIE(113469)="nouvelle collection"
+ s ^TKFINSERIE(113470)="nouvelle collection"
+ s ^TKFINSERIE(113474)="nouvelle collection"
+ s ^TKFINSERIE(113467)="nouvelle collection"
+ s ^TKFINSERIE(113472)="nouvelle collection"
+ s ^TKFINSERIE(113473)="nouvelle collection"
+ s ^TKFINSERIE(113776)="nouvelle collection"
+ s ^TKFINSERIE(113557)="nouvelle collection"
+ s ^TKFINSERIE(113799)="nouvelle collection"
+ s ^TKFINSERIE(113800)="nouvelle collection"
+ s ^TKFINSERIE(113798)="nouvelle collection"
+ s ^TKFINSERIE(113805)="nouvelle collection"
+ s ^TKFINSERIE(113715)="nouvelle collection"
+ s ^TKFINSERIE(113804)="nouvelle collection"
+ s ^TKFINSERIE(113802)="nouvelle collection"
+ s ^TKFINSERIE(113801)="nouvelle collection"
+ s ^TKFINSERIE(113803)="nouvelle collection"
+ s ^TKFINSERIE(113714)="nouvelle collection"
+ s ^TKFINSERIE(113922)="nouvelle collection"
+ s ^TKFINSERIE(113806)="nouvelle collection"
+ s ^TKFINSERIE(113558)="nouvelle collection"
+ s ^TKFINSERIE(113562)="nouvelle collection"
+ s ^TKFINSERIE(113560)="nouvelle collection"
+ s ^TKFINSERIE(113626)="nouvelle collection"
+ s ^TKFINSERIE(113628)="nouvelle collection"
+ s ^TKFINSERIE(113701)="nouvelle collection"
+ s ^TKFINSERIE(113702)="nouvelle collection"
+ s ^TKFINSERIE(113785)="nouvelle collection"
+ s ^TKFINSERIE(113773)="nouvelle collection"
+ s ^TKFINSERIE(113788)="nouvelle collection"
+ s ^TKFINSERIE(113782)="nouvelle collection"
+ s ^TKFINSERIE(113783)="nouvelle collection"
+ s ^TKFINSERIE(113775)="nouvelle collection"
+ s ^TKFINSERIE(113786)="nouvelle collection"
+ s ^TKFINSERIE(113771)="nouvelle collection"
+ s ^TKFINSERIE(113779)="nouvelle collection"
+ s ^TKFINSERIE(113781)="nouvelle collection"
+ s ^TKFINSERIE(113778)="nouvelle collection"
+ s ^TKFINSERIE(113772)="nouvelle collection"
+ s ^TKFINSERIE(113780)="nouvelle collection"
+ s ^TKFINSERIE(113774)="nouvelle collection"
+ s ^TKFINSERIE(113724)="nouvelle collection"
+ s ^TKFINSERIE(113722)="nouvelle collection"
+ s ^TKFINSERIE(113725)="nouvelle collection"
+ s ^TKFINSERIE(113723)="nouvelle collection"
+ s ^TKFINSERIE(113720)="nouvelle collection"
+ s ^TKFINSERIE(113719)="nouvelle collection"
+ s ^TKFINSERIE(113721)="nouvelle collection"
+ s ^TKFINSERIE(113727)="nouvelle collection"
+ s ^TKFINSERIE(113726)="nouvelle collection"
+ s ^TKFINSERIE(113728)="nouvelle collection"
+ s ^TKFINSERIE(113875)="nouvelle collection"
+ s ^TKFINSERIE(113740)="nouvelle collection"
+ s ^TKFINSERIE(113787)="nouvelle collection"
+ s ^TKFINSERIE(113874)="nouvelle collection"
+ s ^TKFINSERIE(113873)="nouvelle collection"
+ s ^TKFINSERIE(113717)="nouvelle collection"
+ s ^TKFINSERIE(113716)="nouvelle collection"
+ s ^TKFINSERIE(113718)="nouvelle collection"
+ s ^TKFINSERIE(113758)="nouvelle collection"
+ s ^TKFINSERIE(113756)="nouvelle collection"
+ s ^TKFINSERIE(113757)="nouvelle collection"
+ s ^TKFINSERIE(113743)="nouvelle collection"
+ s ^TKFINSERIE(113909)="nouvelle collection"
+ s ^TKFINSERIE(113737)="nouvelle collection"
+ s ^TKFINSERIE(113738)="nouvelle collection"
+ s ^TKFINSERIE(113736)="nouvelle collection"
+ s ^TKFINSERIE(113825)="nouvelle collection"
+ s ^TKFINSERIE(113823)="nouvelle collection"
+ s ^TKFINSERIE(111198)="nouvelle collection"
+ s ^TKFINSERIE(113576)="nouvelle collection"
+ s ^TKFINSERIE(113575)="nouvelle collection"
+ s ^TKFINSERIE(113574)="nouvelle collection"
+ s ^TKFINSERIE(113577)="nouvelle collection"
+ s ^TKFINSERIE(113578)="nouvelle collection"
+ s ^TKFINSERIE(113579)="nouvelle collection"
+ s ^TKFINSERIE(113705)="nouvelle collection"
+ s ^TKFINSERIE(113709)="nouvelle collection"
+ s ^TKFINSERIE(113704)="nouvelle collection"
+ s ^TKFINSERIE(113710)="nouvelle collection"
+ s ^TKFINSERIE(113706)="nouvelle collection"
+ s ^TKFINSERIE(113707)="nouvelle collection"
+ s ^TKFINSERIE(113708)="nouvelle collection"
+ s ^TKFINSERIE(113923)="nouvelle collection"
+ s ^TKFINSERIE(113918)="nouvelle collection"
+ s ^TKFINSERIE(113920)="nouvelle collection"
+ s ^TKFINSERIE(113916)="nouvelle collection"
+ s ^TKFINSERIE(113821)="nouvelle collection"
+ s ^TKFINSERIE(113819)="nouvelle collection"
+ s ^TKFINSERIE(113818)="nouvelle collection"
+ s ^TKFINSERIE(113820)="nouvelle collection"
+ s ^TKFINSERIE(113919)="nouvelle collection"
+ s ^TKFINSERIE(113917)="nouvelle collection"
+ s ^TKFINSERIE(113630)="nouvelle collection"
+ s ^TKFINSERIE(113629)="nouvelle collection"
+ s ^TKFINSERIE(113631)="nouvelle collection"
+ s ^TKFINSERIE(113633)="nouvelle collection"
+ s ^TKFINSERIE(113882)="nouvelle collection"
+ s ^TKFINSERIE(113881)="nouvelle collection"
+ s ^TKFINSERIE(113814)="nouvelle collection"
+ s ^TKFINSERIE(113815)="nouvelle collection"
+ s ^TKFINSERIE(113816)="nouvelle collection"
+ s ^TKFINSERIE(113808)="nouvelle collection"
+ s ^TKFINSERIE(113807)="nouvelle collection"
+ s ^TKFINSERIE(113809)="nouvelle collection"
+ s ^TKFINSERIE(113694)="nouvelle collection"
+ s ^TKFINSERIE(113641)="nouvelle collection"
+ s ^TKFINSERIE(113735)="nouvelle collection"
+ s ^TKFINSERIE(113734)="nouvelle collection"
+ s ^TKFINSERIE(113766)="nouvelle collection"
+ s ^TKFINSERIE(113765)="nouvelle collection"
+ s ^TKFINSERIE(113921)="nouvelle collection"
+ s ^TKFINSERIE(113878)="nouvelle collection"
+ s ^TKFINSERIE(113876)="nouvelle collection"
+ s ^TKFINSERIE(113877)="nouvelle collection"
+ s ^TKFINSERIE(113569)="nouvelle collection"
+ s ^TKFINSERIE(113755)="nouvelle collection"
+ s ^TKFINSERIE(113555)="nouvelle collection"
+ s ^TKFINSERIE(113548)="nouvelle collection"
+ s ^TKFINSERIE(113547)="nouvelle collection"
+ s ^TKFINSERIE(113549)="nouvelle collection"
+ s ^TKFINSERIE(113908)="nouvelle collection"
+ s ^TKFINSERIE(113907)="nouvelle collection"
+ s ^TKFINSERIE(113904)="nouvelle collection"
+ s ^TKFINSERIE(113905)="nouvelle collection"
+ s ^TKFINSERIE(113903)="nouvelle collection"
+ s ^TKFINSERIE(113906)="nouvelle collection"
+ s ^TKFINSERIE(113662)="nouvelle collection"
+ s ^TKFINSERIE(113898)="nouvelle collection"
+ s ^TKFINSERIE(113899)="nouvelle collection"
+ s ^TKFINSERIE(113900)="nouvelle collection"
+ s ^TKFINSERIE(113897)="nouvelle collection"
+ s ^TKFINSERIE(113902)="nouvelle collection"
+ s ^TKFINSERIE(113901)="nouvelle collection"
+ s ^TKFINSERIE(113811)="nouvelle collection"
+ s ^TKFINSERIE(113812)="nouvelle collection"
+ s ^TKFINSERIE(113849)="nouvelle collection"
+ s ^TKFINSERIE(113847)="nouvelle collection"
+ s ^TKFINSERIE(113850)="nouvelle collection"
+ s ^TKFINSERIE(113851)="nouvelle collection"
+ s ^TKFINSERIE(113843)="nouvelle collection"
+ s ^TKFINSERIE(113852)="nouvelle collection"
+ s ^TKFINSERIE(113854)="nouvelle collection"
+ s ^TKFINSERIE(113853)="nouvelle collection"
+ s ^TKFINSERIE(113845)="nouvelle collection"
+ s ^TKFINSERIE(113846)="nouvelle collection"
+ s ^TKFINSERIE(113844)="nouvelle collection"
+ s ^TKFINSERIE(113848)="nouvelle collection"
+ s ^TKFINSERIE(113842)="nouvelle collection"
+ s ^TKFINSERIE(113777)="nouvelle collection"
+ s ^TKFINSERIE(113572)="nouvelle collection"
+ s ^TKFINSERIE(113693)="nouvelle collection"
+ s ^TKFINSERIE(113692)="nouvelle collection"
+ s ^TKFINSERIE(113687)="nouvelle collection"
+ s ^TKFINSERIE(113689)="nouvelle collection"
+ s ^TKFINSERIE(113690)="nouvelle collection"
+ s ^TKFINSERIE(113691)="nouvelle collection"
+ s ^TKFINSERIE(113698)="nouvelle collection"
+ s ^TKFINSERIE(113699)="nouvelle collection"
+ s ^TKFINSERIE(113627)="nouvelle collection"
+ s ^TKFINSERIE(113636)="nouvelle collection"
+ s ^TKFINSERIE(113635)="nouvelle collection"
+ s ^TKFINSERIE(113712)="nouvelle collection"
+ s ^TKFINSERIE(113632)="nouvelle collection"
+ s ^TKFINSERIE(113624)="nouvelle collection"
+ s ^TKFINSERIE(113625)="nouvelle collection"
+ s ^TKFINSERIE(112853)="nouvelle collection"
+ s ^TKFINSERIE(112725)="nouvelle collection"
+ s ^TKFINSERIE(112726)="nouvelle collection"
+ s ^TKFINSERIE(112682)="nouvelle collection"
+ s ^TKFINSERIE(112681)="nouvelle collection"
+ s ^TKFINSERIE(112678)="nouvelle collection"
+ s ^TKFINSERIE(112680)="nouvelle collection"
+ s ^TKFINSERIE(112679)="nouvelle collection"
+ s ^TKFINSERIE(112695)="nouvelle collection"
+ s ^TKFINSERIE(112691)="nouvelle collection"
+ s ^TKFINSERIE(112694)="nouvelle collection"
+ s ^TKFINSERIE(112693)="nouvelle collection"
+ s ^TKFINSERIE(112692)="nouvelle collection"
+ s ^TKFINSERIE(112696)="nouvelle collection"
+ s ^TKFINSERIE(112754)="nouvelle collection"
+ s ^TKFINSERIE(112753)="nouvelle collection"
+ s ^TKFINSERIE(112752)="nouvelle collection"
+ s ^TKFINSERIE(111504)="nouvelle collection"
+ s ^TKFINSERIE(111503)="nouvelle collection"
+ s ^TKFINSERIE(112718)="nouvelle collection"
+ s ^TKFINSERIE(112717)="nouvelle collection"
+ s ^TKFINSERIE(112748)="nouvelle collection"
+ s ^TKFINSERIE(112719)="nouvelle collection"
+ s ^TKFINSERIE(112723)="nouvelle collection"
+ s ^TKFINSERIE(112722)="nouvelle collection"
+ s ^TKFINSERIE(112720)="nouvelle collection"
+ s ^TKFINSERIE(112721)="nouvelle collection"
+ s ^TKFINSERIE(112724)="nouvelle collection"
+ s ^TKFINSERIE(114093)="nouvelle collection"
+ s ^TKFINSERIE(114092)="nouvelle collection"
+ s ^TKFINSERIE(114091)="nouvelle collection"
+ s ^TKFINSERIE(114089)="nouvelle collection"
+ s ^TKFINSERIE(114090)="nouvelle collection"
+ s ^TKFINSERIE(112787)="nouvelle collection"
+ s ^TKFINSERIE(112786)="nouvelle collection"
+ s ^TKFINSERIE(112818)="nouvelle collection"
+ s ^TKFINSERIE(112785)="nouvelle collection"
+ s ^TKFINSERIE(112788)="nouvelle collection"
+ s ^TKFINSERIE(112812)="nouvelle collection"
+ s ^TKFINSERIE(112813)="nouvelle collection"
+ s ^TKFINSERIE(112816)="nouvelle collection"
+ s ^TKFINSERIE(112817)="nouvelle collection"
+ s ^TKFINSERIE(112688)="nouvelle collection"
+ s ^TKFINSERIE(112690)="nouvelle collection"
+ s ^TKFINSERIE(112686)="nouvelle collection"
+ s ^TKFINSERIE(112684)="nouvelle collection"
+ s ^TKFINSERIE(112823)="nouvelle collection"
+ s ^TKFINSERIE(112822)="nouvelle collection"
+ s ^TKFINSERIE(112819)="nouvelle collection"
+ s ^TKFINSERIE(112820)="nouvelle collection"
+ s ^TKFINSERIE(112821)="nouvelle collection"
+ s ^TKFINSERIE(112814)="nouvelle collection"
+ s ^TKFINSERIE(112815)="nouvelle collection"
+ s ^TKFINSERIE(113634)="nouvelle collection"
+ s ^TKFINSERIE(112687)="nouvelle collection"
+ s ^TKFINSERIE(112689)="nouvelle collection"
+ s ^TKFINSERIE(112685)="nouvelle collection"
+ s ^TKFINSERIE(112683)="nouvelle collection"
+ s ^TKFINSERIE(113828)="nouvelle collection"
+ s ^TKFINSERIE(113857)="nouvelle collection"
+ s ^TKFINSERIE(113858)="nouvelle collection"
+ s ^TKFINSERIE(113830)="nouvelle collection"
+ s ^TKFINSERIE(113832)="nouvelle collection"
+ s ^TKFINSERIE(113827)="nouvelle collection"
+ s ^TKFINSERIE(113829)="nouvelle collection"
+ s ^TKFINSERIE(113824)="nouvelle collection"
+ s ^TKFINSERIE(112611)="nouvelle collection"
+ s ^TKFINSERIE(112610)="nouvelle collection"
+ s ^TKFINSERIE(112744)="nouvelle collection"
+ s ^TKFINSERIE(112734)="nouvelle collection"
+ s ^TKFINSERIE(112743)="nouvelle collection"
+ s ^TKFINSERIE(112742)="nouvelle collection"
+ s ^TKFINSERIE(112740)="nouvelle collection"
+ s ^TKFINSERIE(112741)="nouvelle collection"
+ s ^TKFINSERIE(112735)="nouvelle collection"
+ s ^TKFINSERIE(112737)="nouvelle collection"
+ s ^TKFINSERIE(112739)="nouvelle collection"
+ s ^TKFINSERIE(112738)="nouvelle collection"
+ s ^TKFINSERIE(112745)="nouvelle collection"
+ s ^TKFINSERIE(112736)="nouvelle collection"
+ s ^TKFINSERIE(112732)="nouvelle collection"
+ s ^TKFINSERIE(112733)="nouvelle collection"
+ s ^TKFINSERIE(112731)="nouvelle collection"
+ s ^TKFINSERIE(112596)="nouvelle collection"
+ s ^TKFINSERIE(112595)="nouvelle collection"
+ s ^TKFINSERIE(112701)="nouvelle collection"
+ s ^TKFINSERIE(112703)="nouvelle collection"
+ s ^TKFINSERIE(112702)="nouvelle collection"
+ s ^TKFINSERIE(113866)="nouvelle collection"
+ s ^TKFINSERIE(113870)="nouvelle collection"
+ s ^TKFINSERIE(113865)="nouvelle collection"
+ s ^TKFINSERIE(112698)="nouvelle collection"
+ s ^TKFINSERIE(112699)="nouvelle collection"
+ s ^TKFINSERIE(112700)="nouvelle collection"
+ s ^TKFINSERIE(112697)="nouvelle collection"
+ s ^TKFINSERIE(112756)="nouvelle collection"
+ s ^TKFINSERIE(112765)="nouvelle collection"
+ s ^TKFINSERIE(112759)="nouvelle collection"
+ s ^TKFINSERIE(112764)="nouvelle collection"
+ s ^TKFINSERIE(112758)="nouvelle collection"
+ s ^TKFINSERIE(112763)="nouvelle collection"
+ s ^TKFINSERIE(112760)="nouvelle collection"
+ s ^TKFINSERIE(112766)="nouvelle collection"
+ s ^TKFINSERIE(112757)="nouvelle collection"
+ s ^TKFINSERIE(112774)="nouvelle collection"
+ s ^TKFINSERIE(112657)="nouvelle collection"
+ s ^TKFINSERIE(112659)="nouvelle collection"
+ s ^TKFINSERIE(112662)="nouvelle collection"
+ s ^TKFINSERIE(112660)="nouvelle collection"
+ s ^TKFINSERIE(112647)="nouvelle collection"
+ s ^TKFINSERIE(112653)="nouvelle collection"
+ s ^TKFINSERIE(112652)="nouvelle collection"
+ s ^TKFINSERIE(112646)="nouvelle collection"
+ s ^TKFINSERIE(112767)="nouvelle collection"
+ s ^TKFINSERIE(112761)="nouvelle collection"
+ s ^TKFINSERIE(112768)="nouvelle collection"
+ s ^TKFINSERIE(112762)="nouvelle collection"
+ s ^TKFINSERIE(112808)="nouvelle collection"
+ s ^TKFINSERIE(112676)="nouvelle collection"
+ s ^TKFINSERIE(112673)="nouvelle collection"
+ s ^TKFINSERIE(112674)="nouvelle collection"
+ s ^TKFINSERIE(112675)="nouvelle collection"
+ s ^TKFINSERIE(112645)="nouvelle collection"
+ s ^TKFINSERIE(112630)="nouvelle collection"
+ s ^TKFINSERIE(112631)="nouvelle collection"
+ s ^TKFINSERIE(112632)="nouvelle collection"
+ s ^TKFINSERIE(112643)="nouvelle collection"
+ s ^TKFINSERIE(112644)="nouvelle collection"
+ s ^TKFINSERIE(112638)="nouvelle collection"
+ s ^TKFINSERIE(112635)="nouvelle collection"
+ s ^TKFINSERIE(112634)="nouvelle collection"
+ s ^TKFINSERIE(112640)="nouvelle collection"
+ s ^TKFINSERIE(112642)="nouvelle collection"
+ s ^TKFINSERIE(112641)="nouvelle collection"
+ s ^TKFINSERIE(112637)="nouvelle collection"
+ s ^TKFINSERIE(112639)="nouvelle collection"
+ s ^TKFINSERIE(112636)="nouvelle collection"
+ s ^TKFINSERIE(112633)="nouvelle collection"
+ s ^TKFINSERIE(113861)="nouvelle collection"
+ s ^TKFINSERIE(113914)="nouvelle collection"
+ s ^TKFINSERIE(112603)="nouvelle collection"
+ s ^TKFINSERIE(112600)="nouvelle collection"
+ s ^TKFINSERIE(113915)="nouvelle collection"
+ s ^TKFINSERIE(112602)="nouvelle collection"
+ s ^TKFINSERIE(113860)="nouvelle collection"
+ s ^TKFINSERIE(112599)="nouvelle collection"
+ s ^TKFINSERIE(112604)="nouvelle collection"
+ s ^TKFINSERIE(113859)="nouvelle collection"
+ s ^TKFINSERIE(112601)="nouvelle collection"
+ s ^TKFINSERIE(112626)="nouvelle collection"
+ s ^TKFINSERIE(112625)="nouvelle collection"
+ s ^TKFINSERIE(112627)="nouvelle collection"
+ s ^TKFINSERIE(112628)="nouvelle collection"
+ s ^TKFINSERIE(112629)="nouvelle collection"
+ s ^TKFINSERIE(112852)="nouvelle collection"
+ s ^TKFINSERIE(112856)="nouvelle collection"
+ s ^TKFINSERIE(112857)="nouvelle collection"
+ s ^TKFINSERIE(112842)="nouvelle collection"
+ s ^TKFINSERIE(112841)="nouvelle collection"
+ s ^TKFINSERIE(112848)="nouvelle collection"
+ s ^TKFINSERIE(112851)="nouvelle collection"
+ s ^TKFINSERIE(112850)="nouvelle collection"
+ s ^TKFINSERIE(112847)="nouvelle collection"
+ s ^TKFINSERIE(112849)="nouvelle collection"
+ s ^TKFINSERIE(112833)="nouvelle collection"
+ s ^TKFINSERIE(112835)="nouvelle collection"
+ s ^TKFINSERIE(112836)="nouvelle collection"
+ s ^TKFINSERIE(112834)="nouvelle collection"
+ s ^TKFINSERIE(112831)="nouvelle collection"
+ s ^TKFINSERIE(112832)="nouvelle collection"
+ s ^TKFINSERIE(112854)="nouvelle collection"
+ s ^TKFINSERIE(112855)="nouvelle collection"
+ s ^TKFINSERIE(112839)="nouvelle collection"
+ s ^TKFINSERIE(112837)="nouvelle collection"
+ s ^TKFINSERIE(112840)="nouvelle collection"
+ s ^TKFINSERIE(112838)="nouvelle collection"
+ s ^TKFINSERIE(112845)="nouvelle collection"
+ s ^TKFINSERIE(112844)="nouvelle collection"
+ s ^TKFINSERIE(112843)="nouvelle collection"
+ s ^TKFINSERIE(114266)="nouvelle collection"
+ s ^TKFINSERIE(114264)="nouvelle collection"
+ s ^TKFINSERIE(114265)="nouvelle collection"
+ s ^TKFINSERIE(112620)="nouvelle collection"
+ s ^TKFINSERIE(112619)="nouvelle collection"
+ s ^TKFINSERIE(112616)="nouvelle collection"
+ s ^TKFINSERIE(112617)="nouvelle collection"
+ s ^TKFINSERIE(112618)="nouvelle collection"
+ s ^TKFINSERIE(112624)="nouvelle collection"
+ s ^TKFINSERIE(112623)="nouvelle collection"
+ s ^TKFINSERIE(112622)="nouvelle collection"
+ s ^TKFINSERIE(112621)="nouvelle collection"
+ s ^TKFINSERIE(112581)="nouvelle collection"
+ s ^TKFINSERIE(112582)="nouvelle collection"
+ s ^TKFINSERIE(112584)="nouvelle collection"
+ s ^TKFINSERIE(112585)="nouvelle collection"
+ s ^TKFINSERIE(112586)="nouvelle collection"
+ s ^TKFINSERIE(112583)="nouvelle collection"
+ s ^TKFINSERIE(112588)="nouvelle collection"
+ s ^TKFINSERIE(112590)="nouvelle collection"
+ s ^TKFINSERIE(112587)="nouvelle collection"
+ s ^TKFINSERIE(112589)="nouvelle collection"
+ s ^TKFINSERIE(112826)="nouvelle collection"
+ s ^TKFINSERIE(112829)="nouvelle collection"
+ s ^TKFINSERIE(112828)="nouvelle collection"
+ s ^TKFINSERIE(112827)="nouvelle collection"
+ s ^TKFINSERIE(112830)="nouvelle collection"
+ s ^TKFINSERIE(112846)="nouvelle collection"
+ s ^TKFINSERIE(112607)="nouvelle collection"
+ s ^TKFINSERIE(112609)="nouvelle collection"
+ s ^TKFINSERIE(112608)="nouvelle collection"
+ s ^TKFINSERIE(112605)="nouvelle collection"
+ s ^TKFINSERIE(112606)="nouvelle collection"
+ s ^TKFINSERIE(112666)="nouvelle collection"
+ s ^TKFINSERIE(112668)="nouvelle collection"
+ s ^TKFINSERIE(112664)="nouvelle collection"
+ s ^TKFINSERIE(112667)="nouvelle collection"
+ s ^TKFINSERIE(112665)="nouvelle collection"
+ s ^TKFINSERIE(112663)="nouvelle collection"
+ s ^TKFINSERIE(112677)="nouvelle collection"
+ s ^TKFINSERIE(112669)="nouvelle collection"
+ s ^TKFINSERIE(112670)="nouvelle collection"
+ s ^TKFINSERIE(112671)="nouvelle collection"
+ s ^TKFINSERIE(112672)="nouvelle collection"
+ s ^TKFINSERIE(114075)="nouvelle collection"
+ s ^TKFINSERIE(114076)="nouvelle collection"
+ s ^TKFINSERIE(114077)="nouvelle collection"
+ s ^TKFINSERIE(114078)="nouvelle collection"
+ s ^TKFINSERIE(114085)="nouvelle collection"
+ s ^TKFINSERIE(114083)="nouvelle collection"
+ s ^TKFINSERIE(114084)="nouvelle collection"
+ s ^TKFINSERIE(114079)="nouvelle collection"
+ s ^TKFINSERIE(114080)="nouvelle collection"
+ s ^TKFINSERIE(114081)="nouvelle collection"
+ s ^TKFINSERIE(114082)="nouvelle collection"
+ s ^TKFINSERIE(114087)="nouvelle collection"
+ s ^TKFINSERIE(114088)="nouvelle collection"
+ s ^TKFINSERIE(112729)="nouvelle collection"
+ s ^TKFINSERIE(112730)="nouvelle collection"
+ s ^TKFINSERIE(112728)="nouvelle collection"
+ s ^TKFINSERIE(112793)="nouvelle collection"
+ s ^TKFINSERIE(113952)="nouvelle collection"
+ s ^TKFINSERIE(113951)="nouvelle collection"
+ s ^TKFINSERIE(113954)="nouvelle collection"
+ s ^TKFINSERIE(113953)="nouvelle collection"
+ s ^TKFINSERIE(113955)="nouvelle collection"
+ s ^TKFINSERIE(113956)="nouvelle collection"
+ s ^TKFINSERIE(113613)="nouvelle collection"
+ s ^TKFINSERIE(112792)="nouvelle collection"
+ s ^TKFINSERIE(112802)="nouvelle collection"
+ s ^TKFINSERIE(112803)="nouvelle collection"
+ s ^TKFINSERIE(112804)="nouvelle collection"
+ s ^TKFINSERIE(112805)="nouvelle collection"
+ s ^TKFINSERIE(112614)="nouvelle collection"
+ s ^TKFINSERIE(112615)="nouvelle collection"
+ s ^TKFINSERIE(112749)="nouvelle collection"
+ s ^TKFINSERIE(112612)="nouvelle collection"
+ s ^TKFINSERIE(112613)="nouvelle collection"
+ s ^TKFINSERIE(112751)="nouvelle collection"
+ s ^TKFINSERIE(112750)="nouvelle collection"
+ s ^TKFINSERIE(112727)="nouvelle collection"
+ s ^TKFINSERIE(113864)="nouvelle collection"
+ s ^TKFINSERIE(113618)="nouvelle collection"
+ s ^TKFINSERIE(113619)="nouvelle collection"
+ s ^TKFINSERIE(112791)="nouvelle collection"
+ s ^TKFINSERIE(112789)="nouvelle collection"
+ s ^TKFINSERIE(112790)="nouvelle collection"
+ s ^TKFINSERIE(113614)="nouvelle collection"
+ s ^TKFINSERIE(113622)="nouvelle collection"
+ s ^TKFINSERIE(113623)="nouvelle collection"
+ s ^TKFINSERIE(112796)="nouvelle collection"
+ s ^TKFINSERIE(112775)="nouvelle collection"
+ s ^TKFINSERIE(112777)="nouvelle collection"
+ s ^TKFINSERIE(112779)="nouvelle collection"
+ s ^TKFINSERIE(112781)="nouvelle collection"
+ s ^TKFINSERIE(112783)="nouvelle collection"
+ s ^TKFINSERIE(113615)="nouvelle collection"
+ s ^TKFINSERIE(112776)="nouvelle collection"
+ s ^TKFINSERIE(112778)="nouvelle collection"
+ s ^TKFINSERIE(112780)="nouvelle collection"
+ s ^TKFINSERIE(112782)="nouvelle collection"
+ s ^TKFINSERIE(112784)="nouvelle collection"
+ s ^TKFINSERIE(113620)="nouvelle collection"
+ s ^TKFINSERIE(113621)="nouvelle collection"
+ s ^TKFINSERIE(114020)="nouvelle collection"
+ s ^TKFINSERIE(114021)="nouvelle collection"
+ s ^TKFINSERIE(114018)="nouvelle collection"
+ s ^TKFINSERIE(112798)="nouvelle collection"
+ s ^TKFINSERIE(112795)="nouvelle collection"
+ s ^TKFINSERIE(113616)="nouvelle collection"
+ s ^TKFINSERIE(114017)="nouvelle collection"
+ s ^TKFINSERIE(112797)="nouvelle collection"
+ s ^TKFINSERIE(112800)="nouvelle collection"
+ s ^TKFINSERIE(112799)="nouvelle collection"
+ s ^TKFINSERIE(112801)="nouvelle collection"
+ s ^TKFINSERIE(112794)="nouvelle collection"
+ s ^TKFINSERIE(113617)="nouvelle collection"
+ s ^TKFINSERIE(113517)="nouvelle collection"
+ s ^TKFINSERIE(113516)="nouvelle collection"
+ s ^TKFINSERIE(113515)="nouvelle collection"
+ s ^TKFINSERIE(113514)="nouvelle collection"
+ s ^TKFINSERIE(113513)="nouvelle collection"
+ s ^TKFINSERIE(113518)="nouvelle collection"
+ s ^TKFINSERIE(113508)="nouvelle collection"
+ s ^TKFINSERIE(113507)="nouvelle collection"
+ s ^TKFINSERIE(113512)="nouvelle collection"
+ s ^TKFINSERIE(113511)="nouvelle collection"
+ s ^TKFINSERIE(113510)="nouvelle collection"
+ s ^TKFINSERIE(113509)="nouvelle collection"
+ s ^TKFINSERIE(113667)="nouvelle collection"
+ s ^TKFINSERIE(113520)="nouvelle collection"
+ s ^TKFINSERIE(113519)="nouvelle collection"
+ s ^TKFINSERIE(113522)="nouvelle collection"
+ s ^TKFINSERIE(113521)="nouvelle collection"
+ s ^TKFINSERIE(113501)="nouvelle collection"
+ s ^TKFINSERIE(113500)="nouvelle collection"
+ s ^TKFINSERIE(113499)="nouvelle collection"
+ s ^TKFINSERIE(113498)="nouvelle collection"
+ s ^TKFINSERIE(113497)="nouvelle collection"
+ s ^TKFINSERIE(113502)="nouvelle collection"
+ s ^TKFINSERIE(113505)="nouvelle collection"
+ s ^TKFINSERIE(113504)="nouvelle collection"
+ s ^TKFINSERIE(113503)="nouvelle collection"
+ s ^TKFINSERIE(113506)="nouvelle collection"
+ s ^TKFINSERIE(113523)="nouvelle collection"
+ s ^TKFINSERIE(113529)="nouvelle collection"
+ s ^TKFINSERIE(113526)="nouvelle collection"
+ s ^TKFINSERIE(113532)="nouvelle collection"
+ s ^TKFINSERIE(113525)="nouvelle collection"
+ s ^TKFINSERIE(113531)="nouvelle collection"
+ s ^TKFINSERIE(113528)="nouvelle collection"
+ s ^TKFINSERIE(113534)="nouvelle collection"
+ s ^TKFINSERIE(113524)="nouvelle collection"
+ s ^TKFINSERIE(113530)="nouvelle collection"
+ s ^TKFINSERIE(113527)="nouvelle collection"
+ s ^TKFINSERIE(113533)="nouvelle collection"
+ s ^TKFINSERIE(113537)="nouvelle collection"
+ s ^TKFINSERIE(113536)="nouvelle collection"
+ s ^TKFINSERIE(113535)="nouvelle collection"
+ s ^TKFINSERIE(113538)="nouvelle collection"
+ s ^TKFINSERIE(112594)="nouvelle collection"
+ s ^TKFINSERIE(112593)="nouvelle collection"
+ s ^TKFINSERIE(112591)="nouvelle collection"
+ s ^TKFINSERIE(112704)="nouvelle collection"
+ s ^TKFINSERIE(112705)="nouvelle collection"
+ s ^TKFINSERIE(112747)="nouvelle collection"
+ s ^TKFINSERIE(112746)="nouvelle collection"
+ s ^TKFINSERIE(112598)="nouvelle collection"
+ s ^TKFINSERIE(114027)="nouvelle collection"
+ s ^TKFINSERIE(114028)="nouvelle collection"
+ s ^TKFINSERIE(114029)="nouvelle collection"
+ s ^TKFINSERIE(112597)="nouvelle collection"
+ s ^TKFINSERIE(112592)="nouvelle collection"
+ s ^TKFINSERIE(112710)="nouvelle collection"
+ s ^TKFINSERIE(112709)="nouvelle collection"
+ s ^TKFINSERIE(112708)="nouvelle collection"
+ s ^TKFINSERIE(112707)="nouvelle collection"
+ s ^TKFINSERIE(112706)="nouvelle collection"
+ s ^TKFINSERIE(112714)="nouvelle collection"
+ s ^TKFINSERIE(112716)="nouvelle collection"
+ s ^TKFINSERIE(112713)="nouvelle collection"
+ s ^TKFINSERIE(112715)="nouvelle collection"
+ s ^TKFINSERIE(112712)="nouvelle collection"
+ q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

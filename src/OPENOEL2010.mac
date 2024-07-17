@@ -1,0 +1,10 @@
+ROUTINE OPENOEL2010
+OPENOEL2010
+ // Ouverture des magasins les 3 Dimanches de Décembre
+ s ^TKCOUPREDUC(9990000000548)="0\0.15\20101215\20101231\1\"
+ 
+ Q
+ 
+ 
+ 
+ 

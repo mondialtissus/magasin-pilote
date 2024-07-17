@@ -1,0 +1,1759 @@
+ROUTINE OPTIMISATIONFUSION
+OPTIMISATIONFUSION
+
+	q
+LOADMVT(pParam,pDATE=0,pPLU="",pTYPEMVT="",pNUMMVT="") 
+ 
+ s SEP=$c(9)
+ s SEPDATA="\\_//" 
+ s filtreDateDeb = +$P(pParam,"\",1)
+ s filtreDateFin = +$P(pParam,"\",2)
+ s filtreListeTypeMvt = $P(pParam,"\",3)
+ s filtrePLU = +$P(pParam,"\",4)  
+ 
+ s P5=""
+ s P9=1
+ s DATE = +pDATE
+ if DATE=0 s DATE=filtreDateDeb //Nous effectuons le filtre au départ
+ if DATE=0 s DATE=$O(^GUMVT(DATE)) 
+ while DATE'=""
+ {
+	if filtreDateFin>0 {if +DATE>+filtreDateFin{s DATE="" q}}
+	
+	s PLU=pPLU
+	s pPLU=""
+	if filtrePLU>0 s PLU=filtrePLU
+	if PLU="" s PLU=$O(^GUMVT(DATE,PLU)) 
+	while PLU'=""
+	{
+		s TYPEMVT=pTYPEMVT
+		s pTYPEMVT=""
+		if TYPEMVT="" s TYPEMVT=$O(^GUMVT(DATE,PLU,TYPEMVT)) 
+		while TYPEMVT'=""
+		{
+			w "Filtre "_filtreListeTypeMvt
+			r a
+			s bOK = 1
+			if filtreListeTypeMvt'=""
+			{				
+				s CODETYPEMVT=";"_TYPEMVT_";"
+				if (filtreListeTypeMvt'[CODETYPEMVT)
+				{
+					s bOK = 0
+				}
+			}
+			if bOK = 1
+			{
+				//On récupère la désignation du type de mouvement
+				s DESTYPEMVT = $P($G(^GUMVTTYPE(TYPEMVT)),"\",4)
+				
+				s NUMMVT=pNUMMVT
+				s pNUMMVT=""
+				s NUMMVT=$O(^GUMVT(DATE,PLU,TYPEMVT,NUMMVT)) 
+				while NUMMVT'=""
+				{
+					s DATAMVT = $G(^GUMVT(DATE,PLU,TYPEMVT,NUMMVT)) 
+					s QTE=$P(DATAMVT,"\",1)			
+					s PA=$P(DATAMVT,"\",2)					
+					s QTEAVANT=$P(DATAMVT,"\",5)
+					s NUMDOC=""
+					if (+TYPEMVT>9)&&(+TYPEMVT<13){s NUMDOC=$P(DATAMVT,"\",8)}
+					
+					s COMMENTAIRE=$P(DATAMVT,"\",9)
+					s SENS=$P(DATAMVT,"\",4)
+					if (+SENS=-1)
+					{
+						s QTEFINALE=+QTEAVANT-QTE
+					}
+					else
+					{
+						s QTEFINALE=+QTEAVANT+QTE
+					}
+					if (+TYPEMVT=21)||(+TYPEMVT=20)
+					{
+						s QTEFINALE=QTEAVANT
+					}
+					s DESCARTICLE=$$RETOURNEDESARTICLE(PLU)
+					s DATECLAIR = $zd(DATE,8)
+					s P5=P5_DATECLAIR_SEP_PLU_SEP_TYPEMVT_SEP_DESTYPEMVT_SEP_QTE_SEP_PA_SEP_QTEAVANT_SEP_COMMENTAIRE_SEP_NUMDOC_SEP_NUMMVT_SEP_SENS_SEP_QTEFINALE_SEP_DESCARTICLE_SEPDATA
+					
+					I $L(P5)>10000 {s P6=NUMMVT s P9=0 Q}
+					s NUMMVT=$O(^GUMVT(DATE,PLU,TYPEMVT,NUMMVT)) 
+				}
+			}
+			I $L(P5)>10000 {s P4=TYPEMVT Q}
+			s TYPEMVT=$O(^GUMVT(DATE,PLU,TYPEMVT)) 
+		}	
+		I $L(P5)>10000 {s P3=PLU Q}
+		if filtrePLU>0{s PLU=""}else{s PLU=$O(^GUMVT(DATE,PLU))}
+	} 
+	I $L(P5)>10000 {s P2=DATE Q}
+	s DATE=$O(^GUMVT(DATE)) 
+ }
+
+ Q
+
+LOADSTOCK(pParam,pPLU=0) 
+ 
+ s SEP=$c(9)
+ s SEPDATA="\\_//" 
+ s filtrePLU = +$P(pParam,"\",1)  
+ s filtreSecteur = $P(pParam,"\",2)
+ s filtreFamille = $P(pParam,"\",3)
+ s filtreStatut = $P(pParam,"\",4) //filtre des statuts
+ s filtreInferieurA = $P(pParam,"\",5) //filtre le stock inférieur à
+ s filtreSuperieurA = $P(pParam,"\",6) //filtre le stock supérieur à
+ 
+ 
+ s P5=""
+ s P9=1
+ if filtrePLU>0{s PLU = +filtrePLU}else{s PLU = +pPLU s PLU=$O(^GUSTOCK(PLU)) } 
+ while PLU'=""
+ {
+	//Recherche du secteur et de la famille des articles en question
+	s bOK = 1
+	if (filtreSecteur'="") || (filtreStatut'="")
+	{
+		s CLEFART=$G(^SP(PLU))
+		if CLEFART'=""
+		{
+			s DATAFAMPA = $G(^HWARTFAMPA(PLU))	
+			
+			s DATASP = $G(^ST(CLEFART))
+			s CODESECTEUR=$P(DATASP,"\",23)
+			s CODEFAMILLE=$P(DATASP,"\",24)
+			if (filtreSecteur'="")
+			{
+				if +CODESECTEUR'=+filtreSecteur
+				{
+					s bOK=0
+				}
+				else
+				{
+					if (filtreFamille'=""){if +CODEFAMILLE'=+filtreFamille{s bOK=0}}				
+				}
+			}
+			if bOK=1
+			{				
+				//filtre du statut IN STOP OUT
+				if filtreStatut'=""
+				{
+					s STATUT = $P(DATAFAMPA,"\",6)
+					if filtreStatut'[(STATUT_"*")
+					{
+						s bOK=0
+					}
+				}			
+			}
+		}
+		else
+		{
+			s bOK = 0
+		}
+	}
+	else
+	{
+		s bOK = 0
+	}
+
+	if bOK = 1
+	{
+		s DATASTOCK=$G(^GUSTOCK(PLU)) 
+		s SECTEUR=$P(DATAFAMPA,"\",1)
+		s FAMILLE=$P(DATAFAMPA,"\",2)
+		s DESIGNATION=$$RETOURNEDESARTICLE("",CLEFART)
+		;s DESIGNATION=$P(DATAFAMPA,"\",4)
+		s PA=$P(DATAFAMPA,"\",5)
+		s QTETOTALE=$P(DATASTOCK,"\",6)
+				
+		if filtreInferieurA'=""
+		{
+			if QTETOTALE>=+filtreInferieurA
+			{
+				s bOK=0
+			}
+		}
+		if filtreSuperieurA'=""
+		{
+			if QTETOTALE<=+filtreSuperieurA
+			{
+				s bOK=0
+			}
+		}
+		
+		s VALOTOTALE=PA*QTETOTALE		
+		 		
+		if (bOK=1)&&(+QTETOTALE'=0) s P5=P5_SECTEUR_SEP_FAMILLE_SEP_PLU_SEP_DESIGNATION_SEP_PA_SEP_STATUT_SEP_QTETOTALE_SEP_VALOTOTALE_SEPDATA
+	}
+					
+	I $L(P5)>10000 {s P2=PLU s P9=0 Q}
+	if filtrePLU>0{s PLU=""}else{s PLU=$O(^GUSTOCK(PLU))}
+ }
+
+ Q
+ 
+RECEPTLIGNECOMMANDEPLUS(gNUMCMD,gCLEFART,gQTEAAJOUTER,gNUMBL,gPLU="")
+ //Cette fonction permet de réceptionner une ligne de commande dans HWARCCMD et de créer MODIO ou de la soustraire
+ s gQTEAAJOUTER=+gQTEAAJOUTER
+ if gQTEAAJOUTER=0 q
+ s CODEMAG=$G(^HWINFO("MAG"))
+ if gQTEAAJOUTER<0{s gQTEAAJOUTER = gQTEAAJOUTER*-1}
+ w !,"MAG "_CODEMAG
+ s bTrouve = 0
+ s QTELIVREE=0
+ s DATEDUJOUR = $zd(+$h,8)
+ //Le but est de retrouver le numéro de ligne de la commande
+ s iReliquat = +$G(^HWINFO("PCTACEPTBL")) 
+ s sClefArticle = ""
+ if gPLU'="" s sClefArticle=$G(^SP(gPLU))
+ if sClefArticle'="" s gCLEFART=sClefArticle
+ 
+ if gCLEFART="" q
+ //Récupération du code PLU
+ s sPLU = $P($G(^ST(gCLEFART)),"\",21)
+ s sNumCmdMag = ""
+ s sNumCmdMagLng = ""
+ s sNumLng = "0"
+ s sNumLng = $O(^HWNEV(CODEMAG,gNUMCMD,sNumLng))
+ while (sNumLng'="")&&(bTrouve=0)
+ {
+	 w !,"HWNEV "_sNumLng
+	 s sDataNEV = $G(^HWNEV(CODEMAG,gNUMCMD,sNumLng))
+	 if sDataNEV'=""
+	 {
+		 if $P(sDataNEV,"\",3)=gCLEFART
+		 {			 
+			 s bTrouve = 1
+			 s sNumCmdMag = $P($P(sDataNEV,"\",2),"*",1)
+	 		 s sNumCmdMagLng = $P($P(sDataNEV,"\",2),"*",2)
+	 		 w !,"HWNEV - TROUVE "_sNumLng_" / NUMCMDMAG "_sNumCmdMag_" ligne "_sNumCmdMagLng
+		 }
+	 }
+	 
+	 if (bTrouve=0)
+	 {
+	 	s sNumLng = $O(^HWNEV(CODEMAG,gNUMCMD,sNumLng))
+	 }	 
+ }
+ 
+ if (sNumLng'="")&&(sNumCmdMag'="")&&(sNumCmdMagLng'="")
+ {
+	//Il reste de la marchandise à réceptionnée	 	 	 
+ 	if +$D(^HWARCCMD("LIVR",gNUMCMD,sNumLng,sNumCmdMag,sNumCmdMagLng,gNUMBL))>0
+ 	{
+	 	w !,"Déjà livré."
+ 		//Livraison en plusieurs fois de l'article
+ 		s QTELIVREE=gQTEAAJOUTER + +$P($G(^HWARCCMD("LIVR",gNUMCMD,sNumLng,sNumCmdMag,sNumCmdMagLng,gNUMBL)),"\",2)					
+ 		w !,"Déjà livré. qté avant:"_(QTELIVREE-gQTEAAJOUTER)_" - après:"_QTELIVREE
+ 	}	
+ 	else
+ 	{	 	
+ 		s QTELIVREE=+gQTEAAJOUTER
+ 		w !,"Première livraison. qté:"_QTELIVREE
+ 	}	
+ 	s sDataLivr = "0\"_QTELIVREE_"\0\"_DATEDUJOUR_"\"_DATEDUJOUR_"\"
+ 	 
+ 	 s sDateMvt = $zd($p($h,",",1),8)
+	 s ^HWARCCMD("LIVR",gNUMCMD,sNumLng,sNumCmdMag,sNumCmdMagLng,gNUMBL)=sDataLivr
+	 
+	 s sBLInfo = gNUMBL_"*0"
+	 
+	 //historique des livraisons pour l'article par année et mois
+	 s Annee = $E(DATEDUJOUR,1,4)
+	 s Mois = $E(DATEDUJOUR,5,6)
+	 s ^HWHISLIV(gCLEFART,"TOTAL")=+$G(^HWHISLIV(gCLEFART,"TOTAL"))+gQTEAAJOUTER
+	 s ^HWHISLIV(gCLEFART,Annee)=+$G(^HWHISLIV(gCLEFART,Annee))+gQTEAAJOUTER
+	 s ^HWHISLIV(gCLEFART,Annee,Mois)=+$G(^HWHISLIV(gCLEFART,Annee,Mois))+gQTEAAJOUTER
+	 
+	 //Fin de l'historique
+	 
+	 s sDateHeure = $h
+	 s sModio = "\"_gQTEAAJOUTER_"\"_sDateHeure_"\I\\\\"_CODEMAG_"\HC->HW(NEV)*"_gNUMCMD_"\\\\\"_sBLInfo_"\"_sDateMvt
+	 w !,"Modio: "_sModio
+	 za ^MODIO
+	 if sPLU'=""
+	 {
+		s sNumLngModio = +$O(^MODIO(CODEMAG,sPLU,""),-1)+1
+	 	s ^MODIO(CODEMAG,sPLU,sNumLngModio,"I")=sModio	  
+	 }
+	 else
+	 {
+		s sNumLngModio = +$O(^MODIO(CODEMAG,gCLEFART,""),-1)+1
+	 	s ^MODIO(CODEMAG,gCLEFART,sNumLngModio,"I")=sModio	  
+	 }	 
+	 zd ^MODIO
+	 
+	 r a
+	 ;k ^RECEPENCOURS("LIVR",gNUMCMD,sNumLng,sNumCmdMag,sNumCmdMagLng,gNUMBL)
+	 
+	 s QTECMD = +$P(sDataNEV,"\",5)
+	 s ValeurRelMax = QTECMD- ((iReliquat*QTECMD)/100)	 
+	 //Nous devons recalculer la quantité livrée en fonction de tous les BL
+	 s QTELIVREETOTALE = 0
+	 s sNUMBL=""
+	 s sNUMBL=$O(^HWARCCMD("LIVR",gNUMCMD,sNumLng,sNumCmdMag,sNumCmdMagLng,sNUMBL))
+	 while sNUMBL'=""
+	 {
+		s QTELIVREETOTALE = QTELIVREETOTALE+$P($G(^HWARCCMD("LIVR",gNUMCMD,sNumLng,sNumCmdMag,sNumCmdMagLng,sNUMBL)),"\",2) 
+		
+		s sNUMBL=$O(^HWARCCMD("LIVR",gNUMCMD,sNumLng,sNumCmdMag,sNumCmdMagLng,sNUMBL)) 
+	 }
+	 w !,"données reliquat :"_QTELIVREETOTALE_"/"_ValeurRelMax_"/"_gNUMCMD_"/"_sNumLng
+	 r a
+	 
+	 if QTELIVREETOTALE>ValeurRelMax
+	 {
+		 k ^HWNEV(CODEMAG,gNUMCMD,sNumLng)
+		 ;s sDataPLU = $G(^ST(gCLEFART))
+		 ;s sPLU = $P(sDataPLU,"\",21)
+		 if sPLU'=""
+		 {
+			 k ^RECEPTART(sPLU,gNUMCMD)
+		 }
+		 
+		 if $O(^HWNEV(CODEMAG,gNUMCMD,"0"))=""
+		 {
+			 k ^HWNEV(CODEMAG,gNUMCMD,"0")
+		 }
+	 }
+ }
+ else
+ {
+	 //Nous l'avons déjà réceptionné, nous devons rechercher les informations différement.
+	 w !,"Déjà réceptionné totalement."
+	 s sNumCmdMag = ""
+	 s sNumCmdMag = $O(^HWARCCMD("FAX",sNumCmdMag))
+	 while sNumCmdMag'=""
+	 {
+		 s sNumCmdMagLng = ""
+		 s sNumCmdMagLng = $O(^HWARCCMD("FAX",sNumCmdMag,sNumCmdMagLng))
+	 	 while sNumCmdMagLng'=""
+	 	 {
+		 	 if +$D(^HWARCCMD("FAX",sNumCmdMag,sNumCmdMagLng,gNUMCMD))>0
+		 	 {
+			 	;w !,"Numcmd: "_sNumCmdMag_" - ligne:"_sNumCmdMagLng
+				//Nous avons trouvé le numéro de commande
+				//On recherche le numéro de ligne de la commande
+				//s sNumCmdMagLng = "0"
+		 		if +$D(^HWARCCMD("CDE",sNumCmdMag,sNumCmdMagLng))>0		 		
+		 		{
+					 s DATACDE = $G(^HWARCCMD("CDE",sNumCmdMag,sNumCmdMagLng))
+			 
+					 if $P(DATACDE,"\",1)=gCLEFART
+					 {
+						 s bTrouve=1
+						 q
+					 }			 			 
+		 		}			 		
+		 	 }
+		 	 if bTrouve=1 q
+		 	 s sNumCmdMagLng = $O(^HWARCCMD("FAX",sNumCmdMag,sNumCmdMagLng))
+	 	 }
+	 	 if bTrouve=1 q
+		 s sNumCmdMag = $O(^HWARCCMD("FAX",sNumCmdMag))
+	 } 
+		 
+	 if sNumCmdMagLng'=""
+ 	 {	
+ 	 	w !,"Bien commandé."
+		s sNumLng=$O(^HWARCCMD("FAX",sNumCmdMag,sNumCmdMagLng,gNUMCMD,""))
+		if sNumLng'=""
+		{
+			//La ligne est bien commandée initialement
+			if +$D(^HWARCCMD("LIVR",gNUMCMD,sNumLng,sNumCmdMag,sNumCmdMagLng,gNUMBL))>0
+			{
+				//Livraison en plusieurs fois de l'article
+				s QTELIVREE=+gQTEAAJOUTER + +$P($G(^HWARCCMD("LIVR",gNUMCMD,sNumLng,sNumCmdMag,sNumCmdMagLng,gNUMBL)),"\",2)					
+				w !,"Livré "_(QTELIVREE-gQTEAAJOUTER)_" total "_QTELIVREE
+			}
+			else
+			{
+				w !,"Première livraison... Bizarre"
+				s QTELIVREE=+gQTEAAJOUTER
+			}
+		}
+		else
+		{
+			w !,"Première livraison... Bizarre 2"
+			s QTELIVREE=+gQTEAAJOUTER
+		}			
+ 	 }	 	 		 
+
+	 s sDataLivr = ""
+	 if (sNumCmdMag="")||(sNumCmdMagLng="")
+	 {		 
+	 	 //Nous créons une nouvelle ligne
+	 	 s sNumCmdMag="0"
+	 	 s sNumCmdMagLng="0"
+	 	 s QTELIVREE=gQTEAAJOUTER
+		 s nLigneLIVRMax = +$O(^HWARCCMD("LIVR",gNUMCMD,""),-1)
+		 s nLigneHWNEVMax = +$O(^HWNEV(CODEMAG,gNUMCMD,""),-1)		 
+		 if nLigneLIVRMax>nLigneHWNEVMax
+		 {
+			 s sNumLng = nLigneLIVRMax+1
+		 }
+		 else
+		 {
+			 s sNumLng = nLigneHWNEVMax+1
+		 }
+		 
+		 s sDataLivr = "0\"_QTELIVREE_"\0\"_DATEDUJOUR_"\"_DATEDUJOUR_"\"_gCLEFART
+		 w !,"Ligne en plus: "_sDataLivr
+	 }
+	 else
+	 {
+		 s sDataLivr = "0\"_QTELIVREE_"\0\"_DATEDUJOUR_"\"_DATEDUJOUR_"\"
+		 w !,"Ligne dans la commande: "_sDataLivr
+	 }
+	 s sDateMvt = DATEDUJOUR
+	 r a
+	 s ^HWARCCMD("LIVR",gNUMCMD,sNumLng,sNumCmdMag,sNumCmdMagLng,gNUMBL)=sDataLivr
+	 
+	 s sBLInfo = gNUMBL_"*0"
+	 
+	 //historique des livraisons pour l'article par année et mois
+	 s Annee = $E(DATEDUJOUR,1,4)
+	 s Mois = $E(DATEDUJOUR,5,6)
+	 s ^HWHISLIV(gCLEFART,"TOTAL")=+$G(^HWHISLIV(gCLEFART,"TOTAL"))+gQTEAAJOUTER
+	 s ^HWHISLIV(gCLEFART,Annee)=+$G(^HWHISLIV(gCLEFART,Annee))+gQTEAAJOUTER
+	 s ^HWHISLIV(gCLEFART,Annee,Mois)=+$G(^HWHISLIV(gCLEFART,Annee,Mois))+gQTEAAJOUTER
+	 
+	 //Fin de l'historique
+	 
+	 s sDateHeure = $h
+	 s sModio = "\"_gQTEAAJOUTER_"\"_sDateHeure_"\I\\\\"_CODEMAG_"\HC->HW(NEV)*"_gNUMCMD_"\\\\\"_sBLInfo_"\"_sDateMvt
+	 w !,"Modio: "_sModio
+	 za ^MODIO
+	 
+	 if sPLU'=""
+	 {
+	 	s sNumLngModio = +$O(^MODIO(CODEMAG,sPLU,""),-1)+1
+	 	s ^MODIO(CODEMAG,sPLU,sNumLngModio,"I")=sModio	 
+	 }
+	 else
+	 {
+		s sNumLngModio = +$O(^MODIO(CODEMAG,gCLEFART,""),-1)+1
+	 	s ^MODIO(CODEMAG,gCLEFART,sNumLngModio,"I")=sModio
+	 }
+	 zd ^MODIO
+	 
+	 k ^RECEPENCOURS("LIVR",gNUMCMD,sNumLng,sNumCmdMag,sNumCmdMagLng,gNUMBL)
+ }
+ s P9="1\OK"
+ q
+ 
+RECEPTLIGNECOMMANDEMOINS(gNUMCMD,gCLEFART,gQTEAENLEVER,gNUMBL)
+ //Cette fonction permet de réceptionner une ligne de commande dans HWARCCMD et de créer MODIO ou de la soustraire
+ s gQTEAENLEVER=+gQTEAENLEVER
+ if gQTEAENLEVER=0 q
+ s CODEMAG=$G(^HWINFO("MAG")) 
+ if gQTEAENLEVER>0{s gQTEMODIO = gQTEAENLEVER*-1}else{s gQTEMODIO = gQTEAENLEVER s gQTEAENLEVER=gQTEAENLEVER*-1} 
+ 
+ w !,"MAG "_CODEMAG
+ s bTrouve = 0
+ s QTELIVREE=0
+ s DATEDUJOUR = $zd(+$h,8) 
+ 
+ //Dans le cas d'une soustraction de quantité, nous devons contrôler la quantité déjà livrée.
+ s QTELIVREETOTALE = 0
+ s COMMANDEMAG=""
+ s COMMANDEMAG = $O(^HWARCCMD("ART",gCLEFART,COMMANDEMAG))
+ while COMMANDEMAG'=""
+ {
+ 	s COMMANDEMAGLNG = ""
+ 	s COMMANDEMAGLNG = $O(^HWARCCMD("ART",gCLEFART,COMMANDEMAG,COMMANDEMAGLNG))
+ 	while COMMANDEMAGLNG'=""
+ 	{
+ 		s NUMCOMMANDELNG=""
+ 		s NUMCOMMANDELNG = $O(^HWARCCMD("FAX",COMMANDEMAG,COMMANDEMAGLNG,gNUMCMD,NUMCOMMANDELNG))
+  		if NUMCOMMANDELNG'=""
+ 		{
+ 			//On regarde s'il y a eu une livraison pour cet article 			
+ 			s sDataLivr = $G(^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG,COMMANDEMAG,COMMANDEMAGLNG,gNUMBL))
+ 			
+ 			s QTELIVREETOTALE= QTELIVREETOTALE+$P(sDataLivr,"\",2)
+ 		}
+			
+ 		s COMMANDEMAGLNG = $O(^HWARCCMD("ART",gCLEFART,COMMANDEMAG,COMMANDEMAGLNG))
+ 	}		
+ 	s COMMANDEMAG = $O(^HWARCCMD("ART",gCLEFART,COMMANDEMAG))
+ }
+ //Nous devons également gérer les lignes de commandes à 0 (non commandées mais réceptionnées en erreur).
+ s NUMCOMMANDELNG = ""
+ s NUMCOMMANDELNG = $O(^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG))
+ while NUMCOMMANDELNG'=""
+ {
+	
+	if +$D(^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG,"0","0",gNUMBL))>0
+	{
+		s sDataLivr = $G(^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG,"0","0",gNUMBL))
+		s lCLEFART = $P(sDataLivr,"\",6)
+		if gCLEFART=lCLEFART
+		{
+			s QTELIVREETOTALE=QTELIVREETOTALE+$P(sDataLivr,"\",2)			
+		}
+	}
+	
+	s NUMCOMMANDELNG = $O(^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG))
+ }
+
+ if gQTEAENLEVER>QTELIVREETOTALE
+ {		
+ 	s P9="0\Impossible d'enlever plus de quantité ("_gQTEAENLEVER_") que ce qui a été réceptionnée ("_QTELIVREETOTALE_")"
+ 	w !,P9
+ 	q
+ }
+ 
+ //Récupération du code PLU
+ s DATAPLU = $G(^ST(gCLEFART))
+ s sPLU = $P(DATAPLU,"\",21)
+ s sNumCmdMag = ""
+ s sNumCmdMagLng = ""
+ s sNumLng = "" 
+ w !,"PLU: "_sPLU_":"_gQTEAENLEVER
+ s gQTERESTANTE=gQTEAENLEVER
+ while +gQTERESTANTE>0
+ {
+	//Nous devons d'abord parcourir les lignes à zéro
+	s NUMCOMMANDELNG = ""
+	s NUMCOMMANDELNG = $O(^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG))
+ 	while NUMCOMMANDELNG'=""
+ 	{		
+		if +$D(^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG,"0","0",gNUMBL))>0
+		{
+			s sDataLivr = $G(^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG,"0","0",gNUMBL))
+			s lCLEFART = $P(sDataLivr,"\",6)
+			if gCLEFART=lCLEFART
+			{
+				s QTELIVLIGNE = $P(sDataLivr,"\",2)
+				if gQTERESTANTE>=QTELIVLIGNE
+				{
+					s gQTERESTANTE = gQTERESTANTE-QTELIVLIGNE	 			
+					k ^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG,"0","0",gNUMBL)
+				}
+				else
+				{
+					s gQTELIVRE = (QTELIVLIGNE-gQTERESTANTE)
+					s DATALIVR = "0\"_gQTELIVRE_"\0\"_DATEDUJOUR_"\"_DATEDUJOUR_"\"
+					s ^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG,"0","0",gNUMBL)=DATALIVR
+					s gQTERESTANTE=0
+				}	
+			}
+		}
+	
+		s NUMCOMMANDELNG = $O(^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG))
+	 }
+	 
+	 if gQTERESTANTE=0 q
+	
+	 s COMMANDEMAG=""
+	 s COMMANDEMAG = $O(^HWARCCMD("ART",gCLEFART,COMMANDEMAG))
+	 while (COMMANDEMAG'="")&&(+gQTERESTANTE>0)
+	 {
+	 	s COMMANDEMAGLNG = ""
+	 	s COMMANDEMAGLNG = $O(^HWARCCMD("ART",gCLEFART,COMMANDEMAG,COMMANDEMAGLNG))
+	 	while (COMMANDEMAGLNG'="")&&(+gQTERESTANTE>0)
+	 	{
+	 		s NUMCOMMANDELNG=""
+	 		s NUMCOMMANDELNG = $O(^HWARCCMD("FAX",COMMANDEMAG,COMMANDEMAGLNG,gNUMCMD,NUMCOMMANDELNG))
+	  		if NUMCOMMANDELNG'=""
+	 		{
+		 		w !,"Trouvé: LIVR"
+	 			//On regarde s'il y a eu une livraison pour cet article 			
+	 			s sDataLIVR = $G(^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG,COMMANDEMAG,COMMANDEMAGLNG,gNUMBL))
+	 			s QTELIVLIGNE = 0
+	 			s QTELIVLIGNE = $P(sDataLIVR,"\",2)
+	 			
+	 			s sDataFAX = $G(^HWARCCMD("FAX",COMMANDEMAG,COMMANDEMAGLNG,gNUMCMD,NUMCOMMANDELNG))
+	 			s DATECONFIRM = $P(sDataFAX,"\",2)
+	 			s rQTECMD = $P(sDataFAX,"\",1)
+	 			if DATECONFIRM=""
+	 			{
+		 			s DATECONFIRM=DATEDUJOUR
+	 			}
+	 			
+	 			if +$D(^HWNEV(CODEMAG,gNUMCMD,NUMCOMMANDELNG))=0
+	 			{
+		 			//Il faut créer le ^HWNEV
+		 			s nPA = $P(DATAPLU,"\",13)
+		 			s nPV = $P(DATAPLU,"\",22)
+		 			s sDataNev = NUMCOMMANDELNG_"\"_COMMANDEMAG_"*"_COMMANDEMAGLNG_"*"_DATECONFIRM_"\"_gCLEFART_"\"_rQTECMD_"\"_rQTECMD_"\\"_nPV_"\"_nPA_"\\\\\0\0\\"
+		 			s ^HWNEV(CODEMAG,gNUMCMD,NUMCOMMANDELNG)=sDataNev
+		 			
+		 			if sPLU'=""
+		 			{
+			 			s ^RECEPTART(sPLU,gNUMCMD)=sDataNev
+		 			}
+		 			
+		 			s sFournisseur = $P($G(^ST(gCLEFART,"4")),"\",1)
+		 			if sFournisseur'=""
+		 			{
+		 				if +$D(^HWNEV("FRN",sFournisseur,gNUMCMD))=0
+		 				{
+			 				s ^HWNEV("FRN",sFournisseur,gNUMCMD)="1"
+		 				}			
+		 				if +$D(^HWNEV("FRN",sFournisseur,gNUMCMD,0))=0
+		 				{
+			 				s sDataNev0 = ""
+			 				s sDataNev0 = CODEMAG_"\"_gNUMCMD_"\"_DATECONFIRM_"\0\99\1\\\\\\"_sFournisseur_"\\\\\"_DATECONFIRM
+			 				s ^HWNEV("FRN",sFournisseur,gNUMCMD,0)=sDataNev0
+		 				}
+		 				//De plus nous devons tester l'existence du hwnev en entête
+		 				if +$D(^HWNEV(CODEMAG,gNUMCMD,0))=0
+		 				{
+			 				s ^HWNEV(CODEMAG,gNUMCMD,0)=CODEMAG_"\"_gNUMCMD_"\"_DATECONFIRM_"\0\1\1\\\\\\"_sFournisseur_"\\\\\"_DATECONFIRM
+		 				}
+		 			}		 				 			
+	 			} 
+	 			if gQTERESTANTE>=QTELIVLIGNE
+	 			{
+		 			s gQTERESTANTE = gQTERESTANTE-QTELIVLIGNE	 			
+		 			k ^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG,COMMANDEMAG,COMMANDEMAGLNG,gNUMBL)
+	 			}
+	 			else
+	 			{
+		 			s gQTELIVRE = (QTELIVLIGNE-gQTERESTANTE)
+		 			s DATALIVR = "0\"_gQTELIVRE_"\0\"_DATEDUJOUR_"\"_DATEDUJOUR_"\"
+		 			s ^HWARCCMD("LIVR",gNUMCMD,NUMCOMMANDELNG,COMMANDEMAG,COMMANDEMAGLNG,gNUMBL)=DATALIVR
+		 			s gQTERESTANTE=0
+	 			}
+	 		}
+				
+	 		s COMMANDEMAGLNG = $O(^HWARCCMD("ART",gCLEFART,COMMANDEMAG,COMMANDEMAGLNG))
+	 	}		
+	 	s COMMANDEMAG = $O(^HWARCCMD("ART",gCLEFART,COMMANDEMAG))
+	 } 
+ } 
+ 
+ //Nous l'avons déjà réceptionné, nous devons rechercher les informations différement. 
+ s sBLInfo = gNUMBL_"*0"
+ 
+ //historique des livraisons pour l'article par année et mois
+ s Annee = $E(DATEDUJOUR,1,4)
+ s Mois = $E(DATEDUJOUR,5,6)
+ s ^HWHISLIV(gCLEFART,"TOTAL")=+$G(^HWHISLIV(gCLEFART,"TOTAL"))-gQTEAENLEVER
+ s ^HWHISLIV(gCLEFART,Annee)=+$G(^HWHISLIV(gCLEFART,Annee))-gQTEAENLEVER
+ s ^HWHISLIV(gCLEFART,Annee,Mois)=+$G(^HWHISLIV(gCLEFART,Annee,Mois))-gQTEAENLEVER
+ 
+ //Fin de l'historique
+ s sDateMvt = DATEDUJOUR
+ s sDateHeure = $h
+ s sModio = "\"_gQTEMODIO_"\"_sDateHeure_"\I\\\\"_CODEMAG_"\HC->HW(NEV)*"_gNUMCMD_"\\\\\"_sBLInfo_"\"_sDateMvt
+ w !,"Modio: "_sModio
+ 
+ r a
+ za ^MODIO
+ 
+ if sPLU'=""
+ {
+ 	s sNumLngModio = +$O(^MODIO(CODEMAG,sPLU,""),-1)+1
+ 	s ^MODIO(CODEMAG,sPLU,sNumLngModio,"I")=sModio	 
+ }
+ else
+ {
+	s sNumLngModio = +$O(^MODIO(CODEMAG,gCLEFART,""),-1)+1
+ 	s ^MODIO(CODEMAG,gCLEFART,sNumLngModio,"I")=sModio
+ }
+ zd ^MODIO
+  
+ s P9="1\OK"
+ q
+ 
+LOADRECHCMD(FILTRE="",NUMCMD="")
+	//Cette fonction permet d'optimiser le remplissage du suivi des commandes en magasin
+	//FILTRE correspond aux interrupteurs sur la fenêtre, NUMCMD correspond au dernier numéro de commande parcouru, bPLATEFORME permet simplement de savoir si nous sommes en magasin ou non.
+	s SEPIN=$C(9)
+	s SEPDATA="\"
+	
+	s bRETRO = +$P(FILTRE,"\",1)
+	s bDF = +$P(FILTRE,"\",2)
+	s bIMPLANTATION = +$P(FILTRE,"\",3)
+	s bDEPOT = +$P(FILTRE,"\",4)	
+		
+	s bPLATEFORME = $P(FILTRE,"\",9)
+	
+	s P3=""
+ 	s P8=0 	
+ 	s P4 = NUMCMD
+ 	 	
+ 	S P4 = $O(^RECHCMD(P4))
+	//num de commande
+	while P4 '= ""
+	{	
+		s bOK = 1	
+		s LETTRE = $E(P4,$l(P4),$l(P4))		
+		if ((LETTRE="R")&&(+bRETRO=0)) s bOK = 0
+		if (((LETTRE="M")||(LETTRE="U"))&&(+bDF=0)) s bOK = 0
+		if ((LETTRE="L")&&(+bIMPLANTATION=0)) s bOK = 0
+		if ((LETTRE="E")&&(+bDEPOT=0)) s bOK = 0
+		
+		if bOK = 1
+		{				
+			s DATARECH = $G(^RECHCMD(P4))						
+			
+			s NUMCMDMAG = $P(DATARECH,SEPIN,1)
+			s DATECMD = $P(DATARECH,SEPIN,2)
+			s RESMAGSRC = $P(DATARECH,SEPIN,3)			
+			s RESMAGDEST = ""
+			s TRANSPORTEUR = ""
+			if +bPLATEFORME = 1
+			{
+				if LETTRE = "S" s TRANSPORTEUR = "SBM"
+				if LETTRE = "C" s TRANSPORTEUR = "CD"
+				s sTYPECMD = +$P(DATARECH,SEPIN,6)
+			}
+			else
+			{
+				s sTYPECMD = +$P(DATARECH,SEPIN,5)
+			}
+			s FABRICANT = ""
+			s INTRMQ = 0
+			s REMARQUES = ""
+			s TYPERETRO = "CMD"
+			s TYPEINT  = 99
+			if sTYPECMD = 1
+			{
+				s TYPERETRO = "FAX"
+				s TYPEINT  = 1
+			}
+			if sTYPECMD = 2
+			{
+				s TYPERETRO = "FAX"
+				s TYPEINT  = 2
+			}
+			if sTYPECMD = 3
+			{
+				s TYPERETRO = "LIV"
+				s TYPEINT  = 3
+			}
+			
+			s CODEMAGSRC = ""
+			s CODEMAGDEST = ""
+			s DATELIV = ""
+			s DATEENV = ""
+			s TYPECMD = ""
+			
+	
+			s P3 = P3_SEPIN_P4_SEPIN_NUMCMDMAG_SEPIN_DATECMD_SEPIN_RESMAGSRC_SEPIN_RESMAGDEST_SEPIN_TRANSPORTEUR_SEPIN_FABRICANT_SEPIN_INTRMQ_SEPIN_REMARQUES_SEPIN_TYPERETRO_SEPIN_CODEMAGSRC_SEPIN_CODEMAGDEST_SEPIN_DATELIV_SEPIN_DATEENV_SEPIN_TYPECMD_SEPIN_TYPEINT_SEPDATA
+		
+			I $L(P3)>10000 {S P8=P8-1 q}
+		}		
+		S P4 = $O(^RECHCMD(P4))
+	}
+	s P8=P8+1	
+	q
+	
+LOADRECHRETROTMP(FILTRE,sPOSNUM="")
+	//Cette fonction permet d'optimiser le remplissage du suivi des commandes en magasin
+	//FILTRE correspond a la date limite et aux interrupteurs, NUMCMD correspond au dernier numéro de commande parcouru, bPLATEFORME permet simplement de savoir si nous sommes en magasin ou non.
+	s SEPIN="\"	
+	
+	s FICHIERRETROTMP="^tmpSUIVICMDRETRO"
+	k @FICHIERRETROTMP
+	s FICHIERRETRO=$P(FILTRE,"\",1) //"^MAGRETRO";"^MAGRETROCOUPE";"^MAGRETROCONF"
+	s bDATELIM = $P(FILTRE,"\",2)
+	s bEnvoi =	+$P(FILTRE,"\",3) //=1 suivi des envois, =0 suivi des réceptions	
+	s bCMD = +$P(FILTRE,"\",4) //=1 suivi des envois, =0 suivi des réceptions	
+	s bFAX = +$P(FILTRE,"\",5) //=1 suivi des envois, =0 suivi des réceptions	
+	s bLIV = +$P(FILTRE,"\",6) //=1 suivi des envois, =0 suivi des réceptions	
+	
+ 	s TYPERETRO=""
+ 	S TYPERETRO = $O(@FICHIERRETRO@(TYPERETRO))
+	//type retro
+	while TYPERETRO '= ""
+	{		
+		s NUMRETRO=""
+		S NUMRETRO = $O(@FICHIERRETRO@(TYPERETRO,NUMRETRO))
+		while NUMRETRO '= ""
+		{				
+			s CODEMAGSRC = ""
+			IF bEnvoi=1
+			{
+				s CODEMAGSRC=sPOSNUM
+			}
+			else
+			{
+				s CODEMAGSRC = $O(@FICHIERRETRO@(TYPERETRO,NUMRETRO,CODEMAGSRC))	
+				if CODEMAGSRC=sPOSNUM s CODEMAGSRC=""
+			}		
+			
+			if CODEMAGSRC '= ""
+			{	
+				s CODEMAGDEST = ""
+				IF bEnvoi=0
+				{
+					s CODEMAGDEST=sPOSNUM
+					if $D(@FICHIERRETRO@(TYPERETRO,NUMRETRO,CODEMAGSRC,CODEMAGDEST))=0 s CODEMAGDEST=""
+				}
+				else
+				{
+					s CODEMAGDEST = $O(@FICHIERRETRO@(TYPERETRO,NUMRETRO,CODEMAGSRC,CODEMAGDEST))	
+					if CODEMAGDEST=sPOSNUM s CODEMAGDEST=""
+				}					
+				if (CODEMAGDEST'="")
+				{							
+					s DATARECH = $G(@FICHIERRETRO@(TYPERETRO,NUMRETRO,CODEMAGSRC,CODEMAGDEST,0))
+				
+					//On recherche d'abord la date de rétro
+					s DATERETRO = $P(DATARECH,"\",5)
+					s bOK = 0
+					//Attention au cas de la livraison après la date limite et la cmd avant
+					if (+bDATELIM=0)
+					{
+						s bOK = 1
+					}
+					else
+					{
+						if TYPERETRO="CMD"
+						{
+							if (+DATERETRO>=+bDATELIM) s bOK = 1							
+						}						
+						else
+						{
+							if (+$D(@FICHIERRETROTMP@(NUMRETRO,"CMD"))>0)||(+$D(@FICHIERRETROTMP@(NUMRETRO,"FAX"))>0)
+							{
+								s bOK = 1
+							}
+						}
+					}
+					
+					if bOK = 1
+					{								
+						s REMARQUES = $P(DATARECH,"\",8)
+						s INTRMQ = 0
+						if REMARQUES '= "" s INTRMQ = 1										
+				
+						s DATECMD = ""
+						s DATELIV = ""
+						
+						s TYPEINT = 99
+						
+						if TYPERETRO = "CMD"
+						{
+							s RESMAGSRC = ""
+							if +$D(^HWPOS(CODEMAGSRC))>0
+							{
+								s RESMAGSRC = $P($G(^HWPOS(CODEMAGSRC,1)),"\",4)
+							}
+												
+							s RESMAGDEST = ""
+							if +$D(^HWPOS(CODEMAGDEST))>0
+							{
+								s RESMAGDEST = $P($G(^HWPOS(CODEMAGDEST,1)),"\",4)
+							}
+							
+							s TRANSPORTEUR = $P(DATARECH,"\",7)
+	
+							s DATECMD = DATERETRO
+							s TYPEINT = 99							
+							s NUMCMDSBM=$P(DATARECH,"\",9)
+							s NUMBLSBM=$P(DATARECH,"\",10)
+							s NUMCMDBCI=$P(DATARECH,"\",11)
+							
+							
+							s @FICHIERRETROTMP@(NUMRETRO,TYPERETRO)=NUMRETRO_SEPIN_CODEMAGSRC_SEPIN_RESMAGSRC_SEPIN_CODEMAGDEST_SEPIN_RESMAGDEST_SEPIN_TRANSPORTEUR_SEPIN_DATECMD_SEPIN_REMARQUES_SEPIN_NUMCMDSBM_SEPIN_NUMBLSBM_SEPIN_NUMCMDBCI_SEPIN_SEPIN_SEPIN
+						}
+						if TYPERETRO = "FAX"
+						{							
+							s DATEENV = DATERETRO
+							s TYPEINT = 1
+							s DATACMD = $G(@FICHIERRETROTMP@(NUMRETRO,"CMD"))
+							s $P(DATACMD,"\",12)=DATEENV	
+							s @FICHIERRETROTMP@(NUMRETRO,TYPERETRO)=DATACMD
+							k @FICHIERRETROTMP@(NUMRETRO,"CMD")
+							
+						}					
+						if TYPERETRO = "LIV"
+						{
+							s DATELIV = DATERETRO							
+							s TYPEINT = 1
+							s DATACMD = $G(@FICHIERRETROTMP@(NUMRETRO,"FAX"))
+							s $P(DATACMD,"\",13)=DATELIV						
+							s @FICHIERRETROTMP@(NUMRETRO,TYPERETRO)=DATACMD
+							k @FICHIERRETROTMP@(NUMRETRO,"FAX")
+							
+						}																								
+					}					
+				}				
+			}		
+			S NUMRETRO = $O(@FICHIERRETRO@(TYPERETRO,NUMRETRO))			
+		}	
+		S TYPERETRO = $O(@FICHIERRETRO@(TYPERETRO))
+	}
+	
+	s NUMRETRO=""
+	s NUMRETRO=$O(@FICHIERRETROTMP@(NUMRETRO))
+	while NUMRETRO'=""
+	{
+		s TYPECMD=$O(@FICHIERRETROTMP@(NUMRETRO,""))
+		if (TYPECMD="CMD")&&(+bCMD=0) k @FICHIERRETROTMP@(NUMRETRO)
+		if (TYPECMD="FAX")&&(+bFAX=0) k @FICHIERRETROTMP@(NUMRETRO)
+		if (TYPECMD="LIV")&&(+bLIV=0) k @FICHIERRETROTMP@(NUMRETRO)
+		
+		s NUMRETRO=$O(@FICHIERRETROTMP@(NUMRETRO))
+	}
+	
+	q
+		
+LOADRECHRETRO(NUMRETRO="")
+	//Cette fonction permet d'optimiser le remplissage du suivi des commandes en magasin
+	//FILTRE correspond a la date limite et aux interrupteurs, NUMCMD correspond au dernier numéro de commande parcouru, bPLATEFORME permet simplement de savoir si nous sommes en magasin ou non.
+	s SEPIN="\"
+	s SEPDATA="_||_"	
+	
+	s FICHIERRETROTMP="^tmpSUIVICMDRETRO"	
+	
+	s P3=""
+ 	s P8=0 	
+ 	s P4 = NUMRETRO 	
+ 	 	
+ 	S P4 = $O(@FICHIERRETROTMP@(P4))
+	//type retro
+	while P4 '= ""
+	{	
+		s TYPERETRO=$O(@FICHIERRETROTMP@(P4,""))
+		if TYPERETRO '= ""
+		{		
+			if TYPERETRO = "CMD"{s TYPEINT = 99}
+			if TYPERETRO = "LIV"{s TYPEINT = 3}
+			if TYPERETRO = "FAX"{s TYPEINT = 1}
+			s DATARETRO=$G(@FICHIERRETROTMP@(P4,TYPERETRO))
+			s DATARETRO=DATARETRO_TYPERETRO_SEPIN_TYPEINT_SEPIN
+			s P3 = P3_DATARETRO_SEPDATA								
+		}
+		I $L(P3)>10000 {s P8=P8-1 q}				
+		S P4 = $O(@FICHIERRETROTMP@(P4))
+	}
+	s P8=P8+1	
+	q
+	
+RETOURNEDESARTICLE(PLU="",CLEFART="")
+	//FAIT PAR VD :)
+	//Cette fonction permet de retourner la désignation de l'article	
+	
+	if CLEFART="" s CLEFART=$G(^SP(PLU))	
+	s DESARTICLE = CLEFART
+	
+	s DATA = $G(^ST(CLEFART))	
+	if +$P(DATA,"\",23)>3 s DESARTICLE = $P($G(^ST(CLEFART,5)),"\",1)
+
+	q DESARTICLE	
+
+LOADRECEPTMERCERIE(param,sPLU="",DATERECENTE="")
+	s FICHIERMERCERIE = "^RECEPMETERM"
+	s NUMCMD = $P(param,"\",1)
+	s NUMBL = $P(param,"\",2)
+	s POSNUM=$G(^HWINFO("MAG"))
+	
+	s SEPIN="\"
+	s SEPDATA=";"	
+	s P3=""
+ 	s P8=0 	
+ 	
+ 	s DATERECENTE=""
+	s PLU=sPLU
+	s PLU=$O(@FICHIERMERCERIE@(NUMCMD,NUMBL,PLU))
+	while PLU'=""
+	{		
+		s DATAMERCERIE=$G(@FICHIERMERCERIE@(NUMCMD,NUMBL,PLU))		
+		s QTECMD=0	
+		s REFFOUR="?"
+		s PVACTUEL=""
+		s PVFUTUR=""
+		S DESIGNATION=""
+		S NUMCMDMAG=""
+		s NUMCMDMAGLNG=""
+		s REMARQUE=""
+		s PCB=0
+		s PA=0
+		s UNITE=""
+		s CLEFART=""
+		s rQTEREC = +$P(DATAMERCERIE,"\",1)
+		s sUSER = $P(DATAMERCERIE,"\",2)
+		s sDATEREC = $P(DATAMERCERIE,"\",3)
+		s sHEUREREC = $P(DATAMERCERIE,"\",4)
+		
+		s sDATERECVIS = sDATEREC
+		if +sDATEREC<1000000 s sDATERECVIS = $zd(sDATEREC,8)
+		if DATERECENTE=""{s DATERECENTE = sDATEREC}else{if (DATERECENTE<sDATEREC) s DATERECENTE=sDATEREC}
+		
+		if sHEUREREC'=""{s sHEURERECVIS = $ztime(sHEUREREC) s sHEURERECVIS=$E(sHEURERECVIS,1,2)_$E(sHEURERECVIS,4,5)}
+		
+		if +$D(^SP(PLU))>0
+		{
+			s CLEFART=$G(^SP(PLU))
+			if CLEFART'=""
+			{
+				//Recherche de la référence fournisseur
+				s DATAST4=$G(^ST(CLEFART,4))
+				if DATAST4'="" s REFFOUR=$P(DATAST4,"\",3)
+				
+				if +$D(^ST(CLEFART))>0
+				{
+					s sDataArticle =$G(^ST(CLEFART)) 
+					s UNITE=$P(sDataArticle,"\",20)
+					s PVACTUEL=$P($P(sDataArticle,"\",22),"/",1)
+					s PVFUTUR=$P($P(sDataArticle,"\",22),"/",3)
+					
+					s PCB=+$P(sDataArticle,"\",6)
+					
+					s DESIGNATION=$$RETOURNEDESARTICLE("",CLEFART)					
+				}								
+			}
+		}	
+		s LIBUVC = ""	
+		
+		if (UNITE="M")&&(+$P(sDataArticle,"\",23)<4)
+		{
+			s LIBUVC = "Qté Liv(m)"
+			s QTEUVC=rQTEREC
+		}
+		else
+		{
+			s LIBUVC = "Qté (UVC)"
+			s QTEUVC=rQTEREC*PCB
+		}
+		s bTrouve = 0				
+		s NUMLNGNEV=""
+		s NUMLNGNEV=$O(^HWNEV(POSNUM,NUMCMD,NUMLNGNEV))
+		while NUMLNGNEV'=""
+		{
+			s sDataNev = $G(^HWNEV(POSNUM,NUMCMD,NUMLNGNEV))
+			if $P(sDataNev,"\",3)=CLEFART
+			{
+				s bTrouve = 1
+				s NUMCMDMAG = $P($P(sDataNev,"\",2),"*",1)
+				s NUMCMDMAGLNG = $P($P(sDataNev,"\",2),"*",2)
+				s PA=+$P(sDataNev,"\",8)
+							
+			}		
+			s NUMLNGNEV=$O(^HWNEV(POSNUM,NUMCMD,NUMLNGNEV))
+		}	
+		if NUMCMDMAG=""
+		{
+			s NUMCMDLNGCENT=""
+			//Pas trouvé dans les reliquats (HWNEV) donc on recherche dans les LIVR
+			s NUMCMDLNG=""
+			s NUMCMDLNG=$O(^HWARCCMD("LIVR",NUMCMD,NUMCMDLNG))
+			while NUMCMDLNG'=""
+			{
+				s NUMCMDMAG=$O(^HWARCCMD("LIVR",NUMCMD,NUMCMDLNG,NUMCMDMAG))
+				while NUMCMDMAG'=""
+				{
+					s NUMCMDMAGLNG=""
+					s NUMCMDMAGLNG=$O(^HWARCCMD("LIVR",NUMCMD,NUMCMDLNG,NUMCMDMAG,NUMCMDMAGLNG))
+					while NUMCMDMAGLNG'=""
+					{
+						if +$D(^HWARCCMD("CDE",NUMCMDMAG,NUMCMDMAGLNG))>0
+						{
+							s DATACDE=$G(^HWARCCMD("CDE",NUMCMDMAG,NUMCMDMAGLNG))
+							if CLEFART=$P(DATACDE,"\",1)
+							{
+								
+								s NUMCMDLNGCENT=$O(^HWARCCMD("FAX",NUMCMDMAG,NUMCMDMAGLNG,NUMCMD,NUMCMDLNGCENT))
+								if NUMCMDLNGCENT'="" s QTECMD=+$P($G(^HWARCCMD("FAX",NUMCMDMAG,NUMCMDMAGLNG,NUMCMD,NUMCMDLNGCENT)),"\",1)
+								s REMARQUE=+$P(DATACDE,"\",3)
+								if REMARQUE'=""
+								{
+									s TAILLE = $l(REMARQUE)
+									s REMARQUE=$E(REMARQUE,1,(TAILLE-($L($P(REMARQUE,"_||_",1))+4)))									
+								}
+								
+								q
+							}					
+						}					
+						s NUMCMDMAGLNG=$O(^HWARCCMD("LIVR",NUMCMD,NUMCMDLNG,NUMCMDMAG,NUMCMDMAGLNG))
+					}
+					if NUMCMDLNGCENT'="" q
+					s NUMCMDMAG=$O(^HWARCCMD("LIVR",NUMCMD,NUMCMDLNG,NUMCMDMAG))
+				}
+				if NUMCMDLNGCENT'="" q
+				s NUMCMDLNG=$O(^HWARCCMD("LIVR",NUMCMD,NUMCMDLNG))
+			}				
+		}
+		else
+		{
+			s NUMCMDLNGCENT=""
+			s NUMCMDLNGCENT=$O(^HWARCCMD("FAX",NUMCMDMAG,NUMCMDMAGLNG,NUMCMD,NUMCMDLNGCENT))
+			if NUMCMDLNGCENT'="" s QTECMD=+$P($G(^HWARCCMD("FAX",NUMCMDMAG,NUMCMDMAGLNG,NUMCMD,NUMCMDLNGCENT)),"\",1)
+		}
+				
+		S DATAMERC=NUMBL_SEPIN_sDATERECVIS_SEPIN_sHEURERECVIS_SEPIN_REFFOUR_SEPIN_PVACTUEL_SEPIN_PVFUTUR_SEPIN_DESIGNATION_SEPIN_PCB_SEPIN_PLU_SEPIN_rQTEREC_SEPIN_sUSER_SEPIN_LIBUVC_SEPIN_QTEUVC_SEPIN_UNITE_SEPIN_NUMCMDMAG_SEPIN_NUMCMDMAGLNG_SEPIN_PA_SEPIN_QTECMD_SEPIN_REMARQUE_SEPIN_CLEFART
+		s P3 = P3_DATAMERC_SEPDATA							
+		if $L(P3)>10000{s P8=-1 q}
+		s PLU=$O(@FICHIERMERCERIE@(NUMCMD,NUMBL,PLU))
+	}
+	
+	s P8=P8+1
+	s P5 = DATERECENTE	
+	s P4 = PLU 	
+	
+ q
+ 
+RECHERCHERELIQUATCMD(NUMCMD)
+	k ^tmpRELIQUATCMDMER
+	s NUMCMDMAG = ""
+	s NUMCMDMAG = $O(^HWARCCMD("FAX",NUMCMDMAG))
+	while NUMCMDMAG'=""
+	{
+		s NUMLNGMAG=""
+		s NUMLNGMAG = $O(^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG))
+		while NUMLNGMAG'=""
+		{
+			s NUMCMDLNG = $O(^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG,NUMCMD,""))			
+			if NUMCMDLNG'=""
+			{
+				//On regarde
+				s DATAFAX = $G(^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG,NUMCMD,NUMCMDLNG))
+				s QTECMD = +$P(DATAFAX,"\",1)
+				s QTELIVR=0
+				s NUMBL=""
+				s NUMBL=$O(^HWARCCMD("LIVR",NUMCMD,NUMCMDLNG,NUMCMDMAG,NUMLNGMAG,NUMBL))
+				while NUMBL'=""
+				{
+					s DATALIVR = $G(^HWARCCMD("LIVR",NUMCMD,NUMCMDLNG,NUMCMDMAG,NUMLNGMAG,NUMBL))
+					s QTELIVR=QTELIVR+$P(DATALIVR,"\",2)					
+					
+					s NUMBL=$O(^HWARCCMD("LIVR",NUMCMD,NUMCMDLNG,NUMCMDMAG,NUMLNGMAG,NUMBL))	
+				}
+				
+				if QTELIVR<QTECMD
+				{
+					//Nous avons bien un reliquat
+					s DESIGNATION = ""
+					if +$D(^HWARCCMD("CDE",NUMCMDMAG,NUMLNGMAG))>0
+					{						
+						s CLEFART=$P($G(^HWARCCMD("CDE",NUMCMDMAG,NUMLNGMAG)),"\",1)						
+						if CLEFART'=""						
+						{
+							if +$D(^ST(CLEFART))>0
+							{
+								s DATAPLU=$G(^ST(CLEFART))
+								s PLU= $P(DATAPLU,"\",21)
+								s DESIGNATION=$$RETOURNEDESARTICLE("",CLEFART)	
+								//recherche de la référence fournisseur
+								s DATAPLU4=$G(^ST(CLEFART,4))
+								s REFFOUR = $P(DATAPLU4,"\",3)
+								s RELIQUAT=QTECMD-QTELIVR
+								if PLU'=""
+								{
+									if +$D(^tmpRELIQUATCMDMER(PLU))>0
+									{										
+										s DATAPLURELIQUAT = $G(^tmpRELIQUATCMDMER(PLU))
+										s $P(DATAPLURELIQUAT,"\",2) = +$P(DATAPLURELIQUAT,"\",2)+QTECMD
+										s $P(DATAPLURELIQUAT,"\",3) = +$P(DATAPLURELIQUAT,"\",3)+QTELIVR
+										s $P(DATAPLURELIQUAT,"\",4) = +$P(DATAPLURELIQUAT,"\",4)+RELIQUAT
+										s ^tmpRELIQUATCMDMER(PLU)=DATAPLURELIQUAT
+									}
+									else
+									{
+										s ^tmpRELIQUATCMDMER(PLU)=DESIGNATION_"\"_QTECMD_"\"_QTELIVR_"\"_RELIQUAT_"\"_REFFOUR
+									}
+								}
+							}
+						}
+					}					
+				}
+			}
+			
+			s NUMLNGMAG = $O(^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG))
+		}
+		
+		s NUMCMDMAG = $O(^HWARCCMD("FAX",NUMCMDMAG))
+	}
+
+	q
+	
+LOADRELIQUATMERCMD(PLU="")
+	//Cette fonction permet d'optimiser le remplissage du suivi des commandes en magasin
+	//FILTRE correspond aux interrupteurs sur la fenêtre, NUMCMD correspond au dernier numéro de commande parcouru, bPLATEFORME permet simplement de savoir si nous sommes en magasin ou non.
+	s SEPIN="\"
+	s SEPDATA=";"
+
+	s P3=""
+ 	s P8=0 	
+ 	s P4 = PLU
+ 	 	
+ 	S P4 = $O(^tmpRELIQUATCMDMER(P4))
+	//num de commande
+	while P4 '= ""
+	{	
+		s DATAREL = $G(^tmpRELIQUATCMDMER(P4))
+		s DESIGNATION=$P(DATAREL,"\",1)
+		s QTECMD=$P(DATAREL,"\",2)
+		s QTELIVR=$P(DATAREL,"\",3)
+		s RELIQUAT=$P(DATAREL,"\",4)
+		s REFFOUR=$P(DATAREL,"\",5)
+		
+		s P3 = P3_P4_SEPIN_DESIGNATION_SEPIN_QTECMD_SEPIN_QTELIVR_SEPIN_RELIQUAT_SEPIN_REFFOUR_SEPDATA
+		
+		I $L(P3)>100 {S P8=P8-1 q}	
+		S P4 = $O(^tmpRELIQUATCMDMER(P4))
+	}
+	s P8=P8+1	
+	q
+	
+RENVOIETYPEPRODUIT(CLEFART,PLU="")
+	s P2=0 //=1 métrage tissus =2 Pièce =3 métrage autre que tissu
+	s lCLEFART = ""
+	if PLU'="" s lCLEFART = $G(^SP(PLU))
+	if lCLEFART'="" s CLEFART=lCLEFART
+	s DATAST = $G(^ST(CLEFART))
+	s SECTEUR = $P(DATAST,"\",23)
+	s TYPEMETRAGE = $P(DATAST,"\",20)
+	if +SECTEUR<4
+	{
+		//C'est du tissu métrage type Ameublement, Habillement et Voilage
+		s P2=1_"\M"
+	}
+	else
+	{
+		if TYPEMETRAGE="M"
+		{
+			s P2=3_"\M"
+		}
+		else
+		{
+			s P2=2_"\P"
+		}	
+	}
+	
+
+	q
+	
+CHARGEINVECART(DATEINV)
+	//Cette fonction permet de charger les écarts des inventaires
+	k ^tmpINVECART
+	//s DATEINV=DATEINV
+	s DATEINV = $O(^GUMVT(DATEINV))
+	while DATEINV'=""
+	{
+		s sPLU=""
+		s sPLU=$O(^GUMVT(DATEINV,sPLU))
+		while sPLU'=""
+		{
+			s sTypeMVT=""
+			s sTypeMVT = $O(^GUMVT(DATEINV,sPLU,sTypeMVT))
+			while sTypeMVT'=""
+			{
+				if (+sTypeMVT=31)||(+sTypeMVT=32)
+				{
+					s sNUMMVT=""
+					s sNUMMVT = $O(^GUMVT(DATEINV,sPLU,sTypeMVT,sNUMMVT))
+					while sNUMMVT'=""
+					{
+						s DATAMVT=$G(^GUMVT(DATEINV,sPLU,sTypeMVT,sNUMMVT))
+						s QTE=+$P(DATAMVT,"\",1)*+$P(DATAMVT,"\",4)
+						s CA=+$P(DATAMVT,"\",2)*QTE
+					
+						s CLEFARTICLE=$G(^SP(sPLU))
+						if CLEFARTICLE'=""
+						{
+							s DATAST=$G(^ST(CLEFARTICLE))						
+							s SECTEUR=$P(DATAST,"\",23)
+						}					
+						if (SECTEUR'="")&&(SECTEUR'="09")
+						{
+							s DATASECTEUR=$G(^tmpINVECART(SECTEUR))
+							s ^tmpINVECART(SECTEUR)=(+$P(DATASECTEUR,"\",1)+QTE)_"\"_(+$P(DATASECTEUR,"\",2)+CA)
+						}					
+					
+						s sNUMMVT = $O(^GUMVT(DATEINV,sPLU,sTypeMVT,sNUMMVT))					
+					}
+				}
+				s sTypeMVT = $O(^GUMVT(DATEINV,sPLU,sTypeMVT))
+			}
+			
+			s sPLU=$O(^GUMVT(DATEINV,sPLU))
+		}
+		
+		s DATEINV = $O(^GUMVT(DATEINV))
+	}
+
+	q
+	
+CHARGEINVECARTDETAIL(sParam,sPLU="",bReste=0)
+	//Cette fonction permet de lister les lignes en écart de stock au PLU	
+	s DATEINV=$P(sParam,"\",1)
+	s SECTEUR=$P(sParam,"\",2)
+	s DATEINVFIN=$P(sParam,"\",3)
+	s rFiltreMinMetre=+$P(sParam,"\",4)
+	s rFiltreMaxMetre=+$P(sParam,"\",5)
+	s rFiltreMinEuro=+$P(sParam,"\",6)
+	s rFiltreMaxEuro=+$P(sParam,"\",7)
+	s P3=""
+	s P9=1
+	s SEP=$c(9)
+ 	s SEPDATA="\\_//" 
+ 	s P9=1
+ 	if sPLU="" //on ne remplit la table temporaire qu'à la première boucle 	
+ 	{
+	 	k ^tmpINVECARTDETAIL	 	
+		s PLU=""
+		s PLU=$O(^GUSTOCKINV(DATEINV,SECTEUR,PLU))
+		while PLU'=""
+		{
+			s rQte=0
+	 		s rPA=0
+			if PLU'="0"
+			{
+				s sValeurPLU = PLU
+				if +PLU<0 s sValeurPLU = "Non Réf"								
+				
+				s sDataGUSTOCKINV = $G(^GUSTOCKINV(DATEINV,SECTEUR,PLU))		
+				//On ajoute les corrections des stocks au préalable, il faut penser aux réserves
+				s DATEENCOURS= $O(^GUMVT(+DATEINV-20))
+				while (DATEENCOURS'="")&&(+DATEENCOURS<DATEINVFIN)
+				{
+					s TYPEMVT=""
+					s TYPEMVT=$O(^GUMVT(DATEENCOURS,PLU,TYPEMVT))
+					while TYPEMVT'=""
+					{
+						if (+TYPEMVT=31)||(+TYPEMVT=32)
+						{
+							s NUMMVT=""
+							s NUMMVT=$O(^GUMVT(DATEENCOURS,PLU,TYPEMVT,NUMMVT))
+							while NUMMVT'=""
+							{
+								s DATAMVT=$G(^GUMVT(DATEENCOURS,PLU,TYPEMVT,NUMMVT))
+								s rPA=+$P(DATAMVT,"\",2)
+								s rQte=rQte+(+$P(DATAMVT,"\",1)*$P(DATAMVT,"\",4))
+								if +PLU=105253
+								{
+									w !,"PLU "_PLU_" qte "_rQte
+									
+								}
+								s NUMMVT=$O(^GUMVT(DATEENCOURS,PLU,TYPEMVT,NUMMVT))
+							}
+						}
+						s TYPEMVT=$O(^GUMVT(DATEENCOURS,PLU,TYPEMVT))
+					}										
+					s DATEENCOURS= $O(^GUMVT(DATEENCOURS))
+				}	
+				//On recherche le statut de l'article
+				s CODESTATUT=""
+				s CLEFART=$G(^SP(PLU))
+				if CLEFART'=""
+				{
+					s DATAST=$G(^ST(CLEFART,4))
+					s IDSTATUT=+$P(DATAST,"\",13)
+					if IDSTATUT>0
+					{
+						s CODESTATUT=$P($G(^HWSTATUT(IDSTATUT)),"\",1)	
+					}
+				}
+					
+				//On prélève les corrections de stock directement dans le fichier temporaire								
+				s $P(sDataGUSTOCKINV,"\",4)=CODESTATUT
+				s $P(sDataGUSTOCKINV,"\",5)=rQte
+				s $P(sDataGUSTOCKINV,"\",6)=rQte*rPA
+				
+				;w sValeurPLU_";"
+				s ^tmpINVECARTDETAIL(sValeurPLU)=sDataGUSTOCKINV
+				;s P3=P3_sValeurPLU_SEP_$P(sDataGUSTOCKINV,"\",1)_"\"_$P(sDataGUSTOCKINV,"\",2)_"\"_$P(sDataGUSTOCKINV,"\",3)
+			}
+			s PLU=$O(^GUSTOCKINV(DATEINV,SECTEUR,PLU))
+		}				
+	}	
+	s PLU=""
+	if bReste=0 //nous traitons encore la table principale dans la boucle équivalent de P4
+	{
+		s P4=0
+		s PLU=sPLU
+		s PLU=$O(^ARINVSYNTHESE(DATEINV,SECTEUR,PLU))
+		while PLU'=""
+		{
+			if PLU'="0"
+			{
+				s sValeurPLU = PLU
+				if +PLU<0 s sValeurPLU = "Non Réf"		
+				
+				s DATASYNT = $G(^ARINVSYNTHESE(DATEINV,SECTEUR,PLU))
+				s QTEINV=+$P(DATASYNT,"\",1)
+				s TOTCAINV=+$P(DATASYNT,"\",2)
+				s ZONES=$P(DATASYNT,"\",3)
+				s DESIGNATION=$P(DATASYNT,"\",4)
+				s PA=0
+				if +PLU<0 s DESIGNATION="                                              NON MODIFIABLE"
+				if QTEINV'=0 s PA=$normalize((TOTCAINV/QTEINV),4)
+				s QTEAVANT=0
+				s CODESTATUT=""
+				s TOTCAAVANT=0
+				if +$D(^tmpINVECARTDETAIL(sValeurPLU))>0
+				{
+					s DATAINVAVANT=$G(^tmpINVECARTDETAIL(sValeurPLU))				
+					s QTEAVANT=$P(DATAINVAVANT,"\",1)
+					s TOTCAAVANT=$P(DATAINVAVANT,"\",2)
+					s CODESTATUT=$P(DATAINVAVANT,"\",4)
+					s QTEINV=QTEINV+$P(DATAINVAVANT,"\",5)
+					s TOTCAINV=TOTCAINV+$P(DATAINVAVANT,"\",6)
+					k ^tmpINVECARTDETAIL(sValeurPLU)
+				}
+				else
+				{
+					//Nous devons gérer le cas d'aucun stock à l'arrêté et les mouvements à enlever avant ou après l'inventaire
+					s DATEENCOURS= $O(^GUMVT(+DATEINV-20))
+					while (DATEENCOURS'="")&&(+DATEENCOURS<DATEINVFIN)
+					{
+						s TYPEMVT=""
+						s TYPEMVT=$O(^GUMVT(DATEENCOURS,PLU,TYPEMVT))
+						while TYPEMVT'=""
+						{
+							if (+TYPEMVT=31)||(+TYPEMVT=32)
+							{
+								s NUMMVT=""
+								s NUMMVT=$O(^GUMVT(DATEENCOURS,PLU,TYPEMVT,NUMMVT))
+								while NUMMVT'=""
+								{
+									s DATAMVT=$G(^GUMVT(DATEENCOURS,PLU,TYPEMVT,NUMMVT))
+									s rPA=+$P(DATAMVT,"\",2)
+									s rQte=+$P(DATAMVT,"\",1)*$P(DATAMVT,"\",4)
+									s QTEINV=QTEINV+rQte
+									s TOTCAINV=TOTCAINV+(rQte*rPA)
+									
+									s NUMMVT=$O(^GUMVT(DATEENCOURS,PLU,TYPEMVT,NUMMVT))
+								}
+							}
+							s TYPEMVT=$O(^GUMVT(DATEENCOURS,PLU,TYPEMVT))
+						}										
+						s DATEENCOURS= $O(^GUMVT(DATEENCOURS))
+					}	
+				}					
+				s QTEECART = QTEAVANT-QTEINV
+				s CAECART = TOTCAAVANT-TOTCAINV
+				if CODESTATUT=""
+				{
+					//On recherche le statut de l'article
+					s CLEFART=$G(^SP(PLU))
+					if CLEFART'=""
+					{
+						s DATAST=$G(^ST(CLEFART,4))
+						s IDSTATUT=+$P(DATAST,"\",13)
+						if IDSTATUT>0
+						{
+							s CODESTATUT=$P($G(^HWSTATUT(IDSTATUT)),"\",1)	
+						}
+					}
+				}
+				if ($fn(QTEECART,"-",2)>=rFiltreMinMetre)&&(($fn(QTEECART,"-",2)<=rFiltreMaxMetre)||(rFiltreMaxMetre=0))&&($fn(CAECART,"-",2)>=rFiltreMinEuro)&&(($fn(CAECART,"-",2)<rFiltreMaxEuro)||(rFiltreMaxEuro=0))
+				{
+					if QTEECART'=0 s P3=P3_DESIGNATION_SEP_sValeurPLU_SEP_CAECART_SEP_QTEAVANT_SEP_QTEECART_SEP_QTEINV_SEP_$replace(ZONES,"|","-")_SEP_CODESTATUT_SEPDATA
+				}
+			}				
+		
+			I $L(P3)>10000 {s P2=PLU s P9=0 Q}		
+			s PLU=$O(^ARINVSYNTHESE(DATEINV,SECTEUR,PLU))
+		}
+	}	
+	//Par la suite nous bouclons sur la table temporaire
+	if P9=1
+	{		
+		
+		s PLU=""
+		//Nous savons que nous pouvons continuer à traiter les écarts pour tous les PLUs qui étaient dans le stock avant l'inventaire et qui ne le sont plus après l'inventaire		
+		s P4=1 //nous indiquons que nous avons terminé avec la première boucle
+		if bReste=1 s PLU=sPLU //nous sommes au moins dans un second appel de procédure
+		s PLU= $O(^tmpINVECARTDETAIL(PLU))
+		while PLU'=""
+		{
+			s DATAECART=$G(^tmpINVECARTDETAIL(PLU))
+			s QTEECART=$P(DATAECART,"\",1)-$P(DATAECART,"\",5)
+			s CAECART=$P(DATAECART,"\",2)-$P(DATAECART,"\",6)
+			s DESIGNATION=$P(DATAECART,"\",3)
+			s CODESTATUT=$P(DATAECART,"\",4)					
+			if ($fn(QTEECART,"-",2)>=rFiltreMinMetre)&&(($fn(QTEECART,"-",2)<=rFiltreMaxMetre)||(rFiltreMaxMetre=0))&&($fn(CAECART,"-",2)>=rFiltreMinEuro)&&(($fn(CAECART,"-",2)<rFiltreMaxEuro)||(rFiltreMaxEuro=0))
+			{				
+				if QTEECART'=0 s P3=P3_DESIGNATION_SEP_PLU_SEP_CAECART_SEP_QTEECART_SEP_QTEECART_SEP_$P(DATAECART,"\",5)_SEP_"En stock avant l'inventaire"_SEP_CODESTATUT_SEPDATA
+			}			
+			
+			k ^tmpINVECARTDETAIL(PLU)
+			
+			I $L(P3)>10000 {s P2=PLU s P9=0 Q}		
+			s PLU= $O(^tmpINVECARTDETAIL(PLU))
+		}
+	}	
+ 	
+	q
+
+GENERATIONSUIVICMD(pParam)
+	//Cette routine permet de charger l'ensemble des commandes dans un tableau selon plusieurs critères
+	K ^RECHCMD
+	r a
+	s sStatut = $P(pParam,"\",1)
+	s sCodeFour = $P(pParam,"\",2)
+	s sNumCmd = $P(pParam,"\",3)
+	s sDateCmd = $P(pParam,"\",4) //date de commande de début
+	s sEDIouNON = +$P(pParam,"\",5)
+	
+	if sEDIouNON'=2 //Sinon c'est seulement de l'EDI
+	{
+		S CMDPOS=""
+		s CMDPOS=$O(^HWARCCMD("CDE",CMDPOS))
+		while CMDPOS'=""
+		{
+			S STRDATA=$G(^HWARCCMD("CDE",CMDPOS,0))
+			S DATECMD=$P(STRDATA,"\",1)
+			s CODEFOUR=$P(STRDATA,"\",3)
+			S VALID=1		
+			if sDateCmd'="" {if DATECMD<sDateCmd S VALID=0}
+			if sCodeFour'="" {if CODEFOUR'=sCodeFour S VALID=0}
+			if VALID=1
+			{
+				S NUMFAXSORTIE=-1
+				s NUMLNG=""
+				s NUMLNG=$O(^HWARCCMD("CDE",CMDPOS,NUMLNG))
+				while (NUMLNG'="")&&(NUMFAXSORTIE=-1)
+				{
+					s NUMFAX=""
+					s NUMFAX=$O(^HWARCCMD("FAX",CMDPOS,NUMLNG,NUMFAX))
+					while (NUMFAX'="")&&(NUMFAXSORTIE=-1)
+					{
+						if NUMFAX>0 s NUMFAXSORTIE=NUMFAX
+						
+						s NUMFAX=$O(^HWARCCMD("FAX",CMDPOS,NUMLNG,NUMFAX))
+					}
+					s NUMLNG=$O(^HWARCCMD("CDE",CMDPOS,NUMLNG))
+				}
+				if NUMFAXSORTIE=-1 S NUMFAXSORTIE="ANNULE"
+				if sNumCmd'=""{if NUMFAXSORTIE'=sNumCmd s VALID=0}
+				s sPartielOuNon = 0
+				s sPartielOuNon=$$CMDPARTIELLEOUNON(CMDPOS)
+				if +sStatut>0{if sPartielOuNon'=sStatut s VALID=0}
+				if VALID=1 S ^RECHCMD(CMDPOS)=0_$CHAR(9)_sPartielOuNon_$CHAR(9)_NUMFAXSORTIE_$CHAR(9)_DATECMD_$CHAR(9)_CODEFOUR_$CHAR(9)_sPartielOuNon_$CHAR(9)
+			}
+			s CMDPOS=$O(^HWARCCMD("CDE",CMDPOS))
+		}
+	}
+	if sEDIouNON'=1 //Sinon c'est seulement de la commande
+	{	
+		s NUMCMDGSI=""
+		if sNumCmd="" {s NUMCMDGSI=$O(^MAGCMDEDI("CDE",NUMCMDGSI))}else{s NUMCMDGSI=sNumCmd}
+		while NUMCMDGSI'=""
+		{
+			s DATACMDEDI=$G(^MAGCMDEDI("CDE",NUMCMDGSI,0))
+			s CODEFOUR=$P(DATACMDEDI,"\",1)
+			s DATECMD=$P(DATACMDEDI,"\",2)			
+			S VALID=1		
+			if sDateCmd'="" {if DATECMD<sDateCmd S VALID=0}
+			if sCodeFour'="" {if CODEFOUR'=sCodeFour S VALID=0}
+			if VALID=1
+			{
+				//Nous parcourons le détail 
+				s CMDPOS=""
+				s PLU=$O(^MAGCMDEDI("CDE",NUMCMDGSI,0))
+				if PLU'=""
+				{
+					s DATAPLU=$G(^MAGCMDEDI("CDE",NUMCMDGSI,PLU))
+					s CMDPOS=$P($P(DATAPLU,"\",3),";",1)
+					s sPartielOuNon = 0
+					s sPartielOuNon=$$CMDPARTIELLEOUNONEDI(NUMCMDGSI)
+					if +sStatut>0{if sPartielOuNon'=sStatut s VALID=0}
+					if VALID=1 S ^RECHCMD(CMDPOS)=1_$CHAR(9)_sPartielOuNon_$CHAR(9)_NUMCMDGSI_$CHAR(9)_DATECMD_$CHAR(9)_CODEFOUR_$CHAR(9)_sPartielOuNon_$CHAR(9)
+				}
+				
+			} 
+			if sNumCmd'="" {s NUMCMDGSI=""}else{s NUMCMDGSI=$O(^MAGCMDEDI("CDE",NUMCMDGSI))}
+		}
+	}
+	
+	q
+	
+CHARGESUIVICMD(NUMCMDMAG="")
+	//Cette routine permet de charger l'ensemble des commandes dans un tableau selon plusieurs critères
+	//Cette fonction permet d'optimiser le remplissage du suivi des commandes en magasin	
+	s SEPIN=$C(9)
+	s SEPDATA="\"	
+	
+	s P3=""
+ 	s P8=0 	
+ 	s P4 = NUMCMDMAG
+ 	 	
+ 	S P4 = $O(^RECHCMD(P4))
+	//num de commande magasin
+	while P4 '= ""
+	{		
+		s DATARECH = $G(^RECHCMD(P4))						
+		s ESTEDI = $P(DATARECH,SEPIN,1)
+		s NUMCMD = $P(DATARECH,SEPIN,3)
+		s DATECMD = $P(DATARECH,SEPIN,4)
+		s CODEFOUR = $P(DATARECH,SEPIN,5)					
+	
+		s sTYPECMD = +$P(DATARECH,SEPIN,6)	
+		
+
+		s P3 = P3_ESTEDI_SEPIN_SEPIN_P4_SEPIN_NUMCMD_SEPIN_DATECMD_SEPIN_CODEFOUR_SEPIN_sTYPECMD_SEPDATA
+	
+		I $L(P3)>10000 {S P8=P8-1 q}
+		S P4 = $O(^RECHCMD(P4))
+	}		
+	
+
+	s P8=P8+1		
+	q
+
+
+CMDPARTIELLEOUNON(pCMDMAG)
+	;Cette fonction permet de vérifier si la commande est livrée partiellement ou complète	
+	s PARTIELLE=0	               
+    ;Si PARTIELLE = 0 alors aucune livraison sur cette commande
+    ;Si PARTIELLE = 1 alors confirmée par la commande mais non livrée
+    ;Si PARTIELLE = 2 alors reçue partiellement 
+    ;Si PARTIELLE = 3 alors commande entièrement livrée
+    s PARTIELLE = 0
+    s RECPARTIELLE = 0
+    s RECFAITE = 0          
+    
+    
+    s CMDMAGLNG=""
+    s CMDMAGLNG=$O(^HWARCCMD("FAX",pCMDMAG,CMDMAGLNG))
+    while CMDMAGLNG '= ""
+    {
+            i PARTIELLE = 0 s PARTIELLE=1
+            
+            s CMDCENT = ""
+            s CMDCENT = $O(^HWARCCMD("FAX",pCMDMAG,CMDMAGLNG,CMDCENT))
+            while CMDCENT '= ""
+            {
+                    s CMDCENTLNG = ""
+                    s CMDCENTLNG = $O(^HWARCCMD("FAX",pCMDMAG,CMDMAGLNG,CMDCENT,CMDCENTLNG))
+                    while CMDCENTLNG'=""
+                    {
+                            //On regarde la quantité dans le FAX (si 0 alors ligne annulée)
+                            s QTEFAX = +$P($G(^HWARCCMD("FAX",pCMDMAG,CMDMAGLNG,CMDCENT,CMDCENTLNG)),"\",1)
+                                    
+                            i (+$D(^HWARCCMD("LIVR",CMDCENT,CMDCENTLNG,pCMDMAG,CMDMAGLNG))=0) && (QTEFAX '= 0)
+                            {
+                                    s RECPARTIELLE = 1                                              
+                                    
+                                    i RECFAITE=1 q
+                            }
+                            else
+                            {
+                                      s RECFAITE = 1
+                            }                                       
+                            
+                            s CMDCENTLNG = $O(^HWARCCMD("FAX",pCMDMAG,CMDMAGLNG,CMDCENT,CMDCENTLNG))
+                    }                       
+                    s CMDCENT = $O(^HWARCCMD("FAX",pCMDMAG,CMDMAGLNG,CMDCENT))
+            }
+    
+            s CMDMAGLNG=$O(^HWARCCMD("FAX",pCMDMAG,CMDMAGLNG))
+    }
+    
+    i RECFAITE = 1
+    {
+            i RECPARTIELLE = 1
+            {
+                    ;Commande livrée partiellement
+                    s PARTIELLE=2
+            }
+            else
+            {
+                    ;Commande livrée complètement
+                    s PARTIELLE=3
+            }
+    }         
+    
+	
+	q PARTIELLE
+
+CMDPARTIELLEOUNONEDI(pCMDGSI)
+	s PARTIELLE = 1 s RECPARTIELLE = 0 s RECFAITE = 0
+	s PLU="0"
+	s PLU=$O(^MAGCMDEDI("CDE",pCMDGSI,PLU))
+	while PLU'=""
+	{
+		s DATACMDPLU=$G(^MAGCMDEDI("CDE",pCMDGSI,PLU))
+		if +$P(DATACMDPLU,"\",6)=0
+		{
+			s RECPARTIELLE = 1
+			if RECFAITE=1 q
+		}
+		else
+		{
+			s RECFAITE = 1
+		}
+		
+		s PLU=$O(^MAGCMDEDI("CDE",pCMDGSI,PLU))
+	} 	
+	i RECFAITE = 1
+    {
+       i RECPARTIELLE = 1
+       {
+          ;Commande livrée partiellement
+          s PARTIELLE=2
+       }
+       else
+       {
+          ;Commande livrée complètement
+          s PARTIELLE=3
+       }
+    }         
+    
+	q PARTIELLE
+
+CHARGESUIVICMDDETAIL(pCMDNUM,pPLU="")
+	;Cette fonction permet de vérifier si les commandes sont livrées partiellement ou complète
+	
+	if pCMDNUM="" q
+	s SEPDATA="\"
+	s SEP=$c(9)
+	
+	s P3=""
+	s P8=0
+	s DATACMDENTETE=$G(^MAGCMDEDI("CDE",pCMDNUM,0))
+	s DATECMD=$P(DATACMDENTETE,"\",2)
+	if pPLU=""{s PLU="0"}else{s PLU=pPLU}	
+	s PLU=$O(^MAGCMDEDI("CDE",pCMDNUM,PLU))
+	while PLU'=""
+	{
+		s DATACMD=$G(^MAGCMDEDI("CDE",pCMDNUM,PLU))
+		
+		s QTECMD=$P(DATACMD,"\",4)
+		s QTEEXP=$P(DATACMD,"\",5)
+		s QTELIV=$P(DATACMD,"\",6)
+		s DATELIV=$P(DATACMD,"\",7)
+		s NUMRETRO=$P(DATACMD,"\",8)
+		//Nous devons chercher la clef article		
+		s PHOTO = ""
+		s CLEFART=$G(^SP(PLU))
+		if CLEFART=""
+		{
+			s CLEFART="INEXISTANT"						
+		}
+		else
+		{
+		 s DATAST1 = $G(^ST(CLEFART,1))
+	     i DATAST1 = ""
+        {
+        	    s PHOTO = ""
+       	 }
+       	 else
+       	 {
+       	     s PHOTO = $P(DATAST1,"\",5)
+       	 }
+		}
+		
+		s P3=P3_CLEFART_SEP_PLU_SEP_QTECMD_SEP_pCMDNUM_SEP_DATECMD_SEP_QTEEXP_SEP_NUMRETRO_SEP_DATELIV_SEP_QTELIV_SEP_PHOTO_SEPDATA
+		
+		if $L(P3)>10000 {s P8=-1 q}
+		s PLU=$O(^MAGCMDEDI("CDE",pCMDNUM,PLU))
+	}
+		
+	s P8=P8+1
+	s P4=PLU
+	
+	q
+	
+REMPLIRFOURNISSEUR
+	s SEP="\"
+	s P3=""
+	s CODEFOUR=$O(^HWLEV(""))
+	while CODEFOUR'=""
+	{
+		if +$D(^HWLEV(CODEFOUR,1))>0 S P3=P3_CODEFOUR_SEP
+		
+		s CODEFOUR=$O(^HWLEV(CODEFOUR))
+	}
+	
+	q

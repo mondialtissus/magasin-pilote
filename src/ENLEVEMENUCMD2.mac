@@ -1,0 +1,20 @@
+ROUTINE ENLEVEMENUCMD2
+ENLEVEMENUCMD2
+ 
+	k ^MENU(2,1)
+	k ^MENU(2,2)
+	k ^MENU(2,3)
+ 
+	s ^GUMENU(2,1)="Mouvement InterZones\fenTransfertInterZone\img21"
+	s ^GUMENU(2,2)="Stock Déco && Vitrine\fenConsultationStockVitrine\img22"
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

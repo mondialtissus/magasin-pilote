@@ -1,0 +1,32 @@
+ROUTINE MAJSAVESERVEUR2
+MAJSAVESERVEUR2
+ 
+ S ^HWINFO("SAUVEGARDE",19)="COPY\Pos => Serveur 2"
+ S ^HWINFO("SAUVEGARDE",19,"DEST")="\\SERVEUR2\serveur2\pos\Download"
+ S ^HWINFO("SAUVEGARDE",19,"FILES")="Ticket.exe\SUIVI.exe\STAT.exe\Cloture.exe\MODIFREGL.exe\Erreurs.exe\Posmobile.exe\Caisse.exe\"
+ S ^HWINFO("SAUVEGARDE",19,"SRC")="C:\Pos\"
+ S ^HWINFO("SAUVEGARDE",20)="COPY\Download => Pos"
+ S ^HWINFO("SAUVEGARDE",20,"DEST")="\\SERVEUR2\SERVEUR2\POS"
+ S ^HWINFO("SAUVEGARDE",20,"FILES")="Ticket.exe\SUIVI.exe\STAT.exe\Cloture.exe\MODIFREGL.exe\Erreurs.exe\Posmobile.exe\POSBO.exe\ImpEtiq.exe\"
+ S ^HWINFO("SAUVEGARDE",20,"SRC")="C:\Pos\Download"
+ S ^HWINFO("SAUVEGARDE",21)="COPY\Download => Pos Download"
+ S ^HWINFO("SAUVEGARDE",21,"DEST")="\\SERVEUR2\SERVEUR2\POS\Download"
+ S ^HWINFO("SAUVEGARDE",21,"FILES")="Ticket.exe\SUIVI.exe\STAT.exe\Cloture.exe\MODIFREGL.exe\Erreurs.exe\Posmobile.exe\POSBO.exe\ImpEtiq.exe\"
+ S ^HWINFO("SAUVEGARDE",21,"SRC")="C:\Pos\Download"
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,186 @@
+ROUTINE GET0512
+GET0512
+ 
+ s TK=$O(^TK(""))
+ while TK'=""
+ {
+	 s ANNEE=+$E(TK,3,4)
+	 s MOIS=+$E(TK,3,6)
+	 if ANNEE=4	 
+	 {
+		 if (MOIS=405)||(MOIS=406)
+		 {
+			 s iRem5=0			 			 
+			 s LG=$O(^TK(TK,"0"))
+			 while (LG'="")
+			 {
+				 s REC=$G(^TK(TK,LG))
+				 if +$P(REC,"\",7)=5{s iRem5=1}				 
+				 s LG=$O(^TK(TK,LG))
+			 }	
+			 if iRem5=1{d EXPORTRESULT(TK,0,ANNEE,MOIS)}
+		 }
+	 }
+	 else
+	 {
+		if ANNEE=5
+		{
+ 			s LG=$O(^TK(TK,"0"))	 		
+ 			while LG'=""
+ 			{	
+ 				d EXPORTRESULT(TK,LG,ANNEE,MOIS)	
+ 				s LG=$O(^TK(TK,LG))	 
+ 			}
+	 	}
+	 }
+	 s TK=$O(^TK(TK))
+ }
+ Q
+ 
+EXPORTRESULT(TK,LG,ANNEE,MOIS)
+ 
+	 s gPOS=$G(^HWINFO("MAG"))
+	 s REC=$G(^TK(TK,LG))
+	 s PLU=$P(REC,"\",1)
+	 s DESC=$P(REC,"\",2)			 
+	 s IFAM=+$P(REC,"\",3)
+	 s QTE=+$P(REC,"\",4)
+	 s PU=+$P(REC,"\",5)
+	 s TOT=+$P(REC,"\",6)
+	 s REM=+$P(REC,"\",7)
+	 s SOLD=+$P(REC,"\",8)
+	 s LGTOSEND=PLU_"\"_IFAM_"\"_QTE_"\"_PU_"\"_REM_"\"_SOLD_"\"_TOT
+	 if ((REM>0)||(SOLD>0))&&(ANNEE=5)
+	 {
+		 if DESC'="2e Demarque"
+		 {
+		 	// Récupération des soldes ou remises à partir du 1er janvier
+		 	if REM>0 {s ^MODROUTINE(gPOS,"GET0512RESULT","REMISES",TK,LG)=LGTOSEND}
+			 if SOLD>0 {s ^MODROUTINE(gPOS,"GET0512RESULT","SOLDES",TK,LG)=LGTOSEND}
+		 }
+	 }
+	 if (DESC="2e Demarque")&&(ANNEE=5)
+	 {
+		 // Récupération des 2nds démarques
+		 s ^MODROUTINE(gPOS,"GET0512RESULT","2DEMARQ",TK,LG)=LGTOSEND
+	 }
+	 if (IFAM=16)&&(MOIS>412)&&(MOIS<507)
+	 {
+		 // Récupération des articles de PAP sur le 1er semestre 2005
+		 s ^MODROUTINE(gPOS,"GET0512RESULT","PAP",TK,LG)=LGTOSEND
+	 }
+	 if (MOIS>412)&&(MOIS<507)
+	 {
+		 // Récupération des ventes à 1Euro sur le 1er semestre 2005
+		 if TOT=1{s ^MODROUTINE(gPOS,"GET0512RESULT","1EURO",TK,LG)=LGTOSEND}
+	 }
+	 if (MOIS=405)||(MOIS=406)
+	 {
+		 // Récupération du ticket complet contenant une remise à 5% sur Mai & Juin 2004
+		 s LG2=$O(^TK(TK,"0"))
+		 while LG2'=""
+		 {
+			 s tmpREC=$G(^TK(TK,LG2))
+			 s tmpREC2=""
+			 s tmpREC2=$P(tmpREC,"\",1)_"\"_$P(tmpREC,"\",3)_"\"_$P(tmpREC,"\",4)_"\"_$P(tmpREC,"\",5)_"\"_$P(tmpREC,"\",7)_"\"
+			 s tmpREC2=tmpREC2_$P(tmpREC,"\",8)_"\"_$P(tmpREC,"\",6)			 
+			 s ^MODROUTINE(gPOS,"GET0512RESULT","REMISES5",TK,LG2)=tmpREC2
+			 s LG2=$O(^TK(TK,LG2))
+		 }
+	 }	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

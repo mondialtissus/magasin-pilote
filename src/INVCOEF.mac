@@ -1,0 +1,100 @@
+ROUTINE INVCOEF
+INVCOEF
+ 
+ // mise à jour coefficients des familles
+ S DATE=$O(^INVCOEFFAM(""))
+ while DATE'=""
+ {
+ 	i DATE'="60811"
+	{
+		s FAM=$O(^INVCOEFFAM(DATE,""))
+ 		while FAM'=""
+ 		{
+	 		s SSFAM=$O(^INVCOEFFAM(DATE,FAM,""))
+ 			while SSFAM'=""
+ 			{
+	 			s DATA=$G(^INVCOEFFAM(DATE,FAM,SSFAM))
+			 	s ^INVCOEFFAM("60811",FAM,SSFAM)=DATA
+ 
+	 		s SSFAM=$O(^INVCOEFFAM(DATE,FAM,SSFAM))
+ 			}
+ 		s FAM=$O(^INVCOEFFAM(DATE,FAM))
+ 		}
+	}
+ S DATE=$O(^INVCOEFFAM(DATE))
+ }
+ 
+ 
+ // mise à jour coefficients des fournisseurs
+ S DATE=$O(^INVCOEFFLEV(""))
+ while DATE'=""
+ {
+ 	i DATE'="60811"
+	{
+		s LEV=$O(^INVCOEFFLEV(DATE,""))
+ 		while LEV'=""
+ 		{
+	 		s DATA=$G(^INVCOEFFLEV(DATE,LEV))
+			s ^INVCOEFFLEV("60811",LEV)=DATA
+ 
+ 		s LEV=$O(^INVCOEFFLEV(DATE,LEV))
+ 		}
+	}
+ S DATE=$O(^INVCOEFFLEV(DATE))
+ }
+		 				
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

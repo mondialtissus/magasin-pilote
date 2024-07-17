@@ -1,0 +1,467 @@
+ROUTINE GESTDOUBRETRO
+
+GESTDOUBRETRO(pENVOIMAIL=0)
+
+   	SET NUMMAG 		        = ##class(%Function).HostName()
+	SET BACKMAGRETROCONF 	= 	"^[""USER""]BACKMAGRETROCONF"
+	SET CONFCMDTMP 	        = "^[""USER""]CONFCMDTMP"_NUMMAG
+	
+	KILL ^TEST1 
+	
+	DO IMPORTGLOBAL()	
+	SET ^TEST1("IMPORTGLOBAL")=1
+	
+	DO DOUBLONCMD()
+	SET ^TEST1("DOUBLONCMD")=1
+	
+	DO ANALYSERETRO()
+	SET ^TEST1("ANALYSERETRO")=1
+	
+	DO IDENTIFRETRO()
+	SET ^TEST1("IDENTIFRETRO")=1
+	
+	DO BACKUPRETRO(pENVOIMAIL)
+	SET ^TEST1("BACKUPRETRO")=1
+
+    QUIT
+
+/// 	Importation de la global ayant la liste des commande  ss de la table BCIConfCmd
+IMPORTGLOBAL()
+
+   /// Créer une session FTP
+    Set ftpSession 	= ##class(%Net.FtpSession).%New()
+	SET NUMMAG		= ##class(%Function).HostName()
+	SET CONFCMDTMP 	= "^[""USER""]CONFCMDTMP"_NUMMAG
+	
+    /// Définir le serveur FTP
+    Set ftpServer = "10.10.1.200"
+    Set ftpPort = 21  // Le port FTP par défaut est 21
+    Set ftpUsername  = "anonymous"
+    Set ftpPassword = "flemelle@mondialtissus.com"
+    Set ftpPath = "/OBJ/ALL/"
+    set tmpPath = "c:\temp\"
+	set NUMMAG 	= 	##class(%Function).HostName()
+	KILL @CONFCMDTMP
+	
+    /// Se connecter au serveur FTP  
+    Set connectStatus = ftpSession.Connect(ftpServer, ftpUsername,ftpPassword, ftpPort)
+	
+    If connectStatus = 1 {
+
+        ;Write "Connexion: "_ftpUsername,!
+        ;Write "Ftp server messsage:",!,ftpSession.ReturnMessage,!
+
+        I 'ftpSession.SetDirectory(ftpPath) w "Repertoire source introuvable",! Q
+        If 'ftpSession.NameList("",.fileArray) Write "Failed to get name list",!
+        Set key=""
+		set nameFile = "CONFCMDTMP"_NUMMAG_".GBL"
+		SET ftpFilePath = ftpPath_nameFile
+		;w ftpFilePath,!
+		SET filestream=##class(%Stream.FileBinary).%New()
+		If 'ftpSession.Retrieve(ftpFilePath,filestream) Write "Failed to get file",! Quit
+		;Write "Length of file received: ",filestream.Size,!
+		set tmpFilePath = tmpPath_nameFile
+		;w tmpFilePath,!
+
+		//prevoir le code de controle des erreur
+		do filestream.LinkToFile(tmpFilePath)
+		IF 'ftpSession.Retrieve(nameFile,filestream) WRITE "Failed to get file",! Quit
+
+		//prevoir le code de controle des erreur
+
+		do filestream.%Save()
+
+		do $SYSTEM.OBJ.Load(tmpFilePath,"ck")
+    } Else {
+
+        Write "Échec de la connexion au serveur FTP.", !
+    }
+
+	;DO ftpSession.Delete(ftpFilePath)
+
+    /// Libérer la session FTP
+    If 'ftpSession.Logout() Write "Failed to logout",!
+	w "Importation de la global au "_NUMMAG_" effectué avec succès",!
+	QUIT
+
+/// 	Analyse des datas afin de trié les retro de trop reception ou pas
+DOUBLONCMD()
+
+    SET NUMMAG 				= 	##class(%Function).HostName()
+	SET MAGRETROCONF 		= "^[""USER""]MAGRETROCONF"
+	SET CONFCMDTMP 			= "^[""USER""]CONFCMDTMP"_NUMMAG
+	
+	SET CHERCHECONFCMDTMP 	= CONFCMDTMP
+	
+	FOR{
+		SET CHERCHECONFCMDTMP 	= $QUERY(@CHERCHECONFCMDTMP)
+		Quit:CHERCHECONFCMDTMP=""	
+
+		SET POSNUM 	= $QSUBSCRIPT(CHERCHECONFCMDTMP,1)	
+		SET CMD 	= $QSUBSCRIPT(CHERCHECONFCMDTMP,2)
+		
+		CONTINUE:(POSNUM'=NUMMAG)
+		DO SELECTDOUBLON(CMD)	
+	}	
+	QUIT
+
+/// 	Analyse des datas afin de trié les retro de trop reception ou pas (bis)
+SELECTDOUBLON(pNUMCMD)
+
+	set NUMMAG 				= 	##class(%Function).HostName()
+	SET MAGRETROCONF 		= 	"^[""USER""]MAGRETROCONF"
+	SET CONFCMDTMP 			= 	"^[""USER""]CONFCMDTMP"_NUMMAG
+	SET BACKMAGRETROCONF 	= 	"^[""USER""]BACKMAGRETROCONF"
+
+	SET NMLN = ""
+	SET NBRETRO = 0
+	SET LISTRET = ""
+	SET CHERCHERETROCONF 	= MAGRETROCONF
+
+	FOR{
+
+		SET CHERCHERETROCONF 	= $QUERY(@CHERCHERETROCONF)
+		Quit:CHERCHERETROCONF=""	
+
+		SET STATUT 		= $QSUBSCRIPT(CHERCHERETROCONF,1)	
+		SET NUMRETRO 	= $QSUBSCRIPT(CHERCHERETROCONF,2) 	 
+		SET EXP 		= $QSUBSCRIPT(CHERCHERETROCONF,3)
+		SET DEST 		= $QSUBSCRIPT(CHERCHERETROCONF,4)	
+		SET NBLIGN 		= $QSUBSCRIPT(CHERCHERETROCONF,5)	
+
+
+		CONTINUE:((DEST'=NUMMAG)||(EXP'="X998")||(STATUT'="CMD")||(NBLIGN'=0))		
+		SET DATA 	= $g(@MAGRETROCONF@("CMD",NUMRETRO,EXP,DEST,0))
+
+		CONTINUE:($p(DATA,"\",9) '= pNUMCMD)
+
+		SET EXIST 	= 0
+		//*********************************************************************************
+		//	VERIFIE SI LA RETRO A DEJA ETE TRAITE
+		//*********************************************************************************
+		IF $DATA(@BACKMAGRETROCONF@("NBRET",pNUMCMD)) '= 0 
+		{
+			SET Date 	= $ORDER(@BACKMAGRETROCONF@("NBRET",pNUMCMD,""))
+			IF Date'=""
+			{
+				SET Data	= $GET(@BACKMAGRETROCONF@("NBRET",pNUMCMD,Date))
+				SET IND 	= $PIECE(Data,"\",1)
+				
+				FOR i = 1:1:IND+1
+				{
+					SET SEARCHRET 	= $PIECE(Data,"\",i+1)
+					IF (NUMRETRO = SEARCHRET) SET EXIST = 1		
+				}
+				IF (EXIST = 0){
+					SET NBRETRO = NBRETRO + 1 
+					SET LISTRET = LISTRET_NUMRETRO_"\"
+					SET @BACKMAGRETROCONF@("NBRET",pNUMCMD,+$H) = NBRETRO_"\"_LISTRET
+				}				
+			}
+		}
+		ELSE{
+			SET NBRETRO = NBRETRO + 1 
+			SET LISTRET = LISTRET_NUMRETRO_"\"
+			SET @BACKMAGRETROCONF@("NBRET",pNUMCMD,+$H) = NBRETRO_"\"_LISTRET
+		}
+
+ 
+		//*********************************************************************************
+	}
+    QUIT
+/// 	Suppression de la table tempo des retros n'ayant pas de double
+ANALYSERETRO()
+
+	SET NUMMAG				= ##class(%Function).HostName()
+	SET MAGRETROCONF 		= "^[""USER""]MAGRETROCONF"
+	SET CONFCMDTMP 			= "^[""USER""]CONFCMDTMP"_NUMMAG
+	SET BACKMAGRETROCONF 	= "^[""USER""]BACKMAGRETROCONF"
+	SET EXP					= "X998"
+
+	k @BACKMAGRETROCONF@("LIV")
+	k @BACKMAGRETROCONF@("PASLIV")
+
+	SET CHERCHERETROCONF 	= 	CONFCMDTMP
+	//******************************************************************
+	//	Suppression des retro n'ayant pas de doublon de la global tempo
+	//******************************************************************
+	
+	SET NUMCMD = $ORDER(@BACKMAGRETROCONF@("NBRET",""))
+	WHILE NUMCMD'=""
+	{
+		SET DATE = $ORDER(@BACKMAGRETROCONF@("NBRET",NUMCMD,""))		
+		WHILE DATE'=""
+		{		
+			SET DATA = $GET(@BACKMAGRETROCONF@("NBRET",NUMCMD,DATE))
+			IF $PIECE(DATA,"\",1) = 1 
+			{
+				KILL @BACKMAGRETROCONF@("NBRET",NUMCMD,DATE)
+			}
+			ELSE
+			{
+				IF DATE = +$HOROLOG DO TRIERETRO(NUMCMD,DATA)
+			}
+			SET DATE = $ORDER(@BACKMAGRETROCONF@("NBRET",NUMCMD,DATE))
+		}
+		
+		SET NUMCMD = $ORDER(@BACKMAGRETROCONF@("NBRET",NUMCMD))
+	}
+    QUIT
+
+/// 	Correction reception doublon retro-confection
+TRIERETRO(pNUMCMD, pDATA)
+
+	SET NUMMAG 				= 	##class(%Function).HostName()
+	SET MAGRETROCONF 		= 	"^[""USER""]MAGRETROCONF"
+	SET CONFCMDTMP 			= 	"^[""USER""]CONFCMDTMP"_NUMMAG
+	SET BACKMAGRETROCONF 	= 	"^[""USER""]BACKMAGRETROCONF"
+	
+	SET QTIDEM 				=	1
+	SET EXP 				= 	"X998"
+
+	SET NBRETRO = $PIECE(pDATA,"\",1)	
+	
+	FOR i = 1+1:1:NBRETRO+1
+	{	
+		SET NRETRO 	= $PIECE(pDATA,"\",i)
+		
+		SET QDATA 	= $GET(@MAGRETROCONF@("CMD",NRETRO,EXP,NUMMAG,0))
+		SET QDATE 	= $ZDH($p(QDATA,"\",5),8)
+		SET QTTOTAL = $p(QDATA,"\",2)		
+		SET QNBCMD	= $PIECE(QDATA,"\",1)
+		//***********************************************************************************
+		//	TRIE LES RETRO
+		//***********************************************************************************
+		IF $DATA(@MAGRETROCONF@("LIV",NRETRO,EXP,NUMMAG,0))=1
+		{ SET @BACKMAGRETROCONF@("LIV",pNUMCMD,NRETRO) = QDATE_"\"_QTTOTAL_"\"_QNBCMD}
+		ELSE
+		{ SET @BACKMAGRETROCONF@("PASLIV",pNUMCMD,NRETRO) = QDATE_"\"_QTTOTAL_"\"_QNBCMD}		
+	}
+
+	QUIT
+
+IDENTIFRETRO()
+
+	SET CMD = $O(@BACKMAGRETROCONF@("LIV",""))
+ 	WHILE CMD '= ""
+ 	{
+		SET NUMRETROPASLIV = $O(@BACKMAGRETROCONF@("LIV",CMD,""))
+		
+		WHILE NUMRETROPASLIV '= ""
+		{
+			SET QDATA 	= $GET(@MAGRETROCONF@("CMD",NUMRETROPASLIV,EXP,NUMMAG,0))
+			SET QNBCMD 	= $p(QDATA,"\",1)
+			SET QTTOTAL = $p(QDATA,"\",2)	
+			SET QDATE 	= $ZDH($p(QDATA,"\",5),8)	
+			SET NUMCOM 	= $p(QDATA,"\",9)	
+			SET QTIDEM 	= 1
+			SET NBRET 	= 0
+			//***********************************************************************************
+			// SI LES RETRO NE SONT PAS DES DOUBLE
+			//***********************************************************************************
+			SET NUMRETRO = $ORDER(@BACKMAGRETROCONF@("LIV",CMD,""))
+			WHILE NUMRETRO'= ""
+			{	
+				SET DataConftmp = $GET(@BACKMAGRETROCONF@("LIV",CMD,NUMRETRO))					
+				SET DateRetro = $PIECE(DataConftmp,"\",1)
+				SET QT = $PIECE(DataConftmp,"\",2)
+				IF QT '= QTTOTAL
+				{
+					SET QTIDEM = 0
+					QUIT
+				}
+				SET NBRET = NBRET + 1				
+				SET NUMRETRO = $ORDER(@BACKMAGRETROCONF@("LIV",CMD,NUMRETRO))
+			}
+			;w !,CMD_" "_QTIDEM_" : "_NBRET
+			//***********************************************************************************
+			// SI LES RETRO SONT DES DOUBLE
+			//***********************************************************************************					
+			IF ((QTIDEM = 1)&&(NBRET>1)) 
+			{
+				SET NUMRETRO = $ORDER(@BACKMAGRETROCONF@("LIV",CMD,""))
+				WHILE NUMRETRO'= ""
+				{
+					SET DataConftmp = $GET(@BACKMAGRETROCONF@("LIV",CMD,NUMRETRO))
+					SET DateRetro = $PIECE(DataConftmp,"\",1)
+					;w !,QDATE_" : "_NUMRETROPASLIV_" - "_DateRetro_" : "_NUMRETRO
+					
+					IF DateRetro < QDATE
+					{
+						;w DateRetro_" : " _NUMRETRO_" < "_QDATE_" : "_NRETRO ,!
+						SET @BACKMAGRETROCONF@("LIV",CMD,NUMRETRO) = DateRetro_"\"_QTTOTAL_"\"_QNBCMD
+						IF $DATA(@BACKMAGRETROCONF@("RET",CMD,NUMRETROPASLIV)) = 0 SET @BACKMAGRETROCONF@("RET",CMD,NUMRETROPASLIV) = +$H_"\"_QDATE_"\"_QTTOTAL_"\"_QNBCMD
+						KILL @BACKMAGRETROCONF@("LIV",CMD,NUMRETROPASLIV)
+					} 
+					
+					IF DateRetro > QDATE
+					{	
+						;w DateRetro_" : " _NUMRETRO_" > "_QDATE_" : "_NRETRO ,!
+						SET @BACKMAGRETROCONF@("LIV",CMD,NUMRETROPASLIV) = QDATE_"\"_QTTOTAL_"\"_QNBCMD
+						IF $DATA(@BACKMAGRETROCONF@("RET",CMD,NUMRETRO)) = 0 SET @BACKMAGRETROCONF@("RET",CMD,NUMRETRO) = +$H_"\"_DateRetro_"\"_QTTOTAL_"\"_QNBCMD
+						KILL @CONFCMDTMP@("LIV",CMD,NUMRETRO)
+					}
+					
+					SET NUMRETRO = $O(@BACKMAGRETROCONF@("LIV",CMD,NUMRETRO))
+				}					
+			}		
+			
+			SET NUMRETROPASLIV = $O(@BACKMAGRETROCONF@("PASLIV",CMD,NUMRETROPASLIV))
+		}
+		SET CMD = $O(@BACKMAGRETROCONF@("LIV",CMD))
+	}
+/// 	Correction reception doublon retro-confection
+BACKUPRETRO(pENVOIMAIL=0)
+
+	SET NUMMAG 			 = 	##class(%Function).HostName()
+	SET MAGRETROCONF 	 = "^[""USER""]MAGRETROCONF"
+	SET CONFCMDTMP 		 = "^[""USER""]CONFCMDTMP"_NUMMAG
+	SET BACKMAGRETROCONF = "^[""USER""]BACKMAGRETROCONF"
+	SET NBSUP = 0
+	SET EXP 	= "X998"
+	SET VERIFQT = 0 
+	SET TYPEMVT = 34
+	SET LISTERETRORET = ""
+
+	SET CMD = $O(@CONFCMDTMP@(NUMMAG,""))
+	WHILE CMD '= ""
+	{	    
+		SET NUMRETROPASLIV = $O(@BACKMAGRETROCONF@("PASLIV",CMD,""))
+		WHILE NUMRETROPASLIV '= ""
+		{
+			SET QT = 0
+			SET DATARETROLIV 	= $G(@BACKMAGRETROCONF@("PASLIV",CMD,NUMRETROPASLIV))
+			SET IND 		= $P(DATARETROLIV,"\",3)
+			
+			;IF $DATA(@MAGRETROCONF@("CMD",NUMRETROPASLIV)) = 0 QUIT
+			//*********************************************************************************
+			//	COMPTAGE DE LA QUANTITE DES PLU DANS LA RETRO
+			//*********************************************************************************
+			FOR i = 1:1:IND
+			{				
+				SET DATACONFRET	= @MAGRETROCONF@("CMD",NUMRETROPASLIV,EXP,NUMMAG,i)
+				SET SEARCHPLU 	= $PIECE(DATACONFRET,"\",1)
+				SET QT 			= $PIECE(DATACONFRET,"\",2)			
+				
+				IF $D(@CONFCMDTMP@(NUMMAG,CMD,SEARCHPLU))=1
+				{
+					SET DATA = $G(@CONFCMDTMP@(NUMMAG,CMD,SEARCHPLU))
+					SET $PIECE(DATA,"\",3) = $PIECE(DATA,"\",3) + QT
+					SET @CONFCMDTMP@(NUMMAG,CMD,SEARCHPLU) = DATA
+				}
+			}
+			SET DATACON	= @MAGRETROCONF@("CMD",NUMRETROPASLIV,EXP,NUMMAG,i)
+			
+			//*********************************************************************************
+			//	COMPTE LE TOTAL DE CHAQUE PLU LA COMMANDE
+			//*********************************************************************************
+			SET QT = 0
+			SET PLU = $O(@CONFCMDTMP@(NUMMAG,CMD,""))	
+			WHILE PLU'=""
+			{
+				SET DATA = $G(@CONFCMDTMP@(NUMMAG,CMD,PLU))
+				SET QT = QT + $P(DATA,"\",3)
+				SET PLU = $O(@CONFCMDTMP@(NUMMAG,CMD,PLU))
+			}
+			
+			//*********************************************************************************
+			//	SUPPRESSION DES RETROS EN TROP PAS RECEPTIONNE 
+			//*********************************************************************************
+			;w !,"RETRO PAS LIV"
+			SET DATAPASLIV = $G(@BACKMAGRETROCONF@("PASLIV",CMD,NUMRETROPASLIV))
+			SET NUMRETROPASLIV = ""
+
+			IF $DATA(@BACKMAGRETROCONF@("PASLIV",CMD))>0
+			{					
+				SET NUMRETROPASLIV 	= $O(@BACKMAGRETROCONF@("PASLIV",CMD,""))
+				SET DATAPASLIV 		= $G(@BACKMAGRETROCONF@("PASLIV",CMD,NUMRETROPASLIV))
+
+				IF ($PIECE(DATAPASLIV,"\",2) '= QT) w !,"La quantité totale de la commande "_CMD_" ne corresponde pas !" Q
+				IF ($PIECE(DATAPASLIV,"\",2) '= $PIECE(DATAPASLIV,"\",2)) w !,"Les quantités des retro "_NUMRETROPASLIV_" et "_DATACON_" ayant le même N° de commande "_CMD_" ne correspondent pas !"  Q
+
+				//*********************************************************************************
+				//	Backup data magRetroConf
+				SET DATAMAG = $GET(@MAGRETROCONF@("FAX",NUMRETROPASLIV,EXP,NUMMAG,"0")) 
+				SET @BACKMAGRETROCONF@("FAX",NUMRETROPASLIV,EXP,NUMMAG,"0")	=	DATAMAG
+				SET NBSUP = NBSUP+1
+				//	Suppression de la retro en trop
+				KILL @MAGRETROCONF@("FAX",NUMRETROPASLIV,EXP,NUMMAG,"0")
+				//*********************************************************************************
+				SET IND = $O(@MAGRETROCONF@("CMD",NUMRETROPASLIV,EXP,NUMMAG,""))
+				WHILE IND'=""
+				{
+					//*********************************************************************************
+					//	Backup data magRetroConf
+					SET DATAMAG = $GET(@MAGRETROCONF@("CMD",NUMRETROPASLIV,EXP,NUMMAG,IND)) 
+					SET @BACKMAGRETROCONF@("CMD",NUMRETROPASLIV,EXP,NUMMAG,IND)	=	DATAMAG
+
+					// Suppression de la retro en trop
+					KILL @MAGRETROCONF@("CMD",NUMRETROPASLIV,EXP,NUMMAG,IND)
+					//*********************************************************************************
+					SET IND = $O(@MAGRETROCONF@("CMD",NUMRETROPASLIV,EXP,NUMMAG,IND))						
+				}
+			}
+			SET NUMRETROPASLIV = $O(@BACKMAGRETROCONF@("LIV",CMD,NUMRETROPASLIV))
+		}		
+	
+		//*********************************************************************************
+		//	LISTE DES RETROS RECEPTIONNE ET A CORRIGER LES MVT 
+		//*********************************************************************************
+		;w !,"RETRO A CORRIGER"
+		IF $DATA(@BACKMAGRETROCONF@("RET",+$H,CMD))>0
+		{
+			SET NUMRETRORET = $O(@BACKMAGRETROCONF@("RET",CMD,""))
+			SET DATARET = $GET(@BACKMAGRETROCONF@("RET",CMD,NUMRETRORET))
+			IF $PIECE(DATARET,"\",1) = +$H SET LISTERETRORET = $C(4)_NUMRETRORET_$C(10)_LISTERETRORET					
+		}
+		//*********************************************************************************
+		SET CMD = $O(@CONFCMDTMP@(NUMMAG,CMD))	
+	}
+
+	//	Si des retro en été supprimer, on envoi un mail
+	IF ((pENVOIMAIL = 1) && ((NBSUP > 0) || (LISTERETRORET '= ""))) DO ENVOIMAIL(LISTERETRORET)
+
+	
+    QUIT
+
+/// 	Correction reception doublon retro-confection
+ENVOIMAIL(pListRetro)
+
+	SET NUMMAG 			 = 	##class(%Function).HostName()
+
+    #include %occOptions
+    #include %occStatus
+
+	Set s=##class(%Net.SMTP).%New()
+	Set s.smtpserver="mondialtissus-com.mail.protection.outlook.com"
+	Set auth=##class(%Net.Authenticator).%New() ; use default authentication list
+	Set auth.UserName="serviceinformatique@mondialtissus.com"
+	Set m=##class(%Net.MailMessage).%New()
+	Set m.From=auth.UserName
+	Do m.To.Insert(NUMMAG_"@mondialtissus.com") 
+	;Do m.To.Insert("hessid@mondialtissus.com") 		
+	
+	
+	SET pMessage = "Bonjour,"_$C(10)
+	SET pMessage = pMessage_"Nous venons de supprimer les doublons des retros confections qui n'ont pas été réceptionnés "_$C(10)
+	
+	IF pListRetro '= "" 
+	{
+		SET pMessage = pMessage_"Concernant celles qui ont été réceptionnées, vous devez faire la correction manuellement."_$C(10)
+		SET pMessage = pMessage_"Les retros réceptionnés en double sont : "_$C(10)_pListRetro_$C(10)
+		SET pMessage = pMessage_"Si les modifications ont été faite sur ces rétros, ne pas tenir compte de ce mail !"_$C(10)
+	}
+	SET pMessage = pMessage_"L'équipe informatique vous souhaite une bonne journée."
+
+	Set m.Subject="Correction doublon retro confection"
+	Set m.Charset="iso-8859-1"
+
+    If $ISOBJECT(pMessage) {
+	    Do m.TextData.Write(pMessage.%ToJSON())
+    }Else {
+	    Do m.TextData.Write(pMessage)
+    }
+
+	Set status=s.Send(m)
+	If $$$ISERR(status) Do $SYSTEM.OBJ.DisplayError(status)
+    QUIT

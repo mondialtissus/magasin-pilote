@@ -1,0 +1,19 @@
+ROUTINE INITINV20181029
+INITINV20181029
+ S ^HWINFO("INVENTAIRE","DATE")="64951"	      // Date de référence 23 Octobre 2018
+ S ^HWINFO("INVENTAIRE","DATEARRETE")="64951"	
+ s ^HWINFO("INVENTAIRE","DATETEST")=""
+ s ^HWINFO("INVENTAIRE","DATETESTFIN")=""
+ s ^HWINFO("INVENTAIRE","DATEDEB")="64951"   // Date de début 30 Octobre 2018
+ s ^HWINFO("INVENTAIRE","DATEFIN")="64958"   // fin le 06 Novembre 2018
+ s ^HWINFO("INVENTAIRE",64951,"AUTO")=""     // Permet de valider l'utilisation du terminal 
+
+ Q
+
+
+
+
+
+
+
+

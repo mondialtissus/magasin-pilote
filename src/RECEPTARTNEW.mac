@@ -1,0 +1,210 @@
+ROUTINE RECEPTARTNEW
+RECEPTARTNEW
+	;Cette fonction permet de créer les RECEPTART au départ de ceux-ci
+	;Nous allons regarder les HWNEV
+	k ^RECEPTART
+	S POSNUM=$G(^HWINFO("MAG"))     
+	S CMDCENT=""
+	S CMDCENTLNG=""
+	S CLEFART=""
+	S DATAHWNEV=""
+	S PLU=""
+	S DATECMD=""
+	S DATECMDI=0
+	S NUMCMDPOS = ""
+	S DATEIIMPORT = +$H - 366
+	S DATEIDF = +$H - 91
+	S QTE = 0        
+	S CMDCENT=$O(^HWNEV(POSNUM,CMDCENT))
+	while CMDCENT'=""
+	{
+	        S CMDCENTLNG="0"
+	        S DATAHWNEV= $G(^HWNEV(POSNUM,CMDCENT,CMDCENTLNG))
+	        S DATECMD = $P(DATAHWNEV,"\",3)
+	        I +DATECMD > 0
+	        {
+	        	S DATECMDI = +$ZDH(DATECMD,8)
+	        	;La date doit être supérieure au 01/01/2010
+	        
+	        	s CMDCENTLNG = "0"
+	        	s CMDCENTLNG=$O(^HWNEV(POSNUM, CMDCENT,CMDCENTLNG))
+	       		while CMDCENTLNG'=""
+	        	{
+	                S DATAHWNEV=$G(^HWNEV(POSNUM,CMDCENT,CMDCENTLNG))
+	                S CLEFART= $P(DATAHWNEV,"\",3)
+	                S QTE = +$P(DATAHWNEV,"\",4) 
+	                S PLU = $P($G(^ST(CLEFART)),"\",21)
+	                S NUMCMDPOS  = $P($P(DATAHWNEV,"\",2),"*",1)   
+	                i PLU '= ""
+	                {                 
+	                	i ((NUMCMDPOS["U") || (NUMCMDPOS["P") || (NUMCMDPOS["X"))
+	                	{                                               
+	                	        i (+DATECMDI > +DATEIDF) S ^RECEPTART(PLU,CMDCENT)=QTE_"\"_DATECMD
+	                	}
+	                	else
+	                	{                       
+	                	        i (+DATECMDI > +DATEIIMPORT) S ^RECEPTART(PLU,CMDCENT)=QTE_"\"_DATECMD  
+	                	}
+					}
+	                s CMDCENTLNG=$O(^HWNEV(POSNUM, CMDCENT,CMDCENTLNG))
+	        	}
+	        }	
+	        S CMDCENT=$O(^HWNEV(POSNUM,CMDCENT))
+	}       
+ 
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

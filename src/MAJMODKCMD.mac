@@ -1,0 +1,86 @@
+ROUTINE MAJMODKCMD
+MAJMODKCMD
+ 
+ s gPOS = ^HWINFO("MAG")
+ s Node1="LIVR"
+ s Node2=""
+ s Node3=""
+ s Node4=""
+ s Node5=""
+ s Node6=""
+         s Node2=$O(^MODKCMD(Node1,""))
+         while Node2 '= ""
+         {
+                 s Node3=$O(^MODKCMD(Node1,Node2,""))
+                 while Node3'=""
+                 {
+                         s Node4=$O(^MODKCMD(Node1,Node2,Node3,""))
+                         while Node4'= ""
+                         {
+                                 s Node5=$O(^MODKCMD(Node1,Node2,Node3,Node4,""))
+                                 while Node5'= ""
+                                 {
+                                         s Node6=$O(^MODKCMD(Node1,Node2,Node3,Node4,Node5,""))
+                                         while Node6'= ""
+                                         {
+                                                 s ^MODKCMD(gPOS,Node1,Node2,Node3,Node4,Node5,Node6)=""
+                                         w !, "Creation de "_"^MODKCMD("_gPOS_","_Node1_","_Node2_","_Node3_","_Node4_","_Node5_","_Node6_")"
+                                                 k ^MODKCMD(Node1,Node2,Node3,Node4,Node5,Node6)
+ 
+                                                 s Node6=$O(^MODKCMD(Node1,Node2,Node3,Node4,Node5))
+                                         }
+                                         s Node5=$O(^MODKCMD(Node1,Node2,Node3,Node4,Node5))
+                                 }
+                                 s Node4=$O(^MODKCMD(Node1,Node2,Node3,Node4))
+                         }
+                         s Node3=$O(^MODKCMD(Node1,Node2,Node3))
+                 }
+                 s Node2=$O(^MODKCMD(Node1,Node2))
+         }
+         w !, "Traitement terminé !"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

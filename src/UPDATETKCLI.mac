@@ -1,0 +1,78 @@
+ROUTINE UPDATETKCLI
+UPDATETKCLI
+ 
+ // Mise a jour du compteur de TKCLIENTS
+ 
+ s CPTCLI =""
+ s gPOS=$G(^HWINFO("MAG"))
+ s i=0
+ s OldNum=""
+ ZA ^TKCLIENTS
+ 
+ s CPTCLI = $O(^TKCLIENTS(""),-1)
+ while CPTCLI '= ""
+ {
+         if $L(CPTCLI)'=12 
+         {
+                 if CPTCLI '= "COMPTEUR"
+                 {
+ 
+                         If $d(^TKCLIENTS(CPTCLI+1))=0
+                         {
+                                 s ^MODROUTINE(gPOS,"UPDATETKCLI",1)=CPTCLI_"\CPT AVANT: "_$G(^TKCLIENTS("COMPTEUR"))
+                                 s ^TKCLIENTS("COMPTEUR")=CPTCLI
+                         }
+                         ELSE
+                         {
+                                 s ^MODROUTINE(gPOS,"UPDATETKCLI",0)=CPTCLI_"\CPT ACTUEL"_$G(^TKCLIENTS("COMPTEUR"))
+                         }
+                         QUIT
+                 }
+         }
+         s CPTCLI=$O(^TKCLIENTS(CPTCLI),-1)
+ }
+ 
+ ZD ^TKCLIENTS
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

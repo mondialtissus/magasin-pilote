@@ -1,0 +1,40 @@
+ROUTINE RemonteGUMENU
+LECTUREGUMENU
+	k ^MODROUTINE
+	s NumMag=$G(^HWINFO("MAG"))
+	s cptMenu=$O(^GUMENU(""))
+	while cptMenu'=""
+	{
+		s data=$G(^GUMENU(cptMenu))
+		s ^MODROUTINE(NumMag,"GUMENU",cptMenu)=data
+		s cptSsMenu=$O(^GUMENU(cptMenu,""))
+		while cptSsMenu
+		{
+			s data=$G(^GUMENU(cptMenu,cptSsMenu))
+			// Copie de l'info
+			s ^MODROUTINE(NumMag,"GUMENU",cptMenu,cptSsMenu)=data
+			s cptSsMenu=$O(^GUMENU(cptMenu,cptSsMenu))
+		}
+		s data=""
+		s cptMenu=$O(^GUMENU(cptMenu))
+	}
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,100 @@
+ROUTINE GETREMISESSOLDES
+GETREMISESSOLDES
+ // Remontée des remises & soldes à 10%
+ s POS=$G(^HWINFO("MAG"))
+ s FIC="TKREMISES;TKSOLDES;"
+ s curFIC=""
+ s iFIC=0
+ for iFIC=1:1:2
+ {
+	 s curFIC="^"_$P(FIC,";",iFIC)
+	 s CA=$O(@curFIC@(""))
+	 while CA'=""
+	 {
+		 for iDATE=60166:1:60188 // Du 23/09 au 15/10
+		 {
+			 s strDATE=$E($ZD(iDATE,8),3,8)
+			 if +$D(@curFIC@(CA,strDATE))>0 
+			 {
+				 s TK=$O(@curFIC@(CA,strDATE,""))
+				 while TK'=""
+				 {
+					 if $L(TK)=12
+					 {
+						 s LG=$O(@curFIC@(CA,strDATE,TK,""))
+						 while LG'=""
+						 {
+							s REC=$G(@curFIC@(CA,strDATE,TK,LG))							
+							if iFIC=1 {s iPOS=7}else{s iPOS=8}
+							s POURCENT=$P(REC,"\",iPOS)
+							s IFAM=$P(REC,"\",3)
+							s QTE=$P(REC,"\",4)
+							s PU=$P(REC,"\",5)
+							s TOT=$P(REC,"\",6)
+							if +POURCENT=10
+							{
+								s ^MODROUTINE(POS,$P(curFIC,"^",2),strDATE,CA,TK,LG)=IFAM_"\"_QTE_"\"_PU_"\"_TOT
+							}
+							s LG=$O(@curFIC@(CA,strDATE,TK,LG))
+						 }						 
+					 }
+					 s TK=$O(@curFIC@(CA,strDATE,TK))
+				 }
+			 }
+		 }
+		 s CA=$O(@curFIC@(CA))
+	 }
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

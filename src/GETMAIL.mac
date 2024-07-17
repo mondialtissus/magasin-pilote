@@ -1,0 +1,48 @@
+ROUTINE GETMAIL
+FILL(FICHIER)
+ s FILE="^"_FICHIER s FIC="c:\pos\mail.tmp" s filedest=##class(%File).%New(FIC) d filedest.Open("WSN")
+ s NUMMAIL=$O(@FILE@(""))
+ while NUMMAIL'="" {d filedest.WriteLine("[MAIL]="_NUMMAIL)
+  d filedest.WriteLine("[DEST]") s IdLig=$O(@FILE@(NUMMAIL,"DEST","")) while IdLig'="" {d filedest.WriteLine($G(@FILE@(NUMMAIL,"DEST",IdLig))) s IdLig=$O(@FILE@(NUMMAIL,"DEST",IdLig))}	 
+  d filedest.WriteLine("[CC  ]") s IdLig=$O(@FILE@(NUMMAIL,"CC","")) while IdLig'="" {d filedest.WriteLine($G(@FILE@(NUMMAIL,"CC",IdLig))) s IdLig=$O(@FILE@(NUMMAIL,"CC",IdLig))}	 
+  d filedest.WriteLine("[EXP ]="_$G(@FILE@(NUMMAIL,"EXP")))
+  d filedest.WriteLine("[SUJ ]="_$G(@FILE@(NUMMAIL,"SUJET")))
+  d filedest.WriteLine("[DATE]="_$G(@FILE@(NUMMAIL,"DATE")))
+  d filedest.WriteLine("[HEUR]="_$G(@FILE@(NUMMAIL,"HEURE")))
+  d filedest.WriteLine("[LU  ]="_$G(@FILE@(NUMMAIL,"LU")))
+  d filedest.WriteLine("[CONF]="_$G(@FILE@(NUMMAIL,"CONFLECT")))
+  if (+$D(@FILE@(NUMMAIL,"ATTACH"))>0) {d filedest.WriteLine("[ATTA]")}
+ s NUMMAIL=$O(@FILE@(NUMMAIL)) }
+ d filedest.%Close()
+ q
+DETAIL(FICHIER,NUMMAIL)
+ s FILE="^"_FICHIER s FIC="c:\pos\maild.tmp" s filedest=##class(%File).%New(FIC) d filedest.Open("WSN")
+ d filedest.WriteLine("[ATTA]") s IdLig=$O(@FILE@(NUMMAIL,"ATTACH","")) while IdLig'="" {d filedest.WriteLine($G(@FILE@(NUMMAIL,"ATTACH",IdLig))) s IdLig=$O(@FILE@(NUMMAIL,"ATTACH",IdLig))}	 
+ d filedest.WriteLine("[CONT]") s IdLig=$O(@FILE@(NUMMAIL,"CONT","")) while IdLig'="" {d filedest.WriteLine($G(@FILE@(NUMMAIL,"CONT",IdLig))) s IdLig=$O(@FILE@(NUMMAIL,"CONT",IdLig))}	 
+ d filedest.WriteLine("[FIN ]")
+ d filedest.%Close()
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,14 @@
+ROUTINE MAJTEL
+MAJTEL
+	s POSNUM=$G(^HWINFO("MAG"))
+	if POSNUM '="M254" s ^HWINFO("TEL")="08.25.12.20.35"
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

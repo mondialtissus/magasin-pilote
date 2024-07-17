@@ -1,0 +1,1025 @@
+ROUTINE SSMAG
+SSMAG
+ Q
+ 
+LOADPARAM
+ s fileHWINFO="^[""USER""]HWINFO"
+ s fileARTICLE="^[""USER""]ST"
+ s filePLU="^[""USER""]SP"
+ s fileCB="^[""USER""]CSB"
+ s fileENTRETIEN="^[""USER""]ENTRETIEN"
+ s fileHWPOS="^[""USER""]HWPOS"
+ s fileTKFINSERIE="^[""USER""]TKFINSERIE"
+ s fileGUSTOCK="^[""USER""]GUSTOCK"
+ s SEPDATA="\"
+ s SEPLIGNE="_||_"
+ s SEPENREG="$!!$"
+ 
+ // On charge la table Entretien si elle n'existe pas
+ I +$D(@fileENTRETIEN)=0 d ENTRETIEN
+ 
+ Q
+
+INFOPROMO(pPLU)
+ ZN "USER"
+ D LOADPARAM
+ s valRET=$$SEARCHPLUCRIT(pPLU)
+ s PLU=+$P(valRET,"\",1) 
+ w !,pPLU_":"_valRET_":"_PLU
+ s P3 = ""
+ I PLU>0 s P3=$G(@fileTKFINSERIE@(PLU))
+ w !,P3
+ Q
+
+INFOLABELS(pCLEFART)
+ ZN "USER"
+ D LOADPARAM
+ s valRET=$$SEARCHPLUCRIT(pCLEFART)
+ s CLEFART=$P(valRET,"\",2)
+ s P3 = ""
+ I CLEFART'="" s P3=$G(@fileARTICLE@(CLEFART,8))
+ Q
+
+SEARCHPLUCRIT(pMSGCRIT="")
+ // Fonction pour palier au pb d'appel des labels et promos plutot que dans infoarticle
+ // Du coup je recherche par le critÃÂ¨re pour avoir le plu et la clef art
+ // Sinon quand on fait une recherche dans le sam par codebarre cela ne fonctionnait pas
+ 
+ d LOADPARAM
+ s P3=""
+ I pMSGCRIT="" {s P3="0"_SEPDATA_"Pas de critÃÂ¨re de recherche" Q}
+ 
+ 
+ s lPLU="" s lCLEFART=""
+ // Gestion des codes barres de la plateforme dans les SAM
+ I ($L(pMSGCRIT)=13)
+ {
+	 I (+$E(pMSGCRIT,1,1)=2)
+	 {
+		 I +$$ISNUMERIC(pMSGCRIT)=1 s pMSGCRIT=+$E(pMSGCRIT,2,7)
+	 }           
+ }
+ 
+ if ($L(pMSGCRIT)<8)&&(+pMSGCRIT=pMSGCRIT)
+ {
+	 s lPLU=pMSGCRIT
+	 //c'est surement un PLU
+	 s lCLEFART=$G(@filePLU@(pMSGCRIT))	
+	 if lCLEFART=""
+	 {
+		 //le PLU n'est pas bon
+		 s lPLU=""
+		 s P3="0"_SEPDATA_"Le PLU n'est pas connu"
+	 }
+ }
+ else
+ {
+	//cela peut-ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªtre un code barre ou une clef article
+	if $$ISNUMERIC(pMSGCRIT)=1
+	{
+		if +$D(@fileCB@(pMSGCRIT))>0
+		{
+			//c'est un code barre
+			s lCLEFART=$O(@fileCB@(pMSGCRIT,""))
+			I lCLEFART=""
+			{
+				s P3="0"_SEPDATA_"La clef article est mal dÃÂÃÂÃÂÃÂ©finie par rapport au code-barres"
+			}
+			else
+			{
+				s bSORTIE=0
+				s sPLUSELECT=$O(@fileCB@(pMSGCRIT,""))
+				while (sPLUSELECT'="")&&(bSORTIE=0)
+				{
+					I +$D(@fileARTICLE@(sPLUSELECT))>0
+					{
+						I $P($G(@fileARTICLE@(sPLUSELECT)),"\",1)=pMSGCRIT
+						{
+							s lCLEFART=sPLUSELECT
+							s bSORTIE=1
+						}
+					}
+					s sPLUSELECT=$O(@fileCB@(pMSGCRIT,sPLUSELECT))
+				}
+
+				I +$D(@fileARTICLE@(lCLEFART))>0
+				{
+					s lPLU = $P($G(@fileARTICLE@(lCLEFART)),"\",21)
+					I lPLU = "" s P3="0"_SEPDATA_"Le code PLU n'est pas renseignÃÂÃÂÃÂÃÂ© dans la fiche article"
+				}
+				else
+				{
+					s P3="0"_SEPDATA_"La clef article est introuvable"
+				}
+
+			}
+		}
+		else
+		{
+			s P3="0"_SEPDATA_"Le code barre "_pMSGCRIT_" est introuvable"
+		}
+	}
+	else
+	{
+		//c'est une clef article peut etre
+		s lCLEFART = pMSGCRIT
+		I +$D(@fileARTICLE@(lCLEFART))>0
+		{
+			s lPLU = $P($G(@fileARTICLE@(lCLEFART)),"\",21)
+			I lPLU = "" s P3="0"_SEPDATA_"Le code PLU n'est pas renseignÃÂÃÂÃÂÃÂ© dans la fiche article"
+		}
+		else
+		{
+			s P3="0"_SEPDATA_"La clef article est introuvable"
+		}		
+	}
+ }
+  s lMSGRET=""
+  I +lPLU>0 s lMSGRET=lPLU_"\"_lCLEFART
+  q lMSGRET
+ 
+INFOARTICLEPOURTEST(pMSG="")
+ s P3= ""
+ s P3= pMSG_"\//10.10.1.7/PHOTO_WEB/"_pMSG_".jpg_||_PLU\"_pMSG_"_||_Clef Article\Test pour LUCA"
+ Q
+
+INFOMULTIARTICLE(pMSG="")
+ s P2 = ""
+ D LOADPARAM
+ 
+ I pMSG="" {s P2="0"_SEPDATA_"La liste d'articles est vide" q}
+ 
+ s iCpt=1
+ s locPLU = $P(pMSG,SEPDATA,iCpt)
+ while locPLU'=""
+ {
+	 w !,locPLU
+	 d INFOARTICLE(locPLU)
+	 I +$P(P3,SEPDATA,1)>0
+	 {
+		 I P2'="" s P2=P2_SEPENREG
+		 s P2=P2_P3
+	 }
+	 
+	 s iCpt=iCpt+1
+	 s locPLU = $P(pMSG,SEPDATA,iCpt)
+ }
+ 
+ w !,"SORTIE="
+ w !,P2
+ 
+ Q
+ 
+INFOARTICLE(pMSG="")
+ s P3 = ""
+ D LOADPARAM
+
+ I pMSG="" {s P3="0"_SEPDATA_"Vous devez saisir un PLU ou scanner son code barre" q}
+ s PLU="" s CLEFART=""
+
+ // Gestion des codes barres de la plateforme dans les SAM
+ I ($L(pMSG)=13)
+ {
+	 I (+$E(pMSG,1,1)=2)
+	 {
+		 I +$$ISNUMERIC(pMSG)=1 s pMSG=+$E(pMSG,2,7)
+	 }           
+ }
+ 
+ if ($L(pMSG)<8)&&(+pMSG=pMSG)
+ {
+	 s PLU=pMSG
+	 //c'est surement un PLU
+	 s CLEFART=$G(@filePLU@(pMSG))	
+	 if CLEFART=""
+	 {
+		 //le PLU n'est pas bon
+		 s P3="0"_SEPDATA_"Le PLU n'est pas connu"
+	 }
+ }
+ else
+ {
+	//cela peut-ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªtre un code barre ou une clef article
+	if $$ISNUMERIC(pMSG)=1
+	{
+		if +$D(@fileCB@(pMSG))>0
+		{
+			//c'est un code barre
+			s CLEFART=$O(@fileCB@(pMSG,""))
+			I CLEFART=""
+			{
+				s P3="0"_SEPDATA_"La clef article est mal dÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©finie par rapport au code-barres"
+			}
+			else
+			{
+				s bSORTIE=0
+				s sPLUSELECT=$O(@fileCB@(pMSG,""))
+				while (sPLUSELECT'="")&&(bSORTIE=0)
+				{
+					I +$D(@fileARTICLE@(sPLUSELECT))>0
+					{
+						I $P($G(@fileARTICLE@(sPLUSELECT)),"\",1)=pMSG
+						{
+							s CLEFART=sPLUSELECT
+							s bSORTIE=1
+						}
+					}
+					s sPLUSELECT=$O(@fileCB@(pMSG,sPLUSELECT))
+				}
+
+				I +$D(@fileARTICLE@(CLEFART))>0
+				{
+					s PLU = $P($G(@fileARTICLE@(CLEFART)),"\",21)
+					I PLU = "" s P3="0"_SEPDATA_"Le code PLU n'est pas renseignÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© dans la fiche article"
+				}
+				else
+				{
+					s P3="0"_SEPDATA_"La clef article est introuvable"
+				}
+
+			}
+		}
+		else
+		{
+			s P3="0"_SEPDATA_"Le code barre "_pMSG_" est introuvable"
+		}
+	}
+	else
+	{
+		//c'est une clef article peut etre
+		s CLEFART = pMSG
+		I +$D(@fileARTICLE@(CLEFART))>0
+		{
+			s PLU = $P($G(@fileARTICLE@(CLEFART)),"\",21)
+			I PLU = "" s P3="0"_SEPDATA_"Le code PLU n'est pas renseignÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© dans la fiche article"
+		}
+		else
+		{
+			s P3="0"_SEPDATA_"La clef article est introuvable"
+		}		
+	}
+ }
+ 
+ I (P3="")&&(CLEFART'="")&&(PLU'="")
+ {
+	 s P3=$$GETINFOART(PLU,CLEFART)
+ }
+ else
+ {
+	 I P3="" s P3="0"_SEPDATA_"Une erreur inattendue est survenue"
+ }
+ 
+ w !,P3
+ Q
+
+GETINFOART(pPLU,pCLEFART)
+ s valRETOUR=""
+
+ s PHOTO=""
+ s REPPHOTO=$G(@fileHWINFO@("SSMAG","REPPHOTO"))
+ I REPPHOTO'="" 
+ {
+	 s PHOTO=$$TESTPICTURE(REPPHOTO,pPLU,pCLEFART)
+	 I PHOTO'="" s PHOTO=$Replace(PHOTO,"\","/")
+ }
+
+ s PHOTO64=""
+ s REPPHOTO64=$G(@fileHWINFO@("SSMAG","REPPHOTO64"))
+ I REPPHOTO64'="" 
+ {
+	 s PHOTO64=$$TESTPICTURE(REPPHOTO64,pPLU,pCLEFART)
+	 I PHOTO64'="" s PHOTO64=$Replace(PHOTO64,"\","/")	 
+ }
+ 
+ s valRETOUR=pPLU_SEPDATA_PHOTO
+ s valRETOUR=valRETOUR_SEPLIGNE_pPLU  // Correspond ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ  l'indice 3 = PLU
+ s valRETOUR=valRETOUR_SEPLIGNE_pCLEFART // ClÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© Article
+ s valRETOUR=valRETOUR_SEPLIGNE_$P($G(@fileARTICLE@(pCLEFART,4)),"\",1) // Fournisseur
+ s valRETOUR=valRETOUR_SEPLIGNE_$P($G(@fileARTICLE@(pCLEFART,5)),"\",1) // DÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©signation
+ s DATAPRIX=$P($G(@fileARTICLE@(pCLEFART)),"\",22) // PV
+ S PVDUPLU=+DATAPRIX
+ I (+$P(DATAPRIX,"/",3)>0)
+ {
+	 s DATECHGTPRIX=+$P(DATAPRIX,"/",2)
+	 I DATECHGTPRIX>0
+	 {
+		 I +$H>=DATECHGTPRIX 
+		 {
+			 S PVDUPLU=+$P(DATAPRIX,"/",3)
+		 }
+		 else
+		 {
+			 S PVDUPLU=+$P(DATAPRIX,"/",1)
+		 }
+	 }
+ }
+ s valRETOUR=valRETOUR_SEPLIGNE_+PVDUPLU
+ s valRETOUR=valRETOUR_SEPLIGNE_$P($G(@fileARTICLE@(pCLEFART,1)),"\",2) // Composition
+ 
+ s LSTENTRETIEN=""
+ s ENTRETIENART=$P($G(@fileARTICLE@(pCLEFART,4)),"\",9)
+ I ENTRETIENART'=""
+ {
+	 s i=1
+	 FOR i=1:1:5
+	 {
+		 s IDENTRETIEN=+$P(ENTRETIENART,",",i)
+		 I IDENTRETIEN>0
+		 {
+			 I +$D(@fileENTRETIEN@(IDENTRETIEN))>0
+			 {
+				 // Retour ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ  la ligne entre chaque mÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©thode d'entretien $c(13,10)
+				 I i>1 s LSTENTRETIEN=LSTENTRETIEN_$c(13,10)
+				 s LSTENTRETIEN=LSTENTRETIEN_IDENTRETIEN_SEPDATA_$G(@fileENTRETIEN@(IDENTRETIEN))
+			 }
+		 }
+	 }
+ }
+ s valRETOUR=valRETOUR_SEPLIGNE_LSTENTRETIEN // Entretien
+ s valRETOUR=valRETOUR_SEPLIGNE_$P($G(@fileARTICLE@(pCLEFART)),"\",20) // UnitÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© emballage
+ s valRETOUR=valRETOUR_SEPLIGNE_PHOTO64 // Nom & Rep Photo en 64x64
+ s valRETOUR=valRETOUR_SEPLIGNE_$P($G(@fileARTICLE@(pCLEFART,4)),"\",13) // IdStatut
+ s valRETOUR=valRETOUR_SEPLIGNE_$P($G(@fileARTICLE@(pCLEFART)),"\",1) // CB
+ s valRETOUR=valRETOUR_SEPLIGNE_$REPLACE($G(@fileARTICLE@(pCLEFART,8)),";",",") // LABEL
+ s valRETOUR=valRETOUR_SEPLIGNE_$REPLACE($G(@fileTKFINSERIE@(pPLU)),";",",") // PROMOS
+ s valRETOUR=valRETOUR_SEPLIGNE_+$P($G(@fileGUSTOCK@(pPLU)),"\",6) // Stock
+ ;s localPHOTO=""
+ ;s Dir1=$E(pPLU,*)
+ ;s Dir2=$E(pPLU,*-1)
+ ;s locRepDest="C:\gsiphotos\"_Dir1_"\"_Dir2_"\"
+ ;set file=$ZSEARCH(locRepDest_pPLU_"*.*")
+ ;while file'="" {
+	 ;s locfileName=$P($P(file,locRepDest,2),".",1)
+	 ;I $P(locfileName,"_",1)=pPLU
+	 ;{
+		 ;I localPHOTO'="" s localPHOTO=localPHOTO_SEPENREG
+		 ;s localPHOTO=localPHOTO_file
+	 ;}
+	 ;set file=$ZSEARCH("")
+ ;}
+ ;s valRETOUR=valRETOUR_SEPLIGNE_localPHOTO // liste des photos + complÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©mentaires du PLU
+ 
+ Q valRETOUR
+
+TESTPICTURE(pLocREPPHOTO,pLocPLU,pLocCLEFART)
+ s sLOCValRETOUR = ""
+ s TESTPHOTO=pLocREPPHOTO_pLocPLU_".jpg"
+ if ##class(%Library.File).Exists(TESTPHOTO) {s sLOCValRETOUR=TESTPHOTO}
+ else
+ {
+	 s TESTPHOTO=$P($G(@fileARTICLE@(pLocCLEFART,1)),"\",5)_".jpg"
+	 if ##class(%Library.File).Exists(TESTPHOTO) {s sLOCValRETOUR=TESTPHOTO}
+	 else
+	 {
+		 s TESTPHOTO=pLocREPPHOTO_pLocPLU_".gif"
+		 if ##class(%Library.File).Exists(TESTPHOTO) {s sLOCValRETOUR=TESTPHOTO}
+		 else
+		 {
+			 s TESTPHOTO=pLocREPPHOTO_pLocPLU_".jpeg"
+			 if ##class(%Library.File).Exists(TESTPHOTO) {s sLOCValRETOUR=TESTPHOTO}
+			 else
+			 {
+				 s TESTPHOTO=pLocREPPHOTO_pLocPLU_".png"
+				 if ##class(%Library.File).Exists(TESTPHOTO) {s sLOCValRETOUR=TESTPHOTO}
+				 else
+				 {
+				 }
+			 }
+		 }
+	 }
+ }
+ Q sLOCValRETOUR
+
+GETLISTMAG
+ s P3=""
+ D LOADPARAM
+ 
+ s lCODEPOSNUM=$O(@fileHWPOS@(""))
+ while lCODEPOSNUM'=""
+ {
+	 s DATA=$G(@fileHWPOS@(lCODEPOSNUM,1))
+	 I P3'="" s P3=P3_$c(13,10)
+	 s P3=P3_lCODEPOSNUM_$c(9)_$P(DATA,"\",4)
+	 
+	 s lCODEPOSNUM=$O(@fileHWPOS@(lCODEPOSNUM))
+ }
+ 
+ w !,P3
+ 
+ Q
+ 
+MULTICRIT(pMSG="")
+ s P3 = ""
+ I pMSG="" {s P3="0\Vous devez saisir le texte ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ  chercher" q}
+
+ D LOADPARAM
+ 
+ set lower="abcdefghijklmnopqrstuvwxyzÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¨ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ´ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ»ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ®ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¯ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¶ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ§"
+ set upper="ABCDEFGHIJKLMNOPQRSTUVWXYZEEAUOUIIOC" // Majuscule sans accent
+ s VALEURCHERCHEE=$Translate(pMSG,lower,upper)
+ s NBVALEURRETOUR=0
+ s NBVALMAXDERETOUR=50
+ 
+ // Je supprime tous les doubles espaces et le premier caractÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¨re si c'est un espace
+ while VALEURCHERCHEE["  " {s VALEURCHERCHEE=$Replace(VALEURCHERCHEE,"  "," ")}
+ I $E(VALEURCHERCHEE,1,1)=" " s VALEURCHERCHEE=$E(VALEURCHERCHEE,2,$L(VALEURCHERCHEE))
+ 
+ s MULTIVALEURDERECHERCHE=0
+ I VALEURCHERCHEE[" " s MULTIVALEURDERECHERCHE=1
+ 
+ w !,$P($H,",",2)
+  
+ s CLEFART=$O(@fileARTICLE@(""))
+ while CLEFART'=""
+ {
+	 s bTROUVE=0
+	 I CLEFART[VALEURCHERCHEE {s bTROUVE=1}
+	 else
+	 {
+		 s DESIGNATION=$P($G(@fileARTICLE@(CLEFART,5)),"\",1)
+		 I MULTIVALEURDERECHERCHE=1
+		 {
+			 s i=1
+			 while $P(VALEURCHERCHEE," ",i)'=""
+			 {
+				 I DESIGNATION[$P(VALEURCHERCHEE," ",i) {s bTROUVE=1} else {s bTROUVE=0 Q}
+				 s i=i+1
+			 }
+		 }
+		 else
+		 {
+			 I DESIGNATION[VALEURCHERCHEE {s bTROUVE=1}
+		 }
+	 }
+	 
+	 I bTROUVE=1
+	 {
+		 s NBVALEURRETOUR=NBVALEURRETOUR+1
+		 s PLU=$P($G(@fileARTICLE@(CLEFART)),"\",21)
+		 I PLU'=""
+		 {
+			 s VALEURRETOUR=$$GETINFOART(PLU,CLEFART)
+			 I VALEURRETOUR'=""
+			 {
+				 I P3'="" s P3=P3_SEPENREG
+			 	 s P3=P3_VALEURRETOUR
+			 	 I NBVALEURRETOUR>=NBVALMAXDERETOUR {Q}
+			 }
+		 }
+	 }
+	 
+	 s CLEFART=$O(@fileARTICLE@(CLEFART))
+ }
+
+ I P3="" {s P3="0\Aucun article ne correspond ÃÂ  votre recherche"}
+ 
+ w !,$P($H,",",2)
+ ;w !,P3,!,NBVALEURRETOUR
+ w !,NBVALEURRETOUR
+ 
+ Q
+ 
+ENTRETIEN
+ s @fileENTRETIEN@(11)="Lavage Interdit"
+ s @fileENTRETIEN@(12)="Lavage ÃÂ  la main"
+ s @fileENTRETIEN@(13)="Linge supportant lavage 30ÃÂ°"
+ s @fileENTRETIEN@(14)="Linge supportant lavage 40ÃÂ°"
+ s @fileENTRETIEN@(15)="Linge supportant lavage 60ÃÂ°"
+ s @fileENTRETIEN@(21)="SÃÂ©chage tambour Interdit"
+ s @fileENTRETIEN@(22)="SÃÂ©chage en tambour programme normal"
+ s @fileENTRETIEN@(23)="SÃÂ©chage en tambour programme modÃÂ©rÃÂ©"
+ s @fileENTRETIEN@(31)="Repassage Interdit"
+ s @fileENTRETIEN@(32)="Repassage ÃÂ  tempÃÂ©rature ÃÂ©levÃÂ© (max 200ÃÂ°)"
+ s @fileENTRETIEN@(33)="Repassage ÃÂ  tempÃÂ©rature moyenne (max 150ÃÂ°)"
+ s @fileENTRETIEN@(34)="Repassage ÃÂ  tempÃÂ©rature faible (max 110ÃÂ°)"
+ s @fileENTRETIEN@(35)="Repassage sur l'envers"
+ s @fileENTRETIEN@(41)="Blanchiment Interdit"
+ s @fileENTRETIEN@(42)="Blanchiment possible"
+ s @fileENTRETIEN@(51)="Nettoyage ÃÂ  sec interdit"
+ s @fileENTRETIEN@(52)="Nettoyage ÃÂ  sec autorisÃÂ©"
+ Q
+
+ISNUMERIC(pSTRINGNUM)
+ s bNUMERIC=1
+ s i=1
+ ;w !,pSTRINGNUM
+ while (i<=$L(pSTRINGNUM))&&(bNUMERIC=1)
+ {
+	 s iCar=+$A($E(pSTRINGNUM,i))
+	 if (iCar<48)||(iCar>57) s bNUMERIC=0
+	 ;w !,$E(pSTRINGNUM,i)_":"_iCar_":"_bNUMERIC
+	 s i=i+1
+ }
+ ;w !,bNUMERIC
+ Q bNUMERIC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

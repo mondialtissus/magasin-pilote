@@ -1,0 +1,12 @@
+ROUTINE GUMAJMVTINV
+GUMAJMVTINV
+ 
+	S ^GUMVTTYPE(35)="1\1\0\Correction inventaire comptage +"
+	S ^GUMVTTYPE(36)="1\-1\0\Correction inventaire comptage -"
+ 
+	Q
+ 
+ 
+ 
+ 
+ 

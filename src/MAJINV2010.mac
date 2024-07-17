@@ -1,0 +1,14 @@
+ROUTINE MAJINV2010
+MAJINV2010
+ 
+	k ^MENU(6,8)
+	s ^MENU(6,3)="1\fenEcartInventaire\SF3:neerl\SF3: Ecart Inventaire\SF3:ALL\SF3:ANG"
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,54 @@
+ROUTINE OPEPRIVILEGE2011
+OPEPRIVILEGE2011
+ // le 1 après la date correspond à un nx flag pour les opérations
+ // avec une mécanique promotionnelle simple ne necessitant pas de paramétrage supplémentaire
+ // ex : 20% sur tout le magasin 
+ 
+ // Décalage remontés de stock
+ S ^HWINFO("GESTHEUREARC")="22450000\20111103\19451200"
+ // Décalage horaire de fermeture
+ S ^HWINFO("FERMECAISSE")="2245"
+ 
+  // PRESSE PARUVENDU
+ S ^TKCOUPREDUC(9990000000722)="0\0.10\20110430\20110531\1\"
+ // INAUGURATION Wittenheim -15% SUR TOUT LE MAGASIN 19 Mai au 19 Mai 2011
+ S ^TKCOUPREDUC(2888888830852)="0\0.15\20110519\20110519\1\"
+ S ^TKCOUPREDUC(2888888830845)="0\0.15\20110519\20110519\1\"
+ // B&B -15% SUR TOUT LE MAGASIN 19 Mai au 31 Aout 2011
+ S ^TKCOUPREDUC(9990000000685)="0\0.15\20110519\20110831\1\"
+ // Soirée privilège eMAILING -20% sur tout le magasin journée du 3 nov 2011
+ S ^TKCOUPREDUC(2888888801111)="30\0.20\20111103\20111103\1\"
+ 
+ // Soirée privilège COURRIER -20% sur tout le magasin journée du 3 nov 2011
+ S ^TKCOUPREDUC(2888888841100)="30\0.20\20111103\20111103\1\"
+ 
+ // Soirée privilège Code-barres SOS -20% sur tout le magasin journée du 3 nov 2011
+ S ^TKCOUPREDUC(9990000000937)="30\0.20\20111103\20111103\1\"
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

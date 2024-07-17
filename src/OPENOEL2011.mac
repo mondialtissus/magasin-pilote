@@ -1,0 +1,16 @@
+ROUTINE OPENOEL2011
+OPENOEL2011
+ // -20% sur tout le magasin jusqu'au 31 déc 2011
+ // Ouverture des magasins les 3 Dimanches de Décembre
+ s ^TKCOUPREDUC(9990000000906)="0\0.20\20111025\20111231\1\"
+ s ^TKCOUPREDUC(9990000000913)="0\0.15\20111204\20111204\1\"
+ 
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 

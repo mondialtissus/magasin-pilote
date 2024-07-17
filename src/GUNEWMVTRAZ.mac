@@ -1,0 +1,10 @@
+ROUTINE GUNEWMVTRAZ
+GUNEWMVTRAZ
+ 
+	s ^GUMVTTYPE(30)="1\-1\0\Inventaire (RAZ)"
+ 
+	q
+ 
+ 
+ 
+ 

@@ -1,0 +1,26 @@
+ROUTINE OPEPRIVILEGE2010
+OPEPRIVILEGE2010
+ // le 1 après la date correspond à un nx flag pour les opérations
+ // avec une mécanique promotionnelle simple ne necessitant pas de paramétrage supplémentaire
+ // ex : 20% sur tout le magasin 
+ 
+ //soirée privilège courrier -20%
+ S ^TKCOUPREDUC(2888888840592)="30\0.20\20101104\20101104\1\"	
+ // soirée privilège bon parrainage -10% achat suivant 
+ S ^TKCOUPREDUC(9990000000531)="0\0.10\20101105\20101231\1\"
+  //soirée privilège email -20%
+ S ^TKCOUPREDUC(2888888840622)="30\0.20\20101104\20101104\1\"
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

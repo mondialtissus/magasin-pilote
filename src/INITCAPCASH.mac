@@ -1,0 +1,42 @@
+ROUTINE INITCAPCASH
+INITCAPCASH
+	;Mettre l'ip du serveur ftp de capcash
+	s ^HWINFO("FTP_CAPSERVER")="10.10.1.18"
+	s ^HWINFO("FTP_CAPLOGIN")="anonymous"
+	s ^HWINFO("FTP_CAPPWD")=""
+	s ^HWINFO("FTP_CAPREP")="Interfaces/Rcv"
+	s ^HWINFO("FTP_CAPREPFREQ")="Rcv"
+	s ^HWINFO("FTP_CAPPORT")="21"
+	s ^HWINFO("CAPCASH")="1"
+	s ^HWINFO("INT_TICKET")="c:\capcash\download\"
+	s ^HWINFO("INT_MVTSTOCK")="c:\capcash\upload\mvtstock\"
+	s ^HWINFO("INT_TICKETARC")="c:\capcash\download\ticket\done\"
+	s ^HWINFO("INT_MVTSTOCKARC")="c:\capcash\upload\mvtstock\done\"
+	s ^HWCAPPOS("G")="1"
+	s ^HWCAPPOS("M")="2"
+	s ^HWCAPPOS("Q")="3"
+	s ^HWCAPPOS("X")="9"
+	s ^HWINFO("INT_SHOPLINE")="C:\SHOPLINE\COMPTAGE\"
+	s ^HWINFO("INT_SHOPLINEARC")="C:\SHOPLINE\COMPTAGE\done\"
+	
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

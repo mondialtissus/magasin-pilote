@@ -1,0 +1,172 @@
+ROUTINE CREEMENU
+CREEMENU
+	
+	k ^MENU
+	i +$D(^HWINFO("SANSCAISSE"))=0
+	{
+		s POSNUM=$G(^HWINFO("MAG"))
+		s ^MENU(1)="1\\F2:neerl\F2: Référentiel de base\F2:ALL\F2:ANG"
+		s ^MENU(1,1)="1\ficheart\SF1:neerl\SF1: Fiche article\SF1:ALL\SF1:ang"
+		s ^MENU(1,2)="1\fichefrn\SF2:neerl\SF2: Fiche fournisseur\SF2:ALL\SF2:ANG"
+		s ^MENU(1,3)="1\histoart\SF3:neerl\SF3: Historique des articles\SF3:ALL\SF3:ANG"
+		s ^MENU(1,4)="1\impetiqu\SF4:neerl\SF4: Impression des étiquettes\SF4:ALL\SF4:ANG"
+		s ^MENU(1,8)="1\documentation\SF8:neerl\SF8: Documentation\SF8:ALL\SF8:ANG"
+		i POSNUM'="M254"{
+			s ^MENU(2)="1\\F3:neerl\F3: Commandes\F3:ALL\F3:ANG"
+			s ^MENU(2,1)="1\enccmd\SF1:neerl\SF1: Introduire une commande\SF1:ALL\SF1:ANG"
+			s ^MENU(2,2)="1\nevgetdirect\SF2:neerl\SF2: Réception des livraisons\SF2:ALL\SF2:ANG"
+			s ^MENU(2,4)="1\histcommande\SF4:neerl\SF4: Suivi des commandes\SF4:ALL\SF4:ANG"
+			s ^MENU(2,6)="1\catalogue_menu\SF6:neerl\SF6: Impression des catalogues\SF6:ALL\SF6:ANG"
+		}
+		s ^MENU(3)="1\\F5:neerl\F5: Clôture de caisse\F5: ALL\F5:ANG"
+		s ^MENU(3,1)="1\ExeCaisse/CLOTURE.EXE\SF1:neerl\SF1: Clôture générale\SF1:ALL\SF1:ANG"
+		s ^MENU(3,3)="1\ExeCaisse/CLOTURE.EXE MENSUEL\SF3:neerl\SF3: Journal de caisse mensuel\SF3:ALL\SF3:ANG"
+		s ^MENU(3,5)="1\ExeCaisse/CLOTURE.EXE CLOTURE\SF5:neerl\SF5: Réimpression d'une Clotûre\SF5:ALL\SF5:ANG"
+		s ^MENU(3,6)="1\ExeCaisse/CLOTURE.EXE RECAP\SF6:neerl\SF6: Réimpression du CA\SF6:ALL\SF6:ANG"
+		s ^MENU(3,8)="1\rapportca\SF8:neerl\SF8: Rapport de caisses\SF8:ALL\SF8:ANG"
+		
+		s ^MENU(4)="1\\F6:neerl\F6: Logiciel de caisse\F6:ALL\F6:ANG"
+		s ^MENU(4,1)="1\ExeCaisse/TICKET.EXE\SF1:neerl\SF1: Gestion des tickets\SF1:ALL\SF1:ANG"
+		s ^MENU(4,2)="1\ExeCaisse/TICKET.EXE 1\SF2:neerl\SF2: Recherche d'un ticket\SF2:ALL\SF2:ANG"
+		s ^MENU(4,3)="1\ExeCaisse/MODIFREGL.EXE\SF3:neerl\SF3: Modif Type Règlement Ticket\SF3:ALL\SF3:ANG"
+		s ^MENU(4,4)="1\ExeCaisse/ERREURS.EXE\SF4:neerl\SF4: Mise en erreur d'un ticket\SF4:ALL\SF4:ANG"
+		s ^MENU(4,5)="1\ExeCaisse/STAT.EXE\SF5:neerl\SF5: Suivi des ventes\SF5:ALL\SF5:ANG"
+		s ^MENU(4,7)="1\ExeCaisse/SUIVI.EXE\SF7:neerl\SF7: Gestion des Avoirs, Crédits et Remb.\SF7:ALL\SF7:ANG"
+		
+		s ^MENU(5)="1\\F7:neerl\F7: Gestion des utilisateurs\F7:ALL\F7:ANG"
+		s ^MENU(5,1)="1\user_menu\SF1:neerl\SF1: Utilisateurs\SF1:ALL\SF1:ANG"
+		
+		s ^MENU(6)="1\\F8:neerl\F8: Gestion des inventaires\F8:ALL\F8:ANG"
+		s ^MENU(6,1)="1\inventaire_menu\SF1:neerl\SF1: Saisie inventaire\SF1:ALL\SF1:ANG"
+		s ^MENU(6,2)="1\inventaire_synth\SF2:neerl\SF2: Synthèse inventaire\SF2:ALL\SF2:ANG"
+		s DATEINV=+$G(^HWINFO("INVENTAIRE","DATE"))
+		i DATEINV>0{
+			s ^MENU(6,4)="1\inventaire_impme\SF4:neerl\SF4: Impression catalogue\SF4:ALL\SF4:ANG"
+			s ^MENU(6,5)="1\inventaire_impzone\SF5:neerl\SF5: Impression zone\SF5:ALL\SF5:ANG"
+			s ^MENU(6,6)="1\inventaire_impcutoff\SF6:neerl\SF6: Impression cut-off\SF6:ALL\SF5:ANG"
+			s ^MENU(6,8)="1\inventaire_user\SF8:neerl\SF8: Utilisateur inventaire\SF8:ALL\SF8:ANG"
+		}
+		
+		s ^MENU(7)="1\\F9:neerl\F9: Super Administrateur\F9:ALL\F9:ANG"
+		s ^MENU(7,1)="1\parametre\SF1:neerl\SF1: Edition des paramètres ^HWINFO\SF1:ALL\SF1:ANG"
+		s ^MENU(7,2)="1\setup/POS\SF2: eerl\SF2: Setup utilisateurs\SF2:ALL\SF2:ANG"
+		s ^MENU(7,4)="1\ExeCaisse/CAISSE.EXE FACTNEG\SF4:neerl\SF4: Facture négative\SF4:ALL\SF4:ANG"
+		s ^MENU(7,5)="1\ExeCaisse/CAISSE.EXE ANNULEAV\SF5:neerl\SF5: Avoir négatif\SF5:ALL\SF5:ANG"
+		
+		s ^MENU(8)="1\\F11:neerl\F11: Manager\F11:ALL\F11:ANG"
+		s ^MENU(8,1)="1\visudep\SF1:neerl\SF1: Budgets et dépenses\SF1:ALL\SF1:ANG"
+		s ^MENU(8,2)="1\transferts/MENU\SF2:neerl\SF2: Envoi réceptions vers la centrale\SF2:ALL\SF2:ANG"
+		s ^MENU(8,4)="1\mailfromhc\SF4:neerl\SF4: Messages de la centrale\SF4:ALL\SF4:ANG"
+		s ^MENU(8,5)="1\ExeCaisse/MAIL.EXE\SF5:neerl\SF5: Mails\SF5:ALL\SF5:ANG"
+		s ^MENU(8,7)="1\ExeCaisse/MODIFCLIENTS.EXE\SF7:neerl\SF7: Gestion des clients\SF7:ALL\SF7:ANG"
+		i (POSNUM="M157")||(POSNUM="M234")||(POSNUM="M391")||(POSNUM="M341")||(POSNUM="M160")||(POSNUM="M257"){
+			s ^MENU(8,8)="1\ficheclient\SF8:neerl\SF8: Saisie des clients de carte de fidélité\SF8:ALL\SF8:ANG"
+		}
+	}
+	else
+	{
+		s ^MENU(1)="1\\F2:neerl\F2: Référentiel de base\F2:ALL\F2:ANG"
+		s ^MENU(1,1)="1\ficheart\SF1:neerl\SF1: Fiche article\SF1:ALL\SF1:ang"
+		s ^MENU(1,2)="1\fichefrn\SF2:neerl\SF2: Fiche fournisseur\SF2:ALL\SF2:ANG"
+		
+		s ^MENU(2)="1\\F3:neerl\F3: Commandes\F3:ALL\F3:ANG"
+		s ^MENU(2,1)="1\enccmd\SF1:neerl\SF1: Introduire une commande\SF1:ALL\SF1:ANG"
+		s ^MENU(2,2)="1\nevgetdirect\SF2:neerl\SF2: Réception des livraisons\SF2:ALL\SF2:ANG"
+		s ^MENU(2,4)="1\histcommande\SF4:neerl\SF4: Suivi des commandes\SF4:ALL\SF4:ANG"
+		
+		s ^MENU(8)="1\\F11:neerl\F11: Manager\F11:ALL\F11:ANG"
+		s ^MENU(8,1)="1\visudep\SF1:neerl\SF1: Budgets et dépenses\SF1:ALL\SF1:ANG"
+		s ^MENU(8,3)="1\transferts/MENU\SF3:neerl\SF3: Envoi réceptions vers la centrale\SF3:ALL\SF3:ANG"
+		s ^MENU(8,5)="1\mailfromhc\SF5:neerl\SF5: Messages de la centrale\SF5:ALL\SF5:ANG"
+		s ^MENU(8,7)="1\ExeCaisse/MODIFCLIENTS.EXE\SF7:neerl\SF7: Gestion des clients\SF7:ALL\SF7:ANG"
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

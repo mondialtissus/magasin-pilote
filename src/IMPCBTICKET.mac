@@ -1,0 +1,6 @@
+ROUTINE IMPCBTICKET
+IMPCBTICKET
+ s ^HWINFO("IMPCBTICKET")="1"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+ q
+ 
+ 

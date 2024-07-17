@@ -1,0 +1,83 @@
+ROUTINE KILLDOUBLONCLEF
+KILLDOUBLONCLEF
+	s PLU = ""
+	s PLU = $O(^tmpPLUDOUBLONBONVALIDE(PLU))
+	while PLU '=""
+	{
+		s DATABON = $G(^tmpPLUDOUBLONBONVALIDE(PLU))
+		s BONARTICLE = $P(DATABON,"||",1)
+		s MAUVAISECLEF = $P(DATABON,"||",2)
+		//Nous mettons à jour dans les data en supprimant tout ce qui concerne la clef article erronnée.
+		if MAUVAISECLEF'=""
+		{
+			s CODEFOUR = $P($G(^ST(MAUVAISECLEF,4)),"\",1)
+			s CODESECT = $P($G(^ST(MAUVAISECLEF)),"\",23)
+			s CODEFAM = $P($G(^ST(MAUVAISECLEF)),"\",24)
+			s ^SP(PLU) = BONARTICLE					
+			k ^CSP(PLU,MAUVAISECLEF)
+			
+			if CODEFOUR '=""
+			{ 
+				k ^HWLEVART(CODEFOUR,MAUVAISECLEF)
+				if ((CODESECT'= "")&&(CODEFAM'="")) k ^HWNEWFAM(CODEFOUR,CODESECT,CODEFAM,MAUVAISECLEF)										
+			}
+			
+			//On recherche le bon code barre
+			s CodeBARRE = ""
+			s CodeBARRE = $O(^CSB(CodeBARRE))
+			while CodeBARRE'=""
+			{
+				if +$D(^CSB(CodeBARRE,MAUVAISECLEF))>0
+				{
+					s ^SB(CodeBARRE)=BONARTICLE
+					k ^CSB(CodeBARRE,MAUVAISECLEF)
+				}
+				
+				s CodeBARRE = $O(^CSB(CodeBARRE))
+			}				
+			k ^ST(MAUVAISECLEF)
+		}
+		s PLU = $O(^tmpPLUDOUBLONBONVALIDE(PLU))
+	}
+
+	q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

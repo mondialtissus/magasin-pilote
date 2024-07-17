@@ -1,0 +1,136 @@
+ROUTINE RETOURNEARTFININCORRECT
+RETOURNEARTFININCORRECT
+ 
+	s POSNUM=$G(^HWINFO("MAG"))
+	w !,"MAG: "_POSNUM
+	s CLEFARTICLE=""
+	s CLEFARTICLE = $O(^ST(CLEFARTICLE))
+	while CLEFARTICLE '= ""
+	{
+		i +$D(^ST(CLEFARTICLE,4))> 0
+		{
+			i +$P($G(^ST(CLEFARTICLE,4)),"\",6)=1
+			{
+				//Article financier
+				i +$D(^MODARTFINANCIER(POSNUM,CLEFARTICLE))=0
+				{
+					//Non présent en central en tant qu'article financier	
+					s ^MODROUTINE(POSNUM,"TESTFINANCIER","FINANCIER",CLEFARTICLE)="Article financier en magasin et non en central"
+					s ^ARTFAUXFINANCIER(CLEFARTICLE)=0
+				}
+				
+			}
+			else
+			{
+				//Article non financier	
+				i +$D(^MODARTFINANCIER(POSNUM,CLEFARTICLE))>0
+				{
+					//Présent en central en tant qu'article financie
+					s ^MODROUTINE(POSNUM,"TESTFINANCIER","NONFINANCIER",CLEFARTICLE)="Article financier en central et non en magasin"
+					s ^ARTFAUXFINANCIER(CLEFARTICLE)=1
+				}
+			}
+		}
+		s CLEFARTICLE = $O(^ST(CLEFARTICLE))
+	 }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

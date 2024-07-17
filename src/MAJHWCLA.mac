@@ -1,0 +1,98 @@
+ROUTINE MAJHWCLA
+MAJHWCLA
+ 
+	s ^HWCLA(2,229)="\LIN VISCOSE (229)\\\\29"
+	s ^HWCLA(2,230)="\CREPE POLYESTER (230)\\\\30"
+	s ^HWCLA(2,231)="\TOILE (231)\\\\31"
+	s ^HWCLA(2,232)="\VOILE BRODE (232)\\\\32"
+	s ^HWCLA(2,233)="\COTON POLYESTER (233)\\\\33"
+	s ^HWCLA(2,234)="\CREPON (234)\\\\34"
+	s ^HWCLA(2,235)="\LIN COTON (235)\\\\35"
+	s ^HWCLA(2,236)="\VOILE COTON (236)\\\\36"
+	s ^HWCLA(3,312)="\ORGANZA BRODE (312)\\\\12"
+	s ^HWCLA(3,313)="\ORGANZA BRODE (313)\\\\13"
+	s ^HWCLA(3,312,1)="\LEGERE\\\\1"
+	s ^HWCLA(3,312,2)="\LOURDE\\\\2"
+	s ^HWCLA(3,312,3)="\MI-LOURDE\\\\3"
+	s ^HWCLA(3,312,4)="\MACRAME\\\\4"
+	s ^HWCLA(3,313,1)="\LEGERE\\\\1"
+	s ^HWCLA(3,313,2)="\LOURDE\\\\2"
+	s ^HWCLA(3,313,3)="\MI-LOURDE\\\\3"
+	s ^HWCLA(3,313,4)="\MACRAME\\\\4"
+	s ^HWCLA(2,229,1)="\UNI\\\\1"
+	s ^HWCLA(2,229,2)="\FAUX-UNI\\\\2"
+	s ^HWCLA(2,229,3)="\IMPRIME\\\\3"
+	s ^HWCLA(2,230,1)="\UNI\\\\1"
+	s ^HWCLA(2,230,2)="\FAUX-UNI\\\\2"
+	s ^HWCLA(2,230,3)="\IMPRIME\\\\3"
+	s ^HWCLA(2,231,1)="\UNI\\\\1"
+	s ^HWCLA(2,231,2)="\FAUX-UNI\\\\2"
+	s ^HWCLA(2,231,3)="\IMPRIME\\\\3"
+	s ^HWCLA(2,232,1)="\UNI\\\\1"
+	s ^HWCLA(2,232,2)="\FAUX-UNI\\\\2"
+	s ^HWCLA(2,232,3)="\IMPRIME\\\\3"
+	s ^HWCLA(2,233,1)="\UNI\\\\1"
+	s ^HWCLA(2,233,2)="\FAUX-UNI\\\\2"
+	s ^HWCLA(2,233,3)="\IMPRIME\\\\3"
+	s ^HWCLA(2,234,1)="\UNI\\\\1"
+	s ^HWCLA(2,234,2)="\FAUX-UNI\\\\2"
+	s ^HWCLA(2,234,3)="\IMPRIME\\\\3"
+	s ^HWCLA(2,235,1)="\UNI\\\\1"
+	s ^HWCLA(2,235,2)="\FAUX-UNI\\\\2"
+	s ^HWCLA(2,235,3)="\IMPRIME\\\\3"
+	s ^HWCLA(2,236,1)="\UNI\\\\1"
+	s ^HWCLA(2,236,2)="\FAUX-UNI\\\\2"
+	s ^HWCLA(2,236,3)="\IMPRIME\\\\3"
+	s ^HWCLA(1,131)="\RABANNE (131)\\\\31"
+	s ^HWCLA(1,131,1)="\UNI\\\\1"
+	s ^HWCLA(1,131,2)="\FAUX-UNI\\\\2"
+	s ^HWCLA(1,131,3)="\IMPRIME\\\\3"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

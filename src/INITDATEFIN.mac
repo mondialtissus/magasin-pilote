@@ -1,0 +1,10 @@
+ROUTINE INITDATEFIN
+INITDATEFIN
+ 
+ s ^HWINFO("INVENTAIRE","DATEFIN")=61734  // fin le 4 janvier 2010 Prolongé au 8 pour derniers mags et depot
+ 
+ Q
+ 
+ 
+ 
+ 

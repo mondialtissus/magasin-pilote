@@ -1,0 +1,7 @@
+ROUTINE FUSIONMODIFWEBMAIL
+FUSIONMODIFWEBMAIL
+ s ^FUSIONFAVORIS(3)="WebMail\Firefox*https://outlook.office365.com\imgWebMail\imgWebMail"
+ 
+ q
+
+

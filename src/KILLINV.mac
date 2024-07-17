@@ -1,0 +1,60 @@
+ROUTINE KILLINV
+KILLINV
+	S MAG=$G(^HWINFO("MAG"))
+ 
+	k ^MENU(1,5)
+	k ^MENU(1,6)
+	
+	I MAG="M253" || MAG="G224" || MAG="M213" || MAG="M245" || MAG="M221"
+	{
+ 		k ^MENU(1,7)
+		k ^MENU(1,8)
+	}
+ 
+	s LOGIN=$O(^SIB("USER",""))
+ 	while LOGIN'=""
+ 	{
+ 		s INFO=$G(^SIB("USER",LOGIN))
+    	s USER=$P(INFO,"\",1)
+   		if $E(USER,1,3)="INV"
+   		{
+	  	 	k ^SIB("USER",LOGIN)
+	  	 }	
+    s LOGIN=$O(^SIB("USER",LOGIN))
+ }
+	
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

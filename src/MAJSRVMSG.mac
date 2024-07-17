@@ -1,0 +1,12 @@
+ROUTINE MAJSRVMSG
+MAJSRVMSG
+ 
+ s MAG=$G(^HWINFO("MAG"))
+ s ^HWINFO("EMAIL_NAME")="GMT/"_MAG
+ 
+ q	
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,54 @@
+ROUTINE POSCODEBAR
+POSCODEBAR
+ s HCART0=""
+ s ART=$O(^ST(""))
+ while ART'=""
+ {
+    s ST0=$G(^ST(ART))
+    s HCARTBAR=$P(ST0,"\",1)
+    if (HCARTBAR'="")&&(HCARTBAR'="5555555555555")&&(HCARTBAR'="0")
+    {
+    	s ^CSB(HCARTBAR,ART)=""
+     }
+     s ART=$O(^ST(ART))
+ }
+ 
+ s CB=$O(^SB(""))
+ while CB'=""
+ {
+    s ARTICLE=$G(^SB(CB))
+    if (CB'="")&&(CB'="5555555555555")&&(CB'="0")
+    {
+    	s ^CSB(CB,ARTICLE)=""
+     }
+     s CB=$O(^SB(CB))
+ }
+ s ^HWINFO("CBACTIF")="1"
+ w !, "Traitement terminé !"
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,14 @@
+ROUTINE ENLEVEMENUCMD
+ENLEVEMENUCMD
+ 
+	k ^GUMENU(2,1)
+	k ^GUMENU(2,2)
+	k ^GUMENU(2,3)
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 

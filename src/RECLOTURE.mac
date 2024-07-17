@@ -1,0 +1,62 @@
+ROUTINE RECLOTURE
+RECLOTURE
+	Q
+	
+RECLOTUREJOURNEE(DATE="")
+ 
+	// Permet de regénérer le fichier de clôture à envoyer à la centrale
+	// dans le cas bien sur que la clôture à été déjà faite.
+	if DATE '= ""
+	{
+		set gPOS = $G(^HWINFO("MAG"))
+		if $D(^HWCAIS(gPOS,DATE))=11
+		{
+			; on sauve le node principale contenant le nb.de tickets
+			s ^MODCAY2K(gPOS,DATE)=$G(^HWCAIS(gPOS,DATE))
+		}
+		set Node3 = $O(^HWCAIS(gPOS,DATE,""))
+		while Node3 '= ""
+		{
+			set Node4 = $O(^HWCAIS(gPOS,DATE,Node3,""))
+			while Node4 '= ""
+			{
+				set Tot = $G(^HWCAIS(gPOS,DATE,Node3,Node4))
+				set ^MODCAY2K(gPOS,DATE,Node3,Node4)=Tot
+				write !, "^MODCAY2K("_gPOS_","_DATE_","_Node3_","_Node4_")="_Tot
+				set Node4 = $O(^HWCAIS(gPOS,DATE,Node3,Node4))
+			}
+			set Node3 = $O(^HWCAIS($G(^HWINFO("MAG")),DATE,Node3))
+		}
+	}
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

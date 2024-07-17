@@ -1,0 +1,16 @@
+ROUTINE FDSACTIVE
+FDSACTIVE
+ 
+ // Suppression de la table avant rechargement
+ // K ^TKFINSERIE
+ // Activation du chargement des Fin de série sur les terminaux
+ S ^HWINFO("TERMFDS")="1"
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 

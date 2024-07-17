@@ -1,0 +1,34 @@
+ROUTINE INITMENUCD
+INITMENUCD
+ s ^GUMENU(3)="Déco && Vitrine"
+ s ^GUMENU(3,1)="Mouvement InterZones\fenTransfertInterZone\img21"
+ s ^GUMENU(3,2)="Stock Déco && Vitrine\fenConsultationStockVitrine\img22"
+ s ^GUMENU(4)="Coupons"
+ s ^GUMENU(4,1)="Transformation en coupons\fenTransactionStock COUP\img41"
+ s ^GUMENU(5)="Consultation des stocks"
+ s ^GUMENU(5,1)="Stock Magasin\fenConsultationStock\img51"
+ s ^GUMENU(5,2)="Mouvements\fenConsultationMouvements\img52"
+ s ^GUMENU(6)="Commandes Clients"
+ s ^GUMENU(6,1)="Création commandes Clients\fenCmdClient\img12"
+ s ^GUMENU(6,2)="Suivi des commandes Clients\FenSuiviCmdClient\img12 Q"
+ s ^GUMENU(8)="Maintenance"
+ s ^GUMENU(8,1)="Ajouter Mouvement de ticket\fenCreationMVTTicket\img52"
+ s ^GUMENU(8,2)="Recreer des MODIO et MODIOTmp\fenCreationMODIO\img52"
+ 
+ q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

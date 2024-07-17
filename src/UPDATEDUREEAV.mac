@@ -1,0 +1,40 @@
+ROUTINE UPDATEDUREEAV
+UPDATEDUREEAV
+ 
+	; Mise à jour de la durée de l'avoir
+	s POSNUM=$G(^HWINFO("MAG"))
+	s CURAVDUREE=$G(^HWINFO("DUREEAV"))
+	s ^HWINFO("DUREEAVOLD")=CURAVDUREE
+	s ^MODRESULT(POSNUM,"DUREEAVOLD")=CURAVDUREE
+	s ^HWINFO("DUREEAV")=3
+	
+	; Mise à jour de SIB pour les utilisteurs Terminaux
+	s PREF=""
+	f iTerm=1:1:41
+	{
+		i $L(iTerm)<2{s PREF="00"}else{s PREF="0"}
+		s LTERM=PREF_iTerm		
+		s CURREC=$G(^SIB("USER",LTERM))
+		s $P(CURREC,"\",6)=0
+		s ^SIB("USER",LTERM)=CURREC
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

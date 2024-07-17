@@ -1,0 +1,16 @@
+ROUTINE SUPPMENUSBM
+SUPPMENUSBM
+	I $G(^GUMENU(3))="Transfert Confection SBM"	
+	{
+		k ^GUMENU(3)
+	}
+ 
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 

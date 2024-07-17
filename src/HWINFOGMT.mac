@@ -1,0 +1,13 @@
+ROUTINE HWINFOGMT
+HWINFOGMT
+
+     ;Changement du nombre de mois légal pour réceptionner les commandes
+     s ^HWINFO("NOM")="MONDIAL TISSUS"
+     s ^HWINFO("NOM2")="MONDIAL TISSUS"
+ q
+	
+
+
+
+
+

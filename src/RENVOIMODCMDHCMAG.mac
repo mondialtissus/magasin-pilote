@@ -1,0 +1,320 @@
+ROUTINE RENVOIMODCMDHCMAG
+RENVOIMODCMDHCMAG
+	//Cette routine est utilisée de facon exceptionnelle dans le cas de la perte des commandes du 11,15 et 16 décembre
+	//A supprimer à partir de 2010 car cette routine ne sert qu'une seule fois en 2009.
+	s NUMMAG = ""
+	s NUMMAG = $O(^MODCMDHCCOR(NUMMAG))
+	while NUMMAG '= ""
+	{
+	        s NUMCMD = ""
+	        s NUMCMD = $O(^MODCMDHCCOR(NUMMAG,NUMCMD))
+	        while NUMCMD '= ""
+	        {       
+	                s NUMLNG = ""
+	                s NUMLNG = $O(^MODCMDHCCOR(NUMMAG,NUMCMD,NUMLNG))
+	                i NUMLNG="0"
+	                {
+	                        s DATAMOD = $G(^MODCMDHCCOR(NUMMAG,NUMCMD,NUMLNG))
+	                        s ^MODCMDHC(NUMMAG,NUMCMD,NUMLNG)= DATAMOD    
+	                        s ^MODCMDHC091224(NUMMAG,NUMCMD,NUMLNG)= DATAMOD
+	                    	K ^MODCMDHCCOR(NUMMAG,NUMCMD,NUMLNG)
+	                    
+	                        s NUMLNG = $O(^MODCMDHCCOR(NUMMAG,NUMCMD,NUMLNG))               
+	                }
+	                while NUMLNG '= ""
+	                {
+	                        s DATAMOD = ""
+	                        s DATAMOD = $G(^MODCMDHCCOR(NUMMAG,NUMCMD,NUMLNG))
+	                        s NUMCMDMAG = $P($P(DATAMOD,"\",2),"*",1)
+ 
+	                        //On retrouve d'abord la ligne magasin
+	                        s CODEART = ""
+	                        s CODEART = $P(DATAMOD,"\",3)
+	                        
+	                        s TROUVE = 0
+	                        s DERNIERNUMLNG = "0"                           
+	                        s NUMLNGMAG = "0"
+	                        s NUMLNGMAG = $O(^HWARCCMD("CDE",NUMCMDMAG,NUMLNGMAG))
+	                        while (NUMLNGMAG '= "") && (TROUVE = 0)
+	                        {
+	                                s DERNIERNUMLNG = NUMLNGMAG                                        
+	                                s DATACDE = $G(^HWARCCMD("CDE",NUMCMDMAG,NUMLNGMAG))
+	                                i ($P(DATACDE,"\",1) = CODEART) s TROUVE = 1                                    
+ 
+	                                s NUMLNGMAG = $O(^HWARCCMD("CDE",NUMCMDMAG,NUMLNGMAG))
+	                        }
+	                        
+	                        //On test d'abord que l'article n'a pas déjà été confirmé
+	                        i NUMLNGMAG = ""
+	                        {                                                               
+	                                s NUMLNGMAG = $O(^MODCMDHC(NUMMAG,NUMCMD,NUMLNGMAG),-1)
+	                                i NUMLNGMAG = "" 
+	                                {
+	                                        S NUMLNGMAG = +DERNIERNUMLNG + 1                                
+	                                }
+	                                else
+	                                {
+	                                        S NUMLNGMAG = +NUMLNGMAG + 1                            
+	                                }
+	                        }
+	                        else
+	                        {
+	                        	S NUMLNGMAG = DERNIERNUMLNG
+	                        }
+ 
+	                        i (+$D(^HWARCCMD("FAX",NUMCMDMAG,NUMLNGMAG)) = 0)
+	                        {
+	                                //Pas de confirmation de commande donc ok
+	                                s DATAMODP = $P(DATAMOD,"\",2)
+	                                s $P(DATAMODP,"*",2)=NUMLNGMAG
+	                                s $P(DATAMOD,"\",2) = DATAMODP
+	                                s ^MODCMDHC(NUMMAG,NUMCMD,NUMLNG)= DATAMOD                             
+	                        }
+	                        
+	                        s ^MODCMDHC091224(NUMMAG,NUMCMD,NUMLNG)= DATAMOD
+	                        K ^MODCMDHCCOR(NUMMAG,NUMCMD,NUMLNG)
+ 
+	                        s NUMLNG = $O(^MODCMDHCCOR(NUMMAG,NUMCMD,NUMLNG))
+	                }
+ 
+	                s NUMCMD = $O(^MODCMDHCCOR(NUMMAG,NUMCMD))
+	        }
+	        s NUMMAG = $O(^MODCMDHCCOR(NUMMAG))
+	}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

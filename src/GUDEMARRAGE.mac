@@ -1,0 +1,150 @@
+ROUTINE GUDEMARRAGE
+GUDEMARRAGE
+	;Liste de tous les codes coupon avec le prix unitaire
+	s ^GUCOUPON(68694)="1\0\10\1.93\1\0.5"
+	s ^GUCOUPON(68695)="1\10\20\5.81\3\0.5"
+	s ^GUCOUPON(68696)="1\20\\9.68\5\0.5"
+	s ^GUCOUPON(68691)="2\0\5\0.87\0.2\1"
+	s ^GUCOUPON(68692)="2\5\10\2.61\0.5\1"
+	s ^GUCOUPON(68693)="2\10\\4.18\1\1"
+	s ^GUCOUPON(68697)="3\0\5\0.94\0.2\1"
+	s ^GUCOUPON(68698)="3\5\10\2.84\0.5\1"
+	s ^GUCOUPON(68699)="3\10\\4.54\1\1"
+	;Heure d'archivage du stock tout les soirs: Première donnée avant le slash.
+	s ^HWINFO("GESTHEUREARC")="20150000\20090504\20150000"
+	;GESTSTOCK permet de savoir si nous avons un stock à prendre en compte à la validation de l'inventaire dans le cas où GEST est activé.
+	s ^HWINFO("GESTSTOCK")="0"
+	;Permet d'avoir le nombre de jours affichés dans les tables sur le logiciel GEST lors des créations de mouvements.
+	s ^HWINFO("GESTNBJOURAFFICHE")="1"
+	;Permet d'avoir le nombre de lignes affichées dans les tables sur le logiciel GEST lors des créations de mouvements.
+	s ^HWINFO("GESTNBLIGNEAFFICHE")="100"	
+	;Nombre de jours d'utilisation des mouvements de correction d'inventaire après la date de l'inventaire
+	s ^HWINFO("INVENTAIRE","DATEFINCORR")=20	
+	;Menu affiché sur GEST
+	s ^GUMENU(1)="Transfert Intersites"
+	s ^GUMENU(1,1)="Création Transfert\fenCMDRetro\img11"
+	s ^GUMENU(1,2)="Réception Transfert\fenCMDRetroRec\img13"
+        s ^GUMENU(1,3)="Suivi des envois Intersites\fenHistCMDRetro\img12"
+        s ^GUMENU(1,4)="Suivi des réceptions Intersites\fenHistRecRetro\img12"
+	s ^GUMENU(2)="Déco && Vitrine"
+	s ^GUMENU(2,1)="Mouvement InterZones\fenTransfertInterZone\img21"
+	s ^GUMENU(2,2)="Stock Déco && Vitrine\fenConsultationStockVitrine\img22"
+	s ^GUMENU(3)="Correction stock"
+	s ^GUMENU(3,1)="Démarque connue\fenTransactionStock DEM\img31"
+	s ^GUMENU(3,2)="Ajustement stock\fenTransactionStock AJUS\img32"
+	s ^GUMENU(3,3)="Consultation Inventaire tournant\fenConsultationInvTournant\img32"
+	s ^GUMENU(3,4)="Validation Inventaire tournant\fenValidationInvTournant\img32"
+	s ^GUMENU(4)="Coupons"
+	s ^GUMENU(4,1)="Transformation en coupons\fenTransactionStock COUP\img41"
+	s ^GUMENU(5)="Consultation des stocks"
+	s ^GUMENU(5,1)="Stock Magasin\fenConsultationStock\img51"
+	s ^GUMENU(5,2)="Mouvements\fenConsultationMouvements\img52"
+	s ^GUMENU(8)="Maintenance"
+	s ^GUMENU(8,1)="Ajouter Mouvement de ticket\fenCreationMVTTicket\img52"
+	s ^GUMENU(8,2)="Recreer des MODIO et MODIOTmp\fenCreationMODIO\img52"
+	;Type de mouvement utilisé dans GEST
+	s ^GUMVTTYPE(1)="2\-1\0\Vente caisse"
+	s ^GUMVTTYPE(2)="2\1\0\Retour marchandise caisse"
+	s ^GUMVTTYPE(3)="2\1\0\Mise en erreur d'un ticket +"
+	s ^GUMVTTYPE(4)="2\-1\0\Mise en erreur d'un ticket -"
+	s ^GUMVTTYPE(10)="3\1\0\Réception marchandise"
+	s ^GUMVTTYPE(11)="3\1\1\Correction réception stock +"
+	s ^GUMVTTYPE(12)="3\-1\1\Correction réception stock -"
+	s ^GUMVTTYPE(13)="4\1\0\Réception rétrocession"
+	s ^GUMVTTYPE(16)="4\-1\0\Envoi rétrocession"
+	s ^GUMVTTYPE(17)="3\-1\1\Retour fournisseur"
+	s ^GUMVTTYPE(20)="5\0\0\Déco && Vitrines Réalisation"
+	s ^GUMVTTYPE(21)="5\0\0\Déco && Vitrines Retour Vente"
+	s ^GUMVTTYPE(22)="5\-1\1\Déco && Vitrines Rebut"
+	s ^GUMVTTYPE(23)="5\-1\1\Casse && Détérioration"
+	s ^GUMVTTYPE(25)="5\-1\1\Défaut"
+	s ^GUMVTTYPE(26)="5\-1\1\Sinistre"
+	s ^GUMVTTYPE(27)="5\-1\1\Coupons"	
+	s ^GUMVTTYPE(30)="5\1\0\Inventaire (RAZ)"
+	s ^GUMVTTYPE(31)="1\1\1\Correction inventaire stock +"
+	s ^GUMVTTYPE(32)="1\-1\1\Correction inventaire stock -"
+	s ^GUMVTTYPE(33)="1\1\1\Correction inventaire tournant +"
+	s ^GUMVTTYPE(34)="1\-1\1\Correction inventaire tournant -"
+	;Type de sinistre dans le cas d'un mouvement 26 (sinistre)
+	s ^GUSINISTRE(1)="Incendie"
+	s ^GUSINISTRE(2)="Inondation"
+	s ^GUSINISTRE(3)="Cambriolage"
+	s ^GUSINISTRE(4)="Ouragan"
+	s ^GUSINISTRE(5)="Tremblement de terre"
+	s ^DROITS(15)="Scanner - Inventaire Tournant"
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

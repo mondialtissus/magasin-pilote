@@ -1,0 +1,7 @@
+ROUTINE MAJFUSIONFAVORIS
+MAJFUSIONFAVORIS
+ s ^FUSIONFAVORIS(4)="Site Mondial Tissus\Firefox*http://www.mondialtissus.fr/\imgMondialTissus\imgMondialTissus"
+
+ q
+
+

@@ -1,0 +1,854 @@
+ROUTINE PE14PRINTEMPSM50
+PE14PRINTEMPSM50
+ 
+ s ^TKFINSERIE(103346)="Printemps Métrage-50"
+ s ^TKFINSERIE(103347)="Printemps Métrage-50"
+ s ^TKFINSERIE(104331)="Printemps Métrage-50"
+ s ^TKFINSERIE(104330)="Printemps Métrage-50"
+ s ^TKFINSERIE(104329)="Printemps Métrage-50"
+ s ^TKFINSERIE(104443)="Printemps Métrage-50"
+ s ^TKFINSERIE(89848)="Printemps Métrage-50"
+ s ^TKFINSERIE(104450)="Printemps Métrage-50"
+ s ^TKFINSERIE(89844)="Printemps Métrage-50"
+ s ^TKFINSERIE(104446)="Printemps Métrage-50"
+ s ^TKFINSERIE(104451)="Printemps Métrage-50"
+ s ^TKFINSERIE(89839)="Printemps Métrage-50"
+ s ^TKFINSERIE(104445)="Printemps Métrage-50"
+ s ^TKFINSERIE(104444)="Printemps Métrage-50"
+ s ^TKFINSERIE(104449)="Printemps Métrage-50"
+ s ^TKFINSERIE(104456)="Printemps Métrage-50"
+ s ^TKFINSERIE(104441)="Printemps Métrage-50"
+ s ^TKFINSERIE(104442)="Printemps Métrage-50"
+ s ^TKFINSERIE(104454)="Printemps Métrage-50"
+ s ^TKFINSERIE(89847)="Printemps Métrage-50"
+ s ^TKFINSERIE(89846)="Printemps Métrage-50"
+ s ^TKFINSERIE(89836)="Printemps Métrage-50"
+ s ^TKFINSERIE(89837)="Printemps Métrage-50"
+ s ^TKFINSERIE(104455)="Printemps Métrage-50"
+ s ^TKFINSERIE(104447)="Printemps Métrage-50"
+ s ^TKFINSERIE(104457)="Printemps Métrage-50"
+ s ^TKFINSERIE(89923)="Printemps Métrage-50"
+ s ^TKFINSERIE(105608)="Printemps Métrage-50"
+ s ^TKFINSERIE(105610)="Printemps Métrage-50"
+ s ^TKFINSERIE(103353)="Printemps Métrage-50"
+ s ^TKFINSERIE(103354)="Printemps Métrage-50"
+ s ^TKFINSERIE(103352)="Printemps Métrage-50"
+ s ^TKFINSERIE(105609)="Printemps Métrage-50"
+ s ^TKFINSERIE(104323)="Printemps Métrage-50"
+ s ^TKFINSERIE(104319)="Printemps Métrage-50"
+ s ^TKFINSERIE(104322)="Printemps Métrage-50"
+ s ^TKFINSERIE(105607)="Printemps Métrage-50"
+ s ^TKFINSERIE(105603)="Printemps Métrage-50"
+ s ^TKFINSERIE(105604)="Printemps Métrage-50"
+ s ^TKFINSERIE(104327)="Printemps Métrage-50"
+ s ^TKFINSERIE(104326)="Printemps Métrage-50"
+ s ^TKFINSERIE(104377)="Printemps Métrage-50"
+ s ^TKFINSERIE(104409)="Printemps Métrage-50"
+ s ^TKFINSERIE(104405)="Printemps Métrage-50"
+ s ^TKFINSERIE(89878)="Printemps Métrage-50"
+ s ^TKFINSERIE(103345)="Printemps Métrage-50"
+ s ^TKFINSERIE(104363)="Printemps Métrage-50"
+ s ^TKFINSERIE(104361)="Printemps Métrage-50"
+ s ^TKFINSERIE(104362)="Printemps Métrage-50"
+ s ^TKFINSERIE(89876)="Printemps Métrage-50"
+ s ^TKFINSERIE(89945)="Printemps Métrage-50"
+ s ^TKFINSERIE(103384)="Printemps Métrage-50"
+ s ^TKFINSERIE(89860)="Printemps Métrage-50"
+ s ^TKFINSERIE(103342)="Printemps Métrage-50"
+ s ^TKFINSERIE(104376)="Printemps Métrage-50"
+ s ^TKFINSERIE(89875)="Printemps Métrage-50"
+ s ^TKFINSERIE(89864)="Printemps Métrage-50"
+ s ^TKFINSERIE(100158)="Printemps Métrage-50"
+ s ^TKFINSERIE(100232)="Printemps Métrage-50"
+ s ^TKFINSERIE(104351)="Printemps Métrage-50"
+ s ^TKFINSERIE(104352)="Printemps Métrage-50"
+ s ^TKFINSERIE(87732)="Printemps Métrage-50"
+ s ^TKFINSERIE(87731)="Printemps Métrage-50"
+ s ^TKFINSERIE(103355)="Printemps Métrage-50"
+ s ^TKFINSERIE(87736)="Printemps Métrage-50"
+ s ^TKFINSERIE(83511)="Printemps Métrage-50"
+ s ^TKFINSERIE(103361)="Printemps Métrage-50"
+ s ^TKFINSERIE(87733)="Printemps Métrage-50"
+ s ^TKFINSERIE(103362)="Printemps Métrage-50"
+ s ^TKFINSERIE(83512)="Printemps Métrage-50"
+ s ^TKFINSERIE(87735)="Printemps Métrage-50"
+ s ^TKFINSERIE(93276)="Printemps Métrage-50"
+ s ^TKFINSERIE(100091)="Printemps Métrage-50"
+ s ^TKFINSERIE(105400)="Printemps Métrage-50"
+ s ^TKFINSERIE(87623)="Printemps Métrage-50"
+ s ^TKFINSERIE(87622)="Printemps Métrage-50"
+ s ^TKFINSERIE(87620)="Printemps Métrage-50"
+ s ^TKFINSERIE(87597)="Printemps Métrage-50"
+ s ^TKFINSERIE(83316)="Printemps Métrage-50"
+ s ^TKFINSERIE(104394)="Printemps Métrage-50"
+ s ^TKFINSERIE(104393)="Printemps Métrage-50"
+ s ^TKFINSERIE(103337)="Printemps Métrage-50"
+ s ^TKFINSERIE(83506)="Printemps Métrage-50"
+ s ^TKFINSERIE(103339)="Printemps Métrage-50"
+ s ^TKFINSERIE(103338)="Printemps Métrage-50"
+ s ^TKFINSERIE(71397)="Printemps Métrage-50"
+ s ^TKFINSERIE(87763)="Printemps Métrage-50"
+ s ^TKFINSERIE(100835)="Printemps Métrage-50"
+ s ^TKFINSERIE(86294)="Printemps Métrage-50"
+ s ^TKFINSERIE(86290)="Printemps Métrage-50"
+ s ^TKFINSERIE(103366)="Printemps Métrage-50"
+ s ^TKFINSERIE(103368)="Printemps Métrage-50"
+ s ^TKFINSERIE(103367)="Printemps Métrage-50"
+ s ^TKFINSERIE(86293)="Printemps Métrage-50"
+ s ^TKFINSERIE(89919)="Printemps Métrage-50"
+ s ^TKFINSERIE(86292)="Printemps Métrage-50"
+ s ^TKFINSERIE(86295)="Printemps Métrage-50"
+ s ^TKFINSERIE(89803)="Printemps Métrage-50"
+ s ^TKFINSERIE(89804)="Printemps Métrage-50"
+ s ^TKFINSERIE(100102)="Printemps Métrage-50"
+ s ^TKFINSERIE(89802)="Printemps Métrage-50"
+ s ^TKFINSERIE(89934)="Printemps Métrage-50"
+ s ^TKFINSERIE(89801)="Printemps Métrage-50"
+ s ^TKFINSERIE(89798)="Printemps Métrage-50"
+ s ^TKFINSERIE(89800)="Printemps Métrage-50"
+ s ^TKFINSERIE(89805)="Printemps Métrage-50"
+ s ^TKFINSERIE(105405)="Printemps Métrage-50"
+ s ^TKFINSERIE(105404)="Printemps Métrage-50"
+ s ^TKFINSERIE(105401)="Printemps Métrage-50"
+ s ^TKFINSERIE(89851)="Printemps Métrage-50"
+ s ^TKFINSERIE(104337)="Printemps Métrage-50"
+ s ^TKFINSERIE(104332)="Printemps Métrage-50"
+ s ^TKFINSERIE(104335)="Printemps Métrage-50"
+ s ^TKFINSERIE(104343)="Printemps Métrage-50"
+ s ^TKFINSERIE(104344)="Printemps Métrage-50"
+ s ^TKFINSERIE(89826)="Printemps Métrage-50"
+ s ^TKFINSERIE(104550)="Printemps Métrage-50"
+ s ^TKFINSERIE(104341)="Printemps Métrage-50"
+ s ^TKFINSERIE(104345)="Printemps Métrage-50"
+ s ^TKFINSERIE(104346)="Printemps Métrage-50"
+ s ^TKFINSERIE(104342)="Printemps Métrage-50"
+ s ^TKFINSERIE(104575)="Printemps Métrage-50"
+ s ^TKFINSERIE(104568)="Printemps Métrage-50"
+ s ^TKFINSERIE(105078)="Printemps Métrage-50"
+ s ^TKFINSERIE(105079)="Printemps Métrage-50"
+ s ^TKFINSERIE(105082)="Printemps Métrage-50"
+ s ^TKFINSERIE(105084)="Printemps Métrage-50"
+ s ^TKFINSERIE(89993)="Printemps Métrage-50"
+ s ^TKFINSERIE(105077)="Printemps Métrage-50"
+ s ^TKFINSERIE(89929)="Printemps Métrage-50"
+ s ^TKFINSERIE(100170)="Printemps Métrage-50"
+ s ^TKFINSERIE(104561)="Printemps Métrage-50"
+ s ^TKFINSERIE(89997)="Printemps Métrage-50"
+ s ^TKFINSERIE(105080)="Printemps Métrage-50"
+ s ^TKFINSERIE(105086)="Printemps Métrage-50"
+ s ^TKFINSERIE(105081)="Printemps Métrage-50"
+ s ^TKFINSERIE(105085)="Printemps Métrage-50"
+ s ^TKFINSERIE(89854)="Printemps Métrage-50"
+ s ^TKFINSERIE(89889)="Printemps Métrage-50"
+ s ^TKFINSERIE(104338)="Printemps Métrage-50"
+ s ^TKFINSERIE(104334)="Printemps Métrage-50"
+ s ^TKFINSERIE(104336)="Printemps Métrage-50"
+ s ^TKFINSERIE(104373)="Printemps Métrage-50"
+ s ^TKFINSERIE(104448)="Printemps Métrage-50"
+ s ^TKFINSERIE(104347)="Printemps Métrage-50"
+ s ^TKFINSERIE(104333)="Printemps Métrage-50"
+ s ^TKFINSERIE(104374)="Printemps Métrage-50"
+ s ^TKFINSERIE(104429)="Printemps Métrage-50"
+ s ^TKFINSERIE(104430)="Printemps Métrage-50"
+ s ^TKFINSERIE(104431)="Printemps Métrage-50"
+ s ^TKFINSERIE(105598)="Printemps Métrage-50"
+ s ^TKFINSERIE(105595)="Printemps Métrage-50"
+ s ^TKFINSERIE(105600)="Printemps Métrage-50"
+ s ^TKFINSERIE(105599)="Printemps Métrage-50"
+ s ^TKFINSERIE(105596)="Printemps Métrage-50"
+ s ^TKFINSERIE(105597)="Printemps Métrage-50"
+ s ^TKFINSERIE(100720)="Printemps Métrage-50"
+ s ^TKFINSERIE(100718)="Printemps Métrage-50"
+ s ^TKFINSERIE(103330)="Printemps Métrage-50"
+ s ^TKFINSERIE(101940)="Printemps Métrage-50"
+ s ^TKFINSERIE(105087)="Printemps Métrage-50"
+ s ^TKFINSERIE(100160)="Printemps Métrage-50"
+ s ^TKFINSERIE(100159)="Printemps Métrage-50"
+ s ^TKFINSERIE(100161)="Printemps Métrage-50"
+ s ^TKFINSERIE(100156)="Printemps Métrage-50"
+ s ^TKFINSERIE(104325)="Printemps Métrage-50"
+ s ^TKFINSERIE(104371)="Printemps Métrage-50"
+ s ^TKFINSERIE(104370)="Printemps Métrage-50"
+ s ^TKFINSERIE(100194)="Printemps Métrage-50"
+ s ^TKFINSERIE(100193)="Printemps Métrage-50"
+ s ^TKFINSERIE(104381)="Printemps Métrage-50"
+ s ^TKFINSERIE(104378)="Printemps Métrage-50"
+ s ^TKFINSERIE(104380)="Printemps Métrage-50"
+ s ^TKFINSERIE(105448)="Printemps Métrage-50"
+ s ^TKFINSERIE(105446)="Printemps Métrage-50"
+ s ^TKFINSERIE(105447)="Printemps Métrage-50"
+ s ^TKFINSERIE(105449)="Printemps Métrage-50"
+ s ^TKFINSERIE(105444)="Printemps Métrage-50"
+ s ^TKFINSERIE(103463)="Printemps Métrage-50"
+ s ^TKFINSERIE(103462)="Printemps Métrage-50"
+ s ^TKFINSERIE(84002)="Printemps Métrage-50"
+ s ^TKFINSERIE(89970)="Printemps Métrage-50"
+ s ^TKFINSERIE(89971)="Printemps Métrage-50"
+ s ^TKFINSERIE(83979)="Printemps Métrage-50"
+ s ^TKFINSERIE(104584)="Printemps Métrage-50"
+ s ^TKFINSERIE(84001)="Printemps Métrage-50"
+ s ^TKFINSERIE(89968)="Printemps Métrage-50"
+ s ^TKFINSERIE(100185)="Printemps Métrage-50"
+ s ^TKFINSERIE(100186)="Printemps Métrage-50"
+ s ^TKFINSERIE(104570)="Printemps Métrage-50"
+ s ^TKFINSERIE(104567)="Printemps Métrage-50"
+ s ^TKFINSERIE(104569)="Printemps Métrage-50"
+ s ^TKFINSERIE(104572)="Printemps Métrage-50"
+ s ^TKFINSERIE(104403)="Printemps Métrage-50"
+ s ^TKFINSERIE(100172)="Printemps Métrage-50"
+ s ^TKFINSERIE(104582)="Printemps Métrage-50"
+ s ^TKFINSERIE(104573)="Printemps Métrage-50"
+ s ^TKFINSERIE(104571)="Printemps Métrage-50"
+ s ^TKFINSERIE(104414)="Printemps Métrage-50"
+ s ^TKFINSERIE(89927)="Printemps Métrage-50"
+ s ^TKFINSERIE(104412)="Printemps Métrage-50"
+ s ^TKFINSERIE(89924)="Printemps Métrage-50"
+ s ^TKFINSERIE(89987)="Printemps Métrage-50"
+ s ^TKFINSERIE(104574)="Printemps Métrage-50"
+ s ^TKFINSERIE(100181)="Printemps Métrage-50"
+ s ^TKFINSERIE(100182)="Printemps Métrage-50"
+ s ^TKFINSERIE(83992)="Printemps Métrage-50"
+ s ^TKFINSERIE(100176)="Printemps Métrage-50"
+ s ^TKFINSERIE(100722)="Printemps Métrage-50"
+ s ^TKFINSERIE(100179)="Printemps Métrage-50"
+ s ^TKFINSERIE(104553)="Printemps Métrage-50"
+ s ^TKFINSERIE(104424)="Printemps Métrage-50"
+ s ^TKFINSERIE(104555)="Printemps Métrage-50"
+ s ^TKFINSERIE(104554)="Printemps Métrage-50"
+ s ^TKFINSERIE(104556)="Printemps Métrage-50"
+ s ^TKFINSERIE(104360)="Printemps Métrage-50"
+ s ^TKFINSERIE(104348)="Printemps Métrage-50"
+ s ^TKFINSERIE(104350)="Printemps Métrage-50"
+ s ^TKFINSERIE(104551)="Printemps Métrage-50"
+ s ^TKFINSERIE(104428)="Printemps Métrage-50"
+ s ^TKFINSERIE(104427)="Printemps Métrage-50"
+ s ^TKFINSERIE(89962)="Printemps Métrage-50"
+ s ^TKFINSERIE(89853)="Printemps Métrage-50"
+ s ^TKFINSERIE(89890)="Printemps Métrage-50"
+ s ^TKFINSERIE(89887)="Printemps Métrage-50"
+ s ^TKFINSERIE(89888)="Printemps Métrage-50"
+ s ^TKFINSERIE(89948)="Printemps Métrage-50"
+ s ^TKFINSERIE(71488)="Printemps Métrage-50"
+ s ^TKFINSERIE(89827)="Printemps Métrage-50"
+ s ^TKFINSERIE(87798)="Printemps Métrage-50"
+ s ^TKFINSERIE(87797)="Printemps Métrage-50"
+ s ^TKFINSERIE(87796)="Printemps Métrage-50"
+ s ^TKFINSERIE(89874)="Printemps Métrage-50"
+ s ^TKFINSERIE(104339)="Printemps Métrage-50"
+ s ^TKFINSERIE(104435)="Printemps Métrage-50"
+ s ^TKFINSERIE(104422)="Printemps Métrage-50"
+ s ^TKFINSERIE(104480)="Printemps Métrage-50"
+ s ^TKFINSERIE(104396)="Printemps Métrage-50"
+ s ^TKFINSERIE(104397)="Printemps Métrage-50"
+ s ^TKFINSERIE(104434)="Printemps Métrage-50"
+ s ^TKFINSERIE(104421)="Printemps Métrage-50"
+ s ^TKFINSERIE(100241)="Printemps Métrage-50"
+ s ^TKFINSERIE(89833)="Printemps Métrage-50"
+ s ^TKFINSERIE(89809)="Printemps Métrage-50"
+ s ^TKFINSERIE(89808)="Printemps Métrage-50"
+ s ^TKFINSERIE(89807)="Printemps Métrage-50"
+ s ^TKFINSERIE(105395)="Printemps Métrage-50"
+ s ^TKFINSERIE(105396)="Printemps Métrage-50"
+ s ^TKFINSERIE(105397)="Printemps Métrage-50"
+ s ^TKFINSERIE(105399)="Printemps Métrage-50"
+ s ^TKFINSERIE(105398)="Printemps Métrage-50"
+ s ^TKFINSERIE(100095)="Printemps Métrage-50"
+ s ^TKFINSERIE(100097)="Printemps Métrage-50"
+ s ^TKFINSERIE(100096)="Printemps Métrage-50"
+ s ^TKFINSERIE(100093)="Printemps Métrage-50"
+ s ^TKFINSERIE(100099)="Printemps Métrage-50"
+ s ^TKFINSERIE(89937)="Printemps Métrage-50"
+ s ^TKFINSERIE(100086)="Printemps Métrage-50"
+ s ^TKFINSERIE(100089)="Printemps Métrage-50"
+ s ^TKFINSERIE(100088)="Printemps Métrage-50"
+ s ^TKFINSERIE(104439)="Printemps Métrage-50"
+ s ^TKFINSERIE(104328)="Printemps Métrage-50"
+ s ^TKFINSERIE(89883)="Printemps Métrage-50"
+ s ^TKFINSERIE(105611)="Printemps Métrage-50"
+ s ^TKFINSERIE(104420)="Printemps Métrage-50"
+ s ^TKFINSERIE(89870)="Printemps Métrage-50"
+ s ^TKFINSERIE(89879)="Printemps Métrage-50"
+ s ^TKFINSERIE(89881)="Printemps Métrage-50"
+ s ^TKFINSERIE(105099)="Printemps Métrage-50"
+ s ^TKFINSERIE(105097)="Printemps Métrage-50"
+ s ^TKFINSERIE(105092)="Printemps Métrage-50"
+ s ^TKFINSERIE(89873)="Printemps Métrage-50"
+ s ^TKFINSERIE(100175)="Printemps Métrage-50"
+ s ^TKFINSERIE(105083)="Printemps Métrage-50"
+ s ^TKFINSERIE(100612)="Printemps Métrage-50"
+ s ^TKFINSERIE(105098)="Printemps Métrage-50"
+ s ^TKFINSERIE(100615)="Printemps Métrage-50"
+ s ^TKFINSERIE(100607)="Printemps Métrage-50"
+ s ^TKFINSERIE(100616)="Printemps Métrage-50"
+ s ^TKFINSERIE(100104)="Printemps Métrage-50"
+ s ^TKFINSERIE(100105)="Printemps Métrage-50"
+ s ^TKFINSERIE(105614)="Printemps Métrage-50"
+ s ^TKFINSERIE(105615)="Printemps Métrage-50"
+ s ^TKFINSERIE(105605)="Printemps Métrage-50"
+ s ^TKFINSERIE(105613)="Printemps Métrage-50"
+ s ^TKFINSERIE(100608)="Printemps Métrage-50"
+ s ^TKFINSERIE(105101)="Printemps Métrage-50"
+ s ^TKFINSERIE(100098)="Printemps Métrage-50"
+ s ^TKFINSERIE(105606)="Printemps Métrage-50"
+ s ^TKFINSERIE(105093)="Printemps Métrage-50"
+ s ^TKFINSERIE(100101)="Printemps Métrage-50"
+ s ^TKFINSERIE(100611)="Printemps Métrage-50"
+ s ^TKFINSERIE(100618)="Printemps Métrage-50"
+ s ^TKFINSERIE(105102)="Printemps Métrage-50"
+ s ^TKFINSERIE(100601)="Printemps Métrage-50"
+ s ^TKFINSERIE(100604)="Printemps Métrage-50"
+ s ^TKFINSERIE(107097)="Printemps Métrage-50"
+ s ^TKFINSERIE(107099)="Printemps Métrage-50"
+ s ^TKFINSERIE(105090)="Printemps Métrage-50"
+ s ^TKFINSERIE(105095)="Printemps Métrage-50"
+ s ^TKFINSERIE(105089)="Printemps Métrage-50"
+ s ^TKFINSERIE(89885)="Printemps Métrage-50"
+ s ^TKFINSERIE(100191)="Printemps Métrage-50"
+ s ^TKFINSERIE(104406)="Printemps Métrage-50"
+ s ^TKFINSERIE(104407)="Printemps Métrage-50"
+ s ^TKFINSERIE(89930)="Printemps Métrage-50"
+ s ^TKFINSERIE(89951)="Printemps Métrage-50"
+ s ^TKFINSERIE(104391)="Printemps Métrage-50"
+ s ^TKFINSERIE(104392)="Printemps Métrage-50"
+ s ^TKFINSERIE(100087)="Printemps Métrage-50"
+ s ^TKFINSERIE(104395)="Printemps Métrage-50"
+ s ^TKFINSERIE(100167)="Printemps Métrage-50"
+ s ^TKFINSERIE(89952)="Printemps Métrage-50"
+ s ^TKFINSERIE(89880)="Printemps Métrage-50"
+ s ^TKFINSERIE(100166)="Printemps Métrage-50"
+ s ^TKFINSERIE(105108)="Printemps Métrage-50"
+ s ^TKFINSERIE(105110)="Printemps Métrage-50"
+ s ^TKFINSERIE(105107)="Printemps Métrage-50"
+ s ^TKFINSERIE(105106)="Printemps Métrage-50"
+ s ^TKFINSERIE(105105)="Printemps Métrage-50"
+ s ^TKFINSERIE(105109)="Printemps Métrage-50"
+ s ^TKFINSERIE(105111)="Printemps Métrage-50"
+ s ^TKFINSERIE(105066)="Printemps Métrage-50"
+ s ^TKFINSERIE(104436)="Printemps Métrage-50"
+ s ^TKFINSERIE(104479)="Printemps Métrage-50"
+ s ^TKFINSERIE(104432)="Printemps Métrage-50"
+ s ^TKFINSERIE(104478)="Printemps Métrage-50"
+ s ^TKFINSERIE(105067)="Printemps Métrage-50"
+ s ^TKFINSERIE(104433)="Printemps Métrage-50"
+ s ^TKFINSERIE(104385)="Printemps Métrage-50"
+ s ^TKFINSERIE(105073)="Printemps Métrage-50"
+ s ^TKFINSERIE(104383)="Printemps Métrage-50"
+ s ^TKFINSERIE(104384)="Printemps Métrage-50"
+ s ^TKFINSERIE(104482)="Printemps Métrage-50"
+ s ^TKFINSERIE(105070)="Printemps Métrage-50"
+ s ^TKFINSERIE(105069)="Printemps Métrage-50"
+ s ^TKFINSERIE(100238)="Printemps Métrage-50"
+ s ^TKFINSERIE(89925)="Printemps Métrage-50"
+ s ^TKFINSERIE(89926)="Printemps Métrage-50"
+ s ^TKFINSERIE(104425)="Printemps Métrage-50"
+ s ^TKFINSERIE(104426)="Printemps Métrage-50"
+ s ^TKFINSERIE(104365)="Printemps Métrage-50"
+ s ^TKFINSERIE(104366)="Printemps Métrage-50"
+ s ^TKFINSERIE(104557)="Printemps Métrage-50"
+ s ^TKFINSERIE(104560)="Printemps Métrage-50"
+ s ^TKFINSERIE(104558)="Printemps Métrage-50"
+ s ^TKFINSERIE(104559)="Printemps Métrage-50"
+ s ^TKFINSERIE(104410)="Printemps Métrage-50"
+ s ^TKFINSERIE(104359)="Printemps Métrage-50"
+ s ^TKFINSERIE(104411)="Printemps Métrage-50"
+ s ^TKFINSERIE(89896)="Printemps Métrage-50"
+ s ^TKFINSERIE(89891)="Printemps Métrage-50"
+ s ^TKFINSERIE(89884)="Printemps Métrage-50"
+ s ^TKFINSERIE(89886)="Printemps Métrage-50"
+ s ^TKFINSERIE(89975)="Printemps Métrage-50"
+ s ^TKFINSERIE(89978)="Printemps Métrage-50"
+ s ^TKFINSERIE(89977)="Printemps Métrage-50"
+ s ^TKFINSERIE(89976)="Printemps Métrage-50"
+ s ^TKFINSERIE(89988)="Printemps Métrage-50"
+ s ^TKFINSERIE(89931)="Printemps Métrage-50"
+ s ^TKFINSERIE(89935)="Printemps Métrage-50"
+ s ^TKFINSERIE(89898)="Printemps Métrage-50"
+ s ^TKFINSERIE(89899)="Printemps Métrage-50"
+ s ^TKFINSERIE(89897)="Printemps Métrage-50"
+ s ^TKFINSERIE(89936)="Printemps Métrage-50"
+ s ^TKFINSERIE(105076)="Printemps Métrage-50"
+ s ^TKFINSERIE(105075)="Printemps Métrage-50"
+ s ^TKFINSERIE(105074)="Printemps Métrage-50"
+ s ^TKFINSERIE(104438)="Printemps Métrage-50"
+ s ^TKFINSERIE(105620)="Printemps Métrage-50"
+ s ^TKFINSERIE(105619)="Printemps Métrage-50"
+ s ^TKFINSERIE(105617)="Printemps Métrage-50"
+ s ^TKFINSERIE(105618)="Printemps Métrage-50"
+ s ^TKFINSERIE(87738)="Printemps Métrage-50"
+ s ^TKFINSERIE(87737)="Printemps Métrage-50"
+ s ^TKFINSERIE(104364)="Printemps Métrage-50"
+ s ^TKFINSERIE(87745)="Printemps Métrage-50"
+ s ^TKFINSERIE(89904)="Printemps Métrage-50"
+ s ^TKFINSERIE(89902)="Printemps Métrage-50"
+ s ^TKFINSERIE(89903)="Printemps Métrage-50"
+ s ^TKFINSERIE(87646)="Printemps Métrage-50"
+ s ^TKFINSERIE(83335)="Printemps Métrage-50"
+ s ^TKFINSERIE(87645)="Printemps Métrage-50"
+ s ^TKFINSERIE(83336)="Printemps Métrage-50"
+ s ^TKFINSERIE(87640)="Printemps Métrage-50"
+ s ^TKFINSERIE(87643)="Printemps Métrage-50"
+ s ^TKFINSERIE(83341)="Printemps Métrage-50"
+ s ^TKFINSERIE(87639)="Printemps Métrage-50"
+ s ^TKFINSERIE(87638)="Printemps Métrage-50"
+ s ^TKFINSERIE(87636)="Printemps Métrage-50"
+ s ^TKFINSERIE(87641)="Printemps Métrage-50"
+ s ^TKFINSERIE(103334)="Printemps Métrage-50"
+ s ^TKFINSERIE(100843)="Printemps Métrage-50"
+ s ^TKFINSERIE(100845)="Printemps Métrage-50"
+ s ^TKFINSERIE(85855)="Printemps Métrage-50"
+ s ^TKFINSERIE(85848)="Printemps Métrage-50"
+ s ^TKFINSERIE(87642)="Printemps Métrage-50"
+ s ^TKFINSERIE(87754)="Printemps Métrage-50"
+ s ^TKFINSERIE(103380)="Printemps Métrage-50"
+ s ^TKFINSERIE(87752)="Printemps Métrage-50"
+ s ^TKFINSERIE(87895)="Printemps Métrage-50"
+ s ^TKFINSERIE(87751)="Printemps Métrage-50"
+ s ^TKFINSERIE(87750)="Printemps Métrage-50"
+ s ^TKFINSERIE(87749)="Printemps Métrage-50"
+ s ^TKFINSERIE(87759)="Printemps Métrage-50"
+ s ^TKFINSERIE(87758)="Printemps Métrage-50"
+ s ^TKFINSERIE(87757)="Printemps Métrage-50"
+ s ^TKFINSERIE(87756)="Printemps Métrage-50"
+ s ^TKFINSERIE(87747)="Printemps Métrage-50"
+ s ^TKFINSERIE(89943)="Printemps Métrage-50"
+ s ^TKFINSERIE(89941)="Printemps Métrage-50"
+ s ^TKFINSERIE(101874)="Printemps Métrage-50"
+ s ^TKFINSERIE(101873)="Printemps Métrage-50"
+ s ^TKFINSERIE(84327)="Printemps Métrage-50"
+ s ^TKFINSERIE(104477)="Printemps Métrage-50"
+ s ^TKFINSERIE(104481)="Printemps Métrage-50"
+ s ^TKFINSERIE(81449)="Printemps Métrage-50"
+ s ^TKFINSERIE(100244)="Printemps Métrage-50"
+ s ^TKFINSERIE(100140)="Printemps Métrage-50"
+ s ^TKFINSERIE(100132)="Printemps Métrage-50"
+ s ^TKFINSERIE(87649)="Printemps Métrage-50"
+ 
+ 
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

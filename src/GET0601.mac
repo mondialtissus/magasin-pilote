@@ -1,0 +1,144 @@
+ROUTINE GET0601
+GET0601
+ 
+ ZA ^MODROUTINE
+ s gPOS=$G(^HWINFO("MAG"))	
+ s TK=$O(^TK(""))
+ while TK'=""
+ {
+	 s ANNEE=+$E(TK,3,4) 
+	 if ANNEE=4 
+	 {		 	 			 
+		 s TK0=$G(^TK(TK,0))
+		 if (+($P(TK0,"\",4))=1)||(+($P(TK0,"\",5))=1)
+		 {
+			s LG=$O(^TK(TK,"0"))
+		 	while (LG'="")
+		 	{		 		 	 		 
+				 s REC=$G(^TK(TK,LG))
+				 s PLU=$P(REC,"\",1)
+				 s DESC=$P(REC,"\",2)			 
+				 s IFAM=+$P(REC,"\",3)
+				 s QTE=+$P(REC,"\",4)
+				 s PU=+$P(REC,"\",5)
+				 s TOT=+$P(REC,"\",6)
+				 s REM=+$P(REC,"\",7)
+				 s SOLD=+$P(REC,"\",8)
+				 s LGTOSEND=PLU_"\"_IFAM_"\"_QTE_"\"_PU_"\"_REM_"\"_SOLD_"\"_TOT
+				 if ((REM>0)||(SOLD>0))
+				 {
+					 if DESC'="2e Demarque"
+					 {
+					 	// Récupération des soldes ou remises à partir du 1er janvier
+					 	if REM>0 {s ^MODROUTINE(gPOS,"GET0601RESULT","REMISES",TK,LG)=LGTOSEND}
+						if SOLD>0 {s ^MODROUTINE(gPOS,"GET0601RESULT","SOLDES",TK,LG)=LGTOSEND}
+					 }
+				 }					
+			 	s LG=$O(^TK(TK,LG))
+		 	}	
+		 }
+	 }
+	 s TK=$O(^TK(TK))
+ }
+ 
+ s CA=$O(^TKFIDELITE(""))
+ while CA'=""
+ {
+         s DATE=$O(^TKFIDELITE(CA,"041130"))
+         while DATE'=""
+         {       
+         		if $E(DATE,1,2)="05" {q}
+                 s LASTREC=$G(^MODROUTINE(gPOS,"GET0601RESULT","TKFIDELITE",DATE))
+                 s LASTTOT=$P(LASTREC,"\",1)
+                 s LASTQTE=$P(LASTREC,"\",2)
+                 
+                 s REC=$G(^TKFIDELITE(CA,DATE))
+                 s TOT=$P(REC,"\",1)
+                 s QTE=$P(REC,"\",2)
+                 
+                 s GTOT=LASTTOT+TOT
+                 s GQTE=LASTQTE+QTE
+                 
+                 s ^MODROUTINE(gPOS,"GET0601RESULT","TKFIDELITE",DATE)=GTOT_"\"_GQTE
+                 
+                 s DATE=$O(^TKFIDELITE(CA,DATE))
+         }
+         s CA=$O(^TKFIDELITE(CA))
+ }
+ ZD ^MODROUTINE
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

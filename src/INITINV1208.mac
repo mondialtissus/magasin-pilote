@@ -1,0 +1,20 @@
+ROUTINE INITINV1208
+INITINV1208
+ 
+ S MAG=$G(^HWINFO("MAG"))
+ s ^HWINFO("TYPETERM")="DOLPHIN"
+ S ^HWINFO("INVENTAIRE","DATE")=61338		//8 dec 2008
+ s ^HWINFO("INVENTAIRE","DATETEST")=""
+ s ^HWINFO("INVENTAIRE","DATETESTFIN")=""
+ s ^HWINFO("INVENTAIRE","DATEFIN")=61366    // fin au 5 janvier 2008
+ s ^HWINFO("INVENTAIRE",61330,"AUTO")="" // Permet de valider l'utilisation du terminal 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

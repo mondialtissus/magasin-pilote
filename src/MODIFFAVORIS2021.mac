@@ -1,0 +1,7 @@
+ROUTINE MODIFFAVORIS2021
+AJOUTFAVORIS
+ s ^FUSIONFAVORIS(2)="Gardons le fil\Firefox*https://gardonslefil.mondialtissus.com/extranet/login/show\imgGardonsFil\imgGardonsFil"
+ k ^FUSIONFAVORIS(10) 
+ q
+
+

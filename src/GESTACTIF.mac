@@ -1,0 +1,18 @@
+ROUTINE GESTACTIF
+GESTACTIF
+	s ^HWINFO("GEST")="1"
+	s ^MENU(2,8)="1\ExeCaisse/GEST.EXE\SF8 :neerl\SF8: Gestion de stock\SF8 :ALL\SF8 :ANG"
+	s ^MENU(2,7)="1\fenRECMercerie\SF7:neerl\SF7: Reception mercerie\SF7:ALL\SF7:ANG"
+	s ^MENU(1,5)="1\catalogue_menu\SF5:neerl\SF5: Impression des catalogues\SF5:ALL\SF5:ANG"
+	;Nombre de jours entre la validation d'une réception et la remonté vers la centrale MODIO par défaut 48H de délai sans gestion de stock et immédiat (0 jour) en gestion de stock
+	s ^HWINFO("NBREJOURSATTENTEAR") = 0
+   
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

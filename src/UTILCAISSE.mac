@@ -1,0 +1,436 @@
+ROUTINE UTILCAISSE
+UTILCAISSE
+ Q
+ 
+CABYVENDEUR(DATECLOT)
+ 
+	; On génère un fichier temporaire qui contiendra la ventilation par vendeur
+	k ^tmpTKREGL
+	s CA=$O(^TKMOISJOURS(""))
+	while CA'=""{
+		s TK=$O(^TKMOISJOURS(CA,DATECLOT,""))
+		while TK'=""{
+			s NODE0=$G(^TK(TK,0))
+			s USER=$P(NODE0,"\",1)
+			s SUPPR=+$P(NODE0,"\",9)
+			s REGL=$P(NODE0,"\",3)
+			; Penser à gérer le multireglement			
+			if SUPPR=0{				
+				if REGL="MULTI"
+				{
+					s LSTREGL=$G(^TKMULTI(TK))
+					s NOMREGL="CB;CH;ES;"
+					f iREGL=1:1:3
+					{							
+						s FICTOT=+$G(^tmpTKREGL($P(NOMREGL,";",iREGL),USER,DATECLOT))
+						s ^tmpTKREGL($P(NOMREGL,";",iREGL),USER,DATECLOT)=FICTOT+(+$P(LSTREGL,"\",iREGL))
+					}									
+				}
+				else
+				{					
+					s LG="0"
+					s LG=$O(^TK(TK,LG))
+					while LG'=""{
+						s FICTOT=+$G(^tmpTKREGL(REGL,USER,DATECLOT))
+						s NODEX=$G(^TK(TK,LG))
+						s CURTOT=+$P(NODEX,"\",6)
+						s DESART=$P(NODEX,"\",2)													
+						s ^tmpTKREGL(REGL,USER,DATECLOT)=FICTOT+CURTOT						
+						s LG=$O(^TK(TK,LG))
+					}
+				}
+			}
+			s TK=$O(^TKMOISJOURS(CA,DATECLOT,TK))
+		}
+		s CA=$O(^TKMOISJOURS(CA))
+	}
+	q
+ 
+LSTOPBYVENDEUR(DATCLOT)
+	; On génère le détail des ventes par type de reglements
+	k ^tmpTKESPECES
+	k ^tmpTKCHEQUES
+	k ^tmpTKCREDITS
+	k ^tmpTKCB
+	
+	s LSTFIC="TKESPECES;TKCHEQUES;TKCB;TKCREDITS;"
+	s IFIC=$$CHAINEOCCURRENCE(LSTFIC,";")
+	s i=1
+	f i=1:1:IFIC
+	{
+		s CURFIC="^"_$P(LSTFIC,";",i)
+		w !, CURFIC
+		s CA=$O(@CURFIC@(DATCLOT,""))
+		while CA'=""{
+			s TK=$O(@CURFIC@(DATCLOT,CA,""))
+			while TK'=""{
+				s KILL=+$P($G(^TK(TK,0)),"\",9)
+				if KILL=0
+				{
+					if CURFIC="^TKCREDITS"{s REC=$G(@CURFIC@(DATCLOT,CA,TK,"0")) }else{s REC=$G(@CURFIC@(DATCLOT,CA,TK))}				
+					s NEWFIC="^tmp"_$P(LSTFIC,";",i)
+					s USER=$P($G(^TK(TK,0)),"\",1)				
+					s @NEWFIC@(DATCLOT,USER,TK)=REC								
+				}
+				s TK=$O(@CURFIC@(DATCLOT,CA,TK))
+			}
+			s CA=$O(@CURFIC@(DATCLOT,CA))
+		}
+	}
+	Q
+ 
+CHECKTKAV(DATCLOT)
+	; Contrôle des avoirs qu'ils ne soit pas ventilés en positif
+	s CA=$O(^TKMOISJOURS(""))
+	while CA'=""{
+		s TK=$O(^TKMOISJOURS(CA,DATCLOT,""))
+		while TK'=""{
+			s TK0=$G(^TK(TK,0))
+			i $P(TK0,"\",3)="AV"{
+				w !, TK_", "_$NORMALIZE(+$P(^TKTOTAL(TK),"/",1),4)
+				if +$NORMALIZE(+$P(^TKTOTAL(TK),"/",1),4)=0
+				{					
+					// Le ticket a été ventilé en avoir alors que c'est un ticket de 0Eur...
+					// on change le type de reglement en especes
+					s CA=+$E(TK,1,2)
+					s AM=$E(TK,3,6)
+					s AMJ=$E(TK,3,8)
+					s REC0=$G(^TK(TK,0))
+					s $P(REC0,"\",3)="ES"
+					s ^TK(TK,0)=REC0
+					s ^TKTOTAL(TK)=0
+					k ^TKAVOIRS(AM,CA,TK,0)
+					k ^TKAVOIRS(AMJ,CA,TK,0)
+					s ^TKESPECES(AMJ,CA,TK)="0\"_$P(REC0,"\",2)_"\"_$P(REC0,"\",1)
+				}
+				else
+				{
+					s RESCHECK=+$$CHECKIFTKNEG(TK)					
+					if RESCHECK=0{
+						; Il s'agit d'un avoir qui est passé en positif...
+						; on le retraite!
+						w !, "dans la condition"
+						D CORRECTKAV(TK)
+											
+					}
+				}
+			}
+			s TK=$O(^TKMOISJOURS(CA,DATCLOT,TK))
+		}
+		s CA=$O(^TKMOISJOURS(CA))
+	}
+	q
+CHECKIFTKNEG(TK)
+	s bISNEG=0
+	s VPOS=0
+	s VNEG=0
+	s VTOT=0
+	s NODEX=""
+	w !, "controle de "_TK
+	s LG=$O(^TK(TK,"0"))
+	while LG'=""{
+		s NODEX=$G(^TK(TK,LG))
+		s TOTLG=+$P(NODEX,"\",6)
+		s QTE=+$P(NODEX,"\",4)
+		s PU=+$P(NODEX,"\",5)
+				
+		if QTE<0{W !,"NEG:"_TOTLG s VNEG=VNEG+TOTLG}else{w !, "POS:"_TOTLG s VPOS=VPOS+TOTLG}
+		s LG=$O(^TK(TK,LG))
+	}
+	s VTOT=VPOS+VNEG
+	if VTOT<0 s bISNEG=1	
+	q +bISNEG
+ 
+CORRECTKAV(TK)
+ 
+	s QTE=0
+	s PU=0
+	s TOT=0	
+	s SENDTOT=0
+	s CUMULTOT=0
+	s POSNUM=$G(^HWINFO("MAG"))
+	s LG=$O(^TK(TK,"0"))
+	while LG'=""{
+		s NODEX=$G(^TK(TK,LG))
+		s QTE=+$P(NODEX,"\",4)
+		s PU=+$P(NODEX,"\",5)
+		s TOT=+$P(NODEX,"\",6)
+		s SENDTOT=TOT		
+		if (QTE>0)&&(TOT>0){	
+			s SENDTOT=TOT*-1
+			s $P(NODEX,"\",4)=QTE*-1
+			s $P(NODEX,"\",6)=SENDTOT
+			s ^TK(TK,LG)=NODEX
+			s ^MODCORTK(POSNUM,TK,LG)=NODEX
+		}
+		s CUMULTOT=CUMULTOT+SENDTOT
+		s LG=$O(^TK(TK,LG))
+	}
+	S ^TKTOTAL(TK)=CUMULTOT
+	S LASTREGLAMJ=$G(^TKREGL("AV",+$E(TK,1,2),$E(TK,3,8)))
+	S LASTREGLAM=$G(^TKREGL("AV",+$E(TK,1,2),$E(TK,3,6)))
+	s NEWREGLAMJ=LASTREGLAMJ+CUMULTOT
+	s NEWREGLAM=LASTREGLAM+CUMULTOT
+	s ^TKREGL("AV",+$E(TK,1,2),$E(TK,3,8))=NEWREGLAMJ
+	s ^TKREGL("AV",+$E(TK,1,2),$E(TK,3,6))=NEWREGLAM
+	q
+				
+MAJUSCULE(STRIN)
+	//r "Chaine à convertir : ",STRIN
+	s iSTRIN=$L(STRIN)
+	s strTMP=""
+	for i=1:1:iSTRIN
+	{
+	s strCODE=+$A($E(STRIN,i,i))
+	if (strCODE>96)&&(strCODE<123) 
+	{ // Cas de minuscules 
+	s strNEW=$C((strCODE-32))
+	s strTMP=strTMP_strNEW
+	}
+	else
+	{
+	s strTMP=strTMP_$c(strCODE)
+	}
+	}
+	s STROUT=strTMP
+	Q STROUT
+	
+CHAINEOCCURRENCE(STROC,CAR)
+	// Calcule le nombre d'occurrences d'une chaîne de caractères spécifique
+	// STROC : Texte dans lequel les occurrences de <Chaîne à rechercher> doivent être recherchées. 
+	// CAR : Texte à rechercher dans la <Chaîne source>
+	s CPTCAR=0
+	s iSize=$L(STROC)
+	for i=1:1:iSize
+	{
+	     if $E(STROC,i,i)=CAR {s CPTCAR=CPTCAR+1}
+	}       
+	q +CPTCAR
+	
+FORCECOMM
+	// Crée le fichier LaunchPoscomm pour lancer la comm
+	s file=##class(%File).%New("C:\Documents and Settings\Administrateur\Local Settings\Temp\LaunchPoscomm.pos")
+	d file.Open("WSN")
+	d file.%Close()
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

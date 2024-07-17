@@ -1,0 +1,42 @@
+ROUTINE OPESOLDES30PE13P1
+OPESOLDES30PE13P1
+ 
+	s ^TKSOLDES("104907")="\0.3\0"
+	s ^TKSOLDES("104903")="\0.3\0"
+	s ^TKSOLDES("104904")="\0.3\0"
+	s ^TKSOLDES("104906")="\0.3\0"
+	s ^TKSOLDES("104905")="\0.3\0"
+	s ^TKSOLDES("104909")="\0.3\0"
+	s ^TKSOLDES("104911")="\0.3\0"
+	s ^TKSOLDES("104912")="\0.3\0"
+	s ^TKSOLDES("104913")="\0.3\0"
+	s ^TKSOLDES("104910")="\0.3\0"
+	s ^TKSOLDES("102236")="\0.3\0"
+	s ^TKSOLDES("102235")="\0.3\0"
+	s ^TKSOLDES("103270")="\0.3\0"
+	s ^TKSOLDES("102241")="\0.3\0"
+	s ^TKSOLDES("102247")="\0.3\0"
+	s ^TKSOLDES("105427")="\0.3\0"
+	s ^TKSOLDES("102230")="\0.3\0"
+	
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

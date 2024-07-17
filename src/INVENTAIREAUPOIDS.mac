@@ -1,0 +1,433 @@
+ROUTINE INVENTAIREAUPOIDS
+INVENTAIREAUPOIDS
+ Q
+
+Import(sFile)
+ s sep=";"
+ s bENTETE=1
+ 
+ s MAG=$G(^HWINFO("MAG"))
+ s DATEINV=$G(^HWINFO("INVENTAIRE","DATE"))
+ s DATETREAT=$ZD($H,8)_" / "_$Replace($ZTIME($P($H,",",2)),":","")
+
+ w !,"Magasin = "_MAG
+ w !,"Date Inventaire = "_$ZD(DATEINV,8)_" ("_DATEINV_")"
+ w !,"Fichier = "_sFile
+ w !,"Separateur = "_sep
+ w !,"Ligne d'entete = "_bENTETE
+ 
+ s bSTOPIMPORT=0
+ I +$D(^INVARTICLELM)>0 s bSTOPIMPORT=1
+ I +$D(^INVARTICLEME)>0 s bSTOPIMPORT=1
+ I +$D(^INVARTICLETI)>0 s bSTOPIMPORT=1
+ 
+ 
+ s bSTOPIMPORT=0
+ 
+ I bSTOPIMPORT=1 {w !,!,"... INVENTAIRE DEJA EXISTANT",!,"Arret du traitement d'import de l'inventaire",!}
+ else
+ {
+	s NOMFICHIERINV = $P($P(sFile,"\",*),".",1)
+ 	if NOMFICHIERINV'=MAG{w !,"Erreur de code magasin" q} //Le nom du fichier doit etre le meme que celui du code magasin 
+	 if ##class(%Library.File).Exists(sFile)
+	 {
+		 s bERREUR=$$TreatFile(sFile,1)
+		 if bERREUR=1{q}
+		 
+		 r !,!,"Confirmez-vous l'import de l'inventaire ? ",A
+		 s bERREUR=$$TreatFile(sFile,0)
+		 s ^HWINFO("INVENTAIRE",DATEINV,"CHECKZONE")=$P(DATETREAT," / ",1)_"\"_$P(DATETREAT," / ",2)
+	 }
+	 else
+	 {
+		 w !,!,"... FICHIER INTROUVABLE",!,"Arrêt du traitement d'import de l'inventaire",!
+	 }
+ }
+ 
+ Q
+
+TreatFile(sFile,bSIMULATION)
+ s file=##class(%Library.File).%New(sFile)
+ d file.Open("R")
+ s DATA="" s i=1
+ s iCptLig=0 s iCPTOK=0 s iCPTVALNULL=0 s iCPTVALNEG=0 s iCPTARTNULL=0 s iCPTARTNOEXIST=0 s iCPTMAUVAISEDATE=0
+ S iSize=file.SizeGet()
+ //w "Taille : "_iSize
+ F i=1:1:iSize
+ {
+     S iCar=file.Read(1)
+     ;w !,+$A(iCar)
+     I (+$A(iCar)=-1)&&(DATA'="")
+     {
+	     s iCptLig=iCptLig+1
+	     I (bENTETE=0)||((bENTETE=1)&&(iCptLig>1))
+	     {
+		     s SECTEUR=$P(DATA,";",1) // NON UTILISE
+		     s ZONEINV=$P(DATA,";",2)
+		     s CB=$P(DATA,";",3) // NON UTILISE
+		     s PLU=$P(DATA,";",4)
+		     s REFFOURN=$P(DATA,";",5) // NON UTILISE
+		     s DESIGNATION=$P(DATA,";",6) // NON UTILISE
+		     s NBBOBINE=+$Replace($P(DATA,";",7),",",".")
+		     s POIDSMANDRIN=+$Replace($P(DATA,";",8),",",".")
+		     s POIDSBARRE=+$Replace($P(DATA,";",9),",",".")
+		     s POIDSPESEE=+$Replace($P(DATA,";",10),",",".")
+		     s QTEINV=+$Replace($P(DATA,";",11),",",".")
+		     s DATEC=$P(DATA,";",12)
+		     s HEUREC=$Replace($P(DATA,";",13),":","")
+		     s TERMINAL=$P(DATA,";",14)
+		     s DATECOMPTAGE=DATETREAT
+		     s DATETEST=DATECOMPTAGE
+		     s INFOSUPP="*"_NBBOBINE_"*"_POIDSMANDRIN_"*"_POIDSBARRE_"*"_POIDSPESEE
+		     I $L(DATEC)=8
+		     {
+			     s DATECOMPTAGE="20"_$E(DATEC,7,8)_$E(DATEC,4,5)_$E(DATEC,1,2)
+			     s DATETEST=DATECOMPTAGE
+			     s DATECOMPTAGE=DATECOMPTAGE_" / "_HEUREC
+		     }
+		     s DATEAVANTINV=DATEINV-1
+		     //if DATECOMPTAGE<(+$ZD(DATEINV,8)-1){s iCPTMAUVAISEDATE=iCPTMAUVAISEDATE+1}
+		     if DATETEST<(+$ZD(DATEAVANTINV,8)){s iCPTMAUVAISEDATE=iCPTMAUVAISEDATE+1}		     else
+		     {		     
+			     I PLU="" {s iCPTARTNULL=iCPTARTNULL+1}
+			     else
+			     {
+		     	 	I +$D(^SP(PLU))=0 {s iCPTARTNOEXIST=iCPTARTNOEXIST+1}
+		     	 	else
+		     	 	{
+			     	 	s ARTICLE=$G(^SP(PLU))
+			     	 	I +$D(^ST(ARTICLE))=0 {s iCPTARTNOEXIST=iCPTARTNOEXIST+1}
+			     	 	else
+			     	 	{
+				     	 	I QTEINV=0 {s iCPTVALNULL=iCPTVALNULL+1}
+				     	 	else
+				     	 	{
+					     	 	I QTEINV<0 {s iCPTVALNEG=iCPTVALNEG+1}
+					     	 	else
+					     	 	{
+						     	 	s iCPTOK=iCPTOK+1
+						     	 	
+						     	 	I bSIMULATION=0 // A CHANGER APRES
+						     	 	{
+							     	 	// On enregistre la donnee
+							     	 	s DATA0=$G(^ST(ARTICLE))
+							     	 	s DATA4=$G(^ST(ARTICLE,4))
+							     	 	s DATA5=$G(^ST(ARTICLE,5))
+							     	 	
+							     	 	s DATAPV=$P(DATA0,"\",22)
+							     	 	I +$P(DATAPV,"/",2)>0 {I +$P(DATAPV,"/",2)>DATEINV {s PV=$P(DATAPV,"/",1)} else {s PV=$P(DATAPV,"/",3)}}
+							     	 	else {s PV=+DATAPV}
+							     	 	s CB=$P(DATA0,"\",1)
+							     	 	s DESIGNATION=$P(DATA4,"\",3)
+							     	 	s PCB=+$P(DATA0,"\",6)
+							     	 	s UEMB=$P(DATA0,"\",20)
+							     	 	s PRMP=+$P(DATA0,"\",13)
+							     	 	s GR1=$P(DATA0,"\",23)
+							     	 	s GR2=$P(DATA0,"\",24)
+							     	 	s LEVNUM=$P(DATA4,"\",1)
+							     	 	
+							     	 	s DATAINV=PV_"\"_ARTICLE_"\"_PLU_"\"_CB_"\"_DESIGNATION_"\"_PCB_"\"_PCB_" "_UEMB
+							     	 	s DATAINV=DATAINV_"\"_PRMP_"\"_GR2_"\"_GR1_"\0\"_PV
+							     	 	s DATAINV=DATAINV_"\"_QTEINV_"\"_ZONEINV_"\1\0\RGIS\"_DATECOMPTAGE_"\"_TERMINAL_"*"_INFOSUPP
+							     	 	
+							     	 	s DESTFILE="^INVARTICLE"
+							     	 	s SUFFIXEDESTFILE="ME"
+							     	 	I +GR1<4 s SUFFIXEDESTFILE="TI"
+							     	 	I (+GR1=5)||(+GR1=6) s SUFFIXEDESTFILE="LM"
+							     	 	s DESTFILE=DESTFILE_SUFFIXEDESTFILE
+							     	 	
+							     	 	s NUMINV=+$G(^HWINFO("INVENTAIRE",DATEINV,SUFFIXEDESTFILE,"LGREF"))+1
+							     	 	s @DESTFILE@(MAG,"REFERENCE",LEVNUM,ARTICLE,NUMINV)=DATAINV
+							     	 	s ^HWINFO("INVENTAIRE",DATEINV,SUFFIXEDESTFILE,"LGREF")=NUMINV
+						     	 	}
+					     	 	}
+				     	 	}
+			     	 	}
+		     	 	}
+			     }
+		     }
+		     
+	     	 
+   	 	     ;w !,DATA
+
+	     }
+	     
+	     // On a fini de traiter la ligne courante => reinitialisation
+	     s DATA=""
+    }  
+    else
+    {
+        s DATA=DATA_iCar
+    }
+ }
+ 
+ w !,!,"***********************************"
+ s bErreur = 0
+ I bSIMULATION=1 {w !,"Simulation d'import"}else{w !,"Resultat de l'import"}
+ w !,"Nombre de lignes traitees : "_(iCptLig-bENTETE)
+ w !,"Nombre de lignes valides  : "_iCPTOK
+ s NBERRDETECTEES=+iCPTVALNULL+iCPTVALNEG+iCPTARTNULL+iCPTARTNOEXIST+iCPTMAUVAISEDATE
+ I NBERRDETECTEES=0 {w !,"Pas d'erreur detecte"}
+ else
+ {
+	 w !,"Erreurs detectees         : "_NBERRDETECTEES
+	 w !,"            . Plu vide          : "_iCPTARTNULL
+	 w !,"            . Plu non existant  : "_iCPTARTNOEXIST
+	 w !,"            . Quantite nulle    : "_iCPTVALNULL
+	 w !,"            . Quantite negative : "_iCPTVALNEG
+	 w !,"            . DATE INVALIDE: "_iCPTMAUVAISEDATE
+	 w !,"Import Impossible."
+	 s bErreur = 1
+ }
+ w !,"***********************************"
+ 
+ D file.Close()   
+ Q bErreur
+
+Transfert(RepDest="c:\pos\inventaire\")
+ s ftp=##class(%Net.FtpSession).%New()
+ I 'ftp.Connect("ftp.rgis.com","mondfr12@ftpsrv","inv914764") {w !,"Impossible de se connecter au serveur FTP " Q}
+ I 'ftp.Binary() {w !,"Impossible de basculer en mode binaire dans le FTP"}
+
+ New fileArray,key
+ If 'ftp.NameList("*.txt",.fileArray) {w !,"Impossible de recuperer la liste des fichiers du serveur ftp" Q}
+ 
+ Set key=""
+ S FileInProgress=fileArray.GetNext(.key)
+ I FileInProgress'=""
+ {
+	 While FileInProgress'=""
+	 {
+		 s filestream=##class(%FileBinaryStream).%New()
+		 s sc=filestream.LinkToFile(RepDest_FileInProgress)
+		 I ftp.Retrieve(FileInProgress,filestream)
+		 {
+			 I 'ftp.Delete(FileInProgress) {w !,"Impossible de supprimer le fichier "_FileInProgress_" du serveur ftp" Q}
+		 }
+		 d filestream.%Save()
+		 d filestream.%Close()
+
+ 		 d Import(RepDest_FileInProgress)
+		 
+		 S FileInProgress=fileArray.GetNext(.key)
+	 }
+ }
+
+ I 'ftp.Logout() {w !,"Impossible de se deconnecter du serveur FTP" Q}
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

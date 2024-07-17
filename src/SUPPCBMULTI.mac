@@ -1,0 +1,218 @@
+ROUTINE SUPPCBMULTI
+SUPPCBMULTI
+	k ^CSB("0073650139758","PWAC1DV/COA26000040001/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA2600004002/DIVERS")                          
+	k ^CSB("0073650139758","PWAC1DV/COA26000040004/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040009/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040013/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040016/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA2600004023/DIVERS")                           
+	k ^CSB("0073650139758","PWAC1DV/COA2600004026/DIVERS")                          
+	k ^CSB("0073650139758","PWAC1DV/COA26000040031/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040039/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040051/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040058/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040061/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040063/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040075/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040083/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040116/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040118/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040128/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040132/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040140/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040155/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040157/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040161/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA2600004256/DIVERS")                          
+	k ^CSB("0073650139758","PWAC1DV/COA2600004277/DIVERS")                          
+	k ^CSB("0073650139758","PWAC1DV/COA2600004280/DIVERS")                          
+	k ^CSB("0073650139758","PWAC1DV/COA2600004282/DIVERS")                          
+	k ^CSB("0073650139758","PWAC1DV/COA26000040310/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26000040375/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26200040810/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26200040811/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26200040812/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26200040845/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26200040865/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26200040880/DIVERS")                         
+	k ^CSB("0073650139758","PWAC1DV/COA26200040887/DIVERS")                         
+	k ^CSB("0719269150707","PWAC1DV/COA26000040001/BLANC1")                         
+	k ^CSB("0719269150714","PWAC1DV/COA26000040002/NOIR2")                          
+	k ^CSB("0719269150721","PWAC1DV/COA26000040004/BLEUCLAI")                               
+	k ^CSB("0719269150738","PWAC1DV/COA26000040009/BLEUFONC")                               
+	k ^CSB("0719269150745","PWAC1DV/COA26000040013/BORDEAUX")                               
+	k ^CSB("0719269150752","PWAC1DV/COA26000040016/BEIGEFON")                               
+	k ^CSB("0719269150769","PWAC1DV/COA26000040023/GRISCLAI")                               
+	k ^CSB("0719269150776","PWAC1DV/COA26000040026/GRISFONC")                               
+	k ^CSB("0719269150783","PWAC1DV/COA26000040031/ROSE31")                         
+	k ^CSB("0719269150790","PWAC1DV/COA26000040039/ROUGEBRI")                               
+	k ^CSB("0719269150806","PWAC1DV/COA26000040051/BRUNFONC")                               
+	k ^CSB("0719269150813","PWAC1DV/COA26000040058/VERTGRIS")                               
+	k ^CSB("0719269150820","PWAC1DV/COA26000040061/VERTMOUS")                               
+	k ^CSB("0719269150837","PWAC1DV/COA26000040063/VERT63")                         
+	k ^CSB("0719269150844","PWAC1DV/COA26000040075/OCRE75")                         
+	k ^CSB("0719269150851","PWAC1DV/COA26000040083/SABLE83")                                
+	k ^CSB("0719269150868","PWAC1DV/COA26000040116/CREME116")                               
+	k ^CSB("0719269150875","PWAC1DV/COA26000040118/BLEUGRIS")                               
+	k ^CSB("0719269150882","PWAC1DV/COA26000040128/ROUGEBRI")                               
+	k ^CSB("0719269150899","PWAC1DV/COA26000040132/AQUA132")                                
+	k ^CSB("0719269150905","PWAC1DV/COA26000040140/TURQUOIS")                               
+	k ^CSB("0719269150912","PWAC1DV/COA26000040155/BEIGEFON")                               
+	k ^CSB("0719269150929","PWAC1DV/COA26000040157/157")                            
+	k ^CSB("0719269150936","PWAC1DV/COA26000040161/VIEUXROS")                               
+	k ^CSB("0719269150943","PWAC1DV/COA26000040256/NATUR256")                               
+	k ^CSB("0719269150950","PWAC1DV/COA26000040277/FUCHSIA2")                               
+	k ^CSB("0719269150967","PWAC1DV/COA26000040280/ORANGEFO")                               
+	k ^CSB("0719269150974","PWAC1DV/COA26000040282/POURPRE2")                               
+	k ^CSB("0719269150981","PWAC1DV/COA26000040310/VIEUXROS")                               
+	k ^CSB("0719269150998","PWAC1DV/COA26000040375/MAUVE375")                               
+	k ^CSB("073650139758","PWAC1DV/COA26000040001/DIVERS")                          
+	k ^CSB("073650139765","PWAC1DV/COA26000040002/NOIR2")                           
+	k ^CSB("073650139772","PWAC1DV/COA26000040004/BLEUCLAI")                                
+	k ^CSB("073650139789","PWAC1DV/COA26000040013/BORDEAUX")                                
+	k ^CSB("073650139796","PWAC1DV/COA26000040031/DIVERS")                          
+	k ^CSB("073650139802","PWAC1DV/COA26000040051/BRUNFONC")                                
+	k ^CSB("073650139826","PWAC1DV/COA26000040063/DIVERS")                          
+	k ^CSB("073650139833","PWAC1DV/COA26000040075/DIVERS")                          
+	k ^CSB("073650139840","PWAC1DV/COA26000040128/ROUGEBRI")                                
+	k ^CSB("073650139857","PWAC1DV/COA26000040157/DIVERS")                          
+	k ^CSB("073650139864","PWAC1DV/COA26000040161/DIVERS")                          
+	k ^CSB("073650139871","PWAC1DV/COA26000040256/NATUR256")                                
+	k ^CSB("073650810947","PWAC1DV/COA26000040016/BEIGEFON")                                
+	k ^CSB("073650810961","PWAC1DV/COA26000040061/DIVERS")                          
+	k ^CSB("073650810985","PWAC1DV/COA26000040039/DIVERS")                          
+	k ^CSB("073650820779","PWAC1DV/COA26000040118/BLEUGRIS")                                
+	k ^CSB("073650839597","PWAC1DV/COA26000040026/GRISFONC")                                
+	k ^CSB("073650839627","PWAC1DV/COA26000040310/DIVERS")                          
+	k ^CSB("073650844133","PWAC1DV/COA2651/1")                              
+	k ^CSB("073650844164","PWAC1DV/COA265256/256")                          
+	k ^CSB("073650861499","PWAC1DV/COA26000040058/DIVERS")                          
+	k ^CSB("073650861512","PWAC1DV/COA26000040140/DIVERS")                          
+	k ^CSB("073650877292","PWAC1DV/COA26000040277/FUCHSIA2")                                
+	k ^CSB("073650877308","PWAC1DV/COA26000040280/ORANGEFO")                                
+	k ^CSB("073650877315","PWAC1DV/COA26000040155/DIVERS")                          
+	k ^CSB("073650877322","PWAC1DV/COA26000040083/DIVERS")                          
+	k ^CSB("073650877339","PWAC1DV/COA26000040375/DIVERS")                          
+	k ^CSB("073650877346","PWAC1DV/COA26000040282/POURPRE2")                                
+	k ^CSB("073650894442","PWAC1DV/COA26000040009/BLEUFONC")                                
+	k ^CSB("073650894459","PWAC1DV/COA26000040023/GRISCLAI")                                
+	k ^CSB("073650894466","PWAC1DV/COA26000040116/CREME116")                                
+	k ^CSB("073650894473","PWAC1DV/COA26000040132/AQUA132")                         
+	k ^CSB("073650918520","PWAC1DV/COA26200040810/DIVERS")                          
+	k ^CSB("073650918537","PWAC1DV/COA26200040811/DIVERS")                          
+	k ^CSB("073650918544","PWAC1DV/COA26200040812/DIVERS")                          
+	k ^CSB("073650918551","PWAC1DV/COA26200040845/DIVERS")                          
+	k ^CSB("073650918568","PWAC1DV/COA26200040865/DIVERS")                          
+	k ^CSB("073650918575","PWAC1DV/COA26200040880/DIVERS")                          
+	k ^CSB("073650918582","PWAC1DV/COA26200040887/DIVERS")                          
+ 
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

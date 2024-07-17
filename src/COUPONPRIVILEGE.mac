@@ -1,0 +1,16 @@
+ROUTINE COUPONPRIVILEGE
+COUPONPRIVILEGE
+ // le 1 après la date correspond à un nx flag pour les opérations
+ // avec une mécanique promotionnelle simple ne necessitant pas de paramétrage supplémentaire
+ // ex : 20% sur tout le magasin 
+ 
+ S ^TKCOUPREDUC(2888888840226)="30\0.20\20091105\20091105\1\"	
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,14 @@
+ROUTINE ADDMODCMDME
+ADDMODCMDME
+	s IND=0
+	S IND=$O(^FILESFTP("FROMMAG",""),-1)+1
+	S ^FILESFTP("FROMMAG",IND)="MODCMDME"
+        q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

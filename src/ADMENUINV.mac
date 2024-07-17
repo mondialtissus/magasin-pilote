@@ -1,0 +1,14 @@
+ROUTINE ADMENUINV
+ADMENUINV 
+ S ^MENU(2,6)="1\nevgetdirect\SF6:neerl\SF6: Réception des livraisons\SF6:ALL\SF6:ANG"
+ S ^MENU(2,7)="1\fenRECMercerie\SF7:neerl\SF7: Validation livraisons mercerie\SF7:ALL\SF7:ANG"
+ S ^GUMENU(1,1)= "Création Transfert\fenCMDRetro\img11"
+ S ^GUMENU(1,2)= "Réception Transfert\fenCMDRetroRec\img13"
+ 
+ q
+ 
+ 
+ 
+ 
+ 
+ 

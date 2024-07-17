@@ -1,0 +1,9 @@
+ROUTINE INITV2MAGCONN
+INITV2MAGCONN
+ s ^HWINFO("SSMAG","REPPHOTO")="C:\gsiphotos\"
+ s ^HWINFO("SSMAG","REPPHOTO64")="C:\gsiphotos\64\"
+ Q
+
+
+
+

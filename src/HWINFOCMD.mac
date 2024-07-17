@@ -1,0 +1,14 @@
+ROUTINE HWINFOCMD
+HWINFOCMD
+ 
+     ;Changement du nombre de mois légal pour réceptionner les commandes
+     s ^HWINFO("NBCMDVISIBLE")="12"
+ 
+ q
+	
+ 
+ 
+ 
+ 
+ 
+ 

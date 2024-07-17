@@ -1,0 +1,7 @@
+ROUTINE A4BORNE
+A4BORNE
+ S ^HWINFO("A4BORNE")="Xeroxb1"
+ Q
+
+
+

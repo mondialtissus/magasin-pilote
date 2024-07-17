@@ -1,0 +1,47 @@
+ROUTINE HWSTO
+HWSTO ;INFO;26-Jan-93 14:31;SIBECO;FICHE STOCK : PROGRAMME PRINCIPAL;169;11-Apr-01 14:43
+ N (%TAAL,%USER,%DECI,%ACCMENX)
+ I +%ACCMENX<2 D DIALBOX^HW(2776,2777,0) R *A:5 Q
+ S NUM=^HWINFO("MAG")
+SAIS ;
+ K TB
+ S TB(1)="BRART\24,$U\"_$$MESS^HW(1364)_"\"_$G(BRART)_"\ARTICLE\"
+ I '$$^LIBINP("TB",0,1,$$MESS^HW(1365)) Q
+ I ((BRART="0")!(BRART="")) G SAIS
+ S ACTION=1 I '$$MENU() Q
+ S BRART=""
+ G SAIS
+LOADQTE(BRART,NBJOUR) ;
+ S (QTeTP,QTeTP2,QTeREEL,QTeRECE,QTeDISP,QTeBORD,QTeNEV1,QTeNEV2,QTeCOMM,QTeCONF,QTeEXT,QTeINT,QTeSTO,QTeRESE,QTeFUTU,PTSRECO,ACOMMAN)=0
+ I BRART="" Q
+ S QTeREEL=+$P($G(^HWQTE(BRART,^HWINFO("MAG"))),"\",1)      ; quantite reelle en magasin
+ ;
+ S QTeNEV1=$$^HWQTENE1(BRART)                               ; quantite dans modcmdhc (note envoi pas encore mise a jour)
+ S QTeNEV2=$$^HWQTENE2(BRART)                               ; quantite dans hwnev (note envoie pas encore recepetionne)
+ S QTeCOMM=QTeNEV1+QTeNEV2                                  ; STOCK EN COMMANDE
+ ;
+ S QTeCONF=$$^HWQTECNF(BRART)                               ; quantite a confectionner pour autre atelier dont il faut couper le tissu
+ S QTeEXT=$$^HWQTEEXT(BRART,NBJOUR)                         ; quantite confection externe ou il faut couper le tissu
+ S QTeINT=$$^HWQTEINT(BRART,NBJOUR)                         ; quantite confection interne ou il fait couper le tissu
+ S QTeTP=$$^HWQTETP(BRART)                                  ; Quantite couvre-sol ... en attente de coupe
+ S QTeTP2=$$^HWQTETP2(BRART)                                ; Quantite couvre-sol ... deja coupe
+ S QTeSTO=$$^HWQTESTO(BRART)                                ; quantite en commande stock
+ ;
+ S QTeRESE=QTeCONF+QTeEXT+QTeINT+QTeSTO+QTeTP+QTeTP2                     ; STOCK RESERVE
+ S QTeFUTU=QTeREEL+QTeCOMM-QTeRESE                          ; STOCK FUTUR
+ Q
+MENU() ;
+EDIT S TYPESCR=1
+ D LOADSTO^HWFILTER(BRART)
+ D ^HWSTO0(BRART)
+ D ^HWSTONEW(BRART)
+ D ^HWHISTIO(BRART)
+ Q 1
+ S MENULGN=$TR($$MESS^HW(1294),":","\")
+ S ACTION=$$^%LIBMNL(MENULGN,23,1,ACTION)
+ I ((ACTION<0)!(ACTION=5)) Q 0
+ I +ACTION=4 D ^HWHISTIO(BRART) G EDIT
+ I +ACTION=1 S BRART=$O(^ST(BRART)) G EDIT
+ I +ACTION=2 S BRART=$O(^ST(BRART),-1) G EDIT
+ Q 1
+ 

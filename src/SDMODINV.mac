@@ -1,0 +1,64 @@
+ROUTINE SDMODINV
+SDMODINV ;Y2K;Transfert de l'inventaire;;;92; 6-Jan-01 14:43
+ S POSNUM=^HWINFO("MAG")
+ I '$D(^MODINVHC) Q
+ ;; DATE ...du... JOUR
+ ;S DATE=$G(^MODINVHC(POSNUM,0))
+ S DATE=+$$DTI^ZPROC($H)-1
+ I $D(^MODINVHC(POSNUM,DATE)) I +$G(^MODINVHC(POSNUM,DATE))=0 D INV
+ Q
+FINJ ;
+ S POSNUM=^HWINFO("MAG")
+ I '$D(^MODINVHC) Q
+ S DATE=+$$DTI^ZPROC($H)
+ I $D(^MODINVHC(POSNUM,DATE)) I +$G(^MODINVHC(POSNUM,DATE))=0 D INV
+ Q
+INV ;
+ S ^MODINVHC(POSNUM,DATE)=$H
+ D DIALBOX^HW(2784,2788,0)
+ H 10
+ ;
+ S %C=0,i=0
+ S BF="^HWBONCOM(%C,%B,0)"
+ F  S %C=$O(^HWBONCOM(%C)) Q:(+%C=0)  D
+ .S %B=0
+ .F  S %B=$O(^HWBONCOM(%C,%B)) Q:(+%B=0)  D
+ ..I $P($G(^HWBONCOM(%C,%B,0)),"\",7)="DEVIS" Q
+ ..S i=i+1
+ ..;                             Bon       Date         h  Cli      Acompte                 Total                    User              Recep O/N                Style                IE
+ ..S ^MODOUV(POSNUM,$$DT8^ZPROC(DATE),i)=i_"\"_%B_"\"_$P(@BF,"\",3)_"\\"_%C_"\"_$P(@BF@("T1"),"\",1)_"\"_$P(@BF@("T1"),"\",2)_"\"_$P(@BF,"\",4)_"\"_$P(@BF@("T1"),"\",15)_"\"_$P(@BF,"\",6)_"\"_$P(@BF,"\",7)
+ ..Q
+ .Q
+ ;
+ S ^MODINFO(^HWINFO("MAG"),"CLOTURE=BONS OUVERTS")=$$DT10^ZPROC($H)_"\"_$$^%LIBTMST($H)
+ K ^MODINV
+ S NEVNUM=0
+ F  S NEVNUM=$O(^HWNEV(POSNUM,NEVNUM)) Q:(+NEVNUM=0)  D
+ .S ^MODNEV(POSNUM,$$DT8^ZPROC(DATE),NEVNUM)=0
+ .Q
+ S ^MODINFO(^HWINFO("MAG"),"CLOTURE=NEV OUVERTES")=$$DT10^ZPROC($H)_"\"_$$^%LIBTMST($H)
+ ;
+ Q
+TRFIO(ART,STOCK) ;
+ I '$D(^HWSTOGIO(ART,0)) S ^HWSTOGIO(ART,0)=0                                  ; initialisation
+ S ^HWSTOGIO(ART,0)=^HWSTOGIO(ART,0)+1,NODE=^HWSTOGIO(ART,0)                   ; init du node
+ S SIO="I"
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",1)=""
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",2)=""
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",3)=+$H ; date et heure
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",4)="I"
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",5)=0
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",6)=0
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",7)=""
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",8)=""
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",9)="MVM 0 SPECIAL INVENTAIRE"
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",10)=""
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",11)=0
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",12)="AUTO"
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",13)=0
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",14)=""
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",15)=""
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",16)=""
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",17)=3
+ S $P(^HWSTOGIO(ART,NODE,SIO),"\",18)=STOCK
+ 
