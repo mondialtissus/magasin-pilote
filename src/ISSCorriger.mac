@@ -1,0 +1,29 @@
+ROUTINE ISSCorriger
+ISSCorriger
+ set HWINFO = "^[""USER""]HWINFO"
+ set NOEUD  = "ADRESSE_IP_SERVER"
+ 
+ set @HWINFO@("INVENTAIRE","ISS","DEPLOIEMENT") = $zd($P($h,",",1))_" "_$ztime($P($h,",",2))
+ set @HWINFO@("INVENTAIRE","ISS","PERIODIQUE","ACTIF") = 1
+ set @HWINFO@("INVENTAIRE","ISS","TOURNANT","ACTIF") = 1
+ set @HWINFO@("INVENTAIRE","ISS","PENTES","ACTIF") = 1
+ 
+ set CODEMAG = $G(@HWINFO@("MAG"))
+ set IP = ##class(%Library.Function).IPAddresses(CODEMAG)
+ set:($G(@HWINFO@(NOEUD)) '= IP) w @HWINFO@(NOEUD) = IP
+ set @HWINFO@("INVENTAIRE","ISS","PENTES","ACTIF") = 1
+
+ q
+
+
+
+
+
+
+
+
+
+
+
+
+

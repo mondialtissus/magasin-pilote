@@ -1,0 +1,25 @@
+ROUTINE CHECKTK
+CHECKTK
+ 
+ s TOT=0
+ s TOTTK=0
+ s CA=$O(^TKMOISJOURS(""))
+ while CA'=""{
+         s TOTTK=0
+         s TK=$O(^TKMOISJOURS(CA,"061023",""))
+         while TK'=""
+         {
+                 s TOT=0
+                 s LG=$O(^TK(TK,""))
+                 while LG'=""{
+                         s TOT=TOT+(+$P($G(^TK(TK,LG)),"\",6))
+                         s LG=$O(^TK(TK,LG))
+                 }
+                 s TOTTK=+$P($G(^TKTOTAL(TK)),"/",1)
+                 
+                 if TOT'=TOTTK{w !,"Ecart total/detail : "_TOTTK_"/"_TOT_" : ticket: "_TK}
+                 s TK=$O(^TKMOISJOURS(CA,"061023",TK))
+         }
+         s CA=$O(^TKMOISJOURS(CA))
+ }
+ Q

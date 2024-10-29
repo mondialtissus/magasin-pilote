@@ -236,12 +236,64 @@ ClassMethod shell() As %Status
 	Set cmd 		= $GET(%request.Data("cmd",1),"set")
 	Set subscript 	= $GET(%request.Data("subscript",1))
 	Set data 		= $GET(%request.Data("data",1))
-
-	if cmd="set" {
+	Set sep 		= $GET(%request.Data("sep",1),"\")
+	Set pos			= $GET(%request.Data("pos",1),1)
+	
+	//Conversion minuscule
+	set cmd = $zconvert(cmd,"l")
+	
+	//controle existence
+	if (cmd'="timestamp") && (cmd'="t") && (cmd'="heure") && (cmd'="h") && (cmd'="date") && (cmd'="d") && (cmd="exist") && (cmd="e") { 
+		if $D(@subscript) = 0 {
+			w "Globale ou noeud inexistant: "_subscript
+		return sc
+		}	
+	}
+	
+	//Suppresion 
+	if (cmd="kill") || (cmd="k") {
+		kill @subscript
+	} 
+		
+	//Maj de valeur
+	if (cmd="set") || (cmd="s") {
 		set @subscript = data
 		zw @subscript
-		return sc
 	} 
+	
+	//recuperer une valeur
+	if (cmd="get") || (cmd="g") {
+		zw $G(@subscript)
+	}
+	
+	//Existence d'un noeud
+	if (cmd="exist") || (cmd="e") {
+		zw $D(@subscript)
+	}
+	
+	//Noeud suivant
+	if (cmd="order") || (cmd="o") {
+		zw $O(@subscript)
+	}
+	
+	//Decouper une valeur
+	if (cmd="piece") || (cmd="p") { 
+		zw $P($G(@subscript),sep,pos)
+	}
+	
+	//Timestamp iris
+	if (cmd="timestamp") || (cmd="t") { 
+		zw $h
+	}
+	//Heure 
+	if (cmd="heure") || (cmd="h") { 
+		zw $ztime($P($h,",",2))
+	}
+	//date
+	if (cmd="date") || (cmd="d") { 
+		zw $zd($P($h,",",1))
+	}
+	
 	return sc
 }
 

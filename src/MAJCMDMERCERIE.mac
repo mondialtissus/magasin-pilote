@@ -1,0 +1,19 @@
+ROUTINE MAJCMDMERCERIE
+MAJCMDMERCERIE
+ 
+ S NUMMAG = "3023M"
+ s NUMCMDCENT = "36386"
+ s NUMLNGMAG = ""
+ s NUMLNGMAG = $O(^HWARCCMD("FAX",NUMMAG,NUMLNGMAG))
+ 
+ while NUMLNGMAG '= ""
+ {
+         i +$D(^HWARCCMD("FAX",NUMMAG,NUMLNGMAG,NUMCMDCENT,0)) > 0 
+         {                                               
+                 k ^HWARCCMD("FAX",NUMMAG,NUMLNGMAG,NUMCMDCENT,0)
+                 
+         }
+ 
+         s NUMLNGMAG = $O(^HWARCCMD("FAX",NUMMAG,NUMLNGMAG))
+ }
+ 

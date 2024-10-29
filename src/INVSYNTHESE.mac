@@ -343,6 +343,82 @@ TRANSFERT(ZONE="NULL")
 	I ZONE="NULL" S ^MODROUTINE(POSNUM,"INVENTAIRE",IDATEINV)=CPTREF_"\"_CPTNONREF
 	w !,!,"Terminé !!!"
 	Q
+
+ZONESNONINVENTORIEES()
+	// On vide la globale qui stocke les zones inventoriées
+	k ^tmpZONE
+
+	// On remplit la globale qui stocke les zones inventoriées, appel par famille
+	d ZONESINVENTORIEESPARFAMILLE("^INVARTICLETI")
+	d ZONESINVENTORIEESPARFAMILLE("^INVARTICLELM")
+	d ZONESINVENTORIEESPARFAMILLE("^INVARTICLEME")
+
+	// Date d'inventaire périodique
+	s DATEINV 		= $G(^HWINFO("INVENTAIRE", "DATE"))
+	
+	// On liste les zones imprimées
+	s ZONESIMP		= ""
+	s INDICE 		= 0
+	s INDICE		= $o(^HWINFO("INVENTAIRE", DATEINV, "ZONELIST", INDICE))
+	while INDICE	'= ""
+	{
+		s ZONESIMP	= ZONESIMP _ $G(^HWINFO("INVENTAIRE", DATEINV, "ZONELIST", INDICE))
+		s INDICE	= $o(^HWINFO("INVENTAIRE", DATEINV, "ZONELIST", INDICE))
+	}
+
+	// On parcourt les zones imprimées pour lister les zones non inventoriées
+	s P1			= ""
+	s index			= 1
+	s ZONEIMP 		= $p(ZONESIMP, "\", index)
+	while ZONEIMP	'= ""
+	{
+		if (+$d(^tmpZONE(ZONEIMP)) = 0) { s P1 = P1 _ ZONEIMP _ ","}
+		s index 	= index + 1
+		s ZONEIMP 	= $p(ZONESIMP, "\", index)
+	}
+	
+	q
+
+ZONESINVENTORIEESPARFAMILLE(FICHIERFAMILLE)
+	// On récupère le magasin
+	s POSNUM 				= $G(^HWINFO("MAG"))
+
+	// Non référencés
+	s LIGNE 				= 0
+	s LIGNE					= $o(@FICHIERFAMILLE@(POSNUM, "NON REFERENCE", LIGNE))
+	while LIGNE 			'= ""
+	{
+		s DATA				= @FICHIERFAMILLE@(POSNUM, "NON REFERENCE", LIGNE)
+		s ZONE				= $p(DATA, "\", 10)
+		i ZONE				'= "" s ^tmpZONE(ZONE) = ""
+		s LIGNE				= $o(@FICHIERFAMILLE@(POSNUM, "NON REFERENCE", LIGNE))
+	}
+
+	// Référencés
+	s FOURNISSEUR 			= ""
+	s FOURNISSEUR			= $o(@FICHIERFAMILLE@(POSNUM, "REFERENCE", FOURNISSEUR))
+	while FOURNISSEUR 		'= ""
+	{
+		s ARTICLE			= ""
+		s ARTICLE			= $o(@FICHIERFAMILLE@(POSNUM, "REFERENCE", FOURNISSEUR, ARTICLE))
+		while ARTICLE 		'= ""
+		{
+			s LIGNE 		= 0
+			s LIGNE			= $o(@FICHIERFAMILLE@(POSNUM, "REFERENCE", FOURNISSEUR, ARTICLE, LIGNE))
+			while LIGNE 	'= ""
+			{											
+				s DATA		= @FICHIERFAMILLE@(POSNUM, "REFERENCE", FOURNISSEUR, ARTICLE, LIGNE)
+				s ZONE		= $p(DATA, "\", 14)
+				i ZONE		'= "" s ^tmpZONE(ZONE) = ""
+				s LIGNE 	= $o(@FICHIERFAMILLE@(POSNUM, "REFERENCE", FOURNISSEUR, ARTICLE, LIGNE))
+			}											
+			
+			s ARTICLE 		= $o(@FICHIERFAMILLE@(POSNUM, "REFERENCE", FOURNISSEUR, ARTICLE))
+		}
+		s FOURNISSEUR 		= $o(@FICHIERFAMILLE@(POSNUM, "REFERENCE", FOURNISSEUR))
+	}
+	
+	q
 	
 REPLACE(STR,IN,OUT)
 	; STR: chaine à traiter

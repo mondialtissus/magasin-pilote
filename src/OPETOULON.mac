@@ -1,0 +1,26 @@
+ROUTINE OPETOULON
+OPETOULON
+ // le 1 après la date correspond à un nx flag pour les opérations
+ // avec une mécanique promotionnelle simple ne necessitant pas de paramétrage supplémentaire
+ // ex : 20% sur tout le magasin 
+ 
+ // -15% SUR TOUT LE MAGASIN 15 avril AU 30 AVRIL 2011
+ S ^TKCOUPREDUC(9990000000593)="0\0.15\20110415\20110430\1\"
+ 
+ // email -15%  du 15 avril au 30 Avril 20112011
+ S ^TKCOUPREDUC(2888888800824)="30\0.15\20110415\20110430\1\"
+ 
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

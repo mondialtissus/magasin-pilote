@@ -91,6 +91,11 @@ ARTICLES
                         {
 	                        s ESTARTBELGE=1
 	                    }
+	                    //Article de contremarque 
+                        //Est ce qu'il est present dans la globale des contremarque STCM que l'on peut scanner
+                        if ESTCONTREMARQUE=1 {
+                          if $D(^STCM(PLU)) > 0 s ESTCONTREMARQUE = 0
+                        } 
                                 
                                 // statut 6 = "SupprimÃ©" => ne pas charger sur les scans
                                 // statut 5 = "Fin de sÃ©rie" => ne pas charger sur les scans -> Suite Ã  plus de place sur scanner

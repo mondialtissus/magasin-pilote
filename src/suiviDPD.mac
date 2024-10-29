@@ -1,0 +1,9 @@
+ROUTINE suiviDPD
+suiviDPD
+
+ s ^FUSIONMENU(2,9)="Suivi colis messagerie\fenHistEnvoiColi\imgCatalogue\imgCatalogue"
+
+ Q
+
+
+

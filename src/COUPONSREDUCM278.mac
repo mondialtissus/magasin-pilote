@@ -1,0 +1,12 @@
+ROUTINE COUPONSREDUCM278
+COUPONSREDUCM278
+ // -20% sur les commandes de confection = PLU 80439	
+ S ^TKCOUPREDUC(2888888800411)="0\0.20\20100401\20100531"
+ // -10% sur les produits hors étiquettes orange à la livraison de la confection = PLu 80440
+ ^TKCOUPREDUC(9990000000371)="0\0.10\20100401\20101231"	
+ Q
+ 
+ 
+ 
+ 
+ 

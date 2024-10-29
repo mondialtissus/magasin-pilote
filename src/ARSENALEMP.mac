@@ -1,0 +1,6 @@
+ROUTINE ARSENALEMP
+ARSENALEMP
+	s ^GUMENU(5,3) = "PLUs & Emplacements\fenEmplacements\img53"
+	q
+ 
+ 

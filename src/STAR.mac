@@ -1,0 +1,16 @@
+ROUTINE STAR
+STAR
+ S ^FILESFTP("FROMMAG",42)="MODMAGBCICMD"
+ 
+ S ^GUMENU(6)="Commandes Clients"
+ S ^GUMENU(6,1)="Création commandes Clients\fenCmdClient\img12"
+ S ^GUMENU(6,2)="Suivi des commandes Clients\FenSuiviCmdClient\img12"
+	
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
