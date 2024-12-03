@@ -1,0 +1,28 @@
+ROUTINE extractMVT
+extractMVT
+ s DATEDEB = 62639
+ s DATEFIN = 62701
+ 
+ while DATEDEB < DATEFIN
+ {
+         s PLU = $O(^GUMVT(DATEDEB,""))
+         while PLU '= ""
+         {
+                 s TYPEMVT = $O(^GUMVT(DATEDEB,PLU,""))
+                 while TYPEMVT '= ""
+                 {
+                         s NUMMVT = $O(^GUMVT(DATEDEB,PLU,TYPEMVT,""))
+                         while NUMMVT '= ""
+                         {
+                                 s DATA = $G(^GUMVT(DATEDEB,PLU,TYPEMVT,NUMMVT))
+                                 s ^MODROUTINE("M391","GUMVTETE2012",DATEDEB,PLU,TYPEMVT,NUMMVT)=DATA
+                                 
+                                 s NUMMVT = $O(^GUMVT(DATEDEB,PLU,TYPEMVT,NUMMVT))
+                         }                               
+                         s TYPEMVT = $O(^GUMVT(DATEDEB,PLU,TYPEMVT))
+                 }               
+                 s PLU = $O(^GUMVT(DATEDEB,PLU)) 
+         }               
+         s DATEDEB = DATEDEB+1
+ }
+ q

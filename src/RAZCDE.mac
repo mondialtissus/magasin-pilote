@@ -1,0 +1,42 @@
+ROUTINE RAZCDE
+razcde(NumCde)
+ 
+ ;Crée le 28/11/2003 par E.Dufour
+ ;Permet de générer le fichier des Commandes à partir des informatons dans ^HWARCCMD en manuel
+ ;qui sera envoye traité par POSCOM puis envoyé à la centrale
+ 
+ S POSNUM=$G(^HWINFO("MAG"))     
+ S str=$G(^HWARCCMD("CDE",NumCde,0))
+ 
+ S Date = $P(str,"\",1)
+ S NbLigne = $P(str,"\",2)
+ S Fourn = $P(str,"\",3)
+ S Time = $H
+ S bcl =0
+ 
+ S General = ""
+ S General=POSNUM_"\"_NumCde
+ S General=General_"\"_Time
+ S General=General_"\0\0\1\FULL"
+ 
+ S ^MODCMD(POSNUM,NumCde,0)=General
+ S Lg = 0
+ F  S Lg=$O(^HWARCCMD("CDE",NumCde,Lg)) Q:(Lg="")  D
+ .S Ligne = $G(^HWARCCMD("CDE",NumCde,Lg))
+ .S Art = $P(Ligne,"\",1)
+ .S Qte = $P(Ligne,"\",2)
+ .S rdpv = $P($G(^ST(Art)),"\",22)
+ .S iemb = $P($G(^ST(Art)),"\",6)
+ .S MaChaine = Lg_"\\"_Art_"\"_Qte_"\0\0\"_rdpv_"\"_iemb_"\"_"X\1\"_NumCde_"*"_Lg_"*"_Time_"*0*\"
+ .S ^MODCMD(POSNUM,NumCde,Lg)=MaChaine
+ .Q
+ w !,"Generation de la commande "_NumCde_" terminé !"
+ Q
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 

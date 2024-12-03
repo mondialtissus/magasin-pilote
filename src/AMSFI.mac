@@ -1,0 +1,5 @@
+ROUTINE AMSFI
+ActiverMenuSAMFusionISS
+ S ^FUSIONMENU(8) = "Sam\FenGestionInventairesSAM\imgSam\imgSam"
+ Q
+

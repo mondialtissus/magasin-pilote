@@ -1,0 +1,2410 @@
+ROUTINE SOLDES70AH13M391C4
+SOLDES70AH13M391C4
+ 
+	s ^TKSOLDES("51266")="\0.7\0"
+	s ^TKSOLDES("51295")="\0.7\0"
+	s ^TKSOLDES("51314")="\0.7\0"
+	s ^TKSOLDES("51315")="\0.7\0"
+	s ^TKSOLDES("52159")="\0.7\0"
+	s ^TKSOLDES("52501")="\0.7\0"
+	s ^TKSOLDES("53767")="\0.7\0"
+	s ^TKSOLDES("53768")="\0.7\0"
+	s ^TKSOLDES("53814")="\0.7\0"
+	s ^TKSOLDES("53817")="\0.7\0"
+	s ^TKSOLDES("53824")="\0.7\0"
+	s ^TKSOLDES("53826")="\0.7\0"
+	s ^TKSOLDES("53835")="\0.7\0"
+	s ^TKSOLDES("53838")="\0.7\0"
+	s ^TKSOLDES("53846")="\0.7\0"
+	s ^TKSOLDES("53861")="\0.7\0"
+	s ^TKSOLDES("54122")="\0.7\0"
+	s ^TKSOLDES("54184")="\0.7\0"
+	s ^TKSOLDES("54383")="\0.7\0"
+	s ^TKSOLDES("91857")="\0.7\0"
+	s ^TKSOLDES("55657")="\0.7\0"
+	s ^TKSOLDES("55658")="\0.7\0"
+	s ^TKSOLDES("55660")="\0.7\0"
+	s ^TKSOLDES("55662")="\0.7\0"
+	s ^TKSOLDES("55716")="\0.7\0"
+	s ^TKSOLDES("56092")="\0.7\0"
+	s ^TKSOLDES("56681")="\0.7\0"
+	s ^TKSOLDES("57293")="\0.7\0"
+	s ^TKSOLDES("57304")="\0.7\0"
+	s ^TKSOLDES("57309")="\0.7\0"
+	s ^TKSOLDES("58019")="\0.7\0"
+	s ^TKSOLDES("59336")="\0.7\0"
+	s ^TKSOLDES("59641")="\0.7\0"
+	s ^TKSOLDES("59682")="\0.7\0"
+	s ^TKSOLDES("60591")="\0.7\0"
+	s ^TKSOLDES("60663")="\0.7\0"
+	s ^TKSOLDES("61405")="\0.7\0"
+	s ^TKSOLDES("62232")="\0.7\0"
+	s ^TKSOLDES("62240")="\0.7\0"
+	s ^TKSOLDES("63399")="\0.7\0"
+	s ^TKSOLDES("63401")="\0.7\0"
+	s ^TKSOLDES("63410")="\0.7\0"
+	s ^TKSOLDES("63433")="\0.7\0"
+	s ^TKSOLDES("63685")="\0.7\0"
+	s ^TKSOLDES("63783")="\0.7\0"
+	s ^TKSOLDES("63854")="\0.7\0"
+	s ^TKSOLDES("63872")="\0.7\0"
+	s ^TKSOLDES("64205")="\0.7\0"
+	s ^TKSOLDES("64232")="\0.7\0"
+	s ^TKSOLDES("64287")="\0.7\0"
+	s ^TKSOLDES("64738")="\0.7\0"
+	s ^TKSOLDES("64756")="\0.7\0"
+	s ^TKSOLDES("65572")="\0.7\0"
+	s ^TKSOLDES("65576")="\0.7\0"
+	s ^TKSOLDES("65578")="\0.7\0"
+	s ^TKSOLDES("65693")="\0.7\0"
+	s ^TKSOLDES("65748")="\0.7\0"
+	s ^TKSOLDES("65749")="\0.7\0"
+	s ^TKSOLDES("65852")="\0.7\0"
+	s ^TKSOLDES("65861")="\0.7\0"
+	s ^TKSOLDES("65919")="\0.7\0"
+	s ^TKSOLDES("65945")="\0.7\0"
+	s ^TKSOLDES("65951")="\0.7\0"
+	s ^TKSOLDES("65991")="\0.7\0"
+	s ^TKSOLDES("66011")="\0.7\0"
+	s ^TKSOLDES("66047")="\0.7\0"
+	s ^TKSOLDES("66118")="\0.7\0"
+	s ^TKSOLDES("67140")="\0.7\0"
+	s ^TKSOLDES("67258")="\0.7\0"
+	s ^TKSOLDES("68095")="\0.7\0"
+	s ^TKSOLDES("68129")="\0.7\0"
+	s ^TKSOLDES("68133")="\0.7\0"
+	s ^TKSOLDES("68233")="\0.7\0"
+	s ^TKSOLDES("68259")="\0.7\0"
+	s ^TKSOLDES("68265")="\0.7\0"
+	s ^TKSOLDES("68294")="\0.7\0"
+	s ^TKSOLDES("69178")="\0.7\0"
+	s ^TKSOLDES("69193")="\0.7\0"
+	s ^TKSOLDES("70249")="\0.7\0"
+	s ^TKSOLDES("70337")="\0.7\0"
+	s ^TKSOLDES("70343")="\0.7\0"
+	s ^TKSOLDES("70400")="\0.7\0"
+	s ^TKSOLDES("70415")="\0.7\0"
+	s ^TKSOLDES("70416")="\0.7\0"
+	s ^TKSOLDES("70417")="\0.7\0"
+	s ^TKSOLDES("70536")="\0.7\0"
+	s ^TKSOLDES("70832")="\0.7\0"
+	s ^TKSOLDES("70847")="\0.7\0"
+	s ^TKSOLDES("72988")="\0.7\0"
+	s ^TKSOLDES("73549")="\0.7\0"
+	s ^TKSOLDES("73590")="\0.7\0"
+	s ^TKSOLDES("74104")="\0.7\0"
+	s ^TKSOLDES("74123")="\0.7\0"
+	s ^TKSOLDES("76037")="\0.7\0"
+	s ^TKSOLDES("77032")="\0.7\0"
+	s ^TKSOLDES("77112")="\0.7\0"
+	s ^TKSOLDES("77142")="\0.7\0"
+	s ^TKSOLDES("77150")="\0.7\0"
+	s ^TKSOLDES("77426")="\0.7\0"
+	s ^TKSOLDES("78397")="\0.7\0"
+	s ^TKSOLDES("78870")="\0.7\0"
+	s ^TKSOLDES("79271")="\0.7\0"
+	s ^TKSOLDES("79294")="\0.7\0"
+	s ^TKSOLDES("80202")="\0.7\0"
+	s ^TKSOLDES("81220")="\0.7\0"
+	s ^TKSOLDES("81225")="\0.7\0"
+	s ^TKSOLDES("81244")="\0.7\0"
+	s ^TKSOLDES("81397")="\0.7\0"
+	s ^TKSOLDES("81409")="\0.7\0"
+	s ^TKSOLDES("82055")="\0.7\0"
+	s ^TKSOLDES("82103")="\0.7\0"
+	s ^TKSOLDES("82105")="\0.7\0"
+	s ^TKSOLDES("82124")="\0.7\0"
+	s ^TKSOLDES("82135")="\0.7\0"
+	s ^TKSOLDES("82139")="\0.7\0"
+	s ^TKSOLDES("82145")="\0.7\0"
+	s ^TKSOLDES("82403")="\0.7\0"
+	s ^TKSOLDES("82415")="\0.7\0"
+	s ^TKSOLDES("82662")="\0.7\0"
+	s ^TKSOLDES("83115")="\0.7\0"
+	s ^TKSOLDES("83261")="\0.7\0"
+	s ^TKSOLDES("83405")="\0.7\0"
+	s ^TKSOLDES("83418")="\0.7\0"
+	s ^TKSOLDES("83786")="\0.7\0"
+	s ^TKSOLDES("84455")="\0.7\0"
+	s ^TKSOLDES("85849")="\0.7\0"
+	s ^TKSOLDES("86383")="\0.7\0"
+	s ^TKSOLDES("87744")="\0.7\0"
+	s ^TKSOLDES("87768")="\0.7\0"
+	s ^TKSOLDES("88029")="\0.7\0"
+	s ^TKSOLDES("88502")="\0.7\0"
+	s ^TKSOLDES("88503")="\0.7\0"
+	s ^TKSOLDES("88566")="\0.7\0"
+	s ^TKSOLDES("88571")="\0.7\0"
+	s ^TKSOLDES("89821")="\0.7\0"
+	s ^TKSOLDES("89826")="\0.7\0"
+	s ^TKSOLDES("89887")="\0.7\0"
+	s ^TKSOLDES("89894")="\0.7\0"
+	s ^TKSOLDES("89952")="\0.7\0"
+	s ^TKSOLDES("100140")="\0.7\0"
+	s ^TKSOLDES("100240")="\0.7\0"
+	s ^TKSOLDES("100421")="\0.7\0"
+	s ^TKSOLDES("100460")="\0.7\0"
+	s ^TKSOLDES("100491")="\0.7\0"
+	s ^TKSOLDES("100493")="\0.7\0"
+	s ^TKSOLDES("100502")="\0.7\0"
+	s ^TKSOLDES("102947")="\0.7\0"
+	s ^TKSOLDES("102979")="\0.7\0"
+	s ^TKSOLDES("103060")="\0.7\0"
+	s ^TKSOLDES("103113")="\0.7\0"
+	s ^TKSOLDES("103201")="\0.7\0"
+	s ^TKSOLDES("103658")="\0.7\0"
+	s ^TKSOLDES("103676")="\0.7\0"
+	s ^TKSOLDES("105495")="\0.7\0"
+	s ^TKSOLDES("105501")="\0.7\0"
+	s ^TKSOLDES("105504")="\0.7\0"
+	s ^TKSOLDES("107683")="\0.7\0"
+	s ^TKSOLDES("106059")="\0.7\0"
+	s ^TKSOLDES("82064")="\0.7\0"
+	s ^TKSOLDES("83181")="\0.7\0"
+	s ^TKSOLDES("103487")="\0.7\0"
+	s ^TKSOLDES("105207")="\0.7\0"
+	s ^TKSOLDES("72143")="\0.7\0"
+	s ^TKSOLDES("78825")="\0.7\0"
+	s ^TKSOLDES("82575")="\0.7\0"
+	s ^TKSOLDES("62552")="\0.7\0"
+	s ^TKSOLDES("76624")="\0.7\0"
+	s ^TKSOLDES("78337")="\0.7\0"
+	s ^TKSOLDES("83517")="\0.7\0"
+	s ^TKSOLDES("83749")="\0.7\0"
+	s ^TKSOLDES("100645")="\0.7\0"
+	s ^TKSOLDES("104902")="\0.7\0"
+	s ^TKSOLDES("77910")="\0.7\0"
+	s ^TKSOLDES("55636")="\0.7\0"
+	s ^TKSOLDES("86551")="\0.7\0"
+	s ^TKSOLDES("100095")="\0.7\0"
+	s ^TKSOLDES("80004")="\0.7\0"
+	s ^TKSOLDES("79966")="\0.7\0"
+	s ^TKSOLDES("81505")="\0.7\0"
+	s ^TKSOLDES("82357")="\0.7\0"
+	s ^TKSOLDES("84002")="\0.7\0"
+	s ^TKSOLDES("2048")="\0.7\0"
+	s ^TKSOLDES("2544")="\0.7\0"
+	s ^TKSOLDES("4780")="\0.7\0"
+	s ^TKSOLDES("7996")="\0.7\0"
+	s ^TKSOLDES("8904")="\0.7\0"
+	s ^TKSOLDES("12656")="\0.7\0"
+	s ^TKSOLDES("12659")="\0.7\0"
+	s ^TKSOLDES("12662")="\0.7\0"
+	s ^TKSOLDES("12679")="\0.7\0"
+	s ^TKSOLDES("12685")="\0.7\0"
+	s ^TKSOLDES("12707")="\0.7\0"
+	s ^TKSOLDES("12721")="\0.7\0"
+	s ^TKSOLDES("12741")="\0.7\0"
+	s ^TKSOLDES("12744")="\0.7\0"
+	s ^TKSOLDES("12947")="\0.7\0"
+	s ^TKSOLDES("13294")="\0.7\0"
+	s ^TKSOLDES("13295")="\0.7\0"
+	s ^TKSOLDES("13626")="\0.7\0"
+	s ^TKSOLDES("13895")="\0.7\0"
+	s ^TKSOLDES("14111")="\0.7\0"
+	s ^TKSOLDES("14270")="\0.7\0"
+	s ^TKSOLDES("14563")="\0.7\0"
+	s ^TKSOLDES("14775")="\0.7\0"
+	s ^TKSOLDES("15004")="\0.7\0"
+	s ^TKSOLDES("15030")="\0.7\0"
+	s ^TKSOLDES("15037")="\0.7\0"
+	s ^TKSOLDES("15049")="\0.7\0"
+	s ^TKSOLDES("15062")="\0.7\0"
+	s ^TKSOLDES("15071")="\0.7\0"
+	s ^TKSOLDES("15083")="\0.7\0"
+	s ^TKSOLDES("15114")="\0.7\0"
+	s ^TKSOLDES("15137")="\0.7\0"
+	s ^TKSOLDES("15145")="\0.7\0"
+	s ^TKSOLDES("15163")="\0.7\0"
+	s ^TKSOLDES("15187")="\0.7\0"
+	s ^TKSOLDES("15194")="\0.7\0"
+	s ^TKSOLDES("15240")="\0.7\0"
+	s ^TKSOLDES("15250")="\0.7\0"
+	s ^TKSOLDES("15279")="\0.7\0"
+	s ^TKSOLDES("15294")="\0.7\0"
+	s ^TKSOLDES("15368")="\0.7\0"
+	s ^TKSOLDES("15374")="\0.7\0"
+	s ^TKSOLDES("15382")="\0.7\0"
+	s ^TKSOLDES("15395")="\0.7\0"
+	s ^TKSOLDES("15448")="\0.7\0"
+	s ^TKSOLDES("15458")="\0.7\0"
+	s ^TKSOLDES("15536")="\0.7\0"
+	s ^TKSOLDES("15591")="\0.7\0"
+	s ^TKSOLDES("16071")="\0.7\0"
+	s ^TKSOLDES("16281")="\0.7\0"
+	s ^TKSOLDES("16408")="\0.7\0"
+	s ^TKSOLDES("16643")="\0.7\0"
+	s ^TKSOLDES("17720")="\0.7\0"
+	s ^TKSOLDES("34946")="\0.7\0"
+	s ^TKSOLDES("35080")="\0.7\0"
+	s ^TKSOLDES("12609")="\0.7\0"
+	s ^TKSOLDES("13592")="\0.7\0"
+	s ^TKSOLDES("13725")="\0.7\0"
+	s ^TKSOLDES("13733")="\0.7\0"
+	s ^TKSOLDES("13742")="\0.7\0"
+	s ^TKSOLDES("16324")="\0.7\0"
+	s ^TKSOLDES("16690")="\0.7\0"
+	s ^TKSOLDES("16692")="\0.7\0"
+	s ^TKSOLDES("16697")="\0.7\0"
+	s ^TKSOLDES("16744")="\0.7\0"
+	s ^TKSOLDES("16802")="\0.7\0"
+	s ^TKSOLDES("17607")="\0.7\0"
+	s ^TKSOLDES("17669")="\0.7\0"
+	s ^TKSOLDES("17674")="\0.7\0"
+	s ^TKSOLDES("34912")="\0.7\0"
+	s ^TKSOLDES("35003")="\0.7\0"
+	s ^TKSOLDES("35108")="\0.7\0"
+	s ^TKSOLDES("35126")="\0.7\0"
+	s ^TKSOLDES("36029")="\0.7\0"
+	s ^TKSOLDES("37335")="\0.7\0"
+	s ^TKSOLDES("37376")="\0.7\0"
+	s ^TKSOLDES("38334")="\0.7\0"
+	s ^TKSOLDES("38351")="\0.7\0"
+	s ^TKSOLDES("38360")="\0.7\0"
+	s ^TKSOLDES("38369")="\0.7\0"
+	s ^TKSOLDES("38373")="\0.7\0"
+	s ^TKSOLDES("38381")="\0.7\0"
+	s ^TKSOLDES("38391")="\0.7\0"
+	s ^TKSOLDES("38395")="\0.7\0"
+	s ^TKSOLDES("38406")="\0.7\0"
+	s ^TKSOLDES("38433")="\0.7\0"
+	s ^TKSOLDES("38512")="\0.7\0"
+	s ^TKSOLDES("38519")="\0.7\0"
+	s ^TKSOLDES("40967")="\0.7\0"
+	s ^TKSOLDES("41105")="\0.7\0"
+	s ^TKSOLDES("41113")="\0.7\0"
+	s ^TKSOLDES("41551")="\0.7\0"
+	s ^TKSOLDES("41657")="\0.7\0"
+	s ^TKSOLDES("41805")="\0.7\0"
+	s ^TKSOLDES("41824")="\0.7\0"
+	s ^TKSOLDES("41833")="\0.7\0"
+	s ^TKSOLDES("41858")="\0.7\0"
+	s ^TKSOLDES("41862")="\0.7\0"
+	s ^TKSOLDES("41876")="\0.7\0"
+	s ^TKSOLDES("41880")="\0.7\0"
+	s ^TKSOLDES("41910")="\0.7\0"
+	s ^TKSOLDES("41926")="\0.7\0"
+	s ^TKSOLDES("41942")="\0.7\0"
+	s ^TKSOLDES("41951")="\0.7\0"
+	s ^TKSOLDES("41981")="\0.7\0"
+	s ^TKSOLDES("42045")="\0.7\0"
+	s ^TKSOLDES("42088")="\0.7\0"
+	s ^TKSOLDES("42124")="\0.7\0"
+	s ^TKSOLDES("42128")="\0.7\0"
+	s ^TKSOLDES("42183")="\0.7\0"
+	s ^TKSOLDES("42197")="\0.7\0"
+	s ^TKSOLDES("42210")="\0.7\0"
+	s ^TKSOLDES("42238")="\0.7\0"
+	s ^TKSOLDES("42241")="\0.7\0"
+	s ^TKSOLDES("42248")="\0.7\0"
+	s ^TKSOLDES("42250")="\0.7\0"
+	s ^TKSOLDES("42251")="\0.7\0"
+	s ^TKSOLDES("42265")="\0.7\0"
+	s ^TKSOLDES("42267")="\0.7\0"
+	s ^TKSOLDES("42268")="\0.7\0"
+	s ^TKSOLDES("42272")="\0.7\0"
+	s ^TKSOLDES("42379")="\0.7\0"
+	s ^TKSOLDES("42821")="\0.7\0"
+	s ^TKSOLDES("42868")="\0.7\0"
+	s ^TKSOLDES("43058")="\0.7\0"
+	s ^TKSOLDES("43209")="\0.7\0"
+	s ^TKSOLDES("43228")="\0.7\0"
+	s ^TKSOLDES("43254")="\0.7\0"
+	s ^TKSOLDES("44039")="\0.7\0"
+	s ^TKSOLDES("44042")="\0.7\0"
+	s ^TKSOLDES("44049")="\0.7\0"
+	s ^TKSOLDES("44056")="\0.7\0"
+	s ^TKSOLDES("44099")="\0.7\0"
+	s ^TKSOLDES("44115")="\0.7\0"
+	s ^TKSOLDES("44275")="\0.7\0"
+	s ^TKSOLDES("45418")="\0.7\0"
+	s ^TKSOLDES("45709")="\0.7\0"
+	s ^TKSOLDES("45721")="\0.7\0"
+	s ^TKSOLDES("45725")="\0.7\0"
+	s ^TKSOLDES("45738")="\0.7\0"
+	s ^TKSOLDES("45743")="\0.7\0"
+	s ^TKSOLDES("45744")="\0.7\0"
+	s ^TKSOLDES("45749")="\0.7\0"
+	s ^TKSOLDES("45756")="\0.7\0"
+	s ^TKSOLDES("45775")="\0.7\0"
+	s ^TKSOLDES("45794")="\0.7\0"
+	s ^TKSOLDES("45825")="\0.7\0"
+	s ^TKSOLDES("45887")="\0.7\0"
+	s ^TKSOLDES("45909")="\0.7\0"
+	s ^TKSOLDES("45965")="\0.7\0"
+	s ^TKSOLDES("46002")="\0.7\0"
+	s ^TKSOLDES("46012")="\0.7\0"
+	s ^TKSOLDES("46016")="\0.7\0"
+	s ^TKSOLDES("46041")="\0.7\0"
+	s ^TKSOLDES("46050")="\0.7\0"
+	s ^TKSOLDES("46054")="\0.7\0"
+	s ^TKSOLDES("46066")="\0.7\0"
+	s ^TKSOLDES("46068")="\0.7\0"
+	s ^TKSOLDES("46070")="\0.7\0"
+	s ^TKSOLDES("46076")="\0.7\0"
+	s ^TKSOLDES("46080")="\0.7\0"
+	s ^TKSOLDES("46093")="\0.7\0"
+	s ^TKSOLDES("46096")="\0.7\0"
+	s ^TKSOLDES("46100")="\0.7\0"
+	s ^TKSOLDES("46105")="\0.7\0"
+	s ^TKSOLDES("46141")="\0.7\0"
+	s ^TKSOLDES("46148")="\0.7\0"
+	s ^TKSOLDES("46153")="\0.7\0"
+	s ^TKSOLDES("46154")="\0.7\0"
+	s ^TKSOLDES("46155")="\0.7\0"
+	s ^TKSOLDES("46174")="\0.7\0"
+	s ^TKSOLDES("46193")="\0.7\0"
+	s ^TKSOLDES("46207")="\0.7\0"
+	s ^TKSOLDES("46211")="\0.7\0"
+	s ^TKSOLDES("46245")="\0.7\0"
+	s ^TKSOLDES("46257")="\0.7\0"
+	s ^TKSOLDES("46259")="\0.7\0"
+	s ^TKSOLDES("46268")="\0.7\0"
+	s ^TKSOLDES("46269")="\0.7\0"
+	s ^TKSOLDES("46290")="\0.7\0"
+	s ^TKSOLDES("46291")="\0.7\0"
+	s ^TKSOLDES("46302")="\0.7\0"
+	s ^TKSOLDES("46303")="\0.7\0"
+	s ^TKSOLDES("46306")="\0.7\0"
+	s ^TKSOLDES("46307")="\0.7\0"
+	s ^TKSOLDES("46308")="\0.7\0"
+	s ^TKSOLDES("46309")="\0.7\0"
+	s ^TKSOLDES("46364")="\0.7\0"
+	s ^TKSOLDES("46383")="\0.7\0"
+	s ^TKSOLDES("46389")="\0.7\0"
+	s ^TKSOLDES("46395")="\0.7\0"
+	s ^TKSOLDES("46403")="\0.7\0"
+	s ^TKSOLDES("46413")="\0.7\0"
+	s ^TKSOLDES("46415")="\0.7\0"
+	s ^TKSOLDES("46467")="\0.7\0"
+	s ^TKSOLDES("46472")="\0.7\0"
+	s ^TKSOLDES("46849")="\0.7\0"
+	s ^TKSOLDES("46853")="\0.7\0"
+	s ^TKSOLDES("47069")="\0.7\0"
+	s ^TKSOLDES("47079")="\0.7\0"
+	s ^TKSOLDES("47122")="\0.7\0"
+	s ^TKSOLDES("47126")="\0.7\0"
+	s ^TKSOLDES("47305")="\0.7\0"
+	s ^TKSOLDES("47757")="\0.7\0"
+	s ^TKSOLDES("48584")="\0.7\0"
+	s ^TKSOLDES("48681")="\0.7\0"
+	s ^TKSOLDES("48693")="\0.7\0"
+	s ^TKSOLDES("48701")="\0.7\0"
+	s ^TKSOLDES("48961")="\0.7\0"
+	s ^TKSOLDES("49375")="\0.7\0"
+	s ^TKSOLDES("49383")="\0.7\0"
+	s ^TKSOLDES("49384")="\0.7\0"
+	s ^TKSOLDES("49407")="\0.7\0"
+	s ^TKSOLDES("49408")="\0.7\0"
+	s ^TKSOLDES("49409")="\0.7\0"
+	s ^TKSOLDES("49410")="\0.7\0"
+	s ^TKSOLDES("49412")="\0.7\0"
+	s ^TKSOLDES("49420")="\0.7\0"
+	s ^TKSOLDES("50408")="\0.7\0"
+	s ^TKSOLDES("50718")="\0.7\0"
+	s ^TKSOLDES("51259")="\0.7\0"
+	s ^TKSOLDES("51260")="\0.7\0"
+	s ^TKSOLDES("51274")="\0.7\0"
+	s ^TKSOLDES("51305")="\0.7\0"
+	s ^TKSOLDES("51359")="\0.7\0"
+	s ^TKSOLDES("52355")="\0.7\0"
+	s ^TKSOLDES("52356")="\0.7\0"
+	s ^TKSOLDES("52517")="\0.7\0"
+	s ^TKSOLDES("53777")="\0.7\0"
+	s ^TKSOLDES("53789")="\0.7\0"
+	s ^TKSOLDES("53791")="\0.7\0"
+	s ^TKSOLDES("53809")="\0.7\0"
+	s ^TKSOLDES("53818")="\0.7\0"
+	s ^TKSOLDES("53832")="\0.7\0"
+	s ^TKSOLDES("53848")="\0.7\0"
+	s ^TKSOLDES("53862")="\0.7\0"
+	s ^TKSOLDES("54121")="\0.7\0"
+	s ^TKSOLDES("54142")="\0.7\0"
+	s ^TKSOLDES("54162")="\0.7\0"
+	s ^TKSOLDES("54385")="\0.7\0"
+	s ^TKSOLDES("55650")="\0.7\0"
+	s ^TKSOLDES("55651")="\0.7\0"
+	s ^TKSOLDES("55656")="\0.7\0"
+	s ^TKSOLDES("55670")="\0.7\0"
+	s ^TKSOLDES("55671")="\0.7\0"
+	s ^TKSOLDES("55674")="\0.7\0"
+	s ^TKSOLDES("56093")="\0.7\0"
+	s ^TKSOLDES("56121")="\0.7\0"
+	s ^TKSOLDES("56140")="\0.7\0"
+	s ^TKSOLDES("56152")="\0.7\0"
+	s ^TKSOLDES("56739")="\0.7\0"
+	s ^TKSOLDES("56746")="\0.7\0"
+	s ^TKSOLDES("57019")="\0.7\0"
+	s ^TKSOLDES("57267")="\0.7\0"
+	s ^TKSOLDES("58003")="\0.7\0"
+	s ^TKSOLDES("58045")="\0.7\0"
+	s ^TKSOLDES("58050")="\0.7\0"
+	s ^TKSOLDES("58379")="\0.7\0"
+	s ^TKSOLDES("58997")="\0.7\0"
+	s ^TKSOLDES("59090")="\0.7\0"
+	s ^TKSOLDES("59693")="\0.7\0"
+	s ^TKSOLDES("59865")="\0.7\0"
+	s ^TKSOLDES("60609")="\0.7\0"
+	s ^TKSOLDES("60673")="\0.7\0"
+	s ^TKSOLDES("60675")="\0.7\0"
+	s ^TKSOLDES("60694")="\0.7\0"
+	s ^TKSOLDES("61429")="\0.7\0"
+	s ^TKSOLDES("61432")="\0.7\0"
+	s ^TKSOLDES("62253")="\0.7\0"
+	s ^TKSOLDES("62262")="\0.7\0"
+	s ^TKSOLDES("62283")="\0.7\0"
+	s ^TKSOLDES("62287")="\0.7\0"
+	s ^TKSOLDES("62537")="\0.7\0"
+	s ^TKSOLDES("63380")="\0.7\0"
+	s ^TKSOLDES("63411")="\0.7\0"
+	s ^TKSOLDES("63414")="\0.7\0"
+	s ^TKSOLDES("63420")="\0.7\0"
+	s ^TKSOLDES("63421")="\0.7\0"
+	s ^TKSOLDES("63422")="\0.7\0"
+	s ^TKSOLDES("63430")="\0.7\0"
+	s ^TKSOLDES("63617")="\0.7\0"
+	s ^TKSOLDES("63686")="\0.7\0"
+	s ^TKSOLDES("63833")="\0.7\0"
+	s ^TKSOLDES("64057")="\0.7\0"
+	s ^TKSOLDES("64216")="\0.7\0"
+	s ^TKSOLDES("64218")="\0.7\0"
+	s ^TKSOLDES("64234")="\0.7\0"
+	s ^TKSOLDES("64292")="\0.7\0"
+	s ^TKSOLDES("64298")="\0.7\0"
+	s ^TKSOLDES("64299")="\0.7\0"
+	s ^TKSOLDES("64423")="\0.7\0"
+	s ^TKSOLDES("91877")="\0.7\0"
+	s ^TKSOLDES("64704")="\0.7\0"
+	s ^TKSOLDES("64711")="\0.7\0"
+	s ^TKSOLDES("64735")="\0.7\0"
+	s ^TKSOLDES("64943")="\0.7\0"
+	s ^TKSOLDES("65291")="\0.7\0"
+	s ^TKSOLDES("65584")="\0.7\0"
+	s ^TKSOLDES("65732")="\0.7\0"
+	s ^TKSOLDES("65733")="\0.7\0"
+	s ^TKSOLDES("65751")="\0.7\0"
+	s ^TKSOLDES("65864")="\0.7\0"
+	s ^TKSOLDES("65890")="\0.7\0"
+	s ^TKSOLDES("65939")="\0.7\0"
+	s ^TKSOLDES("65952")="\0.7\0"
+	s ^TKSOLDES("65953")="\0.7\0"
+	s ^TKSOLDES("66033")="\0.7\0"
+	s ^TKSOLDES("66044")="\0.7\0"
+	s ^TKSOLDES("66046")="\0.7\0"
+	s ^TKSOLDES("66078")="\0.7\0"
+	s ^TKSOLDES("66095")="\0.7\0"
+	s ^TKSOLDES("66120")="\0.7\0"
+	s ^TKSOLDES("67702")="\0.7\0"
+	s ^TKSOLDES("68064")="\0.7\0"
+	s ^TKSOLDES("68068")="\0.7\0"
+	s ^TKSOLDES("68130")="\0.7\0"
+	s ^TKSOLDES("68150")="\0.7\0"
+	s ^TKSOLDES("68163")="\0.7\0"
+	s ^TKSOLDES("68173")="\0.7\0"
+	s ^TKSOLDES("68268")="\0.7\0"
+	s ^TKSOLDES("68283")="\0.7\0"
+	s ^TKSOLDES("69191")="\0.7\0"
+	s ^TKSOLDES("69741")="\0.7\0"
+	s ^TKSOLDES("70266")="\0.7\0"
+	s ^TKSOLDES("70333")="\0.7\0"
+	s ^TKSOLDES("70335")="\0.7\0"
+	s ^TKSOLDES("70339")="\0.7\0"
+	s ^TKSOLDES("70342")="\0.7\0"
+	s ^TKSOLDES("70348")="\0.7\0"
+	s ^TKSOLDES("70353")="\0.7\0"
+	s ^TKSOLDES("70377")="\0.7\0"
+	s ^TKSOLDES("70388")="\0.7\0"
+	s ^TKSOLDES("70397")="\0.7\0"
+	s ^TKSOLDES("70398")="\0.7\0"
+	s ^TKSOLDES("70401")="\0.7\0"
+	s ^TKSOLDES("70406")="\0.7\0"
+	s ^TKSOLDES("70407")="\0.7\0"
+	s ^TKSOLDES("70430")="\0.7\0"
+	s ^TKSOLDES("70438")="\0.7\0"
+	s ^TKSOLDES("70790")="\0.7\0"
+	s ^TKSOLDES("93798")="\0.7\0"
+	s ^TKSOLDES("72847")="\0.7\0"
+	s ^TKSOLDES("72853")="\0.7\0"
+	s ^TKSOLDES("72878")="\0.7\0"
+	s ^TKSOLDES("72947")="\0.7\0"
+	s ^TKSOLDES("73234")="\0.7\0"
+	s ^TKSOLDES("73559")="\0.7\0"
+	s ^TKSOLDES("74116")="\0.7\0"
+	s ^TKSOLDES("74119")="\0.7\0"
+	s ^TKSOLDES("74985")="\0.7\0"
+	s ^TKSOLDES("74990")="\0.7\0"
+	s ^TKSOLDES("75100")="\0.7\0"
+	s ^TKSOLDES("76324")="\0.7\0"
+	s ^TKSOLDES("76345")="\0.7\0"
+	s ^TKSOLDES("76626")="\0.7\0"
+	s ^TKSOLDES("77038")="\0.7\0"
+	s ^TKSOLDES("77043")="\0.7\0"
+	s ^TKSOLDES("77046")="\0.7\0"
+	s ^TKSOLDES("77055")="\0.7\0"
+	s ^TKSOLDES("77075")="\0.7\0"
+	s ^TKSOLDES("77110")="\0.7\0"
+	s ^TKSOLDES("77859")="\0.7\0"
+	s ^TKSOLDES("78178")="\0.7\0"
+	s ^TKSOLDES("78644")="\0.7\0"
+	s ^TKSOLDES("78659")="\0.7\0"
+	s ^TKSOLDES("78907")="\0.7\0"
+	s ^TKSOLDES("79180")="\0.7\0"
+	s ^TKSOLDES("79264")="\0.7\0"
+	s ^TKSOLDES("79274")="\0.7\0"
+	s ^TKSOLDES("79286")="\0.7\0"
+	s ^TKSOLDES("79305")="\0.7\0"
+	s ^TKSOLDES("79934")="\0.7\0"
+	s ^TKSOLDES("80263")="\0.7\0"
+	s ^TKSOLDES("80280")="\0.7\0"
+	s ^TKSOLDES("81161")="\0.7\0"
+	s ^TKSOLDES("81226")="\0.7\0"
+	s ^TKSOLDES("81240")="\0.7\0"
+	s ^TKSOLDES("81241")="\0.7\0"
+	s ^TKSOLDES("81242")="\0.7\0"
+	s ^TKSOLDES("81393")="\0.7\0"
+	s ^TKSOLDES("81395")="\0.7\0"
+	s ^TKSOLDES("81413")="\0.7\0"
+	s ^TKSOLDES("81422")="\0.7\0"
+	s ^TKSOLDES("81647")="\0.7\0"
+	s ^TKSOLDES("81654")="\0.7\0"
+	s ^TKSOLDES("81655")="\0.7\0"
+	s ^TKSOLDES("81879")="\0.7\0"
+	s ^TKSOLDES("82116")="\0.7\0"
+	s ^TKSOLDES("82129")="\0.7\0"
+	s ^TKSOLDES("82149")="\0.7\0"
+	s ^TKSOLDES("82590")="\0.7\0"
+	s ^TKSOLDES("82591")="\0.7\0"
+	s ^TKSOLDES("82615")="\0.7\0"
+	s ^TKSOLDES("82657")="\0.7\0"
+	s ^TKSOLDES("82663")="\0.7\0"
+	s ^TKSOLDES("82666")="\0.7\0"
+	s ^TKSOLDES("82670")="\0.7\0"
+	s ^TKSOLDES("82671")="\0.7\0"
+	s ^TKSOLDES("82692")="\0.7\0"
+	s ^TKSOLDES("82695")="\0.7\0"
+	s ^TKSOLDES("82714")="\0.7\0"
+	s ^TKSOLDES("82859")="\0.7\0"
+	s ^TKSOLDES("82944")="\0.7\0"
+	s ^TKSOLDES("82945")="\0.7\0"
+	s ^TKSOLDES("82962")="\0.7\0"
+	s ^TKSOLDES("83393")="\0.7\0"
+	s ^TKSOLDES("83409")="\0.7\0"
+	s ^TKSOLDES("83420")="\0.7\0"
+	s ^TKSOLDES("83422")="\0.7\0"
+	s ^TKSOLDES("83512")="\0.7\0"
+	s ^TKSOLDES("83629")="\0.7\0"
+	s ^TKSOLDES("83690")="\0.7\0"
+	s ^TKSOLDES("84828")="\0.7\0"
+	s ^TKSOLDES("84916")="\0.7\0"
+	s ^TKSOLDES("84924")="\0.7\0"
+	s ^TKSOLDES("85028")="\0.7\0"
+	s ^TKSOLDES("85122")="\0.7\0"
+	s ^TKSOLDES("85142")="\0.7\0"
+	s ^TKSOLDES("86589")="\0.7\0"
+	s ^TKSOLDES("86617")="\0.7\0"
+	s ^TKSOLDES("86623")="\0.7\0"
+	s ^TKSOLDES("86865")="\0.7\0"
+	s ^TKSOLDES("87636")="\0.7\0"
+	s ^TKSOLDES("87789")="\0.7\0"
+	s ^TKSOLDES("87971")="\0.7\0"
+	s ^TKSOLDES("87972")="\0.7\0"
+	s ^TKSOLDES("88033")="\0.7\0"
+	s ^TKSOLDES("88555")="\0.7\0"
+	s ^TKSOLDES("88558")="\0.7\0"
+	s ^TKSOLDES("88575")="\0.7\0"
+	s ^TKSOLDES("88576")="\0.7\0"
+	s ^TKSOLDES("88580")="\0.7\0"
+	s ^TKSOLDES("88581")="\0.7\0"
+	s ^TKSOLDES("88592")="\0.7\0"
+	s ^TKSOLDES("89822")="\0.7\0"
+	s ^TKSOLDES("89932")="\0.7\0"
+	s ^TKSOLDES("89983")="\0.7\0"
+	s ^TKSOLDES("100196")="\0.7\0"
+	s ^TKSOLDES("100461")="\0.7\0"
+	s ^TKSOLDES("100497")="\0.7\0"
+	s ^TKSOLDES("100498")="\0.7\0"
+	s ^TKSOLDES("100504")="\0.7\0"
+	s ^TKSOLDES("100518")="\0.7\0"
+	s ^TKSOLDES("100524")="\0.7\0"
+	s ^TKSOLDES("100610")="\0.7\0"
+	s ^TKSOLDES("101189")="\0.7\0"
+	s ^TKSOLDES("101539")="\0.7\0"
+	s ^TKSOLDES("101556")="\0.7\0"
+	s ^TKSOLDES("102227")="\0.7\0"
+	s ^TKSOLDES("102402")="\0.7\0"
+	s ^TKSOLDES("102508")="\0.7\0"
+	s ^TKSOLDES("102510")="\0.7\0"
+	s ^TKSOLDES("102511")="\0.7\0"
+	s ^TKSOLDES("102941")="\0.7\0"
+	s ^TKSOLDES("102970")="\0.7\0"
+	s ^TKSOLDES("102975")="\0.7\0"
+	s ^TKSOLDES("103061")="\0.7\0"
+	s ^TKSOLDES("103083")="\0.7\0"
+	s ^TKSOLDES("103649")="\0.7\0"
+	s ^TKSOLDES("103681")="\0.7\0"
+	s ^TKSOLDES("105184")="\0.7\0"
+	s ^TKSOLDES("105187")="\0.7\0"
+	s ^TKSOLDES("105215")="\0.7\0"
+	s ^TKSOLDES("105485")="\0.7\0"
+	s ^TKSOLDES("105498")="\0.7\0"
+	s ^TKSOLDES("105593")="\0.7\0"
+	s ^TKSOLDES("106111")="\0.7\0"
+	s ^TKSOLDES("106119")="\0.7\0"
+	s ^TKSOLDES("110750")="\0.7\0"
+	s ^TKSOLDES("111809")="\0.7\0"
+	s ^TKSOLDES("89888")="\0.7\0"
+	s ^TKSOLDES("100186")="\0.7\0"
+	s ^TKSOLDES("83775")="\0.7\0"
+	s ^TKSOLDES("90733")="\0.7\0"
+	s ^TKSOLDES("82760")="\0.7\0"
+	s ^TKSOLDES("91420")="\0.7\0"
+	s ^TKSOLDES("64476")="\0.7\0"
+	s ^TKSOLDES("78621")="\0.7\0"
+	s ^TKSOLDES("79244")="\0.7\0"
+	s ^TKSOLDES("83739")="\0.7\0"
+	s ^TKSOLDES("83782")="\0.7\0"
+	s ^TKSOLDES("86327")="\0.7\0"
+	s ^TKSOLDES("104908")="\0.7\0"
+	s ^TKSOLDES("82125")="\0.7\0"
+	s ^TKSOLDES("5922")="\0.7\0"
+	s ^TKSOLDES("107078")="\0.7\0"
+	s ^TKSOLDES("3355")="\0.7\0"
+	s ^TKSOLDES("9229")="\0.7\0"
+	s ^TKSOLDES("12563")="\0.7\0"
+	s ^TKSOLDES("12657")="\0.7\0"
+	s ^TKSOLDES("12693")="\0.7\0"
+	s ^TKSOLDES("12708")="\0.7\0"
+	s ^TKSOLDES("12817")="\0.7\0"
+	s ^TKSOLDES("13022")="\0.7\0"
+	s ^TKSOLDES("13041")="\0.7\0"
+	s ^TKSOLDES("13108")="\0.7\0"
+	s ^TKSOLDES("13145")="\0.7\0"
+	s ^TKSOLDES("13172")="\0.7\0"
+	s ^TKSOLDES("13269")="\0.7\0"
+	s ^TKSOLDES("13282")="\0.7\0"
+	s ^TKSOLDES("13299")="\0.7\0"
+	s ^TKSOLDES("13871")="\0.7\0"
+	s ^TKSOLDES("13875")="\0.7\0"
+	s ^TKSOLDES("13953")="\0.7\0"
+	s ^TKSOLDES("14112")="\0.7\0"
+	s ^TKSOLDES("14141")="\0.7\0"
+	s ^TKSOLDES("14279")="\0.7\0"
+	s ^TKSOLDES("14302")="\0.7\0"
+	s ^TKSOLDES("14311")="\0.7\0"
+	s ^TKSOLDES("14334")="\0.7\0"
+	s ^TKSOLDES("14342")="\0.7\0"
+	s ^TKSOLDES("14343")="\0.7\0"
+	s ^TKSOLDES("14502")="\0.7\0"
+	s ^TKSOLDES("14556")="\0.7\0"
+	s ^TKSOLDES("14671")="\0.7\0"
+	s ^TKSOLDES("14793")="\0.7\0"
+	s ^TKSOLDES("14807")="\0.7\0"
+	s ^TKSOLDES("15023")="\0.7\0"
+	s ^TKSOLDES("15039")="\0.7\0"
+	s ^TKSOLDES("15042")="\0.7\0"
+	s ^TKSOLDES("15043")="\0.7\0"
+	s ^TKSOLDES("15044")="\0.7\0"
+	s ^TKSOLDES("15077")="\0.7\0"
+	s ^TKSOLDES("15103")="\0.7\0"
+	s ^TKSOLDES("15104")="\0.7\0"
+	s ^TKSOLDES("15106")="\0.7\0"
+	s ^TKSOLDES("15108")="\0.7\0"
+	s ^TKSOLDES("15118")="\0.7\0"
+	s ^TKSOLDES("15122")="\0.7\0"
+	s ^TKSOLDES("15190")="\0.7\0"
+	s ^TKSOLDES("15224")="\0.7\0"
+	s ^TKSOLDES("15248")="\0.7\0"
+	s ^TKSOLDES("15252")="\0.7\0"
+	s ^TKSOLDES("15307")="\0.7\0"
+	s ^TKSOLDES("15309")="\0.7\0"
+	s ^TKSOLDES("15318")="\0.7\0"
+	s ^TKSOLDES("15342")="\0.7\0"
+	s ^TKSOLDES("15542")="\0.7\0"
+	s ^TKSOLDES("15572")="\0.7\0"
+	s ^TKSOLDES("16115")="\0.7\0"
+	s ^TKSOLDES("16127")="\0.7\0"
+	s ^TKSOLDES("16392")="\0.7\0"
+	s ^TKSOLDES("16405")="\0.7\0"
+	s ^TKSOLDES("16635")="\0.7\0"
+	s ^TKSOLDES("16645")="\0.7\0"
+	s ^TKSOLDES("17792")="\0.7\0"
+	s ^TKSOLDES("18090")="\0.7\0"
+	s ^TKSOLDES("90566")="\0.7\0"
+	s ^TKSOLDES("12599")="\0.7\0"
+	s ^TKSOLDES("12600")="\0.7\0"
+	s ^TKSOLDES("12604")="\0.7\0"
+	s ^TKSOLDES("12606")="\0.7\0"
+	s ^TKSOLDES("13658")="\0.7\0"
+	s ^TKSOLDES("13673")="\0.7\0"
+	s ^TKSOLDES("13674")="\0.7\0"
+	s ^TKSOLDES("13712")="\0.7\0"
+	s ^TKSOLDES("13737")="\0.7\0"
+	s ^TKSOLDES("13738")="\0.7\0"
+	s ^TKSOLDES("13743")="\0.7\0"
+	s ^TKSOLDES("14167")="\0.7\0"
+	s ^TKSOLDES("14169")="\0.7\0"
+	s ^TKSOLDES("16694")="\0.7\0"
+	s ^TKSOLDES("16746")="\0.7\0"
+	s ^TKSOLDES("16788")="\0.7\0"
+	s ^TKSOLDES("16790")="\0.7\0"
+	s ^TKSOLDES("17606")="\0.7\0"
+	s ^TKSOLDES("17656")="\0.7\0"
+	s ^TKSOLDES("17670")="\0.7\0"
+	s ^TKSOLDES("17693")="\0.7\0"
+	s ^TKSOLDES("34913")="\0.7\0"
+	s ^TKSOLDES("34922")="\0.7\0"
+	s ^TKSOLDES("35238")="\0.7\0"
+	s ^TKSOLDES("35554")="\0.7\0"
+	s ^TKSOLDES("36030")="\0.7\0"
+	s ^TKSOLDES("36039")="\0.7\0"
+	s ^TKSOLDES("37259")="\0.7\0"
+	s ^TKSOLDES("37264")="\0.7\0"
+	s ^TKSOLDES("37266")="\0.7\0"
+	s ^TKSOLDES("37270")="\0.7\0"
+	s ^TKSOLDES("37331")="\0.7\0"
+	s ^TKSOLDES("38349")="\0.7\0"
+	s ^TKSOLDES("38352")="\0.7\0"
+	s ^TKSOLDES("38379")="\0.7\0"
+	s ^TKSOLDES("38387")="\0.7\0"
+	s ^TKSOLDES("38393")="\0.7\0"
+	s ^TKSOLDES("38450")="\0.7\0"
+	s ^TKSOLDES("41125")="\0.7\0"
+	s ^TKSOLDES("41552")="\0.7\0"
+	s ^TKSOLDES("41553")="\0.7\0"
+	s ^TKSOLDES("41644")="\0.7\0"
+	s ^TKSOLDES("41645")="\0.7\0"
+	s ^TKSOLDES("41785")="\0.7\0"
+	s ^TKSOLDES("41789")="\0.7\0"
+	s ^TKSOLDES("41801")="\0.7\0"
+	s ^TKSOLDES("41806")="\0.7\0"
+	s ^TKSOLDES("41807")="\0.7\0"
+	s ^TKSOLDES("41810")="\0.7\0"
+	s ^TKSOLDES("41811")="\0.7\0"
+	s ^TKSOLDES("41829")="\0.7\0"
+	s ^TKSOLDES("41841")="\0.7\0"
+	s ^TKSOLDES("41843")="\0.7\0"
+	s ^TKSOLDES("41857")="\0.7\0"
+	s ^TKSOLDES("41867")="\0.7\0"
+	s ^TKSOLDES("41893")="\0.7\0"
+	s ^TKSOLDES("41934")="\0.7\0"
+	s ^TKSOLDES("41941")="\0.7\0"
+	s ^TKSOLDES("41946")="\0.7\0"
+	s ^TKSOLDES("42049")="\0.7\0"
+	s ^TKSOLDES("42086")="\0.7\0"
+	s ^TKSOLDES("42185")="\0.7\0"
+	s ^TKSOLDES("42239")="\0.7\0"
+	s ^TKSOLDES("42247")="\0.7\0"
+	s ^TKSOLDES("42249")="\0.7\0"
+	s ^TKSOLDES("42273")="\0.7\0"
+	s ^TKSOLDES("42276")="\0.7\0"
+	s ^TKSOLDES("42583")="\0.7\0"
+	s ^TKSOLDES("42827")="\0.7\0"
+	s ^TKSOLDES("42865")="\0.7\0"
+	s ^TKSOLDES("42869")="\0.7\0"
+	s ^TKSOLDES("42990")="\0.7\0"
+	s ^TKSOLDES("42993")="\0.7\0"
+	s ^TKSOLDES("42994")="\0.7\0"
+	s ^TKSOLDES("43010")="\0.7\0"
+	s ^TKSOLDES("43031")="\0.7\0"
+	s ^TKSOLDES("43057")="\0.7\0"
+	s ^TKSOLDES("43070")="\0.7\0"
+	s ^TKSOLDES("43089")="\0.7\0"
+	s ^TKSOLDES("43214")="\0.7\0"
+	s ^TKSOLDES("43232")="\0.7\0"
+	s ^TKSOLDES("43237")="\0.7\0"
+	s ^TKSOLDES("43300")="\0.7\0"
+	s ^TKSOLDES("43744")="\0.7\0"
+	s ^TKSOLDES("44064")="\0.7\0"
+	s ^TKSOLDES("44110")="\0.7\0"
+	s ^TKSOLDES("44114")="\0.7\0"
+	s ^TKSOLDES("44119")="\0.7\0"
+	s ^TKSOLDES("44257")="\0.7\0"
+	s ^TKSOLDES("44259")="\0.7\0"
+	s ^TKSOLDES("44278")="\0.7\0"
+	s ^TKSOLDES("44280")="\0.7\0"
+	s ^TKSOLDES("44518")="\0.7\0"
+	s ^TKSOLDES("45700")="\0.7\0"
+	s ^TKSOLDES("45701")="\0.7\0"
+	s ^TKSOLDES("45707")="\0.7\0"
+	s ^TKSOLDES("45719")="\0.7\0"
+	s ^TKSOLDES("45726")="\0.7\0"
+	s ^TKSOLDES("45729")="\0.7\0"
+	s ^TKSOLDES("45740")="\0.7\0"
+	s ^TKSOLDES("45741")="\0.7\0"
+	s ^TKSOLDES("45747")="\0.7\0"
+	s ^TKSOLDES("45751")="\0.7\0"
+	s ^TKSOLDES("45753")="\0.7\0"
+	s ^TKSOLDES("45754")="\0.7\0"
+	s ^TKSOLDES("45758")="\0.7\0"
+	s ^TKSOLDES("45763")="\0.7\0"
+	s ^TKSOLDES("45767")="\0.7\0"
+	s ^TKSOLDES("45771")="\0.7\0"
+	s ^TKSOLDES("45781")="\0.7\0"
+	s ^TKSOLDES("45782")="\0.7\0"
+	s ^TKSOLDES("45814")="\0.7\0"
+	s ^TKSOLDES("45828")="\0.7\0"
+	s ^TKSOLDES("45883")="\0.7\0"
+	s ^TKSOLDES("45906")="\0.7\0"
+	s ^TKSOLDES("45951")="\0.7\0"
+	s ^TKSOLDES("45953")="\0.7\0"
+	s ^TKSOLDES("45961")="\0.7\0"
+	s ^TKSOLDES("45973")="\0.7\0"
+	s ^TKSOLDES("45983")="\0.7\0"
+	s ^TKSOLDES("46003")="\0.7\0"
+	s ^TKSOLDES("46013")="\0.7\0"
+	s ^TKSOLDES("46018")="\0.7\0"
+	s ^TKSOLDES("46028")="\0.7\0"
+	s ^TKSOLDES("46031")="\0.7\0"
+	s ^TKSOLDES("46055")="\0.7\0"
+	s ^TKSOLDES("46061")="\0.7\0"
+	s ^TKSOLDES("46063")="\0.7\0"
+	s ^TKSOLDES("46083")="\0.7\0"
+	s ^TKSOLDES("46097")="\0.7\0"
+	s ^TKSOLDES("46118")="\0.7\0"
+	s ^TKSOLDES("46135")="\0.7\0"
+	s ^TKSOLDES("46142")="\0.7\0"
+	s ^TKSOLDES("46143")="\0.7\0"
+	s ^TKSOLDES("46147")="\0.7\0"
+	s ^TKSOLDES("46152")="\0.7\0"
+	s ^TKSOLDES("46164")="\0.7\0"
+	s ^TKSOLDES("46166")="\0.7\0"
+	s ^TKSOLDES("46172")="\0.7\0"
+	s ^TKSOLDES("46177")="\0.7\0"
+	s ^TKSOLDES("46180")="\0.7\0"
+	s ^TKSOLDES("46182")="\0.7\0"
+	s ^TKSOLDES("46187")="\0.7\0"
+	s ^TKSOLDES("46192")="\0.7\0"
+	s ^TKSOLDES("46201")="\0.7\0"
+	s ^TKSOLDES("46203")="\0.7\0"
+	s ^TKSOLDES("46209")="\0.7\0"
+	s ^TKSOLDES("46236")="\0.7\0"
+	s ^TKSOLDES("46252")="\0.7\0"
+	s ^TKSOLDES("46256")="\0.7\0"
+	s ^TKSOLDES("46270")="\0.7\0"
+	s ^TKSOLDES("46272")="\0.7\0"
+	s ^TKSOLDES("46273")="\0.7\0"
+	s ^TKSOLDES("46282")="\0.7\0"
+	s ^TKSOLDES("46283")="\0.7\0"
+	s ^TKSOLDES("46284")="\0.7\0"
+	s ^TKSOLDES("46285")="\0.7\0"
+	s ^TKSOLDES("46300")="\0.7\0"
+	s ^TKSOLDES("46305")="\0.7\0"
+	s ^TKSOLDES("46310")="\0.7\0"
+	s ^TKSOLDES("46329")="\0.7\0"
+	s ^TKSOLDES("46360")="\0.7\0"
+	s ^TKSOLDES("46369")="\0.7\0"
+	s ^TKSOLDES("46372")="\0.7\0"
+	s ^TKSOLDES("46373")="\0.7\0"
+	s ^TKSOLDES("46378")="\0.7\0"
+	s ^TKSOLDES("46384")="\0.7\0"
+	s ^TKSOLDES("46385")="\0.7\0"
+	s ^TKSOLDES("46405")="\0.7\0"
+	s ^TKSOLDES("46411")="\0.7\0"
+	s ^TKSOLDES("46412")="\0.7\0"
+	s ^TKSOLDES("46473")="\0.7\0"
+	s ^TKSOLDES("46531")="\0.7\0"
+	s ^TKSOLDES("46841")="\0.7\0"
+	s ^TKSOLDES("46851")="\0.7\0"
+	s ^TKSOLDES("46863")="\0.7\0"
+	s ^TKSOLDES("47128")="\0.7\0"
+	s ^TKSOLDES("47303")="\0.7\0"
+	s ^TKSOLDES("47304")="\0.7\0"
+	s ^TKSOLDES("47727")="\0.7\0"
+	s ^TKSOLDES("47741")="\0.7\0"
+	s ^TKSOLDES("48625")="\0.7\0"
+	s ^TKSOLDES("48678")="\0.7\0"
+	s ^TKSOLDES("48687")="\0.7\0"
+	s ^TKSOLDES("48689")="\0.7\0"
+	s ^TKSOLDES("48692")="\0.7\0"
+	s ^TKSOLDES("48711")="\0.7\0"
+	s ^TKSOLDES("48856")="\0.7\0"
+	s ^TKSOLDES("48903")="\0.7\0"
+	s ^TKSOLDES("49360")="\0.7\0"
+	s ^TKSOLDES("49365")="\0.7\0"
+	s ^TKSOLDES("49377")="\0.7\0"
+	s ^TKSOLDES("49388")="\0.7\0"
+	s ^TKSOLDES("50842")="\0.7\0"
+	s ^TKSOLDES("51874")="\0.7\0"
+	s ^TKSOLDES("51876")="\0.7\0"
+	s ^TKSOLDES("53276")="\0.7\0"
+	s ^TKSOLDES("53505")="\0.7\0"
+	s ^TKSOLDES("53757")="\0.7\0"
+	s ^TKSOLDES("53771")="\0.7\0"
+	s ^TKSOLDES("53823")="\0.7\0"
+	s ^TKSOLDES("53836")="\0.7\0"
+	s ^TKSOLDES("53839")="\0.7\0"
+	s ^TKSOLDES("53860")="\0.7\0"
+	s ^TKSOLDES("53994")="\0.7\0"
+	s ^TKSOLDES("54174")="\0.7\0"
+	s ^TKSOLDES("54194")="\0.7\0"
+	s ^TKSOLDES("54372")="\0.7\0"
+	s ^TKSOLDES("54867")="\0.7\0"
+	s ^TKSOLDES("54942")="\0.7\0"
+	s ^TKSOLDES("55362")="\0.7\0"
+	s ^TKSOLDES("55661")="\0.7\0"
+	s ^TKSOLDES("55673")="\0.7\0"
+	s ^TKSOLDES("56053")="\0.7\0"
+	s ^TKSOLDES("56117")="\0.7\0"
+	s ^TKSOLDES("56744")="\0.7\0"
+	s ^TKSOLDES("56745")="\0.7\0"
+	s ^TKSOLDES("57307")="\0.7\0"
+	s ^TKSOLDES("57313")="\0.7\0"
+	s ^TKSOLDES("58006")="\0.7\0"
+	s ^TKSOLDES("58013")="\0.7\0"
+	s ^TKSOLDES("59011")="\0.7\0"
+	s ^TKSOLDES("60649")="\0.7\0"
+	s ^TKSOLDES("60655")="\0.7\0"
+	s ^TKSOLDES("60656")="\0.7\0"
+	s ^TKSOLDES("60678")="\0.7\0"
+	s ^TKSOLDES("62274")="\0.7\0"
+	s ^TKSOLDES("63396")="\0.7\0"
+	s ^TKSOLDES("63400")="\0.7\0"
+	s ^TKSOLDES("63403")="\0.7\0"
+	s ^TKSOLDES("63412")="\0.7\0"
+	s ^TKSOLDES("63697")="\0.7\0"
+	s ^TKSOLDES("63856")="\0.7\0"
+	s ^TKSOLDES("63857")="\0.7\0"
+	s ^TKSOLDES("63889")="\0.7\0"
+	s ^TKSOLDES("64000")="\0.7\0"
+	s ^TKSOLDES("64114")="\0.7\0"
+	s ^TKSOLDES("64161")="\0.7\0"
+	s ^TKSOLDES("64206")="\0.7\0"
+	s ^TKSOLDES("64308")="\0.7\0"
+	s ^TKSOLDES("64312")="\0.7\0"
+	s ^TKSOLDES("91964")="\0.7\0"
+	s ^TKSOLDES("92035")="\0.7\0"
+	s ^TKSOLDES("92079")="\0.7\0"
+	s ^TKSOLDES("64706")="\0.7\0"
+	s ^TKSOLDES("64712")="\0.7\0"
+	s ^TKSOLDES("64740")="\0.7\0"
+	s ^TKSOLDES("65262")="\0.7\0"
+	s ^TKSOLDES("65570")="\0.7\0"
+	s ^TKSOLDES("65581")="\0.7\0"
+	s ^TKSOLDES("65726")="\0.7\0"
+	s ^TKSOLDES("65760")="\0.7\0"
+	s ^TKSOLDES("65785")="\0.7\0"
+	s ^TKSOLDES("65986")="\0.7\0"
+	s ^TKSOLDES("66005")="\0.7\0"
+	s ^TKSOLDES("66031")="\0.7\0"
+	s ^TKSOLDES("66111")="\0.7\0"
+	s ^TKSOLDES("66116")="\0.7\0"
+	s ^TKSOLDES("66336")="\0.7\0"
+	s ^TKSOLDES("66517")="\0.7\0"
+	s ^TKSOLDES("67304")="\0.7\0"
+	s ^TKSOLDES("67487")="\0.7\0"
+	s ^TKSOLDES("67648")="\0.7\0"
+	s ^TKSOLDES("67868")="\0.7\0"
+	s ^TKSOLDES("67941")="\0.7\0"
+	s ^TKSOLDES("68080")="\0.7\0"
+	s ^TKSOLDES("68094")="\0.7\0"
+	s ^TKSOLDES("68143")="\0.7\0"
+	s ^TKSOLDES("68256")="\0.7\0"
+	s ^TKSOLDES("68258")="\0.7\0"
+	s ^TKSOLDES("68263")="\0.7\0"
+	s ^TKSOLDES("68450")="\0.7\0"
+	s ^TKSOLDES("69189")="\0.7\0"
+	s ^TKSOLDES("69197")="\0.7\0"
+	s ^TKSOLDES("69209")="\0.7\0"
+	s ^TKSOLDES("69211")="\0.7\0"
+	s ^TKSOLDES("69213")="\0.7\0"
+	s ^TKSOLDES("70341")="\0.7\0"
+	s ^TKSOLDES("70344")="\0.7\0"
+	s ^TKSOLDES("70349")="\0.7\0"
+	s ^TKSOLDES("70356")="\0.7\0"
+	s ^TKSOLDES("70373")="\0.7\0"
+	s ^TKSOLDES("70375")="\0.7\0"
+	s ^TKSOLDES("70387")="\0.7\0"
+	s ^TKSOLDES("70404")="\0.7\0"
+	s ^TKSOLDES("70442")="\0.7\0"
+	s ^TKSOLDES("70443")="\0.7\0"
+	s ^TKSOLDES("70657")="\0.7\0"
+	s ^TKSOLDES("70661")="\0.7\0"
+	s ^TKSOLDES("70858")="\0.7\0"
+	s ^TKSOLDES("93160")="\0.7\0"
+	s ^TKSOLDES("93357")="\0.7\0"
+	s ^TKSOLDES("72914")="\0.7\0"
+	s ^TKSOLDES("72987")="\0.7\0"
+	s ^TKSOLDES("73033")="\0.7\0"
+	s ^TKSOLDES("73571")="\0.7\0"
+	s ^TKSOLDES("73584")="\0.7\0"
+	s ^TKSOLDES("74099")="\0.7\0"
+	s ^TKSOLDES("74638")="\0.7\0"
+	s ^TKSOLDES("76339")="\0.7\0"
+	s ^TKSOLDES("76878")="\0.7\0"
+	s ^TKSOLDES("77018")="\0.7\0"
+	s ^TKSOLDES("77019")="\0.7\0"
+	s ^TKSOLDES("77060")="\0.7\0"
+	s ^TKSOLDES("77090")="\0.7\0"
+	s ^TKSOLDES("77437")="\0.7\0"
+	s ^TKSOLDES("77446")="\0.7\0"
+	s ^TKSOLDES("77453")="\0.7\0"
+	s ^TKSOLDES("77461")="\0.7\0"
+	s ^TKSOLDES("77489")="\0.7\0"
+	s ^TKSOLDES("77490")="\0.7\0"
+	s ^TKSOLDES("77557")="\0.7\0"
+	s ^TKSOLDES("77653")="\0.7\0"
+	s ^TKSOLDES("77969")="\0.7\0"
+	s ^TKSOLDES("78212")="\0.7\0"
+	s ^TKSOLDES("78452")="\0.7\0"
+	s ^TKSOLDES("78867")="\0.7\0"
+	s ^TKSOLDES("79172")="\0.7\0"
+	s ^TKSOLDES("79238")="\0.7\0"
+	s ^TKSOLDES("79293")="\0.7\0"
+	s ^TKSOLDES("79407")="\0.7\0"
+	s ^TKSOLDES("79570")="\0.7\0"
+	s ^TKSOLDES("79579")="\0.7\0"
+	s ^TKSOLDES("79650")="\0.7\0"
+	s ^TKSOLDES("79726")="\0.7\0"
+	s ^TKSOLDES("79727")="\0.7\0"
+	s ^TKSOLDES("80217")="\0.7\0"
+	s ^TKSOLDES("80285")="\0.7\0"
+	s ^TKSOLDES("80704")="\0.7\0"
+	s ^TKSOLDES("80821")="\0.7\0"
+	s ^TKSOLDES("81151")="\0.7\0"
+	s ^TKSOLDES("81221")="\0.7\0"
+	s ^TKSOLDES("81411")="\0.7\0"
+	s ^TKSOLDES("81412")="\0.7\0"
+	s ^TKSOLDES("81414")="\0.7\0"
+	s ^TKSOLDES("81416")="\0.7\0"
+	s ^TKSOLDES("81451")="\0.7\0"
+	s ^TKSOLDES("81668")="\0.7\0"
+	s ^TKSOLDES("82110")="\0.7\0"
+	s ^TKSOLDES("82118")="\0.7\0"
+	s ^TKSOLDES("82144")="\0.7\0"
+	s ^TKSOLDES("82211")="\0.7\0"
+	s ^TKSOLDES("82217")="\0.7\0"
+	s ^TKSOLDES("82465")="\0.7\0"
+	s ^TKSOLDES("82656")="\0.7\0"
+	s ^TKSOLDES("82659")="\0.7\0"
+	s ^TKSOLDES("82664")="\0.7\0"
+	s ^TKSOLDES("82699")="\0.7\0"
+	s ^TKSOLDES("82708")="\0.7\0"
+	s ^TKSOLDES("83124")="\0.7\0"
+	s ^TKSOLDES("83634")="\0.7\0"
+	s ^TKSOLDES("83639")="\0.7\0"
+	s ^TKSOLDES("83665")="\0.7\0"
+	s ^TKSOLDES("83770")="\0.7\0"
+	s ^TKSOLDES("83885")="\0.7\0"
+	s ^TKSOLDES("84275")="\0.7\0"
+	s ^TKSOLDES("84827")="\0.7\0"
+	s ^TKSOLDES("84834")="\0.7\0"
+	s ^TKSOLDES("84919")="\0.7\0"
+	s ^TKSOLDES("84923")="\0.7\0"
+	s ^TKSOLDES("85116")="\0.7\0"
+	s ^TKSOLDES("85140")="\0.7\0"
+	s ^TKSOLDES("85773")="\0.7\0"
+	s ^TKSOLDES("85788")="\0.7\0"
+	s ^TKSOLDES("85872")="\0.7\0"
+	s ^TKSOLDES("85900")="\0.7\0"
+	s ^TKSOLDES("86584")="\0.7\0"
+	s ^TKSOLDES("86616")="\0.7\0"
+	s ^TKSOLDES("86991")="\0.7\0"
+	s ^TKSOLDES("87164")="\0.7\0"
+	s ^TKSOLDES("87569")="\0.7\0"
+	s ^TKSOLDES("87597")="\0.7\0"
+	s ^TKSOLDES("87622")="\0.7\0"
+	s ^TKSOLDES("87791")="\0.7\0"
+	s ^TKSOLDES("87826")="\0.7\0"
+	s ^TKSOLDES("87837")="\0.7\0"
+	s ^TKSOLDES("87856")="\0.7\0"
+	s ^TKSOLDES("88010")="\0.7\0"
+	s ^TKSOLDES("88027")="\0.7\0"
+	s ^TKSOLDES("88028")="\0.7\0"
+	s ^TKSOLDES("88546")="\0.7\0"
+	s ^TKSOLDES("88579")="\0.7\0"
+	s ^TKSOLDES("88582")="\0.7\0"
+	s ^TKSOLDES("88587")="\0.7\0"
+	s ^TKSOLDES("89820")="\0.7\0"
+	s ^TKSOLDES("89947")="\0.7\0"
+	s ^TKSOLDES("100156")="\0.7\0"
+	s ^TKSOLDES("100523")="\0.7\0"
+	s ^TKSOLDES("100527")="\0.7\0"
+	s ^TKSOLDES("100641")="\0.7\0"
+	s ^TKSOLDES("100735")="\0.7\0"
+	s ^TKSOLDES("102949")="\0.7\0"
+	s ^TKSOLDES("102965")="\0.7\0"
+	s ^TKSOLDES("102971")="\0.7\0"
+	s ^TKSOLDES("102978")="\0.7\0"
+	s ^TKSOLDES("103490")="\0.7\0"
+	s ^TKSOLDES("103646")="\0.7\0"
+	s ^TKSOLDES("105259")="\0.7\0"
+	s ^TKSOLDES("105509")="\0.7\0"
+	s ^TKSOLDES("107527")="\0.7\0"
+	s ^TKSOLDES("6023")="\0.7\0"
+	s ^TKSOLDES("100302")="\0.7\0"
+	s ^TKSOLDES("54722")="\0.7\0"
+	s ^TKSOLDES("82557")="\0.7\0"
+	s ^TKSOLDES("44697")="\0.7\0"
+	s ^TKSOLDES("91640")="\0.7\0"
+	s ^TKSOLDES("75366")="\0.7\0"
+	s ^TKSOLDES("75685")="\0.7\0"
+	s ^TKSOLDES("76614")="\0.7\0"
+	s ^TKSOLDES("77364")="\0.7\0"
+	s ^TKSOLDES("78712")="\0.7\0"
+	s ^TKSOLDES("82774")="\0.7\0"
+	s ^TKSOLDES("100227")="\0.7\0"
+	s ^TKSOLDES("100230")="\0.7\0"
+	s ^TKSOLDES("6965")="\0.7\0"
+	s ^TKSOLDES("37568")="\0.7\0"
+	s ^TKSOLDES("75222")="\0.7\0"
+	s ^TKSOLDES("86522")="\0.7\0"
+	s ^TKSOLDES("49862")="\0.7\0"
+	s ^TKSOLDES("100811")="\0.7\0"
+	s ^TKSOLDES("106060")="\0.7\0"
+	s ^TKSOLDES("1739")="\0.7\0"
+	s ^TKSOLDES("9089")="\0.7\0"
+	s ^TKSOLDES("105189")="\0.7\0"
+	s ^TKSOLDES("78622")="\0.7\0"
+	s ^TKSOLDES("83960")="\0.7\0"
+	s ^TKSOLDES("104905")="\0.7\0"
+	s ^TKSOLDES("5903")="\0.7\0"
+	s ^TKSOLDES("6731")="\0.7\0"
+	s ^TKSOLDES("7280")="\0.7\0"
+	s ^TKSOLDES("7967")="\0.7\0"
+	s ^TKSOLDES("12665")="\0.7\0"
+	s ^TKSOLDES("12666")="\0.7\0"
+	s ^TKSOLDES("12669")="\0.7\0"
+	s ^TKSOLDES("12671")="\0.7\0"
+	s ^TKSOLDES("12672")="\0.7\0"
+	s ^TKSOLDES("12674")="\0.7\0"
+	s ^TKSOLDES("12676")="\0.7\0"
+	s ^TKSOLDES("12683")="\0.7\0"
+	s ^TKSOLDES("12688")="\0.7\0"
+	s ^TKSOLDES("12690")="\0.7\0"
+	s ^TKSOLDES("12731")="\0.7\0"
+	s ^TKSOLDES("12740")="\0.7\0"
+	s ^TKSOLDES("12748")="\0.7\0"
+	s ^TKSOLDES("12830")="\0.7\0"
+	s ^TKSOLDES("12831")="\0.7\0"
+	s ^TKSOLDES("13021")="\0.7\0"
+	s ^TKSOLDES("13050")="\0.7\0"
+	s ^TKSOLDES("13270")="\0.7\0"
+	s ^TKSOLDES("13288")="\0.7\0"
+	s ^TKSOLDES("13598")="\0.7\0"
+	s ^TKSOLDES("13617")="\0.7\0"
+	s ^TKSOLDES("13628")="\0.7\0"
+	s ^TKSOLDES("13846")="\0.7\0"
+	s ^TKSOLDES("13868")="\0.7\0"
+	s ^TKSOLDES("13873")="\0.7\0"
+	s ^TKSOLDES("13881")="\0.7\0"
+	s ^TKSOLDES("13886")="\0.7\0"
+	s ^TKSOLDES("13889")="\0.7\0"
+	s ^TKSOLDES("14116")="\0.7\0"
+	s ^TKSOLDES("14295")="\0.7\0"
+	s ^TKSOLDES("14320")="\0.7\0"
+	s ^TKSOLDES("14550")="\0.7\0"
+	s ^TKSOLDES("14670")="\0.7\0"
+	s ^TKSOLDES("14771")="\0.7\0"
+	s ^TKSOLDES("14773")="\0.7\0"
+	s ^TKSOLDES("15035")="\0.7\0"
+	s ^TKSOLDES("15046")="\0.7\0"
+	s ^TKSOLDES("15097")="\0.7\0"
+	s ^TKSOLDES("15099")="\0.7\0"
+	s ^TKSOLDES("15113")="\0.7\0"
+ 
+ 
+	Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

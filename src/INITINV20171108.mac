@@ -1,0 +1,19 @@
+ROUTINE INITINV20171108
+INITINV20171108
+ S ^HWINFO("INVENTAIRE","DATE")="64595"	      // Date de référence 08 Novembre 2017 car inventaire au poids et donc archive par poscomm la veille donc le 02 Novembre au soir
+ S ^HWINFO("INVENTAIRE","DATEARRETE")="64595"	
+ s ^HWINFO("INVENTAIRE","DATETEST")=""
+ s ^HWINFO("INVENTAIRE","DATETESTFIN")=""
+ s ^HWINFO("INVENTAIRE","DATEDEB")="64595"   // Date de début 8 Novembre 2017
+ s ^HWINFO("INVENTAIRE","DATEFIN")="64602"   // fin le 15 Novembre 2017
+ s ^HWINFO("INVENTAIRE",64595,"AUTO")=""     // Permet de valider l'utilisation du terminal 
+
+ Q
+
+
+
+
+
+
+
+

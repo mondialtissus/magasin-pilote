@@ -32,11 +32,11 @@ CHANGEMENURETRO
 		s ^GUMENU(2)="Transfert Coupes CD"
 		s ^GUMENU(2,1)="Réception des coupes du CD\fenCMDRetroRec COUPE\img13"
 		s ^GUMENU(2,2)="Suivi des réceptions des coupes du CD\fenHistRecRetro COUPE\img12"
-		s ^GUMENU(3)="Transfert Confection SBM"
-		s ^GUMENU(3,1)="Création Confection\fenCMDRetro CONF\img13"
-		s ^GUMENU(3,2)="Réception des Confections\fenCMDRetroRec CONF\img13"
-                s ^GUMENU(3,3)="Suivi des envois des Confections\fenHistCMDRetro CONF\img12"
-		s ^GUMENU(3,4)="Suivi des réceptions des Confections\fenHistRecRetro CONF\img12"
+		s ^GUMENU(3)="Commandes Clients"
+		s ^GUMENU(3,1)="Création commandes Clients\fenCmdClient\img12"
+		s ^GUMENU(3,2)="Suivi des commandes Clients\FenSuiviCmdClient\img12 Q"
+ 
+ 
 	}
 	
 	Q
