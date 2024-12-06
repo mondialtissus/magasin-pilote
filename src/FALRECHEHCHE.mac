@@ -1,0 +1,51 @@
+ROUTINE FALRECHEHCHE
+FALRECHEHCHE(pDate = "66105", pCmd = "X999-RETRO-155057",pType = "G224", pMagasin="X999")
+
+    s fMAGRETRO = "^[""USER""]MAGRETRO"
+    s fGUMVT = "^[""USER""]GUMVT"
+    
+    //s sMagasin = $P(pCmd,"-",1)
+    s nligne = 0
+	
+    S nligne = $O(@fMAGRETRO@("CMD",pCmd,pMagasin,pType,nligne))
+   
+    
+    While (nligne '= "") {
+        s PLU = ""
+		s bok = 0
+        i +$D(@fMAGRETRO@("CMD",pCmd,pMagasin,pType,nligne))>0 {
+ 			
+            s PLU = $P($G(@fMAGRETRO@("CMD",pCmd,pMagasin,pType,nligne)),"\",1) 
+            
+            s sGUMVT = ""
+            s sGUMVT = $O(@fGUMVT@(pDate,PLU,13,sGUMVT))
+          	
+            While (sGUMVT '= "") {
+	            
+                i +$D(@fGUMVT@(pDate,PLU,13,sGUMVT))>0 {
+                  	s bok = 1
+                }else {
+	                s bok = 0
+                    w !, "KO =>"_fMAGRETRO_"(CMD,"_pCmd_","_pMagasin_","_pType_","_nligne_")="_@fMAGRETRO@("CMD",pCmd,pMagasin,pType,nligne)
+                }
+                
+                s sGUMVT = $O(@fGUMVT@(pDate,PLU,13,sGUMVT))
+            }
+            
+            i +bok=0 {
+	            w !, "ko "_PLU ;KO =>"_fMAGRETRO_"(CMD,"_pCmd_","_pMagasin_","_pType_","_nligne_")="_@fMAGRETRO@("CMD",pCmd,pMagasin,pType,nligne)
+            }else {
+	            w !, "ok "_PLU 
+            }
+            
+            s ncompte = 0
+            S nligne = $O(@fMAGRETRO@("CMD",pCmd,pMagasin,pType,nligne))
+        }
+    }
+    q
+    
+
+
+    
+    
+    

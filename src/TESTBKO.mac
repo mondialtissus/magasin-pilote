@@ -1,0 +1,17 @@
+ROUTINE TESTBKO
+TESTBKO
+    set sqlQuery = "SELECT CLE FROM map.ST WHERE data like '%GMT-LAP%'"
+    set statement = ##class(%SQL.Statement).%New()
+    set status = statement.%Prepare(sqlQuery)
+    set result = statement.%Execute()
+    set fileName = "\\G224\Serveur\temp\cles.csv"
+    set file = ##class(%File).%New(fileName)
+    set sc = file.Open("WSN")
+    while result.%Next() {
+        // Traitement des données récupérées de la requête SQL
+        set field1 = result.%Get("CLE")
+        
+        // Écriture dans le fichier CSV
+        do file.WriteLine(field1)
+    }
+    do file.Close()

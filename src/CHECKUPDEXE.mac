@@ -1,47 +1,39 @@
 ROUTINE CHECKUPDEXE
 CHECKUPDEXE
  s MAG=$G(^HWINFO("MAG"))
- s systeminfo=##class(%Library.Function).%New(sFile)
+ s systeminfo=##class(%Library.Function).%New()
  s IPServer=systeminfo.IPAddresses("")
  s IPServer2=""
  I +$P(IPServer,".",4)=250 s IPServer2=$Replace(IPServer,"250","251")
  I +$P(IPServer,".",4)=251 s IPServer2=$Replace(IPServer,"251","250")
- s sFile = "C:\pos\Fusion.exe"
- if ##class(%Library.File).Exists(sFile)
- {
-	 s file=##class(%Library.File).%New(sFile)
-	 s ^MODROUTINE("CHECKEXEUPD",$ZD(file.DateModified,8),MAG,sFile)=""
-	 w !,sFile_" = "_$ZD(file.DateModified,8)
- }
- s sFile = "C:\pos\download\Fusion.exe"
- if ##class(%Library.File).Exists(sFile)
- {
-	 s file=##class(%Library.File).%New(sFile)
-	 s ^MODROUTINE("CHECKEXEUPD",$ZD(file.DateModified,8),MAG,sFile)=""
-	 w !,sFile_"= "_$ZD(file.DateModified,8)
- }
+
+ D TestFile("C:\pos\Fusion.exe")
+ D TestFile("C:\pos\download\Fusion.exe")
+ s ^MODROUTINE(MAG,"CHECKUPDEXE","IPSERVEUR2")=IPServer2
+ 
  I IPServer2'=""
  {
-	 s sFile = "\\10.10.9.251\c$\pos\Fusion.exe"
-	 if ##class(%Library.File).Exists(sFile)
-	 {
-		 s file=##class(%Library.File).%New(sFile)
-	 	 s ^MODROUTINE("CHECKEXEUPD",$ZD(file.DateModified,8),MAG,sFile)=""
-		 w !,sFile_" = "_$ZD(file.DateModified,8)
-	 }
-	 s sFile = "\\10.10.9.251\c$\pos\download\Fusion.exe"
-	 if ##class(%Library.File).Exists(sFile)
-	 {
-		 s file=##class(%Library.File).%New(sFile)
-	 	 s ^MODROUTINE("CHECKEXEUPD",$ZD(file.DateModified,8),MAG,sFile)=""
-		 w !,sFile_" = "_$ZD(file.DateModified,8)
-	 }
+	 D TestFile("\\\\"_IPServer2_"\c$\pos\Fusion.exe",1)
+	 D TestFile("\\\\"_IPServer2_"\serveur2\pos\Fusion.exe",1)
+	 D TestFile("\\\\"_IPServer2_"\c$\pos\download\Fusion.exe")
+	 D TestFile("\\\\"_IPServer2_"\serveur2\pos\download\Fusion.exe")
  }
  Q
 
+TestFile(filename,bForce=0)
 
+ if ##class(%Library.File).Exists(filename)
+ {
+	 s file=##class(%Library.File).%New(filename)
+ 	 s ^MODROUTINE(MAG,"CHECKUPDEXE",$ZD(file.DateModified,8),filename)=""
+	 w !,filename_" = "_$ZD(file.DateModified,8)
+ }
+ else
+ {
+	I bForce=1 s ^MODROUTINE(MAG,"CHECKUPDEXE","INCONNU",filename)=""
+ }
 
-
+ Q
 
 
 

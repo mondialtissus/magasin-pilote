@@ -1,0 +1,61 @@
+ROUTINE VACHERCHETOTAL
+VACHERCHETOTAL()
+
+    s fMAGRETRO = "^[""USER""]MAGRETRO"
+    s fGUMVT = "^[""USER""]GUMVT"
+    
+    //s sMagasin = $P(pCmd,"-",1)
+    s nligne = 0
+
+    s vCmd = ""
+    S vCmd = $O(@fMAGRETRO@("CMD",vCmd))
+    While (vCmd '= "") {
+        S vMagasin = ""
+        S vMagasin = $O(@fMAGRETRO@("CMD",vCmd,vMagasin))
+        
+        While (vMagasin '= "") {
+            S vType = ""
+            S vType = $O(@fMAGRETRO@("CMD",vCmd,vMagasin,vType))
+            While (vType '= "") {
+                S nligne = ""
+                S nligne = $O(@fMAGRETRO@("CMD",vCmd,vMagasin,vType,nligne))
+                While (nligne '= "") {
+	                s bok = 0
+                    i +$D(@fMAGRETRO@("CMD",vCmd,vMagasin,vType,nligne))>0 {
+                        s PLU = $P($G(@fMAGRETRO@("CMD",vCmd,vMagasin,vType,nligne)),"\",1) 
+                        s vDate = ""
+                        s vDate = $O(@fGUMVT@(vDate))
+                        While (vDate '= "") {
+                            s sGUMVT = ""
+                            s sGUMVT = $O(@fGUMVT@(vDate,PLU,13,sGUMVT))
+                            While ( sGUMVT '= "") {
+                                i +$D(@fGUMVT@(vDate,PLU,13,sGUMVT))>0 {
+	                                s bok = 1
+                                    //w !, "ok => "_fMAGRETRO_"(CMD,"_vCmd_","_vMagasin_","_vType_","_nligne_")="_@fMAGRETRO@("CMD",vCmd,vMagasin,vType,nligne)
+                                }else {
+									s bok = 0
+                                    w !, "KO => "_fMAGRETRO_"(CMD,"_vCmd_","_vMagasin_","_vType_","_nligne_")="_@fMAGRETRO@("CMD",vCmd,vMagasin,vType,nligne)
+                                }
+                                s sGUMVT = $O(@fGUMVT@(vDate,PLU,13,sGUMVT))
+                            }
+                            
+                      	i +bok=0 {
+	            			w !, "ko "_PLU ;KO =>"_fMAGRETRO_"(CMD,"_pCmd_","_pMagasin_","_pType_","_nligne_")="_@fMAGRETRO@("CMD",pCmd,pMagasin,pType,nligne)
+            			}else {
+	            			w !, "ok "_PLU 
+            			}
+            			
+                        s vDate = $O(@fGUMVT@(vDate))
+                        }
+                    }
+
+                    S nligne = $O(@fMAGRETRO@("CMD",vCmd,vMagasin,vType,nligne))
+                }
+                S vType = $O(@fMAGRETRO@("CMD",vCmd,vMagasin,vType))
+            }
+            
+            S vMagasin = $O(@fMAGRETRO@("CMD",vCmd,vMagasin))
+        }
+        S vCmd = $O(@fMAGRETRO@("CMD",vCmd))
+    }
+    q

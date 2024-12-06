@@ -1,0 +1,47 @@
+ROUTINE EXPORTECARTSSTOCKS
+EXPORTECARTSSTOCKS(DateDebutPeriode)
+    // création de l'export
+    set fileName    = "\\F102\Serveur\temp\ecartsstocks.csv"
+    set file        = ##class(%File).%New(fileName)
+    set sc          = file.Open("WSN")
+    set field1      = "PLU;STOCK AV PERIODE;SOMME MVT PDT PERIODE;STOCK FIN PERIODE;CORRECTION A APPORTER"
+    do file.WriteLine(field1)
+    // pour chaque plu qui possède des mouvements pendant la période
+    Set sql         = "SELECT DISTINCT PLU FROM MAP.MAGGUMVT WHERE DATEMVT >= '" _ $zdh(DateDebutPeriode,8) _ "'"
+    set statement   = ##class(%SQL.Statement).%New()
+    set status      = statement.%Prepare(sql)
+    set result      = statement.%Execute()
+    while result.%Next() {
+        // on récupère le stock avant la période
+        Set sql2        = "SELECT TOP 1 * FROM MAP.MAGGUMVT WHERE PLU = '" _ result.%Get("PLU") _ "' AND DATEMVT < '" _ $zdh(DateDebutPeriode,8) _ "' ORDER BY DATEMVT DESC, HEURE DESC"
+        set statement2  = ##class(%SQL.Statement).%New()
+        set status2     = statement2.%Prepare(sql2)
+        set result2     = statement2.%Execute()
+        if result2.%Next() {
+            s StockAvantPeriode = result2.%Get("LASTSTOCK")+(result2.%Get("QTE")*result2.%Get("SENS"))
+            // on récupère la somme des mouvements pendant la période
+            Set sql3                = "SELECT * FROM MAP.MAGGUMVT WHERE PLU = '" _ result.%Get("PLU") _ "' AND DATEMVT >= '" _ $zdh(DateDebutPeriode,8) _ "'"
+            set statement3          = ##class(%SQL.Statement).%New()
+            set status3             = statement3.%Prepare(sql3)
+            set result3             = statement3.%Execute()
+            s StockSommePeriode     = 0
+            while result3.%Next() {
+                s StockSommePeriode = StockSommePeriode+(result3.%Get("QTE")*result3.%Get("SENS"))
+            }
+            // on récupère le stock de fin de période
+            Set sql4                = "SELECT TOP 1 * FROM MAP.MAGGUMVT WHERE PLU = '" _ result.%Get("PLU") _ "' ORDER BY DATEMVT DESC, HEURE DESC"
+            set statement4          = ##class(%SQL.Statement).%New()
+            set status4             = statement4.%Prepare(sql4)
+            set result4             = statement4.%Execute()
+            if result4.%Next() {
+                s StockFinPeriode   = result4.%Get("LASTSTOCK")+(result4.%Get("QTE")*result4.%Get("SENS"))
+            }
+            // si les sommes sont différentes, on ajoute l'écart à l'export
+            if (StockAvantPeriode+StockSommePeriode '= StockFinPeriode) {
+                set field1 = result.%Get("PLU")_";"_StockAvantPeriode_";"_StockSommePeriode_";"_StockFinPeriode_";"_(StockAvantPeriode+StockSommePeriode-StockFinPeriode)
+                do file.WriteLine(field1)
+            }
+        }
+    }
+    do file.Close()
+    q

@@ -1,0 +1,34 @@
+ROUTINE CLEANTERM
+CLEANTERM
+ 
+	s TERM=$O(^HWINFO("TERMINAL",""))
+	while TERM'=""{
+		if TERM["TERM"{
+			S LG=""
+			s LG=$O(^HWINFO("TERMINAL",TERM,""))
+			while LG'=""{
+				s REC=$G(^HWINFO("TERMINAL",TERM,LG))
+				s ^oldTERM("TERMINAL",TERM,LG)=REC
+				s LG=$O(^HWINFO("TERMINAL",TERM,LG))
+			}
+			k ^HWINFO("TERMINAL",TERM)
+		}
+		s TERM=$O(^HWINFO("TERMINAL",TERM))
+	}
+	q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

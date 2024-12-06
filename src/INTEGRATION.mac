@@ -1,0 +1,210 @@
+ROUTINE INTEGRATION
+CREEAVOIRS(DEST)
+ // Routine d'intégration pour réinjecter les avoirs 
+ // qui existent dans la base caché 
+ s FIC=DEST
+ if FIC=""{s FIC="c:\temp\temp\avoirs.txt"}
+ s file=##class(%File).%New(FIC)
+ d file.Open("WSN")
+ 
+ s AV=$O(^TKAVOIRS(""))
+ while AV'=""
+ { 
+  if $L(AV)=12
+  {
+                 // Avoir utilisé ou non
+         if +($D(^TKAVOIRS(AV,1)))=1 {d file.WriteLine("TKAVOLD@@NumTicket@@"_AV_"@@"_$G(^TKAVOIRS(AV,1)))}                              
+         if +$D(^TKTOTAL(AV))=1
+         {
+                 s VALTKTOT=$G(^TKTOTAL(AV))     
+                 d file.WriteLine("TKTOTAL@@NumTicket@@"_AV_"@@"_$G(^TKTOTAL(AV)))       
+         }                               
+  }
+  else
+  {
+          if $L(AV)=6
+          {
+                         // Détail de l'avoir
+                         s CA=$O(^TKAVOIRS(AV,""))
+                         while CA'=""
+                         {
+                         s TK=$O(^TKAVOIRS(AV,CA,""))
+                         while TK'=""
+                         {                               
+                                 d file.WriteLine("TKAVOIRS@@NumTicketEtat@@"_TK_"-0@@")                                                 
+                                 s VALTK=$G(^TK(TK,0))                                                   
+                                 d file.WriteLine("TK@@NumTicket@@"_TK_"@@"_VALTK)                               
+                                 s TK=$O(^TKAVOIRS(AV,CA,TK))
+                         }
+                         s CA=$O(^TKAVOIRS(AV,CA))
+                         }                       
+         }
+  }
+  s AV=$O(^TKAVOIRS(AV))
+ }
+ d file.%Close()
+ q
+ 
+CREETK(CAISSE,DETAIL,DEST)
+ // Création du fichier TK selon 3 parametres: n°Caisse, Detail(0:Aucun,1:Tout le detail ticket), DEST(fichier destination)
+ // Dans la plupart du temps, on met DETAIL a 0 pour que l'opération soit plus rapide.
+ s FIC=DEST
+ IF FIC=""{s FIC="c:\temp\temp\tickets.txt"}
+ s file=##class(%File).%New(FIC)
+ d file.Open("WSN")
+ s CPT=1
+ if CAISSE=""
+ {
+ s NCA=$O(^TKMOIS(""))
+ while NCA'=""
+ {       d BUILDTK(NCA,DETAIL)
+         s NCA=$O(^TKMOIS(NCA))
+ }
+ }
+ else
+ {d BUILDTK(CAISSE,DETAIL)}
+ d file.%Close()
+ q
+ 
+CREEFIC(FIC)
+ s CURFIC=""
+ IF FIC=""{s FIC="c:\temp\temp\ARTICLES.txt"}
+ s file=##class(%File).%New(FIC)
+ 
+ //d CREEST("")
+ //d CREESP
+ //d CREESB
+ //d CREESN
+ d CREECODEPOSTAUX
+ q
+CREEST(DEST)
+ d file.Open("WSN")
+ s ST=$O(^ST(""))
+ while ST'=""
+ {
+  if +($D(^ST(ST)))=11{d file.WriteLine("ST@@RefCle@@"_ST_",0@@"_$C(34)_$$REMPLACE($$REMPLACE($G(^ST(ST)),"'"," "),$c(4),"")_$C(34))}
+  s LG=$O(^ST(ST,""))
+  while LG'=""
+  {
+          d file.WriteLine("ST@@RefCle@@"_ST_","_LG_"@@"_$C(34)_$$REMPLACE($G(^ST(ST,LG)),"'"," ")_$C(34))
+          s LG=$O(^ST(ST,LG))
+  }
+  s ST=$O(^ST(ST))
+ }
+ d file.%Close()
+CREESP
+ d file.Open("WSN")
+ s SP=$O(^SP(""))
+ while SP'=""
+ {
+  d file.WriteLine("SP@@Reference@@"_SP_"@@"_$C(34)_$G(^SP(SP))_$C(34))
+  s SP=$O(^SP(SP))
+ }
+ d file.%Close()
+CREESB
+ d file.Open("WSN")
+ s SB=$O(^SB(""))
+ while SB'=""
+ {
+  d file.WriteLine("SB@@Reference@@"_SB_"@@"_$C(34)_$G(^SB(SB))_$C(34))
+  s SB=$O(^SB(SB))
+ }
+ d file.%Close()
+CREESN
+ d file.Open("WSN")
+ s SN=$O(^SN(""))
+ while SN'=""
+ {
+  d file.WriteLine("SN@@Reference@@"_SN_"@@"_$C(34)_$G(^SN(SN))_$C(34))
+  s SN=$O(^SN(SN))
+ }
+ d file.%Close()
+CREETKCLIENTS(DEST)
+ s FIC=DEST
+ IF FIC=""{s FIC="c:\temp\temp\tkclients.txt"}
+ s file=##class(%File).%New(FIC)
+ d file.Open("WSN")
+ s CLI=$O(^TKCLIENTS(""))
+ while CLI'=""
+ {
+  d file.WriteLine("TKCLIENTS@@IDTKCLIENTS@@"_CLI_"@@"_$C(34)_$G(^TKCLIENTS(CLI))_$C(34))
+  s CLI=$O(^TKCLIENTS(CLI))
+ }
+ d file.%Close()
+ 
+CREECODEPOSTAUX
+ d file.Open("WSN")
+ s CP=$O(^CODEPOSTAUX(""))
+ while CP'=""
+ {
+  s VILLE=$O(^CODEPOSTAUX(CP,""))
+  while VILLE'=""
+  {
+          s DEP=$O(^CODEPOSTAUX(CP,VILLE,""))
+          while DEP'=""
+          {
+                  S NEWVILLE=$$REMPLACE(VILLE,"'"," ")
+                  d file.WriteLine("CODEPOSTAUX@@Ville@@"_CP_","_NEWVILLE_","_DEP_"@@")
+                  s DEP=$O(^CODEPOSTAUX(CP,VILLE,DEP))
+          }
+          s VILLE=$O(^CODEPOSTAUX(CP,VILLE))
+  }
+  s CP=$O(^CODEPOSTAUX(CP))
+ }
+ d file.%Close()
+ 
+BUILDTK(CA,DETAIL)
+ 
+ s DATE=$O(^TKMOIS(CA,""))
+ while DATE'=""
+ {
+  s TK=$O(^TKMOIS(CA,DATE,""))
+  while TK'=""
+  {
+         if +($D(^TK(TK,0)))=1 
+         {
+                 s VALTK=$G(^TK(TK,0))
+                 d file.WriteLine("TK@@NumTicket@@"_TK_"@@"_VALTK)
+         }
+         if DETAIL=1
+         {
+                 s CPT=CPT+1
+                 s REC=""
+                 s REC2=""                               
+                  S LG=$O(^TK(TK,"0"))
+                  while LG'=""
+                  {
+                          s VALTK2=$G(^TK(TK,LG))
+                          s VALTK2=$$REMPLACE(VALTK2,"'"," ")                     
+                          d file.WriteLine("TK_detail@@Cle1@@"_TK_","_LG_"@@"_VALTK2)                            
+                          S CPT=CPT+1
+                          s LG=$O(^TK(TK,LG))
+                  }
+         }
+         s TK=$O(^TKMOIS(CA,DATE,TK))
+  }
+  s DATE=$O(^TKMOIS(CA,DATE))
+ }
+ q
+ 
+REMPLACE(STR,CAR,REM)
+ // Remplace dans la chaine STR, les caracteres CAR par REM
+ s ICAR=0
+ s tmpOUT=""
+ FOR ICAR=1:1:+($L(STR))
+ {
+  if $E(STR,ICAR,ICAR)=CAR {s tmpOUT=tmpOUT_REM}else{s tmpOUT=tmpOUT_$E(STR,ICAR,ICAR)}   
+ }
+ q tmpOUT
+ 
+CHAINEOCCURRENCE(STROC,CAR)
+ // Calcule le nombre d'occurrences d'une chaîne de caractères spécifique
+ // STROC : Texte dans lequel les occurrences de <Chaîne à rechercher> doivent être recherchées. 
+ // CAR : Texte à rechercher dans la <Chaîne source>
+ s CPTCAR=0
+ s iSize=$L(STROC)
+ for i=1:1:iSize
+ {
+      if $E(STROC,i,i)=CAR {s CPTCAR=CPTCAR+1}
+ }       
+ q +CPTCAR

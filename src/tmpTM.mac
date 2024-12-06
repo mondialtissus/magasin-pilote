@@ -1,0 +1,83 @@
+ROUTINE tmpTM
+
+ISSCorriger
+ s DOSSIER = "C:\Terminal\SAM\Dechargement"
+
+ s HWINFO = "^[""USER""]HWINFO"
+ s NOEUD = "ADRESSE_IP_SERVER"
+
+ s HWPOS = "^[""USER""]HWPOS"
+
+ write "DOSSIER: "_##class(%File).CreateDirectory(DOSSIER, .return)
+
+ if $D(@HWINFO@(NOEUD)) = 0 {
+    s CODEMAG = $G(@HWINFO@("MAG"))
+    s IP = $P($G(@HWPOS@(CODEMAG,13)),"\",11)
+	s $p(IP,".",4) = 250
+    s @HWINFO@(NOEUD) = IP
+    w !,"IP: "_IP
+ }
+
+ q
+ 
+CorrectionRetro
+	s MAGRETROCONF = "^[""USER""]MAGRETROCONF"
+	w "OK",!
+	s Data = ""
+	s Retro = ""
+	s Cmd = ""
+	s Date = ""
+	s ListeRetroCmd = ""
+	s ListeDoublonRetro = ""
+	s Cpt = 1
+	s Statut = ""
+	s NumRetro = ""
+	s Exp = ""
+	s Dest = ""
+	
+	s Statut = $O(@MAGRETROCONF@(""))
+	while Statut '= ""
+	{
+		s NumRetro = $O(@MAGRETROCONF@(Statut,""))
+		while NumRetro '= ""
+		{
+			s Exp = $O(@MAGRETROCONF@(Statut,NumRetro,""))
+			while Exp '= ""
+			{
+				i Exp = "X998"
+				{
+					s Dest = $O(@MAGRETROCONF@(Statut,NumRetro,Exp,""))
+					while Dest '= ""
+					{
+						s Cpt = 1
+						s Data = $g(@MAGRETROCONF@(Statut,NumRetro,Exp,Dest,0))
+						s Retro = NumRetro
+						s Cmd = $p(Data,"\",9)
+						s Date = $P(Data,"\",4)
+						
+						s ListeRetroCmd = ListeRetroCmd_Retro_"\;/"_Cmd_"\\||//"
+						While $p(ListeRetroCmd,"\\||//",Cpt) '= ""
+						{
+							i (Cmd = $p($p(ListeRetroCmd,"\\||//",Cpt),"\;/",2)) && (Retro'=$p($p(ListeRetroCmd,"\\||//",Cpt),"\;/",1))
+							{
+								//i Date >= "20230101"
+								//{
+									w $p($p(ListeRetroCmd,"\\||//",Cpt),"\;/",1)_" <=> "_Retro_"\;/"_Cmd,!
+								//}
+								s ListeDoublonRetro = ListeDoublonRetro_$p($p(ListeRetroCmd,"\\||//",Cpt),"\;/",1)_" <=> "_Retro_"\;/"_Cmd_"\\||//"
+								q 
+							}
+							s Cpt = Cpt+1
+						}
+
+						s Dest = $o(@MAGRETROCONF@(Statut,NumRetro,Exp,Dest))
+					}
+				}	
+				s Exp = $o(@MAGRETROCONF@(Statut,NumRetro,Exp))
+			}	
+			s NumRetro = $o(@MAGRETROCONF@(Statut,NumRetro))
+		}
+		s Statut = $o(@MAGRETROCONF@(Statut))
+	}
+	w "Poupoule ! ",!
+ q

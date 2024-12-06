@@ -1,0 +1,90 @@
+ROUTINE REINITINVSKORPIO
+REINITINVSKORPIO
+ S IDATEINV=$G(^HWINFO("INVENTAIRE","DATE"))
+ s file=##class(%Library.File).%New("C:\SYSEND\ARTICLE.DAT")
+ d file.Open("RU")
+ s cpt=0
+ s PLU=""
+ s PA=""
+ s bErr=0
+ S iSize=file.SizeGet()
+ w iSize
+ F i=1:1:iSize  {
+     S iCar=file.Read(1)
+     //w iCar
+     s AA=+$A(iCar)
+     I (AA=-1)||(AA=10) { //W !,"CR"
+       I bErr=0 {s ^INVDEPOTART(+PLU)=+PA }
+       s cpt=0
+       s PLU=""
+       s PA=""
+       s bErr=0
+     }  
+     else
+     {
+       s cpt=cpt+1
+	   I cpt<13 {
+		   if (AA>45)&&(AA<58) {S PLU=PLU_iCar}
+		   else {if AA'=32 s bErr=1}
+	   }
+	   I ((cpt>93)&&(cpt<104)) {
+		    if (AA>45)&&(AA<58) {S PA=PA_iCar}
+		    else {if AA'=32 s bErr=1}
+	   }
+     }
+ }
+ S ARTICLE=""
+ F  S ARTICLE=$O(^ARINVARTICLE(IDATEINV,"REFERENCE","DEPOT",ARTICLE)) Q:(ARTICLE="")  D
+ .S NLIGNE=""
+ .F  S NLIGNE=$O(^ARINVARTICLE(IDATEINV,"REFERENCE","DEPOT",ARTICLE,NLIGNE)) Q:(NLIGNE="")  D
+ ..S DATA=^ARINVARTICLE(IDATEINV,"REFERENCE","DEPOT",ARTICLE,NLIGNE)
+ ..S $P(DATA,"\",8)=+$G(^INVDEPOTART($P(DATA,"\",3)))
+ ..S ^ARINVARTICLE(IDATEINV,"REFERENCE","DEPOT",ARTICLE,NLIGNE)=DATA
+ ..Q
+ .Q
+ Q
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

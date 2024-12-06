@@ -1,0 +1,91 @@
+ROUTINE REGENERESTOCK
+REGENERESTOCK(DATESTOCK)
+	//Cette fonction permet de regénérer un stock dans un magasin à partir d'une date de dernier stock et des mouvements qui suivent: 2017-01-30
+	if +DATESTOCK<64300 q //Petit test
+	
+	w DATESTOCK
+	r a
+	
+	k ^GUSTOCKARC(DATESTOCK)	
+	
+	//Nous parcourons tous les PLUs
+	s PLU=""
+	s PLU=$O(^SP(PLU))
+	while PLU'=""
+	{
+		s QTESTOCK=0
+		s QTEMVT=0
+		s DATASTOCK=""
+		s DERNIERDATE=$O(^GUSTOCKARC(PLU,DATESTOCK),-1)
+		if DERNIERDATE'=""
+		{
+			s DATASTOCK=$G(^GUSTOCKARC(PLU,DERNIERDATE))
+			s QTESTOCK= +$P(DATASTOCK,"\",6)						
+		}	
+		s DATEMVT = $O(^GUMVT(DERNIERDATE))
+		while (DATEMVT'="")&&(DATEMVT<=DATESTOCK)
+		{
+			if +$D(^GUMVT(DATEMVT,PLU))>0
+			{
+				s TYPEMVT=""						
+				s TYPEMVT = $O(^GUMVT(DATEMVT,PLU,TYPEMVT))
+				while TYPEMVT'=""
+				{
+					s NUMMVT=""
+					s NUMMVT = $O(^GUMVT(DATEMVT,PLU,TYPEMVT,NUMMVT))
+					while NUMMVT'=""
+					{
+						s DATAMVT= $G(^GUMVT(DATEMVT,PLU,TYPEMVT,NUMMVT))
+						s QTEMVT=QTEMVT+(+$P(DATAMVT,"\",1)*+$P(DATAMVT,"\",4))
+								
+						s NUMMVT = $O(^GUMVT(DATEMVT,PLU,TYPEMVT,NUMMVT))
+					}						
+					s TYPEMVT = $O(^GUMVT(DATEMVT,PLU,TYPEMVT))						
+				}				
+			}
+			s DATEMVT = $O(^GUMVT(DATEMVT))
+		}			
+		
+		s QTESTOCK=QTESTOCK+QTEMVT
+		if QTESTOCK'=0
+		{
+			s CLEFARTICLE=$G(^SP(PLU))
+			s DATAART = $G(^ST(CLEFARTICLE))
+	             
+	        s PA=$$GETPRIX($P(DATAART,"\",13))              
+	        s PV=$$GETPRIX($P(DATAART,"\",22))              
+	        
+			if DATASTOCK=""
+			{
+				//nouvel article ou n'ayant jamais eu de stock				
+				s DATASTOCK=QTEMVT_"\0\0\0\0\"_QTESTOCK_"\"_PA_"\"_PV_"\"_$h
+				
+				s ^GUSTOCKARCTEST(DATESTOCK,PLU)=DATASTOCK
+				s ^GUSTOCKARC(PLU,DATESTOCK)=DATASTOCK
+			}
+			else
+			{
+				s $P(DATASTOCK,"\",1)=+$P(DATASTOCK,"\",1)+QTEMVT
+				s $P(DATASTOCK,"\",6)=QTESTOCK				
+				s ^GUSTOCKARCTEST(DATESTOCK,PLU)=$P(DATASTOCK,"\",1)_"\"_$P(DATASTOCK,"\",2)_"\"_$P(DATASTOCK,"\",3)_"\"_$P(DATASTOCK,"\",4)_"\"_$P(DATASTOCK,"\",5)_"\"_$P(DATASTOCK,"\",6)_"\"_PA_"\"_PV_"\"_$P(DATASTOCK,"\",7)
+				s ^GUSTOCKARC(PLU,DATESTOCK)=DATASTOCK
+			}
+			
+		}
+		
+		s PLU=$O(^SP(PLU))				
+	}
+	
+	
+	Q
+
+ 
+GETPRIX(PRIX)
+	S DATESYS=+$P($H,",",1)
+	S DATEBASCULE=+$P(PRIX,"/",2)
+	I DATEBASCULE>0 D
+	.S INDICE=3
+	.I DATESYS<DATEBASCULE S INDICE=1
+	.S PRIX=$P(PRIX,"/",INDICE)
+	.Q
+	Q PRIX

@@ -1,0 +1,113 @@
+ROUTINE TEST2
+MVTMANQUE
+ 
+ s NUMRETRO="X999-RETRO-155057"
+ s iCpt=0 s iCptTrouve=0 s iCptManque=0
+ 
+ s NUMLIGNE="0"
+ 
+ s COMMENTAIRE=$P($G(^MAGRETRO("CMD",NUMRETRO,"X999","G224",NUMLIGNE)),"\",8)
+ s NUMLIGNE=$O(^MAGRETRO("CMD",NUMRETRO,"X999","G224",NUMLIGNE))
+ while NUMLIGNE'=""
+ {
+	s iCpt=iCpt+1
+	
+	s DATARETRO=$G(^MAGRETRO("CMD",NUMRETRO,"X999","G224",NUMLIGNE))
+	s PLU=$P(DATARETRO,"\",1)
+	s QTE=+$P(DATARETRO,"\",2)
+	s CMDGSI=$P(DATARETRO,"\",14)
+	
+	//i CMDGSI'="" {w !, "COUCOU"}
+	s bTrouve=0
+	
+	i +$D(^GUMVT(66105,PLU,13))>0
+	{
+		s NUMMVT=""
+		s NUMMVT=$O(^GUMVT(66105,PLU,13,NUMMVT))
+		while NUMMVT'=""
+		{
+			s DATAMVT=$G(^GUMVT(66105,PLU,13,NUMMVT))
+			
+			i (COMMENTAIRE=$P(DATAMVT,"\",9))&&(NUMRETRO=$P(DATAMVT,"\",8))&&(QTE=+$P(DATAMVT,"\",1))&&(bTrouve=0)
+			{
+				s bTrouve=1
+				s iCptTrouve=iCptTrouve+1
+				
+			}
+			
+			s NUMMVT=$O(^GUMVT(66105,PLU,13,NUMMVT))	
+		}
+	}
+	
+	i bTrouve=0
+	{
+		s iCptManque=iCptManque+1
+		//w !, DATARETRO
+		s MAGDEST="G224"
+		s TYPEMVT="13"
+		s MAGSRC="X999"
+		s Login="Info"
+		s sParam = MAGDEST_"_||_"_Login_"_||_"_PLU_"_||_"_PLU_"_||_"_TYPEMVT_"_||_"_QTE_"_||_"_COMMENTAIRE_"_||_"_MAGSRC_"_||_"_MAGDEST_"_||_"_NUMRETRO
+		w !, sParam
+		//..PGAjoutGUMVT(sParam, 0)  Voir comment faire pour appeler un webservice depuis une routine
+		// Faire mouvement ici
+	}
+	
+	s bTrouve=0
+	
+ 	s NUMLIGNE=$O(^MAGRETRO("CMD",NUMRETRO,"X999","G224",NUMLIGNE))
+ }
+ w !, iCptTrouve_"/"_iCpt_"\"_iCptManque
+ Q
+
+TEST2
+ S MAG="G224"
+ S NEV=""
+ S ^HWTEMPDEUX(MAG,1)="123\TEZSTT"
+ S ^HWTEMPDEUX(MAG,2)="CPOUCOZCUOSEUCSUO"
+VERIF
+ s MAG=$G(^HWINFO("MAG"))
+ 
+ s systeminfo=##class(%Library.Function).%New(sFile)
+ s IPServer=systeminfo.IPAddresses("")
+ s IPServer2=""
+ I +$P(IPServer,".",4)=250 s IPServer2=$Replace(IPServer,"250","251")
+ I +$P(IPServer,".",4)=251 s IPServer2=$Replace(IPServer,"251","250")
+ 
+ s sFile = "C:\pos\Fusion.exe"
+ if ##class(%Library.File).Exists(sFile)
+ {
+	 s file=##class(%Library.File).%New(sFile)
+	 s ^MODROUTINE($ZD(file.DateModified,8),MAG,sFile)=""
+	 w !,sFile_" = "_$ZD(file.DateModified,8)
+ }
+ 
+ s sFile = "C:\pos\download\Fusion.exe"
+ if ##class(%Library.File).Exists(sFile)
+ {
+	 s file=##class(%Library.File).%New(sFile)
+	 s ^MODROUTINE($ZD(file.DateModified,8),MAG,sFile)=""
+	 w !,sFile_"= "_$ZD(file.DateModified,8)
+ }
+ 
+ I IPServer2'=""
+ {
+	 s sFile = "\\10.10.9.251\c$\pos\Fusion.exe"
+	 if ##class(%Library.File).Exists(sFile)
+	 {
+		 s file=##class(%Library.File).%New(sFile)
+	 	 s ^MODROUTINE($ZD(file.DateModified,8),MAG,sFile)=""
+		 w !,sFile_" = "_$ZD(file.DateModified,8)
+	 }
+
+	 s sFile = "\\10.10.9.251\c$\pos\download\Fusion.exe"
+	 if ##class(%Library.File).Exists(sFile)
+	 {
+		 s file=##class(%Library.File).%New(sFile)
+	 	 s ^MODROUTINE($ZD(file.DateModified,8),MAG,sFile)=""
+		 w !,sFile_" = "_$ZD(file.DateModified,8)
+	 }
+
+ }
+ 
+ Q

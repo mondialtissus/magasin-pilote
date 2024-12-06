@@ -1,0 +1,17 @@
+ROUTINE Test
+Test
+ q
+TestExecutionRoutine
+ s TestExecutionRoutine = "^[""USER""]TestExecutionRoutine"
+ s i= 0
+ For i = 1:1:10 {
+	s @TestExecutionRoutine@(i) = ""
+ }
+ q
+
+
+
+
+
+
+

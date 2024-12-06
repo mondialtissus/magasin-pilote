@@ -1,0 +1,95 @@
+ROUTINE CHECKEXEUPD
+CHECKEXEUPD
+ s MAG=$G(^HWINFO("MAG"))
+ 
+ s systeminfo=##class(%Library.Function).%New(sFile)
+ s IPServer=systeminfo.IPAddresses("")
+ s IPServer2=""
+ I +$P(IPServer,".",4)=250 s IPServer2=$Replace(IPServer,"250","251")
+ I +$P(IPServer,".",4)=251 s IPServer2=$Replace(IPServer,"251","250")
+ 
+ s sFile = "C:\pos\Fusion.exe"
+ if ##class(%Library.File).Exists(sFile)
+ {
+	 s file=##class(%Library.File).%New(sFile)
+	 s ^MODROUTINE("CHECKEXEUPD",$ZD(file.DateModified,8),MAG,sFile)=""
+	 w !,sFile_" = "_$ZD(file.DateModified,8)
+ }
+ 
+ s sFile = "C:\pos\download\Fusion.exe"
+ if ##class(%Library.File).Exists(sFile)
+ {
+	 s file=##class(%Library.File).%New(sFile)
+	 s ^MODROUTINE("CHECKEXEUPD",$ZD(file.DateModified,8),MAG,sFile)=""
+	 w !,sFile_"= "_$ZD(file.DateModified,8)
+ }
+ 
+ I IPServer2'=""
+ {
+	 s sFile = "\\10.10.9.251\c$\pos\Fusion.exe"
+	 if ##class(%Library.File).Exists(sFile)
+	 {
+		 s file=##class(%Library.File).%New(sFile)
+	 	 s ^MODROUTINE("CHECKEXEUPD",$ZD(file.DateModified,8),MAG,sFile)=""
+		 w !,sFile_" = "_$ZD(file.DateModified,8)
+	 }
+
+	 s sFile = "\\10.10.9.251\c$\pos\download\Fusion.exe"
+	 if ##class(%Library.File).Exists(sFile)
+	 {
+		 s file=##class(%Library.File).%New(sFile)
+	 	 s ^MODROUTINE("CHECKEXEUPD",$ZD(file.DateModified,8),MAG,sFile)=""
+		 w !,sFile_" = "_$ZD(file.DateModified,8)
+	 }
+
+ }
+ 
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

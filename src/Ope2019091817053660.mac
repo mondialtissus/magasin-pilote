@@ -1,0 +1,581 @@
+ROUTINE Ope2019091817053660
+Ope2019091817053660
+ s ^TKFINSERIE(147925)="Retro Plateforme"
+ s ^TKFINSERIE(122137)="Retro Plateforme"
+ s ^TKFINSERIE(154567)="Retro Plateforme"
+ s ^TKFINSERIE(154817)="Retro Plateforme"
+ s ^TKFINSERIE(131471)="Retro Plateforme"
+ s ^TKFINSERIE(131472)="Retro Plateforme"
+ s ^TKFINSERIE(131473)="Retro Plateforme"
+ s ^TKFINSERIE(148766)="Retro Plateforme"
+ s ^TKFINSERIE(148770)="Retro Plateforme"
+ s ^TKFINSERIE(152696)="Retro Plateforme"
+ s ^TKFINSERIE(129460)="Retro Plateforme"
+ s ^TKFINSERIE(131337)="Retro Plateforme"
+ s ^TKFINSERIE(122941)="Retro Plateforme"
+ s ^TKFINSERIE(130823)="Retro Plateforme"
+ s ^TKFINSERIE(130830)="Retro Plateforme"
+ s ^TKFINSERIE(130831)="Retro Plateforme"
+ s ^TKFINSERIE(130832)="Retro Plateforme"
+ s ^TKFINSERIE(147519)="Retro Plateforme"
+ s ^TKFINSERIE(148804)="Retro Plateforme"
+ s ^TKFINSERIE(148807)="Retro Plateforme"
+ s ^TKFINSERIE(148822)="Retro Plateforme"
+ s ^TKFINSERIE(148825)="Retro Plateforme"
+ s ^TKFINSERIE(148826)="Retro Plateforme"
+ s ^TKFINSERIE(148830)="Retro Plateforme"
+ s ^TKFINSERIE(148832)="Retro Plateforme"
+ s ^TKFINSERIE(148834)="Retro Plateforme"
+ s ^TKFINSERIE(148900)="Retro Plateforme"
+ s ^TKFINSERIE(152644)="Retro Plateforme"
+ s ^TKFINSERIE(152657)="Retro Plateforme"
+ s ^TKFINSERIE(152807)="Retro Plateforme"
+ s ^TKFINSERIE(153165)="Retro Plateforme"
+ s ^TKFINSERIE(153167)="Retro Plateforme"
+ s ^TKFINSERIE(153168)="Retro Plateforme"
+ s ^TKFINSERIE(153173)="Retro Plateforme"
+ s ^TKFINSERIE(153174)="Retro Plateforme"
+ s ^TKFINSERIE(153182)="Retro Plateforme"
+ s ^TKFINSERIE(153295)="Retro Plateforme"
+ s ^TKFINSERIE(153296)="Retro Plateforme"
+ s ^TKFINSERIE(153300)="Retro Plateforme"
+ s ^TKFINSERIE(153301)="Retro Plateforme"
+ s ^TKFINSERIE(153308)="Retro Plateforme"
+ s ^TKFINSERIE(153309)="Retro Plateforme"
+ s ^TKFINSERIE(153310)="Retro Plateforme"
+ s ^TKFINSERIE(153311)="Retro Plateforme"
+ s ^TKFINSERIE(153320)="Retro Plateforme"
+ s ^TKFINSERIE(153324)="Retro Plateforme"
+ s ^TKFINSERIE(153325)="Retro Plateforme"
+ s ^TKFINSERIE(154799)="Retro Plateforme"
+ s ^TKFINSERIE(154800)="Retro Plateforme"
+ s ^TKFINSERIE(122508)="Retro Plateforme"
+ s ^TKFINSERIE(148690)="Retro Plateforme"
+ s ^TKFINSERIE(83277)="Retro Plateforme"
+ s ^TKFINSERIE(128198)="Retro Plateforme"
+ s ^TKFINSERIE(128201)="Retro Plateforme"
+ s ^TKFINSERIE(148407)="Retro Plateforme"
+ s ^TKFINSERIE(148873)="Retro Plateforme"
+ s ^TKFINSERIE(148875)="Retro Plateforme"
+ s ^TKFINSERIE(152812)="Retro Plateforme"
+ s ^TKFINSERIE(153181)="Retro Plateforme"
+ s ^TKFINSERIE(155162)="Retro Plateforme"
+ s ^TKFINSERIE(155165)="Retro Plateforme"
+ s ^TKFINSERIE(119665)="Retro Plateforme"
+ s ^TKFINSERIE(129336)="Retro Plateforme"
+ s ^TKFINSERIE(129339)="Retro Plateforme"
+ s ^TKFINSERIE(130596)="Retro Plateforme"
+ s ^TKFINSERIE(130598)="Retro Plateforme"
+ s ^TKFINSERIE(148435)="Retro Plateforme"
+ s ^TKFINSERIE(148436)="Retro Plateforme"
+ s ^TKFINSERIE(148437)="Retro Plateforme"
+ s ^TKFINSERIE(148438)="Retro Plateforme"
+ s ^TKFINSERIE(148661)="Retro Plateforme"
+ s ^TKFINSERIE(148775)="Retro Plateforme"
+ s ^TKFINSERIE(148781)="Retro Plateforme"
+ s ^TKFINSERIE(148783)="Retro Plateforme"
+ s ^TKFINSERIE(148786)="Retro Plateforme"
+ s ^TKFINSERIE(148795)="Retro Plateforme"
+ s ^TKFINSERIE(148796)="Retro Plateforme"
+ s ^TKFINSERIE(148797)="Retro Plateforme"
+ s ^TKFINSERIE(148798)="Retro Plateforme"
+ s ^TKFINSERIE(148799)="Retro Plateforme"
+ s ^TKFINSERIE(126745)="Retro Plateforme"
+ s ^TKFINSERIE(148641)="Retro Plateforme"
+ s ^TKFINSERIE(148645)="Retro Plateforme"
+ s ^TKFINSERIE(148655)="Retro Plateforme"
+ s ^TKFINSERIE(148657)="Retro Plateforme"
+ s ^TKFINSERIE(148840)="Retro Plateforme"
+ s ^TKFINSERIE(153147)="Retro Plateforme"
+ s ^TKFINSERIE(153697)="Retro Plateforme"
+ s ^TKFINSERIE(122419)="Retro Plateforme"
+ s ^TKFINSERIE(122421)="Retro Plateforme"
+ s ^TKFINSERIE(101066)="Retro Plateforme"
+ s ^TKFINSERIE(101068)="Retro Plateforme"
+ s ^TKFINSERIE(147929)="Retro Plateforme"
+ s ^TKFINSERIE(148768)="Retro Plateforme"
+ s ^TKFINSERIE(148771)="Retro Plateforme"
+ s ^TKFINSERIE(147899)="Retro Plateforme"
+ s ^TKFINSERIE(147902)="Retro Plateforme"
+ s ^TKFINSERIE(147903)="Retro Plateforme"
+ s ^TKFINSERIE(123191)="Retro Plateforme"
+ s ^TKFINSERIE(122544)="Retro Plateforme"
+ s ^TKFINSERIE(147892)="Retro Plateforme"
+ s ^TKFINSERIE(147895)="Retro Plateforme"
+ s ^TKFINSERIE(147919)="Retro Plateforme"
+ s ^TKFINSERIE(122499)="Retro Plateforme"
+ s ^TKFINSERIE(122500)="Retro Plateforme"
+ s ^TKFINSERIE(122476)="Retro Plateforme"
+ s ^TKFINSERIE(150642)="Retro Plateforme"
+ s ^TKFINSERIE(150643)="Retro Plateforme"
+ s ^TKFINSERIE(150644)="Retro Plateforme"
+ s ^TKFINSERIE(150645)="Retro Plateforme"
+ s ^TKFINSERIE(150646)="Retro Plateforme"
+ s ^TKFINSERIE(129095)="Retro Plateforme"
+ s ^TKFINSERIE(130605)="Retro Plateforme"
+ s ^TKFINSERIE(130647)="Retro Plateforme"
+ s ^TKFINSERIE(130672)="Retro Plateforme"
+ s ^TKFINSERIE(131431)="Retro Plateforme"
+ s ^TKFINSERIE(120545)="Retro Plateforme"
+ s ^TKFINSERIE(120560)="Retro Plateforme"
+ s ^TKFINSERIE(130663)="Retro Plateforme"
+ s ^TKFINSERIE(125720)="Retro Plateforme"
+ s ^TKFINSERIE(147915)="Retro Plateforme"
+ s ^TKFINSERIE(119447)="Retro Plateforme"
+ s ^TKFINSERIE(122265)="Retro Plateforme"
+ s ^TKFINSERIE(148886)="Retro Plateforme"
+ s ^TKFINSERIE(148990)="Retro Plateforme"
+ s ^TKFINSERIE(152954)="Retro Plateforme"
+ s ^TKFINSERIE(152958)="Retro Plateforme"
+ s ^TKFINSERIE(147961)="Retro Plateforme"
+ s ^TKFINSERIE(147962)="Retro Plateforme"
+ s ^TKFINSERIE(148736)="Retro Plateforme"
+ s ^TKFINSERIE(148762)="Retro Plateforme"
+ s ^TKFINSERIE(2159)="Retro Plateforme"
+ s ^TKFINSERIE(2160)="Retro Plateforme"
+ s ^TKFINSERIE(2197)="Retro Plateforme"
+ s ^TKFINSERIE(2201)="Retro Plateforme"
+ s ^TKFINSERIE(125689)="Retro Plateforme"
+ s ^TKFINSERIE(146629)="Retro Plateforme"
+ s ^TKFINSERIE(146631)="Retro Plateforme"
+ s ^TKFINSERIE(148750)="Retro Plateforme"
+ s ^TKFINSERIE(148752)="Retro Plateforme"
+ s ^TKFINSERIE(148754)="Retro Plateforme"
+ s ^TKFINSERIE(152484)="Retro Plateforme"
+ s ^TKFINSERIE(130573)="Retro Plateforme"
+ s ^TKFINSERIE(125726)="Retro Plateforme"
+ s ^TKFINSERIE(126960)="Retro Plateforme"
+ s ^TKFINSERIE(131453)="Retro Plateforme"
+ s ^TKFINSERIE(119489)="Retro Plateforme"
+ s ^TKFINSERIE(125711)="Retro Plateforme"
+ s ^TKFINSERIE(125718)="Retro Plateforme"
+ s ^TKFINSERIE(123353)="Retro Plateforme"
+ s ^TKFINSERIE(123441)="Retro Plateforme"
+ s ^TKFINSERIE(130554)="Retro Plateforme"
+ s ^TKFINSERIE(130607)="Retro Plateforme"
+ s ^TKFINSERIE(130608)="Retro Plateforme"
+ s ^TKFINSERIE(130611)="Retro Plateforme"
+ s ^TKFINSERIE(147998)="Retro Plateforme"
+ s ^TKFINSERIE(148675)="Retro Plateforme"
+ s ^TKFINSERIE(148682)="Retro Plateforme"
+ s ^TKFINSERIE(150667)="Retro Plateforme"
+ s ^TKFINSERIE(120587)="Retro Plateforme"
+ s ^TKFINSERIE(129726)="Retro Plateforme"
+ s ^TKFINSERIE(130583)="Retro Plateforme"
+ s ^TKFINSERIE(130584)="Retro Plateforme"
+ s ^TKFINSERIE(130623)="Retro Plateforme"
+ s ^TKFINSERIE(130624)="Retro Plateforme"
+ s ^TKFINSERIE(130625)="Retro Plateforme"
+ s ^TKFINSERIE(130626)="Retro Plateforme"
+ s ^TKFINSERIE(130630)="Retro Plateforme"
+ s ^TKFINSERIE(152560)="Retro Plateforme"
+ s ^TKFINSERIE(120204)="Retro Plateforme"
+ s ^TKFINSERIE(130590)="Retro Plateforme"
+ s ^TKFINSERIE(130398)="Retro Plateforme"
+ s ^TKFINSERIE(148977)="Retro Plateforme"
+ s ^TKFINSERIE(121168)="Retro Plateforme"
+ s ^TKFINSERIE(147871)="Retro Plateforme"
+ s ^TKFINSERIE(85892)="Retro Plateforme"
+ s ^TKFINSERIE(128182)="Retro Plateforme"
+ s ^TKFINSERIE(128184)="Retro Plateforme"
+ s ^TKFINSERIE(128187)="Retro Plateforme"
+ s ^TKFINSERIE(128188)="Retro Plateforme"
+ s ^TKFINSERIE(128192)="Retro Plateforme"
+ s ^TKFINSERIE(145337)="Retro Plateforme"
+ s ^TKFINSERIE(147317)="Retro Plateforme"
+ s ^TKFINSERIE(148551)="Retro Plateforme"
+ s ^TKFINSERIE(148558)="Retro Plateforme"
+ s ^TKFINSERIE(148564)="Retro Plateforme"
+ s ^TKFINSERIE(148635)="Retro Plateforme"
+ s ^TKFINSERIE(148637)="Retro Plateforme"
+ s ^TKFINSERIE(152932)="Retro Plateforme"
+ s ^TKFINSERIE(152933)="Retro Plateforme"
+ s ^TKFINSERIE(152963)="Retro Plateforme"
+ s ^TKFINSERIE(152966)="Retro Plateforme"
+ s ^TKFINSERIE(152968)="Retro Plateforme"
+ s ^TKFINSERIE(152969)="Retro Plateforme"
+ s ^TKFINSERIE(152971)="Retro Plateforme"
+ s ^TKFINSERIE(152978)="Retro Plateforme"
+ s ^TKFINSERIE(152979)="Retro Plateforme"
+ s ^TKFINSERIE(153159)="Retro Plateforme"
+ s ^TKFINSERIE(153161)="Retro Plateforme"
+ s ^TKFINSERIE(153188)="Retro Plateforme"
+ s ^TKFINSERIE(153192)="Retro Plateforme"
+ s ^TKFINSERIE(153205)="Retro Plateforme"
+ s ^TKFINSERIE(153578)="Retro Plateforme"
+ s ^TKFINSERIE(154064)="Retro Plateforme"
+ s ^TKFINSERIE(154066)="Retro Plateforme"
+ s ^TKFINSERIE(154070)="Retro Plateforme"
+ s ^TKFINSERIE(201402)="Retro Plateforme"
+ s ^TKFINSERIE(201403)="Retro Plateforme"
+ s ^TKFINSERIE(201404)="Retro Plateforme"
+ s ^TKFINSERIE(129008)="Retro Plateforme"
+ s ^TKFINSERIE(129009)="Retro Plateforme"
+ s ^TKFINSERIE(148640)="Retro Plateforme"
+ s ^TKFINSERIE(148910)="Retro Plateforme"
+ s ^TKFINSERIE(148911)="Retro Plateforme"
+ s ^TKFINSERIE(148912)="Retro Plateforme"
+ s ^TKFINSERIE(148913)="Retro Plateforme"
+ s ^TKFINSERIE(148915)="Retro Plateforme"
+ s ^TKFINSERIE(147216)="Retro Plateforme"
+ s ^TKFINSERIE(147225)="Retro Plateforme"
+ s ^TKFINSERIE(147230)="Retro Plateforme"
+ s ^TKFINSERIE(147234)="Retro Plateforme"
+ s ^TKFINSERIE(147240)="Retro Plateforme"
+ s ^TKFINSERIE(147241)="Retro Plateforme"
+ s ^TKFINSERIE(147242)="Retro Plateforme"
+ s ^TKFINSERIE(147957)="Retro Plateforme"
+ s ^TKFINSERIE(148705)="Retro Plateforme"
+ s ^TKFINSERIE(148712)="Retro Plateforme"
+ s ^TKFINSERIE(154565)="Retro Plateforme"
+ s ^TKFINSERIE(147981)="Retro Plateforme"
+ s ^TKFINSERIE(147863)="Retro Plateforme"
+ s ^TKFINSERIE(147866)="Retro Plateforme"
+ s ^TKFINSERIE(130690)="Retro Plateforme"
+ s ^TKFINSERIE(152571)="Retro Plateforme"
+ s ^TKFINSERIE(153280)="Retro Plateforme"
+ s ^TKFINSERIE(153286)="Retro Plateforme"
+ s ^TKFINSERIE(121578)="Retro Plateforme"
+ s ^TKFINSERIE(122116)="Retro Plateforme"
+ s ^TKFINSERIE(122117)="Retro Plateforme"
+ s ^TKFINSERIE(122134)="Retro Plateforme"
+ s ^TKFINSERIE(122135)="Retro Plateforme"
+ s ^TKFINSERIE(123444)="Retro Plateforme"
+ s ^TKFINSERIE(130669)="Retro Plateforme"
+ s ^TKFINSERIE(147867)="Retro Plateforme"
+ s ^TKFINSERIE(148696)="Retro Plateforme"
+ s ^TKFINSERIE(148905)="Retro Plateforme"
+ s ^TKFINSERIE(148909)="Retro Plateforme"
+ s ^TKFINSERIE(152936)="Retro Plateforme"
+ s ^TKFINSERIE(152984)="Retro Plateforme"
+ s ^TKFINSERIE(153183)="Retro Plateforme"
+ s ^TKFINSERIE(154839)="Retro Plateforme"
+ s ^TKFINSERIE(125203)="Retro Plateforme"
+ s ^TKFINSERIE(125212)="Retro Plateforme"
+ s ^TKFINSERIE(152813)="Retro Plateforme"
+ s ^TKFINSERIE(152815)="Retro Plateforme"
+ s ^TKFINSERIE(152818)="Retro Plateforme"
+ s ^TKFINSERIE(129447)="Retro Plateforme"
+ s ^TKFINSERIE(129448)="Retro Plateforme"
+ s ^TKFINSERIE(129969)="Retro Plateforme"
+ s ^TKFINSERIE(150672)="Retro Plateforme"
+ s ^TKFINSERIE(150673)="Retro Plateforme"
+ s ^TKFINSERIE(150674)="Retro Plateforme"
+ s ^TKFINSERIE(150675)="Retro Plateforme"
+ s ^TKFINSERIE(148713)="Retro Plateforme"
+ s ^TKFINSERIE(148747)="Retro Plateforme"
+ s ^TKFINSERIE(130563)="Retro Plateforme"
+ s ^TKFINSERIE(130676)="Retro Plateforme"
+ s ^TKFINSERIE(131427)="Retro Plateforme"
+ s ^TKFINSERIE(131428)="Retro Plateforme"
+ s ^TKFINSERIE(131448)="Retro Plateforme"
+ s ^TKFINSERIE(131464)="Retro Plateforme"
+ s ^TKFINSERIE(146682)="Retro Plateforme"
+ s ^TKFINSERIE(147301)="Retro Plateforme"
+ s ^TKFINSERIE(147302)="Retro Plateforme"
+ s ^TKFINSERIE(147307)="Retro Plateforme"
+ s ^TKFINSERIE(147520)="Retro Plateforme"
+ s ^TKFINSERIE(152928)="Retro Plateforme"
+ s ^TKFINSERIE(152929)="Retro Plateforme"
+ s ^TKFINSERIE(152930)="Retro Plateforme"
+ s ^TKFINSERIE(153133)="Retro Plateforme"
+ s ^TKFINSERIE(153231)="Retro Plateforme"
+ s ^TKFINSERIE(153233)="Retro Plateforme"
+ s ^TKFINSERIE(153274)="Retro Plateforme"
+ s ^TKFINSERIE(155406)="Retro Plateforme"
+ s ^TKFINSERIE(155407)="Retro Plateforme"
+ s ^TKFINSERIE(155408)="Retro Plateforme"
+ s ^TKFINSERIE(129269)="Retro Plateforme"
+ s ^TKFINSERIE(129270)="Retro Plateforme"
+ s ^TKFINSERIE(129271)="Retro Plateforme"
+ s ^TKFINSERIE(123612)="Retro Plateforme"
+ Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

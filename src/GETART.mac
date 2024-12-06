@@ -1,78 +1,40 @@
 ROUTINE GETART
-GETART	 ; Compiled May 3, 2005 15:00:47
-	s gPOS=$G(^HWINFO("MAG"))
-	k ^MODRESULT
-	s LEV=$O(^HWLEVART(""))
-	s DATE=$P($H,",",1)
-	s LG=0
-	s CPT=0
-	s STREC=""
-	s PV=""
-	s RESULT=""
-	while LEV'=""
-	{
-	        S LG=1
-	        s CPT=0
-	        s ART=$O(^HWLEVART(LEV,""))
-	        s RESULT=""
-	        while ART'=""
-	        {
-	                s CPT=CPT+1
-	                s STREC=$G(^ST(ART))                   
-	                s PLU=$P(STREC,"\",21)
-	                s PV=$P(STREC,"\",22)
-	                ;s PV=$$GETPRIX^RECHCMD($P(STREC,"\",22))                                 
-	                s HC=$P(STREC,"\",5)
-	                if HC=0{s HC=""}                    
-	                s RESULT=RESULT_PLU_"*"_PV_"*"_HC_"\"                        
-	                if +$L(RESULT)>480
-	                {                                                   
-	                    s ^MODRESULT(gPOS,DATE,LEV,LG)=RESULT
-	                    s LG=LG+1
-	                    s RESULT=""
-	                }                                  
-	                s ART=$O(^HWLEVART(LEV,ART))
-	        }
-	        s ^MODRESULT(gPOS,DATE,LEV,LG)=RESULT
-	        s ^MODRESULT(gPOS,DATE,LEV)=CPT        
-	        s LEV=$O(^HWLEVART(LEV))
-	}
-	q
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+GETART   ; Compiled May 3, 2005 15:00:47
+ s gPOS=$G(^HWINFO("MAG"))
+ k ^MODRESULT
+ s LEV=$O(^HWLEVART(""))
+ s DATE=$P($H,",",1)
+ s LG=0
+ s CPT=0
+ s STREC=""
+ s PV=""
+ s RESULT=""
+ while LEV'=""
+ {
+         S LG=1
+         s CPT=0
+         s ART=$O(^HWLEVART(LEV,""))
+         s RESULT=""
+         while ART'=""
+         {
+                 s CPT=CPT+1
+                 s STREC=$G(^ST(ART))                   
+                 s PLU=$P(STREC,"\",21)
+                 s PV=$P(STREC,"\",22)
+                 ;s PV=$$GETPRIX^RECHCMD($P(STREC,"\",22))                                 
+                 s HC=$P(STREC,"\",5)
+                 if HC=0{s HC=""}                    
+                 s RESULT=RESULT_PLU_"*"_PV_"*"_HC_"\"                        
+                 if +$L(RESULT)>480
+                 {                                                   
+                     s ^MODRESULT(gPOS,DATE,LEV,LG)=RESULT
+                     s LG=LG+1
+                     s RESULT=""
+                 }                                  
+                 s ART=$O(^HWLEVART(LEV,ART))
+         }
+         s ^MODRESULT(gPOS,DATE,LEV,LG)=RESULT
+         s ^MODRESULT(gPOS,DATE,LEV)=CPT        
+         s LEV=$O(^HWLEVART(LEV))
+ }
+ q

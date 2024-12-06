@@ -38,7 +38,7 @@ RECUPSTOCKTHEO(DATEARCHIVE=0)
 	                    S PA=$$GETPRIX($P(DATAART,"\",13))              
 	            
 	                    s SECTEUR = $P(DATAART,"\",23)
-	                    s QTE = $P(DATASTOCK,"\",6)
+	                    s QTE = +$P(DATASTOCK,"\",6)
 	                    s VALOPLU = +QTE*+PA
 	                    
 	                    i (+SECTEUR = 4) || (+SECTEUR = 7) || (+SECTEUR = 8)

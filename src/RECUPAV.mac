@@ -1,0 +1,117 @@
+ROUTINE RECUPAV
+RECUPAV
+ 
+ s FIC="c:\avoirs.txt"
+ s file=##class(%File).%New(FIC)
+ d file.Open("WSN")
+ 
+ s AV=$O(^TKAVOIRS(""))
+ while AV'=""
+ { 
+  if $L(AV)=12
+  {
+                 // Avoir utilisé ou non
+         if +($D(^TKAVOIRS(AV,1)))=1
+         {
+                 s REC="HLitRecherchePremier(TKAVOLD,'NumTicket','"_AV_"'); IF NOT HTrouve(TKAVOLD) THEN TKAVOLD.NumTicket='"_AV_"'; TKAVOLD.DateUtilisation='"
+                 s REC=REC_$G(^TKAVOIRS(AV,1))_"'; HAjoute(TKAVOLD)"
+                 d file.WriteLine(REC)
+         }
+         s REC=""
+         
+         if +$D(^TKTOTAL(AV))=1
+         {
+                 s VALTKTOT=$G(^TKTOTAL(AV))
+                 s REC="HLitRecherchePremier(TKTOTAL,'NumTicket','"_AV_"'); IF NOT HTrouve(TKTOTAL) THEN TKTOTAL.NumTicket='"_AV_"'; TKTOTAL.Total="_$P(VALTKTOT,"/",1)_"; "
+                 s REC=REC_"HAjoute(TKTOTAL)"
+                 d file.WriteLine(REC)
+         }
+         
+         s REC=""                
+  }
+  else
+  {
+          if $L(AV)=6
+          {
+                 // Détail de l'avoir
+                 s CA=$O(^TKAVOIRS(AV,""))
+                 while CA'=""
+                 {
+                 s TK=$O(^TKAVOIRS(AV,CA,""))
+                 while TK'=""
+                 {                               
+                         s REC="HLitRecherchePremier(TKAVOIRS,'NumTicketEtat',HConstruitValClé(TKAVOIRS,'NumTicketEtat','"_TK_"',0)); IF NOT HTrouve(TKAVOIRS) THEN "
+                         s REC=REC_"TKAVOIRS.NumTicket='"_TK_"'; TKAVOIRS.Etat=0; HAjoute(TKAVOIRS)"
+                         d file.WriteLine(REC)
+                         
+                         s REC=""
+                         s VALTK=$G(^TK(TK,0))
+                         
+                         s REC="HLitRecherchePremier(TK,'NumTicket','"_TK_"'); IF NOT HTrouve(TK) THEN TK.NumTicket='"_TK_"'; TK.Caissier='"_$P(VALTK,"\",1)_"'; "
+                         s REC=REC_"TK.Heure='"_$P(VALTK,"\",2)_"'; TK.TypeReglement='"_$P(VALTK,"\",3)_"'; TK.Remise="_+$P(VALTK,"\",4)_"; TK.Solde="_+$P(VALTK,"\",5)_"; "
+                         s REC=REC_"TK.Coupon="_+$P(VALTK,"\",6)_"; TK.Fidelite="_+$P(VALTK,"\",7)_"; TK.Reduction="_+$P(VALTK,"\",8)_"; TK.EnErreur="_+$P(VALTK,"\",9)_"; "
+                         s REC=REC_"HAjoute(TK)"
+                         d file.WriteLine(REC)
+                         s TK=$O(^TKAVOIRS(AV,CA,TK))
+                 }
+                 s CA=$O(^TKAVOIRS(AV,CA))
+                 }               
+         }
+  }
+  s AV=$O(^TKAVOIRS(AV))
+ }
+ d file.%Close()
+ q
+ 
+RECUPTK
+ s FIC="c:\tk.txt"
+ s file=##class(%File).%New(FIC)
+ d file.Open("WSN")
+ s REC=""
+ 
+ s TK=$O(^TK(""))
+ while TK'=""
+ {
+ if $D(^TK(TK,0))=1
+ {
+         s VALTK=$G(^TK(TK,0))
+         s REC="HLitRecherchePremier(TK,'NumTicket','"_TK_"'); IF NOT HTrouve(TK) THEN TK.NumTicket='"_TK_"'; TK.Caissier='"_$P(VALTK,"\",1)_"'; "
+         s REC=REC_"TK.Heure='"_$P(VALTK,"\",2)_"'; TK.TypeReglement='"_$P(VALTK,"\",3)_"'; TK.Remise="_+$P(VALTK,"\",4)_"; TK.Solde="_+$P(VALTK,"\",5)_"; "
+         s REC=REC_"TK.Coupon="_+$P(VALTK,"\",6)_"; TK.Fidelite="_+$P(VALTK,"\",7)_"; TK.Reduction="_+$P(VALTK,"\",8)_"; TK.EnErreur="_+$P(VALTK,"\",9)_"; "
+         s REC=REC_"HAjoute(TK)"
+         d file.WriteLine(REC)
+ }
+ s TK=$O(^TK(TK))
+ }
+ q
+RECUPTK2
+ s FIC="c:\tk2.txt"
+ s file=##class(%File).%New(FIC)
+ d file.Open("WSN")
+ s REC=""
+ 
+ s CA=$O(^TKMOISJOURS(""))
+ while CA'=""
+ {
+         s DATE=$O(^TKMOISJOURS(CA,"050501"))
+         while DATE'=""
+         {
+         s TK=$O(^TKMOISJOURS(CA,DATE,""))
+         while TK'=""
+         {
+                 if $D(^TK(TK,0))=1
+                 {
+                 s VALTK=$G(^TK(TK,0))
+                 s REC="HLitRecherchePremier(TK,'NumTicket','"_TK_"'); IF NOT HTrouve(TK) THEN TK.NumTicket='"_TK_"'; TK.Caissier='"_$P(VALTK,"\",1)_"'; "
+                 s REC=REC_"TK.Heure='"_$P(VALTK,"\",2)_"'; TK.TypeReglement='"_$P(VALTK,"\",3)_"'; TK.Remise="_+$P(VALTK,"\",4)_"; TK.Solde="_+$P(VALTK,"\",5)_"; "
+                 s REC=REC_"TK.Coupon="_+$P(VALTK,"\",6)_"; TK.Fidelite="_+$P(VALTK,"\",7)_"; TK.Reduction="_+$P(VALTK,"\",8)_"; TK.EnErreur="_+$P(VALTK,"\",9)_"; "
+                 s REC=REC_"HAjoute(TK)"
+                 d file.WriteLine(REC)
+                 }
+                 s TK=$O(^TKMOISJOURS(CA,DATE,TK))
+         }
+         s DATE=$O(^TKMOISJOURS(CA,DATE))
+         }
+         s CA=$O(^TKMOISJOURS(CA))
+ }
+ q

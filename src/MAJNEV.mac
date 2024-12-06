@@ -1,0 +1,23 @@
+ROUTINE MAJNEV
+init()
+ S MAG="G224"
+ S NEV=""
+ F   S NEV=$O(^HWNEV(MAG,NEV)) Q:(NEV="")  D
+ .w !,NEV_" "_$P($G(^HWNEV(MAG,NEV,0)),"\",12)
+ .S ^HWNEV("FRN",$P($G(^HWNEV(MAG,NEV,0)),"\",12),NEV)=""
+ .Q
+ESPECES
+ S CPT=0
+ S CPTES=0
+ S CAISSE=""
+ F   S CAISSE=$O(^TKESPECES("040129",CAISSE)) Q:(CAISSE="")  D
+ .S TICKET=""
+ .F   S TICKET=$O(^TKESPECES("040129",CAISSE,TICKET)) Q:(TICKET="")  D
+ ..I $P($G(^TK(TICKET,0)),"\",3)'="ES" w !,"Mauvaise ventlation "_TICKET
+ ..S CPT=CPT+$P($G(^TKTOTAL(TICKET)),"/",1)
+ ..S CPTES=CPTES+$P($G(^TKESPECES("040129",CAISSE,TICKET)),"\",1)
+ ..Q
+ .Q
+ w "En total ^TK ="_CPT
+ w !,"En total ^TKESPECES ="_CPTES
+ 

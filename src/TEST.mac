@@ -766,6 +766,32 @@ ESSAI()
  s ^FILESFTP("FROMMAG",13)="MODROUTINE" ; Trace des routines envoyées
  
  W !, "Traitement terminé !"
+
+
+TestBG()
+ s ST = "^"_"["_"""USER"""_"]ST"
+ s data = $o(@ST@(""))
+ w "Début :",!
+ s i = 0
+ s c = 0
+ while data'="" {
+        s i = i+1
+        s dat0 = $p($g(@ST@(data)),"\",13)
+        s dat6 = $p($g(@ST@(data,6)),"\",4)
+        s a = $Normalize(dat0,6)
+        s b = $Normalize(dat6,6)
+        if (a '= b) {
+                w data_" / L0 : "_dat0_" / L6 :"_dat6,!
+                s c = c+1
+        }
+
+        s data = $o(@ST@(data))
+ }
+
+ w i_" Produit Testé",!
+ w c_" Valeur différente",!
+ q
+
  
  
  

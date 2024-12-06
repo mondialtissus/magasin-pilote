@@ -1,0 +1,41 @@
+ROUTINE LSTCLI
+LSTCLI
+ S CPT=0
+ s CLI=$O(^TKCLIENTS(""))
+ while CLI'=""
+ {
+         if CLI'="COMPTEUR"
+         {
+                 s REC=$G(^TKCLIENTS(CLI))       
+                 IF +$$POSITION(REC,"'")>0
+                 {
+                         s CPT=CPT+1
+                         s NEW=$$REMPLACE(REC,"'"," ")
+                         s ^TKCLIENTS(CLI)=NEW
+                         w !, REC
+                 }
+         }       
+         s CLI=$O(^TKCLIENTS(CLI))
+ }
+ Q
+ 
+REMPLACE(STR,CAR,REM)
+ 
+ s ICAR=0
+ s tmpOUT=""
+ FOR ICAR=1:1:+($L(STR))
+ {
+  if $E(STR,ICAR,ICAR)=CAR {s tmpOUT=tmpOUT_REM}else{s tmpOUT=tmpOUT_$E(STR,ICAR,ICAR)}   
+ }
+ q tmpOUT
+ 
+POSITION(STROC,CAR)
+ // Recherche la position d'une lettre dans une autre chaîne de caractères
+ s CPTCAR=0
+ s iSize=$L(STROC)
+ s iResult=0
+ for i=1:1:iSize
+ {
+         if $E(STROC,i,i)=CAR{s iResult=i quit}
+ }
+ q iResult

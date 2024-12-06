@@ -28,6 +28,8 @@ Property NUMMVT As %Integer;
 
 Property QTE As %Float;
 
+Property QTE2 As %String;
+
 Property PA As %Float;
 
 Property PV As %Float;
@@ -281,6 +283,10 @@ Storage SQL
 <Piece>3</Piece>
 </Data>
 <Data name="QTE">
+<Delimiter>"\"</Delimiter>
+<Piece>1</Piece>
+</Data>
+<Data name="QTE2">
 <Delimiter>"\"</Delimiter>
 <Piece>1</Piece>
 </Data>
