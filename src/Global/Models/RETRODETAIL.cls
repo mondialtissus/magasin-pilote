@@ -13,4 +13,6 @@ Property NUMSMP As %String;
 
 Property CODEROULEAU As %String;
 
+// Property RAWCMDQTEGSI As list Of Global.Models.CommandeGSIQte [ SqlListDelimiter = """;""", SqlListType = DELIMITED ];
+
 }

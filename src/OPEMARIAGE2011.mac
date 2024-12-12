@@ -1,0 +1,14 @@
+ROUTINE OPEMARIAGE2011
+OPEMARIAGE2011
+ // Sur les Magasins de Colmar, Strasbourg, Mulhouse W et D DU 25 Mars au 21 Juin 2011
+ // -20% sur le magasin hors étiquettes orange à partir de 50 d'achat
+ 
+ S ^TKCOUPREDUC(2888888840752)="50\0.20\20110325\20110621\1\" 
+ 
+ Q
+ 
+ 
+ 
+ 
+ 
+ 

@@ -18,7 +18,7 @@ Method CreateMod() As %Status
 {
     Set sc = $$$OK
     Set magretro = "^[""USER""]MAGRETROCOUPE"
-    Set ^|"USER"|MAGRETROCOUPEfal(..MAGDEST, "CMD", ..NUMRETRO, ..MAGSRC,"DEST", 0) = @magretro@("CMD", ..NUMRETRO, ..MAGSRC,..MAGDEST,0)
+    Set ^|"USER"|MAGRETROCOUPE(..MAGDEST, "CMD", ..NUMRETRO, ..MAGSRC,"DEST", 0) = @magretro@("CMD", ..NUMRETRO, ..MAGSRC,..MAGDEST,0)
 
     // do something
     Return sc
@@ -31,7 +31,7 @@ Method CreateModDetail() As %Status
     set nbRetro = ..REFCMDDETAIL.Count()
     for i=1:1:nbRetro {
         Set retroDetail = ..REFCMDDETAIL.GetAt(i)
-        Set ^|"USER"|MAGRETROCOUPEfal(..MAGDEST, "CMD", ..NUMRETRO, ..MAGSRC,"DEST", retroDetail.LIGNE) = @magretro@("CMD", ..NUMRETRO, ..MAGSRC,..MAGDEST,retroDetail.LIGNE)
+        Set ^|"USER"|MAGRETROCOUPE(..MAGDEST, "CMD", ..NUMRETRO, ..MAGSRC,"DEST", retroDetail.LIGNE) = @magretro@("CMD", ..NUMRETRO, ..MAGSRC,..MAGDEST,retroDetail.LIGNE)
     }
 
     // do something
@@ -96,7 +96,7 @@ Storage SQL
 </Subscript>
 <Type>data</Type>
 </SQLMap>
-<StreamLocation>^Global.Components.RETRO.CMD.DEPOTCOUPE</StreamLocation>
+<StreamLocation>^Global.Components.RETRO.CMD.USERCOUPE</StreamLocation>
 <Type>%Storage.SQL</Type>
 }
 

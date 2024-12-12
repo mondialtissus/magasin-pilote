@@ -207,7 +207,7 @@ GUSTOCKINV
 	        }
 	}
 	q
-
+ 
 GETPRIX(PRIX)
 	S DATESYS=+$P($H,",",1)
 	S DATEBASCULE=+$P(PRIX,"/",2)

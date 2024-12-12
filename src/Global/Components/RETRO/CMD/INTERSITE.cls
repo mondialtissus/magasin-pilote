@@ -98,7 +98,7 @@ Storage SQL
 </Subscript>
 <Type>data</Type>
 </SQLMap>
-<StreamLocation>^Global.Components.RETRO.CMD.DEPOT</StreamLocation>
+<StreamLocation>^Global.Components.RETRO.CMD.USER</StreamLocation>
 <Type>%Storage.SQL</Type>
 }
 

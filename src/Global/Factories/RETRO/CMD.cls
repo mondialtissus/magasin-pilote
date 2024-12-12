@@ -9,7 +9,7 @@ Query SearchByRetro(NUMRETRO) As %SQLQuery [ SqlProc ]
 {
         SELECT 
         ID, TYPAGE
-        FROM Global_Vues_RETRO_CMD.EnTete
+        FROM Global_Vue_RETRO_CMD.EnTete
         WHERE NUMRETRO = :NUMRETRO
 }
 

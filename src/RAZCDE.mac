@@ -1,5 +1,5 @@
 ROUTINE RAZCDE
-razcde(NumCde)
+RAZCDE(NumCde)
  
  ;Crée le 28/11/2003 par E.Dufour
  ;Permet de générer le fichier des Commandes à partir des informatons dans ^HWARCCMD en manuel
@@ -20,6 +20,7 @@ razcde(NumCde)
  S General=General_"\0\0\1\FULL"
  
  S ^MODCMD(POSNUM,NumCde,0)=General
+ S ^ARCHMODCMD(POSNUM,NumCde,0)=General
  S Lg = 0
  F  S Lg=$O(^HWARCCMD("CDE",NumCde,Lg)) Q:(Lg="")  D
  .S Ligne = $G(^HWARCCMD("CDE",NumCde,Lg))
@@ -29,6 +30,7 @@ razcde(NumCde)
  .S iemb = $P($G(^ST(Art)),"\",6)
  .S MaChaine = Lg_"\\"_Art_"\"_Qte_"\0\0\"_rdpv_"\"_iemb_"\"_"X\1\"_NumCde_"*"_Lg_"*"_Time_"*0*\"
  .S ^MODCMD(POSNUM,NumCde,Lg)=MaChaine
+ .S ^ARCHMODCMD(POSNUM,NumCde,Lg)=MaChaine
  .Q
  w !,"Generation de la commande "_NumCde_" terminé !"
  Q

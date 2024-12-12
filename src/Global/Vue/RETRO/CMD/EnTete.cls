@@ -1,4 +1,4 @@
-Class Global.Vues.RETRO.CMD.EnTete [ ClassType = view, DdlAllowed, Owner = {_SYSTEM}, Not ProcedureBlock, ViewQuery = {
+Class Global.Vue.RETRO.CMD.EnTete [ ClassType = view, DdlAllowed, Owner = {_SYSTEM}, Not ProcedureBlock, ViewQuery = {
 SELECT 
 	*
 FROM 

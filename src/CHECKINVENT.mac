@@ -1,0 +1,72 @@
+ROUTINE CHECKINVENT
+CHECKFILE(FIC,FICOUT)
+ 
+ s FILE="^"_FIC
+ s FILEOUTER="^errER"_FICOUT
+ s FILEOUTOK="^errOK"_FICOUT
+ 
+ s POSNUM=$G(^HWINFO("MAG"))
+ s TYPE=$O(@FILE@(POSNUM,""))
+ while TYPE'=""{
+         
+         if TYPE="REFERENCE"
+         {                       
+                 s N1=$O(@FILE@(POSNUM,TYPE,""))
+                 while N1'=""{
+                                 s N2=$O(@FILE@(POSNUM,TYPE,N1,""))
+                                 while N2'=""{
+                                         s N3=$O(@FILE@(POSNUM,TYPE,N1,N2,""))
+                                         while N3'=""{
+                                                 s REC=$G(@FILE@(POSNUM,TYPE,N1,N2,N3))
+                                                 D CHK
+                                                 s N3=$O(@FILE@(POSNUM,TYPE,N1,N2,N3))
+                                         }                       
+                                         s N2=$O(@FILE@(POSNUM,TYPE,N1,N2))
+                                 }
+                         s N1=$O(@FILE@(POSNUM,TYPE,N1))
+                 }
+         }
+         else
+         {
+                 ; NON REFERENCE
+                 s N1=$O(@FILE@(POSNUM,TYPE,""))
+                 while N1'=""{
+                         s REC=$G(@FILE@(POSNUM,TYPE,N1))
+                         D CHK
+                         s N1=$O(@FILE@(POSNUM,TYPE,N1))
+                 }
+         }
+                                         
+         s TYPE=$O(@FILE@(POSNUM,TYPE))
+ }
+ q
+ 
+CHK
+ 
+ i TYPE="NON REFERENCE"
+ {               
+         i $P(REC,"\",12)="TEST"
+         {s @FILEOUTER@(POSNUM,TYPE,N1)=REC}
+         else
+         {
+                 S CNT=$$GETCNT(TYPE)
+                 s @FILEOUTOK@(POSNUM,TYPE,CNT)=REC
+         }
+ }
+ else
+ {
+         i $P(REC,"\",17)="TEST"
+         {s @FILEOUTER@(POSNUM,TYPE,N1,N2,N3)=REC}
+         else
+         {
+                 S CNT=$$GETCNT(TYPE)
+                 s @FILEOUTOK@(POSNUM,TYPE,N1,N2,CNT)=REC                        
+         }
+ }
+ q
+ 
+GETCNT(TYPEINV)
+ s CNT=""
+ s CNT=+$G(^errCNT(TYPEINV,FIC))
+ s ^errCNT(TYPEINV,FIC)=CNT+1
+ q CNT+1

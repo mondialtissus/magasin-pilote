@@ -331,9 +331,9 @@ CHECKDAY
  s TK=$O(^TKMOISJOURS(CA,AMJ,""))
  while TK'=""{
          s REGL=$P($G(^TK(TK,0)),"\",3)
-         if REGL="ES"{s FIC="TKESPECES"}
+         if REFL="ES"{s FIC="TKESPECES"}
          if REGL="CH"{s FIC="TKCHEQUES"}
-         if REGL="CB"{s FIC="TKCB"}
+         if REFL="CB"{s FIC="TKCB"}
          
          s CURVAL=+$G(^tmpCHECKDAYd(REGL))
          s TOT=+$P($G(@FIC@(AMJ,CA,TK)),"\",1)
@@ -358,18 +358,18 @@ CHECKALL
  D CHECKDET("CB")
  Q
 CHECKDET(TYPE)
-         S CUMUL=0
+ 
  if TYPE="ES"{s FILE="^TKESPECES"}
  if TYPE="CH"{s FILE="^TKCHEQUES"}
  if TYPE="CB"{s FILE="^TKCB"}
  
- s TK=$O(@FILE@("080415",2,""))
+ s TK=$O(@FILE@("070115",1,""))
  while TK'=""{
          if +$P($G(^TK(TK,0)),"\",8)=0{
-                 s CURTOT=+$P($G(@FILE@("080415",2,TK)),"\",1)
+                 s CURTOT=+$P($G(@FILE@("070115",1,TK)),"\",1)
                  s CUMUL=CUMUL+CURTOT
          }
-         s TK=$O(@FILE@("080415",2,TK))
+         s TK=$O(@FILE@("070115",1,TK))
  }
  W !, TYPE_" : "_CUMUL
  q

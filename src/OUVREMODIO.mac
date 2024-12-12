@@ -1,12 +1,11 @@
 ROUTINE OUVREMODIO
 OUVREMODIO
- 
+
  s ^HWLEVFTP("PANDUR")	="panduroedi\panduro\panduroedi\1\"
  s ^HWLEVFTP("DMCME")	="dmcedi\dmc\dmcedi\1\"
- 
+
 q
- 
- 
- 
- 
- 
+
+
+
+

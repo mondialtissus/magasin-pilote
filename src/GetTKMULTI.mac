@@ -1,6 +1,6 @@
 ROUTINE GetTKMULTI
 GetTKMULTI
- s FIC="c:\pos\transfert\G224TKMULTI.txt" s CPT=0 s filedest=##class(%File).%New(FIC) d filedest.Open("WSN") s NODE1=$O(^TKMULTI("")) WHILE NODE1'="" {  s CPT=CPT+1 d filedest.WriteLine(NODE1_"$"_^TKMULTI(NODE1)) s NODE1=$O(^TKMULTI(NODE1)) } d filedest.%Close() s filefin=##class(%File).%New("C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\Fini.txt") d filefin.Open("WSN") d filefin.WriteLine("OK") d filefin.%Close() Q
+ s FIC="c:\pos\transfert\M341TKMULTI.txt" s CPT=0 s filedest=##class(%File).%New(FIC) d filedest.Open("WSN") s NODE1=$O(^TKMULTI("")) WHILE NODE1'="" {  s CPT=CPT+1 d filedest.WriteLine(NODE1_"$"_^TKMULTI(NODE1)) s NODE1=$O(^TKMULTI(NODE1)) } d filedest.%Close() s filefin=##class(%File).%New("C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\Fini.txt") d filefin.Open("WSN") d filefin.WriteLine("OK") d filefin.%Close() Q
  
  
  

@@ -10,11 +10,6 @@ Property DATESYS As %Date [ Calculated, SqlComputeCode = {
     Set {DATESYS}= $zdh({DATESYSRAW},8)
 }, SqlComputed ];
 
-/// Description
-Property asFAX As %Boolean [ Calculated, SqlComputeCode = { 
-    Set {asFAX} = $data(^[""USER""]MAGRETROCONF(..MAGSRC, "FAX", ..NUMRETRO, ..MAGDEST, 0))
- }, SqlComputed ];
-
 Index Master On (NUMRETRO, MAGSRC, MAGDEST) [ IdKey ];
 
 Relationship REFCMDDETAIL As Global.Components.RETRO.CMD.CONFECTIONDETAIL [ Cardinality = children, Inverse = REFCMDENTETE ];
@@ -23,7 +18,7 @@ Method CreateMod() As %Status
 {
     Set sc = $$$OK
     Set magretro = "^[""USER""]MAGRETROCONF"
-    Set ^|"USER"|MODMAGRETROCONFTEST(..MAGSRC, "CMD", ..NUMRETRO, ..MAGDEST,"SRC", 0) = @magretro@("CMD", ..NUMRETRO, ..MAGSRC,..MAGDEST,0)
+    Set ^|"USER"|MODMAGRETROCONF(..MAGSRC, "CMD", ..NUMRETRO, ..MAGDEST,"SRC", 0) = @magretro@("CMD", ..NUMRETRO, ..MAGSRC,..MAGDEST,0)
 
     // do something
     Return sc
@@ -36,7 +31,7 @@ Method CreateModDetail() As %Status
     set nbRetro = ..REFCMDDETAIL.Count()
     for i=1:1:nbRetro {
         Set retroDetail = ..REFCMDDETAIL.GetAt(i)
-        Set ^|"USER"|MODMAGRETROCONFTEST(..MAGSRC, "CMD", ..NUMRETRO, ..MAGDEST,"SRC", retroDetail.LIGNE) = @magretro@("CMD", ..NUMRETRO, ..MAGSRC,..MAGDEST,retroDetail.LIGNE)
+        Set ^|"USER"|MODMAGRETROCONF(..MAGSRC, "CMD", ..NUMRETRO, ..MAGDEST,"SRC", retroDetail.LIGNE) = @magretro@("CMD", ..NUMRETRO, ..MAGSRC,..MAGDEST,retroDetail.LIGNE)
     }
 
     // do something

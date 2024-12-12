@@ -1,0 +1,17 @@
+ROUTINE SUPPINVTOURNANT
+SUPPINVTOURNANT
+ s PLU=$O(^INVTOURNANT(""))
+ s CPT=0
+ while PLU'=""
+ {
+         s DATAINV=$G(^INVTOURNANT(PLU))
+         s DATEINV = $P(DATAINV,"\",2)
+         i +DATEINV=62726
+         {
+                 k ^INVTOURNANT(PLU)
+         }               
+         s CPT=CPT+1
+         s PLU=$O(^INVTOURNANT(PLU))
+ }
+ 
+ q

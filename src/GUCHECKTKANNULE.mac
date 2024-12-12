@@ -2,7 +2,7 @@ ROUTINE GUCHECKTKANNULE
 GUCHECKTKANNULE
 	;Cette routine permet de palier à un mauvais démarrage des annulations de ticket (en effet, le stock n'a pas été impacté)
 	;Premier groupe
-	S DATEDEBUT = "091019"	
+	S DATEDEBUT = "091012"	
 	S DATEFIN = "091110"
 	s TODAY = +$H
 	
