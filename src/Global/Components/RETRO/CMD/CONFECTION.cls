@@ -2,14 +2,18 @@ Class Global.Components.RETRO.CMD.CONFECTION Extends (%Persistent, Global.Models
 {
 
 Property DATESYS As %Date [ Calculated, SqlComputeCode = {
-    if {{DATESYSRAW}}="" {
-        Set {DATESYS}= ""
-        return
+    if {DATESYSRAW}=""
+    {
+        set {DATESYS}= ""
+        return 
     }
-    set StringPartieDate = $EXTRACT({DATESYSRAW},1,8)
-    Set {DATESYS}=  $zdh(StringPartieDate,8)
-   
+    Set {DATESYS}= $zdh({DATESYSRAW},8)
 }, SqlComputed ];
+
+/// Description
+Property asFAX As %Boolean [ Calculated, SqlComputeCode = { 
+    Set {asFAX} = $data(^[""USER""]MAGRETROCONF(..MAGSRC, "FAX", ..NUMRETRO, ..MAGDEST, 0))
+ }, SqlComputed ];
 
 Index Master On (NUMRETRO, MAGSRC, MAGDEST) [ IdKey ];
 

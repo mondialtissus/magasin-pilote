@@ -2,7 +2,12 @@ Class Global.Components.RETRO.CMD.COUPE Extends (%Persistent, Global.Models.RETR
 {
 
 Property DATESYS As %Date [ Calculated, SqlComputeCode = {
-    Set {DATESYS}= ..Convertie({DATESYSRAW})
+    if {DATESYSRAW}=""
+    {
+        set {DATESYS}= ""
+        return 
+    }
+    Set {DATESYS}= $zdh({DATESYSRAW},8)
 }, SqlComputed ];
 
 Index Master On (NUMRETRO, MAGSRC, MAGDEST) [ IdKey ];

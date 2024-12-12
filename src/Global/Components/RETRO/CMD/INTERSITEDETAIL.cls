@@ -5,7 +5,7 @@ Query QteExpedie(pNumCmd As %String, pMagDestination As %String, pMagSource As %
 {
     SELECT sum(QTEEXP) as QTE 
     FROM 
-        Global_Components_RETRO_CMD.DEPOTDETAIL 
+        Global_Components_RETRO_CMD.INTERSITEDETAIL 
     WHERE 
         REFCMDENTETE->NUMRETRO = :pNumCmd
         AND REFCMDENTETE->MAGDEST = :pMagDestination
