@@ -9,7 +9,7 @@ Method GenerateModLiv(retro As Global.Models.RETRO) As %Status
     Set GlobalRetro = ..GetRetroGlobal(retro)
 
 
-    Set @modLiv@(retro.MAGSRC, "LIV", retro.NUMRETRO, retro.MAGDEST, "SRC", 0) = @GlobalRetro@("LIV", retro.NUMRETRO, retro.MAGSRC, retro.MAGDEST, 0)
+    Set @modLiv@(retro.MAGDEST, "LIV", retro.NUMRETRO, retro.MAGSRC, "DEST", 0) = @GlobalRetro@("LIV", retro.NUMRETRO, retro.MAGSRC, retro.MAGDEST, 0)
     zw @modLiv
 }
 

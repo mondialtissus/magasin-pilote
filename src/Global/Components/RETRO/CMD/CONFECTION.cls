@@ -10,6 +10,12 @@ Property DATESYS As %Date [ Calculated, SqlComputeCode = {
     Set {DATESYS}= $zdh({DATESYSRAW},8)
 }, SqlComputed ];
 
+/// Description
+Property asLIV As %Boolean [ Calculated, SqlComputeCode = {
+    Set magRetroConf = "^[""USER""]MAGRETROCONF"
+    Set {asLIV} = ($Data(@magRetroConf@("LIV",{NUMRETRO}))>0)
+}, SqlComputed ];
+
 Index Master On (NUMRETRO, MAGSRC, MAGDEST) [ IdKey ];
 
 Relationship REFCMDDETAIL As Global.Components.RETRO.CMD.CONFECTIONDETAIL [ Cardinality = children, Inverse = REFCMDENTETE ];

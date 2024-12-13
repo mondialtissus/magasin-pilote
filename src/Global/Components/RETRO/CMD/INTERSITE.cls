@@ -11,6 +11,11 @@ Property DATESYS As %Date [ Calculated, SqlComputeCode = {
     Set {DATESYS}= $zdh({DATESYSRAW},8)
 }, SqlComputed ];
 
+Property asLIV As %Boolean [ Calculated, SqlComputeCode = {
+    Set magRetro = "^[""USER""]MAGRETRO"
+    Set {asLIV} = ($Data(@magRetro@("LIV",{NUMRETRO}))>0)
+}, SqlComputed ];
+
 Index Master On (NUMRETRO, MAGSRC, MAGDEST) [ IdKey ];
 
 /// Description
