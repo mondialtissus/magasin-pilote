@@ -5,12 +5,21 @@ Property RETROs As list Of Global.Models.RETRO [ Private ];
 
 Method GenerateModLiv(retro As Global.Models.RETRO) As %Status
 {
-    Set modLiv = ..GetRetroModGlobal(retro)
-    Set GlobalRetro = ..GetRetroGlobal(retro)
+    Set mod = ..GetRetroModGlobal(retro)
 
+    Set DataEntete = ""
 
-    Set @modLiv@(retro.MAGDEST, "LIV", retro.NUMRETRO, retro.MAGSRC, "DEST", 0) = @GlobalRetro@("LIV", retro.NUMRETRO, retro.MAGSRC, retro.MAGDEST, 0)
-    zw @modLiv
+    Set $Piece(DataEntete, "\", 1) = retro.NUMCPT
+    Set $Piece(DataEntete, "\", 2) = retro.QTETOT
+    Set $Piece(DataEntete, "\", 3) = retro.VALOTOT
+    Set $Piece(DataEntete, "\", 4) = retro.USERRETRO
+    Set $Piece(DataEntete, "\", 5) = retro.DATESYSRAW
+    Set $Piece(DataEntete, "\", 6) = retro.HEURESYS
+    Set $Piece(DataEntete, "\", 7) = retro.LIBRE
+    Set $Piece(DataEntete, "\", 8) = retro.REMARQUE
+    Set $Piece(DataEntete, "\", 9) = retro.NUMCMD
+
+    Set @mod@(retro.MAGSRC, "LIV", retro.NUMRETRO, retro.MAGDEST, "SRC", 0) = DataEntete
 }
 
 Method GenerateModCmd(retro As Global.Models.RETRO) As %Status
@@ -30,7 +39,6 @@ Method GenerateModCmd(retro As Global.Models.RETRO) As %Status
     Set $Piece(DataEntete, "\", 9) = retro.NUMCMD
 
     Set @mod@(retro.MAGSRC, "CMD", retro.NUMRETRO, retro.MAGDEST, "SRC", 0) = DataEntete
-    zw @mod
     set sc = ..GenerateModCmdDetail(retro)
 }
 
@@ -79,16 +87,6 @@ ClassMethod GetRetroModGlobal(retro As Global.Models.RETRO) As %String
         "COUPE":"^[""USER""]MODMAGRETROCOUPE",
         "CONFECTION":"^[""USER""]MODMAGRETROCONF",
         "INTERSITE":"^[""USER""]MODMAGRETRO",
-        :""
-    )
-}
-
-ClassMethod GetRetroGlobal(retro As Global.Models.RETRO) As %String
-{
-    Return $CASE(retro.%ClassName(),
-        "COUPE":"^[""USER""]MAGRETROCOUPE",
-        "CONFECTION":"^[""USER""]MAGRETROCONF",
-        "INTERSITE":"^[""USER""]MAGRETRO",
         :""
     )
 }

@@ -41,7 +41,7 @@ ClassMethod OpenRetro(ID) As Global.Models.RETRO
         Set RETRO = ##Class(Global.Components.RETRO.CMD.COUPE).%OpenId(ID)
     }
     If ##Class(Global.Components.RETRO.CMD.CONFECTION).%ExistsId(ID)=1{
-        Set RETROD = ##Class(Global.Components.RETRO.CMD.CONFECTION).%OpenId(ID)
+        Set RETRO = ##Class(Global.Components.RETRO.CMD.CONFECTION).%OpenId(ID)
     }
    
     Return RETRO
