@@ -11,6 +11,8 @@ XData UrlMap [ XMLNamespace = "http://www.intersystems.com/urlmap" ]
 <Route Url="/" Method="GET" Call="info" Cors="true"/>
 <Route Url="/generate/mod/livraison" Method="GET" Call="generateModRetroLivraisonBetweenDates" Cors="true"/>
 <Route Url="/generate/mod/commande" Method="GET" Call="generateModRetroCommandeBetweenDates" Cors="true"/>
+<Route Url="/ListeRetroDate/:pdate" Method="GET" Call="ListeRetroDate" Cors="true"/>
+<Route Url="/GetRetroCommande" Method="GET" Call="GetRetroCommande" Cors="true"/>
 </Routes>
 }
 
@@ -148,6 +150,75 @@ ClassMethod generateModRetroCommandeBetweenDates() As %Status
 	set tmpArray = ##class(%Stream.GlobalCharacter).%New()
 	do arrayID.%ToJSON(tmpArray)
 	While 'tmpArray.AtEnd {w tmpArray.Read($$$MaxStringLength)}
+	Return sc
+}
+
+/// Description
+Query ListeRetroDate(pdate) As %SQLQuery [ SqlProc ]
+{
+	SELECT 
+	ID
+	FROM Global_Vue_RETRO_CMD.EnTete
+	WHERE DATESYS = :pdate
+}
+
+/// Description
+ClassMethod ListeRetroDate(pdate = {$Zd(+$H,3)}) As %Status
+{
+	Set sc = $$$OK
+
+	Set stmt = ##class(%SQL.Statement).%New()
+
+	Set sc = stmt.%PrepareClassQuery("Global.REST.RETRO", "ListeRetroDate")
+	If $$$ISERR(sc) {
+		Quit sc
+	}
+
+	set pdate = $zdh(pdate, 3)
+	Set rset = stmt.%Execute(pdate)
+	Set arrayID = []
+	While rset.%Next() {
+		Set ID =  rset.%Get("ID")
+		set retro =##class(Global.Factories.RETRO.CMD).OpenRetro(ID)
+		do retro.%JSONExportToString(.json)
+		do arrayID.%Push(json)
+	}
+	set tmpArray = ##class(%Stream.GlobalCharacter).%New()
+	Set %response.ContentType="application/json"
+	do arrayID.%ToJSON(tmpArray)
+	While 'tmpArray.AtEnd {w tmpArray.Read($$$MaxStringLength)}
+
+	// do something
+	Return sc
+}
+Query GetRetroCommande(pRetro) As %Status
+() As %SQLQuery [ SqlProc ]
+{
+	SELECT 
+	ID
+	FROM Global_Vue_RETRO_CMD.EnTete
+	WHERE NUMRETRO=:pRetro
+}
+
+/// Description
+/// Description
+ClassMethod GetRetroCommande() As %Status
+{
+	Set sc = $$$OK
+	Set stmt = ##class(%SQL.Statement).%New()
+	Set retro = $Get(%request.Data("id",1))
+	Set sc = stmt.%PrepareClassQuery("Global.REST.RETRO", "GetRetroCommande")
+	If $$$ISERR(sc) {
+		Quit sc
+	}
+	Set rset = stmt.%Execute(retro)
+	do rset.%Next()
+	Set ID =  rset.%Get("ID")
+	set retro =##class(Global.Factories.RETRO.CMD).OpenRetro(ID)
+	do retro.%JSONExportToString(.json)
+	Set %response.ContentType="application/json"
+	Write json
+	// do something
 	Return sc
 }
 
