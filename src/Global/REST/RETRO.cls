@@ -102,8 +102,8 @@ Query ModRetroCommandeBetweenDates(pDateDe As %String, pDateA As %String) As %SQ
 	SELECT 
 	ID
 	FROM Global_Vue_RETRO_CMD.EnTete
-	WHERE ASLIV = 0
-	AND DATESYS BETWEEN :pDateDe AND :pDateA
+	WHERE 
+	DATESYS BETWEEN :pDateDe AND :pDateA
 }
 
 /// Description
@@ -176,23 +176,24 @@ ClassMethod ListeRetroDate(pdate = {$Zd(+$H,3)}) As %Status
 
 	set pdate = $zdh(pdate, 3)
 	Set rset = stmt.%Execute(pdate)
+	Set %response.ContentType="application/json"
 	Set arrayID = []
 	While rset.%Next() {
 		Set ID =  rset.%Get("ID")
 		set retro =##class(Global.Factories.RETRO.CMD).OpenRetro(ID)
 		do retro.%JSONExportToString(.json)
-		do arrayID.%Push(json)
+		set jsonObj = {}.%FromJSON(json)
+		do arrayID.%Push(jsonObj)
 	}
 	set tmpArray = ##class(%Stream.GlobalCharacter).%New()
-	Set %response.ContentType="application/json"
 	do arrayID.%ToJSON(tmpArray)
 	While 'tmpArray.AtEnd {w tmpArray.Read($$$MaxStringLength)}
 
 	// do something
 	Return sc
 }
-Query GetRetroCommande(pRetro) As %Status
-() As %SQLQuery [ SqlProc ]
+
+Query GetRetroCommande(pRetro) As %SQLQuery [ SqlProc ]
 {
 	SELECT 
 	ID

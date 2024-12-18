@@ -56,7 +56,7 @@ Storage SQL
 <Delimiter>"\"</Delimiter>
 <Piece>3</Piece>
 </Data>
-<Global>^["USER"]MAGRETROCONF</Global>
+<Global>^["DEPOT"]MAGRETROCONF</Global>
 <Structure>delimited</Structure>
 <Subscript name="1">
 <Expression>"LIV"</Expression>
