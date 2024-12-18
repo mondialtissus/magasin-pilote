@@ -207,17 +207,40 @@ ClassMethod GetRetroCommande() As %Status
 {
 	Set sc = $$$OK
 	Set stmt = ##class(%SQL.Statement).%New()
-	Set retro = $Get(%request.Data("id",1))
-	Set sc = stmt.%PrepareClassQuery("Global.REST.RETRO", "GetRetroCommande")
-	If $$$ISERR(sc) {
-		Quit sc
+	Set retro = $Get(%request.Data("retro",1))
+	if retro="" {
+		Set %response.Status = ..#HTTP406NOTACCEPTABLE
+		Set %response.ContentType = "text/plain"
+		Write "id is required",!
+		return $$$OK
 	}
-	Set rset = stmt.%Execute(retro)
-	do rset.%Next()
-	Set ID =  rset.%Get("ID")
+
+	Set sql = "SELECT  ID FROM Global_Vue_RETRO_CMD.EnTete WHERE NUMRETRO= ?"
+
+	Set result=##class(%SQL.Statement).%ExecDirect(,.sql,retro)
+	W retro,!
+
+	if result.%Next() {
+		Set ID =  result.ID
+	}
+	else {
+		Set %response.Status = ..#HTTP404NOTFOUND
+		Set %response.ContentType = "text/plain"
+		Write "Retro not found",!
+		return $$$OK
+	}
+
+	if ID="" {
+		Set %response.Status = ..#HTTP404NOTFOUND
+		Set %response.ContentType = "text/plain"
+		Write "Retro not found",!
+		return $$$OK
+	}
+
 	set retro =##class(Global.Factories.RETRO.CMD).OpenRetro(ID)
 	do retro.%JSONExportToString(.json)
 	Set %response.ContentType="application/json"
+	set json.TYPAGE = retro.%ClassName(1)
 	Write json
 	// do something
 	Return sc

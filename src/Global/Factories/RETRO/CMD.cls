@@ -35,16 +35,17 @@ ClassMethod OpenRetro(ID) As Global.Models.RETRO
 
     Set RETRO = ""
     If ##Class(Global.Components.RETRO.CMD.INTERSITE).%ExistsId(ID)=1{
-        Set RETRO = ##Class(Global.Components.RETRO.CMD.INTERSITE).%OpenId(ID)
+        Return ##Class(Global.Components.RETRO.CMD.INTERSITE).%OpenId(ID)
+        
     }
     If ##Class(Global.Components.RETRO.CMD.COUPE).%ExistsId(ID)=1{
-        Set RETRO = ##Class(Global.Components.RETRO.CMD.COUPE).%OpenId(ID)
+        Return ##Class(Global.Components.RETRO.CMD.COUPE).%OpenId(ID)
     }
     If ##Class(Global.Components.RETRO.CMD.CONFECTION).%ExistsId(ID)=1{
-        Set RETRO = ##Class(Global.Components.RETRO.CMD.CONFECTION).%OpenId(ID)
+        Return ##Class(Global.Components.RETRO.CMD.CONFECTION).%OpenId(ID)
     }
    
-    Return RETRO
+    Return ""
 }
 
 ClassMethod OpenRetroWithTypage(ID, TYPAGE) As Global.Models.RETRO
