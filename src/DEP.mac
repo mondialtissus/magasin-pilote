@@ -1,0 +1,11 @@
+ROUTINE DEP
+Deploiement
+ s ^HWINFO("FUSION","SAUVEGARDE","CACHE") = "C:\InterSystems\Cache\mgr\user\iris.dat"
+ s ^HWINFO("FUSION","SAUVEGARDE","MDP") = "/VewmOnsEySJB4fRArk"
+ s ^HWINFO("FUSION","SAUVEGARDE","USER")= "adm_capinfo"
+ s ^HWINFO("FUSION","SAUVEGARDE","ZIP")= 1
+ Q
+
+
+
+

@@ -1,17 +1,1541 @@
-ROUTINE Test
-Test
- q
-TestExecutionRoutine
- s TestExecutionRoutine = "^[""USER""]TestExecutionRoutine"
- s i= 0
- For i = 1:1:10 {
-	s @TestExecutionRoutine@(i) = ""
+ROUTINE TEST
+TEST
+ // Menu principal qui est appellé lors de l'appel de la routine : D TEST^TEST
+ write !, ""
+ write !,"   **********  UTILITAIRES ********** "
+ write !,"1  : Controle tickets"
+ write !,"2  : Informations Magasin"
+ WRITE !,"3  : Traitement fichiers"
+ WRITE !,"4  : Regénère cloture dans ^MODCAY2K"
+ write !,"5  : Suppression de ticket" 
+ write !,"6  : Controle continuité ticket"
+ write !,"7  : MAJ fichier TKREMB"
+ write !,"8  : DEPLACER CHIFFRES D'AFFAIRE"
+ write !,"9  : Reventile TkFamille du 9/04/04"
+ write !,"10 : TEST"
+ write !,"   ********************************** "
+ write !, ""
+ 
+ read "",choix
+ write !,""
+ if choix = 1 
+ {
+         write !,"   ********  CONTROLE TICKETS ******* "
+         write !,""
+         write !, "   Date (AAMMJJ) : " 
+         read "",date
+         WRITE !, "   Caisses : Toutes = 0 ou Une = n°caisse "
+         write !,""
+         read " ? : ", nCa
+         set SORTIR = date 
+         D ControleTick(date)
  }
- q
-
-
-
-
-
-
-
+ if choix = 2 { D MAG()}
+ if choix = 3 { D ERREURS()}
+ if choix = 4 { D RECLOTURE()}
+ if choix = 5 { D KILL()}
+ if choix = 6 { D TESTTICK() }
+ if choix = 7 { D MAJTKREMB()}
+ if choix = 8 { D DEPLACECA()}
+ if choix = 9 { D REVENTILE()}
+ if choix = 10 { D ESSAI()}
+ 
+ControleTick(Date)
+ 
+ // Permet de donner un récapitulatif de toutes les informations 
+ // des caisses - Controle la cohérance des fichiers
+ 
+ set i = 0
+ set PreTick = ""
+ set Pretick = Date 
+ set Cpt = 0
+ set TotG = 0
+ set TotES = 0
+ set TotCH = 0
+ set TotCB = 0
+ set TotAV = 0
+ set TotCR = 0
+ set TotMULTI = 0
+ set TotAUTRE = 0
+ set COMPTEUR = 0
+ set Fam = ""
+ set TotFAM  = 0
+ set TotGTKREGL = 0
+ set TKREGLES = 0
+ set TKREGLCB = 0
+ set TKREGLCH = 0
+ set TKREGLAV = 0
+ set TKREGLCR = 0
+ set TKREGLDE = 0
+ set FicES = 0
+ set FicCB = 0
+ set FicCH = 0
+ set FicCR = 0
+ set FicMULTI = 0
+ 
+ set NCPT1 = 0
+ set NCPT2 = 0
+ set NCPT3 = 0
+ set NCPT4 = 0
+ set NCPT5 = 0
+ set NCPT6 = 0
+ set NCPT7 = 0
+ set CPT1 = 0
+ set CPT2 = 0
+ set CPT3 = 0
+ set CPT4 = 0
+ 
+ set TotP = 0
+ if nCa = 0 
+ {
+ // Recherche dans toutes les caisses
+ set NumCaisse = $O(^LISTECAISSE(""))
+ while NumCaisse '= ""
+ {       
+         // Recherche de tout les tickets de la journée Date
+         set Tick = $O(^TKMOISJOURS(NumCaisse,Date,""))
+         while Tick '= ""
+         {
+                         set TotTick = $P($G(^TKTOTAL(Tick)),"/",1)
+                         set TYPREGL = ""
+                         set TYPEREGL = $P($G(^TK(Tick,0)),"\",3)
+                         if TYPEREGL = "ES" { set TotES = TotES + TotTick  set NCPT1 = NCPT1 + 1}
+                         if TYPEREGL = "CB" { set TotCB = TotCB + TotTick set NCPT2 = NCPT2 + 1}
+                         if TYPEREGL = "CH" { set TotCH = TotCH + TotTick set NCPT3 = NCPT3 + 1}
+                         if TYPEREGL = "AV" { set TotAV = TotAV + TotTick set NCPT4 = NCPT4 + 1}
+                         if TYPEREGL = "CR" { set TotCR = TotCR + TotTick set NCPT5 = NCPT5 + 1}
+                         if TYPEREGL = "MULTI" { set TotMULTI = TotMULTI + TotTick set NCPT6 = NCPT6 + 1}
+                         
+                         set TKTOTALEX = $D(^TKTOTAL(Tick))
+                                                 if TKTOTALEX = 0 { write !, "TICKETS N°"_Tick_" inconnu dans TKTOTAL"
+                                                 if $D(^TKESPECES(Date,+$L(Tick,2),Tick)) = 1 {write !, "  mais présent dans TKESPECES"}
+                                                 if $D(^TKCB(Date,+$L(Tick,2),Tick)) = 1 {write !, "  mais présent dans TKCB"}
+                                                 if $D(^TKCHEQUES(Date,+$L(Tick,2),Tick)) = 1 {write !, "  mais présent dans TKCHEQUES"}
+                                                 if $D(^TKESPECES(Date,+$L(Tick,2),Tick)) = 1 {write !, "  mais présent dans TKESPECES"}
+                                                 } 
+                 set TotG = TotG+TotTick 
+                 set Cpt = Cpt+1
+                 set TYPETK = $P($G(^TK(Tick,0)),"\",3)
+                 if TYPETK '= "MULTI" 
+                 { 
+                         set bES = $D(^TKESPECES(Date,+$E(Tick,1,2),Tick))
+                         set bCB = $D(^TKCB(Date,+$E(Tick,1,2),Tick)) 
+                         set bCH = $D(^TKCHEQUES(Date,+$E(Tick,1,2),Tick))
+                         set bCR = $D(^TKCREDITS(Date,+$E(Tick,1,2),Tick,0))
+                         if bES = 1 { set FicES = FicES + $P($G(^TKTOTAL(Tick)),"/",1) set CPT1 = CPT1 + 1}
+                         if bCB = 1 { set FicCB = FicCB + $P($G(^TKTOTAL(Tick)),"/",1) set CPT2 = CPT2 + 1}
+                         if bCH = 1 { set FicCH = FicCH + $P($G(^TKTOTAL(Tick)),"/",1) set CPT3 = CPT3 + 1}
+                         if bCR = 1 { set FicCR = FicCR + $P($G(^TKTOTAL(Tick)),"/",1) }
+                 }
+                 ELSE
+                 {
+                         set bMULTI = $D(^TKTOTAL(Tick))
+                         if bMULTI = 1 { set FicMULTI = FicMULTI + $P($G(^TKTOTAL(Tick)),"/",1) set CPT4 = CPT4 +1} else { write !,"MULTI PAIEMENT INTROUVABLE "_Tick_" DANS TKTOTAL"}
+                 }
+                 //write !, bES_bCH_bCB
+                 
+                 set Tick = $O(^TKMOISJOURS(NumCaisse,Date,Tick))
+         }
+         set Fam = $O(^TKFAMILLE(NumCaisse,Date,""))
+         while Fam '= ""
+         {
+                 set TotFAM = TotFAM + $G(^TKFAMILLE(NumCaisse,Date,Fam))
+                 
+                 set Fam = $O(^TKFAMILLE(NumCaisse,Date,Fam))
+         }
+         set TKREGLES = TKREGLES + $G(^TKREGL("ES",NumCaisse,Date))
+         set TKREGLCH = TKREGLCH + $G(^TKREGL("CH",NumCaisse,Date))
+         set TKREGLCB = TKREGLCB + $G(^TKREGL("CB",NumCaisse,Date))
+         set TKREGLAV = TKREGLAV + $G(^TKREGL("AV",NumCaisse,Date))
+         set TKREGLCR = TKREGLCR + $G(^TKREGL("CR",NumCaisse,Date))
+         set TKREGLDE = TKREGLDE + $G(^TKREGL("DE",NumCaisse,Date))
+        
+         set COMPTEUR = COMPTEUR + $G(^TKCOMPTEUR(NumCaisse,Date))
+         set NumCaisse = $O(^LISTECAISSE(NumCaisse))
+ }
+ 
+         set TICKAV = $O(^TKAVOIRS(""))
+                 while (TICKAV '= "")
+                 {
+                         set TKEX = $D(^TKAVOIRS(TICKAV,1))
+                         if TKEX = 1 
+                         {
+                                 set DATAV = $G(^TKAVOIRS(TICKAV,1))
+                                 if $E(DATAV,3,8) = Date {set TotP = TotP - $G(^TKTOTAL(TICKAV)) set NCPT7 = NCPT7 + 1}
+                         }
+                         set TICKAV = $O(^TKAVOIRS(TICKAV))
+                 }
+ }
+ 
+ if nCa '= 0 
+ {
+         // Recherche de tout les tickets de la journée Date
+         set Tick = $O(^TKMOISJOURS(nCa,Date,""))
+         while Tick '= ""
+         {
+                         set TotTick = $P($G(^TKTOTAL(Tick)),"/",1)
+                         set AVexiste = $D(^TKAVOIRS(Tick,1))
+                         if AVexiste = 1 { set TotP = TotP - $G(^TKTOTAL(Tick)) }
+                         set TYPREGL = ""
+                         set TYPEREGL = $P($G(^TK(Tick,0)),"\",3)
+                         if TYPEREGL = "ES" { set TotES = TotES + TotTick }
+                                 if TYPEREGL = "CB" { set TotCB = TotCB + TotTick }
+                                 if TYPEREGL = "CH" { set TotCH = TotCH + TotTick }
+                                 if TYPEREGL = "AV" { set TotAV = TotAV + TotTick }
+                                 if TYPEREGL = "CR" { set TotCR = TotCR + TotTick }
+                                 if TYPEREGL = "MULTI" { set TotMULTI = TotMULTI + TotTick set NCPT6 = NCPT6 + 1}
+                                 
+                                 set TKTOTALEX = $D(^TKTOTAL(Tick))
+                                 if TKTOTALEX     = 0 { write !, "TICKETS N°"_Tick_" inconnu dans TKTOTAL"} 
+                 set TotG = TotG+TotTick 
+                 set Cpt = Cpt+1
+                 set Tick = $O(^TKMOISJOURS(nCa,Date,Tick))
+         }
+         
+         
+         set Fam = $O(^TKFAMILLE(nCa,Date,""))
+         while Fam '= ""
+         {
+                 set TotFAM = TotFAM + $G(^TKFAMILLE(nCa,Date,Fam))
+                 
+                 set Fam = $O(^TKFAMILLE(nCa,Date,Fam))
+         }
+         set TKREGLES = TKREGLES + $G(^TKREGL("ES",nCa,Date))
+         set TKREGLCH = TKREGLCH + $G(^TKREGL("CH",nCa,Date))
+         set TKREGLCB = TKREGLCB + $G(^TKREGL("CB",nCa,Date))
+         set TKREGLAV = TKREGLAV + $G(^TKREGL("AV",nCa,Date))
+         set TKREGLCR = TKREGLCR + $G(^TKREGL("CR",nCa,Date))
+         
+         set COMPTEUR = COMPTEUR + $G(^TKCOMPTEUR(nCa,Date))
+ 
+         set TICKAV = $O(^TKAVOIRS(""))
+                 while (TICKAV '= "")
+                 {
+                         if +$L(TICKAV,2) = nCa
+                 
+                         {
+                                 set TKEX = $D(^TKAVOIRS(TICKAV,1))
+                                 if TKEX = 1 
+                                 {
+                                         set DATAV = $G(^TKAVOIRS(TICKAV,1))
+                                         if $E(DATAV,3,8) = Date {set TotP = TotP - $G(^TKTOTAL(TICKAV)) }
+                                 }
+                         }
+                         set TICKAV = $O(^TKAVOIRS(TICKAV))
+                 }
+ }
+ 
+  write !,""
+  set AAMMJJ = $ZDATE($ZDATEH("20"_Date,6),4)
+  set NOMCAISSE = ""
+  
+  if nCa = 0 { set NOMCAISSE =  "TOUTES"}
+  if nCa '= 0 { set NOMCAISSE = "CAISSE "_nCa }
+  write !, "      CHIFFRES DU "_AAMMJJ_" - "_NOMCAISSE
+  write !, "      --------------------------------- "
+  write !, " [0]  NB TICKETS TK(,0) : "_Cpt
+  write !, " [0]  TKCOMPTEUR        : "_COMPTEUR
+  write !, "      --------------------------------- "
+  set TOTTK = TotG+TotP
+  write !, " [1]  DANS TKTOTAL      : "_TotG
+  write !, "      --------------------------------- = "_TOTTK
+  write !, " [2]  D'APRES TK (ES)   : "_TotES 
+  write !, "      D'APRES TK (CH)   : "_TotCH
+  write !, "      D'APRES TK (CB)   : "_TotCB
+  write !, "      D'APRES TK (AV)   : "_TotAV
+  write !, "      D'APRES TK (CR)   : "_TotCR
+  write !, "      D'APRES Tk (MU)   : "_TotMULTI
+  write !, "      + AVOIRS UTILISES : "_TotP
+  set NbCPT = NCPT1+NCPT2+NCPT3+NCPT4+NCPT5+NCPT6+NCPT7
+  set Tot = TotES+TotCB+TotCH+TotAV+TotCR+TotP+TotMULTI
+  WRITE !, "      --------------------------------- = "_Tot
+  write !, " [3]  DANS TKREGL(ES    : "_TKREGLES
+  write !, "      DANS TKREGL(CH    : "_TKREGLCH
+  write !, "      DANS TKREGL(CB    : "_TKREGLCB
+  write !, "      DANS TKREGL(AV    : "_TKREGLAV
+  write !, "      DANS TKREGL(CR    : "_TKREGLCR
+  write !, "      DANS TKREGL(DE    : "_TKREGLDE
+  set TotTKREGL = TKREGLES+TKREGLCB+TKREGLCH+TKREGLAV+TKREGLCR
+  WRITE !, "      --------------------------------- = "_TotTKREGL
+  write !, "      DANS TKESPECES    : "_FicES
+  write !, "      DANS TKCHEQUES    : "_FicCH
+  write !, "      DANS TKCB         : "_FicCB
+  write !, "      DANS TKCREDITS    : "_FicCR
+  write !, "      MULTIPAIEMENT     : "_FicMULTI
+  write !, "        + TKREGL(AV     : "_TKREGLAV
+  set TotFIC = FicES+FicCH+FicCB+FicMULTI+TKREGLAV+FicCR
+  set NbTIK = CPT1+CPT2+CPT3+CPT4
+  write !, "      --------------------------------- = "_TotFIC
+  write !, " [4]  DANS TKFAMILLE    : "_TotFAM
+  WRITE !,""
+ 
+ 
+MAG()
+ 
+ // Affiche les information du magasin
+ 
+ ZN "USER"
+ read " N° du MAG : ",NOMAG
+ write !,""
+ set INFOMAG1 = $G(^HCPOS(NOMAG,1))
+ set NOM1 = $P(INFOMAG1,"\",3)
+ set NOM2 = $P(INFOMAG1,"\",4)
+ set GERANT = $P(INFOMAG1,"\",7)
+ SET AD1 = $P(INFOMAG1,"\",8) 
+ SET CP = $P(INFOMAG1,"\",10)
+ set VILLE =$P(INFOMAG1,"\",12)
+ set TEL =$P(INFOMAG1,"\",16)
+ set FAX =$P(INFOMAG1,"\",17)
+ set MODEM =$P(INFOMAG1,"\",18)
+ WRITE !,"********************************"
+ write !, " Gérant/e : "_GERANT
+ WRITE !,"********************************"
+ write !, ""
+ WRITE !, " "_NOM1
+ WRITE !, " "_NOM2
+ write !, " "_AD1
+ write !, " "_CP_" "_VILLE
+ write !, ""
+ write !, "  TEL   : "_TEL
+ WRITE !, "  FAX   : "_FAX
+ write !, "  MODEM : "_MODEM
+ WRITE !,"********************************"
+ WRite !, ""
+ write !, ""
+ 
+VERIFTKREGL(date)
+ 
+ set valREGLES = ""
+ 
+ 
+ERREURS()
+ 
+ set DBEGIN = "010403040001"
+ set DBEGIN = $O(^TK(DBEGIN))
+ set HOld = 0
+ WHILE DBEGIN '= "" 
+ {
+         if $E(DBEGIN,1,8)= "01040304" 
+         {
+                 if +HOld < +$P($P($G(^TK(DBEGIN,0)),"\",2),":",1){write !, DBEGIN}
+                 set H = $P($P($G(^TK(DBEGIN,0)),"\",2),":",1)
+                 set HOld = H
+         }
+         set DBEGIN = $O(^TK(DBEGIN))
+ }
+ 
+RECLOTURE()
+ 
+ // Permet de regénérer le fichier de clôture à envoyer à la centrale
+ // dans le cas bien sur que la clôture à été déjà  faite.
+  write !, "   Date caché : " 
+  read "",date
+         
+  d RECLOTUREJOURNEE^RECLOTURE(date)
+  Q
+  
+KILL()
+ 
+ // Permet la suppression d'un ticket de caisse
+ // Ne peut être utilisé qu'en cas de necessité extrème !!
+ 
+ read "N°ticket à supprimer : ",TKKILL
+ write !, "Vous confirmez la suppression du ticket "_TKKILL_" ? NON: 0 - OUI: 1)"
+ write !, ""
+ read "",choix
+ set gPOS = $G(^HWINFO("MAG"))
+ set NCAISSE = +$E(TKKILL,1,2)
+ set AAMMJJ = $E(TKKILL,3,8)
+ set AAMM = $E(AAMMJJ,1,4)
+ set bKill1 = 0
+ if choix = 1 
+ {
+         // On teste dans le fichier TK si le ticket est présent
+         set bK = $D(^TK(TKKILL,0)) 
+         if bK = 1 
+         { 
+                 set MODE = $P($G(^TK(TKKILL,0)),"\",3) write !, "Ticket en "_MODE
+                 set TIME = $P($G(^TK(TKKILL,0)),"\",2)
+                 set USER = $P($G(^TK(TKKILL,0)),"\",1)
+                 set H = $P(TIME,":",1)
+                 set M = $P(TIME,":",2)
+                 
+                 // Selon le type de reglement on suprime le ticket
+                 if MODE = "ES" 
+                 {
+                         set bTKE = $D(^TKESPECES(AAMMJJ,NCAISSE,TKKILL))
+                         if bTKE = 1 {kill ^TKESPECES(AAMMJJ,NCAISSE,TKKILL)} 
+                         set bRbEs = $D(^TKREMB("ES",TKKILL,0))
+                         if bRbEs = 1
+                         {
+                                 kill ^TKREMB("ES",TKKILL,0)
+                                 
+                                 set NLg = $O(^TKREMB("ES",$E(TKKILL,3,6),+$E(TKKILL,1,2),TKKILL,""))
+                                 while NLg '= ""
+                                 {
+                                         kill ^TKREMB("ES",$E(TKKILL,3,6),+$E(TKKILL,1,2),TKKILL,NLg)
+                                         set NLg = $O(^TKREMB("ES",$E(TKKILL,3,6),+$E(TKKILL,1,2),TKKILL,NLg))
+                                 }
+                                 set NLg2 = $O(^TKREMB("ES",$E(TKKILL,3,8),+$E(TKKILL,1,2),TKKILL,""))
+                                 while NLg2 '= ""
+                                 {
+                                         kill ^TKREMB("ES",$E(TKKILL,3,8),+$E(TKKILL,1,2),TKKILL,NLg2)
+                                         set NLg2 = $O(^TKREMB("ES",$E(TKKILL,3,8),+$E(TKKILL,1,2),TKKILL,NLg2))
+                                 }
+                         }                 
+                  }
+                 if MODE = "CH" 
+                 {
+                         set bTKCH = $D(^TKCHEQUES(AAMMJJ,NCAISSE,TKKILL))
+                         if bTKCH = 1 {kill ^TKCHEQUES(AAMMJJ,NCAISSE,TKKILL)}                   
+                  }
+                 if MODE = "CB" 
+                 {
+                         set bTKCB = $D(^TKCB(AAMMJJ,NCAISSE,TKKILL))
+                         if bTKCB = 1 {kill ^TKCB(AAMMJJ,NCAISSE,TKKILL)}                        
+                  }
+                  if MODE = "CR" 
+                 {
+                         set bTKCR = $D(^TKCREDITS(AAMMJJ,NCAISSE,TKKILL))
+                         if bTKCR = 1 {kill ^TKCREDITS(AAMMJJ,NCAISSE,TKKILL)}                   
+                  }
+                  if MODE = "AV" 
+                 {
+                         set bTKAV = $D(^TKAVOIRS(AAMMJJ,NCAISSE,TKKILL))
+                         if bTKAV = 1 {kill ^TKAVOIRS(AAMMJJ,NCAISSE,TKKILL)
+                         kill ^TKAVOIRS(TKKILL)
+                  }                       
+            }
+                         // On parcours TK pour déduire la ventilation du chiffres par famille
+                         set NBLigne = $O(^TK(TKKILL,"0"))
+                         while NBLigne '= ""
+                         {
+                                 set LG  = $G(^TK(TKKILL,NBLigne))
+                                 set FAM = +$P(LG,"\",3)
+                                 set TOT = +$P(LG,"\",6)
+                                 
+                                 set ^TKFAMILLE(NCAISSE,AAMMJJ,FAM)              = +$G(^TKFAMILLE(NCAISSE,AAMMJJ,FAM))-TOT
+                                 set ^TKFAMILLE(NCAISSE,AAMM,FAM)                = +$G(^TKFAMILLE(NCAISSE,AAMM,FAM))-TOT
+                                 set ^TKFAMILLE(NCAISSE,AAMMJJ,FAM,H)    = +$G(^TKFAMILLE(NCAISSE,AAMMJJ,FAM,H))-TOT
+                                 set ^TKFAMILLE(NCAISSE,AAMMJJ,FAM,H,M)  = +$G(^TKFAMILLE(NCAISSE,AAMMJJ,FAM,H,M))-TOT
+                                 
+                         set NBLigne = $O(^TK(TKKILL,NBLigne))
+                         }
+                         set TOTAL = $P($G(^TKTOTAL(TKKILL)),"/",1)
+                         // On parcours TKREGL pour déduire la ventilation par type de reglement
+                         set ^TKREGL(MODE,NCAISSE,AAMMJJ)= +$G(^TKREGL(MODE,NCAISSE,AAMMJJ))-TOTAL
+                         set ^TKREGL(MODE,NCAISSE,AAMM)= +$G(^TKREGL(MODE,NCAISSE,AAMM))-TOTAL
+                         
+                         kill ^TKTOTAL(TKKILL)
+                         set ^TK(TKKILL)= USER_"\"_TIME_"\ANNULE\"
+                         set ^TKANNULE(AAMMJJ,TKKILL,0)=$ZDATE($H,8)_"\"_MODE_"\"_TOTAL
+         }
+         else
+         {
+                 write !, "Le ticket n° "_TKKILL_" est inéxistant dans TK !"
+         }
+ }
+ 
+TESTTICK()
+ 
+ 
+ set TK = $O(^TK(""))
+ while (TK '= "")
+ {
+         
+         write !, "Ticket n° "_TK
+         set TK = $O(^TK(TK))
+ }
+ 
+MAJTKREMB()
+ 
+ // Permet de faire une mise a Jour du fichier TKREMB 
+ // Jusqu'au 09/03/2004, la caisse enregistre toutes les ventes ES ou CB dans ce fichier  !! ERREUR DE DEV !
+ // Cette routine parcours le fichier et regénere correctement les remboursements.
+ 
+ set node1 = $O(^TKREMB(""))
+ while (node1 '= "")
+ {
+         set node2 = $O(^TKREMB(node1,""))
+         while node2 '= ""
+ {
+         if $L(node2) = 12
+         {
+                 //write !, "REMBOURSEMENT n° "_node2
+                 set ^TKREMB2(node1,node2,0)=""
+                 set AAMMJJ = $E(node2,3,8)
+                 set CA = +$E(node2,1,2)
+                 set NLg = $O(^TKREMB(node1,AAMMJJ,CA,node2,""))
+                 while NLg '= ""
+                 {
+                         set ^TKREMB2(node1,AAMMJJ,CA,node2,NLg)= $G(^TKREMB(node1,AAMMJJ,CA,node2,NLg))
+                         set NLg = $O(^TKREMB(node1,AAMMJJ,CA,node2,NLg))
+                 }
+                 set AAMM = $E(node2,3,6)
+                 set NLg = $O(^TKREMB(node1,AAMM,CA,node2,""))
+                 while NLg '= ""
+                 {
+                         set ^TKREMB2(node1,AAMM,CA,node2,NLg)= $G(^TKREMB(node1,AAMM,CA,node2,NLg))
+                         set NLg = $O(^TKREMB(node1,AAMM,CA,node2,NLg))
+                 }
+         }
+         set node2 = $O(^TKREMB(node1,node2))
+ }
+         set node1 = $O(^TKREMB(node1))
+ }
+ 
+ // Maintenant que l'on a copié en temporaire les infos, on KILL le fichier TKREMB
+ kill ^TKREMB
+ 
+ // On parcours TKREMB2 (fichier temporaire) pour le stocker dans TKREMB
+ set N1 = $O(^TKREMB2(""))
+ while (N1'= "")
+ {
+         set N2 = $O(^TKREMB2(N1,""))
+         while (N2 '= "")
+         {
+                 if $L(N2)= 12 
+                 {
+                         set ^TKREMB(N1,N2,0)=""
+                 }
+                 else
+                 {
+                         set N3 = $O(^TKREMB2(N1,N2,""))
+                         while (N3 '= "")
+                         {
+                         
+                                 set N4 = $O(^TKREMB2(N1,N2,N3,""))
+                                 while (N4 '= "")
+                                 {
+                                         set N5 = $O(^TKREMB2(N1,N2,N3,N4,""))
+                                         while N5 '= ""
+                                         {
+                                                 set ^TKREMB(N1,N2,N3,N4,N5)=$G(^TKREMB2(N1,N2,N3,N4,N5))
+                                                 
+                                                 set N5 = $O(^TKREMB2(N1,N2,N3,N4,N5))
+                                         }
+                                         set N4 = $O(^TKREMB2(N1,N2,N3,N4))
+                                 }
+                                 set N3 = $O(^TKREMB2(N1,N2,N3))
+                         }
+                 }
+                 
+                 set N2 = $O(^TKREMB2(N1,N2))
+         }
+         set N1 = $O(^TKREMB2(N1))
+ }
+ // On supprime le fichier temporaire
+ kill ^TKREMB2
+ w !, "Opération terminée !"
+ 
+ 
+DEPLACECA()
+ 
+ // Permet de reprendre les chiffres de TKREGL et TKFAMILLE d'une date pour les repercutés sur une autre date
+ 
+ // Penser a faire la suppression dans TKFAMILLE
+ 
+ w !, "N° caisse : "
+ read "",nCA
+ w !, ""
+ w !, "Date source (AAMMJJ) : "
+ read "",DATE1
+ w !, "Date destination (AAAMMJJ) : "
+ read "",DATE2
+ 
+ 
+ if DATE1 '= "" {
+ if DATE2 '= "" {
+ 
+ s Node3 = $O(^TKFAMILLE(nCA,DATE1,""))
+ while (Node3 '= "")
+ {
+         s ^TKFAMILLE(nCA,DATE2,Node3)= $G(^TKFAMILLE(nCA,DATE1,Node3))
+         
+         
+         
+         s Node4 = $O(^TKFAMILLE(nCA,DATE1,Node3,""))
+         while (Node4 '= "")
+         {
+                 s ^TKFAMILLE(nCA,DATE2,Node3,Node4)= $G(^TKFAMILLE(nCA,DATE1,Node3,Node4))
+                 
+                 s Node5 = $O(^TKFAMILLE(nCA,DATE1,Node3,Node4,""))
+                 while (Node5 '= "")
+                 {
+                         s ^TKFAMILLE(nCA,DATE2,Node3,Node4,Node5)=$G(^TKFAMILLE(nCA,DATE1,Node3,Node4,Node5))
+                         s Node5 = $O(^TKFAMILLE(nCA,DATE1,Node3,Node4,Node5))
+                 }
+                 s Node4 = $O(^TKFAMILLE(nCA,DATE1,Node3,Node4))
+         }
+         s Node3 = $O(^TKFAMILLE(nCA,DATE1,Node3))
+ }
+}
+}
+ 
+ s ii = $O(^TKFAMILLE(nCA,$e(DATE1,1,4),""))
+ while (ii '= "")
+ {
+         s ^TKFAMILLE(nCA,$E(DATE2,1,4),ii) = +$G(^TKFAMILLE(nCA,$E(DATE2,1,4),ii)) +$G(^TKFAMILLE(nCA,DATE1,ii))
+         s ii = $O(^TKFAMILLE(nCA,$e(DATE1,1,4),ii))
+ }
+ 
+ set testAV = $D(^TKREGL("AV",nCA,DATE1))
+ if testAV = 1 
+ {
+ s ^TKREGL("AV",nCA,DATE2)= +$G(^TKREGL("AV",nCA,DATE2)) + +$G(^TKREGL("AV",nCA,DATE1))
+ s ^TKREGL("AV",nCA,$e(DATE2,1,4))= +$G(^TKREGL("AV",nCA,$e(DATE2,1,4))) +$G(^TKREGL("AV",nCA,DATE1))
+ k ^TKREGL("AV",nCA,DATE1)
+ k ^TKREGL("AV",nCA,$E(DATE1,1,4))
+ }
+ 
+ set testES = $D(^TKREGL("ES",nCA,DATE1))
+ if testES = 1
+ {
+ s ^TKREGL("ES",nCA,DATE2)= +$G(^TKREGL("ES",nCA,DATE2)) + +$G(^TKREGL("ES",nCA,DATE1))
+ s tmp1 = +$G(^TKREGL("ES",nCA,$e(DATE2,1,4)))
+ s tmp2 =  +$G(^TKREGL("ES",nCA,DATE1))
+ write !, "Dans AAMM : "_tmp1_" - Dans AAMMJJ : "_tmp2
+ s ^TKREGL("ES",nCA,$e(DATE2,1,4))= tmp1 + tmp2
+ k ^TKREGL("ES",nCA,DATE1)
+ k ^TKREGL("ES",nCA,$E(DATE1,1,4))
+ }
+ 
+ set testCB = $D(^TKREGL("CB",nCA,DATE1))
+ if testCB = 1 
+ {
+ s ^TKREGL("CB",nCA,DATE2)= +$G(^TKREGL("CB",nCA,DATE2)) + +$G(^TKREGL("CB",nCA,DATE1))
+ s ^TKREGL("CB",nCA,$e(DATE2,1,4))= +$G(^TKREGL("CB",nCA,$e(DATE2,1,4))) +$G(^TKREGL("CB",nCA,DATE1))
+ k ^TKREGL("CB",nCA,DATE1)
+ k ^TKREGL("CB",nCA,$E(DATE1,1,4))
+ }
+ 
+ set testCH = $D(^TKREGL("CH",nCA,DATE1))
+ IF testCH = 1 
+ {
+ s ^TKREGL("CH",nCA,DATE2)= +$G(^TKREGL("CH",nCA,DATE2)) + +$G(^TKREGL("CH",nCA,DATE1))
+ s ^TKREGL("CH",nCA,$e(DATE2,1,4))= +$G(^TKREGL("CH",nCA,$e(DATE2,1,4))) +$G(^TKREGL("CH",nCA,DATE1))
+ k ^TKREGL("CH",nCA,DATE1)
+ k ^TKREGL("CH",nCA,$E(DATE1,1,4))
+ }
+ 
+ set testCR = $D(^TKREGL("CR",nCA,DATE1))
+ IF testCR = 1 
+ {
+ s ^TKREGL("CR",nCA,DATE2)= +$G(^TKREGL("CR",nCA,DATE2)) + +$G(^TKREGL("CR",nCA,DATE1))
+ s ^TKREGL("CR",nCA,$e(DATE2,1,4))= +$G(^TKREGL("CR",nCA,$e(DATE2,1,4)))+$G(^TKREGL("CR",nCA,DATE1))
+ k ^TKREGL("CR",nCA,DATE1)
+ k ^TKREGL("CR",nCA,$E(DATE1,1,4))
+ }
+ 
+ set testMU = $D(^TKREGL("MULTI",nCA,DATE1))
+ if testMU = 1 
+ {
+ s ^TKREGL("MULTI",nCA,DATE2)= +$G(^TKREGL("MULTI",nCA,DATE2)) + +$G(^TKREGL("MULTI",nCA,DATE1))
+ s ^TKREGL("MULTI",nCA,$e(DATE2,1,4))= +$G(^TKREGL("MULTI",nCA,$e(DATE2,1,4))) +$G(^TKREGL("MULTI",nCA,DATE1))
+ k ^TKREGL("MULTI",nCA,DATE1)
+ k ^TKREGL("MULTI",nCA,$E(DATE1,1,4))
+ }
+ 
+ 
+ 
+REVENTILE()
+ 
+  set NumMAG = $G(^HWINFO("MAG"))
+  set NCa = $O(^LISTECAISSE(""))
+  while NCa '= ""
+  {
+         // On supprime toutes les lignes dans TKFAMILLE pour la journée du 09/04
+         k ^TKFAMILLE(NCa,"040409")
+         set TotES = ""
+         set TotCB = ""
+         set TotCH = ""
+         set TotCR = ""
+         set TotAV = ""
+         // On récupère les valeurs totales des types de reglements
+         set TotES = $G(^TKREGL("ES",NCa,"040409"))
+         set TotCB = $G(^TKREGL("CB",NCa,"040409"))
+         set TotCH = $G(^TKREGL("CH",NCa,"040409"))
+         set TotCR = $G(^TKREGL("CR",NCa,"040409"))
+         set TotAV = $G(^TKREGL("AV",NCa,"040409"))
+         set TOTAL = TotES+TotCB+TotCH+TotCR+TotAV 
+         write !,  "Total caisse "_NCa_" : "_TOTAL
+         WRITE !, " "
+         read " Continuer ? (Oui: O ou Non : vide)",CONTINUE
+         if CONTINUE = "O"
+         {
+                                                                         
+                                         set TA = 0
+                                         set TH = 0
+                                         set VO = 0
+                                         set ME = 0
+                                         set LM = 0
+                                         set TR = 0
+                                         set CREA = 0
+                                         set PASS = 0
+                                         set CONF = 0
+                                         set PAP = 0
+                                         set DIV = 0
+                                         set LIB = 0
+                             
+                                         set TA = (TOTAL * 28.52) / 100
+                                         set TH = (TOTAL * 18.64) / 100
+                                         set VO = (TOTAL * 11.27) / 100
+                                         set ME = (TOTAL * 34.83) / 100
+                                         set LM = (TOTAL * 4.11) / 100
+                                         set TR = (TOTAL * 1.05) / 100
+                                         set CREA = (TOTAL * 0.54) / 100
+                                         Set PASS = (TOTAL * 0.18) / 100
+                                         set CONF = (TOTAL * 0.19) / 100
+                                         Set PAP = (TOTAL * 0.54) / 100
+                                         SET DIV = (TOTAL * 0.01) / 100
+                                         SET LIB = (TOTAL * 0.11) / 100
+                                         write !, TA
+                                         write !, TH
+                                         write !, VO
+                                         write !, ME
+                                         write !, LM
+                                         write !, TR
+                                         write !, CREA
+                                         write !, PASS
+                                         write !, CONF
+                                         write !, PAP
+                                         write !, DIV
+                                         write !, LIB
+                                         SET CUMUL = 0
+                                         SET CUMUL = TA+TH+VO+ME+LM+TR+CREA+PASS+CONF+PAP+DIV+LIB
+                                         WRITE !, "Cumul des familles = "_CUMUL_" dans TKREGL = "_TOTAL
+                                         set DIF = 0
+                                         set DIF = TOTAL - CUMUL
+                                         set TA = TA+DIF
+                                                                                         write !, TA
+                                         write !, TH
+                                         write !, VO
+                                         write !, ME
+                                         write !, LM
+                                         write !, TR
+                                         write !, CREA
+                                         write !, PASS
+                                         write !, CONF
+                                         write !, PAP
+                                         write !, DIV
+                                         write !, LIB
+                                         SET CUMUL = 0
+                                         SET CUMUL = TA+TH+VO+ME+LM+TR+CREA+PASS+CONF+PAP+DIV+LIB
+                                         WRITE !, "Cumul des familles = "_CUMUL_" dans TKREGL = "_TOTAL
+                                         s ^TKFAMILLE(NCa,"040409",1)=TA
+                                         s ^TKFAMILLE(NCa,"040409",2)=TH
+                                         s ^TKFAMILLE(NCa,"040409",3)=VO
+                                         s ^TKFAMILLE(NCa,"040409",4)=ME
+                                         s ^TKFAMILLE(NCa,"040409",5)=LM
+                                         s ^TKFAMILLE(NCa,"040409",6)=TR
+                                         s ^TKFAMILLE(NCa,"040409",7)=CREA
+                                         s ^TKFAMILLE(NCa,"040409",8)=PASS
+                                         s ^TKFAMILLE(NCa,"040409",15)=CONF
+                                         s ^TKFAMILLE(NCa,"040409",16)=PAP
+                                         s ^TKFAMILLE(NCa,"040409",17)=DIV
+                                         s ^TKFAMILLE(NCa,"040409",18)=LIB
+       
+                                         
+                                         
+             }          
+                         ELSE
+                         {
+                                 write !, "Annulation opération caisse "_NCa             
+                         }
+                                 set NCa = $O(^LISTECAISSE(NCa))
+         }
+        
+ 
+ESSAI()
+ 
+ k ^FILESFTP
+ s ^FILESFTP("FROMMAG",1)="MODIO"             ; Les réceptions des commandes
+ s ^FILESFTP("FROMMAG",2)="MODCMD"               ; Les commandes 
+ s ^FILESFTP("FROMMAG",3)="MODBUDG"              ; Budget magasin
+ s ^FILESFTP("FROMMAG",4)="MODBUDGETS"   ; Budget magasin
+ s ^FILESFTP("FROMMAG",5)="MODBL"                ; 
+ 
+ s ^FILESFTP("FROMMAG",6)="MODTKCR"              ; Les crédits                   ...en caisse
+ s ^FILESFTP("FROMMAG",7)="MODREMB"              ; Les remboursements    ...en caisse
+ s ^FILESFTP("FROMMAG",8)="MODTKAV"              ; Les avoirs                    ...en caisse
+ s ^FILESFTP("FROMMAG",9)="MODTKER"              ; Les erreurs                   ...en caisse
+ 
+ s ^FILESFTP("FROMMAG",10)="MODVENDEUR" ; Liste des vendeurs (Gestion utilisateur)
+ s ^FILESFTP("FROMMAG",11)="MODTKPACK"  ; Trace des Updates EXE caisse
+ s ^FILESFTP("FROMMAG",12)="MODCAY2K"   ; Chiffres d'affaires magasin
+ s ^FILESFTP("FROMMAG",13)="MODROUTINE" ; Trace des routines envoyées
+ 
+ W !, "Traitement terminé !"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
