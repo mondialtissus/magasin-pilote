@@ -19,7 +19,7 @@ Method GenerateModLiv(retro As Global.Models.RETRO) As %Status
     Set $Piece(DataEntete, "\", 8) = retro.REMARQUE
     Set $Piece(DataEntete, "\", 9) = retro.NUMCMD
 
-    Set @mod@(retro.MAGSRC, "LIV", retro.NUMRETRO, retro.MAGDEST, "SRC", 0) = DataEntete
+    Set @mod@(retro.MAGDEST, "LIV", retro.NUMRETRO, retro.MAGSRC, "DEST", 0) = DataEntete
 }
 
 Method GenerateModCmd(retro As Global.Models.RETRO) As %Status

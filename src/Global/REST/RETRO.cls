@@ -218,8 +218,7 @@ ClassMethod GetRetroCommande() As %Status
 	Set sql = "SELECT  ID FROM Global_Vue_RETRO_CMD.EnTete WHERE NUMRETRO= ?"
 
 	Set result=##class(%SQL.Statement).%ExecDirect(,.sql,retro)
-	W retro,!
-
+	
 	if result.%Next() {
 		Set ID =  result.ID
 	}
@@ -238,10 +237,13 @@ ClassMethod GetRetroCommande() As %Status
 	}
 
 	set retro =##class(Global.Factories.RETRO.CMD).OpenRetro(ID)
-	do retro.%JSONExportToString(.json)
+	do retro.%JSONExportToString(.strJson)
+	Set json = {}.%FromJSON(strJson)
+	Set json.TYPAGELONG = retro.%ClassName(1)
+	Set json.TYPAGE = retro.%ClassName()
 	Set %response.ContentType="application/json"
-	set json.TYPAGE = retro.%ClassName(1)
-	Write json
+	
+	Write json.%ToJSON()
 	// do something
 	Return sc
 }
