@@ -1,0 +1,1038 @@
+ROUTINE GUCALCULSTOCK
+GUCALCULSTOCK
+	; Cette fonction permet de calculer le stock de la GU
+	s vDEB=+$P($H,",",2)
+	k ^GUTMPCALCULSTOCK
+	s NB=0
+	s PLU=$O(^GUSTOCK(""))
+	while PLU'=""
+	{
+	        s DATASTOCK=$G(^GUSTOCK(PLU))
+	        s DATADESC=$G(^HWARTFAMPA(PLU)) 
+	        
+	        s ^GUTMPCALCULSTOCK(PLU)=DATADESC_"\"_DATASTOCK         
+	        s PLU=$O(^GUSTOCK(PLU))
+	}
+	w !,"Temps écoulé : "_(+$P($H,",",2)-vDEB)
+	q
+ 
+GUCALCULSTOCKSECT
+	; Cette fonction permet de calculer le stock de la GU
+	s vDEB=+$P($H,",",2)
+	k ^GUTMPCALCULSTOCKSECT
+	s NB=0
+	s GR1 = $O(^GUSECTFAMPLU(""))
+	while GR1'=""
+	{
+	        s GR2 = $O(^GUSECTFAMPLU(GR1,""))
+	        while GR2'=""
+	        {
+	                s PLU = $O(^GUSECTFAMPLU(GR1,GR2,""))
+	                while PLU'=""
+	                {
+	                    s DATAPLU=$G(^GUSECTFAMPLU(GR1,GR2,PLU))                        
+	                    S PA = +$P(DATAPLU,"\",2)               
+	                
+	                        s DATASTOCK=$G(^GUSTOCK(PLU))
+	                        s DATADESC=$G(^GUTMPCALCULSTOCKSECT(GR1,GR2))
+	                        s DATASECT=$G(^GUTMPCALCULSTOCKSECT(GR1))
+	                
+	                        s $P(DATADESC,"\",1) = +$P(DATASTOCK,"\",2) + +$P(DATADESC,"\",1)
+	                        s $P(DATADESC,"\",2) = +$P(DATASTOCK,"\",3) + +$P(DATADESC,"\",2)
+	                        s $P(DATADESC,"\",3) = +$P(DATASTOCK,"\",4) + +$P(DATADESC,"\",3)
+	                        s $P(DATADESC,"\",4) = +$P(DATASTOCK,"\",5) + +$P(DATADESC,"\",4)
+	                        s $P(DATADESC,"\",6) = PA * +$P(DATASTOCK,"\",6) + $P(DATADESC,"\",6)
+	                        s $P(DATADESC,"\",5) = +$P(DATASTOCK,"\",6) + +$P(DATADESC,"\",5)
+	        
+	                        ;Calcul des lignes de secteur
+	                        s $P(DATASECT,"\",1) = +$P(DATASTOCK,"\",2) + +$P(DATASECT,"\",1)
+	                        s $P(DATASECT,"\",2) = +$P(DATASTOCK,"\",3) + +$P(DATASECT,"\",2)
+	                        s $P(DATASECT,"\",3) = +$P(DATASTOCK,"\",4) + +$P(DATASECT,"\",3)
+	                        s $P(DATASECT,"\",4) = +$P(DATASTOCK,"\",5) + +$P(DATASECT,"\",4)
+	                        s $P(DATASECT,"\",6) = PA * +$P(DATASTOCK,"\",6) + $P(DATASECT,"\",6)
+	                        s $P(DATASECT,"\",5) = +$P(DATASTOCK,"\",6) + +$P(DATASECT,"\",5)
+	      
+	                    s ^GUTMPCALCULSTOCKSECT(GR1,GR2)=DATADESC
+	                    s ^GUTMPCALCULSTOCKSECT(GR1)=DATASECT
+	                    s NB = NB + 1
+	                 
+	                    s PLU = $O(^GUSECTFAMPLU(GR1,GR2,PLU))
+	                }           
+	                s GR2 = $O(^GUSECTFAMPLU(GR1,GR2))
+	         }
+	     s GR1 = $O(^GUSECTFAMPLU(GR1))
+	}
+	w !,"Temps écoulé : "_(+$P($H,",",2)-vDEB)
+	q
+ 
+ 
+ 
+ 
+FICHIERTEMP
+	; Ce fichier temporaire permet de retrouver le secteur, la famille, le PLU, la désignation et le prix d'achat à partir d'un simple PLU pour l'affichage dans la table de consultation de stock dans le PROJET GU
+	K ^HWARTFAMPA
+	
+	s NEWCLASSIF = 0
+	I +$D(^HWINFO("NEWCLASSIF"))>0
+	{
+	        s NEWCLASSIF = +$G(^HWINFO("NEWCLASSIF"))
+	}               
+ 
+	s ARTICLE=$O(^ST(""))
+	//s ARTICLE=$O(^ST(ARTICLE))
+	while ARTICLE'=""
+	{
+	        S DATA0=$G(^ST(ARTICLE))
+	        i NEWCLASSIF = 0
+	        {
+	                S GR1=$P($G(^HWCLA(+$P(DATA0,"\",4))),"\",2)
+	                S GR2=$P($G(^HWCLA(+$P(DATA0,"\",4),+$P(DATA0,"\",7))),"\",2)
+	        }
+	        else
+	        {
+	                S GR1=$P($G(^GMTCLA($P(DATA0,"\",23))),"\",2)
+	                S GR2=$P($G(^GMTCLA($P(DATA0,"\",23),$P(DATA0,"\",24))),"\",2)
+	        }
+ 
+	        S PA=$P(DATA0,"\",13)
+	        S PLU=$P(DATA0,"\",21)
+	        S DATEHC=+$P(DATA0,"\",5)
+	        S DATESTOP=+$P(DATA0,"\",3)
+	        
+	        S DESIGNATION=ARTICLE
+	        I +$P(DATA0,"\",4)>3 S DESIGNATION=$P($G(^ST(ARTICLE,5)),"\",1)
+	        
+	        ;On ajoute la sélection des IN, OUT ou STOP
+	        i DATEHC = 0
+	        {
+	           i DATESTOP = 0
+	           {
+	                ; Produit IN
+	                s STATUT="IN"       
+	           }
+	           else
+	           {
+	           ;si la date stop est égale au 31/12/2049 alors c'est un stop
+	               i DATESTOP = 76336
+	               {
+	                 ; Produit stop
+	                  s STATUT="STOP"     
+	                }
+	                else
+	                {
+	                   ; Produit OUT
+	                   s STATUT="OUT"      
+	                }
+	            }
+	         }
+	         else
+	         {
+	           ; Produit OUT
+	            s STATUT="OUT"      
+	         }                       
+	        
+	        S ^HWARTFAMPA(PLU)=GR1_"\"_GR2_"\"_PLU_"\"_DESIGNATION_"\"_PA_"\"_STATUT
+	
+	        s ARTICLE=$O(^ST(ARTICLE))
+	}
+	q
+ 
+GUSTOCKINV
+	//Cette focntion permet d'avoir le stock informatique à la date de l'inventaire avec le secteur et le PLU
+	s PA = 0
+	s QTE = 0
+	s PLU = ""
+	s PLU = $O(^GUSTOCK(PLU))
+	s DATASTOCK = ""
+	s DATAINV = ""
+	s DATAINVSECT = ""
+	s DESARTICLE = ""       
+	s VALOPLU = 0
+	s SECTEUR = ""
+	s DATEINV = 0   
+	
+	s DATETODAY = +$P($h,",",1)
+	
+	s DATEINV = +$G(^HWINFO("INVENTAIRE","DATE"))
+	
+	w !,"TODAY "_DATETODAY_" et "_DATEINV
+	
+	i DATEINV > 0 k ^GUSTOCKINV(DATEINV)
+	
+	i (+DATETODAY > (+DATEINV-2)) && (+DATETODAY < (+DATEINV+10))
+	{
+	        while PLU '= ""
+	        {
+	                s DATASTOCK = $G(^GUSTOCK(PLU))         
+	        
+	                s CLEFARTICLE = $G(^SP(PLU))
+	        
+	                i CLEFARTICLE '= ""
+	                {
+	                        s DATAART = $G(^ST(CLEFARTICLE))
+	                
+	                        S PA=$$GETPRIX($P(DATAART,"\",13))              
+	                
+	                        s SECTEUR = $P(DATAART,"\",23)
+	                        s QTE = $P(DATASTOCK,"\",6)
+	                        s VALOPLU = +QTE*+PA
+	                        
+	                        i (+SECTEUR = 4) || (+SECTEUR = 7) || (+SECTEUR = 8)
+	                        {
+	                                s DESARTICLE = $P($G(^ST(CLEFARTICLE,5)),"\",1)
+	                        }
+	                        else
+	                        {
+	                                s DESARTICLE = CLEFARTICLE
+	                        }
+	                        
+	                        s DATAINV = QTE_"\"_VALOPLU_"\"_DESARTICLE_"\"                    
+	                
+	                        s ^GUSTOCKINV(DATEINV,SECTEUR,PLU)=DATAINV
+	                
+	                        i +$D(^GUSTOCKINV(DATEINV,SECTEUR,0))>0
+	                        {
+	                                s DATAINVSECT = $G(^GUSTOCKINV(DATEINV,SECTEUR,0))
+	                                
+	                                s QTE = +$P(DATAINVSECT,"\",1) + QTE    
+	                                s VALOPLU = +$P(DATAINVSECT,"\",2) + VALOPLU
+	                        }                               
+	                
+	                        s ^GUSTOCKINV(DATEINV,SECTEUR,0) = QTE_"\"_VALOPLU_"\"    
+	                        w !,"PLU : "_PLU
+	                        
+	                }
+	        
+	                s PLU = $O(^GUSTOCK(PLU))
+	        }
+	}
+	q
+
+GETPRIX(PRIX)
+	S DATESYS=+$P($H,",",1)
+	S DATEBASCULE=+$P(PRIX,"/",2)
+	I DATEBASCULE>0 D
+	.S INDICE=3
+	.I DATESYS<DATEBASCULE S INDICE=1
+	.S PRIX=$P(PRIX,"/",INDICE)
+	.Q
+	Q PRIX
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

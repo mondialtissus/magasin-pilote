@@ -1,0 +1,107 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "stpriestprod:USER",
+			"uri": "isfs://stpriestprod:user/"
+		}
+	],
+	"settings": {
+	  "objectscript.conn": {
+		"server": "10.10.9.250",
+		"ns": "USER",
+		"active": false
+	},
+	  "window.zoomLevel": 0, // Permet de zoomer, pratique si vous faites une présentation
+  
+	  // Apparence
+	  // -- Editeur
+	  "workbench.startupEditor": "none", // On ne veut pas une page d'accueil chargée
+	  "editor.minimap.enabled": true,
+	  "breadcrumbs.enabled": true,
+	  // -- Sidebar
+	  "workbench.tree.indent": 15, // Indente plus pour plus de clarté dans la sidebar
+	  "workbench.tree.renderIndentGuides": "always",
+	  // -- Code
+	  "editor.occurrencesHighlight": "off",
+	  "editor.renderWhitespace": "trailing", // On ne veut pas laisser d'espace en fin de ligne
+  
+	  // Thème
+	  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'Operator Mono Lig', monospace",
+	  "editor.fontLigatures": true,
+	  "editor.fontSize": 16,
+	  "editor.lineHeight": 28,
+	  "workbench.colorTheme": "Dracula",
+	  "workbench.iconTheme": "material-icon-theme",
+	  "workbench.colorCustomizations": {
+		"[Tokyo Night]": {
+		  "editor.selectionBackground": "#3D59A1",
+		  "editor.selectionHighlightBackground": "#3D59A1"
+		},
+		"[Dracula]": {
+		  "editor.selectionBackground": "#3D59A1",
+		  "editor.selectionHighlightBackground": "#3D59A1",
+	  },
+  
+	  // Ergonomie
+	  "editor.wordWrap": "on",
+	  "editor.suggest.insertMode": "replace", // L'autocomplétion remplace le mot en cours
+	  "editor.acceptSuggestionOnCommitCharacter": false, // Evite que l'autocomplétion soit accepté lors d'un . par exemple
+	  "editor.formatOnSave": false,
+	  "editor.formatOnPaste": false,
+	  "editor.linkedEditing": true, // Quand on change un élément HTML, change la balise fermante
+	  "explorer.autoReveal": false,
+	  "explorer.confirmDragAndDrop": false,
+	  "workbench.editor.enablePreview": false, // Un clic sur un fichier l'ouvre
+	  "emmet.triggerExpansionOnTab": true,
+	  // Fichiers
+	  "files.autoSave": "onFocusChange",
+	  "files.defaultLanguage": "markdown",
+	  "files.exclude": {
+		"**/.idea": true
+	  },
+	  // Languages
+	  "javascript.preferences.importModuleSpecifierEnding": "js",
+	  "typescript.preferences.importModuleSpecifierEnding": "js",
+	  // Formatters
+	  "[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	  },
+	  "[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	  },
+	  "[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	  },
+	  "[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	  },
+	  "[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	  },
+  
+	  // Extensions
+	  "liveServer.settings.donotVerifyTags": true,
+	  "gitlens.codeLens.enabled": true,
+	  "gitlens.currentLine.enabled": true,
+	  "editor.unicodeHighlight.nonBasicASCII": false,
+	  "sqltools.connections": [
+		{
+		  "namespace": "USER",
+		  "connectionMethod": "Server and Port",
+		  "showSystem": false,
+		  "previewLimit": 50,
+		  "server": "10.10.9.250",
+		  "port": 57772,
+		  "askForPassword": false,
+		  "driver": "InterSystems IRIS",
+		  "name": "USER",
+		  "username": "DEV",
+		  "password": "SYS"
+		}
+	  ]
+	}
+  }
+} 
