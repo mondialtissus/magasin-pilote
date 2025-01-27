@@ -13,6 +13,7 @@ XData UrlMap [ XMLNamespace = "http://www.intersystems.com/urlmap" ]
 <Route Url="/executeIRISCommand/::pCommand" Method="GET" Call="executeIRISCommand" Cors="true"/>
 <Route Url="/CopyImageJPG/:pFile/:pTargetDir" Method="POST" Call="CopyImageJPG" Cors="true"/>
 <Route Url="/shell" Method="POST" Call="shell" Cors="true"/>
+<Route Url="/merge" Method="POST" Call="merge" Cors="true"/>
 </Routes>
 }
 
@@ -263,7 +264,7 @@ ClassMethod shell() As %Status
 	
 	//recuperer une valeur
 	if (cmd="get") || (cmd="g") {
-		zw $G(@subscript)
+		zw @subscript
 	}
 	
 	//Existence d'un noeud
@@ -294,6 +295,32 @@ ClassMethod shell() As %Status
 		zw $zd($P($h,",",1))
 	}
 	
+	return sc
+}
+
+ClassMethod merge() As %Status
+{
+	Set sc = $$$OK
+	set subRecherche = $GET(%request.Data("Recherche",1))
+	set subAttendu = $GET(%request.Data("Attendu",1))
+
+	w "subRecherche: "_subRecherche,!
+	w "subAttendu: "_subAttendu,!
+	
+
+	if ($D(@subRecherche) = 0)|| (subRecherche=""){
+		Do ##Class(%REST.Impl).%SetContentType("text/plain")
+		Do ##class(%REST.Impl).%SetStatusCode("404 Not Found")
+        Do ##class(%REST.Impl).%WriteResponse("Recherche inexistante")
+		return $$$OK
+	}
+
+
+	merge @subAttendu = @subRecherche
+
+	zw @subAttendu
+
+
 	return sc
 }
 
