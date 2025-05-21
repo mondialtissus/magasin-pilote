@@ -10,7 +10,7 @@
 	],
 	"settings": {
 	  "objectscript.conn": {
-		"server": "10.10.9.250",
+		"server": "10.10.224.250",
 		"ns": "USER",
 		"active": false
 	},

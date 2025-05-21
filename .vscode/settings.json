@@ -1,7 +1,8 @@
 {
     "objectscript.conn": {
         "active": true,
-        "server": "magasin",
+        "server": "stpriestprod",
         "ns": "USER"
-    }
+    },
+	"objectscript.syncLocalChanges": "vscodeOnly"
 }

@@ -4,7 +4,7 @@ CAISSETICKETS
  write !, "Date de reventilation (AAMMJJ) : " 
  //read "",datereventile
  //s datereventile="100104"
- s datereventile= $E($ZD(+$H,8),3,8)
+ s datereventile="100113" //$E($ZD(+$H,8),3,8)
  // A MODIFIER ICI SI LANCMEENT MANUEL
  
  ZA ^TKFAMILLE
